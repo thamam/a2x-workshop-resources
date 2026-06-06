@@ -160,7 +160,7 @@
 - [x] Story 5.3: Keep repository private/publishing approval-gated
   - Evidence: approval gates are documented in `docs/goal-operating-model.md` and `docs/execution-dag.md`.
 - [x] Story 5.4: Run final public-release audit
-  - Evidence: `docs/public-release-audit-2026-06-07.md` records repo-private, Pages-not-configured, private-file blocker, gitleaks `--no-git`, static-link, local HTTP smoke for all 14 HTML files, representative DOM smoke, and successful GitHub Security Checks for starting commit `72a0192`; `docs/public-launch-checklist.md` points to the latest audit.
+  - Evidence: `docs/public-release-audit-2026-06-07.md` records repo-private, Pages-not-configured, private-file blocker, gitleaks `--no-git`, static-link, local HTTP smoke for all 14 HTML files, representative DOM smoke, and successful GitHub Security Checks for starting commit `451e14a`; `docs/public-launch-checklist.md` points to the latest audit.
 - [x] Story 6.1: Build static PRD-to-HTML review workbench prototype
   - Evidence: `resources/prd-html-review-workbench.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed static-link, private-file, gitleaks `--no-git`, local HTTP, Chrome Headless 390px overflow, fixture render, and feedback export checks on 2026-06-06.
 - [x] Story 6.2: Add sanitized Prompt Magician setup overview
@@ -176,6 +176,8 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `451e14a`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `451e14a53d345715e9bcf3fa06a6b7f98d89b847`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative DOM checks passed. No safe unblocked implementation stories remain listed.
+- 2026-06-07 — Started Maintenance: refresh latest public-readiness evidence for current repo state; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 - 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `72a0192`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `72a019291850d5fe3f3ec52d4a477edc467c0ebf`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative DOM checks passed. No safe unblocked implementation stories remain listed.
 - 2026-06-07 — Started Maintenance: refresh latest public-readiness evidence for current repo state; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 - 2026-06-07 — Refreshed public-release readiness evidence at starting commit `0a1b28f`: updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `0a1b28f2127603ca795a2fe6e652040b706a4009`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative DOM checks passed. No safe unblocked implementation stories remain listed.

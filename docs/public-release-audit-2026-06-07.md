@@ -9,20 +9,20 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site smoke passed for all 14 HTML files over `python3 -m http.server`.
 - Representative DOM smoke passed for public-facing pages over the local HTTP server.
-- GitHub Security checks completed successfully for current starting commit `72a019291850d5fe3f3ec52d4a477edc467c0ebf`.
+- GitHub Security checks completed successfully for current starting commit `451e14a53d345715e9bcf3fa06a6b7f98d89b847`.
 
 ## Evidence
 
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 00:52:46 IDT
+2026-06-07 01:05:15 IDT
 ```
 
 Starting commit:
 
 ```text
-72a019291850d5fe3f3ec52d4a477edc467c0ebf docs: refresh readiness audit for latest commit
+451e14a53d345715e9bcf3fa06a6b7f98d89b847 docs: refresh readiness evidence for current commit
 ```
 
 ### Repository visibility
@@ -69,7 +69,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit code 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~203190 bytes (203.19 KB); no leaks found
+# scanned ~203423 bytes (203.42 KB); no leaks found
 
 git diff --check
 # exit code 0
@@ -130,7 +130,7 @@ gh run list --branch main --limit 10 --json databaseId,headSha,status,conclusion
 Result excerpt:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-06T21:40:43Z","databaseId":27074634186,"headSha":"72a019291850d5fe3f3ec52d4a477edc467c0ebf","status":"completed","updatedAt":"2026-06-06T21:40:56Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27074634186","workflowName":"Security checks"}]
+[{"conclusion":"success","createdAt":"2026-06-06T21:53:56Z","databaseId":27074916451,"headSha":"451e14a53d345715e9bcf3fa06a6b7f98d89b847","status":"completed","updatedAt":"2026-06-06T21:54:06Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27074916451","workflowName":"Security checks"}]
 ```
 
 ## Remaining approval gates
