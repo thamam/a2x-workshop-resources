@@ -14,6 +14,14 @@ Use this before Tomer approves public visibility or GitHub Pages publishing.
 - [ ] No analytics, tracking, lead capture, pricing claims, or strong marketing claims were added.
 - [ ] Mobile layout was checked.
 - [ ] Desktop layout was checked.
+- [ ] GitHub Pages readiness notes in `docs/github-pages-readiness.md` are current.
+- [ ] `.nojekyll` is present if publishing through GitHub Pages.
+
+## Prepared but not approved
+
+- Static no-build structure exists at `index.html` plus `resources/*.html`.
+- `.nojekyll` is present for future GitHub Pages compatibility.
+- Publishing remains blocked until Tomer explicitly approves repository visibility and Pages settings.
 
 ## Approval record
 

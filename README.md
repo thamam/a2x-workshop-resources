@@ -22,3 +22,15 @@ This repository is designed to become public. Treat every commit as publishable.
 ## Security rule
 
 Before this repository becomes public, every commit must pass secret scanning and private-file checks.
+
+## Local preview
+
+This is a no-build static hub. Preview it locally with:
+
+```bash
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+Then open `http://127.0.0.1:8765/index.html`.
+
+GitHub Pages readiness notes live in `docs/github-pages-readiness.md`. Do not enable Pages or make the repo public without Tomer approval.
