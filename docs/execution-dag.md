@@ -6,6 +6,8 @@ This document defines the operating model for autonomous work on the workshop re
 
 Do not wait for Tomer acknowledgement to start the next unblocked task. Treat updates as status, not as gates, unless the task crosses an approval boundary.
 
+Use `docs/goal-operating-model.md` as the standing-goal layer for this sprint. It defines active goals, completion evidence, blocked states, and the life-signal log format in the spirit of Codex `/goal`.
+
 ## Approval boundaries
 
 Yunes may do autonomously:
