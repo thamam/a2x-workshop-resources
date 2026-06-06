@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Presentation editor overview · A2X</title>
+<meta name="description" content="A public-safe A2X workshop overview for using agentic slide-generation and presentation-editing workflows without exposing private source materials." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279;--ok:#98d7a5;--warn:#f4cf86}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.58}main{max-width:980px;margin:0 auto;padding:44px 20px 34px}a{color:inherit}.button{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:750;font-size:.95rem}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(2.1rem,6vw,4.7rem);line-height:.98;margin:14px 0 12px;letter-spacing:-.05em}h2{font-size:clamp(1.35rem,3vw,2rem);margin:0 0 10px;letter-spacing:-.025em}h3{margin:0 0 8px;font-size:1.05rem}p,li{color:var(--muted)}p{margin:0 0 14px}.lead{font-size:1.1rem;max-width:800px}.nav{margin-bottom:26px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:20px;padding:20px;margin-top:24px}.grid .card{margin-top:0}.tag{color:var(--ok);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.warn{color:var(--warn)}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}code{background:#120f0b;border:1px solid var(--line);border-radius:8px;padding:.12rem .35rem;color:#efe5d6}pre{white-space:pre-wrap;overflow:auto;background:#120f0b;border:1px solid var(--line);border-radius:16px;padding:16px;color:#efe5d6}.checklist{padding-left:1.2rem}.flow li{margin-bottom:.55rem}.callout{border-color:#5a3d2a;background:linear-gradient(180deg,#2a2118,#1d1913)}footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.94rem}
+</style>
+</head>
+<body>
+<main>
+<div class="nav"><a class="button" href="../index.html">← Back to hub</a></div>
+<div class="eyebrow">Advanced artifact workflow</div>
+<h1>Presentation editor overview.</h1>
+<p class="lead">A safe workshop pattern for turning outlines into editable slide artifacts with an agent. Use it to teach the workflow without exposing private demos, internal prototypes, or raw source repositories.</p>
+
+<section class="card callout">
+  <div class="tag warn">Public-safe framing</div>
+  <h2>Demo the loop, not the private implementation</h2>
+  <p>The useful attendee lesson is the agentic editing loop: provide a slide goal, generate a draft, inspect the artifact, give targeted feedback, and repeat. Keep direct source links and private document-to-slides prototypes out of the public hub until their setup and safety posture are deliberately curated.</p>
+</section>
+
+<section class="grid" aria-label="Presentation workflow stages">
+  <article class="card">
+    <div class="tag">Step 1</div>
+    <h3>Start from a slide contract</h3>
+    <p>Define audience, outcome, tone, number of slides, source notes allowed, and non-goals before asking an agent to produce anything visual.</p>
+  </article>
+  <article class="card">
+    <div class="tag">Step 2</div>
+    <h3>Generate a reviewable draft</h3>
+    <p>Ask for a structured outline or HTML slide draft first. Prefer something easy to inspect in a browser before moving into polished deck tooling.</p>
+  </article>
+  <article class="card">
+    <div class="tag">Step 3</div>
+    <h3>Edit with precise feedback</h3>
+    <p>Review slide-by-slide. Request concrete changes: tighten the title, split a dense slide, add a transition, or replace vague claims with sourced wording.</p>
+  </article>
+</section>
+
+<section class="card">
+  <h2>Fictional mini-brief for the workshop</h2>
+  <pre>Goal: create a 6-slide intro deck for a fictional AI operations workshop.
+Audience: product and engineering leads who have tried coding agents once.
+Tone: practical, optimistic, no hype.
+Required slides:
+1. Why harnesses matter
+2. Rules and repo context
+3. Tool access and verification
+4. Human review gates
+5. Reusable skills
+6. Next exercise
+Non-goals: pricing claims, customer logos, live private notes, or production deployment promises.</pre>
+</section>
+
+<section class="card">
+  <h2>Agent prompt for the basic pattern</h2>
+  <pre>Create a first-pass slide outline from this brief.
+Return Markdown with one section per slide.
+For each slide include:
+- slide title
+- speaker intent
+- 3-5 bullets
+- suggested visual metaphor
+- review questions for the facilitator
+
+Use only the fictional brief above. Do not add customer names, metrics, pricing, or unsupported claims.</pre>
+</section>
+
+<section class="card">
+  <h2>Workshop-safe setup guidance</h2>
+  <ul class="checklist">
+    <li>If a live generator uses a model API, say clearly whether attendees need their own key or whether the facilitator is demoing from a prepared environment.</li>
+    <li>Use placeholders such as <code>[GEMINI_API_KEY]</code> or <code>[MODEL_API_KEY]</code>; never include real keys in slides, docs, chat, or screenshots.</li>
+    <li>Do not upload private workshop notes, customer decks, internal strategy, unpublished metrics, or local files during a public demo.</li>
+    <li>Prefer browser-inspectable artifacts for teaching. Once the feedback loop is clear, the same pattern can be adapted to PowerPoint, Google Slides, or custom editors.</li>
+    <li>Keep source-repo links approval-gated until README/setup copy, example data, and secrets scans are clean enough for attendees.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>90-second facilitator script</h2>
+  <ol class="flow">
+    <li>Show the fictional mini-brief and name the constraints before generation.</li>
+    <li>Generate a plain outline, not a perfect deck.</li>
+    <li>Review the draft by slide purpose: “what is this slide trying to make the audience do?”</li>
+    <li>Give one targeted revision request, then show how the artifact improves.</li>
+    <li>Explain that production deck workflows need the same gates as code: source control, secret hygiene, review, and rollback.</li>
+  </ol>
+</section>
+
+<footer>Static public-safe overview. No network calls, tracking, storage, direct source links, private/internal repository names, local paths, customer material, or real credentials.</footer>
+</main>
+</body>
+</html>

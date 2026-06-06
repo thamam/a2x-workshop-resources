@@ -88,13 +88,13 @@ Status: ready prototype; second-wave giveaway, not required for the core first w
 
 ### A2X Marketplace
 
-Resource: placeholder card on homepage.
+Resource: `resources/a2x-marketplace-overview.html`; source audit notes are in `docs/a2x-marketplace-public-safety-audit.md`.
 
 Use when: Tomer wants to signal that A2X builds tools and extensions, not only workshops.
 
-Attendee action: Browse public tools after the session.
+Attendee action: Understand the marketplace pattern: package repeatable Claude Code workflows as curated skills, plugins, presets, verification steps, and safety notes.
 
-Status: polish-first. Needs source and positioning.
+Status: ready overview; direct source-repo linking still needs cleanup and a curated release path.
 
 ### Prompt Magician
 
@@ -108,13 +108,13 @@ Status: ready overview; direct source-repo linking still needs a curated release
 
 ### Presentation editor
 
-Resource: placeholder card on homepage; public slide-generator candidate is `https://github.com/thamam/talk-auto-slides-generator`, with audit notes in `docs/presentation-editor-source-audit.md`.
+Resource: `resources/presentation-editor-overview.html`; source candidates are audited in `docs/presentation-editor-source-audit.md`.
 
 Use when: Tomer demos agentic editing beyond code.
 
-Attendee action: Adapt the workflow to slides or written artifacts.
+Attendee action: Learn the slide-generation review loop from a fictional mini-brief: define the contract, generate a reviewable outline, inspect it slide-by-slide, and send targeted revision requests.
 
-Status: polish-first. Source candidates located; needs curated workshop-safe setup/overview before direct hub linking.
+Status: ready overview; direct source-repo linking still needs curated setup copy and approval.
 
 ### Wiki-LLM
 

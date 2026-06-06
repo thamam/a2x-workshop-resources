@@ -75,11 +75,13 @@ Next action: use only as a second-wave giveaway unless Tomer chooses to feature 
 
 ### A2X Marketplace
 
-Status: polish-first  
-Hub path: homepage placeholder card.  
+Status: publish-now overview; direct source link remains polish-first
+
+Hub path: `resources/a2x-marketplace-overview.html`
+
 Source: public GitHub repo `https://github.com/thamam/A2X-marketplace`; audit notes in `docs/a2x-marketplace-public-safety-audit.md`.
-Safety notes: repo is already public, but a shallow-clone audit found local absolute paths, API-key setup docs, personal maintainer metadata, and gitleaks noise in a bundled/minified `code-research` server script. Keep the hub card unlinked until the marketplace repo is cleaned up or a sanitized overview is written.
-Next action: decide whether to clean/link the existing public repo or publish a short public-safe overview page without installation details.
+Safety notes: sanitized overview is public-safe and does not directly link the marketplace source repo. It explains the marketplace concept with a fictional card, generic placeholders, no local paths, no personal contact details, no plugin internals, and no real credentials. Direct source-repo linking should still wait for cleanup of local-path docs, credential setup framing, and secret-scanner noise.
+Next action: if Tomer wants attendees to install marketplace items, first prepare a curated release path or facilitator-owned demo; otherwise keep the overview as an optional concept handout.
 
 ### Prompt Magician
 
@@ -93,11 +95,13 @@ Next action: if Tomer wants a live extension demo, prepare a facilitator-curated
 
 ### Presentation editor
 
-Status: polish-first  
-Hub path: homepage placeholder card.  
+Status: publish-now overview; direct source release remains polish-first
+
+Hub path: `resources/presentation-editor-overview.html`
+
 Source: public candidate `https://github.com/thamam/talk-auto-slides-generator`, plus a private/internal document-to-presentation candidate withheld from the public-ready inventory; audit notes in `docs/presentation-editor-source-audit.md`.
-Safety notes: public candidate builds and has no shallow-clone gitleaks findings, but README/setup copy still needs workshop-safe framing around Gemini API-key setup and AI Studio boilerplate. Private/internal candidate builds, but gitleaks reports a hardcoded Supabase publishable key plus synthetic credential-heavy fixtures, and internal project notes are present. Keep the hub card unlinked until a curated public setup page exists.
-Next action: decide whether the first workshop wants a public slide-generator setup page or a sanitized document-to-slides overview; do not expose the private/internal source publicly.
+Safety notes: sanitized overview is public-safe and does not directly link either source candidate. It teaches the presentation-generation review loop with a fictional mini-brief, generic API-key placeholders, no customer material, no private/internal repository names, and no local paths. Direct source-repo linking should still wait for curated setup copy and approval.
+Next action: if Tomer wants a live slide-generation demo, prepare a facilitator-owned environment and attendee-safe setup notes outside this public hub; otherwise keep the overview as an optional second-wave handout.
 
 ### Wiki-LLM
 

@@ -68,6 +68,8 @@
   - [x] Story 6.1: Build static PRD-to-HTML review workbench prototype
   - [x] Story 6.2: Add sanitized Prompt Magician setup overview
   - [x] Story 6.3: Add sanitized Wiki-LLM overview
+  - [x] Story 6.4: Add sanitized Presentation editor overview
+  - [x] Story 6.5: Add sanitized A2X Marketplace overview
 
 ---
 
@@ -90,12 +92,12 @@
 - [ ] Story 5.5: Publish public site only after Tomer approval
   - Status: approval-required
   - Blocker: public publishing is an explicit approval boundary.
-- [ ] Story 4.4: Expose or link A2X Marketplace resources publicly
+- [ ] Story 4.4: Expose or link A2X Marketplace source repo publicly
   - Status: blocked
-  - Blocker: public repo is located, but marketplace docs need cleanup or a sanitized overview before the workshop hub should link it.
-- [ ] Story 4.7: Expose or link Wiki-LLM resources publicly
+  - Blocker: sanitized overview is available, but direct marketplace source linking still needs cleanup of local-path docs, credential setup framing, and secret-scanner noise.
+- [ ] Story 4.7: Expose or link Wiki-LLM source/software publicly
   - Status: blocked
-  - Blocker: source path is audited, but direct public linking still needs either a sanitized overview page or Tomer-approved software-only release path.
+  - Blocker: sanitized overview is available, but direct source/software release still needs a cleaned, Tomer-approved software-only release path.
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
@@ -165,11 +167,19 @@
   - Evidence: `resources/prompt-magician-setup.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP status checks, and Chrome Headless mobile-overflow/content checks on 2026-06-06.
 - [x] Story 6.3: Add sanitized Wiki-LLM overview
   - Evidence: `resources/wiki-llm-overview.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP status checks, and Chrome Headless mobile-overflow/content checks on 2026-06-06.
+- [x] Story 6.4: Add sanitized Presentation editor overview
+  - Evidence: `resources/presentation-editor-overview.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP status checks, and Chrome Headless mobile-overflow/content checks on 2026-06-06.
+- [x] Story 6.5: Add sanitized A2X Marketplace overview
+  - Evidence: `resources/a2x-marketplace-overview.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP status checks, and Chrome Headless mobile-overflow/content checks on 2026-06-06.
 
 ---
 
 ## 🔁 Recent Transitions
 
+- 2026-06-06 — Finished Story 6.5: created `resources/a2x-marketplace-overview.html`, linked it from the hub, updated inventory/usage map, and verified diff hygiene, static links, private-file blocker, gitleaks `--no-git`, local HTTP, and Chrome Headless mobile/content checks.
+- 2026-06-06 — Started Story 6.5: add a sanitized A2X Marketplace overview with public-safe positioning and no direct source/setup exposure.
+- 2026-06-06 — Finished Story 6.4: created `resources/presentation-editor-overview.html`, linked it from the hub, updated inventory/usage map, and verified diff hygiene, static links, private-file blocker, gitleaks `--no-git`, local HTTP, and Chrome Headless mobile/content checks.
+- 2026-06-06 — Started Story 6.4: add a sanitized Presentation editor overview with fictional slide examples, safe Gemini/API-key framing, and no private/internal source links.
 - 2026-06-06 — Finished Story 6.3: created `resources/wiki-llm-overview.html`, linked it from the hub, updated inventory/usage map, and verified diff hygiene, static links, private-file blocker, gitleaks `--no-git`, local HTTP, and Chrome Headless mobile/content checks.
 - 2026-06-06 — Started Story 6.3: add a sanitized Wiki-LLM overview with a fictional mini-vault example and no private source links.
 - 2026-06-06 — Finished Story 6.2: created `resources/prompt-magician-setup.html`, linked it from the hub, updated inventory/usage map, and verified diff hygiene, static links, private-file blocker, gitleaks `--no-git`, local HTTP, and Chrome Headless mobile/content checks.
@@ -205,4 +215,4 @@
 
 ## 📌 Next Safe Action
 
-- If another autonomous cycle has enough run budget, the next safe unblocked story is a curated sanitized overview for either Presentation editor or A2X Marketplace. Keep direct source links approval-gated until each release path is intentionally curated.
+- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated or source-release cleanup: public publishing, direct A2X Marketplace source linking, and direct Wiki-LLM source/software release all require Tomer approval or upstream cleanup before exposure.
