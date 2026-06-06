@@ -82,12 +82,13 @@ Completion evidence:
 At the start of each work cycle, Yunes should:
 
 1. Inspect the current repo state.
-2. Read this file and `docs/execution-dag.md`.
+2. Read this file, `docs/execution-dag.md`, and `docs/live-kanban.md`.
 3. Pick the highest-priority `active` goal with unblocked work.
-4. Make concrete progress, not just restate plans.
-5. Run relevant verification.
-6. Commit and push safe private-repo changes when useful.
-7. Send a minimal life-signal log when the work crosses a meaningful task boundary.
+4. Update `docs/live-kanban.md` when starting a meaningful task, finishing a task, changing a blocker, or reaching a scheduled 30-minute refresh point.
+5. Make concrete progress, not just restate plans.
+6. Run relevant verification.
+7. Commit and push safe private-repo changes when useful.
+8. Send a minimal life-signal log when the work crosses a meaningful task boundary.
 
 Continuation rule: finishing a task is not a stopping condition. After completing, verifying, and optionally committing one task, immediately select the next unblocked safe task and start the next sequence inside the same work cycle. Continue until the available run budget is nearly exhausted, all remaining work needs Tomer approval, or no safe useful task can be started.
 

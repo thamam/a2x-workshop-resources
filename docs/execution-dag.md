@@ -131,14 +131,30 @@ Work:
 
 Unblocks: stable workshop flow.
 
+### H. Live Kanban maintenance
+
+Status: started.
+
+Dependencies: none.
+
+Work:
+
+- Keep `docs/live-kanban.md` updated with planned tasks, active work, blockers, review items, done items, and recent transitions.
+- Refresh at least every 30 minutes during active work.
+- Update immediately when a meaningful task finishes or a new meaningful task starts.
+- Link the board from the hub.
+
+Unblocks: Tomer visibility and autonomous-work trust.
+
 ## Current priority order
 
-1. Harden security checks.
-2. Inventory sources.
-3. Improve hub skeleton and copy.
-4. Create workshop usage map.
-5. Prepare GitHub Pages readiness.
-6. Migrate resources as each source becomes safe.
+1. Keep live Kanban current.
+2. Harden security checks.
+3. Inventory sources.
+4. Improve hub skeleton and copy.
+5. Create workshop usage map.
+6. Prepare GitHub Pages readiness.
+7. Migrate resources as each source becomes safe.
 
 ## Blocked-task rule
 
