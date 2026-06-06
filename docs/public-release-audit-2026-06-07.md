@@ -8,21 +8,21 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --jq '{status:.status,html_url:.html_url}'` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site smoke passed for all 14 HTML files over `python3 -m http.server`.
-- Chrome Headless DOM smoke passed for representative public-facing pages at a phone viewport.
-- GitHub Security checks completed successfully for current starting commit `13ed3f6b02b887734bb10f755a42bb15a2e0b808`.
+- Representative DOM smoke passed for public-facing pages over the local HTTP server.
+- GitHub Security checks completed successfully for current starting commit `0a1b28f2127603ca795a2fe6e652040b706a4009`.
 
 ## Evidence
 
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 00:26:02 IDT
+2026-06-07 00:39:03 IDT
 ```
 
 Starting commit:
 
 ```text
-13ed3f6b02b887734bb10f755a42bb15a2e0b808 docs: refresh public release audit evidence
+0a1b28f2127603ca795a2fe6e652040b706a4009 docs: refresh public readiness evidence
 ```
 
 ### Repository visibility
@@ -70,7 +70,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit code 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~201722 bytes (201.72 KB); no leaks found
+# scanned ~202391 bytes (202.39 KB); no leaks found
 
 git diff --check
 # exit code 0
@@ -106,18 +106,18 @@ resources/wiki-llm-overview.html: 200 text/html doctype=True
 Local HTTP smoke passed for all HTML files.
 ```
 
-### Chrome Headless DOM smoke
+### Representative DOM smoke
 
-Representative mobile-viewport DOM checks used Chrome Headless at `390x844` against the local HTTP server.
+Representative DOM checks requested selected pages over the local HTTP server and verified title/HTML structure.
 
 Result:
 
 ```text
-index.html: Chrome Headless DOM smoke OK
-kanban-status.html: Chrome Headless DOM smoke OK
-resources/prd-html-review-workbench.html: Chrome Headless DOM smoke OK
-resources/a2x-marketplace-overview.html: Chrome Headless DOM smoke OK
-resources/wiki-llm-overview.html: Chrome Headless DOM smoke OK
+index.html: DOM smoke OK
+kanban-status.html: DOM smoke OK
+resources/prd-html-review-workbench.html: DOM smoke OK
+resources/a2x-marketplace-overview.html: DOM smoke OK
+resources/wiki-llm-overview.html: DOM smoke OK
 ```
 
 ### GitHub Security checks
@@ -131,7 +131,7 @@ gh run list --branch main --limit 5 --json databaseId,headSha,status,conclusion,
 Result excerpt:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-06T21:14:23Z","databaseId":27074076314,"headSha":"13ed3f6b02b887734bb10f755a42bb15a2e0b808","status":"completed","updatedAt":"2026-06-06T21:14:32Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27074076314","workflowName":"Security checks"}]
+[{"conclusion":"success","createdAt":"2026-06-06T21:27:53Z","databaseId":27074361473,"headSha":"0a1b28f2127603ca795a2fe6e652040b706a4009","status":"completed","updatedAt":"2026-06-06T21:28:02Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27074361473","workflowName":"Security checks"}]
 ```
 
 ## Remaining approval gates
