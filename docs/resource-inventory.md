@@ -83,11 +83,13 @@ Next action: decide whether to clean/link the existing public repo or publish a 
 
 ### Prompt Magician
 
-Status: polish-first  
-Hub path: homepage placeholder card.  
+Status: publish-now overview; direct repo link remains polish-first
+
+Hub path: `resources/prompt-magician-setup.html`
+
 Source: likely public GitHub repo `https://github.com/thamam/prompt-enhancer-extension`; audit notes in `docs/prompt-magician-source-audit.md`.
-Safety notes: repo is already public and contains useful Chrome/VS Code setup docs, but direct hub linking should wait for a curated workshop-safe overview. Remote API-key setup examples, broad extension permissions, shortcut conflicts, and gitleaks false positives from scanner regex strings need framing before attendees use it.
-Next action: create a sanitized `resources/prompt-magician-setup.html` overview if Tomer wants Prompt Magician in the first workshop wave; otherwise keep the current public-safe prompt improver as the ready handout.
+Safety notes: sanitized overview is public-safe and does not directly link the source repo. It frames Prompt Magician as optional, prefers local/offline use first, explains remote-provider privacy, avoids secret-looking API-key examples, calls out browser permissions, and suggests shortcut alternatives. Direct source-repo linking should still wait for a curated release path.
+Next action: if Tomer wants a live extension demo, prepare a facilitator-curated Chrome/VS Code install path outside this public hub; otherwise keep the overview as an optional second-wave handout.
 
 ### Presentation editor
 
@@ -99,11 +101,13 @@ Next action: decide whether the first workshop wants a public slide-generator se
 
 ### Wiki-LLM
 
-Status: polish-first  
-Hub path: homepage placeholder card.  
+Status: publish-now overview; direct source release remains polish-first
+
+Hub path: `resources/wiki-llm-overview.html`
+
 Source: local/private candidate projects identified outside this repo; audit notes in `docs/wiki-llm-public-safety-audit.md`. Exact private repository names and absolute paths are intentionally withheld from the public-ready inventory.
-Safety notes: source path is located, and shallow-clone `gitleaks` scans found no findings across the reviewed candidates. Keep the hub card unlinked: active vaults are private knowledge stores, while the software/plugin docs still contain local-path and private-vault setup details that need redaction and workshop framing.
-Next action: create a sanitized `resources/wiki-llm-overview.html` page with a fictional mini-vault example, or clean and approve a software-only repo before direct public linking.
+Safety notes: sanitized overview is public-safe and does not expose private source names, private repository links, local paths, raw notes, or vault contents. It teaches the `raw/`, `wiki/`, and operating-contract pattern with a fictional mini-vault. Direct software/plugin repo linking still needs a cleaned, Tomer-approved release path.
+Next action: if Wiki-LLM becomes a live advanced demo, prepare a cleaned software-only repo or facilitator-owned package; keep private vault content out of the public hub.
 
 ### Credential tracer / authentication routing
 

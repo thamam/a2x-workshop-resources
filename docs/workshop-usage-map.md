@@ -98,13 +98,13 @@ Status: polish-first. Needs source and positioning.
 
 ### Prompt Magician
 
-Resource: placeholder card on homepage; likely source is public repo `https://github.com/thamam/prompt-enhancer-extension` with audit notes in `docs/prompt-magician-source-audit.md`.
+Resource: `resources/prompt-magician-setup.html`; likely source is public repo `https://github.com/thamam/prompt-enhancer-extension` with audit notes in `docs/prompt-magician-source-audit.md`.
 
 Use when: Tomer moves from raw requests to reusable prompts.
 
-Attendee action: Try a prompt-improvement workflow.
+Attendee action: Understand the optional extension workflow, privacy boundaries, API-key framing, and shortcut setup before trying richer prompt enhancement.
 
-Status: polish-first. Source located; needs curated workshop-safe setup overview before direct hub linking.
+Status: ready overview; direct source-repo linking still needs a curated release path.
 
 ### Presentation editor
 
@@ -118,13 +118,13 @@ Status: polish-first. Source candidates located; needs curated workshop-safe set
 
 ### Wiki-LLM
 
-Resource: placeholder card on homepage; source path located with audit notes in `docs/wiki-llm-public-safety-audit.md`.
+Resource: `resources/wiki-llm-overview.html`; source path located with audit notes in `docs/wiki-llm-public-safety-audit.md`.
 
 Use when: Tomer discusses knowledge-base workflows and advanced agent context.
 
-Attendee action: Build a model-assisted wiki from selected documents.
+Attendee action: Learn the `raw/`, `wiki/`, and operating-contract pattern using a fictional mini-vault before applying it to their own private notes.
 
-Status: polish-first. Public-safety audit complete; needs sanitized overview or Tomer-approved software-only release path before direct hub linking.
+Status: ready overview; direct source/software release still needs cleanup and Tomer approval.
 
 ## Priority 3 — defer if time is tight
 

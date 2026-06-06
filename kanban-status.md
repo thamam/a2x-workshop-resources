@@ -64,6 +64,11 @@
   - [x] Story 5.4: Run final public-release audit
   - [ ] Story 5.5: Publish only after Tomer approval
 
+- [x] **Epic 6: Second-wave public-safe workshop handouts** (100% Completed)
+  - [x] Story 6.1: Build static PRD-to-HTML review workbench prototype
+  - [x] Story 6.2: Add sanitized Prompt Magician setup overview
+  - [x] Story 6.3: Add sanitized Wiki-LLM overview
+
 ---
 
 ## 🏃 Active State Tracking
@@ -156,11 +161,19 @@
   - Evidence: `docs/public-release-audit-2026-06-06.md` records repo-private, Pages-not-configured, private-file blocker, gitleaks, static-link, local HTTP, and Chrome Headless smoke checks; `docs/public-launch-checklist.md` points to the audit.
 - [x] Story 6.1: Build static PRD-to-HTML review workbench prototype
   - Evidence: `resources/prd-html-review-workbench.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed static-link, private-file, gitleaks `--no-git`, local HTTP, Chrome Headless 390px overflow, fixture render, and feedback export checks on 2026-06-06.
+- [x] Story 6.2: Add sanitized Prompt Magician setup overview
+  - Evidence: `resources/prompt-magician-setup.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP status checks, and Chrome Headless mobile-overflow/content checks on 2026-06-06.
+- [x] Story 6.3: Add sanitized Wiki-LLM overview
+  - Evidence: `resources/wiki-llm-overview.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP status checks, and Chrome Headless mobile-overflow/content checks on 2026-06-06.
 
 ---
 
 ## 🔁 Recent Transitions
 
+- 2026-06-06 — Finished Story 6.3: created `resources/wiki-llm-overview.html`, linked it from the hub, updated inventory/usage map, and verified diff hygiene, static links, private-file blocker, gitleaks `--no-git`, local HTTP, and Chrome Headless mobile/content checks.
+- 2026-06-06 — Started Story 6.3: add a sanitized Wiki-LLM overview with a fictional mini-vault example and no private source links.
+- 2026-06-06 — Finished Story 6.2: created `resources/prompt-magician-setup.html`, linked it from the hub, updated inventory/usage map, and verified diff hygiene, static links, private-file blocker, gitleaks `--no-git`, local HTTP, and Chrome Headless mobile/content checks.
+- 2026-06-06 — Started Story 6.2: add a sanitized Prompt Magician setup overview without private/internal links or direct repo exposure.
 - 2026-06-06 — Finished Story 6.1: created `resources/prd-html-review-workbench.html`, linked it from the hub, updated inventory/usage map, and verified static links, private-file blocker, gitleaks `--no-git`, local HTTP, mobile overflow, fixture render, and feedback export.
 - 2026-06-06 — Started Story 6.1: build the static PRD-to-HTML review workbench prototype within the scoped public-safe boundaries.
 - 2026-06-06 — Finished Story 2.5: tuned `index.html` giveaway copy against the sanitized meeting-prep scenario, added a safe scenario-chain card, and verified static links, private-file blocker, gitleaks, local HTTP, and Chrome Headless 390px overflow.
@@ -192,4 +205,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked story is currently selected. Remaining public publishing/linking work is approval-gated; remaining advanced-resource exposure should start only as a curated sanitized overview task that does not link private/internal resources publicly.
+- If another autonomous cycle has enough run budget, the next safe unblocked story is a curated sanitized overview for either Presentation editor or A2X Marketplace. Keep direct source links approval-gated until each release path is intentionally curated.

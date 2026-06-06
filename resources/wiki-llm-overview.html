@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wiki-LLM overview · A2X</title>
+<meta name="description" content="A public-safe A2X workshop overview for building a Markdown-based LLM wiki from a tiny fictional vault." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279;--ok:#98d7a5}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.58}main{max-width:980px;margin:0 auto;padding:44px 20px 34px}a{color:inherit}.button{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:750;font-size:.95rem}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(2.1rem,6vw,4.7rem);line-height:.98;margin:14px 0 12px;letter-spacing:-.05em}h2{font-size:clamp(1.35rem,3vw,2rem);margin:0 0 10px;letter-spacing:-.025em}h3{margin:0 0 8px;font-size:1.05rem}p,li{color:var(--muted)}p{margin:0 0 14px}.lead{font-size:1.1rem;max-width:790px}.nav{margin-bottom:26px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:20px;padding:20px;margin-top:24px}.grid .card{margin-top:0}.tag{color:var(--ok);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}code{background:#120f0b;border:1px solid var(--line);border-radius:8px;padding:.12rem .35rem;color:#efe5d6}pre{white-space:pre-wrap;overflow:auto;background:#120f0b;border:1px solid var(--line);border-radius:16px;padding:16px;color:#efe5d6}.checklist{padding-left:1.2rem}.flow{counter-reset:step}.flow li{margin-bottom:.55rem}.callout{border-color:#4b3f2f;background:linear-gradient(180deg,#2a2118,#1d1913)}footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.94rem}
+</style>
+</head>
+<body>
+<main>
+<div class="nav"><a class="button" href="../index.html">← Back to hub</a></div>
+<div class="eyebrow">Knowledge workflow</div>
+<h1>Wiki-LLM overview.</h1>
+<p class="lead">A safe pattern for turning a small set of Markdown notes into a model-assisted wiki. Use fictional notes in the workshop; keep real vaults private.</p>
+
+<section class="card callout">
+  <div class="tag">Core idea</div>
+  <h2>Separate private knowledge from reusable workflow</h2>
+  <p>The publishable idea is not someone’s actual vault. It is the architecture: keep source notes in Markdown, ask an agent to build linked wiki pages, and preserve an operating contract so future agent runs know how to update the system safely.</p>
+</section>
+
+<section class="grid" aria-label="Three-layer pattern">
+  <article class="card">
+    <div class="tag">Layer 1</div>
+    <h3><code>raw/</code> source notes</h3>
+    <p>Short meeting notes, paper summaries, transcripts, or snippets. These stay close to the original material and should be treated as private unless explicitly sanitized.</p>
+  </article>
+  <article class="card">
+    <div class="tag">Layer 2</div>
+    <h3><code>wiki/</code> synthesized pages</h3>
+    <p>Agent-written concept pages with backlinks, concise explanations, examples, open questions, and citations back to the raw notes.</p>
+  </article>
+  <article class="card">
+    <div class="tag">Layer 3</div>
+    <h3>Operating contract</h3>
+    <p>A small rules file that tells the agent how to add pages, preserve source links, avoid unsupported claims, and flag uncertain facts instead of inventing them.</p>
+  </article>
+</section>
+
+<section class="card">
+  <h2>Tiny fictional mini-vault</h2>
+  <pre>vault/
+  raw/
+    meeting-prep-assistant.md
+    reusable-agent-rules.md
+  wiki/
+    meeting-prep-assistant.md
+    agent-harness.md
+  OPERATING_CONTRACT.md</pre>
+  <p>Example raw note:</p>
+  <pre># Meeting prep assistant
+Fictional workshop idea: a consultant wants a tool that turns agenda, attendees, and prior notes into a pre-call brief.
+Constraints: no private client data in demos; output should include risks, questions, and next actions.</pre>
+</section>
+
+<section class="card">
+  <h2>Agent prompt for the basic pattern</h2>
+  <pre>Use the Markdown vault at &lt;vault-path&gt;.
+Read OPERATING_CONTRACT.md first.
+Convert the notes in raw/ into concise wiki pages under wiki/.
+For each page, include:
+- summary
+- source notes used
+- related pages
+- open questions
+- unsupported claims to verify
+Do not invent facts. If a detail is missing, write "unknown" and explain what source would resolve it.</pre>
+</section>
+
+<section class="card">
+  <h2>Workshop safety checklist</h2>
+  <ul class="checklist">
+    <li>Use fictional or sanitized notes, never live private vault content.</li>
+    <li>Keep setup examples generic: <code>&lt;vault-path&gt;</code>, <code>[TOKEN]</code>, and <code>[plugin-path]</code>.</li>
+    <li>Prefer Markdown + git as the first source of truth; no vector database or cloud store is required for the basic exercise.</li>
+    <li>Separate software/plugin instructions from vault content so public workflow code does not expose private knowledge.</li>
+    <li>Review generated wiki pages for unsupported claims before sharing them.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>When to show this live</h2>
+  <ol class="flow">
+    <li>After explaining that agents need durable context, not only bigger prompts.</li>
+    <li>When attendees ask how to reuse research, meeting notes, or project decisions across sessions.</li>
+    <li>As an advanced example after the simpler CLAUDE.md, skill, and prompt-improvement resources land.</li>
+  </ol>
+</section>
+
+<footer>Static public-safe overview. No network calls, tracking, storage, private vault names, private repository links, local paths, or real tokens.</footer>
+</main>
+</body>
+</html>

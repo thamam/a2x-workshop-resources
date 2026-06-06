@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prompt Magician setup overview · A2X</title>
+<meta name="description" content="A public-safe A2X workshop overview for using Prompt Magician as an optional prompt-enhancement workflow." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279;--ok:#98d7a5;--warn:#f4cf86}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.58}main{max-width:960px;margin:0 auto;padding:44px 20px 34px}a{color:inherit}.button{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:750;font-size:.95rem}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(2.1rem,6vw,4.7rem);line-height:.98;margin:14px 0 12px;letter-spacing:-.05em}h2{font-size:clamp(1.35rem,3vw,2rem);margin:0 0 10px;letter-spacing:-.025em}h3{margin:0 0 8px;font-size:1.05rem}p,li{color:var(--muted)}p{margin:0 0 14px}.lead{font-size:1.1rem;max-width:780px}.nav{margin-bottom:26px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:20px;padding:20px;margin-top:24px}.grid .card{margin-top:0}.tag{color:var(--ok);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.warn{color:var(--warn)}code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#120f0b;border:1px solid var(--line);border-radius:8px;padding:.12rem .35rem;color:#efe5d6}.checklist{padding-left:1.2rem}.callout{border-color:#5a3d2a;background:linear-gradient(180deg,#2a2118,#1d1913)}footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.94rem}
+</style>
+</head>
+<body>
+<main>
+<div class="nav"><a class="button" href="../index.html">← Back to hub</a></div>
+<div class="eyebrow">Optional advanced workflow</div>
+<h1>Prompt Magician setup overview.</h1>
+<p class="lead">Use this as the workshop-safe framing before anyone installs or configures a richer prompt-enhancement extension. The goal is better prompts, not extra setup friction.</p>
+
+<section class="card callout">
+  <div class="tag warn">Safety-first framing</div>
+  <h2>What to say before demoing it</h2>
+  <p>Prompt Magician is optional. Attendees can get the core workshop value from the <a href="prompt-improver.html">Prompt improver</a> handout alone. Use the extension path only when the room is ready to discuss browser/VS Code permissions, shortcut conflicts, and what text may be sent to model providers.</p>
+</section>
+
+<section class="grid" aria-label="Setup modes">
+  <article class="card">
+    <div class="tag">Mode 1</div>
+    <h3>Local/offline first</h3>
+    <p>Start with rule-based prompt cleanup, scoring, and rewrite structure where available. This keeps the exercise focused on prompt craft and avoids API-key setup during the workshop.</p>
+  </article>
+  <article class="card">
+    <div class="tag">Mode 2</div>
+    <h3>Remote LLM assisted</h3>
+    <p>Only enable provider-backed enhancement after explaining that selected prompt text may be sent to the chosen model provider. Use placeholders like <code>[API_KEY]</code>; never paste real keys into shared docs or slides.</p>
+  </article>
+  <article class="card">
+    <div class="tag">Mode 3</div>
+    <h3>Editor workflow</h3>
+    <p>For coding sessions, prefer an editor-based flow: select a rough prompt, request an improvement, inspect the rewrite, then save the pattern as a reusable project rule or skill.</p>
+  </article>
+</section>
+
+<section class="card">
+  <h2>Curated workshop quick start</h2>
+  <ol class="checklist">
+    <li>Use the simple <a href="prompt-improver.html">Prompt improver</a> page first so everyone understands the workflow.</li>
+    <li>If demoing the extension, point attendees only to the curated Chrome folder or VS Code path prepared by the facilitator; do not send them browsing through all source docs live.</li>
+    <li>Prefer local/offline enhancement for the first pass.</li>
+    <li>If remote enhancement is enabled, configure provider keys outside the browser page and use <code>[API_KEY]</code> placeholders in any shared instructions.</li>
+    <li>Test shortcuts before the room uses them. If defaults conflict, use alternatives such as <code>Alt+Shift+E</code>, <code>Alt+Shift+Z</code>, <code>Alt+Shift+I</code>, and <code>Alt+Shift+C</code>.</li>
+  </ol>
+</section>
+
+<section class="card">
+  <h2>Permission and privacy talking points</h2>
+  <ul class="checklist">
+    <li><strong>Browser extension scope:</strong> broad page access can be normal for a text-selection extension, but attendees should understand what a browser extension can inspect before installing it.</li>
+    <li><strong>Provider calls:</strong> model-backed enhancement may send selected text to an external provider. Do not test with private customer notes, secrets, internal strategy, or unpublished business details.</li>
+    <li><strong>Workshop defaults:</strong> fictional examples are enough. The synthetic meeting-prep scenario is safer than live client material.</li>
+    <li><strong>Audit status:</strong> this page is a sanitized overview, not a direct source-repo endorsement. Direct repository linking should wait for a curated release path.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Demo script in 90 seconds</h2>
+  <ol class="checklist">
+    <li>Paste a rough prompt: “Make my meeting prep better.”</li>
+    <li>Ask for a rewrite with goal, context, constraints, output format, and quality bar.</li>
+    <li>Compare the before/after prompt and name the improvement pattern.</li>
+    <li>Save the pattern into a reusable prompt, rule, or skill rather than treating the improved prompt as a one-off trick.</li>
+  </ol>
+</section>
+
+<footer>Static public-safe overview. No network calls, tracking, storage, API-key capture, direct source links, or private/internal resource references.</footer>
+</main>
+</body>
+</html>
