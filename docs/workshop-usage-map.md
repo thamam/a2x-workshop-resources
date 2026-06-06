@@ -88,33 +88,33 @@ Status: polish-first. Needs source and positioning.
 
 ### Prompt Magician
 
-Resource: placeholder card on homepage.
+Resource: placeholder card on homepage; likely source is public repo `https://github.com/thamam/prompt-enhancer-extension` with audit notes in `docs/prompt-magician-source-audit.md`.
 
 Use when: Tomer moves from raw requests to reusable prompts.
 
 Attendee action: Try a prompt-improvement workflow.
 
-Status: polish-first. Needs setup source.
+Status: polish-first. Source located; needs curated workshop-safe setup overview before direct hub linking.
 
 ### Presentation editor
 
-Resource: placeholder card on homepage.
+Resource: placeholder card on homepage; public slide-generator candidate is `https://github.com/thamam/talk-auto-slides-generator`, with audit notes in `docs/presentation-editor-source-audit.md`.
 
 Use when: Tomer demos agentic editing beyond code.
 
 Attendee action: Adapt the workflow to slides or written artifacts.
 
-Status: polish-first. Needs setup source.
+Status: polish-first. Source candidates located; needs curated workshop-safe setup/overview before direct hub linking.
 
 ### Wiki-LLM
 
-Resource: placeholder card on homepage.
+Resource: placeholder card on homepage; source path located with audit notes in `docs/wiki-llm-public-safety-audit.md`.
 
 Use when: Tomer discusses knowledge-base workflows and advanced agent context.
 
 Attendee action: Build a model-assisted wiki from selected documents.
 
-Status: polish-first. Needs public-safety audit.
+Status: polish-first. Public-safety audit complete; needs sanitized overview or Tomer-approved software-only release path before direct hub linking.
 
 ## Priority 3 — defer if time is tight
 

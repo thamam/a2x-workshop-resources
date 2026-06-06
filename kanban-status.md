@@ -48,14 +48,14 @@
   - [x] Story 3.4: Add PRD & OpenSpec starter
   - [ ] Story 3.5: Run all handouts against one sanitized workshop scenario
 
-- [ ] **Epic 4: Resource inventory & public-safety review** (57% Completed)
+- [x] **Epic 4: Resource inventory & public-safety review** (100% Completed)
   - [x] Story 4.1: Create resource inventory
   - [x] Story 4.2: Classify first-release publish-now resources
   - [x] Story 4.3: Create workshop usage map
   - [x] Story 4.4: Audit A2X Marketplace source/public-safe path
-  - [ ] Story 4.5: Locate Prompt Magician source/setup doc
-  - [ ] Story 4.6: Locate presentation editor source/setup doc
-  - [ ] Story 4.7: Audit Wiki-LLM public-safe source path
+  - [x] Story 4.5: Locate Prompt Magician source/setup doc
+  - [x] Story 4.6: Locate presentation editor source/setup doc
+  - [x] Story 4.7: Audit Wiki-LLM public-safe source path
 
 - [ ] **Epic 5: Public launch readiness** (80% Completed)
   - [x] Story 5.1: Add public launch checklist
@@ -70,9 +70,7 @@
 
 ### 📥 BACKLOG (Ready for Sprint Selection)
 
-- [ ] Story 4.5: Locate Prompt Magician source/setup doc - *Priority: Medium*
-- [ ] Story 4.6: Locate presentation editor source/setup doc - *Priority: Medium*
-- [ ] Story 4.7: Audit Wiki-LLM public-safe source path - *Priority: Medium*
+- None right now.
 
 ### 📋 TODO (Selected for Next Story)
 
@@ -92,7 +90,7 @@
   - Blocker: public repo is located, but marketplace docs need cleanup or a sanitized overview before the workshop hub should link it.
 - [ ] Story 4.7: Expose or link Wiki-LLM resources publicly
   - Status: blocked
-  - Blocker: local/private candidate material needs audit before public use.
+  - Blocker: source path is audited, but direct public linking still needs either a sanitized overview page or Tomer-approved software-only release path.
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
@@ -142,8 +140,14 @@
   - Evidence: `docs/resource-inventory.md` lists publish-now and polish-first statuses.
 - [x] Story 4.3: Create workshop usage map
   - Evidence: `docs/workshop-usage-map.md` exists.
+- [x] Story 4.5: Locate Prompt Magician source/setup doc
+  - Evidence: `docs/prompt-magician-source-audit.md` identifies likely public repo `https://github.com/thamam/prompt-enhancer-extension`, records shallow-clone/gitleaks/manual findings, updates inventory and usage map, and keeps hub card unlinked pending a sanitized overview.
+- [x] Story 4.6: Locate presentation editor source/setup doc
+  - Evidence: `docs/presentation-editor-source-audit.md` identifies public candidate `https://github.com/thamam/talk-auto-slides-generator` and a private/internal document-to-presentation candidate withheld from public docs; records gitleaks/manual scan results, build checks for both candidates, inventory/usage-map updates, and keeps the hub card unlinked pending a curated setup/overview.
 - [x] Story 4.4: Audit A2X Marketplace source/public-safe path
   - Evidence: `docs/a2x-marketplace-public-safety-audit.md` locates `https://github.com/thamam/A2X-marketplace`, records shallow-clone scan findings, and keeps the hub card unlinked pending cleanup or a sanitized overview.
+- [x] Story 4.7: Audit Wiki-LLM public-safe source path
+  - Evidence: `docs/wiki-llm-public-safety-audit.md` records the private candidate split, shallow-clone `gitleaks` results, local-path/setup-doc issues, inventory/usage-map updates, and keeps the hub card unlinked pending a sanitized overview or approved software-only release path.
 - [x] Story 5.1: Add public launch checklist
   - Evidence: `docs/public-launch-checklist.md` exists.
 - [x] Story 5.2: Add no-build GitHub Pages notes
@@ -157,6 +161,12 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-06 — Finished Story 4.7: wrote `docs/wiki-llm-public-safety-audit.md`, updated inventory and usage map, verified shallow-clone gitleaks results for six private candidates, and kept the hub card unlinked pending sanitized overview or approved software-only release path.
+- 2026-06-06 — Started Story 4.7: audit Wiki-LLM public-safe source path without exposing local/private paths publicly.
+- 2026-06-06 — Finished Story 4.6: located public `thamam/talk-auto-slides-generator` plus a private/internal document-to-presentation candidate, wrote `docs/presentation-editor-source-audit.md`, updated inventory/usage map, verified both candidate builds, and kept the hub card unlinked pending curated setup/overview.
+- 2026-06-06 — Started Story 4.6: locate presentation editor source/setup doc.
+- 2026-06-06 — Finished Story 4.5: located likely public `thamam/prompt-enhancer-extension`, wrote `docs/prompt-magician-source-audit.md`, updated inventory/usage map, and kept the hub card unlinked pending sanitized setup overview.
+- 2026-06-06 — Started Story 4.5: locate Prompt Magician source/setup doc.
 - 2026-06-06 — Finished Story 4.4: located public `thamam/A2X-marketplace`, wrote `docs/a2x-marketplace-public-safety-audit.md`, updated inventory, and kept the hub card unlinked pending cleanup/sanitized overview.
 - 2026-06-06 — Started Story 4.4: audit A2X Marketplace source/public-safe path.
 - 2026-06-06 — Finished Story 5.4: wrote `docs/public-release-audit-2026-06-06.md`; repo-private, Pages-not-configured, private-file, gitleaks, static-link, local HTTP, and Chrome Headless smoke checks passed.
@@ -177,4 +187,4 @@
 
 ## 📌 Next Safe Action
 
-- Start Story 4.5: locate Prompt Magician source/setup doc, without creating active public links until the source is confirmed public-safe.
+- Reconcile remaining review items only if their existing evidence is strong enough to move to DONE; otherwise all remaining public launch/linking work requires Tomer approval or curated follow-up scope.

@@ -77,25 +77,25 @@ Next action: decide whether to clean/link the existing public repo or publish a 
 
 Status: polish-first  
 Hub path: homepage placeholder card.  
-Source: not found in the local repository scan; mentioned only in the A2X-site handoff as a desired workshop resource.
-Safety notes: setup instructions must avoid private keys, internal endpoints, and local-only paths.  
-Next action: locate source repo or setup doc before creating an active link.
+Source: likely public GitHub repo `https://github.com/thamam/prompt-enhancer-extension`; audit notes in `docs/prompt-magician-source-audit.md`.
+Safety notes: repo is already public and contains useful Chrome/VS Code setup docs, but direct hub linking should wait for a curated workshop-safe overview. Remote API-key setup examples, broad extension permissions, shortcut conflicts, and gitleaks false positives from scanner regex strings need framing before attendees use it.
+Next action: create a sanitized `resources/prompt-magician-setup.html` overview if Tomer wants Prompt Magician in the first workshop wave; otherwise keep the current public-safe prompt improver as the ready handout.
 
 ### Presentation editor
 
 Status: polish-first  
 Hub path: homepage placeholder card.  
-Source: not found in the local repository scan; mentioned only in the A2X-site handoff as a desired workshop resource.
-Safety notes: must avoid exposing private slide content or client examples.  
-Next action: locate source repo or setup doc.
+Source: public candidate `https://github.com/thamam/talk-auto-slides-generator`, plus a private/internal document-to-presentation candidate withheld from the public-ready inventory; audit notes in `docs/presentation-editor-source-audit.md`.
+Safety notes: public candidate builds and has no shallow-clone gitleaks findings, but README/setup copy still needs workshop-safe framing around Gemini API-key setup and AI Studio boilerplate. Private/internal candidate builds, but gitleaks reports a hardcoded Supabase publishable key plus synthetic credential-heavy fixtures, and internal project notes are present. Keep the hub card unlinked until a curated public setup page exists.
+Next action: decide whether the first workshop wants a public slide-generator setup page or a sanitized document-to-slides overview; do not expose the private/internal source publicly.
 
 ### Wiki-LLM
 
 Status: polish-first  
 Hub path: homepage placeholder card.  
-Source: local private candidate projects identified outside this repo; exact absolute paths intentionally withheld from the public-ready inventory.
-Safety notes: treat local project material as private until audited. Do not copy content or expose local-only paths yet.
-Next action: inspect candidate project structure outside this repo, identify the public-safe advanced guide source, and redact local/private material before publishing.
+Source: local/private candidate projects identified outside this repo; audit notes in `docs/wiki-llm-public-safety-audit.md`. Exact private repository names and absolute paths are intentionally withheld from the public-ready inventory.
+Safety notes: source path is located, and shallow-clone `gitleaks` scans found no findings across the reviewed candidates. Keep the hub card unlinked: active vaults are private knowledge stores, while the software/plugin docs still contain local-path and private-vault setup details that need redaction and workshop framing.
+Next action: create a sanitized `resources/wiki-llm-overview.html` page with a fictional mini-vault example, or clean and approve a software-only repo before direct public linking.
 
 ### Credential tracer / authentication routing
 
