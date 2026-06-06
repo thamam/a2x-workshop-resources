@@ -4,25 +4,25 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 ## Summary
 
-- Repository remains private: `gh repo view --json nameWithOwner,visibility,isPrivate,url` returned `isPrivate: true` and `visibility: PRIVATE` for `thamam/a2x-workshop-resources`.
-- GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --jq '{status:.status,html_url:.html_url}'` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
+- Repository remains private: `gh repo view thamam/a2x-workshop-resources --json visibility --jq .visibility` returned `PRIVATE`.
+- GitHub Pages remains unconfigured: `gh api repos/thamam/a2x-workshop-resources/pages` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site smoke passed for all 14 HTML files over `python3 -m http.server`.
 - Representative DOM smoke passed for public-facing pages over the local HTTP server.
-- GitHub Security checks completed successfully for current starting commit `0a1b28f2127603ca795a2fe6e652040b706a4009`.
+- GitHub Security checks completed successfully for current starting commit `72a019291850d5fe3f3ec52d4a477edc467c0ebf`.
 
 ## Evidence
 
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 00:39:03 IDT
+2026-06-07 00:52:46 IDT
 ```
 
 Starting commit:
 
 ```text
-0a1b28f2127603ca795a2fe6e652040b706a4009 docs: refresh public readiness evidence
+72a019291850d5fe3f3ec52d4a477edc467c0ebf docs: refresh readiness audit for latest commit
 ```
 
 ### Repository visibility
@@ -30,7 +30,7 @@ Starting commit:
 Command:
 
 ```bash
-git remote -v && gh repo view --json nameWithOwner,visibility,isPrivate,url
+git remote -v && gh repo view thamam/a2x-workshop-resources --json visibility --jq .visibility
 ```
 
 Result:
@@ -38,7 +38,7 @@ Result:
 ```text
 origin	git@github.com:thamam/a2x-workshop-resources.git (fetch)
 origin	git@github.com:thamam/a2x-workshop-resources.git (push)
-{"isPrivate":true,"nameWithOwner":"thamam/a2x-workshop-resources","url":"https://github.com/thamam/a2x-workshop-resources","visibility":"PRIVATE"}
+PRIVATE
 ```
 
 ### GitHub Pages state
@@ -46,13 +46,12 @@ origin	git@github.com:thamam/a2x-workshop-resources.git (push)
 Command:
 
 ```bash
-gh api repos/:owner/:repo/pages --jq '{status:.status,html_url:.html_url}'
+gh api repos/thamam/a2x-workshop-resources/pages
 ```
 
 Result excerpt:
 
 ```text
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}
 gh: Not Found (HTTP 404)
 ```
 
@@ -70,7 +69,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit code 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~202391 bytes (202.39 KB); no leaks found
+# scanned ~203190 bytes (203.19 KB); no leaks found
 
 git diff --check
 # exit code 0
@@ -108,7 +107,7 @@ Local HTTP smoke passed for all HTML files.
 
 ### Representative DOM smoke
 
-Representative DOM checks requested selected pages over the local HTTP server and verified title/HTML structure.
+Representative DOM checks requested selected pages over the local HTTP server and verified title/body/H1 structure.
 
 Result:
 
@@ -125,13 +124,13 @@ resources/wiki-llm-overview.html: DOM smoke OK
 Command:
 
 ```bash
-gh run list --branch main --limit 5 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt,url
+gh run list --branch main --limit 10 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt,url
 ```
 
 Result excerpt:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-06T21:27:53Z","databaseId":27074361473,"headSha":"0a1b28f2127603ca795a2fe6e652040b706a4009","status":"completed","updatedAt":"2026-06-06T21:28:02Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27074361473","workflowName":"Security checks"}]
+[{"conclusion":"success","createdAt":"2026-06-06T21:40:43Z","databaseId":27074634186,"headSha":"72a019291850d5fe3f3ec52d4a477edc467c0ebf","status":"completed","updatedAt":"2026-06-06T21:40:56Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27074634186","workflowName":"Security checks"}]
 ```
 
 ## Remaining approval gates
