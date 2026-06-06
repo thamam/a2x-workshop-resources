@@ -4,25 +4,25 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 ## Summary
 
-- Repository remains private: `gh repo view thamam/a2x-workshop-resources --json visibility --jq .visibility` returned `PRIVATE`.
-- GitHub Pages remains unconfigured: `gh api repos/thamam/a2x-workshop-resources/pages` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
+- Repository remains private: `gh repo view --json isPrivate,nameWithOwner,url,homepageUrl` returned `isPrivate: true` for `thamam/a2x-workshop-resources`.
+- GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site smoke passed for all 14 HTML files over `python3 -m http.server`.
-- Representative DOM smoke passed for public-facing pages over the local HTTP server.
-- GitHub Security checks completed successfully for current starting commit `2514ca441488b62282fcb9fd92f5f2642551d642`.
+- Representative Chrome Headless DOM smoke passed for four public-facing pages at a 390 × 844 viewport.
+- GitHub Security checks completed successfully for current starting commit `085bd32bdcb45d64507cd5efe2b5811ade044e5f`.
 
 ## Evidence
 
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 01:17:47 IDT
+2026-06-07 01:30:25 IDT
 ```
 
 Starting commit:
 
 ```text
-2514ca441488b62282fcb9fd92f5f2642551d642 docs: refresh readiness evidence for current state
+085bd32bdcb45d64507cd5efe2b5811ade044e5f docs: refresh public readiness evidence
 ```
 
 ### Repository visibility
@@ -30,28 +30,29 @@ Starting commit:
 Command:
 
 ```bash
-git remote -v && gh repo view thamam/a2x-workshop-resources --json visibility --jq .visibility
+gh repo view --json isPrivate,nameWithOwner,url,homepageUrl
 ```
 
 Result:
 
-```text
-origin	git@github.com:thamam/a2x-workshop-resources.git (fetch)
-origin	git@github.com:thamam/a2x-workshop-resources.git (push)
-PRIVATE
+```json
+{"homepageUrl":"","isPrivate":true,"nameWithOwner":"thamam/a2x-workshop-resources","url":"https://github.com/thamam/a2x-workshop-resources"}
 ```
+
+Interpretation: the repository is still private and has no public homepage URL configured.
 
 ### GitHub Pages state
 
 Command:
 
 ```bash
-gh api repos/thamam/a2x-workshop-resources/pages
+gh api repos/:owner/:repo/pages --include
 ```
 
 Result excerpt:
 
 ```text
+HTTP/2.0 404 Not Found
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}
 gh: Not Found (HTTP 404)
 ```
@@ -70,7 +71,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit code 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~204160 bytes (204.16 KB); no leaks found
+# scanned ~205287 bytes (205.29 KB); no leaks found
 
 git diff --check
 # exit code 0
@@ -81,43 +82,43 @@ git diff --check
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8877 --bind 127.0.0.1
+python3 -m http.server 8766 --bind 127.0.0.1
 ```
 
-HTTP smoke script requested every HTML file and verified status `200`, `text/html`, and an HTML doctype.
+HTTP smoke script requested every HTML file and verified status `200` and `text/html`.
 
 Result:
 
 ```text
-index.html: 200 text/html doctype=True
-kanban-status.html: 200 text/html doctype=True
-resources/a2x-marketplace-overview.html: 200 text/html doctype=True
-resources/claude-code-harness-map.html: 200 text/html doctype=True
-resources/claude-md-cheat-sheet.html: 200 text/html doctype=True
-resources/first-skill.html: 200 text/html doctype=True
-resources/openspec-interviewer.html: 200 text/html doctype=True
-resources/prd-html-review-workbench.html: 200 text/html doctype=True
-resources/prd-openspec-starter.html: 200 text/html doctype=True
-resources/presentation-editor-overview.html: 200 text/html doctype=True
-resources/product-brief-generator.html: 200 text/html doctype=True
-resources/prompt-improver.html: 200 text/html doctype=True
-resources/prompt-magician-setup.html: 200 text/html doctype=True
-resources/wiki-llm-overview.html: 200 text/html doctype=True
-Local HTTP smoke passed for all HTML files.
+OK 200 text/html index.html
+OK 200 text/html kanban-status.html
+OK 200 text/html resources/a2x-marketplace-overview.html
+OK 200 text/html resources/claude-code-harness-map.html
+OK 200 text/html resources/claude-md-cheat-sheet.html
+OK 200 text/html resources/first-skill.html
+OK 200 text/html resources/openspec-interviewer.html
+OK 200 text/html resources/prd-html-review-workbench.html
+OK 200 text/html resources/prd-openspec-starter.html
+OK 200 text/html resources/presentation-editor-overview.html
+OK 200 text/html resources/product-brief-generator.html
+OK 200 text/html resources/prompt-improver.html
+OK 200 text/html resources/prompt-magician-setup.html
+OK 200 text/html resources/wiki-llm-overview.html
+HTML smoke passed for 14 files
 ```
 
 ### Representative DOM smoke
 
-Representative DOM checks requested selected pages over the local HTTP server and verified title/body/H1 structure.
+Chrome Headless requested selected pages over the local HTTP server and verified HTML/body/H1 structure at `390x844`.
 
 Result:
 
 ```text
-index.html: DOM smoke OK
-kanban-status.html: DOM smoke OK
-resources/prd-html-review-workbench.html: DOM smoke OK
-resources/a2x-marketplace-overview.html: DOM smoke OK
-resources/wiki-llm-overview.html: DOM smoke OK
+DOM OK index.html (10673 bytes)
+DOM OK kanban-status.html (15737 bytes)
+DOM OK resources/prd-html-review-workbench.html (12951 bytes)
+DOM OK resources/a2x-marketplace-overview.html (6683 bytes)
+Representative Chrome Headless DOM smoke passed for 4 pages at 390x844
 ```
 
 ### GitHub Security checks
@@ -131,7 +132,7 @@ gh run list --branch main --limit 10 --json databaseId,headSha,status,conclusion
 Result excerpt:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-06T22:06:48Z","databaseId":27075187275,"headSha":"2514ca441488b62282fcb9fd92f5f2642551d642","status":"completed","updatedAt":"2026-06-06T22:07:02Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27075187275","workflowName":"Security checks"}]
+[{"conclusion":"success","createdAt":"2026-06-06T22:19:29Z","databaseId":27075449952,"headSha":"085bd32bdcb45d64507cd5efe2b5811ade044e5f","status":"completed","updatedAt":"2026-06-06T22:19:40Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27075449952","workflowName":"Security checks"}]
 ```
 
 ## Remaining approval gates
