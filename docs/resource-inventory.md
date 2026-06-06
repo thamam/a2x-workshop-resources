@@ -65,6 +65,14 @@ Source: public-safe static prompt/workflow drafted in this repo from the tool gi
 Safety notes: no external links, credentials, client material, local paths, or private examples.
 Next action: test after the product brief generator and tune the acceptance-criteria guidance.
 
+### PRD to HTML review workbench
+
+Status: publish-now prototype
+Hub path: `resources/prd-html-review-workbench.html`
+Source: public-safe static prototype scoped in `docs/prd-html-workbench-mvp-decision.md`.
+Safety notes: no backend, no accounts, no analytics, no model API calls, no localStorage, no private A2X links, and no browser filesystem writes. Comments are held only in page memory until the user copies/exports them.
+Next action: use only as a second-wave giveaway unless Tomer chooses to feature it live.
+
 ### A2X Marketplace
 
 Status: polish-first  

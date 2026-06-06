@@ -74,6 +74,16 @@ Attendee action: Draft concise PRD sections, concrete acceptance criteria, and a
 
 Status: ready draft.
 
+### Optional review surface: PRD to HTML workbench
+
+Resource: `resources/prd-html-review-workbench.html`.
+
+Use when: attendees have a PRD draft and Tomer wants to demonstrate the feedback loop from source spec to reviewable artifact back to model-ready change requests.
+
+Attendee action: Render the PRD, add local section comments, and export a feedback packet for the next assistant or OpenSpec turn.
+
+Status: ready prototype; second-wave giveaway, not required for the core first workshop flow.
+
 ## Priority 2 — show if polished before workshop
 
 ### A2X Marketplace

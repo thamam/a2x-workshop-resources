@@ -33,20 +33,20 @@
   - [x] Story 1.5: Verify tracker-related repository checks
   - [x] Story 1.6: Create HTML view for the canonical Kanban tracker
 
-- [ ] **Epic 2: Workshop resource hub foundation** (67% Completed)
+- [x] **Epic 2: Workshop resource hub foundation** (100% Completed)
   - [x] Story 2.1: Build static hub landing page
   - [x] Story 2.2: Add safe placeholder/resource cards
   - [x] Story 2.3: Add GitHub Pages readiness notes
-  - [ ] Story 2.4: Complete mobile/phone viewport review
-  - [ ] Story 2.5: Tune copy against a sanitized workshop example
+  - [x] Story 2.4: Complete mobile/phone viewport review
+  - [x] Story 2.5: Tune copy against a sanitized workshop example
   - [x] Story 2.6: Verify local static links
 
-- [ ] **Epic 3: Giveaway handout bundle** (80% Completed)
+- [x] **Epic 3: Giveaway handout bundle** (100% Completed)
   - [x] Story 3.1: Add product brief generator
   - [x] Story 3.2: Add OpenSpec-aware interviewer
   - [x] Story 3.3: Add prompt improver
   - [x] Story 3.4: Add PRD & OpenSpec starter
-  - [ ] Story 3.5: Run all handouts against one sanitized workshop scenario
+  - [x] Story 3.5: Run all handouts against one sanitized workshop scenario
 
 - [x] **Epic 4: Resource inventory & public-safety review** (100% Completed)
   - [x] Story 4.1: Create resource inventory
@@ -94,15 +94,7 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- [ ] Story 3.1–3.5: Static giveaway handout bundle and scenario chain
-  - Evidence: `resources/product-brief-generator.html`, `resources/openspec-interviewer.html`, `resources/prompt-improver.html`, and `resources/prd-openspec-starter.html` exist; `docs/giveaway-scenario-test.md` validates the chain with a public-safe synthetic consultant meeting-prep scenario.
-  - Next: Tomer can review wording and framing.
-- [ ] Story 2.4: Mobile/phone viewport smoke review
-  - Evidence: `docs/mobile-viewport-review.md` records Chrome Headless 390px checks with no horizontal overflow on the hub and four giveaway pages.
-  - Next: Full accessibility review is optional.
-- [ ] Story 4 / PRD-to-HTML workbench MVP scope
-  - Evidence: `docs/prd-html-workbench-mvp-decision.md` scopes a safe static giveaway prototype with approval boundaries.
-  - Next: Implement only if Tomer wants this second-wave giveaway or if run budget allows after final audit.
+- None right now.
 
 ### ✅ DONE (Completed Stories)
 
@@ -124,6 +116,10 @@
   - Evidence: resource cards and placeholder classifications are documented in `docs/resource-inventory.md`.
 - [x] Story 2.3: Add GitHub Pages readiness notes
   - Evidence: `docs/github-pages-readiness.md` exists.
+- [x] Story 2.4: Complete mobile/phone viewport review
+  - Evidence: `docs/mobile-viewport-review.md` records Chrome Headless 390px checks with no horizontal overflow on the hub and four giveaway pages; `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files)`, and `gitleaks detect --no-banner --redact --source .` passed on 2026-06-06.
+- [x] Story 2.5: Tune copy against a sanitized workshop example
+  - Evidence: `index.html` now frames the giveaway tools as a chained workflow checked against the synthetic consultant meeting-prep scenario and links to `docs/giveaway-scenario-test.md`; static-link, private-file, gitleaks, local HTTP, and Chrome Headless 390px overflow checks passed on 2026-06-06.
 - [x] Story 2.6: Verify local static links
   - Evidence: `python3 scripts/check-static-links.py` passed on 2026-06-06.
 - [x] Story 3.1: Add product brief generator
@@ -134,6 +130,8 @@
   - Evidence: `resources/prompt-improver.html` exists.
 - [x] Story 3.4: Add PRD & OpenSpec starter
   - Evidence: `resources/prd-openspec-starter.html` exists.
+- [x] Story 3.5: Run all handouts against one sanitized workshop scenario
+  - Evidence: `docs/giveaway-scenario-test.md` validates `resources/product-brief-generator.html`, `resources/openspec-interviewer.html`, `resources/prompt-improver.html`, and `resources/prd-openspec-starter.html` against a public-safe synthetic consultant meeting-prep scenario; static-link, private-file, and gitleaks checks passed on 2026-06-06.
 - [x] Story 4.1: Create resource inventory
   - Evidence: `docs/resource-inventory.md` exists.
 - [x] Story 4.2: Classify first-release publish-now resources
@@ -156,11 +154,18 @@
   - Evidence: approval gates are documented in `docs/goal-operating-model.md` and `docs/execution-dag.md`.
 - [x] Story 5.4: Run final public-release audit
   - Evidence: `docs/public-release-audit-2026-06-06.md` records repo-private, Pages-not-configured, private-file blocker, gitleaks, static-link, local HTTP, and Chrome Headless smoke checks; `docs/public-launch-checklist.md` points to the audit.
+- [x] Story 6.1: Build static PRD-to-HTML review workbench prototype
+  - Evidence: `resources/prd-html-review-workbench.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed static-link, private-file, gitleaks `--no-git`, local HTTP, Chrome Headless 390px overflow, fixture render, and feedback export checks on 2026-06-06.
 
 ---
 
 ## 🔁 Recent Transitions
 
+- 2026-06-06 — Finished Story 6.1: created `resources/prd-html-review-workbench.html`, linked it from the hub, updated inventory/usage map, and verified static links, private-file blocker, gitleaks `--no-git`, local HTTP, mobile overflow, fixture render, and feedback export.
+- 2026-06-06 — Started Story 6.1: build the static PRD-to-HTML review workbench prototype within the scoped public-safe boundaries.
+- 2026-06-06 — Finished Story 2.5: tuned `index.html` giveaway copy against the sanitized meeting-prep scenario, added a safe scenario-chain card, and verified static links, private-file blocker, gitleaks, local HTTP, and Chrome Headless 390px overflow.
+- 2026-06-06 — Started Story 2.5: tune hub copy against the sanitized workshop example.
+- 2026-06-06 — Finished Story 2.4/3.5 review reconciliation: inspected `docs/mobile-viewport-review.md` and `docs/giveaway-scenario-test.md`, confirmed the recorded evidence is strong enough for DONE, and reran static-link, private-file, and gitleaks checks successfully.
 - 2026-06-06 — Finished Story 4.7: wrote `docs/wiki-llm-public-safety-audit.md`, updated inventory and usage map, verified shallow-clone gitleaks results for six private candidates, and kept the hub card unlinked pending sanitized overview or approved software-only release path.
 - 2026-06-06 — Started Story 4.7: audit Wiki-LLM public-safe source path without exposing local/private paths publicly.
 - 2026-06-06 — Finished Story 4.6: located public `thamam/talk-auto-slides-generator` plus a private/internal document-to-presentation candidate, wrote `docs/presentation-editor-source-audit.md`, updated inventory/usage map, verified both candidate builds, and kept the hub card unlinked pending curated setup/overview.
@@ -187,4 +192,4 @@
 
 ## 📌 Next Safe Action
 
-- Reconcile remaining review items only if their existing evidence is strong enough to move to DONE; otherwise all remaining public launch/linking work requires Tomer approval or curated follow-up scope.
+- No further safe unblocked story is currently selected. Remaining public publishing/linking work is approval-gated; remaining advanced-resource exposure should start only as a curated sanitized overview task that does not link private/internal resources publicly.

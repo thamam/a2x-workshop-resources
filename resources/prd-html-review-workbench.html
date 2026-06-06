@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PRD to HTML Review Workbench · A2X</title>
+<meta name="description" content="A public-safe static workbench for rendering a PRD into a local review surface and exporting feedback." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279;--ok:#98d7a5;--warn:#ffd28a}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.55}main{max-width:1120px;margin:0 auto;padding:42px 20px 34px}a{color:inherit}.back{color:var(--accent2);text-decoration:none;font-weight:750}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:850;margin-top:22px}h1{font-size:clamp(2.2rem,6vw,4.7rem);line-height:1;margin:14px 0;letter-spacing:-.045em;max-width:900px}h2{font-size:clamp(1.35rem,3vw,2.1rem);margin:0 0 12px;letter-spacing:-.025em}h3{margin:0 0 8px;font-size:1.08rem}p{margin:0;color:var(--muted)}.lead{font-size:1.12rem;max-width:790px}.notice{border:1px solid var(--line);background:rgba(36,32,25,.7);border-radius:20px;padding:16px;margin:22px 0;color:var(--muted)}.notice strong{color:var(--text)}.layout{display:grid;grid-template-columns:minmax(280px,420px) 1fr;gap:18px;margin-top:24px;align-items:start}.panel,.section-card,.missing,.export{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:22px;padding:18px}.controls{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--accent);border-color:var(--accent);color:#1d120d}textarea,input,select{width:100%;border:1px solid var(--line);border-radius:14px;background:#15120e;color:var(--text);padding:12px;font:inherit}textarea{min-height:420px;resize:vertical}.comment{min-height:86px}.cards{display:grid;gap:14px}.section-card header{display:flex;justify-content:space-between;gap:12px;align-items:start;margin-bottom:10px}.tag{color:var(--accent2);font-size:.72rem;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.section-body{color:#dfd2be;white-space:pre-wrap}.section-tools{display:grid;grid-template-columns:1fr 170px;gap:10px;margin-top:14px}.missing{margin-bottom:14px}.missing ul{margin:8px 0 0;padding-left:20px;color:var(--warn)}.export{margin-top:18px}.export textarea{min-height:260px}.empty{border:1px dashed var(--line);border-radius:20px;padding:22px;color:var(--muted)}footer{margin-top:36px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line);padding-top:18px}@media (max-width:850px){.layout{grid-template-columns:1fr}.section-tools{grid-template-columns:1fr}textarea{min-height:300px}}
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="../index.html">← Back to hub</a>
+  <div class="eyebrow">Second-wave giveaway prototype</div>
+  <h1>PRD to HTML review workbench.</h1>
+  <p class="lead">Paste PRD Markdown, render it into a readable review surface, leave local in-memory comments, and export a feedback packet for your next model or OpenSpec handoff.</p>
+  <div class="notice"><strong>Privacy boundary:</strong> this page is static. It makes no network calls, has no backend, uses no analytics, and does not save comments to localStorage or disk. Keep real client material out of public demos.</div>
+
+  <div class="layout">
+    <section class="panel" aria-labelledby="input-title">
+      <h2 id="input-title">1. Source PRD</h2>
+      <p>Use plain Markdown headings. Optional OpenSpec-like sections such as Why, What changes, Impact, and Acceptance criteria are recognized as normal sections.</p>
+      <div class="controls">
+        <button type="button" id="fixture">Load synthetic fixture</button>
+        <button type="button" class="primary" id="render">Render review page</button>
+        <button type="button" id="clear">Clear in-memory comments</button>
+      </div>
+      <label class="tag" for="source">Markdown PRD input</label>
+      <textarea id="source" spellcheck="true" placeholder="# Meeting Prep Assistant PRD&#10;&#10;## Problem&#10;...&#10;&#10;## Acceptance criteria&#10;- ..."></textarea>
+    </section>
+
+    <section aria-labelledby="review-title">
+      <div class="panel" style="margin-bottom:14px">
+        <h2 id="review-title">2. Review surface</h2>
+        <p>Missing-section checks look for users, non-goals, constraints, acceptance criteria, and risks. Comments stay only in this browser session memory.</p>
+      </div>
+      <div id="missing" class="missing" hidden></div>
+      <div id="review" class="cards"><div class="empty">Load the fixture or paste a PRD, then render the review page.</div></div>
+      <div class="export">
+        <h2>3. Export feedback packet</h2>
+        <p>Copy this Markdown into your next assistant turn or OpenSpec proposal review.</p>
+        <div class="controls"><button type="button" class="primary" id="export">Export feedback packet</button><button type="button" id="copy">Copy packet</button></div>
+        <textarea id="packet" readonly placeholder="Rendered feedback packet appears here."></textarea>
+      </div>
+    </section>
+  </div>
+
+  <footer>Prototype scope: public-safe static page, local in-memory comments only, no persistence, no publishing approval implied.</footer>
+</main>
+<script>
+(() => {
+  const source = document.getElementById('source');
+  const review = document.getElementById('review');
+  const missingBox = document.getElementById('missing');
+  const packet = document.getElementById('packet');
+  const comments = new Map();
+  const fixture = `# Meeting Prep Assistant PRD\n\n## Problem\nSolo consultants need reliable pre-call context without exposing private client data or spending time on integrations. Notes, commitments, and meeting goals are scattered, and prep often happens ten minutes before the call.\n\n## Users\nIndependent consultants who handle multiple client calls each week and want a safe paste-only workflow for demo or personal use.\n\n## Goal\nTurn sanitized pasted context into a concise one-page pre-call brief with objective, prior commitments, risks, suggested questions, and missing-context warnings.\n\n## Non-goals\nNo calendar sync, email access, CRM features, storage, transcription, call recording, billing, team collaboration, or outbound client messages.\n\n## Constraints\nThe v1 must be static or local-first, paste-only, and must not store client content. It should work with synthetic fixture text during workshops.\n\n## Key flows\n1. User opens the static page.\n2. User pastes sanitized notes or a synthetic fixture.\n3. User chooses or accepts the pre-call brief output shape.\n4. The assistant returns objective, commitments, risks, questions, and missing-context warnings.\n\n## Acceptance criteria\n- Given the synthetic fixture, the output includes at least one objective, one prior commitment, one risk, and three suggested questions.\n- Given thin notes, the output labels missing context instead of inventing client details.\n- The page reminds users not to paste private client material into public demos.\n\n## Risks\nUsers may paste real client notes into a public model. Mitigation: keep fixture prominent and repeat the privacy warning.\n\n## Why\nDemonstrate a safe agent handoff pattern from rough idea to reviewable product spec.\n\n## What changes\nAdd a paste-only meeting-prep brief workflow with synthetic demo input.\n\n## Impact\nAttendees get a safe scenario for testing product brief, interviewer, prompt improver, PRD starter, and review handoff flows.`;
+
+  function escapeHtml(value) {
+    return value.replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  }
+
+  function slug(title, index) {
+    return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `section-${index}`;
+  }
+
+  function parseSections(markdown) {
+    const lines = markdown.split(/\r?\n/);
+    const sections = [];
+    let current = { title: 'Overview', level: 1, body: [] };
+    for (const line of lines) {
+      const match = /^(#{1,3})\s+(.+?)\s*$/.exec(line);
+      if (match) {
+        if (current.body.join('\n').trim() || current.title !== 'Overview') sections.push(current);
+        current = { title: match[2].trim(), level: match[1].length, body: [] };
+      } else {
+        current.body.push(line);
+      }
+    }
+    if (current.body.join('\n').trim() || current.title !== 'Overview') sections.push(current);
+    return sections.map((section, index) => ({ ...section, id: slug(section.title, index), bodyText: section.body.join('\n').trim() }));
+  }
+
+  function findMissing(sections) {
+    const all = sections.map(s => s.title.toLowerCase()).join(' | ');
+    const checks = [
+      ['users', /users?|audience|personas?/],
+      ['non-goals', /non[- ]?goals?|out of scope/],
+      ['constraints', /constraints?|privacy|boundary|requirements?/],
+      ['acceptance criteria', /acceptance criteria|success criteria|done/],
+      ['risks', /risks?|edge cases?|failure/]
+    ];
+    return checks.filter(([, pattern]) => !pattern.test(all)).map(([label]) => label);
+  }
+
+  function render() {
+    comments.clear();
+    packet.value = '';
+    const sections = parseSections(source.value.trim());
+    if (!sections.length) {
+      review.innerHTML = '<div class="empty">No Markdown sections found yet. Add headings like ## Problem and try again.</div>';
+      missingBox.hidden = true;
+      return;
+    }
+    const missing = findMissing(sections);
+    missingBox.hidden = false;
+    missingBox.innerHTML = missing.length
+      ? `<h3>Missing common review sections</h3><p>Consider adding these before handing the spec to a build agent:</p><ul>${missing.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+      : '<h3>Common section check passed</h3><p>Users, non-goals, constraints, acceptance criteria, and risks are represented.</p>';
+    review.innerHTML = sections.map((section, index) => `
+      <article class="section-card" data-id="${section.id}" data-title="${escapeHtml(section.title)}">
+        <header><div><div class="tag">Section ${index + 1}</div><h3>${escapeHtml(section.title)}</h3></div><div class="tag">h${section.level}</div></header>
+        <div class="section-body">${escapeHtml(section.bodyText || '(No body yet.)')}</div>
+        <div class="section-tools">
+          <textarea class="comment" aria-label="Comment for ${escapeHtml(section.title)}" placeholder="Local comment, question, risk, or change request"></textarea>
+          <select aria-label="Feedback type for ${escapeHtml(section.title)}">
+            <option>question</option>
+            <option>change request</option>
+            <option>risk</option>
+            <option>acceptance-criteria gap</option>
+          </select>
+        </div>
+      </article>`).join('');
+  }
+
+  function exportPacket() {
+    const cards = [...document.querySelectorAll('.section-card')];
+    const entries = cards.map(card => {
+      const title = card.dataset.title;
+      const comment = card.querySelector('.comment').value.trim();
+      const type = card.querySelector('select').value;
+      if (!comment) return null;
+      return `### ${title}\n- Type: ${type}\n- Comment: ${comment}\n- Suggested next model instruction: Update the ${title} section to address this ${type} while preserving the PRD scope and privacy boundaries.`;
+    }).filter(Boolean);
+    const missing = missingBox.hidden ? [] : [...missingBox.querySelectorAll('li')].map(li => li.textContent.trim());
+    packet.value = `# PRD review feedback packet\n\nSource: static A2X PRD-to-HTML review workbench.\nPersistence: comments were local in browser memory only.\n\n## Missing-section notes\n${missing.length ? missing.map(item => `- Add or strengthen: ${item}`).join('\n') : '- Common section check passed.'}\n\n## Section feedback\n${entries.length ? entries.join('\n\n') : '- No section comments entered.'}`;
+  }
+
+  document.getElementById('fixture').addEventListener('click', () => { source.value = fixture; render(); });
+  document.getElementById('render').addEventListener('click', render);
+  document.getElementById('clear').addEventListener('click', () => { document.querySelectorAll('.comment').forEach(el => el.value = ''); packet.value = ''; comments.clear(); });
+  document.getElementById('export').addEventListener('click', exportPacket);
+  document.getElementById('copy').addEventListener('click', async () => {
+    if (!packet.value) exportPacket();
+    packet.select();
+    try { await navigator.clipboard.writeText(packet.value); } catch (_) { document.execCommand('copy'); }
+  });
+})();
+</script>
+</body>
+</html>
