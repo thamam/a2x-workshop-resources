@@ -6,11 +6,11 @@ This map connects talk moments to resources in the hub. It is designed for the f
 
 ### Opening: "The harness, not just the model"
 
-Resource: Hub homepage section `How to use this hub live`.
+Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.
 
 Use when: Tomer explains that Claude Code performance depends on rules, tools, environment, and feedback loops.
 
-Attendee action: Understand that the workshop is about operating practice, not prompt trivia.
+Attendee action: Diagnose agent quality through rules, context, tools, reusable workflows, and review gates instead of treating the model as the only variable.
 
 Status: ready draft.
 

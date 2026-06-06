@@ -27,33 +27,33 @@ Next action: decide whether to keep as quick workshop handout or expand into a f
 
 ### Claude Code harness map
 
-Status: polish-first  
-Hub path: homepage placeholder card.  
+Status: publish-now
+Hub path: `resources/claude-code-harness-map.html`
 Source: existing public A2X site resource at `public/resources/claude-code-at-scale.html`.  
-Safety notes: likely public-safe, but should be reviewed before copying wholesale.  
-Next action: extract a concise “harness, not model” handout.
+Safety notes: current hub page is a short public-safe rewrite and does not copy analytics/tracking from the source page.
+Next action: review wording live after the workshop opener and expand only if it remains useful.
 
 ### A2X Marketplace
 
 Status: polish-first  
 Hub path: homepage placeholder card.  
-Source: unknown.  
-Safety notes: must confirm public URL, positioning, and whether any private plugin/tool details are exposed.  
-Next action: locate source repo/docs or get source from Tomer.
+Source: private/local backup snapshot named `A2X-backup-20260326` contains marketplace README and installation notes; no public-ready source confirmed in this repo.
+Safety notes: backup material includes local setup assumptions and plugin details that need review before public linking. Do not expose private backup paths or copy installation steps wholesale.
+Next action: identify the public marketplace URL/repo and rewrite a short public-safe overview card or handout.
 
 ### Prompt Magician
 
 Status: polish-first  
 Hub path: homepage placeholder card.  
-Source: unknown.  
+Source: not found in the local repository scan; mentioned only in the A2X-site handoff as a desired workshop resource.
 Safety notes: setup instructions must avoid private keys, internal endpoints, and local-only paths.  
-Next action: locate source repo or setup doc.
+Next action: locate source repo or setup doc before creating an active link.
 
 ### Presentation editor
 
 Status: polish-first  
 Hub path: homepage placeholder card.  
-Source: unknown.  
+Source: not found in the local repository scan; mentioned only in the A2X-site handoff as a desired workshop resource.
 Safety notes: must avoid exposing private slide content or client examples.  
 Next action: locate source repo or setup doc.
 
