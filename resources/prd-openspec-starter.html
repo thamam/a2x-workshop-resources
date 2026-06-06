@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRD & OpenSpec Starter — A2X</title>
+  <style>
+    body{margin:0;background:#16130f;color:#f3ece1;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:900px;margin:0 auto;padding:44px 20px}a{color:#f2b279}.eyebrow{color:#f2b279;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.78rem}h1{font-size:clamp(2rem,6vw,4rem);line-height:1;margin:14px 0 18px;letter-spacing:-.04em}h2{margin:0 0 6px}.lead,p,li{color:#b5ab98}.card{border:1px solid #3a342a;background:#242019;border-radius:18px;padding:18px;margin:14px 0}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}pre{white-space:pre-wrap;background:#0f0d0a;border:1px solid #3a342a;border-radius:14px;padding:14px;color:#f3ece1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.small{font-size:.94rem}</style>
+</head>
+<body>
+  <main>
+    <a href="../index.html">← Back to hub</a>
+    <div class="eyebrow">A2X giveaway tool</div>
+    <h1>PRD & OpenSpec starter.</h1>
+    <p class="lead">Turn a concise product brief into a practical PRD outline and an OpenSpec proposal starter. Use this after the brief is clear enough that the agent will not have to invent core requirements.</p>
+
+    <section class="card">
+      <h2>Copyable prompt</h2>
+      <pre>You are my PRD and OpenSpec proposal starter. Use the product brief below to draft a concise implementation-ready PRD and a starter OpenSpec proposal outline.
+
+Rules:
+- Do not invent business facts, integrations, credentials, or private context.
+- If a requirement is missing but important, list it as a high-impact question.
+- Keep the PRD concise enough to review in one sitting.
+- Separate must-have requirements from nice-to-have ideas.
+- Make acceptance criteria concrete and testable.
+
+Product brief:
+[PASTE BRIEF]
+
+Return:
+1. Problem
+2. Goal
+3. Users
+4. Non-goals
+5. Key flows
+6. Functional requirements
+7. Constraints and assumptions
+8. Acceptance criteria
+9. Risks
+10. OpenSpec proposal outline
+11. High-impact missing questions</pre>
+    </section>
+
+    <section class="grid">
+      <div class="card"><h2>Use after</h2><p>The product brief generator and, if needed, the OpenSpec-aware interviewer.</p></div>
+      <div class="card"><h2>Good output</h2><p>A clear enough PRD for a build agent to plan against, plus an OpenSpec-shaped change proposal.</p></div>
+      <div class="card"><h2>Stop if</h2><p>The model has to invent users, workflows, data, integrations, or success criteria. Go back to the interviewer first.</p></div>
+    </section>
+
+    <section class="card">
+      <h2>OpenSpec proposal skeleton</h2>
+      <pre># Proposal: [change-name]
+
+## Why
+[Problem and goal]
+
+## What changes
+- [User-visible change]
+- [System/workflow change]
+
+## Impact
+- Affected users:
+- Affected flows:
+- Risks:
+
+## Acceptance criteria
+- [ ] [Concrete observable behavior]</pre>
+    </section>
+
+    <p class="small">Public-safe note: this is a static prompt handout. Keep private client examples, tokens, local paths, and internal URLs out of pasted briefs.</p>
+  </main>
+</body>
+</html>

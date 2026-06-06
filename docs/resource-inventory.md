@@ -57,6 +57,14 @@ Source: public-safe static prompt/workflow drafted in this repo from the tool gi
 Safety notes: no external links, credentials, client material, local paths, or private examples.
 Next action: compare against any future Prompt Magician source before replacing the richer placeholder.
 
+### PRD & OpenSpec starter
+
+Status: publish-now
+Hub path: `resources/prd-openspec-starter.html`
+Source: public-safe static prompt/workflow drafted in this repo from the tool giveaway backlog.
+Safety notes: no external links, credentials, client material, local paths, or private examples.
+Next action: test after the product brief generator and tune the acceptance-criteria guidance.
+
 ### A2X Marketplace
 
 Status: polish-first  

@@ -205,7 +205,7 @@ Build these first:
 
 Then add:
 
-4. PRD generator / OpenSpec proposal starter.
+4. PRD generator / OpenSpec proposal starter. Built as `resources/prd-openspec-starter.html`; tune after live testing.
 
 Research before building:
 
@@ -218,6 +218,6 @@ Reasoning: the first three can ship as lightweight, public-safe, practical works
 1. Open with the harness idea.
 2. Give attendees rules they can use today.
 3. Turn repetition into infrastructure.
-4. Use the product brief generator, OpenSpec interviewer, and prompt improver as the first practical giveaway set.
+4. Use the product brief generator, OpenSpec interviewer, prompt improver, and PRD starter as the first practical giveaway set.
 5. Research existing PRD-to-HTML / interactive spec workbench patterns before implementation.
 6. Decide whether future richer versions live as `resources/*.html`, scripts, or skill/plugin packages.

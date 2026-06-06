@@ -64,6 +64,16 @@ Attendee action: Rewrite a rough prompt into goal, context, constraints, output 
 
 Status: ready draft.
 
+### Planning handoff: PRD & OpenSpec starter
+
+Resource: `resources/prd-openspec-starter.html`.
+
+Use when: attendees have a brief and need to turn it into implementation-ready structure.
+
+Attendee action: Draft concise PRD sections, concrete acceptance criteria, and an OpenSpec proposal outline.
+
+Status: ready draft.
+
 ## Priority 2 — show if polished before workshop
 
 ### A2X Marketplace
