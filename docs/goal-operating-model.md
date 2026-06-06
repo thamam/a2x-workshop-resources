@@ -121,6 +121,16 @@ Yunes must not do these without Tomer:
 
 ## Life-signal log format
 
-Use this concise format in Telegram while work is active:
+Use sparse, human-readable progress logs in Telegram while work is active.
+
+Do not spam. Emit logs at big enough task transitions, roughly every five minutes during sustained work, or when a major task starts/finishes.
+
+Preferred forms:
+
+- `Started working on <task>.`
+- `Working on <task>; <short status>.`
+- `Finished working on <task>; <evidence or result>.`
+
+Use the fuller diagnostic format only when blockers, approvals, or verification state matter:
 
 `LOG HH:MM — task: <short task>; status: <current state>; next: <next action>; blocker: <none or blocker>`
