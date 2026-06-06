@@ -61,14 +61,9 @@ Next action: locate source repo or setup doc.
 
 Status: polish-first  
 Hub path: homepage placeholder card.  
-Known local candidates:
-
-- `/Users/tomerhamam/personal/projects/llm-wiki/CLAUDE.md`
-- `/Users/tomerhamam/personal/cc-workshops/ccws-1/llm-wiki-1/CLAUDE.md`
-- `/Users/tomerhamam/Claude/Projects/Teaching Claude/llm-wiki/CLAUDE.md`
-
-Safety notes: treat local project material as private until audited. Do not copy content yet.  
-Next action: inspect candidate project structure, identify the public-safe advanced guide source, and redact local/private material before publishing.
+Source: local private candidate projects identified outside this repo; exact absolute paths intentionally withheld from the public-ready inventory.
+Safety notes: treat local project material as private until audited. Do not copy content or expose local-only paths yet.
+Next action: inspect candidate project structure outside this repo, identify the public-safe advanced guide source, and redact local/private material before publishing.
 
 ### Credential tracer / authentication routing
 

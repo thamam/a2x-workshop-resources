@@ -15,6 +15,11 @@ for file in "$@"; do
       echo "Blocked private/confidential marker in: $file" >&2
       blocked=1
     fi
+
+    if grep -I -nE '/Users/[^[:space:])]+|/home/[^[:space:])]+|/private/var/[^[:space:])]+|file:///' "$file" >/dev/null; then
+      echo "Blocked local-only absolute path in: $file" >&2
+      blocked=1
+    fi
   fi
 done
 
