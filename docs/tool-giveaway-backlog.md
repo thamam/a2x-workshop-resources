@@ -13,7 +13,7 @@ This backlog captures candidate tools Tomer can give workshop attendees as pract
 
 ## 1. Product brief generator
 
-Status: candidate — high priority.
+Status: v1 static page created — high priority.
 
 Goal: Help a user move from a rough product idea into a concise product brief that can seed a spec.
 
@@ -48,7 +48,7 @@ Implementation options:
 
 ## 2. PRD generator / OpenSpec proposal starter
 
-Status: candidate — high priority, depends on product brief flow.
+Status: v1 static page created — high priority, depends on product brief flow.
 
 Goal: Turn a product brief plus context into a more explicit Product Requirements Document (PRD) or OpenSpec-ready proposal draft.
 
@@ -87,7 +87,7 @@ Implementation options:
 
 ## 3. OpenSpec-aware interviewer
 
-Status: candidate — high priority.
+Status: v1 static page created — high priority.
 
 Goal: Identify major missing details and structural risks without pestering the user about tiny details.
 
@@ -119,7 +119,7 @@ Implementation options:
 
 ## 4. Prompt improver / Prompt Magician
 
-Status: candidate — high priority.
+Status: v1 static page created; richer Prompt Magician remains polish-first.
 
 Goal: Help users refine prompts while converting negative corrections into constructive instructions.
 
@@ -155,7 +155,7 @@ Implementation options:
 
 ## 5. PRD-to-beautiful-HTML workbench
 
-Status: research-first candidate — potentially high value.
+Status: research memo created — potentially high value.
 
 Goal: Turn a PRD into a beautiful, interactive HTML artifact that humans can read, comment on, revise, and then feed back to a model.
 
@@ -183,6 +183,8 @@ Research questions before implementation:
 - Does interactive commenting require a backend, or can it be done locally in browser state?
 - Does model-in-the-loop editing need an external token, or can the workflow use the attendee’s local Claude Code / model environment?
 
+Research memo: `docs/prd-html-workbench-research.md`.
+
 Workshop value:
 
 - Strong “wow” potential.
@@ -197,21 +199,18 @@ Implementation options:
 
 ## Suggested first-release bundle
 
-Build these first:
+Built as static v1 pages:
 
 1. Product brief generator.
 2. OpenSpec-aware interviewer.
 3. Prompt improver.
-
-Then add:
-
-4. PRD generator / OpenSpec proposal starter. Built as `resources/prd-openspec-starter.html`; tune after live testing.
+4. PRD generator / OpenSpec proposal starter.
 
 Research before building:
 
 5. PRD-to-beautiful-HTML workbench.
 
-Reasoning: the first three can ship as lightweight, public-safe, practical workshop tools. The PRD generator is stronger after the brief and interviewer flows exist. The HTML workbench is exciting but needs research to avoid rebuilding something that already exists.
+Reasoning: the first four can ship as lightweight, public-safe, practical workshop tools. The HTML workbench is exciting but needs scope selection before implementation.
 
 ## Current first-release flow
 
