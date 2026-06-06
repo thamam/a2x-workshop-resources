@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenSpec Interviewer — A2X</title>
+  <style>
+    body{margin:0;background:#16130f;color:#f3ece1;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:880px;margin:0 auto;padding:44px 20px}a{color:#f2b279}.eyebrow{color:#f2b279;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.78rem}h1{font-size:clamp(2rem,6vw,4rem);line-height:1;margin:14px 0 18px;letter-spacing:-.04em}h2{margin:0 0 6px}.lead,p,li{color:#b5ab98}.card{border:1px solid #3a342a;background:#242019;border-radius:18px;padding:18px;margin:14px 0}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}pre{white-space:pre-wrap;background:#0f0d0a;border:1px solid #3a342a;border-radius:14px;padding:14px;color:#f3ece1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.small{font-size:.94rem}</style>
+</head>
+<body>
+  <main>
+    <a href="../index.html">← Back to hub</a>
+    <div class="eyebrow">A2X giveaway tool</div>
+    <h1>OpenSpec-aware interviewer.</h1>
+    <p class="lead">A lightweight reviewer prompt for finding only the missing context that would cause an implementation agent to make the wrong call.</p>
+
+    <section class="card">
+      <h2>Copyable prompt</h2>
+      <pre>You are an OpenSpec-aware interviewer. Review my brief, PRD, or proposal draft and identify only the missing details that matter for implementation.
+
+Rules:
+- Ask at most 3–5 questions.
+- Prioritize questions that change architecture, scope, user experience, data model, integration points, security/privacy posture, or acceptance criteria.
+- Avoid wording nitpicks and low-impact formatting questions.
+- If a detail is reasonable to assume, state the assumption instead of asking.
+- Do not invent requirements.
+
+Draft:
+[PASTE BRIEF OR PRD]
+
+Return:
+1. High-impact questions
+2. Safe assumptions
+3. Risks if unanswered
+4. Suggested next OpenSpec proposal sections</pre>
+    </section>
+
+    <section class="grid">
+      <div class="card"><h2>Best moment</h2><p>Use after the product brief and before generating a full PRD or implementation plan.</p></div>
+      <div class="card"><h2>What it prevents</h2><p>It reduces costly agent assumptions without turning planning into bureaucratic ceremony.</p></div>
+      <div class="card"><h2>Workshop move</h2><p>Show attendees how to ask for fewer, better questions instead of endless clarification loops.</p></div>
+    </section>
+
+    <section class="card">
+      <h2>Question quality checklist</h2>
+      <ul>
+        <li>Would the answer change what gets built?</li>
+        <li>Would two plausible answers lead to different architecture?</li>
+        <li>Would guessing create security, privacy, or user-trust risk?</li>
+        <li>Can the agent safely assume this instead of asking?</li>
+      </ul>
+    </section>
+
+    <p class="small">Public-safe note: use sanitized examples in the workshop. Keep client details, credentials, and internal URLs out of pasted drafts.</p>
+  </main>
+</body>
+</html>

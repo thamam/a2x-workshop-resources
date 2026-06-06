@@ -33,6 +33,30 @@ Source: existing public A2X site resource at `public/resources/claude-code-at-sc
 Safety notes: current hub page is a short public-safe rewrite and does not copy analytics/tracking from the source page.
 Next action: review wording live after the workshop opener and expand only if it remains useful.
 
+### Product brief generator
+
+Status: publish-now
+Hub path: `resources/product-brief-generator.html`
+Source: public-safe static prompt/workflow drafted in this repo from the tool giveaway backlog.
+Safety notes: no external links, credentials, client material, local paths, or private examples.
+Next action: test live with one sanitized workshop idea and tune the question policy.
+
+### OpenSpec-aware interviewer
+
+Status: publish-now
+Hub path: `resources/openspec-interviewer.html`
+Source: public-safe static prompt/workflow drafted in this repo from the tool giveaway backlog.
+Safety notes: no external links, credentials, client material, local paths, or private examples.
+Next action: pair with the product brief generator in the workshop flow.
+
+### Prompt improver
+
+Status: publish-now
+Hub path: `resources/prompt-improver.html`
+Source: public-safe static prompt/workflow drafted in this repo from the tool giveaway backlog.
+Safety notes: no external links, credentials, client material, local paths, or private examples.
+Next action: compare against any future Prompt Magician source before replacing the richer placeholder.
+
 ### A2X Marketplace
 
 Status: polish-first  

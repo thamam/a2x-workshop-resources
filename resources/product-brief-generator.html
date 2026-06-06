@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Brief Generator — A2X</title>
+  <style>
+    body{margin:0;background:#16130f;color:#f3ece1;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:880px;margin:0 auto;padding:44px 20px}a{color:#f2b279}.eyebrow{color:#f2b279;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.78rem}h1{font-size:clamp(2rem,6vw,4rem);line-height:1;margin:14px 0 18px;letter-spacing:-.04em}h2{margin:0 0 6px}.lead,p,li{color:#b5ab98}.card{border:1px solid #3a342a;background:#242019;border-radius:18px;padding:18px;margin:14px 0}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}pre{white-space:pre-wrap;background:#0f0d0a;border:1px solid #3a342a;border-radius:14px;padding:14px;color:#f3ece1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.small{font-size:.94rem}</style>
+</head>
+<body>
+  <main>
+    <a href="../index.html">← Back to hub</a>
+    <div class="eyebrow">A2X giveaway tool</div>
+    <h1>Product brief generator.</h1>
+    <p class="lead">Use this when you have an idea but not yet a crisp enough brief for an implementation agent. The goal is a practical one-page brief, not a heavyweight product document.</p>
+
+    <section class="card">
+      <h2>Copyable prompt</h2>
+      <pre>You are my product brief partner. Help me turn a rough idea into a concise brief an implementation agent can use.
+
+Ask only the missing questions that would materially change scope, user experience, data model, architecture, or acceptance criteria. Ask at most 5 questions in one pass. If a detail is low-impact, make a labeled assumption instead of interrupting me.
+
+Rough idea:
+[PASTE IDEA]
+
+Output the final brief with:
+- One-sentence product idea
+- Target user
+- Problem / pain
+- Proposed workflow
+- Explicit non-goals
+- Constraints
+- Success signal
+- Open questions
+- Next step toward a spec</pre>
+    </section>
+
+    <section class="grid">
+      <div class="card"><h2>Use when</h2><p>You are moving from “I have an idea” to “I can ask an agent to help build this.”</p></div>
+      <div class="card"><h2>Do not overdo</h2><p>Keep the first pass brief. If the brief becomes long, split research, scope, and implementation into separate steps.</p></div>
+      <div class="card"><h2>Good next step</h2><p>Feed the brief into the OpenSpec interviewer or PRD starter before asking an agent to implement.</p></div>
+    </section>
+
+    <section class="card">
+      <h2>Blank scaffold</h2>
+      <pre>Product idea:
+Target user:
+Problem / pain:
+Proposed workflow:
+Non-goals:
+Constraints:
+Success signal:
+Open questions:
+Next step toward a spec:</pre>
+    </section>
+
+    <p class="small">Public-safe note: this page is a static workshop prompt. Do not paste credentials, private client material, or internal URLs into model chats.</p>
+  </main>
+</body>
+</html>

@@ -21,7 +21,14 @@ This repository is designed to become public. Treat every commit as publishable.
 
 ## Security rule
 
-Before this repository becomes public, every commit must pass secret scanning and private-file checks.
+Before this repository becomes public, every commit must pass secret scanning, private-file checks, and static local-link checks.
+
+Local verification:
+
+```bash
+scripts/block-private-files.sh $(git ls-files)
+python3 scripts/check-static-links.py
+```
 
 ## Local preview
 

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompt Improver — A2X</title>
+  <style>
+    body{margin:0;background:#16130f;color:#f3ece1;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:880px;margin:0 auto;padding:44px 20px}a{color:#f2b279}.eyebrow{color:#f2b279;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.78rem}h1{font-size:clamp(2rem,6vw,4rem);line-height:1;margin:14px 0 18px;letter-spacing:-.04em}h2{margin:0 0 6px}.lead,p,li{color:#b5ab98}.card{border:1px solid #3a342a;background:#242019;border-radius:18px;padding:18px;margin:14px 0}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}pre{white-space:pre-wrap;background:#0f0d0a;border:1px solid #3a342a;border-radius:14px;padding:14px;color:#f3ece1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.small{font-size:.94rem}</style>
+</head>
+<body>
+  <main>
+    <a href="../index.html">← Back to hub</a>
+    <div class="eyebrow">A2X giveaway tool</div>
+    <h1>Prompt improver.</h1>
+    <p class="lead">Turn a rough request into clearer instructions. The key move: rewrite negative corrections into positive behavior the model can follow.</p>
+
+    <section class="card">
+      <h2>Copyable prompt</h2>
+      <pre>You are my prompt improver. Improve the prompt below so it is clearer, more actionable, and less ambiguous.
+
+Rules:
+- Preserve the user's intent.
+- Convert negative corrections into positive desired behavior when possible.
+- Add missing context as placeholders, not invented facts.
+- Separate goal, context, constraints, output format, and quality bar.
+- Keep the improved prompt concise enough to use.
+
+Rough prompt:
+[PASTE PROMPT]
+
+Return:
+1. Improved prompt
+2. What changed and why
+3. Any missing context worth asking for</pre>
+    </section>
+
+    <section class="grid">
+      <div class="card"><h2>Example</h2><p>Instead of “don’t make it corporate,” ask for “direct, practical language with a warm expert tone; prefer concrete examples over marketing phrasing.”</p></div>
+      <div class="card"><h2>Use when</h2><p>An agent produces something almost right but drifts in tone, scope, structure, or assumptions.</p></div>
+      <div class="card"><h2>Upgrade path</h2><p>Save the improved version as a reusable workflow, project rule, or skill when it works repeatedly.</p></div>
+    </section>
+
+    <section class="card">
+      <h2>Prompt shape</h2>
+      <pre>Goal:
+Context:
+Inputs:
+Constraints:
+Output format:
+Quality bar:
+Things to avoid, rewritten as desired behavior:</pre>
+    </section>
+
+    <p class="small">Public-safe note: do not include private documents, credentials, client names, or internal links in workshop examples.</p>
+  </main>
+</body>
+</html>

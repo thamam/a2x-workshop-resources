@@ -34,6 +34,36 @@ Attendee action: Pick one repeated workflow and convert it into a skill.
 
 Status: ready draft.
 
+### Exercise handoff: Product brief generator
+
+Resource: `resources/product-brief-generator.html`.
+
+Use when: attendees need to turn a rough idea into a workable brief before asking an agent to build.
+
+Attendee action: Produce a one-page brief with user, problem, workflow, non-goals, success signal, and next spec step.
+
+Status: ready draft.
+
+### Spec sanity check: OpenSpec-aware interviewer
+
+Resource: `resources/openspec-interviewer.html`.
+
+Use when: Tomer wants to show how to ask only the missing questions that materially affect implementation.
+
+Attendee action: Run a brief or PRD through the interviewer prompt and answer the highest-impact questions.
+
+Status: ready draft.
+
+### Prompt feedback loop: Prompt improver
+
+Resource: `resources/prompt-improver.html`.
+
+Use when: Tomer demonstrates turning rough or negative feedback into clearer positive instructions.
+
+Attendee action: Rewrite a rough prompt into goal, context, constraints, output format, and quality bar.
+
+Status: ready draft.
+
 ## Priority 2 — show if polished before workshop
 
 ### A2X Marketplace
