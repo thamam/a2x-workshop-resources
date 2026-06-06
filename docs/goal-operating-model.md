@@ -82,9 +82,9 @@ Completion evidence:
 At the start of each work cycle, Yunes should:
 
 1. Inspect the current repo state.
-2. Read this file, `docs/execution-dag.md`, and `docs/live-kanban.md`.
+2. Read this file, `docs/execution-dag.md`, and root `kanban-status.md`.
 3. Pick the highest-priority `active` goal with unblocked work.
-4. Update `docs/live-kanban.md` when starting a meaningful task, finishing a task, changing a blocker, or reaching a scheduled 30-minute refresh point.
+4. Update root `kanban-status.md` when starting a meaningful task, finishing a task, changing a blocker, or reaching a scheduled 30-minute refresh point.
 5. Make concrete progress, not just restate plans.
 6. Run relevant verification.
 7. Commit and push safe private-repo changes when useful.

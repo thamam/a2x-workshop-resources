@@ -131,7 +131,7 @@ Work:
 
 Unblocks: stable workshop flow.
 
-### H. Live Kanban maintenance
+### H. Canonical Kanban maintenance
 
 Status: started.
 
@@ -139,7 +139,7 @@ Dependencies: none.
 
 Work:
 
-- Keep `docs/live-kanban.md` updated with planned tasks, active work, blockers, review items, done items, and recent transitions.
+- Keep root `kanban-status.md` updated with planned tasks, active work, blockers, review items, done items, and recent transitions.
 - Refresh at least every 30 minutes during active work.
 - Update immediately when a meaningful task finishes or a new meaningful task starts.
 - Link the board from the hub.
