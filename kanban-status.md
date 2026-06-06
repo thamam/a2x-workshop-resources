@@ -162,7 +162,7 @@
 - [x] Story 5.3: Keep repository private/publishing approval-gated
   - Evidence: approval gates are documented in `docs/goal-operating-model.md` and `docs/execution-dag.md`.
 - [x] Story 5.4: Run final public-release audit
-  - Evidence: `docs/public-release-audit-2026-06-07.md` records repo-private, Pages-not-configured, private-file blocker, gitleaks `--no-git`, static-link, local HTTP smoke for all 14 HTML files, representative DOM smoke, and successful GitHub Security Checks for starting commit `692f40f`; `docs/public-launch-checklist.md` points to the latest audit.
+  - Evidence: `docs/public-release-audit-2026-06-07.md` records repo-private, Pages-not-configured, private-file blocker, gitleaks `--no-git`, static-link, local HTTP smoke for all 14 HTML files, representative DOM/mobile smoke, and successful GitHub Security Checks for current starting commit `25c39a6`; `docs/public-launch-checklist.md` points to the latest audit.
 - [x] Story 6.1: Build static PRD-to-HTML review workbench prototype
   - Evidence: `resources/prd-html-review-workbench.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed static-link, private-file, gitleaks `--no-git`, local HTTP, Chrome Headless 390px overflow, fixture render, and feedback export checks on 2026-06-06.
 - [x] Story 6.2: Add sanitized Prompt Magician setup overview
@@ -178,6 +178,7 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `25c39a6`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `25c39a640ea30d574b0223c5a4ffaa5ef85994b5`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative Chrome DevTools DOM/mobile checks passed. No safe unblocked implementation stories remain listed.
 - 2026-06-07 — Finished Maintenance Story M.1: fixed `kanban-status.html` mobile overflow; Chrome DevTools 390×844 smoke now reports `kanban-status.html` at `width 390/390`, and static-link/private-file/gitleaks/diff checks passed locally.
 - 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `b4f082a`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; pre-refresh GitHub Security Checks succeeded for `b4f082a1b2dcd949b1e55e83e00b162d78aa414b`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative Chrome DevTools DOM/mobile checks passed. No safe unblocked implementation stories remain listed after the maintenance fix.
 - 2026-06-07 — Started Maintenance Story M.1: Chrome DevTools 390px smoke found `kanban-status.html` horizontal overflow (`scrollWidth 417` vs `clientWidth 390`); fixing the public-facing Kanban view before completing readiness evidence.
