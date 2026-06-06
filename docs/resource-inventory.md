@@ -69,9 +69,9 @@ Next action: test after the product brief generator and tune the acceptance-crit
 
 Status: polish-first  
 Hub path: homepage placeholder card.  
-Source: private/local backup snapshot named `A2X-backup-20260326` contains marketplace README and installation notes; no public-ready source confirmed in this repo.
-Safety notes: backup material includes local setup assumptions and plugin details that need review before public linking. Do not expose private backup paths or copy installation steps wholesale.
-Next action: identify the public marketplace URL/repo and rewrite a short public-safe overview card or handout.
+Source: public GitHub repo `https://github.com/thamam/A2X-marketplace`; audit notes in `docs/a2x-marketplace-public-safety-audit.md`.
+Safety notes: repo is already public, but a shallow-clone audit found local absolute paths, API-key setup docs, personal maintainer metadata, and gitleaks noise in a bundled/minified `code-research` server script. Keep the hub card unlinked until the marketplace repo is cleaned up or a sanitized overview is written.
+Next action: decide whether to clean/link the existing public repo or publish a short public-safe overview page without installation details.
 
 ### Prompt Magician
 

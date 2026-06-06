@@ -4,18 +4,20 @@ Use this before Tomer approves public visibility or GitHub Pages publishing.
 
 ## Required checks
 
-- [ ] Repository visibility is still private until Tomer approves public release.
-- [ ] GitHub Pages is not enabled until Tomer approves publishing.
-- [ ] `scripts/block-private-files.sh` passes on all changed files.
-- [ ] Gitleaks passes locally or in GitHub Actions.
-- [ ] No `.env`, keys, credentials, tokens, private notes, client names, or local-only paths are present.
-- [ ] Every linked resource appears in `docs/resource-inventory.md`.
-- [ ] Every linked resource is classified `publish-now` or explicitly approved after `polish-first` cleanup.
-- [ ] No analytics, tracking, lead capture, pricing claims, or strong marketing claims were added.
-- [ ] Mobile layout was checked.
-- [ ] Desktop layout was checked.
-- [ ] GitHub Pages readiness notes in `docs/github-pages-readiness.md` are current.
-- [ ] `.nojekyll` is present if publishing through GitHub Pages.
+Latest audit: `docs/public-release-audit-2026-06-06.md`.
+
+- [x] Repository visibility is still private until Tomer approves public release.
+- [x] GitHub Pages is not enabled until Tomer approves publishing.
+- [x] `scripts/block-private-files.sh` passes on all changed files.
+- [x] Gitleaks passes locally or in GitHub Actions.
+- [x] No `.env`, keys, credentials, tokens, private notes, client names, or local-only paths are present.
+- [x] Every linked resource appears in `docs/resource-inventory.md`.
+- [x] Every linked resource is classified `publish-now` or explicitly approved after `polish-first` cleanup.
+- [x] No analytics, tracking, lead capture, pricing claims, or strong marketing claims were added.
+- [x] Mobile layout was checked.
+- [x] Desktop layout was checked.
+- [x] GitHub Pages readiness notes in `docs/github-pages-readiness.md` are current.
+- [x] `.nojekyll` is present if publishing through GitHub Pages.
 
 ## Prepared but not approved
 

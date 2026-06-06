@@ -48,20 +48,20 @@
   - [x] Story 3.4: Add PRD & OpenSpec starter
   - [ ] Story 3.5: Run all handouts against one sanitized workshop scenario
 
-- [ ] **Epic 4: Resource inventory & public-safety review** (43% Completed)
+- [ ] **Epic 4: Resource inventory & public-safety review** (57% Completed)
   - [x] Story 4.1: Create resource inventory
   - [x] Story 4.2: Classify first-release publish-now resources
   - [x] Story 4.3: Create workshop usage map
-  - [ ] Story 4.4: Audit A2X Marketplace source/public-safe path
+  - [x] Story 4.4: Audit A2X Marketplace source/public-safe path
   - [ ] Story 4.5: Locate Prompt Magician source/setup doc
   - [ ] Story 4.6: Locate presentation editor source/setup doc
   - [ ] Story 4.7: Audit Wiki-LLM public-safe source path
 
-- [ ] **Epic 5: Public launch readiness** (60% Completed)
+- [ ] **Epic 5: Public launch readiness** (80% Completed)
   - [x] Story 5.1: Add public launch checklist
   - [x] Story 5.2: Add no-build GitHub Pages notes
   - [x] Story 5.3: Keep repository private/publishing approval-gated
-  - [ ] Story 5.4: Run final public-release audit
+  - [x] Story 5.4: Run final public-release audit
   - [ ] Story 5.5: Publish only after Tomer approval
 
 ---
@@ -70,15 +70,13 @@
 
 ### 📥 BACKLOG (Ready for Sprint Selection)
 
-- [ ] Story 4.4: Audit A2X Marketplace source/public-safe path - *Priority: Medium*
 - [ ] Story 4.5: Locate Prompt Magician source/setup doc - *Priority: Medium*
 - [ ] Story 4.6: Locate presentation editor source/setup doc - *Priority: Medium*
 - [ ] Story 4.7: Audit Wiki-LLM public-safe source path - *Priority: Medium*
-- [ ] Story 5.4: Run final public-release audit - *Priority: Medium*
 
 ### 📋 TODO (Selected for Next Story)
 
-- [ ] Story 5.4: Run final public-release audit (Assigned to: Yunes)
+- None right now.
 
 ### 🏃 IN PROGRESS (Currently Active)
 
@@ -91,7 +89,7 @@
   - Blocker: public publishing is an explicit approval boundary.
 - [ ] Story 4.4: Expose or link A2X Marketplace resources publicly
   - Status: blocked
-  - Blocker: public-safe source path and exposure rules are not confirmed.
+  - Blocker: public repo is located, but marketplace docs need cleanup or a sanitized overview before the workshop hub should link it.
 - [ ] Story 4.7: Expose or link Wiki-LLM resources publicly
   - Status: blocked
   - Blocker: local/private candidate material needs audit before public use.
@@ -144,17 +142,25 @@
   - Evidence: `docs/resource-inventory.md` lists publish-now and polish-first statuses.
 - [x] Story 4.3: Create workshop usage map
   - Evidence: `docs/workshop-usage-map.md` exists.
+- [x] Story 4.4: Audit A2X Marketplace source/public-safe path
+  - Evidence: `docs/a2x-marketplace-public-safety-audit.md` locates `https://github.com/thamam/A2X-marketplace`, records shallow-clone scan findings, and keeps the hub card unlinked pending cleanup or a sanitized overview.
 - [x] Story 5.1: Add public launch checklist
   - Evidence: `docs/public-launch-checklist.md` exists.
 - [x] Story 5.2: Add no-build GitHub Pages notes
   - Evidence: `docs/github-pages-readiness.md` and `.nojekyll` exist.
 - [x] Story 5.3: Keep repository private/publishing approval-gated
   - Evidence: approval gates are documented in `docs/goal-operating-model.md` and `docs/execution-dag.md`.
+- [x] Story 5.4: Run final public-release audit
+  - Evidence: `docs/public-release-audit-2026-06-06.md` records repo-private, Pages-not-configured, private-file blocker, gitleaks, static-link, local HTTP, and Chrome Headless smoke checks; `docs/public-launch-checklist.md` points to the audit.
 
 ---
 
 ## 🔁 Recent Transitions
 
+- 2026-06-06 — Finished Story 4.4: located public `thamam/A2X-marketplace`, wrote `docs/a2x-marketplace-public-safety-audit.md`, updated inventory, and kept the hub card unlinked pending cleanup/sanitized overview.
+- 2026-06-06 — Started Story 4.4: audit A2X Marketplace source/public-safe path.
+- 2026-06-06 — Finished Story 5.4: wrote `docs/public-release-audit-2026-06-06.md`; repo-private, Pages-not-configured, private-file, gitleaks, static-link, local HTTP, and Chrome Headless smoke checks passed.
+- 2026-06-06 — Started Story 5.4: final public-release audit.
 - 2026-06-06 — Finished Story 1.6: created `kanban-status.html`, linked it from the hub, and verified browser rendering.
 - 2026-06-06 — Started Story 1.6: create an HTML view for the canonical Kanban tracker.
 - 2026-06-06 — Finished Story 2.4: mobile viewport smoke review passed at 390px for hub and giveaway pages.
@@ -171,4 +177,4 @@
 
 ## 📌 Next Safe Action
 
-- Resume Story 5.4 final public-release audit after the HTML Kanban commit is pushed and the autonomous loop is resumed.
+- Start Story 4.5: locate Prompt Magician source/setup doc, without creating active public links until the source is confirmed public-safe.
