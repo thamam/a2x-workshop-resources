@@ -1,57 +1,53 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OpenSpec Interviewer — A2X</title>
-  <style>
-    body{margin:0;background:#16130f;color:#f3ece1;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:880px;margin:0 auto;padding:44px 20px}a{color:#f2b279}.eyebrow{color:#f2b279;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.78rem}h1{font-size:clamp(2rem,6vw,4rem);line-height:1;margin:14px 0 18px;letter-spacing:-.04em}h2{margin:0 0 6px}.lead,p,li{color:#b5ab98}.card{border:1px solid #3a342a;background:#242019;border-radius:18px;padding:18px;margin:14px 0}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}pre{white-space:pre-wrap;background:#0f0d0a;border:1px solid #3a342a;border-radius:14px;padding:14px;color:#f3ece1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.small{font-size:.94rem}</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OpenSpec-Aware Interviewer · A2X</title>
+<meta name="description" content="A lightweight A2X interviewer prompt for finding only the missing context that matters." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.55}main{max-width:920px;margin:0 auto;padding:44px 20px 34px}a{color:inherit}.button,button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:750;font-size:.95rem;cursor:pointer}button.primary{background:var(--accent);border-color:var(--accent);color:#1d120d}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(2rem,6vw,4.5rem);line-height:.98;margin:14px 0 12px;letter-spacing:-.05em}p{color:var(--muted);margin:0 0 14px}.lead{font-size:1.08rem;max-width:760px}.nav{margin-bottom:26px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:20px;padding:18px;margin-top:24px}.grid .card{margin-top:0}label{display:block;color:var(--accent2);font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}textarea{width:100%;border:1px solid var(--line);border-radius:14px;background:#120f0b;color:var(--text);padding:12px;font:inherit;min-height:86px;resize:vertical}.wide textarea{min-height:180px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}pre{white-space:pre-wrap;word-wrap:break-word;border:1px solid var(--line);background:#120f0b;color:#efe5d6;border-radius:18px;padding:18px;overflow:auto}.hint,footer{color:var(--muted);font-size:.94rem}footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px}
+</style>
 </head>
 <body>
-  <main>
-    <a href="../index.html">← Back to hub</a>
-    <div class="eyebrow">A2X giveaway tool</div>
-    <h1>OpenSpec-aware interviewer.</h1>
-    <p class="lead">A lightweight reviewer prompt for finding only the missing context that would cause an implementation agent to make the wrong call.</p>
+<main>
+<div class="nav"><a class="button" href="../index.html">← Back to hub</a></div>
+<div class="eyebrow">Giveaway tool</div>
+<h1>OpenSpec-aware interviewer.</h1>
+<p class="lead">Use this when a brief, PRD, or proposal is almost ready, but you want to catch the assumptions that would make a build agent guess wrong.</p>
+<section class="card wide"><label for="draft">Brief, PRD, or proposal draft</label><textarea id="draft" placeholder="Paste the current draft here..."></textarea></section>
+<section class="grid">
+<div class="card"><label for="context">Extra context</label><textarea id="context" placeholder="Audience, repo, constraints, deadline, platform..."></textarea></div>
+<div class="card"><label for="focus">Specific focus</label><textarea id="focus" placeholder="Architecture? UX? data? acceptance criteria? scope?"></textarea></div>
+</section>
+<div class="actions"><button class="primary" onclick="generate()">Generate interviewer prompt</button><button id="copy" onclick="copyOutput()">Copy output</button></div>
+<pre id="output">Paste a draft, then generate a copyable interviewer prompt.</pre>
+<p class="hint">Question policy: major issues only. No formatting nitpicks. OpenSpec can structure the change later.</p>
+<footer>Static page. No network calls, tracking, storage, or private context.</footer>
+</main>
+<script>
+function value(id){return document.getElementById(id).value.trim()||'[fill in]'}
+function setOutput(text){document.getElementById('output').textContent=text.trim()}
+async function copyOutput(){const text=document.getElementById('output').textContent.trim();if(!text)return;await navigator.clipboard.writeText(text);document.getElementById('copy').textContent='Copied';setTimeout(()=>document.getElementById('copy').textContent='Copy output',1400)}
+function generate(){setOutput(`Act as an OpenSpec-aware product interviewer. Review the draft below and identify only the missing context that could cause a build agent to make wrong assumptions.
 
-    <section class="card">
-      <h2>Copyable prompt</h2>
-      <pre>You are an OpenSpec-aware interviewer. Review my brief, PRD, or proposal draft and identify only the missing details that matter for implementation.
-
-Rules:
-- Ask at most 3–5 questions.
-- Prioritize questions that change architecture, scope, user experience, data model, integration points, security/privacy posture, or acceptance criteria.
-- Avoid wording nitpicks and low-impact formatting questions.
-- If a detail is reasonable to assume, state the assumption instead of asking.
-- Do not invent requirements.
+Do not nitpick wording, formatting, or small details. OpenSpec will handle change structure later. This pass is only about major gaps that affect architecture, scope, user experience, data model, acceptance criteria, risks, or rollout.
 
 Draft:
-[PASTE BRIEF OR PRD]
+${value('draft')}
+
+Extra context:
+${value('context')}
+
+Specific focus:
+${value('focus')}
 
 Return:
-1. High-impact questions
-2. Safe assumptions
-3. Risks if unanswered
-4. Suggested next OpenSpec proposal sections</pre>
-    </section>
-
-    <section class="grid">
-      <div class="card"><h2>Best moment</h2><p>Use after the product brief and before generating a full PRD or implementation plan.</p></div>
-      <div class="card"><h2>What it prevents</h2><p>It reduces costly agent assumptions without turning planning into bureaucratic ceremony.</p></div>
-      <div class="card"><h2>Workshop move</h2><p>Show attendees how to ask for fewer, better questions instead of endless clarification loops.</p></div>
-    </section>
-
-    <section class="card">
-      <h2>Question quality checklist</h2>
-      <ul>
-        <li>Would the answer change what gets built?</li>
-        <li>Would two plausible answers lead to different architecture?</li>
-        <li>Would guessing create security, privacy, or user-trust risk?</li>
-        <li>Can the agent safely assume this instead of asking?</li>
-      </ul>
-    </section>
-
-    <p class="small">Public-safe note: use sanitized examples in the workshop. Keep client details, credentials, and internal URLs out of pasted drafts.</p>
-  </main>
+1. The 3–5 highest-impact questions, ordered by importance
+2. Why each question matters
+3. Safe assumptions you can make without interrupting me
+4. Blockers that must be answered before implementation
+5. A short recommendation: proceed, revise brief, or create OpenSpec proposal`)}
+</script>
 </body>
 </html>

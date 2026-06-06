@@ -1,60 +1,61 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Brief Generator — A2X</title>
-  <style>
-    body{margin:0;background:#16130f;color:#f3ece1;font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:880px;margin:0 auto;padding:44px 20px}a{color:#f2b279}.eyebrow{color:#f2b279;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.78rem}h1{font-size:clamp(2rem,6vw,4rem);line-height:1;margin:14px 0 18px;letter-spacing:-.04em}h2{margin:0 0 6px}.lead,p,li{color:#b5ab98}.card{border:1px solid #3a342a;background:#242019;border-radius:18px;padding:18px;margin:14px 0}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}pre{white-space:pre-wrap;background:#0f0d0a;border:1px solid #3a342a;border-radius:14px;padding:14px;color:#f3ece1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.small{font-size:.94rem}</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Product Brief Generator · A2X</title>
+<meta name="description" content="A lightweight A2X workflow for turning a rough product idea into a concise product brief." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.55}main{max-width:920px;margin:0 auto;padding:44px 20px 34px}a{color:inherit}.button,button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:750;font-size:.95rem;cursor:pointer}button.primary{background:var(--accent);border-color:var(--accent);color:#1d120d}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(2rem,6vw,4.5rem);line-height:.98;margin:14px 0 12px;letter-spacing:-.05em}p{color:var(--muted);margin:0 0 14px}.lead{font-size:1.08rem;max-width:760px}.nav{margin-bottom:26px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:24px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:20px;padding:18px}label{display:block;color:var(--accent2);font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}textarea{width:100%;border:1px solid var(--line);border-radius:14px;background:#120f0b;color:var(--text);padding:12px;font:inherit;min-height:86px;resize:vertical}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}pre{white-space:pre-wrap;word-wrap:break-word;border:1px solid var(--line);background:#120f0b;color:#efe5d6;border-radius:18px;padding:18px;overflow:auto}.hint,footer{color:var(--muted);font-size:.94rem}footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px}
+</style>
 </head>
 <body>
-  <main>
-    <a href="../index.html">← Back to hub</a>
-    <div class="eyebrow">A2X giveaway tool</div>
-    <h1>Product brief generator.</h1>
-    <p class="lead">Use this when you have an idea but not yet a crisp enough brief for an implementation agent. The goal is a practical one-page brief, not a heavyweight product document.</p>
+<main>
+<div class="nav"><a class="button" href="../index.html">← Back to hub</a></div>
+<div class="eyebrow">Giveaway tool</div>
+<h1>Product brief generator.</h1>
+<p class="lead">Turn a rough product idea into a short, practical brief an agent can use. Keep it compact. Skip heavyweight process language unless it truly helps.</p>
+<section class="grid">
+<div class="card"><label for="idea">Product idea</label><textarea id="idea" placeholder="What are you trying to build?"></textarea></div>
+<div class="card"><label for="user">Target user</label><textarea id="user" placeholder="Who is this for?"></textarea></div>
+<div class="card"><label for="problem">Problem / pain</label><textarea id="problem" placeholder="What hurts today?"></textarea></div>
+<div class="card"><label for="workflow">Proposed workflow</label><textarea id="workflow" placeholder="How should it work at a high level?"></textarea></div>
+<div class="card"><label for="constraints">Constraints</label><textarea id="constraints" placeholder="Time, systems, style, privacy, must-use tools..."></textarea></div>
+<div class="card"><label for="nongoals">Out of scope</label><textarea id="nongoals" placeholder="What should the agent not build yet?"></textarea></div>
+<div class="card"><label for="success">Success signal</label><textarea id="success" placeholder="How will we know v1 worked?"></textarea></div>
+<div class="card"><label for="questions">Open questions</label><textarea id="questions" placeholder="What is still uncertain?"></textarea></div>
+</section>
+<div class="actions"><button class="primary" onclick="generate()">Generate brief prompt</button><button id="copy" onclick="copyOutput()">Copy output</button></div>
+<pre id="output">Fill the fields, then generate a copyable prompt.</pre>
+<p class="hint">Tip: if you have only a rough idea, fill just the first two fields. The prompt asks the model to keep questions high-impact and brief.</p>
+<footer>Static page. No network calls, tracking, storage, or private context.</footer>
+</main>
+<script>
+function value(id){return document.getElementById(id).value.trim()||'[fill in]'}
+function setOutput(text){document.getElementById('output').textContent=text.trim()}
+async function copyOutput(){const text=document.getElementById('output').textContent.trim();if(!text)return;await navigator.clipboard.writeText(text);document.getElementById('copy').textContent='Copied';setTimeout(()=>document.getElementById('copy').textContent='Copy output',1400)}
+function generate(){setOutput(`Help me turn this product idea into a concise product brief. Keep it practical, short, and usable as the starting point for a spec. Do not turn it into a heavyweight software-development lifecycle document. If something important is missing, ask only the 3 highest-impact questions; otherwise make reasonable assumptions and label them.
 
-    <section class="card">
-      <h2>Copyable prompt</h2>
-      <pre>You are my product brief partner. Help me turn a rough idea into a concise brief an implementation agent can use.
+Inputs:
+- Product idea: ${value('idea')}
+- Target user: ${value('user')}
+- Problem / pain: ${value('problem')}
+- Proposed workflow: ${value('workflow')}
+- Constraints: ${value('constraints')}
+- Out of scope: ${value('nongoals')}
+- Success signal: ${value('success')}
+- Open questions: ${value('questions')}
 
-Ask only the missing questions that would materially change scope, user experience, data model, architecture, or acceptance criteria. Ask at most 5 questions in one pass. If a detail is low-impact, make a labeled assumption instead of interrupting me.
-
-Rough idea:
-[PASTE IDEA]
-
-Output the final brief with:
-- One-sentence product idea
-- Target user
-- Problem / pain
-- Proposed workflow
-- Explicit non-goals
-- Constraints
-- Success signal
-- Open questions
-- Next step toward a spec</pre>
-    </section>
-
-    <section class="grid">
-      <div class="card"><h2>Use when</h2><p>You are moving from “I have an idea” to “I can ask an agent to help build this.”</p></div>
-      <div class="card"><h2>Do not overdo</h2><p>Keep the first pass brief. If the brief becomes long, split research, scope, and implementation into separate steps.</p></div>
-      <div class="card"><h2>Good next step</h2><p>Feed the brief into the OpenSpec interviewer or PRD starter before asking an agent to implement.</p></div>
-    </section>
-
-    <section class="card">
-      <h2>Blank scaffold</h2>
-      <pre>Product idea:
-Target user:
-Problem / pain:
-Proposed workflow:
-Non-goals:
-Constraints:
-Success signal:
-Open questions:
-Next step toward a spec:</pre>
-    </section>
-
-    <p class="small">Public-safe note: this page is a static workshop prompt. Do not paste credentials, private client material, or internal URLs into model chats.</p>
-  </main>
+Return this exact shape:
+1. One-sentence product idea
+2. Target user
+3. Problem / pain
+4. Proposed workflow
+5. Non-goals / out of scope
+6. Success signal
+7. Assumptions
+8. Open questions, max 3
+9. Next step toward a spec`)}
+</script>
 </body>
 </html>
