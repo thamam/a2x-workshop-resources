@@ -6,7 +6,9 @@ This document defines the operating model for autonomous work on the workshop re
 
 Do not wait for Tomer acknowledgement to start the next unblocked task. Treat updates as status, not as gates, unless the task crosses an approval boundary.
 
-Use `docs/goal-operating-model.md` as the standing-goal layer for this sprint. It defines active goals, completion evidence, blocked states, and the life-signal log format in the spirit of Codex `/goal`.
+Do not wait for the next scheduled tick merely because a task finished. A completed task should trigger immediate continuation: choose the next highest-priority safe task, start it, and only stop when run budget, approval boundaries, or genuine lack of useful work require stopping.
+
+Use `docs/goal-operating-model.md` as the standing-goal layer for this sprint. It defines active goals, completion evidence, blocked states, continuation rules, and the life-signal log format in the spirit of Codex `/goal`.
 
 ## Approval boundaries
 

@@ -87,7 +87,9 @@ At the start of each work cycle, Yunes should:
 4. Make concrete progress, not just restate plans.
 5. Run relevant verification.
 6. Commit and push safe private-repo changes when useful.
-7. Send a minimal life-signal log.
+7. Send a minimal life-signal log when the work crosses a meaningful task boundary.
+
+Continuation rule: finishing a task is not a stopping condition. After completing, verifying, and optionally committing one task, immediately select the next unblocked safe task and start the next sequence inside the same work cycle. Continue until the available run budget is nearly exhausted, all remaining work needs Tomer approval, or no safe useful task can be started.
 
 If one goal blocks, continue another active goal.
 
