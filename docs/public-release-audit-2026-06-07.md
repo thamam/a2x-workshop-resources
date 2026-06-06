@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,visibility,isPrivate,url` returned `isPrivate: true` and `visibility: PRIVATE` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security checks completed successfully for current starting commit `25c39a640ea30d574b0223c5a4ffaa5ef85994b5`.
+- GitHub Security checks completed successfully for current starting commit `ff02de8985aec89ac2070854c2ebdfef34048d84`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site smoke passed for all 14 HTML files over `python3 -m http.server`.
 - Representative Chrome DevTools DOM/mobile smoke passed for four public-facing pages at a 390 × 844 viewport, including the canonical Kanban HTML view.
@@ -17,13 +17,13 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 02:20:32 IDT
+2026-06-07 02:33:23 IDT
 ```
 
 Starting commit:
 
 ```text
-25c39a640ea30d574b0223c5a4ffaa5ef85994b5 docs: record security check for kanban overflow fix
+ff02de8985aec89ac2070854c2ebdfef34048d84 docs: refresh public readiness evidence
 ```
 
 ### Repository visibility
@@ -70,7 +70,7 @@ gh run list --branch main --limit 5 --json databaseId,headSha,status,conclusion,
 Result excerpt:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-06T23:07:03Z","databaseId":27076429166,"headSha":"25c39a640ea30d574b0223c5a4ffaa5ef85994b5","status":"completed","updatedAt":"2026-06-06T23:07:17Z","workflowName":"Security checks"}]
+[{"conclusion":"success","createdAt":"2026-06-06T23:21:51Z","databaseId":27076718457,"headSha":"ff02de8985aec89ac2070854c2ebdfef34048d84","status":"completed","updatedAt":"2026-06-06T23:22:01Z","workflowName":"Security checks"}]
 ```
 
 Interpretation: the latest pushed commit's GitHub Security Checks are green.
@@ -87,7 +87,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit code 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~209212 bytes (209.21 KB); no leaks found
+# scanned ~209765 bytes (209.76 KB); no leaks found
 
 git diff --check
 # exit code 0
@@ -107,6 +107,7 @@ Result:
 
 ```text
 OK 200 text/html index.html
+OK 200 text/html kanban-status.html
 OK 200 text/html resources/a2x-marketplace-overview.html
 OK 200 text/html resources/claude-code-harness-map.html
 OK 200 text/html resources/claude-md-cheat-sheet.html
@@ -119,7 +120,6 @@ OK 200 text/html resources/product-brief-generator.html
 OK 200 text/html resources/prompt-improver.html
 OK 200 text/html resources/prompt-magician-setup.html
 OK 200 text/html resources/wiki-llm-overview.html
-OK 200 text/html kanban-status.html
 HTML smoke passed for 14 files
 ```
 
@@ -131,7 +131,7 @@ Result:
 
 ```text
 DOM OK index.html (10656 bytes, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (42775 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
+DOM OK kanban-status.html (43178 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
 DOM OK resources/prd-html-review-workbench.html (12934 bytes, h1='PRD to HTML review workbench.', width 390/390)
 DOM OK resources/a2x-marketplace-overview.html (6666 bytes, h1='A2X Marketplace overview.', width 390/390)
 Representative Chrome DevTools DOM/mobile smoke passed for 4 pages at 390x844

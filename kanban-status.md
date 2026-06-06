@@ -105,6 +105,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Refresh public-readiness evidence for current repo state
+  - Evidence: `docs/public-release-audit-2026-06-07.md` updated for starting commit `ff02de8985aec89ac2070854c2ebdfef34048d84`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `ff02de8985aec89ac2070854c2ebdfef34048d84`; `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative Chrome DevTools 390×844 DOM/mobile checks passed.
 - [x] Maintenance Story M.1: Fix `kanban-status.html` mobile overflow found during readiness refresh
   - Evidence: Chrome DevTools mobile smoke initially found `kanban-status.html` at `scrollWidth 417` vs `clientWidth 390`; `kanban-status.html` CSS now constrains page-level overflow while preserving inner board scrolling, and the same 390×844 Chrome DevTools smoke passed with `width 390/390`.
 - [x] Story 1.6: Create HTML view for the canonical Kanban tracker
@@ -178,6 +180,8 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `ff02de8`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `ff02de8985aec89ac2070854c2ebdfef34048d84`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative Chrome DevTools DOM/mobile checks passed. No safe unblocked implementation stories remain listed.
+- 2026-06-07 — Started Maintenance: refresh latest public-readiness evidence for current repo state at starting commit `ff02de8`; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 - 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `25c39a6`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `25c39a640ea30d574b0223c5a4ffaa5ef85994b5`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative Chrome DevTools DOM/mobile checks passed. No safe unblocked implementation stories remain listed.
 - 2026-06-07 — Finished Maintenance Story M.1: fixed `kanban-status.html` mobile overflow; Chrome DevTools 390×844 smoke now reports `kanban-status.html` at `width 390/390`, and static-link/private-file/gitleaks/diff checks passed locally.
 - 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `b4f082a`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; pre-refresh GitHub Security Checks succeeded for `b4f082a1b2dcd949b1e55e83e00b162d78aa414b`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative Chrome DevTools DOM/mobile checks passed. No safe unblocked implementation stories remain listed after the maintenance fix.
