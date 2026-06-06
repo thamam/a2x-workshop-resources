@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A2X Project Kanban</title>
+  <meta name="description" content="HTML view of the A2X workshop resources Kanban tracker." />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg:#16130f;
+      --card:#242019;
+      --card2:#1d1913;
+      --line:#3a342a;
+      --text:#f3ece1;
+      --muted:#b5ab98;
+      --accent:#d97757;
+      --accent2:#f2b279;
+      --ok:#98d7a5;
+      --warn:#ffd166;
+      --bad:#ff8f8f;
+      --info:#8ecae6;
+      --shadow: 0 24px 80px rgba(0,0,0,.28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #2b2118 0, var(--bg) 34rem);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    main { max-width: 1220px; margin: 0 auto; padding: 44px 18px 36px; }
+    .eyebrow { color: var(--accent2); font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 850; }
+    h1 { font-size: clamp(2.35rem, 7vw, 5.2rem); line-height: .96; margin: 16px 0; letter-spacing: -.055em; max-width: 920px; }
+    h2 { font-size: clamp(1.35rem, 2.8vw, 2.05rem); margin: 0; letter-spacing:-.025em; }
+    h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    p { margin: 0; color: var(--muted); }
+    .lead { max-width: 770px; font-size: 1.08rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 0; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.94rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    .meta { margin-top: 22px; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+    .meta-card, .panel, .column, .epic, .transition, .rule {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(36,32,25,.96), rgba(29,25,19,.96));
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .meta-card { padding: 14px 16px; }
+    .meta-card strong { display:block; color: var(--text); font-size: .86rem; margin-bottom: 4px; }
+    .meta-card span { color: var(--muted); font-size: .94rem; }
+    section { margin-top: 42px; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap: 16px; margin-bottom: 16px; }
+    .section-head p { max-width: 620px; }
+    .epics { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+    .epic { padding: 18px; }
+    .epic .top { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+    .progress { height: 9px; border-radius: 999px; background: #332c23; overflow:hidden; margin: 12px 0; }
+    .progress span { display:block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: inherit; }
+    .stories { padding-left: 0; list-style: none; margin: 10px 0 0; display:grid; gap: 7px; }
+    .story { color: var(--muted); font-size: .92rem; }
+    .story.done { color: var(--ok); }
+    .board { display:grid; grid-template-columns: repeat(6, minmax(220px, 1fr)); gap: 12px; overflow-x:auto; padding-bottom: 8px; }
+    .column { min-width: 220px; padding: 14px; }
+    .column h3 { display:flex; justify-content:space-between; gap:8px; align-items:center; font-size: .95rem; text-transform: uppercase; letter-spacing:.05em; }
+    .count { color: var(--muted); font-size:.78rem; border:1px solid var(--line); border-radius:999px; padding:2px 8px; }
+    .tasks { display:grid; gap: 10px; margin-top: 12px; }
+    .task { border: 1px solid rgba(255,255,255,.08); background: rgba(0,0,0,.13); border-radius: 14px; padding: 12px; }
+    .task .title { color: var(--text); font-weight: 780; font-size: .94rem; }
+    .task .detail { margin-top: 6px; color: var(--muted); font-size: .88rem; }
+    .task.high { border-color: rgba(255, 209, 102, .42); }
+    .task.blocked { border-color: rgba(255, 143, 143, .42); }
+    .task.review { border-color: rgba(142, 202, 230, .42); }
+    .task.done { border-color: rgba(152, 215, 165, .42); }
+    .badge { display:inline-flex; align-items:center; gap:4px; border-radius:999px; padding:2px 8px; font-size:.72rem; font-weight: 800; margin-top: 8px; border:1px solid var(--line); color: var(--muted); }
+    .badge.high { color: var(--warn); border-color: rgba(255, 209, 102, .42); }
+    .badge.done { color: var(--ok); border-color: rgba(152, 215, 165, .42); }
+    .badge.blocked { color: var(--bad); border-color: rgba(255, 143, 143, .42); }
+    .badge.review { color: var(--info); border-color: rgba(142, 202, 230, .42); }
+    .panel { padding: 18px; }
+    .rules { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+    .rule { padding: 14px; color: var(--muted); font-size: .93rem; }
+    .transitions { display:grid; gap: 9px; }
+    .transition { padding: 13px 15px; color: var(--muted); font-size: .94rem; }
+    .transition:first-child { border-color: rgba(217,119,87,.55); color: var(--text); }
+    .empty { color: var(--muted); font-style: italic; }
+    footer { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 18px; color: var(--muted); font-size: .92rem; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color:#dfd2be; }
+    @media (max-width: 820px) {
+      main { padding-top: 32px; }
+      .section-head { display:block; }
+      .section-head p { margin-top: 8px; }
+      .board { grid-template-columns: repeat(6, 82vw); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X workflow tracker</div>
+    <h1>Project Kanban, readable at a glance.</h1>
+    <p class="lead">This is the HTML view of the canonical markdown tracker. It loads <code>kanban-status.md</code>, renders the active board, and keeps the markdown file as the source of truth.</p>
+    <div class="actions">
+      <a class="button primary" href="kanban-status.md">Open canonical Markdown</a>
+      <a class="button" href="index.html">Back to hub</a>
+      <a class="button" href="#board">Jump to board</a>
+      <a class="button" href="#transitions">Recent transitions</a>
+    </div>
+
+    <div class="meta" id="meta"></div>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Milestones</div>
+          <h2>Epic progress</h2>
+        </div>
+        <p>Percentages and story checkboxes are parsed from the markdown tracker.</p>
+      </div>
+      <div class="epics" id="epics"></div>
+    </section>
+
+    <section id="board">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Active state</div>
+          <h2>Kanban board</h2>
+        </div>
+        <p>Backlog, selected work, current work, blockers, review, and completed stories.</p>
+      </div>
+      <div class="board" id="boardColumns"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Rules</div>
+          <h2>Grounding and update rules</h2>
+        </div>
+      </div>
+      <div class="rules" id="rules"></div>
+    </section>
+
+    <section id="transitions">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Audit trail</div>
+          <h2>Recent transitions</h2>
+        </div>
+      </div>
+      <div class="transitions" id="transitionsList"></div>
+    </section>
+
+    <section>
+      <div class="panel">
+        <div class="eyebrow">Next safe action</div>
+        <p id="nextAction" style="margin-top:8px"></p>
+      </div>
+    </section>
+
+    <footer>
+      Generated as a static, no-dependency HTML view. Source of truth remains <code>kanban-status.md</code>.
+    </footer>
+  </main>
+
+  <script>
+    const COLUMNS = [
+      ['📥 BACKLOG', 'BACKLOG'],
+      ['📋 TODO', 'TODO'],
+      ['🏃 IN PROGRESS', 'IN PROGRESS'],
+      ['🚧 BLOCKED / APPROVAL REQUIRED', 'BLOCKED'],
+      ['🔎 REVIEW', 'REVIEW'],
+      ['✅ DONE', 'DONE']
+    ];
+
+    const state = { markdown: '' };
+
+    function clean(text) {
+      return (text || '')
+        .replace(/`([^`]+)`/g, '<code>$1</code>')
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+        .trim();
+    }
+
+    function plain(text) {
+      const div = document.createElement('div');
+      div.innerHTML = clean(text);
+      return div.textContent || div.innerText || '';
+    }
+
+    function sectionBetween(md, startHeading, nextPattern) {
+      const start = md.indexOf(startHeading);
+      if (start < 0) return '';
+      const rest = md.slice(start + startHeading.length);
+      const next = rest.search(nextPattern || /\n## /);
+      return (next >= 0 ? rest.slice(0, next) : rest).trim();
+    }
+
+    function lines(block) {
+      return block.split('\n').map(line => line.trim()).filter(Boolean);
+    }
+
+    function renderMeta(md) {
+      const ctx = sectionBetween(md, '## Project Context');
+      const items = lines(ctx).filter(line => line.startsWith('- **')).map(line => {
+        const match = line.match(/^- \*\*(.+?):\*\*\s*(.+)$/);
+        return match ? { label: match[1], value: match[2] } : null;
+      }).filter(Boolean);
+      document.getElementById('meta').innerHTML = items.slice(0, 8).map(item => `
+        <div class="meta-card"><strong>${clean(item.label)}</strong><span>${clean(item.value)}</span></div>
+      `).join('');
+    }
+
+    function renderRules(md) {
+      const block = sectionBetween(md, '## 🧭 Grounding & Update Rules');
+      const rules = lines(block).filter(line => line.startsWith('- ')).map(line => line.replace(/^- /, ''));
+      document.getElementById('rules').innerHTML = rules.map(rule => `<div class="rule">${clean(rule)}</div>`).join('');
+    }
+
+    function renderEpics(md) {
+      const block = sectionBetween(md, '## 🗺 Milestone / Epic Progress');
+      const epicChunks = block.split(/\n(?=- \[[ x]\] \*\*Epic )/).filter(x => x.trim().startsWith('- ['));
+      document.getElementById('epics').innerHTML = epicChunks.map(chunk => {
+        const chunkLines = chunk.split('\n').map(l => l.trim()).filter(Boolean);
+        const head = chunkLines[0];
+        const done = head.startsWith('- [x]');
+        const titleMatch = head.match(/\*\*(.+?)\*\*\s*\((\d+)% Completed\)/);
+        const title = titleMatch ? titleMatch[1] : head.replace(/^- \[[ x]\]\s*/, '');
+        const pct = titleMatch ? Number(titleMatch[2]) : 0;
+        const stories = chunkLines.slice(1).filter(l => l.startsWith('- [')).map(l => {
+          const isDone = l.startsWith('- [x]');
+          return `<li class="story ${isDone ? 'done' : ''}">${isDone ? '✓' : '○'} ${clean(l.replace(/^- \[[ x]\]\s*/, ''))}</li>`;
+        }).join('');
+        return `<article class="epic">
+          <div class="top"><h3>${done ? '✓ ' : ''}${clean(title)}</h3><span class="count">${pct}%</span></div>
+          <div class="progress"><span style="width:${Math.max(0, Math.min(100, pct))}%"></span></div>
+          <ul class="stories">${stories}</ul>
+        </article>`;
+      }).join('');
+    }
+
+    function taskClass(text, columnKey) {
+      const lower = text.toLowerCase();
+      if (columnKey === 'DONE') return 'done';
+      if (columnKey === 'REVIEW') return 'review';
+      if (columnKey === 'BLOCKED' || lower.includes('blocked') || lower.includes('approval')) return 'blocked';
+      if (lower.includes('priority: high')) return 'high';
+      return '';
+    }
+
+    function renderTask(item, columnKey) {
+      const cls = taskClass(item.title + ' ' + item.details.join(' '), columnKey);
+      const detail = item.details.length ? `<div class="detail">${item.details.map(clean).join('<br>')}</div>` : '';
+      const badges = [];
+      if (/Priority:\s*High/i.test(item.title)) badges.push('<span class="badge high">High priority</span>');
+      if (columnKey === 'DONE') badges.push('<span class="badge done">Done</span>');
+      if (columnKey === 'BLOCKED') badges.push('<span class="badge blocked">Blocked</span>');
+      if (columnKey === 'REVIEW') badges.push('<span class="badge review">Review</span>');
+      return `<article class="task ${cls}"><div class="title">${clean(item.title)}</div>${detail}${badges.join(' ')}</article>`;
+    }
+
+    function parseTasks(block) {
+      const out = [];
+      block.split('\n').forEach(raw => {
+        const line = raw.trim();
+        if (!line) return;
+        if (line.startsWith('- None')) return;
+        if (line.startsWith('- [')) {
+          out.push({ title: line.replace(/^- \[[ x]\]\s*/, '').replace(/^- /, ''), details: [] });
+        } else if (line.startsWith('- ') && out.length) {
+          out[out.length - 1].details.push(line.replace(/^- /, ''));
+        }
+      });
+      return out;
+    }
+
+    function renderBoard(md) {
+      const active = sectionBetween(md, '## 🏃 Active State Tracking');
+      const html = COLUMNS.map(([label, key], idx) => {
+        const start = `### ${label}`;
+        const next = idx < COLUMNS.length - 1 ? `### ${COLUMNS[idx + 1][0]}` : '---';
+        const startAt = active.indexOf(start);
+        let block = '';
+        if (startAt >= 0) {
+          const rest = active.slice(startAt + start.length);
+          const endAt = rest.indexOf(next);
+          block = (endAt >= 0 ? rest.slice(0, endAt) : rest).trim();
+        }
+        const tasks = parseTasks(block);
+        const rendered = tasks.length ? tasks.map(t => renderTask(t, key)).join('') : '<p class="empty">No items.</p>';
+        return `<section class="column"><h3><span>${label}</span><span class="count">${tasks.length}</span></h3><div class="tasks">${rendered}</div></section>`;
+      }).join('');
+      document.getElementById('boardColumns').innerHTML = html;
+    }
+
+    function renderTransitions(md) {
+      const block = sectionBetween(md, '## 🔁 Recent Transitions');
+      const items = lines(block).filter(line => line.startsWith('- ')).map(line => line.replace(/^- /, '')).slice(0, 12);
+      document.getElementById('transitionsList').innerHTML = items.map(item => `<div class="transition">${clean(item)}</div>`).join('');
+    }
+
+    function renderNext(md) {
+      const block = sectionBetween(md, '## 📌 Next Safe Action', /$/);
+      const item = lines(block).find(line => line.startsWith('- ')) || 'No next action recorded.';
+      document.getElementById('nextAction').innerHTML = clean(item.replace(/^- /, ''));
+    }
+
+    function render(md) {
+      state.markdown = md;
+      renderMeta(md);
+      renderRules(md);
+      renderEpics(md);
+      renderBoard(md);
+      renderTransitions(md);
+      renderNext(md);
+    }
+
+    fetch('kanban-status.md', { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.text();
+      })
+      .then(render)
+      .catch(error => {
+        document.getElementById('meta').innerHTML = `<div class="meta-card"><strong>Could not load kanban-status.md</strong><span>${error.message}. Open this page through a local/web server, not directly as a file.</span></div>`;
+        document.getElementById('epics').innerHTML = '<article class="epic"><h3>Markdown fetch failed</h3><p>Use the canonical markdown link above.</p></article>';
+        document.getElementById('boardColumns').innerHTML = '';
+        document.getElementById('rules').innerHTML = '';
+        document.getElementById('transitionsList').innerHTML = '';
+        document.getElementById('nextAction').textContent = 'Open kanban-status.md directly.';
+      });
+  </script>
+</body>
+</html>

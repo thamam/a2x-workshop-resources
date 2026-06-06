@@ -31,6 +31,7 @@
   - [x] Story 1.3: Document sparse transition log cadence
   - [x] Story 1.4: Wire autonomous loop to read workflow tracker
   - [x] Story 1.5: Verify tracker-related repository checks
+  - [x] Story 1.6: Create HTML view for the canonical Kanban tracker
 
 - [ ] **Epic 2: Workshop resource hub foundation** (67% Completed)
   - [x] Story 2.1: Build static hub landing page
@@ -69,9 +70,6 @@
 
 ### 📥 BACKLOG (Ready for Sprint Selection)
 
-- [ ] Story 2.5: Tune hub and handout copy using one sanitized workshop scenario - *Priority: High*
-- [ ] Story 3.5: Run product brief, OpenSpec interviewer, prompt improver, and PRD starter as one scenario chain - *Priority: High*
-- [ ] Story 2.4: Review hub and handouts on phone-sized viewport - *Priority: High*
 - [ ] Story 4.4: Audit A2X Marketplace source/public-safe path - *Priority: Medium*
 - [ ] Story 4.5: Locate Prompt Magician source/setup doc - *Priority: Medium*
 - [ ] Story 4.6: Locate presentation editor source/setup doc - *Priority: Medium*
@@ -80,7 +78,7 @@
 
 ### 📋 TODO (Selected for Next Story)
 
-- [ ] Story 3.5: Run all handouts against one sanitized workshop scenario (Assigned to: Yunes)
+- [ ] Story 5.4: Run final public-release audit (Assigned to: Yunes)
 
 ### 🏃 IN PROGRESS (Currently Active)
 
@@ -100,12 +98,20 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- [ ] Story 3.1–3.4: Static giveaway handout bundle
-  - Evidence: `resources/product-brief-generator.html`, `resources/openspec-interviewer.html`, `resources/prompt-improver.html`, and `resources/prd-openspec-starter.html` exist.
-  - Next: run against a sanitized workshop scenario and tune wording.
+- [ ] Story 3.1–3.5: Static giveaway handout bundle and scenario chain
+  - Evidence: `resources/product-brief-generator.html`, `resources/openspec-interviewer.html`, `resources/prompt-improver.html`, and `resources/prd-openspec-starter.html` exist; `docs/giveaway-scenario-test.md` validates the chain with a public-safe synthetic consultant meeting-prep scenario.
+  - Next: Tomer can review wording and framing.
+- [ ] Story 2.4: Mobile/phone viewport smoke review
+  - Evidence: `docs/mobile-viewport-review.md` records Chrome Headless 390px checks with no horizontal overflow on the hub and four giveaway pages.
+  - Next: Full accessibility review is optional.
+- [ ] Story 4 / PRD-to-HTML workbench MVP scope
+  - Evidence: `docs/prd-html-workbench-mvp-decision.md` scopes a safe static giveaway prototype with approval boundaries.
+  - Next: Implement only if Tomer wants this second-wave giveaway or if run budget allows after final audit.
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Story 1.6: Create HTML view for the canonical Kanban tracker
+  - Evidence: `kanban-status.html` exists, fetches `kanban-status.md`, renders successfully through a local HTTP server, has no browser console errors, and `index.html` links to it.
 - [x] Story 1.2: Promote root `kanban-status.md` to canonical tracker
   - Evidence: root `kanban-status.md` exists; `index.html`, `docs/goal-operating-model.md`, `docs/execution-dag.md`, and the autonomous cron prompt now point future work to root `kanban-status.md` as canonical.
 - [x] Story 1.1: Create repo-visible live Kanban draft
@@ -149,6 +155,12 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-06 — Finished Story 1.6: created `kanban-status.html`, linked it from the hub, and verified browser rendering.
+- 2026-06-06 — Started Story 1.6: create an HTML view for the canonical Kanban tracker.
+- 2026-06-06 — Finished Story 2.4: mobile viewport smoke review passed at 390px for hub and giveaway pages.
+- 2026-06-06 — Finished Story 3.5: ran the handout bundle against a sanitized consultant meeting-prep scenario.
+- 2026-06-06 — Improved `resources/prd-openspec-starter.html` into a form-driven generator and smoke-tested output generation.
+- 2026-06-06 — Finished PRD-to-HTML workbench MVP scope decision as a static giveaway prototype with strict approval boundaries.
 - 2026-06-06 — Finished Story 1.2: Promoted root `kanban-status.md` to canonical tracker and updated docs/cron references.
 - 2026-06-06 — Corrected concurrent overwrite that briefly made root `kanban-status.md` a pointer back to `docs/live-kanban.md`.
 - 2026-06-06 — Started Story 1.2: Promote root `kanban-status.md` to canonical tracker.
@@ -159,4 +171,4 @@
 
 ## 📌 Next Safe Action
 
-- Start Story 3.5 by running the handout bundle against one sanitized workshop scenario, then update this board before moving the story to IN PROGRESS.
+- Resume Story 5.4 final public-release audit after the HTML Kanban commit is pushed and the autonomous loop is resumed.
