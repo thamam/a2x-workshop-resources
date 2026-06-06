@@ -6,52 +6,112 @@
   <title>A2X Workshop Resources</title>
   <meta name="description" content="Public resources for A2X Claude Code workshops." />
   <style>
-    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; }
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; }
     * { box-sizing: border-box; }
-    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
-    main { max-width: 980px; margin: 0 auto; padding: 56px 20px; }
-    .eyebrow { color: var(--accent); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
-    h1 { font-size: clamp(2.2rem, 7vw, 4.8rem); line-height: .98; margin: 18px 0; letter-spacing: -.04em; }
-    .lead { color: var(--muted); font-size: 1.2rem; max-width: 720px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-top:36px; }
-    .card { border:1px solid var(--line); background:var(--card); border-radius:18px; padding:22px; min-height:180px; }
-    .tag { color: var(--accent); font-size:.8rem; font-weight:700; text-transform: uppercase; letter-spacing:.08em; }
-    h2 { font-size:1.25rem; margin:12px 0 8px; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.55; }
+    a { color: inherit; }
+    main { max-width: 1080px; margin: 0 auto; padding: 52px 20px 36px; }
+    .eyebrow { color: var(--accent2); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 800; }
+    h1 { font-size: clamp(2.35rem, 7vw, 5.4rem); line-height: .96; margin: 18px 0; letter-spacing: -.055em; max-width: 880px; }
+    h2 { font-size: clamp(1.45rem, 3vw, 2.2rem); margin: 0 0 10px; letter-spacing:-.025em; }
+    h3 { font-size:1.15rem; margin:12px 0 8px; }
     p { margin:0; color:var(--muted); }
-    footer { margin-top:52px; color:var(--muted); font-size:.95rem; }
+    .lead { color: var(--muted); font-size: 1.18rem; max-width: 760px; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:46px; }
+    .section-head { display:flex; justify-content:space-between; gap:16px; align-items:end; margin-bottom:16px; }
+    .section-head p { max-width:620px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; text-decoration:none; display:flex; flex-direction:column; justify-content:space-between; }
+    .card[href]:hover { border-color:var(--accent); transform: translateY(-1px); transition:.16s ease; }
+    .tag { color: var(--accent2); font-size:.76rem; font-weight:800; text-transform: uppercase; letter-spacing:.08em; }
+    .ready { color: var(--ok); }
+    .soon { color: var(--accent2); }
+    .muted { color:var(--muted); }
+    .go { display:inline-block; margin-top:18px; color:var(--text); font-weight:750; }
+    .path { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color:#dfd2be; font-size:.88rem; margin-top:14px; }
+    .strip { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:18px; }
+    .step strong { color:var(--text); display:block; margin-bottom:4px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
   </style>
 </head>
 <body>
   <main>
     <div class="eyebrow">A2X field kit</div>
     <h1>Claude Code workshop resources.</h1>
-    <p class="lead">A public, read-only resource hub for workshop attendees: setup guides, reusable workflows, practical demos, and tools used live in the room.</p>
+    <p class="lead">A practical hub for the resources used in the room: agent setup, reusable workflows, working rules, and public-safe demos you can revisit after the workshop.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#start">Start with the live workshop kit</a>
+      <a class="button" href="docs/workshop-usage-map.md">View workshop usage map</a>
+      <a class="button" href="docs/resource-inventory.md">Resource inventory</a>
+    </div>
 
-    <section class="grid" aria-label="Workshop resources">
-      <article class="card">
-        <div class="tag">Coming soon</div>
-        <h2>A2X Marketplace</h2>
-        <p>Public entry point for the tools and extensions used during the workshop.</p>
-      </article>
-      <article class="card">
-        <div class="tag">Coming soon</div>
-        <h2>Prompt Magician</h2>
-        <p>Setup guide and usage pattern for turning rough instructions into stronger prompts.</p>
-      </article>
-      <article class="card">
-        <div class="tag">Coming soon</div>
-        <h2>Presentation editor</h2>
-        <p>Guide for editing presentation artifacts with an agentic workflow.</p>
-      </article>
-      <article class="card">
-        <div class="tag">Coming soon</div>
-        <h2>Wiki-LLM</h2>
-        <p>Build a navigable, model-assisted knowledge base from your own materials.</p>
-      </article>
+    <section id="start">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Use first</div>
+          <h2>Live workshop kit</h2>
+        </div>
+        <p>These are the safest high-value resources to show during the first workshop. They are written as standalone attendee material.</p>
+      </div>
+      <div class="grid">
+        <a class="card" href="resources/claude-md-cheat-sheet.html">
+          <div>
+            <div class="tag ready">Ready draft</div>
+            <h3>CLAUDE.md & coding rules cheat sheet</h3>
+            <p>Four rules attendees can paste into a project to make Claude Code more deliberate, simple, surgical, and goal-driven.</p>
+          </div>
+          <span class="go">Open cheat sheet →</span>
+        </a>
+        <a class="card" href="resources/first-skill.html">
+          <div>
+            <div class="tag ready">Ready draft</div>
+            <h3>Build your first skill</h3>
+            <p>A short hands-on path from repeated workflow to reusable agent skill.</p>
+          </div>
+          <span class="go">Start building →</span>
+        </a>
+        <article class="card">
+          <div>
+            <div class="tag soon">Polish first</div>
+            <h3>Claude Code harness map</h3>
+            <p>The practical framing: the leverage is not only the model, it is the harness around the model.</p>
+          </div>
+          <span class="path">source: existing A2X site resource</span>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Advanced demos</div>
+          <h2>Tools to expose after safety review</h2>
+        </div>
+        <p>These stay as public-safe placeholders until source locations and exposure boundaries are confirmed.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div><div class="tag soon">Polish first</div><h3>A2X Marketplace</h3><p>Public entry point for the tools and extensions used during the workshop.</p></div><span class="go">Pending source and positioning</span></article>
+        <article class="card"><div><div class="tag soon">Polish first</div><h3>Prompt Magician</h3><p>Guide for turning rough instructions into stronger prompts and reusable prompt workflows.</p></div><span class="go">Pending setup source</span></article>
+        <article class="card"><div><div class="tag soon">Polish first</div><h3>Presentation editor</h3><p>Agentic editing workflow for presentation artifacts and workshop collateral.</p></div><span class="go">Pending setup source</span></article>
+        <article class="card"><div><div class="tag soon">Polish first</div><h3>Wiki-LLM</h3><p>Build a navigable, model-assisted knowledge base from your own materials.</p></div><span class="go">Pending public-safety audit</span></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><div class="eyebrow">Workshop flow</div><h2>How to use this hub live</h2></div></div>
+      <div class="strip">
+        <div class="step"><strong>1. Open with the harness idea.</strong><p>Show that better agent results come from environment, rules, tools, and feedback loops.</p></div>
+        <div class="step"><strong>2. Give attendees rules they can use today.</strong><p>Send them to the CLAUDE.md cheat sheet before live coding.</p></div>
+        <div class="step"><strong>3. Turn repetition into infrastructure.</strong><p>Use the first-skill guide when moving from tips to reusable workflows.</p></div>
+        <div class="step"><strong>4. Park advanced demos safely.</strong><p>Use placeholders for tools until public review is complete.</p></div>
+      </div>
     </section>
 
     <footer>
-      Built by A2X. This repository is public-facing by design; do not commit secrets or private material.
+      Built by A2X. This repository is public-facing by design; do not commit secrets, credentials, private notes, or client material.
     </footer>
   </main>
 </body>
