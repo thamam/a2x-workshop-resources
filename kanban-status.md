@@ -105,6 +105,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance Story M.1: Fix `kanban-status.html` mobile overflow found during readiness refresh
+  - Evidence: Chrome DevTools mobile smoke initially found `kanban-status.html` at `scrollWidth 417` vs `clientWidth 390`; `kanban-status.html` CSS now constrains page-level overflow while preserving inner board scrolling, and the same 390×844 Chrome DevTools smoke passed with `width 390/390`.
 - [x] Story 1.6: Create HTML view for the canonical Kanban tracker
   - Evidence: `kanban-status.html` exists, fetches `kanban-status.md`, renders successfully through a local HTTP server, has no browser console errors, and `index.html` links to it.
 - [x] Story 1.2: Promote root `kanban-status.md` to canonical tracker
@@ -176,6 +178,10 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-07 — Finished Maintenance Story M.1: fixed `kanban-status.html` mobile overflow; Chrome DevTools 390×844 smoke now reports `kanban-status.html` at `width 390/390`, and static-link/private-file/gitleaks/diff checks passed locally.
+- 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `b4f082a`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; pre-refresh GitHub Security Checks succeeded for `b4f082a1b2dcd949b1e55e83e00b162d78aa414b`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative Chrome DevTools DOM/mobile checks passed. No safe unblocked implementation stories remain listed after the maintenance fix.
+- 2026-06-07 — Started Maintenance Story M.1: Chrome DevTools 390px smoke found `kanban-status.html` horizontal overflow (`scrollWidth 417` vs `clientWidth 390`); fixing the public-facing Kanban view before completing readiness evidence.
+- 2026-06-07 — Started Maintenance: refresh latest public-readiness evidence for current repo state at starting commit `b4f082a`; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 - 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `692f40f`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `692f40f58a0c12c89d26b61fe75fcd323b60ed70`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative DOM checks passed. No safe unblocked implementation stories remain listed.
 - 2026-06-07 — Started Maintenance: refresh latest public-readiness evidence for current repo state at starting commit `692f40f`; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 - 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `085bd32`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `085bd32bdcb45d64507cd5efe2b5811ade044e5f`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and representative DOM checks passed. No safe unblocked implementation stories remain listed.
