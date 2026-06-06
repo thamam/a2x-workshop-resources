@@ -4,7 +4,7 @@ Use this before Tomer approves public visibility or GitHub Pages publishing.
 
 ## Required checks
 
-Latest audit: `docs/public-release-audit-2026-06-06.md`.
+Latest audit: `docs/public-release-audit-2026-06-07.md`.
 
 - [x] Repository visibility is still private until Tomer approves public release.
 - [x] GitHub Pages is not enabled until Tomer approves publishing.
