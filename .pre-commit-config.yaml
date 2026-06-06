@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks
+  - repo: local
+    hooks:
+      - id: block-private-files
+        name: Block private or credential files
+        entry: scripts/block-private-files.sh
+        language: script
+        pass_filenames: true

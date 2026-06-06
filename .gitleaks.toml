@@ -1,0 +1,23 @@
+title = "A2X Workshop Resources gitleaks config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "private-key-file"
+description = "Private key material"
+regex = '''-----BEGIN (RSA |OPENSSH |EC |DSA |PGP )?PRIVATE KEY-----'''
+tags = ["key", "private"]
+
+[[rules]]
+id = "dotenv-assignment"
+description = "Likely secret assignment in environment-style file"
+regex = '''(?i)(api[_-]?key|secret|token|password|passwd|pwd|client[_-]?secret|private[_-]?key)\s*=\s*['\"]?[A-Za-z0-9_./+=:@-]{8,}'''
+tags = ["secret", "env"]
+
+[allowlist]
+description = "Allow documentation placeholders"
+regexes = [
+  '''YOUR_[A-Z0-9_]+_HERE''',
+  '''example[_-]?(key|token|secret)'''
+]

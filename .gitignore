@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*.log
+node_modules/
+.vscode/settings.json
+.idea/
+dist/
+build/
+.cache/
