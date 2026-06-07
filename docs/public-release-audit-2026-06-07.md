@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,visibility,isPrivate,url` returned `isPrivate: true` and `visibility: PRIVATE` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `643821a49adb10e03a51ca0dcf497cb13315eefe`.
+- GitHub Security Checks completed successfully for current starting commit `f62c22948ec9fcd887482b9856b7e521d0b1ae56`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 14 HTML files over `python3 -m http.server`.
-- Chrome DevTools DOM/mobile smoke passed for all 14 HTML files at a 390 × 844 viewport, including semantic markers in the canonical Kanban HTML view after this maintenance item was recorded as done.
+- Chrome DevTools DOM/mobile smoke passed for all 14 HTML files at a 390 × 844 viewport, including semantic markers in the canonical Kanban HTML view.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,13 +17,13 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 06:56:02 IDT
+2026-06-07 07:10:57 IDT
 ```
 
 Starting commit:
 
 ```text
-643821a49adb10e03a51ca0dcf497cb13315eefe
+f62c22948ec9fcd887482b9856b7e521d0b1ae56
 ```
 
 ### Repository visibility
@@ -64,14 +64,14 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-sha=643821a49adb10e03a51ca0dcf497cb13315eefe
+sha=f62c22948ec9fcd887482b9856b7e521d0b1ae56
 gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt --jq ".[] | select(.headSha == \"$sha\") | {databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt}"
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T03:32:28Z","databaseId":27081608506,"headSha":"643821a49adb10e03a51ca0dcf497cb13315eefe","status":"completed","updatedAt":"2026-06-07T03:32:37Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T03:59:17Z","databaseId":27082096806,"headSha":"f62c22948ec9fcd887482b9856b7e521d0b1ae56","status":"completed","updatedAt":"2026-06-07T03:59:32Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -88,7 +88,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # PRIVATE_BLOCKER_EXIT=0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# final rerun scanned ~237 KB, reported no leaks found
+# final rerun scanned ~239 KB, reported no leaks found
 # GITLEAKS_EXIT=0
 
 git diff --check
@@ -100,7 +100,7 @@ git diff --check
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8776 --bind 127.0.0.1
+python3 -m http.server 8777 --bind 127.0.0.1
 ```
 
 HTTP smoke requested every HTML file and verified status `200` with `text/html` content type.
@@ -127,15 +127,15 @@ HTTP smoke passed for 14 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with `--remote-debugging-port=9228 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with `--remote-debugging-port=9230 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure plus no page-level horizontal overflow.
 
-For `kanban-status.html`, the probe also waited for semantic rendered text markers from the fetched canonical markdown (`643821a` or the no-safe-unblocked-work marker, plus a finished-maintenance transition marker) before accepting the page as loaded.
+For `kanban-status.html`, the probe also waited for semantic rendered text markers from the fetched canonical markdown (`f62c229` or the no-safe-unblocked-work marker, plus a maintenance transition marker) before accepting the page as loaded.
 
-Result:
+Initial all-page result:
 
 ```text
 DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (29837 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers current=True maintenance=True)
+DOM OK kanban-status.html (30052 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers current=True maintenance=True)
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/claude-code-harness-map.html (1584 chars, h1='The harness, not just the model.', width 390/390)
 DOM OK resources/claude-md-cheat-sheet.html (1169 chars, h1='CLAUDE.md & coding rules cheat sheet.', width 390/390)
@@ -151,7 +151,12 @@ DOM OK resources/wiki-llm-overview.html (2804 chars, h1='Wiki-LLM overview.', wi
 Chrome DevTools DOM/mobile smoke passed for 14 pages at 390x844
 ```
 
-The canonical Kanban view was checked after this maintenance item was marked done, so the rendered board included the latest tracker state rather than a stale completed snapshot.
+Final rerun after updating this audit and the canonical tracker rechecked all 14 pages, with the Kanban view rendered from the final tracker text:
+
+```text
+DOM OK kanban-status.html (30470 chars, width 390/390, markers current=True maintenance=True)
+Chrome DevTools DOM/mobile smoke passed for 14 pages at 390x844
+```
 
 ## Remaining approval gates
 
