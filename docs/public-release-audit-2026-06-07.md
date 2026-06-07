@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate --jq '.nameWithOwner + " private=" + (.isPrivate|tostring)'` returned `thamam/a2x-workshop-resources private=true`.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --jq '.status'` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `9f801ee6a42642caab038af5fba7f3075f8c2ff3` (`databaseId` 27088861419).
+- GitHub Security Checks completed successfully for current starting commit `3939868eb9141605bd22c5a920c6773cf1550396` (`databaseId` 27089188352).
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 17 discovered HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 17 discovered HTML files at a 390 × 844 viewport, including the canonical Kanban HTML view and public-safe tutorial pages.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 12:50 IDT
+2026-06-07 13:06 IDT
 ```
 
 Starting commit:
 
 ```text
-9f801ee6a42642caab038af5fba7f3075f8c2ff3
+3939868eb9141605bd22c5a920c6773cf1550396
 ```
 
 Latest commit subject at audit start:
 
 ```text
-9f801ee docs: refresh readiness verification
+3939868 docs: refresh readiness verification
 ```
 
 ### Repository visibility
@@ -70,13 +70,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --commit 9f801ee6a42642caab038af5fba7f3075f8c2ff3 --json databaseId,headSha,status,conclusion,name,displayTitle,createdAt --jq '.[] | [.databaseId,.name,.status,.conclusion,.headSha,.displayTitle,.createdAt] | @tsv'
+gh run list --commit 3939868eb9141605bd22c5a920c6773cf1550396 --json databaseId,headSha,status,conclusion,name,displayTitle,createdAt --jq '.[] | [.databaseId,.name,.status,.conclusion,.headSha,.displayTitle,.createdAt] | @tsv'
 ```
 
 Result:
 
 ```text
-27088861419	Security checks	completed	success	9f801ee6a42642caab038af5fba7f3075f8c2ff3	docs: refresh readiness verification	2026-06-07T09:38:46Z
+27089188352	Security checks	completed	success	3939868eb9141605bd22c5a920c6773cf1550396	docs: refresh readiness verification	2026-06-07T09:54:12Z
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -93,8 +93,8 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# 12:50PM INF scanned ~293587 bytes (293.59 KB) in 56.1ms
-# 12:50PM INF no leaks found
+# 1:07PM INF scanned ~294987 bytes (294.99 KB) in 58.6ms
+# 1:07PM INF no leaks found
 
 git diff --check
 # exit 0
@@ -149,7 +149,7 @@ Result:
 
 ```text
 DOM OK index.html (11588 bytes, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (81448 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
+DOM OK kanban-status.html (82379 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
 DOM OK resources/a2x-marketplace-overview.html (6666 bytes, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (7165 bytes, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/claude-code-harness-map.html (3313 bytes, h1='The harness, not just the model.', width 390/390)
