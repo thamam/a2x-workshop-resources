@@ -134,7 +134,7 @@ resources/wiki-llm-overview.html: HTTP 200, text/html
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with `--remote-debugging-port=9343 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, visible canonical Kanban markers, plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with `--remote-debugging-port=9344 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, visible canonical Kanban markers, plus no page-level horizontal overflow.
 
 Command:
 
