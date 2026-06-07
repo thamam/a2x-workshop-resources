@@ -111,6 +111,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
+  - Evidence: `docs/public-release-audit-2026-06-07.md` updated for current HEAD `06022b8dbafd65bd52b86c8466bff3032df8cddf`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27098591534); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 18 HTML files passed on 2026-06-07 19:54–19:56 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance Story M.5: Reconcile modified historical `docs/live-kanban.md`
   - Evidence: repo inspection found `docs/live-kanban.md` modified into a stale standalone board; file was restored to the historical-context pointer to root `kanban-status.md` and `kanban-status.html`; `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, and `git diff --check` passed on 2026-06-07 19:42 IDT.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
@@ -321,6 +323,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-07 19:56 IDT — Finished Maintenance: verified current HEAD `06022b8`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `06022b8dbafd65bd52b86c8466bff3032df8cddf`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools DOM/mobile checks for all 18 HTML files passed. No publishing or private-resource exposure was performed.
+
+- 2026-06-07 19:54 IDT — Started Maintenance: verify current HEAD `06022b8` remains public-ready and approval-gated; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 
 - 2026-06-07 19:42 IDT — Finished Maintenance Story M.5: restored `docs/live-kanban.md` to its historical-context pointer; static-link check, private-file blocker, gitleaks `--no-git`, and `git diff --check` passed. Root `kanban-status.md` remains canonical.
 
