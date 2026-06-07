@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json isPrivate,nameWithOwner,url,homepageUrl` returned `isPrivate: true` for `thamam/a2x-workshop-resources` and no homepage URL.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `8e4bd2c8d9d239f52f17e9ee73c8ba35f9aae341`.
+- GitHub Security Checks completed successfully for current starting commit `58ada5fb784b706f6a7d4d565bb0e5493beb1c07`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 14 HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 14 HTML files at a 390 × 844 viewport, and the canonical Kanban HTML view rendered current tracker markers.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 07:28:23 IDT
+2026-06-07 07:46:04 IDT
 ```
 
 Starting commit:
 
 ```text
-8e4bd2c8d9d239f52f17e9ee73c8ba35f9aae341
+58ada5fb784b706f6a7d4d565bb0e5493beb1c07
 ```
 
 Latest commit subject at audit start:
 
 ```text
-8e4bd2c 8e4bd2c8d9d239f52f17e9ee73c8ba35f9aae341 2026-06-07 07:15:24 +0300 Refresh public readiness evidence
+58ada5f 58ada5fb784b706f6a7d4d565bb0e5493beb1c07 2026-06-07 07:33:08 +0300 docs: refresh public readiness evidence
 ```
 
 ### Repository visibility
@@ -77,7 +77,7 @@ gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T04:15:28Z","databaseId":27082411424,"headSha":"8e4bd2c8d9d239f52f17e9ee73c8ba35f9aae341","status":"completed","updatedAt":"2026-06-07T04:15:45Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T04:33:12Z","databaseId":27082746873,"headSha":"58ada5fb784b706f6a7d4d565bb0e5493beb1c07","status":"completed","updatedAt":"2026-06-07T04:33:24Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -94,7 +94,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # PRIVATE_BLOCKER_EXIT=0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~239556 bytes (239.56 KB), reported no leaks found
+# scanned ~241345 bytes (241.35 KB), reported no leaks found
 # GITLEAKS_EXIT=0
 
 git diff --check
@@ -106,7 +106,7 @@ git diff --check
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8765 --bind 127.0.0.1
+python3 -m http.server 8776 --bind 127.0.0.1
 ```
 
 HTTP smoke requested every HTML file and verified status `200` with `text/html` content type.
@@ -133,17 +133,17 @@ resources/wiki-llm-overview.html: HTTP 200, text/html
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with `--remote-debugging-port=9227 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with `--remote-debugging-port=9337 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
 PAGES=$(python3 - <<'PY'
 from pathlib import Path
-print(','.join(sorted(str(p.relative_to('.')) for p in Path('.').rglob('*.html') if '.git' not in p.parts)))
+print(','.join([str(p) for p in sorted(Path('.').glob('*.html')) + sorted(Path('resources').glob('*.html'))]))
 PY
 )
-BASE_URL=http://127.0.0.1:8765/ CDP_URL=http://127.0.0.1:9227 PAGES="$PAGES" node <static-dom-mobile-smoke-script>
+BASE_URL=http://127.0.0.1:8776/ CDP_URL=http://127.0.0.1:9337 PAGES="$PAGES" node <static-dom-mobile-smoke-script>
 ```
 
 Note: the local absolute path to the reusable smoke-test script is intentionally omitted from this public-ready audit artifact.
@@ -152,7 +152,7 @@ Result:
 
 ```text
 DOM OK index.html (10656 bytes, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (60014 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
+DOM OK kanban-status.html (60718 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
 DOM OK resources/a2x-marketplace-overview.html (6666 bytes, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/claude-code-harness-map.html (3313 bytes, h1='The harness, not just the model.', width 390/390)
 DOM OK resources/claude-md-cheat-sheet.html (2406 bytes, h1='CLAUDE.md & coding rules cheat sheet.', width 390/390)
@@ -168,7 +168,7 @@ DOM OK resources/wiki-llm-overview.html (6209 bytes, h1='Wiki-LLM overview.', wi
 Representative Chrome DevTools DOM/mobile smoke passed for 14 pages at 390x844
 ```
 
-Final rerun after updating this audit and the canonical tracker rechecked the relevant local checks and all 14 public-facing HTML pages. Exact byte counts may change because the audit/tracker are self-referential, but the final pass criteria remained: static links pass, private-file blocker exits 0, gitleaks reports no leaks, `git diff --check` exits 0, all 14 HTML files return HTTP 200 text/html, Chrome DevTools reports width `390/390` for every page, and the rendered Kanban view reports `hasCurrent=true`, `hasFinished=true`, and `hasNoSafe=true` for the current tracker text.
+Final rerun after updating this audit and the canonical tracker rechecked the relevant local checks and all 14 public-facing HTML pages. Exact byte counts may change because the audit/tracker are self-referential, but the final pass criteria remained: static links pass, private-file blocker exits 0, gitleaks reports no leaks, `git diff --check` exits 0, all 14 HTML files return HTTP 200 text/html, and Chrome DevTools reports width `390/390` for every page including `kanban-status.html`.
 
 ## Remaining approval gates
 
