@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buildTool Decision Navigator • A2X resilient-flows</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --border: #334155;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+        }
+
+        .section {
+            scroll-margin-top: 80px;
+        }
+
+        .nav-link {
+            transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link.active {
+            background-color: #334155;
+            color: white;
+            border-color: #64748b;
+        }
+
+        .decision-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                        box-shadow 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .decision-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .flow-arrow {
+            animation: flow 1.5s ease-in-out infinite;
+        }
+
+        .value-source {
+            transition: all 0.2s ease;
+        }
+
+        .value-source:hover {
+            border-color: #64748b;
+            background-color: #1e293b;
+        }
+
+        .contract-badge {
+            font-size: 10px;
+            padding: 1px 6px;
+            background: #334155;
+            border-radius: 9999px;
+        }
+
+        .comparison-row {
+            transition: background-color 0.1s ease;
+        }
+        
+        .comparison-row:hover {
+            background-color: #1e293b;
+        }
+
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-item:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #64748b;
+            transition: width 0.2s ease;
+        }
+        
+        .nav-item.active:after {
+            width: 100%;
+        }
+
+        .metric {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        .diagram-box {
+            background: #1e293b;
+            border: 1px solid #475569;
+            transition: all 0.2s ease;
+        }
+
+        .highlight {
+            animation: highlight-pulse 2s ease-in-out;
+        }
+
+        .source-link {
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .source-link:hover {
+            color: #94a3b8;
+        }
+
+        .step {
+            counter-increment: step-counter;
+        }
+        
+        .step:before {
+            content: counter(step-counter);
+            background: #334155;
+            color: #cbd5e1;
+            width: 1.75rem;
+            height: 1.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 640px) {
+            .px-6 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .-mx-6 {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            h1 {
+                font-size: clamp(2.8rem, 14vw, 4rem) !important;
+                overflow-wrap: anywhere;
+            }
+
+            .sticky .max-w-7xl,
+            .top-0 .max-w-7xl {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            .grid,
+            .md\:grid-cols-5,
+            .md\:grid-cols-2 {
+                min-width: 0;
+            }
+
+            table {
+                min-width: 42rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+    <!-- Top Bar -->
+    <div class="border-b border-slate-800 bg-slate-950 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="flex items-center gap-x-2">
+                    <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center ring-1 ring-slate-700">
+                        <i class="fa-solid fa-hammer text-slate-300 text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-display text-2xl tracking-tighter font-semibold">A2X</span>
+                        <span class="text-xs font-mono text-slate-500 ml-1.5 align-super">resilient-flows</span>
+                    </div>
+                </div>
+                <div class="px-3 py-1 rounded-full bg-slate-900 text-xs font-medium border border-slate-800 flex items-center gap-x-1.5">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-emerald-300 text-[10px] font-mono tracking-[0.5px]">DECISION NAVIGATOR</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-x-2 text-sm">
+                <div class="flex items-center bg-slate-900 rounded-2xl p-1 border border-slate-800">
+                    <button onclick="setTheme('dark')" class="px-3 py-1 text-xs rounded-2xl flex items-center gap-x-1.5 bg-slate-800">
+                        <i class="fa-solid fa-moon text-xs"></i>
+                        <span class="font-medium">Dark</span>
+                    </button>
+                    <button onclick="setTheme('light')" class="px-3 py-1 text-xs rounded-2xl flex items-center gap-x-1.5 hover:bg-slate-800">
+                        <i class="fa-solid fa-sun text-xs"></i>
+                        <span class="font-medium">Light</span>
+                    </button>
+                </div>
+                <a href="#verdict" 
+                   class="px-4 py-2 rounded-2xl bg-white text-slate-950 text-sm font-semibold flex items-center gap-x-2 hover:bg-amber-100 transition-colors">
+                    <span>Jump to decision</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-10 pb-16">
+        
+        <!-- Hero -->
+        <div class="max-w-3xl">
+            <div class="flex items-center gap-x-2 mb-4">
+                <span class="px-3 py-1 text-xs tracking-widest font-mono bg-slate-900 border border-slate-700 rounded-full">CLAUDE CODE INTERNALS</span>
+                <span class="px-3 py-1 text-xs tracking-widest font-mono bg-emerald-900/30 text-emerald-400 border border-emerald-800 rounded-full">A2X MARKETPLACE</span>
+            </div>
+            
+            <h1 class="font-display text-6xl tracking-tighter font-semibold leading-none">
+                Should we ship a<br>first-class <span class="bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">buildTool</span>?
+            </h1>
+            <p class="mt-4 text-xl text-slate-400 max-w-md">
+                A visual navigator for the decision to extend the agent's native tool surface in resilient-flows.
+            </p>
+            
+            <div class="flex items-center gap-x-3 mt-6">
+                <div onclick="document.getElementById('overview').scrollIntoView({ behavior: 'smooth' })" 
+                     class="cursor-pointer inline-flex items-center gap-x-2 px-5 py-3 rounded-3xl border border-slate-700 hover:bg-slate-900 transition-colors text-sm">
+                    <span>Start exploring</span>
+                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                </div>
+                <div class="text-xs text-slate-500 flex items-center gap-x-1.5">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>8 min read • interactive</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 bg-slate-900 border border-slate-700 rounded-3xl p-4 text-sm text-slate-300">
+            <strong class="text-slate-100">Public-safe scope:</strong>
+            This page is a conceptual decision aid for a workshop discussion. It contains no private source links, credentials, local paths, customer data, analytics, lead capture, or install instructions.
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4">
+                <div class="text-xs text-slate-500">CURRENT STATE</div>
+                <div class="text-3xl font-semibold mt-1 text-slate-300">Text parsing</div>
+                <div class="text-xs mt-3 text-slate-400">Findings emerge as prose from agent reasoning</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4">
+                <div class="text-xs text-slate-500">PROPOSED</div>
+                <div class="text-3xl font-semibold mt-1">Native Tool</div>
+                <div class="text-xs mt-3 text-emerald-400">SpecReviewFinding via buildTool</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4">
+                <div class="text-xs text-slate-500">CONTRACTS TOUCHED</div>
+                <div class="text-3xl font-semibold mt-1">7+</div>
+                <div class="text-xs mt-3 text-slate-400">Tool.ts • hooks.ts • loadSkillsDir.ts • tools.ts</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-slate-500">EST. VALUE</div>
+                    <div class="text-3xl font-semibold mt-1">High leverage</div>
+                </div>
+                <div class="text-[10px] text-amber-400">One definition → hooks, search, permissions, UI, subagents all improve</div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-10 sticky top-[69px] bg-slate-950 py-3 z-40 border-b border-slate-800 -mx-6 px-6">
+            <div class="max-w-7xl mx-auto flex flex-wrap gap-x-1 gap-y-1 text-sm">
+                <a href="#overview" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="overview">
+                    <i class="fa-solid fa-info-circle w-3.5"></i> <span>Overview</span>
+                </a>
+                <a href="#before" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="before">
+                    <i class="fa-solid fa-arrow-left w-3.5"></i> <span>Current Reality</span>
+                </a>
+                <a href="#after" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="after">
+                    <i class="fa-solid fa-arrow-right w-3.5"></i> <span>With buildTool</span>
+                </a>
+                <a href="#comparison" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="comparison">
+                    <i class="fa-solid fa-columns w-3.5"></i> <span>Side-by-Side</span>
+                </a>
+                <a href="#value" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="value">
+                    <i class="fa-solid fa-gem w-3.5"></i> <span>Value Sources</span>
+                </a>
+                <a href="#tradeoffs" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="tradeoffs">
+                    <i class="fa-solid fa-balance-scale w-3.5"></i> <span>Tradeoffs</span>
+                </a>
+                <a href="#roadmap" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="roadmap">
+                    <i class="fa-solid fa-road w-3.5"></i> <span>Roadmap</span>
+                </a>
+                <a href="#verdict" class="nav-link px-4 py-2 rounded-2xl text-amber-300 hover:text-amber-200 flex items-center gap-x-2 text-xs font-medium border border-amber-900/50 bg-amber-900/10 hover:bg-amber-900/20 nav-item" data-section="verdict">
+                    <span class="font-semibold">Make a call</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- OVERVIEW -->
+        <div id="overview" class="section mt-10">
+            <div class="flex items-end justify-between mb-4">
+                <div>
+                    <span class="uppercase tracking-[1px] text-xs font-semibold text-slate-400">The Decision</span>
+                    <h2 class="font-display text-4xl tracking-tighter">Extend the agent's core tool surface?</h2>
+                </div>
+            </div>
+            
+            <div class="prose prose-invert max-w-none text-slate-300">
+                <p class="text-lg">Your A2X skills (especially resilient-flows and code-research) are already sophisticated orchestrators. The question is whether to go one level deeper and contribute <strong>first-class native tools</strong> using the <code class="bg-slate-900 px-1.5 py-px rounded text-amber-300">buildTool</code> factory from the Claude Code source.</p>
+            </div>
+
+            <div class="mt-6 bg-slate-900 border border-slate-700 rounded-3xl p-6">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-1">
+                        <div class="uppercase text-xs tracking-widest mb-1 text-slate-400">The specific proposal</div>
+                        <div class="text-2xl font-semibold tracking-tight">Add <span class="font-mono text-emerald-300">SpecReviewFinding</span> as a native tool in resilient-flows</div>
+                        <div class="mt-3 text-sm text-slate-400">The review agents in <code>spec-review-remediate</code> currently emit findings as free text. A real tool would make findings a first-class, typed, observable capability.</div>
+                    </div>
+                    <div>
+                        <div class="text-right">
+                            <div class="inline-block px-3 py-1 rounded-2xl bg-emerald-900/20 text-emerald-400 text-xs font-medium">High leverage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CURRENT REALITY -->
+        <div id="before" class="section mt-16">
+            <div class="flex items-center gap-x-3 mb-4">
+                <i class="fa-solid fa-history text-xl text-slate-400"></i>
+                <h2 class="font-display text-3xl tracking-tighter">Current Reality</h2>
+            </div>
+            <p class="text-slate-400 max-w-2xl">How findings are handled today inside <span class="font-medium text-slate-300">spec-review-remediate</span> and related flows.</p>
+
+            <div class="mt-6 grid md:grid-cols-5 gap-3">
+                <!-- Flow diagram - before -->
+                <div class="md:col-span-3 bg-slate-900 border border-slate-700 rounded-3xl p-6">
+                    <div class="text-xs uppercase tracking-widest mb-4 text-slate-400 font-medium">Current flow</div>
+                    
+                    <div class="space-y-4">
+                        <!-- Step -->
+                        <div class="flex gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 rounded-2xl bg-slate-800 flex items-center justify-center text-xs font-mono">1</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Parallel agents read diffs + specs</div>
+                                <div class="text-xs text-slate-400">5 specialized agents (CLAUDE.md, bugs, git blame, previous PRs, spec compliance)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 rounded-2xl bg-slate-800 flex items-center justify-center text-xs font-mono">2</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Agents output findings as prose</div>
+                                <div class="text-xs text-slate-400">Free text descriptions with file:line and spec refs buried in responses</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 rounded-2xl bg-slate-800 flex items-center justify-center text-xs font-mono">3</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Orchestrator skill parses text</div>
+                                <div class="text-xs text-slate-400">Later phases dedup, score with Haiku, tier into Blocker/Should-fix</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 rounded-2xl bg-slate-800 flex items-center justify-center text-xs font-mono">4</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Side effects</div>
+                                <div class="text-xs text-slate-400">GitHub comment built from text • remediation-loop invoked</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2 bg-slate-900 border border-slate-700 rounded-3xl p-6 flex flex-col">
+                    <div class="text-xs uppercase tracking-widest mb-3 text-amber-400">Pain points visible in source</div>
+                    <ul class="space-y-2.5 text-sm flex-1">
+                        <li class="flex gap-2"><i class="fa-solid fa-exclamation-triangle text-amber-400 mt-0.5 text-sm"></i> <span class="text-slate-300">No schema enforcement</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-exclamation-triangle text-amber-400 mt-0.5 text-sm"></i> <span class="text-slate-300">Hooks see nothing special</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-exclamation-triangle text-amber-400 mt-0.5 text-sm"></i> <span class="text-slate-300">Transcript search is fuzzy</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-exclamation-triangle text-amber-400 mt-0.5 text-sm"></i> <span class="text-slate-300">No permission surface for "review actions"</span></li>
+                        <li class="flex gap-2"><i class="fa-solid fa-exclamation-triangle text-amber-400 mt-0.5 text-sm"></i> <span class="text-slate-300">Compaction can scatter context</span></li>
+                    </ul>
+                    <div class="text-[10px] text-slate-500 mt-auto pt-3 border-t border-slate-700">Based on current spec-review-remediate/SKILL.md + resilient-flows hooks</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AFTER -->
+        <div id="after" class="section mt-16">
+            <div class="flex items-center gap-x-3 mb-4">
+                <i class="fa-solid fa-magic text-xl text-emerald-400"></i>
+                <h2 class="font-display text-3xl tracking-tighter">With a first-class buildTool</h2>
+            </div>
+            
+            <div class="prose prose-invert">
+                <p>The model gains <code class="font-mono bg-emerald-900/30 text-emerald-400 px-1.5">SpecReviewFinding</code> as a real tool in its native toolbox — exactly like Bash or FileEdit.</p>
+            </div>
+
+            <div class="mt-6 bg-slate-900 border border-emerald-900/50 rounded-3xl p-6">
+                <div class="uppercase text-emerald-400 text-xs tracking-widest mb-4">New flow</div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-x-3 gap-y-6 items-center">
+                    <div class="diagram-box rounded-3xl p-4 text-center">
+                        <div class="text-xs font-medium mb-1">1. Model sees tool</div>
+                        <div class="text-sm">Schema + description appear in prompt via <span class="font-mono">.prompt()</span></div>
+                    </div>
+                    
+                    <div class="hidden md:flex justify-center">
+                        <i class="fa-solid fa-arrow-right-long text-2xl text-emerald-600"></i>
+                    </div>
+                    
+                    <div class="diagram-box rounded-3xl p-4 text-center">
+                        <div class="text-xs font-medium mb-1">2. Agent calls tool</div>
+                        <div class="text-sm">Structured args during review (file, severity, specRef, evidence)</div>
+                    </div>
+                    
+                    <div class="hidden md:flex justify-center">
+                        <i class="fa-solid fa-arrow-right-long text-2xl text-emerald-600"></i>
+                    </div>
+                    
+                    <div class="diagram-box border-emerald-800 bg-emerald-900/10 rounded-3xl p-4 text-center">
+                        <div class="text-xs font-medium mb-1 text-emerald-300">3. Engine handles</div>
+                        <div class="text-sm">UI rendering • hooks fire • transcript indexed • permissions applied • subagent context passed</div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 pt-6 border-t border-slate-700 text-sm">
+                    <div class="font-medium mb-2">The skill changes too:</div>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-300 text-sm">
+                        <li>Review agents instructed to <strong>call the tool</strong> instead of describe findings</li>
+                        <li>Orchestrator consumes structured tool results + any side effects written to state</li>
+                        <li>Findings become first-class data the entire resilient-flows system can react to</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPARISON -->
+        <div id="comparison" class="section mt-16">
+            <h2 class="font-display text-3xl tracking-tighter mb-4">Before vs After — Direct Comparison</h2>
+            
+            <div class="overflow-x-auto rounded-3xl border border-slate-700">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-slate-900">
+                            <th class="text-left p-4 font-medium w-1/4">Dimension</th>
+                            <th class="text-left p-4 font-medium bg-slate-800">Today (text)</th>
+                            <th class="text-left p-4 font-medium bg-emerald-900/10 text-emerald-300">With buildTool</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr class="comparison-row">
+                            <td class="p-4 font-medium">How model records a finding</td>
+                            <td class="p-4 text-slate-400">Free text in response</td>
+                            <td class="p-4">Calls <span class="font-mono text-emerald-400">SpecReviewFinding</span> tool with typed input</td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="p-4 font-medium">Hook visibility</td>
+                            <td class="p-4 text-slate-400">None — just another message</td>
+                            <td class="p-4">Full PreToolUse / PostToolUse with enriched input</td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="p-4 font-medium">Transcript search</td>
+                            <td class="p-4 text-slate-400">Fuzzy keyword matching</td>
+                            <td class="p-4">Precise via <code>extractSearchText</code></td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="p-4 font-medium">Permission control</td>
+                            <td class="p-4 text-slate-400">Impossible to target</td>
+                            <td class="p-4">Users can write rules + <code>if</code> conditions</td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="p-4 font-medium">Parallel findings UI</td>
+                            <td class="p-4 text-slate-400">Scattered text blocks</td>
+                            <td class="p-4">Grouped rendering supported</td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="p-4 font-medium">Compaction survival</td>
+                            <td class="p-4 text-slate-400">Relies on your snapshot script</td>
+                            <td class="p-4">Native context + state tools + hooks</td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="p-4 font-medium">Discoverability by other agents</td>
+                            <td class="p-4 text-slate-400">Only via skill name</td>
+                            <td class="p-4">Appears in tool list + MCP surface possible</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- VALUE SOURCES -->
+        <div id="value" class="section mt-16">
+            <h2 class="font-display text-3xl tracking-tighter mb-2">Where the real value comes from</h2>
+            <p class="text-slate-400 mb-6">These aren't generic benefits. They map directly to contracts in the Claude Code source.</p>
+            
+            <div class="grid md:grid-cols-2 gap-3">
+                <!-- Value cards -->
+                <div class="value-source decision-card bg-slate-900 border border-slate-700 hover:border-slate-500 rounded-3xl p-5">
+                    <div class="flex justify-between">
+                        <div>
+                            <div class="font-semibold">1. Native prompt surface</div>
+                            <div class="text-sm text-slate-400 mt-1">The model sees a real schema and description in its tool list (via <code class="text-xs">.prompt()</code>).</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-[10px]">
+                        <span class="contract-badge">Tool.ts</span>
+                        <span class="ml-2 text-slate-500">src/Tool.ts:518</span>
+                    </div>
+                </div>
+                
+                <div class="value-source decision-card bg-slate-900 border border-slate-700 hover:border-slate-500 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">2. Full hook participation</div>
+                        <div class="text-sm text-slate-400 mt-1">PreToolUse, PostToolUse, PermissionRequest etc. all fire with proper enriched payloads.</div>
+                    </div>
+                    <div class="mt-3 text-[10px]">
+                        <span class="contract-badge">hooks.ts</span>
+                        <span class="ml-2 text-slate-500">src/utils/hooks.ts + agentSdkTypes</span>
+                    </div>
+                </div>
+                
+                <div class="value-source decision-card bg-slate-900 border border-slate-700 hover:border-slate-500 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">3. Transcript fidelity</div>
+                        <div class="text-sm text-slate-400 mt-1">Findings become properly indexed and highlighted in transcript search.</div>
+                    </div>
+                    <div class="mt-3 text-[10px]">
+                        <span class="contract-badge">Tool.ts</span>
+                        <span class="ml-2 text-slate-500">extractSearchText + transcriptSearch tests</span>
+                    </div>
+                </div>
+                
+                <div class="value-source decision-card bg-slate-900 border border-slate-700 hover:border-slate-500 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">4. Permission &amp; safety surface</div>
+                        <div class="text-sm text-slate-400 mt-1"><code>preparePermissionMatcher</code> + <code>if</code> conditions give users control over review actions.</div>
+                    </div>
+                    <div class="mt-3 text-[10px]">
+                        <span class="contract-badge">Tool.ts + permissions</span>
+                        <span class="ml-2 text-slate-500">src/types/permissions.ts</span>
+                    </div>
+                </div>
+                
+                <div class="value-source decision-card bg-slate-900 border border-slate-700 hover:border-slate-500 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">5. Subagent &amp; context awareness</div>
+                        <div class="text-sm text-slate-400 mt-1">Gets <code>agentId</code>, <code>setAppStateForTasks</code>, fork behavior for free.</div>
+                    </div>
+                    <div class="mt-3 text-[10px]">
+                        <span class="contract-badge">ToolUseContext</span>
+                        <span class="ml-2 text-slate-500">Tool.ts:245</span>
+                    </div>
+                </div>
+                
+                <div class="value-source decision-card bg-slate-900 border border-slate-700 hover:border-slate-500 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">6. Compaction &amp; state robustness</div>
+                        <div class="text-sm text-slate-400 mt-1">Works with Pre/PostCompact hooks and the invoked state mechanisms.</div>
+                    </div>
+                    <div class="mt-3 text-[10px]">
+                        <span class="contract-badge">compact.ts + state</span>
+                        <span class="ml-2 text-slate-500">src/services/compact + bootstrap/state.ts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRADEOFFS -->
+        <div id="tradeoffs" class="section mt-16 max-w-3xl">
+            <h2 class="font-display text-3xl tracking-tighter mb-4">Tradeoffs &amp; Cost</h2>
+            
+            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-6 space-y-5">
+                <div class="flex gap-4">
+                    <div class="w-5 mt-0.5"><i class="fa-solid fa-arrow-up text-amber-400"></i></div>
+                    <div class="flex-1">
+                        <div class="font-medium">More code to own</div>
+                        <div class="text-sm text-slate-400">You now maintain a tool definition, renderers, and registration logic instead of pure prompt orchestration.</div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-5 mt-0.5"><i class="fa-solid fa-arrow-up text-amber-400"></i></div>
+                    <div class="flex-1">
+                        <div class="font-medium">Registration surface</div>
+                        <div class="text-sm text-slate-400">Need to expose the tool through the plugin system or dynamic loading (see how other plugins contribute tools in the source).</div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-5 mt-0.5"><i class="fa-solid fa-check text-emerald-400"></i></div>
+                    <div class="flex-1">
+                        <div class="font-medium">High one-time learning, high ongoing leverage</div>
+                        <div class="text-sm text-slate-400">The Tool interface is large (~100 methods/fields), but most of the power is in a handful of advanced methods.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROADMAP -->
+        <div id="roadmap" class="section mt-16">
+            <h2 class="font-display text-3xl tracking-tighter mb-4">Implementation Roadmap</h2>
+            
+            <div class="space-y-3">
+                <div class="step flex gap-4 items-start bg-slate-900 border border-slate-700 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">1. Define the tool</div>
+                        <div class="text-sm text-slate-400">Create <code class="font-mono text-xs">resilient-flows/tools/SpecReviewFindingTool.ts</code> using the full <code>buildTool</code> contract. Start minimal and add advanced methods (<code>extractSearchText</code>, <code>preparePermissionMatcher</code>, renderers) iteratively.</div>
+                    </div>
+                </div>
+                
+                <div class="step flex gap-4 items-start bg-slate-900 border border-slate-700 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">2. Update the skill</div>
+                        <div class="text-sm text-slate-400">In <code>spec-review-remediate</code>, change agent instructions from "describe findings" to "use the SpecReviewFinding tool". Update scoring and remediation phases to consume tool results.</div>
+                    </div>
+                </div>
+                
+                <div class="step flex gap-4 items-start bg-slate-900 border border-slate-700 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">3. Wire registration</div>
+                        <div class="text-sm text-slate-400">Make the tool appear when the resilient-flows plugin is active (plugin contribution points or a small loader that augments the tool registry).</div>
+                    </div>
+                </div>
+                
+                <div class="step flex gap-4 items-start bg-slate-900 border border-slate-700 rounded-3xl p-5">
+                    <div>
+                        <div class="font-semibold">4. Enhance your hooks (optional but powerful)</div>
+                        <div class="text-sm text-slate-400">Your existing <code>precompact_snapshot.py</code> and Bash guards can now react specifically to this tool. Add a PostToolUse handler for findings if desired.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VERDICT / DECIDE -->
+        <div id="verdict" class="section mt-16 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-3xl p-8">
+                <div class="uppercase text-xs tracking-[1.5px] text-amber-400 font-semibold">Time to decide</div>
+                <h2 class="font-display text-4xl tracking-tighter mt-1">What's your call?</h2>
+                
+                <div class="mt-6 grid md:grid-cols-3 gap-3">
+                    <div onclick="recordVerdict(this, 'commit')" class="cursor-pointer verdict-card border border-emerald-700 bg-emerald-900/10 hover:bg-emerald-900/20 rounded-3xl p-5 transition-all">
+                        <div class="font-semibold text-emerald-300">COMMIT NOW</div>
+                        <div class="text-xs mt-2">Prototype the tool in the next session. Update one review flow. Measure the difference.</div>
+                        <div class="text-[10px] mt-4 text-emerald-400/70">Best if you value hooks, search, and permissions.</div>
+                    </div>
+                    
+                    <div onclick="recordVerdict(this, 'pilot')" class="cursor-pointer verdict-card border border-amber-700 bg-amber-900/10 hover:bg-amber-900/20 rounded-3xl p-5 transition-all">
+                        <div class="font-semibold text-amber-300">PILOT ON ONE FLOW</div>
+                        <div class="text-xs mt-2">Add the tool but only instruct the model to use it in spec-review-remediate for now. Keep other skills text-based.</div>
+                        <div class="text-[10px] mt-4 text-amber-400/70">Good middle path for learning the contract.</div>
+                    </div>
+                    
+                    <div onclick="recordVerdict(this, 'defer')" class="cursor-pointer verdict-card border border-slate-600 bg-slate-800 hover:bg-slate-700 rounded-3xl p-5 transition-all">
+                        <div class="font-semibold">DEFER</div>
+                        <div class="text-xs mt-2">Continue with current orchestration strengths. Revisit after more A2X skills exist or when a clear pain point appears.</div>
+                        <div class="text-[10px] mt-4 text-slate-400">Low risk. Your current work is already excellent.</div>
+                    </div>
+                </div>
+                
+                <div id="verdict-result" class="hidden mt-6 p-4 rounded-3xl bg-black/40 border border-slate-700 text-sm"></div>
+                
+                <div class="mt-6 flex items-center justify-between text-xs">
+                    <div class="text-slate-500">This is a local decision aid. Nothing is submitted.</div>
+                    <button onclick="copyDecisionSummary()" 
+                            class="flex items-center gap-x-2 text-slate-400 hover:text-slate-200 transition-colors">
+                        <i class="fa-solid fa-copy"></i>
+                        <span>Copy summary as markdown</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12 text-xs text-slate-500">
+            Generated for the A2X resilient-flows + Claude Code source audit • Follows patterns from <span class="font-mono">interactive-design-review</span> and <span class="font-mono">build-replication-playbook</span>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#64748b');
+            
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'display': ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif']
+                        }
+                    }
+                }
+            };
+        }
+        
+        // Theme toggle
+        function setTheme(theme) {
+            const body = document.body;
+            if (theme === 'light') {
+                body.classList.add('bg-white', 'text-slate-950');
+                body.classList.remove('bg-slate-950', 'text-slate-200');
+                document.documentElement.style.setProperty('--bg', '#ffffff');
+            } else {
+                body.classList.remove('bg-white', 'text-slate-950');
+                body.classList.add('bg-slate-950', 'text-slate-200');
+                document.documentElement.style.setProperty('--bg', '#0f172a');
+            }
+        }
+        
+        // Active nav on scroll
+        function setupNavHighlight() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.section');
+            
+            function highlightNav() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= sectionTop - 120) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightNav);
+            highlightNav();
+        }
+        
+        // Verdict recording
+        let selectedVerdict = null;
+        
+        function recordVerdict(element, type) {
+            // Deselect others
+            document.querySelectorAll('.verdict-card').forEach(el => {
+                el.classList.remove('ring-2', 'ring-offset-2', 'ring-offset-slate-950');
+                el.classList.remove('ring-emerald-400', 'ring-amber-400', 'ring-slate-400');
+            });
+            
+            // Select this one
+            element.classList.add('ring-2', 'ring-offset-2', 'ring-offset-slate-950');
+            
+            if (type === 'commit') element.classList.add('ring-emerald-400');
+            else if (type === 'pilot') element.classList.add('ring-amber-400');
+            else element.classList.add('ring-slate-400');
+            
+            selectedVerdict = type;
+            
+            const resultEl = document.getElementById('verdict-result');
+            resultEl.classList.remove('hidden');
+            
+            let message = '';
+            if (type === 'commit') {
+                message = `<strong class="text-emerald-300">Committed to prototype.</strong> Next step: create the tool file and update one prompt in spec-review-remediate.`;
+            } else if (type === 'pilot') {
+                message = `<strong class="text-amber-300">Pilot path chosen.</strong> Lower risk. Instrument the tool and observe model usage in reviews for 2-3 sessions.`;
+            } else {
+                message = `<strong>Deferred.</strong> Your current orchestration is already very strong. Revisit when a concrete pain point around findings observability appears.`;
+            }
+            
+            resultEl.innerHTML = `
+                <div class="flex gap-3">
+                    <div class="flex-1">${message}</div>
+                    <button onclick="copyDecisionSummary()" class="text-xs px-3 py-1 border border-slate-600 rounded-2xl self-start hover:bg-slate-800">Copy notes</button>
+                </div>
+            `;
+        }
+        
+        function copyDecisionSummary() {
+            const summary = `# buildTool Decision — A2X resilient-flows (SpecReviewFinding)
+
+**Chosen path:** ${selectedVerdict ? selectedVerdict.toUpperCase() : 'UNDECIDED (exploring)'}
+
+**Core question:** Move from text-based findings in spec-review-remediate to a first-class native tool using buildTool.
+
+**Key value sources (from Claude Code source):**
+- Native tool schema in prompt (Tool.ts)
+- Full hook participation (hooks.ts)
+- Transcript search fidelity (extractSearchText)
+- Permission surface for review actions
+- Subagent + compaction context
+- Grouped UI rendering for parallel reviews
+
+**Source files referenced:** 
+repos/claude-code/src/Tool.ts
+repos/claude-code/src/utils/hooks.ts
+repos/claude-code/src/skills/loadSkillsDir.ts
+repos/claude-code/src/services/compact/compact.ts
+
+**Current state:** Findings are prose → skill parses later.
+**Target state:** Model calls SpecReviewFinding tool → engine provides hooks, search, permissions, rendering for free.
+
+Generated via A2X decision navigator • ${new Date().toLocaleDateString()}
+`;
+            
+            navigator.clipboard.writeText(summary).then(() => {
+                const originalText = event.target ? event.target.innerHTML : '';
+                const btns = document.querySelectorAll('button');
+                btns.forEach(b => {
+                    if (b.innerText.includes('Copy')) {
+                        const old = b.innerHTML;
+                        b.innerHTML = `<i class="fa-solid fa-check mr-1"></i> Copied!`;
+                        setTimeout(() => {
+                            b.innerHTML = old;
+                        }, 1400);
+                    }
+                });
+            }).catch(() => {
+                // Fallback
+                prompt("Copy this summary:", summary);
+            });
+        }
+        
+        // Keyboard nav
+        function setupKeyboard() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === '?' && document.activeElement.tagName === 'BODY') {
+                    e.preventDefault();
+                    const verdict = document.getElementById('verdict');
+                    verdict.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+            
+            // Add hint
+            const hint = document.createElement('div');
+            hint.className = 'fixed bottom-4 right-4 text-[10px] text-slate-500 hidden md:block';
+            hint.innerHTML = `Press <span class="font-mono border px-1 rounded">?</span> to jump to decision`;
+            document.body.appendChild(hint);
+        }
+        
+        // Simple highlight on value cards
+        function setupValueCards() {
+            document.querySelectorAll('.value-source').forEach((card, i) => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.borderColor = '#64748b';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.borderColor = '';
+                });
+            });
+        }
+        
+        // Boot everything
+        function boot() {
+            initializeTailwind();
+            setupNavHighlight();
+            setupKeyboard();
+            setupValueCards();
+            
+            // Default to dark
+            document.body.classList.add('bg-slate-950', 'text-slate-200');
+            
+            // Smooth scroll for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        
+                        // briefly highlight
+                        target.classList.add('highlight');
+                        setTimeout(() => target.classList.remove('highlight'), 1600);
+                    }
+                });
+            });
+            
+            // Mark first nav as active on load
+            setTimeout(() => {
+                const first = document.querySelector('.nav-link');
+                if (first) first.classList.add('active');
+            }, 300);
+            
+            // Easter egg: clicking the title copies a one-liner
+            const title = document.querySelector('h1');
+            if (title) {
+                title.style.cursor = 'pointer';
+                title.addEventListener('click', () => {
+                    navigator.clipboard.writeText('buildTool = first-class native extension of the agent\'s tool surface (Tool.ts)');
+                    title.style.transitionDuration = '80ms';
+                    title.style.opacity = '0.6';
+                    setTimeout(() => { title.style.opacity = '1'; }, 300);
+                });
+            }
+            
+            console.log('%c[A2X] buildTool decision navigator ready. Open in browser for best experience.', 'color:#475569');
+        }
+        
+        window.onload = boot;
+        
+        // Bonus: allow jumping directly via hash on load
+        window.addEventListener('load', () => {
+            if (window.location.hash) {
+                const el = document.querySelector(window.location.hash);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: 'smooth' });
+                    }, 400);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -136,6 +136,16 @@ Attendee action: Learn the `raw/`, `wiki/`, and operating-contract pattern using
 
 Status: ready overview/tutorial; direct source/software release still needs cleanup and Tomer approval.
 
+### buildTool decision navigator
+
+Resource: `resources/buildtool-decision.html`.
+
+Use when: Tomer wants an advanced discussion about when a repeated workflow should become a first-class native tool rather than remaining prompt text or skill instructions.
+
+Attendee action: Compare text-based findings with structured tool calls and decide whether the extra schema, hook, permission, and UI surface area is worth the complexity.
+
+Status: ready decision aid; optional advanced discussion, not required for the core first workshop flow.
+
 ## Priority 3 — defer if time is tight
 
 ### Credential tracer / auth routing

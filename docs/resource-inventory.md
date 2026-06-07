@@ -121,6 +121,16 @@ Source: local/private candidate projects identified outside this repo; audit not
 Safety notes: sanitized overview and tutorial are public-safe and do not expose private source names, private repository links, local paths, raw notes, or vault contents. They teach the `raw/`, `wiki/`, and operating-contract pattern with a fictional mini-vault and generic prompts. Direct software/plugin repo linking still needs a cleaned, Tomer-approved release path.
 Next action: if Wiki-LLM becomes a live advanced demo, prepare a cleaned software-only repo or facilitator-owned package; keep private vault content out of the public hub.
 
+### buildTool decision navigator
+
+Status: publish-now decision aid
+
+Hub path: `resources/buildtool-decision.html`
+
+Source: public-safe static decision aid discovered as an untracked resource during the 2026-06-07 readiness refresh and reconciled into the hub.
+Safety notes: contains no private source links, credentials, local paths, customer data, analytics, lead capture, or install instructions. It discusses the native-tool decision conceptually and keeps implementation/source exposure out of the attendee-facing page.
+Next action: use only as an advanced optional discussion aid unless Tomer chooses to feature native tool/plugin internals live.
+
 ### Credential tracer / authentication routing
 
 Status: defer  

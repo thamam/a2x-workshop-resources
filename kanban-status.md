@@ -111,6 +111,10 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance Story M.3: Reconcile untracked public-facing Build Tool decision page
+  - Evidence: `resources/buildtool-decision.html` inspected, given explicit public-safe scope copy, fixed for 390×844 mobile overflow, linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and included in `docs/public-release-audit-2026-06-07.md`; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome DevTools DOM/mobile smoke passed for all 18 HTML files on 2026-06-07 13:27 IDT.
+- [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
+  - Evidence: `docs/public-release-audit-2026-06-07.md` updated for current HEAD `0a8ff412f93514f8c31697bbe637b1a261eb9965`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27089520247); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 17 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 17 HTML files passed on 2026-06-07 13:21 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
   - Evidence: `docs/public-release-audit-2026-06-07.md` updated for current HEAD `3939868eb9141605bd22c5a920c6773cf1550396`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27089188352); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 17 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 17 HTML files passed on 2026-06-07 13:06–13:07 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
@@ -271,6 +275,14 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-07 13:27 IDT — Finished Maintenance Story M.3: reconciled `resources/buildtool-decision.html` into the hub with public-safe scope copy and mobile overflow fixes; updated inventory, usage map, and audit; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome DevTools DOM/mobile smoke passed for all 18 HTML files.
+
+- 2026-06-07 13:23 IDT — Started Maintenance Story M.3: final checks discovered untracked public-facing `resources/buildtool-decision.html`; reconciling it safely before any commit/push.
+
+- 2026-06-07 13:21 IDT — Finished Maintenance: verified current HEAD `0a8ff41`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `0a8ff412f93514f8c31697bbe637b1a261eb9965`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 17 HTML files, and Chrome DevTools DOM/mobile checks for all 17 HTML files passed. No publishing or private-resource exposure was performed.
+
+- 2026-06-07 13:20 IDT — Started Maintenance: verify current HEAD `0a8ff41` remains public-ready and approval-gated; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 
 - 2026-06-07 13:07 IDT — Finished Maintenance: verified current HEAD `3939868`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `3939868eb9141605bd22c5a920c6773cf1550396`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 17 HTML files, and Chrome DevTools DOM/mobile checks for all 17 HTML files passed. No publishing or private-resource exposure was performed.
 
