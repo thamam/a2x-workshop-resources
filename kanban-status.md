@@ -109,6 +109,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Reconcile public-launch evidence after approved visibility change
+  - Evidence: current HEAD `cad00a2d2b27ee41e8f26db01e53506d91560396`; `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,visibility,isPrivate,url` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27108261331); `docs/public-release-audit-2026-06-07.md` now reflects the approved public visibility and remaining Pages/source-link gates; `docs/public-launch-checklist.md` now records Tomer's 2026-06-08 approval scope; `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, and `git diff --check` passed on 2026-06-08 02:52 IDT.
 - [x] Story 5.5: Publish repository and connect from A2X website
   - Evidence: Tomer approved switching `thamam/a2x-workshop-resources` from private to public and connecting it from the A2X website on 2026-06-08; `gh repo edit ... --visibility public --accept-visibility-change-consequences` completed; `gh repo view` now reports `visibility: PUBLIC` and `isPrivate: false`; unauthenticated GitHub API and HTTPS checks for `https://github.com/thamam/a2x-workshop-resources` returned public access. Website wiring is being committed/deployed from the A2X website repository.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
@@ -373,6 +375,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-08 02:52 IDT — Finished Maintenance: reconciled public-launch evidence for current HEAD `cad00a2`; updated `docs/public-release-audit-2026-06-07.md` and `docs/public-launch-checklist.md` to reflect Tomer-approved public repository visibility while keeping GitHub Pages/source-link gates explicit. GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27108261331); static-link, private-file blocker, gitleaks `--no-git`, and `git diff --check` passed.
+
+- 2026-06-08 02:50 IDT — Started Maintenance: reconcile public-launch evidence for current HEAD `cad00a2` after approved visibility change; scope is documentation/check refresh only. `gh repo view` now reports repository visibility `PUBLIC`; GitHub Pages API still returns 404/not configured.
 
 - 2026-06-08 02:20 IDT — Finished Maintenance: verified current HEAD `0617393`; refreshed `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `061739334cccc27e0c698c09484a11d33518b1e5`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools DOM/mobile checks for all 18 HTML files passed. No publishing or private-resource exposure was performed.
 
