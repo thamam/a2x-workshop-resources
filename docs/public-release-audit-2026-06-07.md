@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json isPrivate,nameWithOwner,url,homepageUrl,visibility` returned `isPrivate: true` / `visibility: PRIVATE` for `thamam/a2x-workshop-resources` and no homepage URL.
 - GitHub Pages remains unconfigured: `gh api repos/thamam/a2x-workshop-resources/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `32950b059799c1c0becfb4efc61b64ebea8932d6` (`databaseId` 27087846326).
+- GitHub Security Checks completed successfully for current starting commit `662e4fdf4a709bb6899711dbab0e16b341085175` (`databaseId` 27088178253).
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 17 discovered HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 17 discovered HTML files at a 390 × 844 viewport, including the canonical Kanban HTML view and public-safe tutorial pages.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 12:01 IDT
+2026-06-07 12:17 IDT
 ```
 
 Starting commit:
 
 ```text
-32950b059799c1c0becfb4efc61b64ebea8932d6
+662e4fdf4a709bb6899711dbab0e16b341085175
 ```
 
 Latest commit subject at audit start:
 
 ```text
-32950b0 docs: add public-safe workshop tutorials
+662e4fd docs: refresh readiness verification
 ```
 
 ### Repository visibility
@@ -70,14 +70,14 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-SHA=32950b059799c1c0becfb4efc61b64ebea8932d6
+SHA=662e4fdf4a709bb6899711dbab0e16b341085175
 gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt --jq ".[] | select(.headSha == \"$SHA\") | {databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt}"
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T08:50:45Z","databaseId":27087846326,"headSha":"32950b059799c1c0becfb4efc61b64ebea8932d6","status":"completed","updatedAt":"2026-06-07T08:51:00Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T09:06:19Z","databaseId":27088178253,"headSha":"662e4fdf4a709bb6899711dbab0e16b341085175","status":"completed","updatedAt":"2026-06-07T09:06:35Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -94,14 +94,14 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # PRIVATE_BLOCKER_EXIT=0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~290 KB, reported no leaks found
+# scanned ~290572 bytes (290.57 KB), reported no leaks found
 # GITLEAKS_EXIT=0
 
 git diff --check
 # DIFF_CHECK_EXIT=0
 ```
 
-After updating this audit and moving the canonical tracker to `DONE`, a final self-referential rerun rechecked the same local criteria: static links passed for 17 HTML files, private-file blocker exited 0, gitleaks reported no leaks while scanning ~290 KB, `git diff --check` exited 0, all 17 discovered HTML files returned HTTP 200 with non-empty `text/html` content, and Chrome DevTools reported no page-level horizontal overflow for all 17 discovered pages including `kanban-status.html`.
+After updating this audit and moving the canonical tracker to `DONE`, a final self-referential rerun rechecked the same local criteria: static links passed for 17 HTML files, private-file blocker exited 0, gitleaks reported no leaks while scanning ~291740 bytes, `git diff --check` exited 0, all 17 discovered HTML files returned HTTP 200 with non-empty `text/html` content, and Chrome DevTools reported no page-level horizontal overflow for all 17 discovered pages including `kanban-status.html`.
 
 ### Local HTTP smoke
 
