@@ -105,6 +105,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current evidence-refresh commit remains public-ready and approval-gated
+  - Evidence: current HEAD `ad2a35aeacc778b827a5cc7009e5079f0cbc3d44` remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27083594117); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 14 HTML files passed on 2026-06-07 08:29–08:31 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Verify latest evidence-refresh commit remains public-ready and approval-gated
   - Evidence: current HEAD `6724aa506a66b171c9f3895417fdc1877046c4eb` remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27083338422); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 14 HTML files passed on 2026-06-07 08:16 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Refresh public-readiness evidence for current repo state
@@ -221,6 +223,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-07 — Finished Maintenance: verified current evidence-refresh commit `ad2a35a`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `ad2a35aeacc778b827a5cc7009e5079f0cbc3d44`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools DOM/mobile checks for all 14 HTML files passed. No safe unblocked implementation stories remain listed.
+
+- 2026-06-07 — Started Maintenance: verify current evidence-refresh commit `ad2a35a` remains public-ready and approval-gated; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 
 - 2026-06-07 — Finished Maintenance: verified latest evidence-refresh commit `6724aa5`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `6724aa506a66b171c9f3895417fdc1877046c4eb`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools DOM/mobile checks for all 14 HTML files passed. No safe unblocked implementation stories remain listed.
 
