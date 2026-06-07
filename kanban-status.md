@@ -71,6 +71,12 @@
   - [x] Story 6.4: Add sanitized Presentation editor overview
   - [x] Story 6.5: Add sanitized A2X Marketplace overview
 
+- [x] **Epic 7: Tutorial expansion for marketplace, LLM Wiki, and OpenSpec** (100% Completed)
+  - [x] Story 7.1: Add public-safe A2X Marketplace tutorial
+  - [x] Story 7.2: Add blog-style LLM Wiki tutorial
+  - [x] Story 7.3: Add blog-style OpenSpec tutorial
+  - [x] Story 7.4: Wire tutorials into hub, inventory, usage map, and verification
+
 ---
 
 ## 🏃 Active State Tracking
@@ -105,6 +111,16 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
+  - Evidence: `docs/public-release-audit-2026-06-07.md` updated for current HEAD `1e01bbcd83bc19ed338c4cfcb598004839e6eaaa`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27087380461); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 17 discovered HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 17 discovered HTML files passed on 2026-06-07 11:47 IDT. No publishing or private-resource exposure was performed.
+- [x] Story 7.1: Add public-safe A2X Marketplace tutorial
+  - Evidence: `resources/a2x-marketplace-tutorial.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed static-link/private-file/gitleaks/diff checks plus local HTTP and Chrome DevTools 390×844 DOM/mobile smoke on 2026-06-07.
+- [x] Story 7.2: Add blog-style LLM Wiki tutorial
+  - Evidence: `resources/wiki-llm-tutorial.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed static-link/private-file/gitleaks/diff checks plus local HTTP and Chrome DevTools 390×844 DOM/mobile smoke on 2026-06-07.
+- [x] Story 7.3: Add blog-style OpenSpec tutorial
+  - Evidence: `resources/openspec-tutorial.html` exists, is linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and passed static-link/private-file/gitleaks/diff checks plus local HTTP and Chrome DevTools 390×844 DOM/mobile smoke on 2026-06-07.
+- [x] Story 7.4: Wire tutorials into hub, inventory, usage map, and verification
+  - Evidence: `index.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md` reference the tutorial pages; `docs/public-release-audit-2026-06-07.md` records the 17-page verification refresh; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome DevTools mobile DOM smoke passed.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
   - Evidence: `docs/public-release-audit-2026-06-07.md` updated for current HEAD `59a4e7a5be8527c76f8ea368c002ec2eed721fb9`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27087072694); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 14 HTML files passed on 2026-06-07 11:25 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
@@ -245,6 +261,14 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-07 11:47 IDT — Finished Maintenance Story M.2 / Epic 7 tutorial expansion: added and wired public-safe A2X Marketplace, LLM Wiki, and OpenSpec tutorials into the hub, inventory, and usage map; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome DevTools 390×844 DOM/mobile smoke passed for 17 HTML files.
+
+- 2026-06-07 11:45 IDT — Started Maintenance Story M.2: reconcile public-safe tutorial drafts detected during readiness refresh; scope is inspect/verify linked hub and inventory edits before committing anything.
+
+- 2026-06-07 11:40 IDT — Finished Maintenance: verified current HEAD `1e01bbc`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `1e01bbcd83bc19ed338c4cfcb598004839e6eaaa`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 17 discovered HTML files, and Chrome DevTools DOM/mobile checks for all 17 discovered HTML files passed. No publishing or private-resource exposure was performed.
+
+- 2026-06-07 11:40 IDT — Started Maintenance: verify current HEAD `1e01bbc` remains public-ready and approval-gated; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 
 - 2026-06-07 — Finished Maintenance: verified current HEAD `59a4e7a`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `59a4e7a5be8527c76f8ea368c002ec2eed721fb9`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools DOM/mobile checks for all 14 HTML files passed. No safe unblocked implementation stories remain listed.
 

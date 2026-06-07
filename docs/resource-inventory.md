@@ -65,6 +65,14 @@ Source: public-safe static prompt/workflow drafted in this repo from the tool gi
 Safety notes: no external links, credentials, client material, local paths, or private examples.
 Next action: test after the product brief generator and tune the acceptance-criteria guidance.
 
+### OpenSpec tutorial
+
+Status: publish-now
+Hub path: `resources/openspec-tutorial.html`
+Source: public-safe blog-style tutorial drafted in this repo to complement the OpenSpec interviewer and PRD starter.
+Safety notes: no external links, credentials, client material, local paths, or private examples. It explains proposal gates, decision gates, and agent prompts without requiring a live OpenSpec repository.
+Next action: tune wording after Tomer reviews the desired workshop decision-gate language.
+
 ### PRD to HTML review workbench
 
 Status: publish-now prototype
@@ -75,13 +83,13 @@ Next action: use only as a second-wave giveaway unless Tomer chooses to feature 
 
 ### A2X Marketplace
 
-Status: publish-now overview; direct source link remains polish-first
+Status: publish-now overview/tutorial; direct source link remains polish-first
 
-Hub path: `resources/a2x-marketplace-overview.html`
+Hub paths: `resources/a2x-marketplace-overview.html`, `resources/a2x-marketplace-tutorial.html`
 
 Source: public GitHub repo `https://github.com/thamam/A2X-marketplace`; audit notes in `docs/a2x-marketplace-public-safety-audit.md`.
-Safety notes: sanitized overview is public-safe and does not directly link the marketplace source repo. It explains the marketplace concept with a fictional card, generic placeholders, no local paths, no personal contact details, no plugin internals, and no real credentials. Direct source-repo linking should still wait for cleanup of local-path docs, credential setup framing, and secret-scanner noise.
-Next action: if Tomer wants attendees to install marketplace items, first prepare a curated release path or facilitator-owned demo; otherwise keep the overview as an optional concept handout.
+Safety notes: sanitized overview and tutorial are public-safe and do not directly link the marketplace source repo. They explain the marketplace concept, install mental model, plugin-loading checklist, item types, benefits, and safe exercise with generic placeholders, no local paths, no personal contact details, no plugin internals, and no real credentials. Direct source-repo linking should still wait for cleanup of local-path docs, credential setup framing, and secret-scanner noise.
+Next action: if Tomer wants attendees to install real marketplace items, prepare a curated release path or facilitator-owned demo; otherwise use the tutorial as the safe attendee explanation.
 
 ### Prompt Magician
 
@@ -105,12 +113,12 @@ Next action: if Tomer wants a live slide-generation demo, prepare a facilitator-
 
 ### Wiki-LLM
 
-Status: publish-now overview; direct source release remains polish-first
+Status: publish-now overview/tutorial; direct source release remains polish-first
 
-Hub path: `resources/wiki-llm-overview.html`
+Hub paths: `resources/wiki-llm-overview.html`, `resources/wiki-llm-tutorial.html`
 
 Source: local/private candidate projects identified outside this repo; audit notes in `docs/wiki-llm-public-safety-audit.md`. Exact private repository names and absolute paths are intentionally withheld from the public-ready inventory.
-Safety notes: sanitized overview is public-safe and does not expose private source names, private repository links, local paths, raw notes, or vault contents. It teaches the `raw/`, `wiki/`, and operating-contract pattern with a fictional mini-vault. Direct software/plugin repo linking still needs a cleaned, Tomer-approved release path.
+Safety notes: sanitized overview and tutorial are public-safe and do not expose private source names, private repository links, local paths, raw notes, or vault contents. They teach the `raw/`, `wiki/`, and operating-contract pattern with a fictional mini-vault and generic prompts. Direct software/plugin repo linking still needs a cleaned, Tomer-approved release path.
 Next action: if Wiki-LLM becomes a live advanced demo, prepare a cleaned software-only repo or facilitator-owned package; keep private vault content out of the public hub.
 
 ### Credential tracer / authentication routing

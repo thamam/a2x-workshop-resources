@@ -74,6 +74,16 @@ Attendee action: Draft concise PRD sections, concrete acceptance criteria, and a
 
 Status: ready draft.
 
+### Proposal gate: OpenSpec tutorial
+
+Resource: `resources/openspec-tutorial.html`.
+
+Use when: Tomer wants to explain why agents should draft a proposal before editing code or when attendees need a clear decision gate between idea and implementation.
+
+Attendee action: Use the minimal proposal template, decision gates, and agent prompt to decide whether to proceed, clarify, split, or stop.
+
+Status: ready tutorial.
+
 ### Optional review surface: PRD to HTML workbench
 
 Resource: `resources/prd-html-review-workbench.html`.
@@ -88,13 +98,13 @@ Status: ready prototype; second-wave giveaway, not required for the core first w
 
 ### A2X Marketplace
 
-Resource: `resources/a2x-marketplace-overview.html`; source audit notes are in `docs/a2x-marketplace-public-safety-audit.md`.
+Resources: `resources/a2x-marketplace-overview.html`, `resources/a2x-marketplace-tutorial.html`; source audit notes are in `docs/a2x-marketplace-public-safety-audit.md`.
 
-Use when: Tomer wants to signal that A2X builds tools and extensions, not only workshops.
+Use when: Tomer wants to signal that A2X builds tools and extensions, not only workshops, or wants an attendee-friendly explanation of installing curated workflow items.
 
-Attendee action: Understand the marketplace pattern: package repeatable Claude Code workflows as curated skills, plugins, presets, verification steps, and safety notes.
+Attendee action: Understand the marketplace pattern: package repeatable Claude Code workflows as curated skills, plugins, presets, verification steps, and safety notes; learn the safe install and plugin-loading mental model before trying real items.
 
-Status: ready overview; direct source-repo linking still needs cleanup and a curated release path.
+Status: ready overview/tutorial; direct source-repo linking still needs cleanup and a curated release path.
 
 ### Prompt Magician
 
@@ -118,13 +128,13 @@ Status: ready overview; direct source-repo linking still needs curated setup cop
 
 ### Wiki-LLM
 
-Resource: `resources/wiki-llm-overview.html`; source path located with audit notes in `docs/wiki-llm-public-safety-audit.md`.
+Resources: `resources/wiki-llm-overview.html`, `resources/wiki-llm-tutorial.html`; source path located with audit notes in `docs/wiki-llm-public-safety-audit.md`.
 
 Use when: Tomer discusses knowledge-base workflows and advanced agent context.
 
-Attendee action: Learn the `raw/`, `wiki/`, and operating-contract pattern using a fictional mini-vault before applying it to their own private notes.
+Attendee action: Learn the `raw/`, `wiki/`, and operating-contract pattern using a fictional mini-vault before applying it to their own private notes; use the tutorial prompt to update a small Markdown wiki safely.
 
-Status: ready overview; direct source/software release still needs cleanup and Tomer approval.
+Status: ready overview/tutorial; direct source/software release still needs cleanup and Tomer approval.
 
 ## Priority 3 — defer if time is tight
 

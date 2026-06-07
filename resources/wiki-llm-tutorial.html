@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LLM Wiki tutorial · A2X</title>
+<meta name="description" content="A blog-style public-safe tutorial for using an LLM Wiki workflow with raw notes, synthesized wiki pages, and an operating contract." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279;--ok:#98d7a5}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.58}main{max-width:980px;margin:0 auto;padding:44px 20px 34px}a{color:inherit}.button{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:750;font-size:.95rem}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(2.1rem,6vw,4.7rem);line-height:.98;margin:14px 0 12px;letter-spacing:-.05em}h2{font-size:clamp(1.35rem,3vw,2rem);margin:0 0 10px;letter-spacing:-.025em}h3{margin:0 0 8px;font-size:1.05rem}p,li{color:var(--muted)}p{margin:0 0 14px}.lead{font-size:1.1rem;max-width:810px}.nav{margin-bottom:26px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:20px;padding:20px;margin-top:24px}.grid .card{margin-top:0}.tag{color:var(--ok);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}code{background:#120f0b;border:1px solid var(--line);border-radius:8px;padding:.12rem .35rem;color:#efe5d6}pre{white-space:pre-wrap;overflow:auto;background:#120f0b;border:1px solid var(--line);border-radius:16px;padding:16px;color:#efe5d6}.checklist{padding-left:1.2rem}.callout{border-color:#4b3f2f;background:linear-gradient(180deg,#2a2118,#1d1913)}footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.94rem}
+</style>
+</head>
+<body>
+<main>
+<div class="nav"><a class="button" href="../index.html">← Back to hub</a></div>
+<div class="eyebrow">Blog tutorial</div>
+<h1>How to work with an LLM Wiki.</h1>
+<p class="lead">An LLM Wiki is a small knowledge base that an agent can read, update, and reason over. The trick is to separate raw notes from synthesized pages, then give the agent an operating contract.</p>
+<section class="card callout"><div class="tag">Core pattern</div><h2>Raw notes in, linked knowledge out</h2><p>Do not start with a database. Start with Markdown, a tiny folder structure, and a clear rule: the agent may summarize and link, but it must cite sources and flag uncertainty.</p></section>
+<section class="card"><h2>Recommended folder structure</h2><pre>vault/
+  raw/
+    meeting-prep-assistant.md
+    reusable-agent-rules.md
+  wiki/
+    index.md
+    meeting-prep-assistant.md
+    agent-harness.md
+  OPERATING_CONTRACT.md</pre><p><code>raw/</code> holds original notes. <code>wiki/</code> holds cleaned concept pages. <code>OPERATING_CONTRACT.md</code> tells the agent how to work safely.</p></section>
+<section class="grid" aria-label="Workflow stages">
+  <article class="card"><div class="tag">Stage 1</div><h3>Collect notes</h3><p>Add short raw notes, transcripts, research snippets, or decisions. Keep them private unless deliberately sanitized.</p></article>
+  <article class="card"><div class="tag">Stage 2</div><h3>Synthesize pages</h3><p>Ask the agent to create concise pages with summaries, backlinks, examples, source notes used, and open questions.</p></article>
+  <article class="card"><div class="tag">Stage 3</div><h3>Review claims</h3><p>Read the generated pages. Unsupported claims should be marked unknown, not polished into false certainty.</p></article>
+  <article class="card"><div class="tag">Stage 4</div><h3>Maintain over time</h3><p>When adding new notes, ask the agent what pages should change instead of regenerating the whole wiki blindly.</p></article>
+</section>
+<section class="card"><h2>Starter operating contract</h2><pre>You are maintaining this Markdown wiki.
+Rules:
+- Read raw/ before editing wiki/.
+- Every wiki page must list source notes used.
+- Link related pages with Markdown links.
+- If a fact is not supported by raw notes, mark it as unknown.
+- Do not include private names, credentials, local paths, or raw secrets in public pages.
+- Prefer small edits over full rewrites.
+- End with a changelog of files changed and claims that need human review.</pre></section>
+<section class="card"><h2>Prompt to update the wiki</h2><pre>Read OPERATING_CONTRACT.md.
+Use the new notes in raw/.
+Update wiki/ so it reflects the new information.
+For each changed page, include:
+1. What changed
+2. Source notes used
+3. Related pages
+4. Open questions
+5. Unsupported claims to verify
+Do not invent facts. Keep private material private.</pre></section>
+<section class="card"><h2>When this is useful</h2><ul class="checklist"><li>Research projects with many notes.</li><li>Meeting-heavy teams that need durable decisions.</li><li>Product discovery where assumptions change over time.</li><li>Agent projects that need memory richer than one prompt.</li></ul></section>
+<footer>Static public-safe tutorial. Use fictional or sanitized notes; no private vault names, repository links, local paths, tracking, storage, or real credentials.</footer>
+</main>
+</body>
+</html>

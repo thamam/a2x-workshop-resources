@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A2X Marketplace tutorial · A2X</title>
+<meta name="description" content="A public-safe tutorial for installing marketplace items, loading Claude Code plugins, and deciding when to use skills, plugins, presets, and safety checks." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279;--ok:#98d7a5;--warn:#f4cf86}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.58}main{max-width:980px;margin:0 auto;padding:44px 20px 34px}a{color:inherit}.button{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:750;font-size:.95rem}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(2.1rem,6vw,4.7rem);line-height:.98;margin:14px 0 12px;letter-spacing:-.05em}h2{font-size:clamp(1.35rem,3vw,2rem);margin:0 0 10px;letter-spacing:-.025em}h3{margin:0 0 8px;font-size:1.05rem}p,li{color:var(--muted)}p{margin:0 0 14px}.lead{font-size:1.1rem;max-width:810px}.nav{margin-bottom:26px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:20px;padding:20px;margin-top:24px}.grid .card{margin-top:0}.tag{color:var(--ok);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.warn{color:var(--warn)}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}code{background:#120f0b;border:1px solid var(--line);border-radius:8px;padding:.12rem .35rem;color:#efe5d6}pre{white-space:pre-wrap;overflow:auto;background:#120f0b;border:1px solid var(--line);border-radius:16px;padding:16px;color:#efe5d6}.checklist{padding-left:1.2rem}.flow li{margin-bottom:.55rem}.callout{border-color:#5a3d2a;background:linear-gradient(180deg,#2a2118,#1d1913)}footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.94rem}
+</style>
+</head>
+<body>
+<main>
+<div class="nav"><a class="button" href="../index.html">← Back to hub</a></div>
+<div class="eyebrow">Guided tutorial</div>
+<h1>A2X Marketplace tutorial.</h1>
+<p class="lead">A practical, attendee-friendly path for understanding the marketplace idea: install only curated items, load plugins deliberately, and choose skills or plugins based on the job.</p>
+<section class="card callout">
+  <div class="tag warn">Public-safe version</div>
+  <h2>Use this before any direct source link</h2>
+  <p>This tutorial explains the workflow without exposing private setup paths, unreviewed plugin internals, real credentials, or live repository links. Treat it as the attendee-facing install mental model until the marketplace release path is curated.</p>
+</section>
+<section class="card">
+  <h2>Quick install mental model</h2>
+  <ol class="flow">
+    <li><strong>Start from a curated marketplace item.</strong> Read its purpose, scope, permissions, inputs, and verification steps before installing anything.</li>
+    <li><strong>Copy or install into your local agent workspace.</strong> Use the item’s documented target such as <code>&lt;project&gt;/.claude/</code>, <code>&lt;home&gt;/.claude/</code>, or <code>&lt;plugin-dir&gt;</code>. Avoid global installs unless the item says why.</li>
+    <li><strong>Restart or reload the agent harness.</strong> Most agents discover new plugins, commands, or skills at startup. If a reload command exists, use that; otherwise start a fresh session.</li>
+    <li><strong>Run the smallest safe smoke test.</strong> Ask the agent to list the loaded item or run its dry-run command before giving it private files or write access.</li>
+    <li><strong>Verify output and permissions.</strong> Keep the item only if it saves repeat work and its side effects are clear.</li>
+  </ol>
+</section>
+<section class="grid" aria-label="Marketplace item types">
+  <article class="card"><div class="tag">Item type</div><h3>Skills</h3><p>Use when the value is a repeatable procedure: code review, planning, debugging, release checks, document creation, or team-specific habits. Benefit: the agent remembers the right workflow without a long prompt every time.</p></article>
+  <article class="card"><div class="tag">Item type</div><h3>Plugins</h3><p>Use when the agent needs new capabilities: commands, integrations, file transformations, browser actions, or domain tools. Benefit: the workflow becomes executable, not just advisory.</p></article>
+  <article class="card"><div class="tag">Item type</div><h3>Presets</h3><p>Use when a whole environment should feel consistent: model choice, rules, allowed tools, starter skills, and safety defaults. Benefit: teams can start from a known operating mode.</p></article>
+  <article class="card"><div class="tag">Item type</div><h3>Templates</h3><p>Use when the output shape matters: PRD sections, review packets, meeting briefs, acceptance criteria, or launch checklists. Benefit: results become easier to compare and review.</p></article>
+  <article class="card"><div class="tag">Item type</div><h3>Commands</h3><p>Use when the same action should be triggered in one phrase, such as generating a plan, exporting a feedback packet, or running a local audit. Benefit: less prompt drift.</p></article>
+  <article class="card"><div class="tag">Item type</div><h3>Safety checks</h3><p>Use before publishing, sharing, committing, or sending data to tools. Benefit: the agent has explicit gates for secrets, private paths, external links, and destructive actions.</p></article>
+</section>
+<section class="card">
+  <h2>Plugin loading checklist</h2>
+  <ul class="checklist">
+    <li>Read the plugin’s permissions and expected files.</li>
+    <li>Check whether it calls a network service, needs an API key, or writes files.</li>
+    <li>Install into a test project first, not an important production repo.</li>
+    <li>Open a fresh agent session and ask what plugin commands/tools are visible.</li>
+    <li>Run the documented dry run using fictional or sanitized data.</li>
+    <li>Only then use real project context, and still review every proposed change.</li>
+  </ul>
+</section>
+<section class="card">
+  <h2>Safe first exercise</h2>
+  <pre>Goal: Try a marketplace skill without risk.
+1. Pick a skill that only reads text and returns advice.
+2. Paste a fictional product brief.
+3. Ask the agent to use the skill and produce a review checklist.
+4. Confirm the output cites only the pasted fictional brief.
+5. Decide whether the skill saved enough repeated prompting to keep.</pre>
+</section>
+<footer>Static public-safe tutorial. No network calls, tracking, direct source links, local paths, personal contact details, plugin internals, or real credentials.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OpenSpec tutorial · A2X</title>
+<meta name="description" content="A blog-style public-safe tutorial for using OpenSpec-style proposals to make agentic software changes safer and easier to review." />
+<style>
+:root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279;--ok:#98d7a5}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem);color:var(--text);line-height:1.58}main{max-width:980px;margin:0 auto;padding:44px 20px 34px}a{color:inherit}.button{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:750;font-size:.95rem}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}h1{font-size:clamp(2.1rem,6vw,4.7rem);line-height:.98;margin:14px 0 12px;letter-spacing:-.05em}h2{font-size:clamp(1.35rem,3vw,2rem);margin:0 0 10px;letter-spacing:-.025em}h3{margin:0 0 8px;font-size:1.05rem}p,li{color:var(--muted)}p{margin:0 0 14px}.lead{font-size:1.1rem;max-width:810px}.nav{margin-bottom:26px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:20px;padding:20px;margin-top:24px}.grid .card{margin-top:0}.tag{color:var(--ok);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}code{background:#120f0b;border:1px solid var(--line);border-radius:8px;padding:.12rem .35rem;color:#efe5d6}pre{white-space:pre-wrap;overflow:auto;background:#120f0b;border:1px solid var(--line);border-radius:16px;padding:16px;color:#efe5d6}.checklist{padding-left:1.2rem}.callout{border-color:#4b3f2f;background:linear-gradient(180deg,#2a2118,#1d1913)}footer{margin-top:34px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.94rem}
+</style>
+</head>
+<body>
+<main>
+<div class="nav"><a class="button" href="../index.html">← Back to hub</a></div>
+<div class="eyebrow">Blog tutorial</div>
+<h1>How to use OpenSpec with agents.</h1>
+<p class="lead">OpenSpec is a lightweight way to turn “please build this” into a reviewable change proposal before implementation starts. It helps the agent ask better questions, make smaller changes, and preserve why decisions were made.</p>
+<section class="card callout"><div class="tag">Plain English</div><h2>Spec before code, but not bureaucracy</h2><p>The useful habit is simple: before an agent edits code, ask it to write the change as a proposal with motivation, scope, acceptance criteria, and impact. Then approve, revise, or split it.</p></section>
+<section class="grid" aria-label="OpenSpec loop">
+  <article class="card"><div class="tag">Step 1</div><h3>Write the intent</h3><p>Describe the user problem, desired behavior, non-goals, constraints, and known risks.</p></article>
+  <article class="card"><div class="tag">Step 2</div><h3>Draft a proposal</h3><p>Ask the agent for a concise proposal before code: why, what changes, impact, tests, and open questions.</p></article>
+  <article class="card"><div class="tag">Step 3</div><h3>Review the proposal</h3><p>Check whether the change is too broad, missing acceptance criteria, or relying on invented facts.</p></article>
+  <article class="card"><div class="tag">Step 4</div><h3>Implement against it</h3><p>Once the proposal is good, tell the agent to implement only that scope and verify the acceptance criteria.</p></article>
+</section>
+<section class="card"><h2>Minimal proposal template</h2><pre># Change proposal: [short name]
+
+## Why
+What user or business problem does this solve?
+
+## What changes
+- [concrete change]
+- [concrete change]
+
+## Non-goals
+- [what not to build now]
+
+## Impact
+Files, users, workflows, data, integrations, or risks affected.
+
+## Acceptance criteria
+- Given..., when..., then...
+- Test or manual verification step...
+
+## Open questions
+Only questions that materially affect implementation.</pre></section>
+<section class="card"><h2>Agent prompt</h2><pre>You are helping me prepare an OpenSpec-style proposal before implementation.
+Use the brief below.
+Do not write code yet.
+Return:
+1. Why
+2. Proposed changes
+3. Non-goals
+4. Impact
+5. Acceptance criteria
+6. Risks
+7. High-impact missing questions
+8. Recommendation: proceed, split, or clarify first
+
+Brief:
+[paste brief]</pre></section>
+<section class="card"><h2>Decision gates</h2><ul class="checklist"><li><strong>Proceed:</strong> goal, scope, acceptance criteria, and risks are clear enough.</li><li><strong>Clarify:</strong> one or two missing decisions could change the implementation.</li><li><strong>Split:</strong> the proposal mixes unrelated changes or is too large to verify.</li><li><strong>Stop:</strong> the work touches private data, production systems, credentials, money, or irreversible actions without explicit approval.</li></ul></section>
+<section class="card"><h2>Why it helps workshops</h2><p>OpenSpec gives attendees a visible checkpoint between idea and implementation. They can inspect the agent’s assumptions before the codebase changes, then use acceptance criteria as the verification plan.</p></section>
+<footer>Static public-safe tutorial. No network calls, tracking, storage, private project details, internal links, local paths, or real credentials.</footer>
+</main>
+</body>
+</html>
