@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,visibility,isPrivate,defaultBranchRef` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --jq '.status'` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `dd0d6d16f655601a4f5d61e63001d25696810d44` (`databaseId` 27092709153).
+- GitHub Security Checks completed successfully for current pushed HEAD `b790da8fa087b8b5312e2c6c547e3ed170cfb684` (`databaseId` 27093075044).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including the canonical Kanban HTML view and the buildTool decision navigator.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 15:45 IDT
+2026-06-07 16:02 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-dd0d6d16f655601a4f5d61e63001d25696810d44
+b790da8fa087b8b5312e2c6c547e3ed170cfb684
 ```
 
 Latest commit subject at audit start:
 
 ```text
-dd0d6d1 docs: refresh current public readiness evidence
+b790da8 docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -72,13 +72,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --commit dd0d6d16f655601a4f5d61e63001d25696810d44 --json databaseId,headSha,status,conclusion,name,displayTitle,createdAt --jq '.[] | [.databaseId,.name,.status,.conclusion,.headSha,.displayTitle,.createdAt] | @tsv'
+gh run list --commit b790da8fa087b8b5312e2c6c547e3ed170cfb684 --json databaseId,headSha,status,conclusion,name,displayTitle,createdAt --jq '.[] | [.databaseId,.name,.status,.conclusion,.headSha,.displayTitle,.createdAt] | @tsv'
 ```
 
 Result:
 
 ```text
-27092709153	Security checks	completed	success	dd0d6d16f655601a4f5d61e63001d25696810d44	docs: refresh current public readiness evidence	2026-06-07T12:34:33Z
+27093075044	Security checks	completed	success	b790da8fa087b8b5312e2c6c547e3ed170cfb684	docs: refresh current public readiness evidence	2026-06-07T12:50:46Z
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -95,14 +95,14 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# final rerun scanned ~368 KB and reported no leaks found
+# scanned ~368 KB and reported no leaks found
 # exit 0
 
 git diff --check
 # exit 0
 ```
 
-These results are from the local verification pass before updating this audit/tracker evidence.
+These results are from the local verification pass during this maintenance refresh.
 
 ### Local HTTP smoke
 
@@ -145,14 +145,14 @@ Launched a dedicated headless Chrome with `--remote-debugging-port=9343`, loaded
 Command:
 
 ```bash
-BASE_URL=http://127.0.0.1:8792/ CDP_URL=http://127.0.0.1:9343 KANBAN_MARKERS='Finished Maintenance|dd0d6d1|approval-gated' python3 <static-site-cdp-mobile-smoke.py>
+BASE_URL=http://127.0.0.1:8792/ CDP_URL=http://127.0.0.1:9343 KANBAN_MARKERS='Finished Maintenance|b790da8|27093075044' node <static-site-cdp-mobile-smoke.mjs>
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (56411 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
+DOM OK kanban-status.html (57168 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[true,true,true])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
@@ -169,7 +169,7 @@ DOM OK resources/prompt-improver.html (578 chars, h1='Prompt improver.', width 3
 DOM OK resources/prompt-magician-setup.html (3011 chars, h1='Prompt Magician setup overview.', width 390/390)
 DOM OK resources/wiki-llm-overview.html (2804 chars, h1='Wiki-LLM overview.', width 390/390)
 DOM OK resources/wiki-llm-tutorial.html (2498 chars, h1='How to work with an LLM Wiki.', width 390/390)
-Representative Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
+Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
 ```
 
 ## Remaining approval gates
