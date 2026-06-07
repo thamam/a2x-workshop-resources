@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,visibility,isPrivate` returned `isPrivate: true` and `visibility: PRIVATE` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: `gh api repos/$(gh repo view --json nameWithOwner --jq .nameWithOwner)/pages --jq .status` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `77a10372e8efdaa942655650eda73a83651444e4`.
+- GitHub Security Checks completed successfully for current starting commit `d2970a13645a3520d604741e1c320878a5ef4d1c`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site smoke passed for all 14 HTML files over `python3 -m http.server`.
-- Representative Chrome DevTools DOM/mobile smoke passed for four public-facing pages at a 390 × 844 viewport, including the canonical Kanban HTML view.
+- Representative Chrome DevTools DOM/mobile smoke passed for four public-facing pages at a 390 × 844 viewport, and the canonical Kanban HTML view also loaded the current markdown tracker with no page-level horizontal overflow.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,13 +17,13 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 02:46:58 IDT
+2026-06-07 03:02:40 IDT
 ```
 
 Starting commit:
 
 ```text
-77a10372e8efdaa942655650eda73a83651444e4
+d2970a13645a3520d604741e1c320878a5ef4d1c
 ```
 
 ### Repository visibility
@@ -70,7 +70,7 @@ gh run list --branch main --limit 5 --json databaseId,headSha,status,conclusion,
 Result excerpt:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-06T23:35:30Z","databaseId":27076987572,"headSha":"77a10372e8efdaa942655650eda73a83651444e4","status":"completed","updatedAt":"2026-06-06T23:35:44Z","workflowName":"Security checks"}]
+[{"conclusion":"success","createdAt":"2026-06-06T23:49:28Z","databaseId":27077264607,"headSha":"d2970a13645a3520d604741e1c320878a5ef4d1c","status":"completed","updatedAt":"2026-06-06T23:49:40Z","workflowName":"Security checks"}]
 ```
 
 Interpretation: the latest pushed commit's GitHub Security Checks are green.
@@ -84,10 +84,10 @@ python3 scripts/check-static-links.py
 # Static link check passed for 14 HTML files.
 
 scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)
-# exit code 0
+# private-file blocker exit code 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~211159 bytes (211.16 KB); no leaks found
+# scanned ~212835 bytes (212.84 KB); no leaks found
 
 git diff --check
 # exit code 0
@@ -130,11 +130,17 @@ Launched a dedicated headless Chrome with `--remote-debugging-port=9231 --remote
 Result:
 
 ```text
-DOM OK index.html (10656 bytes, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (44000 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
-DOM OK resources/prd-html-review-workbench.html (12934 bytes, h1='PRD to HTML review workbench.', width 390/390)
-DOM OK resources/a2x-marketplace-overview.html (6666 bytes, h1='A2X Marketplace overview.', width 390/390)
+DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390)
+DOM OK kanban-status.html (668 chars, h1='Project Kanban, readable at a glance.', width 390/390)
+DOM OK resources/prd-html-review-workbench.html (1188 chars, h1='PRD to HTML review workbench.', width 390/390)
+DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 Representative Chrome DevTools DOM/mobile smoke passed for 4 pages at 390x844
+```
+
+Additional canonical Kanban markdown-load check:
+
+```text
+DOM OK kanban-status.html loaded markdown (19097 chars, h1='Project Kanban, readable at a glance.', width 390/390)
 ```
 
 ## Remaining approval gates
