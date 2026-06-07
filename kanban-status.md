@@ -57,12 +57,12 @@
   - [x] Story 4.6: Locate presentation editor source/setup doc
   - [x] Story 4.7: Audit Wiki-LLM public-safe source path
 
-- [ ] **Epic 5: Public launch readiness** (80% Completed)
+- [x] **Epic 5: Public launch readiness** (100% Completed)
   - [x] Story 5.1: Add public launch checklist
   - [x] Story 5.2: Add no-build GitHub Pages notes
   - [x] Story 5.3: Keep repository private/publishing approval-gated
   - [x] Story 5.4: Run final public-release audit
-  - [ ] Story 5.5: Publish only after Tomer approval
+  - [x] Story 5.5: Publish only after Tomer approval
 
 - [x] **Epic 6: Second-wave public-safe workshop handouts** (100% Completed)
   - [x] Story 6.1: Build static PRD-to-HTML review workbench prototype
@@ -95,9 +95,7 @@
 
 ### 🚧 BLOCKED / APPROVAL REQUIRED
 
-- [ ] Story 5.5: Publish public site only after Tomer approval
-  - Status: approval-required
-  - Blocker: public publishing is an explicit approval boundary.
+- None for the repository visibility and website-link launch path; Tomer approved this scope on 2026-06-08.
 - [ ] Story 4.4: Expose or link A2X Marketplace source repo publicly
   - Status: blocked
   - Blocker: sanitized overview is available, but direct marketplace source linking still needs cleanup of local-path docs, credential setup framing, and secret-scanner noise.
@@ -111,6 +109,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Story 5.5: Publish repository and connect from A2X website
+  - Evidence: Tomer approved switching `thamam/a2x-workshop-resources` from private to public and connecting it from the A2X website on 2026-06-08; `gh repo edit ... --visibility public --accept-visibility-change-consequences` completed; `gh repo view` now reports `visibility: PUBLIC` and `isPrivate: false`; unauthenticated GitHub API and HTTPS checks for `https://github.com/thamam/a2x-workshop-resources` returned public access. Website wiring is being committed/deployed from the A2X website repository.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
   - Evidence: `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD `061739334cccc27e0c698c09484a11d33518b1e5`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27107594721); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 18 HTML files passed on 2026-06-08 02:17–02:20 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
