@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `01efb1984e605187b3ec09ca8e49c4a751acabce` (`databaseId` 27105581078).
+- GitHub Security Checks completed successfully for current pushed HEAD `08bbd60607a066ae58bc908f8d713c748c383f25` (`databaseId` 27105916133).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport with no page-level horizontal overflow.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-08 00:50–00:53 IDT
+2026-06-08 01:04–01:07 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-01efb1984e605187b3ec09ca8e49c4a751acabce
+08bbd60607a066ae58bc908f8d713c748c383f25
 ```
 
 Latest commit subject at audit start:
 
 ```text
-01efb19 docs: refresh current public readiness evidence
+08bbd60 docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -70,13 +70,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --commit 01efb1984e605187b3ec09ca8e49c4a751acabce --limit 10 --json databaseId,headSha,status,conclusion,name,createdAt,updatedAt,url
+gh run list --commit 08bbd60607a066ae58bc908f8d713c748c383f25 --limit 10 --json databaseId,headSha,status,conclusion,name,createdAt,updatedAt,url
 ```
 
 Result:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-07T21:38:55Z","databaseId":27105581078,"headSha":"01efb1984e605187b3ec09ca8e49c4a751acabce","name":"Security checks","status":"completed","updatedAt":"2026-06-07T21:39:07Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27105581078"}]
+[{"conclusion":"success","createdAt":"2026-06-07T21:53:34Z","databaseId":27105916133,"headSha":"08bbd60607a066ae58bc908f8d713c748c383f25","name":"Security checks","status":"completed","updatedAt":"2026-06-07T21:53:49Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27105916133"}]
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -107,7 +107,7 @@ These results are from the local verification pass during this maintenance refre
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8786 --bind 127.0.0.1
+python3 -m http.server 8788 --bind 127.0.0.1
 ```
 
 HTTP smoke requested every discovered HTML file and verified status `200` with HTML content.
@@ -138,12 +138,12 @@ HTTP smoke passed for 18 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with a disposable profile, remote debugging port `9223`, and `--remote-allow-origins=http://127.0.0.1:9223`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with a disposable profile, remote debugging port `9225`, and `--remote-allow-origins=http://127.0.0.1:9225`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-ROOT="$PWD" BASE_URL=http://127.0.0.1:8786/ CDP_URL=http://127.0.0.1:9223 node /tmp/a2x-dom-mobile-smoke.mjs
+ROOT="$PWD" BASE_URL=http://127.0.0.1:8788/ CDP_URL=http://127.0.0.1:9225 node /tmp/a2x-dom-mobile-smoke.mjs
 ```
 
 Result:
