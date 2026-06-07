@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `41f6d1b783c9582d75aa336b7603e517dda1ae4d` (`databaseId` 27106956619).
+- GitHub Security Checks completed successfully for current pushed HEAD `34f9c6c80e539f587a7353eb2e5e565ee6f838e1` (`databaseId` 27107270130).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport with no page-level horizontal overflow.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-08 01:50–01:52 IDT
+2026-06-08 02:03–02:06 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-41f6d1b783c9582d75aa336b7603e517dda1ae4d
+34f9c6c80e539f587a7353eb2e5e565ee6f838e1
 ```
 
 Latest commit subject at audit start:
 
 ```text
-41f6d1b docs: refresh current public readiness evidence
+34f9c6c docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -59,8 +59,7 @@ gh api repos/thamam/a2x-workshop-resources/pages
 Result excerpt:
 
 ```text
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}gh: Not Found (HTTP 404)
-exit=1
+gh: Not Found (HTTP 404)
 ```
 
 Interpretation: Pages is not configured, which matches the approval gate.
@@ -70,13 +69,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --branch main --workflow "Security Checks" --limit 10 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "41f6d1b783c9582d75aa336b7603e517dda1ae4d")'
+gh run list --branch main --workflow "Security Checks" --limit 10 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "34f9c6c80e539f587a7353eb2e5e565ee6f838e1")'
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T22:38:56Z","databaseId":27106956619,"headSha":"41f6d1b783c9582d75aa336b7603e517dda1ae4d","status":"completed","updatedAt":"2026-06-07T22:39:08Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27106956619"}
+{"conclusion":"success","createdAt":"2026-06-07T22:53:01Z","databaseId":27107270130,"headSha":"34f9c6c80e539f587a7353eb2e5e565ee6f838e1","status":"completed","updatedAt":"2026-06-07T22:53:11Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27107270130"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -93,7 +92,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned the current tree
+# scanned ~427102 bytes
 # no leaks found
 # exit 0
 
@@ -144,14 +143,14 @@ Launched a dedicated headless Chrome with a disposable profile, remote debugging
 Command:
 
 ```bash
-ROOT=<repo-root> BASE_URL=http://127.0.0.1:8791/ CDP_URL=http://127.0.0.1:9228 KANBAN_MARKERS='Finished Maintenance|41f6d1b|approval-gated' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
+ROOT=<repo-root> BASE_URL=http://127.0.0.1:8791/ CDP_URL=http://127.0.0.1:9228 KANBAN_MARKERS='Finished Maintenance|34f9c6c|approval-gated' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (85153 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
+DOM OK kanban-status.html (85918 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
@@ -171,15 +170,9 @@ DOM OK resources/wiki-llm-tutorial.html (2498 chars, h1='How to work with an LLM
 Representative Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
 ```
 
-## Remaining approval gates
+## Remaining gates
 
-Still blocked until Tomer explicitly approves:
-
-- Making the repository public.
-- Enabling or publishing GitHub Pages.
-- Linking private/internal resources publicly.
-- Directly exposing A2X Marketplace or Wiki-LLM source/software release paths before cleanup/review.
-
-## Recommendation
-
-No new safe unblocked implementation story is listed in `kanban-status.md`. Continue only with periodic verification refreshes or with new scope from Tomer; do not publish or expose source links without approval.
+- Do not make the repository public without Tomer approval.
+- Do not enable or publish GitHub Pages without Tomer approval.
+- Do not link private/internal resource sources publicly.
+- Direct public source linking for A2X Marketplace and Wiki-LLM remains blocked until cleanup and approval.
