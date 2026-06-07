@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,visibility,isPrivate` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages -i` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `0af08eae78413dd5638c9493fec2719b20489926` (`databaseId` 27093447698).
+- GitHub Security Checks completed successfully for current pushed HEAD `5be5add47a35b54cbe1a6552d8a7a2fa4d0e9dff` (`databaseId` 27093824031).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
-- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including the canonical Kanban HTML view and the buildTool decision navigator.
+- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including final rendered Kanban markers for `Finished Maintenance`, `5be5add`, approval-gated state, and `DONE`.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 16:18 IDT
+2026-06-07 16:35 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-0af08eae78413dd5638c9493fec2719b20489926
+5be5add47a35b54cbe1a6552d8a7a2fa4d0e9dff
 ```
 
 Latest commit subject at audit start:
 
 ```text
-0af08ea docs: refresh current public readiness evidence
+5be5add docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -72,14 +72,14 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-sha=0af08eae78413dd5638c9493fec2719b20489926
+sha=5be5add47a35b54cbe1a6552d8a7a2fa4d0e9dff
 gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt --jq '.[] | select(.headSha == "'$sha'") | {databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt}'
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T13:07:15Z","databaseId":27093447698,"headSha":"0af08eae78413dd5638c9493fec2719b20489926","status":"completed","updatedAt":"2026-06-07T13:07:26Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T13:23:54Z","databaseId":27093824031,"headSha":"5be5add47a35b54cbe1a6552d8a7a2fa4d0e9dff","status":"completed","updatedAt":"2026-06-07T13:24:03Z","workflowName":"Security checks"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -96,7 +96,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# final rerun scanned ~371 KB and reported no leaks found
+# final rerun scanned ~373 KB and reported no leaks found
 # exit 0
 
 git diff --check
@@ -110,7 +110,7 @@ These results are from the local verification pass during this maintenance refre
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8785 --bind 127.0.0.1
+python3 -m http.server 8797 --bind 127.0.0.1
 ```
 
 HTTP smoke requested every HTML file and verified status `200` and `text/html` content type.
@@ -141,19 +141,19 @@ HTTP smoke passed for 18 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with a disposable profile and `--remote-debugging-port=9339`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with a disposable profile and `--remote-debugging-port=9347`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-BASE_URL=http://127.0.0.1:8785/ CDP_URL=http://127.0.0.1:9339 ROOT=<repo-root> KANBAN_MARKERS='Finished Maintenance|0af08ea|No further safe unblocked implementation story|approval-gated|DONE' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
+BASE_URL=http://127.0.0.1:8797/ CDP_URL=http://127.0.0.1:9347 ROOT=<repo-root> KANBAN_MARKERS='Finished Maintenance|5be5add|No further safe unblocked implementation story|approval-gated|DONE' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (57931 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True, True, True])
+DOM OK kanban-status.html (58694 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True, True, True])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
@@ -173,7 +173,7 @@ DOM OK resources/wiki-llm-tutorial.html (2498 chars, h1='How to work with an LLM
 Representative Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
 ```
 
-Note: an earlier smoke command used a non-visible marker string (`Completed Stories`) for `kanban-status.html`; the page loaded and had no overflow, but the semantic marker assertion failed. The final passing smoke uses visible rendered text (`DONE`) as the board-state marker.
+Note: the final smoke was rerun after moving the maintenance item from IN PROGRESS to DONE so the rendered Kanban markers match the completed tracker state.
 
 ## Remaining approval gates
 
