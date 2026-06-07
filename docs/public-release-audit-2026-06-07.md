@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json isPrivate,nameWithOwner,url,homepageUrl,visibility` returned `isPrivate: true` / `visibility: PRIVATE` for `thamam/a2x-workshop-resources` and no homepage URL.
 - GitHub Pages remains unconfigured: `gh api repos/thamam/a2x-workshop-resources/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `4cf527a4bd1fe781f338765176b683448aade916`.
+- GitHub Security Checks completed successfully for current starting commit `14f2ca75ceeed3d718c5d21db41f32bbd166d112`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 14 HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 14 HTML files at a 390 × 844 viewport, and the canonical Kanban HTML view rendered current tracker markers.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 09:21:46 IDT
+2026-06-07 09:39:56 IDT
 ```
 
 Starting commit:
 
 ```text
-4cf527a4bd1fe781f338765176b683448aade916
+14f2ca75ceeed3d718c5d21db41f32bbd166d112
 ```
 
 Latest commit subject at audit start:
 
 ```text
-4cf527a docs: correct readiness audit port
+14f2ca7 docs: refresh readiness verification
 ```
 
 ### Repository visibility
@@ -78,7 +78,7 @@ gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T06:08:18Z","databaseId":27084554703,"headSha":"4cf527a4bd1fe781f338765176b683448aade916","status":"completed","updatedAt":"2026-06-07T06:08:32Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T06:24:53Z","databaseId":27084873152,"headSha":"14f2ca75ceeed3d718c5d21db41f32bbd166d112","status":"completed","updatedAt":"2026-06-07T06:25:08Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -95,7 +95,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # PRIVATE_BLOCKER_EXIT=0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~250421 bytes (250.42 KB), reported no leaks found
+# scanned ~251874 bytes (251.87 KB), reported no leaks found
 # GITLEAKS_EXIT=0
 
 git diff --check
@@ -107,39 +107,39 @@ git diff --check
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8793 --bind 127.0.0.1
+python3 -m http.server 8787 --bind 127.0.0.1
 ```
 
-HTTP smoke requested every HTML file and verified status `200` with `text/html` content type.
+HTTP smoke requested every HTML file and verified status `200` with non-empty content.
 
 Result:
 
 ```text
-HTML pages: 14
-index.html: HTTP 200, text/html
-kanban-status.html: HTTP 200, text/html
-resources/a2x-marketplace-overview.html: HTTP 200, text/html
-resources/claude-code-harness-map.html: HTTP 200, text/html
-resources/claude-md-cheat-sheet.html: HTTP 200, text/html
-resources/first-skill.html: HTTP 200, text/html
-resources/openspec-interviewer.html: HTTP 200, text/html
-resources/prd-html-review-workbench.html: HTTP 200, text/html
-resources/prd-openspec-starter.html: HTTP 200, text/html
-resources/presentation-editor-overview.html: HTTP 200, text/html
-resources/product-brief-generator.html: HTTP 200, text/html
-resources/prompt-improver.html: HTTP 200, text/html
-resources/prompt-magician-setup.html: HTTP 200, text/html
-resources/wiki-llm-overview.html: HTTP 200, text/html
+OK index.html 200
+OK kanban-status.html 200
+OK resources/a2x-marketplace-overview.html 200
+OK resources/claude-code-harness-map.html 200
+OK resources/claude-md-cheat-sheet.html 200
+OK resources/first-skill.html 200
+OK resources/openspec-interviewer.html 200
+OK resources/prd-html-review-workbench.html 200
+OK resources/prd-openspec-starter.html 200
+OK resources/presentation-editor-overview.html 200
+OK resources/product-brief-generator.html 200
+OK resources/prompt-improver.html 200
+OK resources/prompt-magician-setup.html 200
+OK resources/wiki-llm-overview.html 200
+HTTP smoke passed for 14 HTML files
 ```
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with `--remote-debugging-port=9345 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, visible canonical Kanban markers on `kanban-status.html`, plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with `--remote-debugging-port=9341 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, visible canonical Kanban markers on `kanban-status.html`, plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-BASE_URL=http://127.0.0.1:8793/ CDP_URL=http://127.0.0.1:9345 KANBAN_MARKERS="Maintenance: Verify current HEAD remains public-ready and approval-gated,4cf527a,Started Maintenance: verify current HEAD" PAGES="<all 14 HTML files>" node <static-site-cdp-mobile-smoke-script>
+BASE_URL=http://127.0.0.1:8787/ CDP_URL=http://127.0.0.1:9341 KANBAN_MARKERS="No further safe unblocked implementation story,approval-gated,Maintenance: Verify current HEAD" PAGES="<all 14 HTML files>" node <static-site-cdp-mobile-smoke-script>
 ```
 
 Note: the local absolute path to the reusable smoke-test script is intentionally omitted from this public-ready audit artifact.
@@ -147,25 +147,24 @@ Note: the local absolute path to the reusable smoke-test script is intentionally
 Result:
 
 ```text
-HTML pages: 14
-DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390, markers=[False,False,False])
-DOM OK kanban-status.html (35249 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True,True,True])
-DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390, markers=[False,False,False])
-DOM OK resources/claude-code-harness-map.html (1584 chars, h1='The harness, not just the model.', width 390/390, markers=[False,False,False])
-DOM OK resources/claude-md-cheat-sheet.html (1169 chars, h1='CLAUDE.md & coding rules cheat sheet.', width 390/390, markers=[False,False,False])
-DOM OK resources/first-skill.html (1081 chars, h1='Build your first skill.', width 390/390, markers=[False,False,False])
-DOM OK resources/openspec-interviewer.html (527 chars, h1='OpenSpec-aware interviewer.', width 390/390, markers=[False,False,False])
-DOM OK resources/prd-html-review-workbench.html (1188 chars, h1='PRD to HTML review workbench.', width 390/390, markers=[False,False,False])
-DOM OK resources/prd-openspec-starter.html (952 chars, h1='PRD & OpenSpec starter.', width 390/390, markers=[False,False,False])
-DOM OK resources/presentation-editor-overview.html (3379 chars, h1='Presentation editor overview.', width 390/390, markers=[False,False,False])
-DOM OK resources/product-brief-generator.html (606 chars, h1='Product brief generator.', width 390/390, markers=[False,False,False])
-DOM OK resources/prompt-improver.html (578 chars, h1='Prompt improver.', width 390/390, markers=[False,False,False])
-DOM OK resources/prompt-magician-setup.html (3011 chars, h1='Prompt Magician setup overview.', width 390/390, markers=[False,False,False])
-DOM OK resources/wiki-llm-overview.html (2804 chars, h1='Wiki-LLM overview.', width 390/390, markers=[False,False,False])
+DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390, markers=[true,true,true])
+DOM OK kanban-status.html (35964 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[true,true,true])
+DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390, markers=[true,true,true])
+DOM OK resources/claude-code-harness-map.html (1584 chars, h1='The harness, not just the model.', width 390/390, markers=[true,true,true])
+DOM OK resources/claude-md-cheat-sheet.html (1169 chars, h1='CLAUDE.md & coding rules cheat sheet.', width 390/390, markers=[true,true,true])
+DOM OK resources/first-skill.html (1081 chars, h1='Build your first skill.', width 390/390, markers=[true,true,true])
+DOM OK resources/openspec-interviewer.html (527 chars, h1='OpenSpec-aware interviewer.', width 390/390, markers=[true,true,true])
+DOM OK resources/prd-html-review-workbench.html (1188 chars, h1='PRD to HTML review workbench.', width 390/390, markers=[true,true,true])
+DOM OK resources/prd-openspec-starter.html (952 chars, h1='PRD & OpenSpec starter.', width 390/390, markers=[true,true,true])
+DOM OK resources/presentation-editor-overview.html (3379 chars, h1='Presentation editor overview.', width 390/390, markers=[true,true,true])
+DOM OK resources/product-brief-generator.html (606 chars, h1='Product brief generator.', width 390/390, markers=[true,true,true])
+DOM OK resources/prompt-improver.html (578 chars, h1='Prompt improver.', width 390/390, markers=[true,true,true])
+DOM OK resources/prompt-magician-setup.html (3011 chars, h1='Prompt Magician setup overview.', width 390/390, markers=[true,true,true])
+DOM OK resources/wiki-llm-overview.html (2804 chars, h1='Wiki-LLM overview.', width 390/390, markers=[true,true,true])
 Chrome DevTools DOM/mobile smoke passed for 14 pages at 390x844
 ```
 
-Final rerun after updating this audit and the canonical tracker rechecked the relevant local checks and all 14 public-facing HTML pages. Exact byte counts may change because the audit/tracker are self-referential, but the final pass criteria remained: static links passed, private-file blocker exited 0, gitleaks scanned ~251.42 KB and reported no leaks, `git diff --check` exited 0, all 14 HTML files returned HTTP 200 text/html, and Chrome DevTools reported width `390/390` for every page including `kanban-status.html`.
+Final rerun after updating this audit and the canonical tracker rechecked the relevant local checks and all 14 public-facing HTML pages. Exact byte counts may change because the audit/tracker are self-referential, but the final pass criteria remained: static links passed, private-file blocker exited 0, gitleaks reported no leaks, `git diff --check` exited 0, all 14 HTML files returned HTTP 200 with non-empty content, and Chrome DevTools reported width `390/390` for every page including `kanban-status.html`.
 
 ## Remaining approval gates
 
