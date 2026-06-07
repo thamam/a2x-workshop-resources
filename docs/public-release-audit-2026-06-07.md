@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,visibility,isPrivate` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages -i` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `4ae7c31d3337319ab1258c61c378ada85c05c457` (`databaseId` 27094207420).
+- GitHub Security Checks completed successfully for current pushed HEAD `2b6aaa8824f8148959976c4e0ad1d05cf0f8ba27` (`databaseId` 27094541717).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
-- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including final rendered Kanban markers for `Finished Maintenance`, `4ae7c31`, approval-gated state, and `DONE`.
+- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including final rendered Kanban markers for `Finished Maintenance`, `2b6aaa8`, approval-gated state, and `DONE`.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 16:53 IDT
+2026-06-07 17:07 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-4ae7c31d3337319ab1258c61c378ada85c05c457
+2b6aaa8824f8148959976c4e0ad1d05cf0f8ba27
 ```
 
 Latest commit subject at audit start:
 
 ```text
-4ae7c31 docs: refresh current public readiness evidence
+2b6aaa8 docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -72,14 +72,14 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-sha=4ae7c31d3337319ab1258c61c378ada85c05c457
+sha=2b6aaa8824f8148959976c4e0ad1d05cf0f8ba27
 gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt --jq '.[] | select(.headSha == "'$sha'") | {databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt}'
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T13:40:30Z","databaseId":27094207420,"headSha":"4ae7c31d3337319ab1258c61c378ada85c05c457","status":"completed","updatedAt":"2026-06-07T13:40:46Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T13:54:53Z","databaseId":27094541717,"headSha":"2b6aaa8824f8148959976c4e0ad1d05cf0f8ba27","status":"completed","updatedAt":"2026-06-07T13:55:07Z","workflowName":"Security checks"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -96,7 +96,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# final rerun scanned ~374 KB and reported no leaks found
+# final rerun scanned ~375 KB and reported no leaks found
 # exit 0
 
 git diff --check
@@ -110,7 +110,7 @@ These results are from the local verification pass during this maintenance refre
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8799 --bind 127.0.0.1
+python3 -m http.server 8801 --bind 127.0.0.1
 ```
 
 HTTP smoke requested every HTML file and verified status `200` and `text/html` content type.
@@ -118,42 +118,42 @@ HTTP smoke requested every HTML file and verified status `200` and `text/html` c
 Result:
 
 ```text
-200 index.html text/html
-200 kanban-status.html text/html
-200 resources/a2x-marketplace-overview.html text/html
-200 resources/a2x-marketplace-tutorial.html text/html
-200 resources/buildtool-decision.html text/html
-200 resources/claude-code-harness-map.html text/html
-200 resources/claude-md-cheat-sheet.html text/html
-200 resources/first-skill.html text/html
-200 resources/openspec-interviewer.html text/html
-200 resources/openspec-tutorial.html text/html
-200 resources/prd-html-review-workbench.html text/html
-200 resources/prd-openspec-starter.html text/html
-200 resources/presentation-editor-overview.html text/html
-200 resources/product-brief-generator.html text/html
-200 resources/prompt-improver.html text/html
-200 resources/prompt-magician-setup.html text/html
-200 resources/wiki-llm-overview.html text/html
-200 resources/wiki-llm-tutorial.html text/html
+200 text/html index.html
+200 text/html kanban-status.html
+200 text/html resources/a2x-marketplace-overview.html
+200 text/html resources/a2x-marketplace-tutorial.html
+200 text/html resources/buildtool-decision.html
+200 text/html resources/claude-code-harness-map.html
+200 text/html resources/claude-md-cheat-sheet.html
+200 text/html resources/first-skill.html
+200 text/html resources/openspec-interviewer.html
+200 text/html resources/openspec-tutorial.html
+200 text/html resources/prd-html-review-workbench.html
+200 text/html resources/prd-openspec-starter.html
+200 text/html resources/presentation-editor-overview.html
+200 text/html resources/product-brief-generator.html
+200 text/html resources/prompt-improver.html
+200 text/html resources/prompt-magician-setup.html
+200 text/html resources/wiki-llm-overview.html
+200 text/html resources/wiki-llm-tutorial.html
 HTTP smoke passed for 18 HTML files
 ```
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with a disposable profile and `--remote-debugging-port=9351`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with a disposable profile and `--remote-debugging-port=9352`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-BASE_URL=http://127.0.0.1:8799/ CDP_URL=http://127.0.0.1:9351 ROOT=<repo-root> KANBAN_MARKERS='Finished Maintenance|4ae7c31|No further safe unblocked implementation story|approval-gated|DONE' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
+BASE_URL=http://127.0.0.1:8801/ CDP_URL=http://127.0.0.1:9352 ROOT=<repo-root> KANBAN_MARKERS='Finished Maintenance|2b6aaa8|No further safe unblocked implementation story|approval-gated|DONE' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (59457 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True, True, True])
+DOM OK kanban-status.html (60220 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True, True, True])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
