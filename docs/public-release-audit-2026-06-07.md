@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `d90927b639b3a2ddabcbbdcf747e11cbbf188c2d` (`databaseId` 27100751344).
+- GitHub Security Checks completed successfully for current pushed HEAD `6d0cc189a156ed1e14e79bb4b4158a78548f00ee` (`databaseId` 27101104069).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
-- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including rendered Kanban markers for `Started Maintenance`, `d90927b`, and `approval-gated` while this tracker refresh was in progress. A final rerun after moving the tracker back to DONE asserted `Finished Maintenance`, `d90927b`, and `approval-gated` against the final tree.
+- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including rendered Kanban markers for `Started Maintenance`, `6d0cc18`, and `approval-gated` while this tracker refresh was in progress. A final rerun after moving the tracker back to DONE asserted `Finished Maintenance`, `6d0cc18`, and `approval-gated` against the final tracker state.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 21:25 IDT
+2026-06-07 21:41 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-d90927b639b3a2ddabcbbdcf747e11cbbf188c2d
+6d0cc189a156ed1e14e79bb4b4158a78548f00ee
 ```
 
 Latest commit subject at audit start:
 
 ```text
-d90927b docs: refresh current public readiness evidence
+6d0cc18 docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -70,13 +70,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --branch main --limit 10 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt --jq '.[] | select(.headSha == "d90927b639b3a2ddabcbbdcf747e11cbbf188c2d") | {databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt}'
+gh run list --branch main --limit 10 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt --jq '.[] | select(.headSha == "6d0cc189a156ed1e14e79bb4b4158a78548f00ee") | {databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt}'
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T18:14:44Z","databaseId":27100751344,"headSha":"d90927b639b3a2ddabcbbdcf747e11cbbf188c2d","status":"completed","updatedAt":"2026-06-07T18:14:58Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T18:30:09Z","databaseId":27101104069,"headSha":"6d0cc189a156ed1e14e79bb4b4158a78548f00ee","status":"completed","updatedAt":"2026-06-07T18:30:18Z","workflowName":"Security checks"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -124,14 +124,14 @@ Launched a dedicated headless Chrome with a disposable profile, `--remote-debugg
 Command:
 
 ```bash
-PAGES="index.html,kanban-status.html,resources/a2x-marketplace-overview.html,resources/a2x-marketplace-tutorial.html,resources/buildtool-decision.html,resources/claude-code-harness-map.html,resources/claude-md-cheat-sheet.html,resources/first-skill.html,resources/openspec-interviewer.html,resources/openspec-tutorial.html,resources/prd-html-review-workbench.html,resources/prd-openspec-starter.html,resources/presentation-editor-overview.html,resources/product-brief-generator.html,resources/prompt-improver.html,resources/prompt-magician-setup.html,resources/wiki-llm-overview.html,resources/wiki-llm-tutorial.html" BASE_URL=http://127.0.0.1:8785/ CDP_URL=http://127.0.0.1:9339 KANBAN_MARKERS='Started Maintenance|d90927b|approval-gated' python3 <static-site-cdp-mobile-smoke.py>
+PAGES="index.html,kanban-status.html,resources/a2x-marketplace-overview.html,resources/a2x-marketplace-tutorial.html,resources/buildtool-decision.html,resources/claude-code-harness-map.html,resources/claude-md-cheat-sheet.html,resources/first-skill.html,resources/openspec-interviewer.html,resources/openspec-tutorial.html,resources/prd-html-review-workbench.html,resources/prd-openspec-starter.html,resources/presentation-editor-overview.html,resources/product-brief-generator.html,resources/prompt-improver.html,resources/prompt-magician-setup.html,resources/wiki-llm-overview.html,resources/wiki-llm-tutorial.html" BASE_URL=http://127.0.0.1:8785/ CDP_URL=http://127.0.0.1:9339 KANBAN_MARKERS='Started Maintenance|6d0cc18|approval-gated' python3 <static-site-cdp-mobile-smoke.py>
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (71612 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
+DOM OK kanban-status.html (72515 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
@@ -151,7 +151,7 @@ DOM OK resources/wiki-llm-tutorial.html (2498 chars, h1='How to work with an LLM
 Representative Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
 ```
 
-After this audit/tracker update was written, the final verification pass reran the same all-page smoke against `Finished Maintenance|d90927b|approval-gated` markers so the rendered tracker page was checked in its final DONE state; `kanban-status.html` reported `72160 chars`, `width 390/390`, and `markers=[True, True, True]`.
+After moving the tracker back to DONE, the final verification pass reran the same all-page smoke against `Finished Maintenance|6d0cc18|approval-gated` markers so the rendered tracker page was checked in its final DONE state; `kanban-status.html` reported `72923 chars`, `width 390/390`, and `markers=[True, True, True]`.
 
 ## Remaining approval gates
 
