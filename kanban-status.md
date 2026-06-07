@@ -111,6 +111,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance Story M.4: Sanitize and verify uncommitted buildTool decision references
+  - Evidence: `resources/buildtool-decision.html` reference/tradeoff additions were kept but direct A2X Marketplace source-link language and local Claude Code source paths were removed from attendee-visible/copyable text; targeted search found no A2X Marketplace GitHub URL, `repos/claude-code`, or user-home absolute-path references; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for `index.html`, `kanban-status.html`, and `resources/buildtool-decision.html`, and Chrome DevTools 390×844 smoke for `resources/buildtool-decision.html` passed on 2026-06-07 13:43 IDT.
 - [x] Maintenance Story M.3: Reconcile untracked public-facing Build Tool decision page
   - Evidence: `resources/buildtool-decision.html` inspected, given explicit public-safe scope copy, fixed for 390×844 mobile overflow, linked from `index.html`, listed in `docs/resource-inventory.md`, mapped in `docs/workshop-usage-map.md`, and included in `docs/public-release-audit-2026-06-07.md`; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome DevTools DOM/mobile smoke passed for all 18 HTML files on 2026-06-07 13:27 IDT.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
@@ -275,6 +277,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-07 13:43 IDT — Finished Maintenance Story M.4: sanitized `resources/buildtool-decision.html` references to avoid direct source exposure/local paths; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, targeted HTTP smoke, and Chrome DevTools 390×844 smoke passed.
+
+- 2026-06-07 13:40 IDT — Started Maintenance Story M.4: found uncommitted `resources/buildtool-decision.html` reference additions that include direct source-link language conflicting with approval-gated source exposure; sanitizing and verifying before any commit.
 
 - 2026-06-07 13:27 IDT — Finished Maintenance Story M.3: reconciled `resources/buildtool-decision.html` into the hub with public-safe scope copy and mobile overflow fixes; updated inventory, usage map, and audit; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome DevTools DOM/mobile smoke passed for all 18 HTML files.
 

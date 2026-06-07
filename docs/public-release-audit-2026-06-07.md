@@ -6,8 +6,8 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate --jq '.nameWithOwner + " private=" + (.isPrivate|tostring)'` returned `thamam/a2x-workshop-resources private=true`.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --jq '.status'` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `0a8ff412f93514f8c31697bbe637b1a261eb9965` (`databaseId` 27089520247).
-- Reconciled one discovered untracked public-facing artifact: `resources/buildtool-decision.html` now has public-safe scope copy, no direct private/source links, mobile overflow fixes, and hub/inventory/usage-map wiring.
+- GitHub Security Checks completed successfully for current pushed HEAD `a858547bc631fba4fdb1e105317f48cdbccc4505` (`databaseId` 27089940111).
+- Reconciled one discovered untracked public-facing artifact: `resources/buildtool-decision.html` now has public-safe scope copy, no direct private/source links, mobile overflow fixes, hub/inventory/usage-map wiring, and sanitized public-safe references/tradeoff sections.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including the canonical Kanban HTML view, public-safe tutorial pages, and the reconciled buildTool decision navigator.
@@ -18,19 +18,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 13:21 IDT
+2026-06-07 13:43 IDT
 ```
 
 Starting commit:
 
 ```text
-0a8ff412f93514f8c31697bbe637b1a261eb9965
+a858547bc631fba4fdb1e105317f48cdbccc4505
 ```
 
 Latest commit subject at audit start:
 
 ```text
-0a8ff41 docs: refresh readiness verification
+a858547 docs: reconcile buildtool decision resource
 ```
 
 ### Repository visibility
@@ -70,16 +70,16 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --commit 0a8ff412f93514f8c31697bbe637b1a261eb9965 --json databaseId,headSha,status,conclusion,name,displayTitle,createdAt --jq '.[] | [.databaseId,.name,.status,.conclusion,.headSha,.displayTitle,.createdAt] | @tsv'
+gh run list --commit a858547bc631fba4fdb1e105317f48cdbccc4505 --json databaseId,headSha,status,conclusion,name,displayTitle,createdAt --jq '.[] | [.databaseId,.name,.status,.conclusion,.headSha,.displayTitle,.createdAt] | @tsv'
 ```
 
 Result:
 
 ```text
-27089520247	Security checks	completed	success	0a8ff412f93514f8c31697bbe637b1a261eb9965	docs: refresh readiness verification	2026-06-07T10:09:38Z
+27089940111	Security checks	completed	success	a858547bc631fba4fdb1e105317f48cdbccc4505	docs: reconcile buildtool decision resource	2026-06-07T10:29:40Z
 ```
 
-Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
+Interpretation: the latest pushed HEAD's GitHub Security Checks are green.
 
 ### Local checks
 
@@ -101,6 +101,8 @@ git diff --check
 ```
 
 After updating this audit and moving the canonical tracker back to `DONE`, a final self-referential rerun rechecked the same local criteria: static links passed for 18 HTML files, private-file blocker exited 0, gitleaks reported no leaks, and `git diff --check` exited 0.
+
+Maintenance Story M.4 also reran a targeted public-safety/mobile check for the edited `resources/buildtool-decision.html`: targeted text search found no A2X Marketplace GitHub URL, `repos/claude-code`, or user-home absolute-path references; local HTTP returned `200 text/html` for `index.html`, `kanban-status.html`, and `resources/buildtool-decision.html`; Chrome DevTools at `390x844` reported `clientWidth 390`, `scrollWidth 390`, `hasGithubMarketplaceLink false`, `hasLocalPath false`, `hasPublicSafeScope true`, and `hasReferences true`.
 
 ### Local HTTP smoke
 

@@ -314,6 +314,9 @@
                 <a href="#roadmap" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="roadmap">
                     <i class="fa-solid fa-road w-3.5"></i> <span>Roadmap</span>
                 </a>
+                <a href="#references" class="nav-link px-4 py-2 rounded-2xl text-slate-300 hover:text-white flex items-center gap-x-2 text-xs font-medium border border-transparent hover:border-slate-700 nav-item" data-section="references">
+                    <i class="fa-solid fa-link w-3.5"></i> <span>References</span>
+                </a>
                 <a href="#verdict" class="nav-link px-4 py-2 rounded-2xl text-amber-300 hover:text-amber-200 flex items-center gap-x-2 text-xs font-medium border border-amber-900/50 bg-amber-900/10 hover:bg-amber-900/20 nav-item" data-section="verdict">
                     <span class="font-semibold">Make a call</span>
                 </a>
@@ -593,11 +596,11 @@
             </div>
         </div>
 
-        <!-- TRADEOFFS -->
-        <div id="tradeoffs" class="section mt-16 max-w-3xl">
-            <h2 class="font-display text-3xl tracking-tighter mb-4">Tradeoffs &amp; Cost</h2>
+        <!-- TRADEOFFS + ARGUMENTS -->
+        <div id="tradeoffs" class="section mt-16">
+            <h2 class="font-display text-3xl tracking-tighter mb-4">Tradeoffs &amp; Arguments</h2>
             
-            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-6 space-y-5">
+            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-6 space-y-5 mb-6">
                 <div class="flex gap-4">
                     <div class="w-5 mt-0.5"><i class="fa-solid fa-arrow-up text-amber-400"></i></div>
                     <div class="flex-1">
@@ -619,6 +622,44 @@
                         <div class="text-sm text-slate-400">The Tool interface is large (~100 methods/fields), but most of the power is in a handful of advanced methods.</div>
                     </div>
                 </div>
+            </div>
+
+            <!-- In Favor / Against -->
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="bg-emerald-900/10 border border-emerald-800 rounded-3xl p-5">
+                    <div class="font-semibold text-emerald-300 mb-2 flex items-center gap-2"><i class="fa-solid fa-thumbs-up"></i> In Favor</div>
+                    <ul class="text-sm space-y-1.5 text-slate-300">
+                        <li>• Stronger model compliance via explicit schema &amp; description in the native tool list</li>
+                        <li>• Unlocks engine surfaces for free: hooks, transcript search, permissions, grouped UI, subagent context</li>
+                        <li>• Makes findings consumable by other skills, MCP clients, or your monitoring tools (cctop lineage)</li>
+                        <li>• Future-proofs orchestration as Claude Code evolves toward more native extensibility</li>
+                    </ul>
+                </div>
+                <div class="bg-amber-900/10 border border-amber-800 rounded-3xl p-5">
+                    <div class="font-semibold text-amber-300 mb-2 flex items-center gap-2"><i class="fa-solid fa-thumbs-down"></i> Against</div>
+                    <ul class="text-sm space-y-1.5 text-slate-300">
+                        <li>• Added maintenance: tool definition + renderers + registration logic</li>
+                        <li>• Learning curve on the full Tool contract (though advanced methods are optional)</li>
+                        <li>• Plugin contribution path for tools is less documented than skills/hooks</li>
+                        <li>• Risk of over-engineering if prompt-based findings remain "good enough" for most sessions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- RISK MANAGEMENT -->
+        <div id="risks" class="section mt-6 max-w-3xl">
+            <h3 class="font-semibold text-lg tracking-tight mb-2">Risk Management</h3>
+            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-5 text-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-xs">
+                    <div>
+                        <span class="font-medium text-amber-300">Adopting:</span> Tool API drift (mitigate: use only stable methods like <code>extractSearchText</code>, <code>checkPermissions</code>); registration complexity (pilot first, mirror resilient-flows hook patterns). Over-engineering (keep text fallback in the skill).
+                    </div>
+                    <div>
+                        <span class="font-medium text-amber-300">Deferring:</span> Continued output fragility (text drift on compaction, zero hook/perm/search integration); missed leverage for other A2X skills or external agents.
+                    </div>
+                </div>
+                <div class="mt-3 text-[10px] text-slate-400">Mitigation: Additive &amp; reversible. Prototype one minimal tool + one skill update. Revisit via this navigator.</div>
             </div>
         </div>
 
@@ -653,6 +694,25 @@
                         <div class="font-semibold">4. Enhance your hooks (optional but powerful)</div>
                         <div class="text-sm text-slate-400">Your existing <code>precompact_snapshot.py</code> and Bash guards can now react specifically to this tool. Add a PostToolUse handler for findings if desired.</div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REFERENCES -->
+        <div id="references" class="section mt-16 max-w-3xl">
+            <h2 class="font-display text-3xl tracking-tighter mb-3">Prior Art &amp; References</h2>
+            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-5 text-sm space-y-3">
+                <div>
+                    <span class="font-medium">This navigator</span> is the first public discussion aid for the topic (see workshop docs: <code>usage-map.md</code>, <code>resource-inventory.md</code>, <code>public-release-audit-2026-06-07.md</code>, <code>kanban-status.md</code>, and <code>index.html</code>).
+                </div>
+                <div>
+                    <span class="font-medium">A2X Marketplace</span>: Keep this navigator as a public-safe discussion aid only. Sanitized overviews and audits live in the workshop materials; direct source exposure remains approval-gated until cleanup and review are complete.
+                </div>
+                <div>
+                    <span class="font-medium">Implementation precedent</span>: Claude Code's built-in tools demonstrate the native-tool shape: schema, rendering, permissions, searchability, and grouped UI. Treat any local source examples as private implementation research, not attendee-facing links.
+                </div>
+                <div>
+                    <span class="font-medium">Related discussion</span>: Worktree and subagent orchestration patterns point toward richer agent tooling, but this page intentionally avoids claims that a first-class user-level <code>buildTool</code> marketplace already exists.
                 </div>
             </div>
         </div>
@@ -803,19 +863,13 @@
 
 **Core question:** Move from text-based findings in spec-review-remediate to a first-class native tool using buildTool.
 
-**Key value sources (from Claude Code source):**
-- Native tool schema in prompt (Tool.ts)
-- Full hook participation (hooks.ts)
+**Key value sources:**
+- Native tool schema in the model-facing prompt
+- Full hook participation
 - Transcript search fidelity (extractSearchText)
 - Permission surface for review actions
 - Subagent + compaction context
 - Grouped UI rendering for parallel reviews
-
-**Source files referenced:** 
-repos/claude-code/src/Tool.ts
-repos/claude-code/src/utils/hooks.ts
-repos/claude-code/src/skills/loadSkillsDir.ts
-repos/claude-code/src/services/compact/compact.ts
 
 **Current state:** Findings are prose → skill parses later.
 **Target state:** Model calls SpecReviewFinding tool → engine provides hooks, search, permissions, rendering for free.
