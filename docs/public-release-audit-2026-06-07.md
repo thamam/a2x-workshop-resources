@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `f4591487e5821a53e961b1b85ae6308006238c55` (`databaseId` 27096360396).
+- GitHub Security Checks completed successfully for current pushed HEAD `b5f0979d1c39f40fdda3bb98e3bef08539630f93` (`databaseId` 27096728679).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
-- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including final rendered Kanban markers for `Finished Maintenance`, `f459148`, `approval-gated`, and `DONE`.
+- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including final rendered Kanban markers for `Finished Maintenance`, `b5f0979`, `approval-gated`, and `DONE` after tracker updates.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 18:22 IDT
+2026-06-07 18:37 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-f4591487e5821a53e961b1b85ae6308006238c55
+b5f0979d1c39f40fdda3bb98e3bef08539630f93
 ```
 
 Latest commit subject at audit start:
 
 ```text
-f459148 docs: refresh current public readiness evidence
+b5f0979 docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -69,13 +69,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion,name,createdAt,updatedAt --jq '.[] | select(.headSha == "f4591487e5821a53e961b1b85ae6308006238c55")'
+gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion,name,createdAt,updatedAt --jq '.[] | select(.headSha == "b5f0979d1c39f40fdda3bb98e3bef08539630f93")'
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T15:11:21Z","databaseId":27096360396,"headSha":"f4591487e5821a53e961b1b85ae6308006238c55","name":"Security checks","status":"completed","updatedAt":"2026-06-07T15:11:32Z"}
+{"conclusion":"success","createdAt":"2026-06-07T15:26:17Z","databaseId":27096728679,"headSha":"b5f0979d1c39f40fdda3bb98e3bef08539630f93","name":"Security checks","status":"completed","updatedAt":"2026-06-07T15:26:32Z"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -92,7 +92,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# final rerun scanned the current tree and reported no leaks found
+# scanned ~383.95 KB and reported no leaks found
 
 git diff --check
 # exit 0
@@ -105,7 +105,7 @@ These results are from the local verification pass during this maintenance refre
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8823 --bind 127.0.0.1
+python3 -m http.server 8898 --bind 127.0.0.1
 ```
 
 HTTP smoke requested every HTML file and verified status `200` and `text/html` content type.
@@ -136,19 +136,19 @@ HTTP smoke passed for 18 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with a disposable profile, `--remote-debugging-port=9371`, and `--remote-allow-origins=http://127.0.0.1:9371`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with a disposable profile, `--remote-debugging-port=9340`, and `--remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-ROOT=$PWD BASE_URL=http://127.0.0.1:8823/ CDP_URL=http://127.0.0.1:9371 KANBAN_MARKERS='Finished Maintenance|f459148|approval-gated|DONE' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
+BASE_URL=http://127.0.0.1:8898/ CDP_URL=http://127.0.0.1:9340 KANBAN_MARKERS='Finished Maintenance|b5f0979|approval-gated|DONE' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (64029 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True, True])
+DOM OK kanban-status.html (64793 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True, True])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
@@ -168,7 +168,7 @@ DOM OK resources/wiki-llm-tutorial.html (2498 chars, h1='How to work with an LLM
 Representative Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
 ```
 
-Note: the Chrome DevTools smoke used a dedicated headless Chrome with `--remote-allow-origins=http://127.0.0.1:9371` so modern Chrome accepts the local CDP WebSocket connection.
+Note: the Chrome DevTools smoke used a dedicated headless Chrome with `--remote-allow-origins=*` so modern Chrome accepts the local CDP WebSocket connection.
 
 ## Remaining approval gates
 
