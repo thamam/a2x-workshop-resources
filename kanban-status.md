@@ -111,6 +111,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
+  - Evidence: `docs/public-release-audit-2026-06-07.md` updated for current HEAD `164065d241bfadaebbe098dda4bc2a5d44bcc6bb`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27090307403); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 18 HTML files passed on 2026-06-07 13:58–14:01 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance Story M.4: Sanitize and verify uncommitted buildTool decision references
   - Evidence: `resources/buildtool-decision.html` reference/tradeoff additions were kept but direct A2X Marketplace source-link language and local Claude Code source paths were removed from attendee-visible/copyable text; targeted search found no A2X Marketplace GitHub URL, `repos/claude-code`, or user-home absolute-path references; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for `index.html`, `kanban-status.html`, and `resources/buildtool-decision.html`, and Chrome DevTools 390×844 smoke for `resources/buildtool-decision.html` passed on 2026-06-07 13:43 IDT.
 - [x] Maintenance Story M.3: Reconcile untracked public-facing Build Tool decision page
@@ -277,6 +279,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-07 14:01 IDT — Finished Maintenance: verified current HEAD `164065d`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `164065d241bfadaebbe098dda4bc2a5d44bcc6bb`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools DOM/mobile checks for all 18 HTML files passed. No publishing or private-resource exposure was performed.
+
+- 2026-06-07 13:57 IDT — Started Maintenance: verify current HEAD `164065d` remains public-ready and approval-gated; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 
 - 2026-06-07 13:43 IDT — Finished Maintenance Story M.4: sanitized `resources/buildtool-decision.html` references to avoid direct source exposure/local paths; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, targeted HTTP smoke, and Chrome DevTools 390×844 smoke passed.
 
