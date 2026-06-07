@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `ca34818d907e7138489b31d5b5678baa9354d7bd` (`databaseId` 27099631059).
+- GitHub Security Checks completed successfully for current pushed HEAD `49e580134cb4ad66e06031ddb0a9e61d8cd89bdd` (`databaseId` 27099990259).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
-- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including rendered Kanban markers for `Started Maintenance`, `ca34818`, and `approval-gated` while this tracker refresh was in progress.
+- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including rendered Kanban markers for `Started Maintenance`, `49e5801`, and `approval-gated` while this tracker refresh was in progress. The final rerun after moving the tracker back to DONE asserted `Finished Maintenance`, `49e5801`, and `approval-gated` against the final tree.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 20:38 IDT
+2026-06-07 20:53 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-ca34818d907e7138489b31d5b5678baa9354d7bd
+49e580134cb4ad66e06031ddb0a9e61d8cd89bdd
 ```
 
 Latest commit subject at audit start:
 
 ```text
-ca34818 docs: refresh current public readiness evidence
+49e5801 docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -69,13 +69,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --branch main --workflow "Security Checks" --limit 20 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "ca34818d907e7138489b31d5b5678baa9354d7bd")'
+gh run list --branch main --workflow "Security Checks" --limit 20 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "49e580134cb4ad66e06031ddb0a9e61d8cd89bdd")'
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T17:27:20Z","databaseId":27099631059,"headSha":"ca34818d907e7138489b31d5b5678baa9354d7bd","status":"completed","updatedAt":"2026-06-07T17:27:29Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27099631059"}
+{"conclusion":"success","createdAt":"2026-06-07T17:42:28Z","databaseId":27099990259,"headSha":"49e580134cb4ad66e06031ddb0a9e61d8cd89bdd","status":"completed","updatedAt":"2026-06-07T17:42:38Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27099990259"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -92,7 +92,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~394.14 KB and reported no leaks found
+# reported no leaks found
 
 git diff --check
 # exit 0
@@ -141,14 +141,14 @@ Launched a dedicated headless Chrome with a disposable profile, `--remote-debugg
 Command:
 
 ```bash
-ROOT=<repo-root> BASE_URL=http://127.0.0.1:8785/ CDP_URL=http://127.0.0.1:9339 KANBAN_MARKERS='Started Maintenance|ca34818|approval-gated' python3 <static-site-cdp-mobile-smoke.py>
+ROOT=<repo-root> BASE_URL=http://127.0.0.1:8785/ CDP_URL=http://127.0.0.1:9339 KANBAN_MARKERS='Started Maintenance|49e5801|approval-gated' python3 <static-site-cdp-mobile-smoke.py>
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (69054 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
+DOM OK kanban-status.html (69848 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
@@ -168,7 +168,7 @@ DOM OK resources/wiki-llm-tutorial.html (2498 chars, h1='How to work with an LLM
 Representative Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
 ```
 
-Note: the Chrome DevTools smoke used a dedicated headless Chrome with `--remote-allow-origins=*` so modern Chrome accepts the local CDP WebSocket connection.
+Note: the Chrome DevTools smoke used a dedicated headless Chrome with `--remote-allow-origins=*` so modern Chrome accepts the local CDP WebSocket connection. After this audit/tracker update was written, the final verification pass reran the same all-page smoke against `Finished Maintenance|49e5801|approval-gated` markers so the rendered tracker page was checked in its final DONE state.
 
 ## Remaining approval gates
 
