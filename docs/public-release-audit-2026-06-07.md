@@ -4,12 +4,12 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 ## Summary
 
-- Repository remains private: `gh repo view --json nameWithOwner,visibility,isPrivate` returned `isPrivate: true` and `visibility: PRIVATE` for `thamam/a2x-workshop-resources`.
+- Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `isPrivate: true` and `visibility: PRIVATE` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: `gh api repos/$(gh repo view --json nameWithOwner --jq .nameWithOwner)/pages --jq .status` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `6b5fa80a25298ebb936f4940870644f43135f98a`.
+- GitHub Security Checks completed successfully for current starting commit `fd2a78ec89837bfaf11cb4e84c9d347b7ee07549`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site smoke passed for all 14 HTML files over `python3 -m http.server`.
-- Representative Chrome DevTools DOM/mobile smoke passed for four public-facing pages at a 390 × 844 viewport, and the canonical Kanban HTML view loaded the current markdown tracker with no page-level horizontal overflow.
+- Representative Chrome DevTools DOM/mobile smoke passed for four public-facing pages at a 390 × 844 viewport, including semantic checks that the canonical Kanban HTML view loaded the current markdown tracker and current maintenance marker.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,13 +17,13 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 04:48:03 IDT
+2026-06-07 05:06:42 IDT
 ```
 
 Starting commit:
 
 ```text
-6b5fa80a25298ebb936f4940870644f43135f98a
+fd2a78ec89837bfaf11cb4e84c9d347b7ee07549
 ```
 
 ### Repository visibility
@@ -53,8 +53,7 @@ gh api repos/$(gh repo view --json nameWithOwner --jq .nameWithOwner)/pages --jq
 Result excerpt:
 
 ```text
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}
-gh: Not Found (HTTP 404)
+{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}gh: Not Found (HTTP 404)
 PAGES_EXIT=1
 ```
 
@@ -65,13 +64,14 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --branch main --limit 5 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt
+sha=$(git rev-parse HEAD)
+gh run list --branch main --limit 10 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt --jq ".[] | select(.headSha == \"$sha\") | {databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt}"
 ```
 
 Result excerpt:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-07T01:36:04Z","databaseId":27079337335,"headSha":"6b5fa80a25298ebb936f4940870644f43135f98a","status":"completed","updatedAt":"2026-06-07T01:36:18Z","workflowName":"Security checks"}]
+{"conclusion":"success","createdAt":"2026-06-07T01:51:06Z","databaseId":27079632338,"headSha":"fd2a78ec89837bfaf11cb4e84c9d347b7ee07549","status":"completed","updatedAt":"2026-06-07T01:51:15Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -88,7 +88,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # private-file blocker exit code 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~225259 bytes (225.26 KB); no leaks found
+# scanned ~226936 bytes (226.94 KB); no leaks found
 
 git diff --check
 # exit code 0
@@ -126,23 +126,19 @@ HTML smoke passed for 14 files
 
 ### Representative DOM/mobile smoke
 
-Launched a dedicated headless Chrome with `--remote-debugging-port=9231 --remote-allow-origins=*`, loaded selected pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with `--remote-debugging-port=9231 --remote-allow-origins=*`, loaded selected pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, semantic text markers, and no page-level horizontal overflow.
 
 Result:
 
 ```text
-DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390, markers=[true,true,true,true])
-DOM OK kanban-status.html (668 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[true,true,true,true])
-DOM OK resources/prd-html-review-workbench.html (1188 chars, h1='PRD to HTML review workbench.', width 390/390, markers=[true,true,true,true])
-DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390, markers=[true,true,true,true])
+DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390, markers=[True, True, True, True])
+DOM OK kanban-status.html (25742 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True, True])
+DOM OK resources/prd-html-review-workbench.html (1188 chars, h1='PRD to HTML review workbench.', width 390/390, markers=[True, True, True, True])
+DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390, markers=[True, True, True, True])
 Representative Chrome DevTools DOM/mobile smoke passed for 4 pages at 390x844
 ```
 
-The canonical Kanban view was also checked for semantic loading of the current markdown tracker, including the current commit marker and transition text:
-
-```text
-Kanban semantic DOM OK (ready=complete, chars=25033, width=390/390, markers=[true,true,true,true])
-```
+The canonical Kanban view was checked for semantic loading of the current markdown tracker, including the current starting commit marker `fd2a78e` and the `Started Maintenance` transition.
 
 ## Remaining approval gates
 
