@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json isPrivate,nameWithOwner,url,homepageUrl,visibility` returned `isPrivate: true` / `visibility: PRIVATE` for `thamam/a2x-workshop-resources` and no homepage URL.
 - GitHub Pages remains unconfigured: `gh api repos/thamam/a2x-workshop-resources/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `14f2ca75ceeed3d718c5d21db41f32bbd166d112`.
+- GitHub Security Checks completed successfully for current starting commit `871feaeb74bec0810e1483679cd33096cc5de50a`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 14 HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 14 HTML files at a 390 × 844 viewport, and the canonical Kanban HTML view rendered current tracker markers.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 09:39:56 IDT
+2026-06-07 09:53:55 IDT
 ```
 
 Starting commit:
 
 ```text
-14f2ca75ceeed3d718c5d21db41f32bbd166d112
+871feaeb74bec0810e1483679cd33096cc5de50a
 ```
 
 Latest commit subject at audit start:
 
 ```text
-14f2ca7 docs: refresh readiness verification
+871feae docs: refresh readiness verification
 ```
 
 ### Repository visibility
@@ -78,7 +78,7 @@ gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T06:24:53Z","databaseId":27084873152,"headSha":"14f2ca75ceeed3d718c5d21db41f32bbd166d112","status":"completed","updatedAt":"2026-06-07T06:25:08Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T06:41:43Z","databaseId":27085196217,"headSha":"871feaeb74bec0810e1483679cd33096cc5de50a","status":"completed","updatedAt":"2026-06-07T06:41:52Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -95,7 +95,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # PRIVATE_BLOCKER_EXIT=0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~251874 bytes (251.87 KB), reported no leaks found
+# scanned ~252875 bytes (252.88 KB), reported no leaks found
 # GITLEAKS_EXIT=0
 
 git diff --check
@@ -107,10 +107,10 @@ git diff --check
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8787 --bind 127.0.0.1
+python3 -m http.server 8791 --bind 127.0.0.1
 ```
 
-HTTP smoke requested every HTML file and verified status `200` with non-empty content.
+HTTP smoke requested every HTML file and verified status `200`, `text/html`, and non-empty content.
 
 Result:
 
@@ -134,12 +134,12 @@ HTTP smoke passed for 14 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with `--remote-debugging-port=9341 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, visible canonical Kanban markers on `kanban-status.html`, plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with `--remote-debugging-port=9342 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, visible canonical Kanban markers on `kanban-status.html`, plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-BASE_URL=http://127.0.0.1:8787/ CDP_URL=http://127.0.0.1:9341 KANBAN_MARKERS="No further safe unblocked implementation story,approval-gated,Maintenance: Verify current HEAD" PAGES="<all 14 HTML files>" node <static-site-cdp-mobile-smoke-script>
+BASE_URL=http://127.0.0.1:8791/ CDP_URL=http://127.0.0.1:9342 KANBAN_MARKERS="Started Maintenance,871feae,approval-gated" PAGES="<all 14 HTML files>" node <static-site-cdp-mobile-smoke-script>
 ```
 
 Note: the local absolute path to the reusable smoke-test script is intentionally omitted from this public-ready audit artifact.
@@ -148,7 +148,7 @@ Result:
 
 ```text
 DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390, markers=[true,true,true])
-DOM OK kanban-status.html (35964 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[true,true,true])
+DOM OK kanban-status.html (36428 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[true,true,true])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390, markers=[true,true,true])
 DOM OK resources/claude-code-harness-map.html (1584 chars, h1='The harness, not just the model.', width 390/390, markers=[true,true,true])
 DOM OK resources/claude-md-cheat-sheet.html (1169 chars, h1='CLAUDE.md & coding rules cheat sheet.', width 390/390, markers=[true,true,true])
