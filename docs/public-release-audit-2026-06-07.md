@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `856c333c6d1001bae0945b538f09a056b84a29a0` (`databaseId` 27105210273).
+- GitHub Security Checks completed successfully for current pushed HEAD `01efb1984e605187b3ec09ca8e49c4a751acabce` (`databaseId` 27105581078).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
-- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including rendered Kanban markers for `Finished Maintenance`, `856c333`, and `approval-gated` after the tracker was moved back to DONE.
+- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport with no page-level horizontal overflow.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-08 00:34–00:37 IDT
+2026-06-08 00:50–00:53 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-856c333c6d1001bae0945b538f09a056b84a29a0
+01efb1984e605187b3ec09ca8e49c4a751acabce
 ```
 
 Latest commit subject at audit start:
 
 ```text
-856c333 docs: refresh current public readiness evidence
+01efb19 docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -70,13 +70,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --branch main --workflow "Security Checks" --limit 10 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "856c333c6d1001bae0945b538f09a056b84a29a0")'
+gh run list --commit 01efb1984e605187b3ec09ca8e49c4a751acabce --limit 10 --json databaseId,headSha,status,conclusion,name,createdAt,updatedAt,url
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T21:23:11Z","databaseId":27105210273,"headSha":"856c333c6d1001bae0945b538f09a056b84a29a0","status":"completed","updatedAt":"2026-06-07T21:23:25Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27105210273"}
+[{"conclusion":"success","createdAt":"2026-06-07T21:38:55Z","databaseId":27105581078,"headSha":"01efb1984e605187b3ec09ca8e49c4a751acabce","name":"Security checks","status":"completed","updatedAt":"2026-06-07T21:39:07Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27105581078"}]
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -107,10 +107,10 @@ These results are from the local verification pass during this maintenance refre
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8765 --bind 127.0.0.1
+python3 -m http.server 8786 --bind 127.0.0.1
 ```
 
-HTTP smoke requested every tracked HTML file and verified status `200` with HTML content.
+HTTP smoke requested every discovered HTML file and verified status `200` with HTML content.
 
 Result:
 
@@ -138,36 +138,36 @@ HTTP smoke passed for 18 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with a disposable profile, remote debugging port `9224`, and `--remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with a disposable profile, remote debugging port `9223`, and `--remote-allow-origins=http://127.0.0.1:9223`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-PAGES="index.html,kanban-status.html,..." BASE_URL=http://127.0.0.1:8765/ CDP_URL=http://127.0.0.1:9224 KANBAN_MARKERS='Finished Maintenance|856c333|approval-gated' python3 <static-site-cdp-mobile-smoke.py>
+ROOT="$PWD" BASE_URL=http://127.0.0.1:8786/ CDP_URL=http://127.0.0.1:9223 node /tmp/a2x-dom-mobile-smoke.mjs
 ```
 
 Result:
 
 ```text
-DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (81323 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
-DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
-DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
-DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
-DOM OK resources/claude-code-harness-map.html (1584 chars, h1='The harness, not just the model.', width 390/390)
-DOM OK resources/claude-md-cheat-sheet.html (1169 chars, h1='CLAUDE.md & coding rules cheat sheet.', width 390/390)
-DOM OK resources/first-skill.html (1081 chars, h1='Build your first skill.', width 390/390)
-DOM OK resources/openspec-interviewer.html (527 chars, h1='OpenSpec-aware interviewer.', width 390/390)
-DOM OK resources/openspec-tutorial.html (2540 chars, h1='How to use OpenSpec with agents.', width 390/390)
-DOM OK resources/prd-html-review-workbench.html (1188 chars, h1='PRD to HTML review workbench.', width 390/390)
-DOM OK resources/prd-openspec-starter.html (952 chars, h1='PRD & OpenSpec starter.', width 390/390)
-DOM OK resources/presentation-editor-overview.html (3379 chars, h1='Presentation editor overview.', width 390/390)
-DOM OK resources/product-brief-generator.html (606 chars, h1='Product brief generator.', width 390/390)
-DOM OK resources/prompt-improver.html (578 chars, h1='Prompt improver.', width 390/390)
-DOM OK resources/prompt-magician-setup.html (3011 chars, h1='Prompt Magician setup overview.', width 390/390)
-DOM OK resources/wiki-llm-overview.html (2804 chars, h1='Wiki-LLM overview.', width 390/390)
-DOM OK resources/wiki-llm-tutorial.html (2498 chars, h1='How to work with an LLM Wiki.', width 390/390)
-Representative Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
+index.html: width 390/390; h1="Claude Code workshop resources."; links=21
+kanban-status.html: width 390/390; h1="Project Kanban, readable at a glance."; links=4
+resources/a2x-marketplace-overview.html: width 390/390; h1="A2X Marketplace overview."; links=1
+resources/a2x-marketplace-tutorial.html: width 390/390; h1="A2X Marketplace tutorial."; links=1
+resources/buildtool-decision.html: width 390/390; h1="Should we ship afirst-class buildTool?"; links=10
+resources/claude-code-harness-map.html: width 390/390; h1="The harness, not just the model."; links=1
+resources/claude-md-cheat-sheet.html: width 390/390; h1="CLAUDE.md & coding rules cheat sheet."; links=1
+resources/first-skill.html: width 390/390; h1="Build your first skill."; links=1
+resources/openspec-interviewer.html: width 390/390; h1="OpenSpec-aware interviewer."; links=1
+resources/openspec-tutorial.html: width 390/390; h1="How to use OpenSpec with agents."; links=1
+resources/prd-html-review-workbench.html: width 390/390; h1="PRD to HTML review workbench."; links=1
+resources/prd-openspec-starter.html: width 390/390; h1="PRD & OpenSpec starter."; links=1
+resources/presentation-editor-overview.html: width 390/390; h1="Presentation editor overview."; links=1
+resources/product-brief-generator.html: width 390/390; h1="Product brief generator."; links=1
+resources/prompt-improver.html: width 390/390; h1="Prompt improver."; links=1
+resources/prompt-magician-setup.html: width 390/390; h1="Prompt Magician setup overview."; links=3
+resources/wiki-llm-overview.html: width 390/390; h1="Wiki-LLM overview."; links=1
+resources/wiki-llm-tutorial.html: width 390/390; h1="How to work with an LLM Wiki."; links=1
+Chrome DevTools DOM/mobile smoke passed for 18 HTML files at 390x844
 ```
 
 ## Remaining approval gates
