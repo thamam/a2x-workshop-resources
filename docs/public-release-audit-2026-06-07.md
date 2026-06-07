@@ -6,10 +6,10 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `fa5014c9de7bdef0a9f904e8f9b932908b62f3f8` (`databaseId` 27104395251).
+- GitHub Security Checks completed successfully for current pushed HEAD `2e890a1e5fce9650bb1c769ed02e486bd7f4c735` (`databaseId` 27104737019).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
-- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including rendered Kanban markers for `Maintenance: Verify current HEAD remains public-ready`, `fa5014c`, and `Started Maintenance` while this tracker refresh was in progress. A final rerun after moving the tracker back to DONE asserted `Finished Maintenance`, `fa5014c`, and `approval-gated` against the final tracker state.
+- Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport, including rendered Kanban markers for `Started Maintenance`, `2e890a1`, and `approval-gated` while this tracker refresh was in progress.
 - No safe unblocked implementation story is currently listed in `kanban-status.md`; remaining public publishing/source-linking work is approval-gated.
 
 ## Evidence
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 23:59 IDT
+2026-06-08 00:13–00:14 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-fa5014c9de7bdef0a9f904e8f9b932908b62f3f8
+2e890a1e5fce9650bb1c769ed02e486bd7f4c735
 ```
 
 Latest commit subject at audit start:
 
 ```text
-fa5014c docs: refresh current public readiness evidence
+2e890a1 docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -70,13 +70,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --branch main --workflow "Security Checks" --limit 10 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "fa5014c9de7bdef0a9f904e8f9b932908b62f3f8")'
+gh run list --branch main --workflow "Security Checks" --limit 10 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "2e890a1e5fce9650bb1c769ed02e486bd7f4c735")'
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T20:48:41Z","databaseId":27104395251,"headSha":"fa5014c9de7bdef0a9f904e8f9b932908b62f3f8","status":"completed","updatedAt":"2026-06-07T20:48:56Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27104395251"}
+{"conclusion":"success","createdAt":"2026-06-07T21:02:46Z","databaseId":27104737019,"headSha":"2e890a1e5fce9650bb1c769ed02e486bd7f4c735","status":"completed","updatedAt":"2026-06-07T21:02:56Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27104737019"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -100,7 +100,7 @@ git diff --check
 # exit 0
 ```
 
-These results are from the local verification pass during this maintenance refresh. A final lightweight safety pass was rerun after updating this audit/tracker and also passed.
+These results are from the local verification pass during this maintenance refresh.
 
 ### Local HTTP smoke
 
@@ -138,19 +138,19 @@ HTTP smoke passed for 18 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with a disposable profile, remote debugging port `9224`, and `--remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with a disposable profile, remote debugging port `9224`, and `--remote-allow-origins=http://127.0.0.1:9224`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified body/H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-PAGES="index.html,kanban-status.html,..." BASE_URL=http://127.0.0.1:8765/ CDP_URL=http://127.0.0.1:9224 KANBAN_MARKERS='Maintenance: Verify current HEAD remains public-ready|fa5014c|Started Maintenance' python3 <static-site-cdp-mobile-smoke.py>
+PAGES="index.html,kanban-status.html,..." BASE_URL=http://127.0.0.1:8765/ CDP_URL=http://127.0.0.1:9224 KANBAN_MARKERS='Started Maintenance|2e890a1|approval-gated' node <a2x-cdp-mobile-smoke.mjs>
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (79243 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
+DOM OK kanban-status.html (79791 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[true,true,true])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
@@ -167,10 +167,8 @@ DOM OK resources/prompt-improver.html (578 chars, h1='Prompt improver.', width 3
 DOM OK resources/prompt-magician-setup.html (3011 chars, h1='Prompt Magician setup overview.', width 390/390)
 DOM OK resources/wiki-llm-overview.html (2804 chars, h1='Wiki-LLM overview.', width 390/390)
 DOM OK resources/wiki-llm-tutorial.html (2498 chars, h1='How to work with an LLM Wiki.', width 390/390)
-Representative Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
+Chrome DevTools DOM/mobile smoke passed for 18 pages at 390x844
 ```
-
-After moving the tracker back to DONE and updating this audit, the final verification pass reran all-page smoke against `Finished Maintenance|fa5014c|approval-gated` markers so the rendered tracker page was checked in its final DONE state; the rendered tracker reported `79791 chars`, `width 390/390`, and `markers=[True, True, True]`.
 
 ## Remaining approval gates
 

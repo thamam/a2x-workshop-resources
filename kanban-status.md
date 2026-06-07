@@ -112,6 +112,8 @@
 ### ✅ DONE (Completed Stories)
 
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
+  - Evidence: `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD `2e890a1e5fce9650bb1c769ed02e486bd7f4c735`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27104737019); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 18 HTML files passed on 2026-06-08 00:13–00:14 IDT. No publishing or private-resource exposure was performed.
+- [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
   - Evidence: `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD `fa5014c9de7bdef0a9f904e8f9b932908b62f3f8`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27104395251); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 18 HTML files passed on 2026-06-08 00:00–00:01 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
   - Evidence: `docs/public-release-audit-2026-06-07.md` updated for current HEAD `569d43949341e68ad6c179cceb34116b9531f358`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27104046075); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 18 HTML files passed on 2026-06-07 23:45–23:47 IDT. No publishing or private-resource exposure was performed.
@@ -355,6 +357,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-08 00:14 IDT — Finished Maintenance: verified current HEAD `2e890a1`; refreshed `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `2e890a1e5fce9650bb1c769ed02e486bd7f4c735`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools DOM/mobile checks for all 18 HTML files passed. No publishing or private-resource exposure was performed.
+
+- 2026-06-08 00:13 IDT — Started Maintenance: verify current HEAD `2e890a1` remains public-ready and approval-gated; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 
 - 2026-06-08 00:01 IDT — Finished Maintenance: verified current HEAD `fa5014c`; refreshing `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `fa5014c9de7bdef0a9f904e8f9b932908b62f3f8`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 18 HTML files, and Chrome DevTools DOM/mobile checks for all 18 HTML files passed. No publishing or private-resource exposure was performed.
 
