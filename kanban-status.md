@@ -106,6 +106,8 @@
 ### ✅ DONE (Completed Stories)
 
 - [x] Maintenance: Refresh public-readiness evidence for current repo state
+  - Evidence: `docs/public-release-audit-2026-06-07.md` updated for starting commit `2c3bc2d2b31876e49d76abe681057ea316a988a2`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `2c3bc2d2b31876e49d76abe681057ea316a988a2`; `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 14 HTML files passed.
+- [x] Maintenance: Refresh public-readiness evidence for current repo state
   - Evidence: `docs/public-release-audit-2026-06-07.md` updated for starting commit `58ada5fb784b706f6a7d4d565bb0e5493beb1c07`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `58ada5fb784b706f6a7d4d565bb0e5493beb1c07`; `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 14 HTML files passed.
 - [x] Maintenance: Refresh public-readiness evidence for current repo state
   - Evidence: `docs/public-release-audit-2026-06-07.md` updated for starting commit `8e4bd2c8d9d239f52f17e9ee73c8ba35f9aae341`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `8e4bd2c8d9d239f52f17e9ee73c8ba35f9aae341`; `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 14 HTML files passed.
@@ -217,6 +219,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `2c3bc2d`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `2c3bc2d2b31876e49d76abe681057ea316a988a2`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools DOM/mobile checks for all 14 HTML files passed. No safe unblocked implementation stories remain listed.
+
+- 2026-06-07 — Started Maintenance: refresh latest public-readiness evidence for current repo state at starting commit `2c3bc2d`; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 
 - 2026-06-07 — Finished Maintenance: refreshed latest public-readiness evidence at starting commit `58ada5f`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `58ada5fb784b706f6a7d4d565bb0e5493beb1c07`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools DOM/mobile checks for all 14 HTML files passed. No safe unblocked implementation stories remain listed.
 

@@ -5,8 +5,8 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 ## Summary
 
 - Repository remains private: `gh repo view --json isPrivate,nameWithOwner,url,homepageUrl` returned `isPrivate: true` for `thamam/a2x-workshop-resources` and no homepage URL.
-- GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `58ada5fb784b706f6a7d4d565bb0e5493beb1c07`.
+- GitHub Pages remains unconfigured: `gh api repos/thamam/a2x-workshop-resources/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
+- GitHub Security Checks completed successfully for current starting commit `2c3bc2d2b31876e49d76abe681057ea316a988a2`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 14 HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 14 HTML files at a 390 × 844 viewport, and the canonical Kanban HTML view rendered current tracker markers.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 07:46:04 IDT
+2026-06-07 08:01:50 IDT
 ```
 
 Starting commit:
 
 ```text
-58ada5fb784b706f6a7d4d565bb0e5493beb1c07
+2c3bc2d2b31876e49d76abe681057ea316a988a2
 ```
 
 Latest commit subject at audit start:
 
 ```text
-58ada5f 58ada5fb784b706f6a7d4d565bb0e5493beb1c07 2026-06-07 07:33:08 +0300 docs: refresh public readiness evidence
+2c3bc2d docs: refresh public readiness evidence
 ```
 
 ### Repository visibility
@@ -53,14 +53,14 @@ Interpretation: the repository is still private and no homepage is configured.
 Command:
 
 ```bash
-gh api repos/:owner/:repo/pages --include
+gh api repos/thamam/a2x-workshop-resources/pages --include
 ```
 
 Result excerpt:
 
 ```text
 HTTP/2.0 404 Not Found
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}gh: Not Found (HTTP 404)
+gh: Not Found (HTTP 404)
 ```
 
 Interpretation: Pages is not configured, which matches the approval gate.
@@ -77,7 +77,7 @@ gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T04:33:12Z","databaseId":27082746873,"headSha":"58ada5fb784b706f6a7d4d565bb0e5493beb1c07","status":"completed","updatedAt":"2026-06-07T04:33:24Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T04:49:09Z","databaseId":27083048281,"headSha":"2c3bc2d2b31876e49d76abe681057ea316a988a2","status":"completed","updatedAt":"2026-06-07T04:49:19Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -94,7 +94,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # PRIVATE_BLOCKER_EXIT=0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~241345 bytes (241.35 KB), reported no leaks found
+# scanned ~242888 bytes (242.89 KB), reported no leaks found
 # GITLEAKS_EXIT=0
 
 git diff --check
@@ -152,7 +152,7 @@ Result:
 
 ```text
 DOM OK index.html (10656 bytes, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (60718 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
+DOM OK kanban-status.html (61701 bytes, h1='Project Kanban, readable at a glance.', width 390/390)
 DOM OK resources/a2x-marketplace-overview.html (6666 bytes, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/claude-code-harness-map.html (3313 bytes, h1='The harness, not just the model.', width 390/390)
 DOM OK resources/claude-md-cheat-sheet.html (2406 bytes, h1='CLAUDE.md & coding rules cheat sheet.', width 390/390)
