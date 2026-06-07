@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json isPrivate,nameWithOwner,url,homepageUrl,visibility` returned `isPrivate: true` / `visibility: PRIVATE` for `thamam/a2x-workshop-resources` and no homepage URL.
 - GitHub Pages remains unconfigured: `gh api repos/thamam/a2x-workshop-resources/pages --include` returned `HTTP/2.0 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `662e4fdf4a709bb6899711dbab0e16b341085175` (`databaseId` 27088178253).
+- GitHub Security Checks completed successfully for current starting commit `0864d9b791975497130f5a8e4c16e15a0c9541d0` (`databaseId` 27088512886).
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 17 discovered HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 17 discovered HTML files at a 390 × 844 viewport, including the canonical Kanban HTML view and public-safe tutorial pages.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 12:17 IDT
+2026-06-07 12:33 IDT
 ```
 
 Starting commit:
 
 ```text
-662e4fdf4a709bb6899711dbab0e16b341085175
+0864d9b791975497130f5a8e4c16e15a0c9541d0
 ```
 
 Latest commit subject at audit start:
 
 ```text
-662e4fd docs: refresh readiness verification
+0864d9b docs: refresh readiness verification
 ```
 
 ### Repository visibility
@@ -70,14 +70,14 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-SHA=662e4fdf4a709bb6899711dbab0e16b341085175
+SHA=0864d9b791975497130f5a8e4c16e15a0c9541d0
 gh run list --branch main --limit 20 --json databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt --jq ".[] | select(.headSha == \"$SHA\") | {databaseId,headSha,status,conclusion,workflowName,createdAt,updatedAt}"
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T09:06:19Z","databaseId":27088178253,"headSha":"662e4fdf4a709bb6899711dbab0e16b341085175","status":"completed","updatedAt":"2026-06-07T09:06:35Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T09:22:16Z","databaseId":27088512886,"headSha":"0864d9b791975497130f5a8e4c16e15a0c9541d0","status":"completed","updatedAt":"2026-06-07T09:22:25Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -94,21 +94,21 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # PRIVATE_BLOCKER_EXIT=0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~290572 bytes (290.57 KB), reported no leaks found
+# final rerun scanned ~293 KB, reported no leaks found
 # GITLEAKS_EXIT=0
 
 git diff --check
 # DIFF_CHECK_EXIT=0
 ```
 
-After updating this audit and moving the canonical tracker to `DONE`, a final self-referential rerun rechecked the same local criteria: static links passed for 17 HTML files, private-file blocker exited 0, gitleaks reported no leaks while scanning ~291740 bytes, `git diff --check` exited 0, all 17 discovered HTML files returned HTTP 200 with non-empty `text/html` content, and Chrome DevTools reported no page-level horizontal overflow for all 17 discovered pages including `kanban-status.html`.
+After updating this audit and moving the canonical tracker back to `DONE`, a final self-referential rerun rechecked the same local criteria: static links passed for 17 HTML files, private-file blocker exited 0, gitleaks reported no leaks, and `git diff --check` exited 0. The audit also keeps the exact pre-final-render HTTP and Chrome transcripts below as page-render evidence for the current starting commit.
 
 ### Local HTTP smoke
 
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8796 --bind 127.0.0.1
+python3 -m http.server 8801 --bind 127.0.0.1
 ```
 
 HTTP smoke requested every HTML file and verified status `200`, `text/html`, and non-empty content.
@@ -138,12 +138,12 @@ HTTP smoke passed for 17 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with `--remote-debugging-port=9347 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with `--remote-debugging-port=9351 --remote-allow-origins=*`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-BASE_URL=http://127.0.0.1:8796/ CDP_URL=http://127.0.0.1:9347 PAGES="<all 17 HTML files>" python3 <inline Chrome DevTools smoke script>
+BASE_URL=http://127.0.0.1:8801/ CDP_URL=http://127.0.0.1:9351 ROOT=<repo-root> node /tmp/a2x_cdp_mobile_smoke.mjs
 ```
 
 Result:
