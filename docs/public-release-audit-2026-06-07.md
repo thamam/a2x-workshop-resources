@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `isPrivate: true` and `visibility: PRIVATE` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: `gh api repos/$(gh repo view --json nameWithOwner --jq .nameWithOwner)/pages --jq .status` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current starting commit `fd2a78ec89837bfaf11cb4e84c9d347b7ee07549`.
+- GitHub Security Checks completed successfully for current starting commit `74dbf158c9e08e0e4a5c87168a7caa47f89698fe`.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site smoke passed for all 14 HTML files over `python3 -m http.server`.
 - Representative Chrome DevTools DOM/mobile smoke passed for four public-facing pages at a 390 × 844 viewport, including semantic checks that the canonical Kanban HTML view loaded the current markdown tracker and current maintenance marker.
@@ -17,13 +17,13 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-07 05:06:42 IDT
+2026-06-07 05:18:42 IDT
 ```
 
 Starting commit:
 
 ```text
-fd2a78ec89837bfaf11cb4e84c9d347b7ee07549
+74dbf158c9e08e0e4a5c87168a7caa47f89698fe
 ```
 
 ### Repository visibility
@@ -71,7 +71,7 @@ gh run list --branch main --limit 10 --json databaseId,headSha,status,conclusion
 Result excerpt:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T01:51:06Z","databaseId":27079632338,"headSha":"fd2a78ec89837bfaf11cb4e84c9d347b7ee07549","status":"completed","updatedAt":"2026-06-07T01:51:15Z","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-07T02:07:12Z","databaseId":27079966435,"headSha":"74dbf158c9e08e0e4a5c87168a7caa47f89698fe","status":"completed","updatedAt":"2026-06-07T02:07:26Z","workflowName":"Security checks"}
 ```
 
 Interpretation: the latest pushed starting commit's GitHub Security Checks are green.
@@ -88,7 +88,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # private-file blocker exit code 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~226936 bytes (226.94 KB); no leaks found
+# scanned ~227428 bytes (227.43 KB); no leaks found
 
 git diff --check
 # exit code 0
@@ -126,19 +126,19 @@ HTML smoke passed for 14 files
 
 ### Representative DOM/mobile smoke
 
-Launched a dedicated headless Chrome with `--remote-debugging-port=9231 --remote-allow-origins=*`, loaded selected pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, semantic text markers, and no page-level horizontal overflow.
+Launched a dedicated headless Chrome with `--remote-debugging-port=9232 --remote-allow-origins=*`, loaded selected pages over the local HTTP server, set a `390x844` mobile viewport, and verified HTML/body/H1 structure, semantic text markers, and no page-level horizontal overflow.
 
 Result:
 
 ```text
-DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390, markers=[True, True, True, True])
-DOM OK kanban-status.html (25742 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True, True])
-DOM OK resources/prd-html-review-workbench.html (1188 chars, h1='PRD to HTML review workbench.', width 390/390, markers=[True, True, True, True])
-DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390, markers=[True, True, True, True])
+DOM OK index.html (3882 chars, h1='Claude Code workshop resources.', width 390/390, markers=[true,true,true,true])
+DOM OK kanban-status.html (26451 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[true,true,true,true])
+DOM OK resources/prd-html-review-workbench.html (1188 chars, h1='PRD to HTML review workbench.', width 390/390, markers=[true,true,true,true])
+DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390, markers=[true,true,true,true])
 Representative Chrome DevTools DOM/mobile smoke passed for 4 pages at 390x844
 ```
 
-The canonical Kanban view was checked for semantic loading of the current markdown tracker, including the current starting commit marker `fd2a78e` and the `Started Maintenance` transition.
+The canonical Kanban view was checked for semantic loading of the current markdown tracker, including the current starting commit marker `74dbf15` and the `Started Maintenance` transition.
 
 ## Remaining approval gates
 
