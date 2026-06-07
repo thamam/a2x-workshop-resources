@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate,visibility` returned `visibility=PRIVATE` and `isPrivate=true` for `thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `676201f121ceabfe2c7134329122d5ee91db71df` (`databaseId` 27106641824).
+- GitHub Security Checks completed successfully for current pushed HEAD `41f6d1b783c9582d75aa336b7603e517dda1ae4d` (`databaseId` 27106956619).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
 - Chrome DevTools DOM/mobile smoke passed for all 18 discovered HTML files at a 390 × 844 viewport with no page-level horizontal overflow.
@@ -17,19 +17,19 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 Audit timestamp from local environment:
 
 ```text
-2026-06-08 01:36–01:38 IDT
+2026-06-08 01:50–01:52 IDT
 ```
 
 Current pushed HEAD inspected in this refresh:
 
 ```text
-676201f121ceabfe2c7134329122d5ee91db71df
+41f6d1b783c9582d75aa336b7603e517dda1ae4d
 ```
 
 Latest commit subject at audit start:
 
 ```text
-676201f docs: refresh current public readiness evidence
+41f6d1b docs: refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -70,13 +70,13 @@ Interpretation: Pages is not configured, which matches the approval gate.
 Command:
 
 ```bash
-gh run list --branch main --workflow "Security Checks" --limit 10 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "676201f121ceabfe2c7134329122d5ee91db71df")'
+gh run list --branch main --workflow "Security Checks" --limit 10 --json databaseId,headSha,status,conclusion,createdAt,updatedAt,url --jq '.[] | select(.headSha == "41f6d1b783c9582d75aa336b7603e517dda1ae4d")'
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-07T22:24:55Z","databaseId":27106641824,"headSha":"676201f121ceabfe2c7134329122d5ee91db71df","status":"completed","updatedAt":"2026-06-07T22:25:07Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27106641824"}
+{"conclusion":"success","createdAt":"2026-06-07T22:38:56Z","databaseId":27106956619,"headSha":"41f6d1b783c9582d75aa336b7603e517dda1ae4d","status":"completed","updatedAt":"2026-06-07T22:39:08Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27106956619"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -93,7 +93,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# scanned ~424378 bytes (424.38 KB)
+# scanned the current tree
 # no leaks found
 # exit 0
 
@@ -108,7 +108,7 @@ These results are from the local verification pass during this maintenance refre
 Served the repo locally with:
 
 ```bash
-python3 -m http.server 8790 --bind 127.0.0.1
+python3 -m http.server 8791 --bind 127.0.0.1
 ```
 
 HTTP smoke requested every discovered HTML file and verified status `200` with HTML content.
@@ -139,19 +139,19 @@ HTTP smoke passed for 18 HTML files
 
 ### Chrome DevTools DOM/mobile smoke
 
-Launched a dedicated headless Chrome with a disposable profile, remote debugging port `9227`, and `--remote-allow-origins=http://127.0.0.1:9227`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified H1 structure plus no page-level horizontal overflow.
+Launched a dedicated headless Chrome with a disposable profile, remote debugging port `9228`, and `--remote-allow-origins=http://127.0.0.1:9228`, loaded all HTML pages over the local HTTP server, set a `390x844` mobile viewport, and verified H1 structure plus no page-level horizontal overflow.
 
 Command:
 
 ```bash
-ROOT=<repo-root> BASE_URL=http://127.0.0.1:8790/ CDP_URL=http://127.0.0.1:9227 KANBAN_MARKERS='Finished Maintenance|676201f|approval-gated' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
+ROOT=<repo-root> BASE_URL=http://127.0.0.1:8791/ CDP_URL=http://127.0.0.1:9228 KANBAN_MARKERS='Finished Maintenance|41f6d1b|approval-gated' python3 <kanban-worker-skill>/scripts/static-site-cdp-mobile-smoke.py
 ```
 
 Result:
 
 ```text
 DOM OK index.html (4548 chars, h1='Claude Code workshop resources.', width 390/390)
-DOM OK kanban-status.html (84388 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
+DOM OK kanban-status.html (85153 chars, h1='Project Kanban, readable at a glance.', width 390/390, markers=[True, True, True])
 DOM OK resources/a2x-marketplace-overview.html (3016 chars, h1='A2X Marketplace overview.', width 390/390)
 DOM OK resources/a2x-marketplace-tutorial.html (3507 chars, h1='A2X Marketplace tutorial.', width 390/390)
 DOM OK resources/buildtool-decision.html (8659 chars, h1='Should we ship a first-class buildTool?', width 390/390)
