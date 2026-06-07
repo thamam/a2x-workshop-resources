@@ -105,6 +105,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current HEAD remains public-ready and approval-gated
+  - Evidence: `docs/public-release-audit-2026-06-07.md` updated for current HEAD `e12f1bb4761b021712c4e1583950956ff9f68397`; repository remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27083880518); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 14 HTML files passed on 2026-06-07 08:44–08:50 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Verify current evidence-refresh commit remains public-ready and approval-gated
   - Evidence: current HEAD `ad2a35aeacc778b827a5cc7009e5079f0cbc3d44` remains private via `gh repo view`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27083594117); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools 390×844 DOM/mobile checks for all 14 HTML files passed on 2026-06-07 08:29–08:31 IDT. No publishing or private-resource exposure was performed.
 - [x] Maintenance: Verify latest evidence-refresh commit remains public-ready and approval-gated
@@ -223,6 +225,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-07 — Finished Maintenance: verified current HEAD `e12f1bb`; updated `docs/public-release-audit-2026-06-07.md`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `e12f1bb4761b021712c4e1583950956ff9f68397`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools DOM/mobile checks for all 14 HTML files passed. No safe unblocked implementation stories remain listed.
+
+- 2026-06-07 — Started Maintenance: verify current HEAD `e12f1bb` remains public-ready and approval-gated; scope is local/GitHub verification only, with no public publishing or private-resource exposure.
 
 - 2026-06-07 — Finished Maintenance: verified current evidence-refresh commit `ad2a35a`; repository remains private; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for `ad2a35aeacc778b827a5cc7009e5079f0cbc3d44`; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 14 HTML files, and Chrome DevTools DOM/mobile checks for all 14 HTML files passed. No safe unblocked implementation stories remain listed.
 
