@@ -6,7 +6,7 @@ Scope: autonomous safety/readiness refresh for the private A2X Workshop Resource
 
 - Repository remains private: `gh repo view --json nameWithOwner,isPrivate --jq '.nameWithOwner + " private=" + (.isPrivate|tostring)'` returned `thamam/a2x-workshop-resources private=true`.
 - GitHub Pages remains unconfigured: `gh api repos/:owner/:repo/pages --jq '.status'` returned `HTTP 404 Not Found`, which is expected when Pages is not configured.
-- GitHub Security Checks completed successfully for current pushed HEAD `a858547bc631fba4fdb1e105317f48cdbccc4505` (`databaseId` 27089940111).
+- GitHub Security Checks completed successfully for the baseline pushed HEAD inspected before the M.4 edits, `a858547bc631fba4fdb1e105317f48cdbccc4505` (`databaseId` 27089940111).
 - Reconciled one discovered untracked public-facing artifact: `resources/buildtool-decision.html` now has public-safe scope copy, no direct private/source links, mobile overflow fixes, hub/inventory/usage-map wiring, and sanitized public-safe references/tradeoff sections.
 - Local safety checks passed: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Local static-site HTTP smoke passed for all 18 discovered HTML files over `python3 -m http.server`.
@@ -21,7 +21,7 @@ Audit timestamp from local environment:
 2026-06-07 13:43 IDT
 ```
 
-Starting commit:
+Baseline pushed commit inspected before the M.4 edits:
 
 ```text
 a858547bc631fba4fdb1e105317f48cdbccc4505
@@ -79,7 +79,7 @@ Result:
 27089940111	Security checks	completed	success	a858547bc631fba4fdb1e105317f48cdbccc4505	docs: reconcile buildtool decision resource	2026-06-07T10:29:40Z
 ```
 
-Interpretation: the latest pushed HEAD's GitHub Security Checks are green.
+Interpretation: the baseline pushed HEAD inspected before the M.4 edits had green GitHub Security Checks; the M.4 commit's GitHub check result is recorded in the canonical Kanban transition/report.
 
 ### Local checks
 
