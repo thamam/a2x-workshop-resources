@@ -109,6 +109,9 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current public repo and approved Pages state for HEAD `ae89c58`
+  - Evidence: current HEAD `ae89c58e99ac01b06770abab88e1f7456ceb0df5` (`Link workshop hub back to A2X website`); `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD; `gh repo view` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API reports approved Pages site `https://thamam.github.io/a2x-workshop-resources/` built from `main` branch `/`; public smoke checks returned HTTP 200 for the hub, Skill Wizard page, `https://a2xautonomy.com/`, and `https://a2xautonomy.com/#resources`; GitHub Security Checks run `27138325940` and `pages-build-deployment` run `27138324219` both succeeded; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, and stale-audit-identifier search passed on 2026-06-08 15:49–15:50 IDT. No visibility changes, Pages configuration changes, analytics/lead capture, or direct private/source-link exposure were performed.
+
 - [x] Story 8.2: Tune and publish Claude Wizard Skill Wizard
   - Evidence: Skill Wizard page tuned in commit `09920d1` to use full-width desktop layout, reduce copy from teaching mode to evaluation/scoring mode, and make invalid/gibberish input fail credibly. Verification passed on 2026-06-08: `git diff --check`, static link check for 19 HTML files, private-file blocker, gitleaks `--no-git`, local HTTP 200 smoke, browser check with sample skill score `100`, gibberish `asgfsfd` score `0` / verdict `Not a credible Skill draft.`, 96% viewport width at 1280px, no horizontal overflow, and no live-page console errors. GitHub Security run `27137036069` passed. GitHub Pages was enabled after Tomer approval and built from `main` branch `/`; live Skill Wizard URL: `https://thamam.github.io/a2x-workshop-resources/resources/claude-wizard-skill-wizard.html`.
 
@@ -467,6 +470,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-08 15:50 IDT — Finished Maintenance: verified current HEAD `ae89c58`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; approved GitHub Pages site is built from `main` branch `/`; GitHub Security Checks run `27138325940` and `pages-build-deployment` run `27138324219` succeeded; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, public smoke checks, and stale-audit-identifier search passed. No visibility changes, Pages configuration changes, analytics/lead capture, or direct private/source-link exposure were performed.
+
+- 2026-06-08 15:49 IDT — Started Maintenance: verify current public repository and approved Pages state for HEAD `ae89c58`; scope is local/GitHub verification only, with no visibility changes, no Pages configuration changes, no analytics/lead capture, and no direct private/source-link exposure.
 
 - 2026-06-08 13:47 IDT — Finished Maintenance: verified current HEAD `b2398d3`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27126118245); static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, and stale-audit-identifier search passed. No GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure was performed.
 
