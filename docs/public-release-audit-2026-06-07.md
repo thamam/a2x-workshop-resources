@@ -6,7 +6,7 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 
 - Repository visibility is now public by approval: `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,isPrivate,visibility,url` returned `visibility=PUBLIC`, `isPrivate=false`, and URL `https://github.com/thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which means Pages is still not enabled/published.
-- GitHub Security Checks completed successfully for current HEAD `8a42354d8784f486549dd350de82de59ea8de01f` (`databaseId` 27114449458).
+- GitHub Security Checks completed successfully for current HEAD `4faa02d5a150defff89b5bff19163cd513765dbd` (`databaseId` 27114843372).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - The latest public-launch state is recorded in `kanban-status.md`: Tomer approved switching `thamam/a2x-workshop-resources` from private to public and connecting it from the A2X website on 2026-06-08.
 - Remaining source-release gates still apply: direct public source linking for A2X Marketplace and Wiki-LLM remains blocked until cleanup and approval.
@@ -16,19 +16,19 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 Audit timestamp from local environment:
 
 ```text
-2026-06-08 06:46 IDT
+2026-06-08 07:00 IDT
 ```
 
 Current HEAD inspected in this refresh:
 
 ```text
-8a42354d8784f486549dd350de82de59ea8de01f
+4faa02d5a150defff89b5bff19163cd513765dbd
 ```
 
 Latest commit subject at audit start:
 
 ```text
-8a42354 docs: refresh public repo gate evidence
+4faa02d docs: refresh public repo gate evidence
 ```
 
 ### Repository visibility
@@ -58,6 +58,7 @@ gh api repos/thamam/a2x-workshop-resources/pages
 Result excerpt:
 
 ```text
+{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}
 gh: Not Found (HTTP 404)
 ```
 
@@ -68,13 +69,13 @@ Interpretation: GitHub Pages is not configured, so no GitHub Pages site was enab
 Command:
 
 ```bash
-gh run list --commit 8a42354d8784f486549dd350de82de59ea8de01f --limit 10 --json databaseId,workflowName,status,conclusion,headSha,createdAt,updatedAt
+gh run list --commit 4faa02d5a150defff89b5bff19163cd513765dbd --limit 5 --json databaseId,name,status,conclusion,headSha,createdAt,updatedAt,url
 ```
 
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-08T03:33:46Z","databaseId":27114449458,"headSha":"8a42354d8784f486549dd350de82de59ea8de01f","status":"completed","updatedAt":"2026-06-08T03:33:55Z","workflowName":"Security checks"}
+[{"conclusion":"success","createdAt":"2026-06-08T03:47:57Z","databaseId":27114843372,"headSha":"4faa02d5a150defff89b5bff19163cd513765dbd","name":"Security checks","status":"completed","updatedAt":"2026-06-08T03:48:06Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27114843372"}]
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
@@ -98,7 +99,11 @@ git diff --check
 # exit 0
 ```
 
-These results are from the local verification pass during this reconciliation refresh.
+These results are from the local verification pass during this refresh.
+
+### Stale audit identifier search
+
+Result: after this refresh, a repository-wide content search for the prior audit HEAD, prior commit subject, and prior GitHub Security Checks run ID found only the historical DONE/Recent Transition entries in `kanban-status.md` for the prior maintenance run.
 
 ## Remaining gates
 
