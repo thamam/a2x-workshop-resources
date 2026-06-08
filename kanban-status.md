@@ -91,7 +91,9 @@
 
 ### 🏃 IN PROGRESS (Currently Active)
 
-- None right now.
+- [ ] Story 8.2: Tune and publish Claude Wizard Skill Wizard
+  - Status: in progress
+  - Scope: widen desktop layout, cut teaching copy, make invalid/gibberish input fail credibly, re-verify, then enable GitHub Pages publishing after fixes.
 
 ### 🚧 BLOCKED / APPROVAL REQUIRED
 
