@@ -4,9 +4,9 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 
 ## Summary
 
-- Repository visibility is now public by approval: `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,isPrivate,visibility,url` returned `visibility=PUBLIC`, `isPrivate=false`, and URL `https://github.com/thamam/a2x-workshop-resources`.
+- Repository visibility is public by approval: `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,isPrivate,visibility,url` returned `visibility=PUBLIC`, `isPrivate=false`, and URL `https://github.com/thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which means Pages is still not enabled/published.
-- GitHub Security Checks completed successfully for current HEAD `31fc8c194099ac2b1c1601cba2041e8cbe9c9993` (`databaseId` 27116547888).
+- GitHub Security Checks completed successfully for current HEAD `d2606dfef37249468ef0d79816d5bc98b737ac7a` (`databaseId` 27117298528).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - The latest public-launch state is recorded in `kanban-status.md`: Tomer approved switching `thamam/a2x-workshop-resources` from private to public and connecting it from the A2X website on 2026-06-08.
 - Remaining source-release gates still apply: direct public source linking for A2X Marketplace and Wiki-LLM remains blocked until cleanup and approval.
@@ -16,19 +16,19 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 Audit timestamp from local environment:
 
 ```text
-2026-06-08 08:07 IDT
+2026-06-08 08:22 IDT
 ```
 
 Current HEAD inspected in this refresh:
 
 ```text
-31fc8c194099ac2b1c1601cba2041e8cbe9c9993
+d2606dfef37249468ef0d79816d5bc98b737ac7a
 ```
 
 Latest commit subject at audit start:
 
 ```text
-31fc8c1 docs: refresh public repo gate evidence
+d2606df docs: refresh public repo gate evidence
 ```
 
 ### Repository visibility
@@ -52,14 +52,14 @@ Interpretation: the repository is public after the approval recorded in `kanban-
 Command:
 
 ```bash
-gh api repos/thamam/a2x-workshop-resources/pages
+gh api repos/thamam/a2x-workshop-resources/pages; code=$?; printf 'pages_exit=%s\n' "$code"; exit 0
 ```
 
 Result excerpt:
 
 ```text
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}
-gh: Not Found (HTTP 404)
+{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}gh: Not Found (HTTP 404)
+pages_exit=1
 ```
 
 Interpretation: GitHub Pages is not configured, so no GitHub Pages site was enabled or published by this refresh.
@@ -69,13 +69,13 @@ Interpretation: GitHub Pages is not configured, so no GitHub Pages site was enab
 Command:
 
 ```bash
-gh run list --commit 31fc8c194099ac2b1c1601cba2041e8cbe9c9993 --limit 5 --json databaseId,name,status,conclusion,headSha,createdAt,updatedAt,url
+sha=$(git rev-parse HEAD); gh run list --commit "$sha" --limit 10 --json databaseId,workflowName,status,conclusion,headSha,createdAt,updatedAt,url --jq ".[] | select(.headSha == \"$sha\")"
 ```
 
 Result:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-08T04:44:46Z","databaseId":27116547888,"headSha":"31fc8c194099ac2b1c1601cba2041e8cbe9c9993","name":"Security checks","status":"completed","updatedAt":"2026-06-08T04:44:57Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27116547888"}]
+{"conclusion":"success","createdAt":"2026-06-08T05:09:31Z","databaseId":27117298528,"headSha":"d2606dfef37249468ef0d79816d5bc98b737ac7a","status":"completed","updatedAt":"2026-06-08T05:09:43Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27117298528","workflowName":"Security checks"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
