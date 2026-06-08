@@ -2,6 +2,14 @@
 
 Public-facing resources for A2X Claude Code workshops.
 
+## Start here
+
+- **A2X website:** https://a2xautonomy.com/
+- **Website resources section:** https://a2xautonomy.com/#resources
+- **Live resource hub:** https://thamam.github.io/a2x-workshop-resources/
+
+If you arrived here from a workshop, use the live hub first. The A2X website explains the workshop format and points back here for the full public resource bundle. This repository points back to the website so attendees can move between the workshop offer, the curated resource hub, and the underlying source files without guessing where to go next.
+
 This repository is public. Treat every commit as publishable.
 
 ## What belongs here
