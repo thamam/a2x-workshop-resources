@@ -109,6 +109,8 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current public repo and Pages-gate state for HEAD `6161ad0`
+  - Evidence: current HEAD `6161ad0c88b4e997cf47ce1c77894d4ccf015d14`; `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,visibility,isPrivate,url` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27108676006); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, and `git diff --check` passed on 2026-06-08 03:08 IDT. No GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure was performed.
 - [x] Maintenance: Reconcile public-launch evidence after approved visibility change
   - Evidence: reconciliation commit `2aaec80520b97289de10aa6b4c1cdcb534ec4596`; `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,visibility,isPrivate,url` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for that commit (`databaseId` 27108617596); `docs/public-release-audit-2026-06-07.md` now reflects the approved public visibility and remaining Pages/source-link gates; `docs/public-launch-checklist.md` now records Tomer's 2026-06-08 approval scope; `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, and `git diff --check` passed on 2026-06-08 02:53 IDT.
 - [x] Story 5.5: Publish repository and connect from A2X website
@@ -375,6 +377,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-08 03:08 IDT — Finished Maintenance: verified current HEAD `6161ad0`; repository is public per approved scope; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27108676006); static-link, private-file blocker, gitleaks `--no-git`, and `git diff --check` passed. No GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure was performed.
+
+- 2026-06-08 03:07 IDT — Started Maintenance: verify current public repository and Pages-gate state for HEAD `6161ad0`; scope is local/GitHub verification only, with no GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure.
 
 - 2026-06-08 02:54 IDT — Finished Maintenance: reconciled public-launch evidence and pushed commit `2aaec80`; updated `docs/public-release-audit-2026-06-07.md` and `docs/public-launch-checklist.md` to reflect Tomer-approved public repository visibility while keeping GitHub Pages/source-link gates explicit. GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27108617596); static-link, private-file blocker, gitleaks `--no-git`, and `git diff --check` passed.
 
