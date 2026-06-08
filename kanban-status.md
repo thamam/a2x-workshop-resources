@@ -109,6 +109,9 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current public repo and approved Pages state for HEAD `2896cbe`
+  - Evidence: current HEAD `2896cbe6e0d488a0e742ea59c36aa221bdeaaff7` (`Refresh public readiness audit`); `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD; `gh repo view` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API reports approved Pages site `https://thamam.github.io/a2x-workshop-resources/` built from `main` branch `/`; public smoke checks returned HTTP 200 for the hub, Skill Wizard page, `https://a2xautonomy.com/`, and `https://a2xautonomy.com/#resources` using a browser-style User-Agent for the A2X site after default urllib returned 403; GitHub Security Checks run `27138860618` and `pages-build-deployment` run `27138858985` both succeeded; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, and stale-audit-identifier search passed on 2026-06-08 19:55–19:56 IDT. No visibility changes, Pages configuration changes, analytics/lead capture, or direct private/source-link exposure were performed.
+
 - [x] Maintenance: Verify current public repo and approved Pages state for HEAD `ae89c58`
   - Evidence: current HEAD `ae89c58e99ac01b06770abab88e1f7456ceb0df5` (`Link workshop hub back to A2X website`); `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD; `gh repo view` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API reports approved Pages site `https://thamam.github.io/a2x-workshop-resources/` built from `main` branch `/`; public smoke checks returned HTTP 200 for the hub, Skill Wizard page, `https://a2xautonomy.com/`, and `https://a2xautonomy.com/#resources`; GitHub Security Checks run `27138325940` and `pages-build-deployment` run `27138324219` both succeeded; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, and stale-audit-identifier search passed on 2026-06-08 15:49–15:50 IDT. No visibility changes, Pages configuration changes, analytics/lead capture, or direct private/source-link exposure were performed.
 
@@ -470,6 +473,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-08 19:56 IDT — Finished Maintenance: verified current HEAD `2896cbe`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; approved GitHub Pages site is built from `main` branch `/`; GitHub Security Checks run `27138860618` and `pages-build-deployment` run `27138858985` succeeded; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, public smoke checks, and stale-audit-identifier search passed. No visibility changes, Pages configuration changes, analytics/lead capture, or direct private/source-link exposure were performed.
+
+- 2026-06-08 19:55 IDT — Started Maintenance: verify current public repository and approved Pages state for HEAD `2896cbe`; scope is local/GitHub verification only, with no repository visibility changes, Pages configuration changes, analytics/lead capture, or direct private/source-link exposure.
 
 - 2026-06-08 15:50 IDT — Finished Maintenance: verified current HEAD `ae89c58`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; approved GitHub Pages site is built from `main` branch `/`; GitHub Security Checks run `27138325940` and `pages-build-deployment` run `27138324219` succeeded; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, public smoke checks, and stale-audit-identifier search passed. No visibility changes, Pages configuration changes, analytics/lead capture, or direct private/source-link exposure were performed.
 
