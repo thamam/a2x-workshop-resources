@@ -109,6 +109,9 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Verify current public repo and Pages-gate state for HEAD `28ef924`
+  - Evidence: current HEAD `28ef924395a9fa83f1f8278bd40d089570c01903`; `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD; `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,visibility,isPrivate,url` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27118662161); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, and stale-audit-identifier search passed on 2026-06-08 09:03–09:04 IDT. No GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure was performed.
+
 - [x] Maintenance: Verify current public repo and Pages-gate state for HEAD `ddbb30d`
   - Evidence: current HEAD `ddbb30d7a7f4191b44031c75383f8d3e70dd9ef0`; `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD; `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,visibility,isPrivate,url` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27118235552); `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, `git diff --check`, and stale-audit-identifier search passed on 2026-06-08 08:50 IDT. No GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure was performed.
 
@@ -446,6 +449,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-08 09:04 IDT — Finished Maintenance: verified current HEAD `28ef924`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27118662161); static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, and stale-audit-identifier search passed. No GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure was performed.
+
+- 2026-06-08 09:02 IDT — Started Maintenance: verify current public repository and Pages-gate state for HEAD `28ef924`; scope is local/GitHub verification only, with no GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure.
 
 - 2026-06-08 08:50 IDT — Finished Maintenance: verified current HEAD `ddbb30d`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; GitHub Pages API still returns 404/not configured; GitHub Security Checks succeeded for HEAD (`databaseId` 27118235552); static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, and stale-audit-identifier search passed. No GitHub Pages publishing, analytics/lead capture, or direct private/source-link exposure was performed.
 
