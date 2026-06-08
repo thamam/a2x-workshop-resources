@@ -2,7 +2,7 @@
 
 Public-facing resources for A2X Claude Code workshops.
 
-This repository is designed to become public. Treat every commit as publishable.
+This repository is public. Treat every commit as publishable.
 
 ## What belongs here
 
@@ -21,7 +21,7 @@ This repository is designed to become public. Treat every commit as publishable.
 
 ## Security rule
 
-Before this repository becomes public, every commit must pass secret scanning, private-file checks, and static local-link checks.
+Every commit must pass secret scanning, private-file checks, and static local-link checks.
 
 Local verification:
 
@@ -40,4 +40,4 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 Then open `http://127.0.0.1:8765/index.html`.
 
-GitHub Pages readiness notes live in `docs/github-pages-readiness.md`. Do not enable Pages or make the repo public without Tomer approval.
+GitHub Pages publishes from `main` branch `/` at `https://thamam.github.io/a2x-workshop-resources/` after Tomer approval. Readiness notes live in `docs/github-pages-readiness.md`.

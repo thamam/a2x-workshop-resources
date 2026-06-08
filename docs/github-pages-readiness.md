@@ -1,6 +1,6 @@
 # GitHub Pages readiness notes
 
-This repo is structured so Tomer can approve a no-build GitHub Pages launch later, without changing the content layout.
+This repo is structured for no-build GitHub Pages publishing.
 
 ## Current static structure
 
@@ -19,19 +19,18 @@ Yunes may keep doing these inside the private repo:
 - Run local link checks, secret scans, private-file checks, and render screenshots.
 - Commit and push safe private-repo changes.
 
-## Approval gate
+## Publishing state
 
-Do not do any of the following without explicit Tomer approval:
+GitHub Pages is enabled after Tomer approval and publishes from `main` branch `/` at `https://thamam.github.io/a2x-workshop-resources/`.
 
-- Make the repository public.
-- Enable GitHub Pages in repository settings.
-- Publish a public Pages URL.
+Do not do any of the following without additional explicit Tomer approval:
+
 - Add analytics, tracking, lead capture, pricing, or stronger marketing claims.
 - Link private/internal materials or local-only source paths.
 
 ## Pre-launch command checklist
 
-Run from the repo root before asking Tomer for final launch approval:
+Run from the repo root before expanding the public launch scope:
 
 ```bash
 python3 - <<'PY'

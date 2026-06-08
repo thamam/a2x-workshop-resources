@@ -91,9 +91,7 @@
 
 ### 🏃 IN PROGRESS (Currently Active)
 
-- [ ] Story 8.2: Tune and publish Claude Wizard Skill Wizard
-  - Status: in progress
-  - Scope: widen desktop layout, cut teaching copy, make invalid/gibberish input fail credibly, re-verify, then enable GitHub Pages publishing after fixes.
+- None right now.
 
 ### 🚧 BLOCKED / APPROVAL REQUIRED
 
@@ -110,6 +108,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 8.2: Tune and publish Claude Wizard Skill Wizard
+  - Evidence: Skill Wizard page tuned in commit `09920d1` to use full-width desktop layout, reduce copy from teaching mode to evaluation/scoring mode, and make invalid/gibberish input fail credibly. Verification passed on 2026-06-08: `git diff --check`, static link check for 19 HTML files, private-file blocker, gitleaks `--no-git`, local HTTP 200 smoke, browser check with sample skill score `100`, gibberish `asgfsfd` score `0` / verdict `Not a credible Skill draft.`, 96% viewport width at 1280px, no horizontal overflow, and no live-page console errors. GitHub Security run `27137036069` passed. GitHub Pages was enabled after Tomer approval and built from `main` branch `/`; live Skill Wizard URL: `https://thamam.github.io/a2x-workshop-resources/resources/claude-wizard-skill-wizard.html`.
 
 - [x] Story 8.1: Build Claude Wizard Skill Wizard static freebie
   - Evidence: implementation plan created at `docs/claude-wizard-skill-wizard-plan.md`; static inspector page created at `resources/claude-wizard-skill-wizard.html`; hub card added to `index.html`; `docs/tool-giveaway-backlog.md`, `docs/workshop-usage-map.md`, and `docs/resource-inventory.md` updated. Verification passed on 2026-06-08: `git diff --check`, `python3 scripts/check-static-links.py` for 19 HTML files, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP 200 smoke for index/page/plan, browser smoke with sample skill score `100`, bad skill score `62`, 4 failures detected, and no horizontal overflow observed. Feature commit `4ed0482` pushed; GitHub Security checks run `27133810948` succeeded.

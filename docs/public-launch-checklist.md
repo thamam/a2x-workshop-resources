@@ -7,7 +7,7 @@ Use this before enabling GitHub Pages or expanding public release scope beyond t
 Latest audit: `docs/public-release-audit-2026-06-07.md`.
 
 - [x] Repository visibility was changed to public only after Tomer approved public release on 2026-06-08.
-- [x] GitHub Pages is not enabled until Tomer approves Pages publishing.
+- [x] GitHub Pages was enabled only after Tomer approved Pages publishing on 2026-06-08.
 - [x] `scripts/block-private-files.sh` passes on all tracked and untracked files.
 - [x] Gitleaks passes locally and in GitHub Actions.
 - [x] No `.env`, keys, credentials, tokens, private notes, client names, or local-only paths are present in public-facing content.
@@ -19,11 +19,10 @@ Latest audit: `docs/public-release-audit-2026-06-07.md`.
 - [x] GitHub Pages readiness notes in `docs/github-pages-readiness.md` are current.
 - [x] `.nojekyll` is present if publishing through GitHub Pages later.
 
-## Prepared but not enabled
+## Enabled public surfaces
 
 - Static no-build structure exists at `index.html` plus `resources/*.html`.
-- `.nojekyll` is present for future GitHub Pages compatibility.
-- GitHub Pages publishing remains blocked until Tomer explicitly approves Pages settings.
+- GitHub Pages publishes from `main` branch `/` at `https://thamam.github.io/a2x-workshop-resources/`.
 - Direct public source linking for A2X Marketplace and Wiki-LLM remains blocked until cleanup and approval.
 
 ## Approval record
@@ -32,4 +31,4 @@ Public release approved by: Tomer.
 
 Date/time: 2026-06-08.
 
-Scope approved: switch `thamam/a2x-workshop-resources` from private to public and connect it from the A2X website. GitHub Pages publishing, direct private/internal source exposure, analytics/tracking, lead capture, pricing claims, and strong marketing claims remain outside this approval.
+Scope approved: switch `thamam/a2x-workshop-resources` from private to public, connect it from the A2X website, and publish the Skill Wizard after the requested evaluation-mode fixes. Direct private/internal source exposure, analytics/tracking, lead capture, pricing claims, and strong marketing claims remain outside this approval.
