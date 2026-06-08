@@ -6,7 +6,7 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 
 - Repository visibility is public by approval: `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,isPrivate,visibility,url` returned `visibility=PUBLIC`, `isPrivate=false`, and URL `https://github.com/thamam/a2x-workshop-resources`.
 - GitHub Pages remains unconfigured: the GitHub Pages REST API returned `HTTP 404`, which means Pages is still not enabled/published.
-- GitHub Security Checks completed successfully for current HEAD `a48c2bdaaebd07a769bb505bb3b780bc708c3bcf` (`databaseId` 27120148286).
+- GitHub Security Checks completed successfully for current HEAD `b2398d31731b5628b998c901c6e9f02a1bd99bd9` (`databaseId` 27126118245).
 - Local safety checks passed for the current tree: static links, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - The latest public-launch state is recorded in `kanban-status.md`: Tomer approved switching `thamam/a2x-workshop-resources` from private to public and connecting it from the A2X website on 2026-06-08.
 - Remaining source-release gates still apply: direct public source linking for A2X Marketplace and Wiki-LLM remains blocked until cleanup and approval.
@@ -16,19 +16,19 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 Audit timestamp from local environment:
 
 ```text
-2026-06-08 11:41 IDT
+2026-06-08 13:45 IDT
 ```
 
 Current HEAD inspected in this refresh:
 
 ```text
-a48c2bdaaebd07a769bb505bb3b780bc708c3bcf
+b2398d31731b5628b998c901c6e9f02a1bd99bd9
 ```
 
 Latest commit subject at audit start:
 
 ```text
-a48c2bd docs: refresh public repo gate evidence
+b2398d3 docs: refresh public repo gate evidence
 ```
 
 ### Repository visibility
@@ -75,7 +75,7 @@ sha=$(git rev-parse HEAD); gh run list --commit "$sha" --limit 10 --json databas
 Result:
 
 ```json
-{"conclusion":"success","createdAt":"2026-06-08T06:31:22Z","databaseId":27120148286,"headSha":"a48c2bdaaebd07a769bb505bb3b780bc708c3bcf","status":"completed","updatedAt":"2026-06-08T06:31:31Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27120148286","workflowName":"Security checks"}
+{"conclusion":"success","createdAt":"2026-06-08T08:44:17Z","databaseId":27126118245,"headSha":"b2398d31731b5628b998c901c6e9f02a1bd99bd9","status":"completed","updatedAt":"2026-06-08T08:44:27Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27126118245","workflowName":"Security checks"}
 ```
 
 Interpretation: current pushed HEAD has green GitHub Security Checks.
