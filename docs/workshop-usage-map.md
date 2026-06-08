@@ -34,6 +34,16 @@ Attendee action: Pick one repeated workflow and convert it into a skill.
 
 Status: ready draft.
 
+### Skill review gate: Claude Wizard / Skill Wizard
+
+Resource: `resources/claude-wizard-skill-wizard.html`.
+
+Use when: attendees have drafted a skill and need to know whether Claude will actually discover, load, and use it.
+
+Attendee action: Paste `SKILL.md`, run the local quick check, then copy the deeper review prompt into Claude or Claude Code for feedback against current Anthropic Skill guidance.
+
+Status: ready v1 static inspector.
+
 ### Exercise handoff: Product brief generator
 
 Resource: `resources/product-brief-generator.html`.

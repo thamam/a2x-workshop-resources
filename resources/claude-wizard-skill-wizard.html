@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Claude Wizard · Skill Wizard — A2X</title>
+  <meta name="description" content="A public-safe Claude Wizard sub-wizard for inspecting Claude Skills against current Anthropic best practices and A2X workshop guidance." />
+  <style>
+    :root{color-scheme:dark;--bg:#16130f;--card:#242019;--card2:#1d1913;--line:#3a342a;--text:#f3ece1;--muted:#b5ab98;--accent:#d97757;--accent2:#f2b279;--ok:#98d7a5;--warn:#f4cf86;--bad:#ef8f7a;--ink:#0f0d0a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 36rem);color:var(--text);line-height:1.58}main{max-width:1120px;margin:0 auto;padding:44px 20px 36px}a{color:#f2b279}.back{display:inline-block;margin-bottom:28px;color:var(--accent2);font-weight:750;text-decoration:none}.eyebrow{color:var(--accent2);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:850}h1{font-size:clamp(2.35rem,7vw,5.2rem);line-height:.96;margin:14px 0 18px;letter-spacing:-.055em;max-width:930px}h2{font-size:clamp(1.45rem,3vw,2.1rem);letter-spacing:-.025em;margin:0 0 10px}h3{margin:16px 0 7px;font-size:1.08rem}p,li{color:var(--muted)}p{margin:0}.lead{font-size:1.16rem;max-width:760px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 0}.button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:800;cursor:pointer}.button.primary{background:var(--accent);border-color:var(--accent);color:#1d120d}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));border-radius:22px;padding:20px}.callout{border-color:#6b452e;background:rgba(217,119,87,.10)}section{margin-top:44px}.tag{color:var(--accent2);font-size:.74rem;font-weight:850;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}textarea{width:100%;min-height:340px;resize:vertical;border:1px solid var(--line);border-radius:18px;background:#0f0d0a;color:var(--text);padding:16px;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}textarea:focus{outline:2px solid var(--accent);outline-offset:2px}.inspector{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:18px;align-items:start}.score{font-size:3.2rem;line-height:1;font-weight:900;letter-spacing:-.05em}.checks{display:grid;gap:9px;margin-top:14px}.check{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:rgba(15,13,10,.36)}.check strong{display:block;color:var(--text);margin-bottom:2px}.check.pass{border-color:rgba(152,215,165,.5)}.check.warn{border-color:rgba(244,207,134,.55)}.check.fail{border-color:rgba(239,143,122,.55)}pre,code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}pre{white-space:pre-wrap;overflow:auto;background:#0f0d0a;border:1px solid var(--line);border-radius:16px;padding:16px;color:#f3ece1;font-size:.88rem}.mini{font-size:.92rem}.pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:.86rem;background:rgba(36,32,25,.6)}.copy-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0}.status{font-size:.9rem;color:var(--muted)}.rubric{counter-reset:item}.rubric li{margin:8px 0}.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}.footer{margin-top:52px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.93rem}@media(max-width:820px){.inspector{grid-template-columns:1fr}.score{font-size:2.6rem}main{padding-top:34px}}
+  </style>
+</head>
+<body>
+<main>
+  <a class="back" href="../index.html">← Back to hub</a>
+  <div class="eyebrow">Claude Wizard · sub-wizard 01</div>
+  <h1>Skill Wizard.</h1>
+  <p class="lead">Inspect a Claude Skill before you ship it. This first Claude Wizard freebie checks whether Claude can discover the skill, understand when to load it, and follow it without wasting context.</p>
+  <div class="hero-actions">
+    <a class="button primary" href="#inspect">Paste SKILL.md</a>
+    <a class="button" href="#prompt">Copy deep review prompt</a>
+    <a class="button" href="#rubric">See rubric</a>
+  </div>
+
+  <section class="grid">
+    <article class="card callout"><div class="tag">What this is</div><h2>A reviewer, not another skill draft.</h2><p>After attendees build a first skill, Skill Wizard asks: is the trigger specific, is the body concise, are details progressively disclosed, and are fragile workflows guarded by checks?</p></article>
+    <article class="card"><div class="tag">Freshness rule</div><h2>Do not fossilize best practices.</h2><p>The page has local heuristics, but the deeper prompt asks Claude to check current Anthropic Skill docs before final feedback. If docs moved or changed, say so.</p></article>
+    <article class="card"><div class="tag">Privacy</div><h2>Local first.</h2><p>The quick inspector runs in this browser page. It has no backend, storage, analytics, or model call. Only paste content you are comfortable reviewing locally or sending to your chosen assistant.</p></article>
+  </section>
+
+  <section id="inspect">
+    <div class="eyebrow">Quick local check</div>
+    <h2>Paste a `SKILL.md` draft</h2>
+    <p class="mini">This is a heuristic lint pass. Use it to catch obvious problems before asking Claude for a deeper review.</p>
+    <div class="inspector">
+      <div>
+        <textarea id="skillInput" spellcheck="false" aria-label="Paste SKILL.md here"></textarea>
+        <div class="copy-row">
+          <button class="button primary" id="runBtn" type="button">Inspect skill</button>
+          <button class="button" id="sampleBtn" type="button">Load sample</button>
+          <button class="button" id="clearBtn" type="button">Clear</button>
+          <span class="status" id="inputStatus">Waiting for a draft.</span>
+        </div>
+      </div>
+      <aside class="card" aria-live="polite">
+        <div class="tag">Result</div>
+        <div class="score" id="score">—</div>
+        <p id="verdict">Paste a skill and run the inspector.</p>
+        <div class="pillrow" id="pillrow"></div>
+        <div class="checks" id="checks"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="prompt" class="two">
+    <article class="card">
+      <div class="tag">Deep review prompt</div>
+      <h2>Copy this into Claude or Claude Code</h2>
+      <p>Use this when the local check passes or when you want rewrite suggestions. It includes the freshness gate.</p>
+      <div class="copy-row"><button class="button primary" id="copyPrompt" type="button">Copy prompt</button><span class="status" id="copyStatus">Ready.</span></div>
+      <pre id="reviewPrompt">You are Skill Wizard, an A2X Claude Wizard sub-wizard. Review the pasted Claude Skill against current Anthropic Skill best practices and practical agent-usability standards.
+
+Freshness gate:
+1. Check the current Anthropic Agent Skills overview and Skill authoring best-practices docs before final judgment if web/docs access is available.
+2. State the docs URLs or sources checked and the date checked.
+3. If docs cannot be checked, label the review as based on the provided rubric and say what could be stale.
+
+Review goals:
+- Will Claude discover this skill from its name and description?
+- Does the description say both what it does and when to use it?
+- Is the description third-person, specific, and keyword-rich without being bloated?
+- Is SKILL.md concise enough to justify its context cost?
+- Are detailed references split out and linked directly from SKILL.md?
+- Are scripts/dependencies/runtime assumptions explicit?
+- Are fragile or destructive workflows guarded by validation steps?
+- Is time-sensitive content separated from the current method?
+
+Return:
+1. Score: 0-100.
+2. Verdict: one sentence.
+3. Critical fixes before shipping.
+4. Recommended improvements.
+5. Optional polish.
+6. Suggested rewritten frontmatter, especially description.
+7. Patch-style section rewrites when useful.
+8. Freshness note: docs checked / not checked.
+
+Skill draft:
+```markdown
+PASTE SKILL.md HERE
+```</pre>
+    </article>
+    <article class="card">
+      <div class="tag">Report format</div>
+      <h2>What good feedback looks like</h2>
+      <pre>Score: 82 / 100
+Verdict: Usable, but the trigger description is too broad.
+
+Critical fixes:
+- Rewrite the description to include concrete trigger terms.
+- Move the 900-line API reference into reference/api.md.
+
+Recommended improvements:
+- Add a validation loop after the generated artifact.
+- State required packages and runtime surface.
+
+Suggested description:
+description: Reviews Claude Skills for discoverability, concise structure, progressive disclosure, and runtime safety. Use when drafting, auditing, or improving a SKILL.md file.</pre>
+    </article>
+  </section>
+
+  <section id="rubric">
+    <div class="eyebrow">Rubric</div>
+    <h2>The checks Skill Wizard cares about</h2>
+    <div class="grid">
+      <article class="card"><div class="tag">Metadata</div><ul class="rubric"><li>Name is lowercase letters, numbers, and hyphens.</li><li>Name is ≤64 chars and avoids reserved words.</li><li>Description is non-empty and ≤1024 chars.</li><li>Description is third-person and says what + when.</li></ul></article>
+      <article class="card"><div class="tag">Discovery</div><ul class="rubric"><li>Trigger terms match likely user requests.</li><li>Description is specific, not “helps with data.”</li><li>Skill does not overlap confusingly with nearby skills.</li><li>Name reads like a capability.</li></ul></article>
+      <article class="card"><div class="tag">Context economy</div><ul class="rubric"><li>Assumes Claude is smart.</li><li>Keeps main body under about 500 lines.</li><li>Uses direct instructions over background lectures.</li><li>Moves large detail into references.</li></ul></article>
+      <article class="card"><div class="tag">Progressive disclosure</div><ul class="rubric"><li>Reference files are linked directly from SKILL.md.</li><li>Long references have a contents section.</li><li>Scripts are executed when possible instead of pasted into context.</li><li>Nested reference chains are avoided.</li></ul></article>
+      <article class="card"><div class="tag">Operations</div><ul class="rubric"><li>Dependencies are named explicitly.</li><li>Runtime surface is clear: Claude Code, claude.ai, API, or local.</li><li>Fragile tasks include validation loops.</li><li>Destructive or external actions require approval gates.</li></ul></article>
+      <article class="card"><div class="tag">Rot resistance</div><ul class="rubric"><li>Current method is prominent.</li><li>Legacy patterns are separated.</li><li>No date-based instructions that silently expire.</li><li>Docs freshness is checked for official constraints.</li></ul></article>
+    </div>
+  </section>
+
+  <section class="card callout">
+    <div class="tag">Workshop move</div>
+    <h2>Use it right after “Build your first skill.”</h2>
+    <p>Have attendees draft a skill, paste it here, fix the obvious issues, then ask Claude for the deeper review. The lesson: a saved workflow is only useful if the agent can find it and follow it.</p>
+  </section>
+
+  <div class="footer">Built by A2X. Public-safe static handout. No secrets, credentials, local paths, analytics, storage, or network calls.</div>
+</main>
+<script>
+const input=document.getElementById('skillInput');
+const scoreEl=document.getElementById('score');
+const verdictEl=document.getElementById('verdict');
+const checksEl=document.getElementById('checks');
+const pillrow=document.getElementById('pillrow');
+const statusEl=document.getElementById('inputStatus');
+const sample=`---
+name: reviewing-skills
+description: Reviews Claude Skills for discoverability, concise structure, progressive disclosure, and runtime safety. Use when drafting, auditing, or improving a SKILL.md file.
+---
+
+# Reviewing Skills
+
+## Quick review
+
+1. Check frontmatter name and description.
+2. Verify the description says what the skill does and when to use it.
+3. Keep SKILL.md concise; move large details into references.
+4. Add validation steps for fragile workflows.
+
+## References
+
+For detailed examples, see reference/examples.md.
+
+## Verification
+
+Return critical fixes, recommended improvements, optional polish, and a suggested description rewrite.`;
+function parseFrontmatter(text){
+  const out={fm:{},body:text,has:false,error:''};
+  if(!text.trim().startsWith('---')){out.error='Missing YAML frontmatter at the top.';return out;}
+  const m=text.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
+  if(!m){out.error='Frontmatter starts but no closing --- was found.';return out;}
+  out.has=true;out.body=text.slice(m[0].length);
+  m[1].split(/\n/).forEach(line=>{
+    const mm=line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if(mm) out.fm[mm[1]]=mm[2].replace(/^['"]|['"]$/g,'').trim();
+  });
+  return out;
+}
+function addCheck(items,ok,title,msg,weight=8){items.push({ok,title,msg,weight});}
+function inspect(){
+  const text=input.value.trim();
+  const items=[];let score=100;
+  if(!text){scoreEl.textContent='—';verdictEl.textContent='Paste a skill and run the inspector.';checksEl.innerHTML='';pillrow.innerHTML='';statusEl.textContent='Waiting for a draft.';return;}
+  const parsed=parseFrontmatter(text);const fm=parsed.fm;const body=parsed.body||'';
+  addCheck(items,parsed.has,'Frontmatter present',parsed.has?'YAML frontmatter found.':parsed.error,14);
+  const name=fm.name||''; const desc=fm.description||'';
+  addCheck(items,!!name,'Name present',name?`name: ${name}`:'Missing name.',10);
+  addCheck(items,!!desc,'Description present',desc?`description length: ${desc.length}`:'Missing description.',14);
+  addCheck(items,!name||/^[a-z0-9-]{1,64}$/.test(name),'Name shape',!name?'Cannot check until name exists.':'Use lowercase letters, numbers, and hyphens; max 64 chars.',8);
+  addCheck(items,!/(anthropic|claude)/.test(name),'Reserved words',/(anthropic|claude)/.test(name)?'Avoid reserved words in the skill name.':'No reserved words detected in name.',8);
+  addCheck(items,!desc||desc.length<=1024,'Description length',desc && desc.length>1024?'Description is over 1024 chars.':'Within description length limit.',8);
+  const low=desc.toLowerCase();
+  addCheck(items,!desc||(/\b(use when|when|use for|use to)\b/.test(low)&&desc.length>45),'What + when trigger',desc?'Description should say what it does and when to use it.':'Missing description.',14);
+  addCheck(items,!/\b(i|you|we|my|your)\b/i.test(desc),'Third-person description',/\b(i|you|we|my|your)\b/i.test(desc)?'Rewrite as third person: “Reviews…”, not “I can…” or “You can…”.':'Third-person risk not detected.',8);
+  const lines=text.split(/\n/).length;
+  addCheck(items,lines<=500,'Main file size',`${lines} lines. Aim to keep SKILL.md under about 500 lines; split large detail into references.`,8);
+  addCheck(items,/\[[^\]]+\]\([^)]+\.md\)|references?\//i.test(text)||lines<120,'Progressive disclosure',/\[[^\]]+\]\([^)]+\.md\)|references?\//i.test(text)?'Reference/link pattern detected.':'If this grows, link detailed reference files directly from SKILL.md.',6);
+  addCheck(items,/verify|validate|check|test/i.test(text),'Verification loop',/verify|validate|check|test/i.test(text)?'Verification language detected.':'Add validation or verification steps for real workflows.',8);
+  addCheck(items,!/before\s+(january|february|march|april|may|june|july|august|september|october|november|december|20\d\d)|after\s+(january|february|march|april|may|june|july|august|september|october|november|december|20\d\d)/i.test(text),'Rot risk',/before\s+(january|february|march|april|may|june|july|august|september|october|november|december|20\d\d)|after\s+(january|february|march|april|may|june|july|august|september|october|november|december|20\d\d)/i.test(text)?'Date-sensitive prose detected; separate current method from old patterns.':'No obvious date-sensitive rule detected.',6);
+  items.forEach(i=>{if(!i.ok)score-=i.weight}); score=Math.max(0,score);
+  scoreEl.textContent=score;
+  verdictEl.textContent=score>=88?'Strong draft. Run the deep review for polish.':score>=72?'Usable draft, but fix the warnings before shipping.':score>=50?'Needs revision before Claude can reliably use it.':'High risk. Fix metadata and trigger basics first.';
+  pillrow.innerHTML=[`${lines} lines`,name?`name: ${name}`:'no name',desc?`${desc.length} char description`:'no description'].map(x=>`<span class="pill">${x}</span>`).join('');
+  checksEl.innerHTML=items.map(i=>`<div class="check ${i.ok?'pass':'fail'}"><strong>${i.ok?'✓':'✕'} ${i.title}</strong><span>${i.msg}</span></div>`).join('');
+  statusEl.textContent='Inspection complete.';
+}
+document.getElementById('runBtn').addEventListener('click',inspect);
+document.getElementById('sampleBtn').addEventListener('click',()=>{input.value=sample;inspect();});
+document.getElementById('clearBtn').addEventListener('click',()=>{input.value='';inspect();});
+document.getElementById('copyPrompt').addEventListener('click',async()=>{
+  const t=document.getElementById('reviewPrompt').textContent;
+  try{await navigator.clipboard.writeText(t);document.getElementById('copyStatus').textContent='Copied.';}catch(e){document.getElementById('copyStatus').textContent='Copy failed; select the prompt manually.';}
+});
+inspect();
+</script>
+</body>
+</html>

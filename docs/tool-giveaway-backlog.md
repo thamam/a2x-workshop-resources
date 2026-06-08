@@ -11,7 +11,42 @@ This backlog captures candidate tools Tomer can give workshop attendees as pract
 - Demo-friendly: each tool should have a clear before/after moment.
 - Extensible: can start as a static prompt/workflow page, then become a richer script or mini-app.
 
-## 1. Product brief generator
+## 1. Claude Wizard / Skill Wizard
+
+Status: v1 static page created — high priority.
+
+Goal: Give attendees a reusable Wizard family for improving agent workflows. The first sub-wizard is Skill Wizard: it inspects a Claude Skill and returns practical feedback before the attendee ships or reuses it.
+
+What it does:
+
+- Accepts a pasted `SKILL.md` or skill draft.
+- Checks metadata, trigger description, naming, concise body, progressive disclosure, runtime assumptions, validation loops, and rot risk.
+- Uses Anthropic Skill best practices plus A2X workshop guidance from the skill authoring field guide.
+- Reminds the reviewing assistant to check current Anthropic docs before final judgment so the feedback does not fossilize.
+- Produces critical fixes, recommended improvements, optional polish, and suggested rewrites.
+
+Preferred output shape:
+
+- Score / verdict.
+- Trigger quality notes.
+- Critical fixes before shipping.
+- Recommended improvements.
+- Suggested rewritten `description` or section edits.
+- Freshness note: docs checked date/source.
+
+Workshop value:
+
+- Natural follow-up after “Build your first skill.”
+- Reinforces that writing a skill is not enough; Claude must discover it, load it, and use it correctly.
+- Establishes Claude Wizard as a freebie tool family, with Skill Wizard as the first sub-wizard.
+
+Implementation options:
+
+- First version: static workflow page with paste-and-check heuristics plus copyable Claude review prompt.
+- Better version: single-page inspector that generates a report from pasted `SKILL.md`.
+- Advanced version: packaged Claude Code command/plugin that fetches current Anthropic docs, inspects a skill directory, and emits patch suggestions.
+
+## 2. Product brief generator
 
 Status: v1 static page created — high priority.
 
@@ -46,7 +81,7 @@ Implementation options:
 - Better version: small form that generates the prompt and final brief scaffold.
 - Advanced version: interactive interviewer that asks only missing high-impact questions.
 
-## 2. PRD generator / OpenSpec proposal starter
+## 3. PRD generator / OpenSpec proposal starter
 
 Status: v1 static page created — high priority, depends on product brief flow.
 
@@ -85,7 +120,7 @@ Implementation options:
 - Better version: form-driven mini-app with “ask interviewer if missing details” mode.
 - Advanced version: scriptable tool that writes an OpenSpec proposal skeleton.
 
-## 3. OpenSpec-aware interviewer
+## 4. OpenSpec-aware interviewer
 
 Status: v1 static page created — high priority.
 
@@ -117,7 +152,7 @@ Implementation options:
 - Better version: reusable checklist plus prompt.
 - Advanced version: integrated module for product brief and PRD generators.
 
-## 4. Prompt improver / Prompt Magician
+## 5. Prompt improver / Prompt Magician
 
 Status: v1 static page created; richer Prompt Magician remains polish-first.
 
@@ -153,7 +188,7 @@ Implementation options:
 - Better version: mini-app with correction-to-positive rewrites.
 - Advanced version: knowledge-base assisted version using Wiki-LLM or another retrieval path.
 
-## 5. PRD-to-beautiful-HTML workbench
+## 6. PRD-to-beautiful-HTML workbench
 
 Status: research memo created — potentially high value.
 
@@ -201,22 +236,24 @@ Implementation options:
 
 Built as static v1 pages:
 
-1. Product brief generator.
-2. OpenSpec-aware interviewer.
-3. Prompt improver.
-4. PRD generator / OpenSpec proposal starter.
+1. Claude Wizard / Skill Wizard.
+2. Product brief generator.
+3. OpenSpec-aware interviewer.
+4. Prompt improver.
+5. PRD generator / OpenSpec proposal starter.
 
 Research before building:
 
-5. PRD-to-beautiful-HTML workbench.
+6. PRD-to-beautiful-HTML workbench.
 
-Reasoning: the first four can ship as lightweight, public-safe, practical workshop tools. The HTML workbench is exciting but needs scope selection before implementation.
+Reasoning: the first five can ship as lightweight, public-safe, practical workshop tools. The HTML workbench is exciting but needs scope selection before implementation.
 
 ## Current first-release flow
 
 1. Open with the harness idea.
 2. Give attendees rules they can use today.
 3. Turn repetition into infrastructure.
-4. Use the product brief generator, OpenSpec interviewer, prompt improver, and PRD starter as the first practical giveaway set.
-5. Research existing PRD-to-HTML / interactive spec workbench patterns before implementation.
-6. Decide whether future richer versions live as `resources/*.html`, scripts, or skill/plugin packages.
+4. Inspect the drafted skill with Claude Wizard / Skill Wizard.
+5. Use the product brief generator, OpenSpec interviewer, prompt improver, and PRD starter as the first practical giveaway set.
+6. Research existing PRD-to-HTML / interactive spec workbench patterns before implementation.
+7. Decide whether future richer versions live as `resources/*.html`, scripts, or skill/plugin packages.

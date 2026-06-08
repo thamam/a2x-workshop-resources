@@ -25,6 +25,14 @@ Source: existing public A2X site resource at `public/resources/skills-forge.html
 Safety notes: current hub page is a short public-safe rewrite. No private links, credentials, or local paths.  
 Next action: decide whether to keep as quick workshop handout or expand into a full guided exercise.
 
+### Claude Wizard / Skill Wizard
+
+Status: publish-now v1 static inspector
+Hub path: `resources/claude-wizard-skill-wizard.html`
+Source: public-safe static page drafted in this repo from Tomer's Claude Wizard freebie-tool concept and Anthropic Skill authoring best practices.
+Safety notes: no backend, no accounts, no analytics, no model API calls, no localStorage, no private links, no credentials, and no attendee content leaves the browser. The freshness step is a copyable prompt instruction for the user's assistant to check current Anthropic docs before final judgment.
+Next action: test with real workshop skill drafts and decide which additional Claude Wizard sub-wizards should follow.
+
 ### Claude Code harness map
 
 Status: publish-now
