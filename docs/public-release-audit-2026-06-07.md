@@ -6,7 +6,7 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 
 - Repository visibility is public by approval: `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,isPrivate,visibility,url` returned `visibility=PUBLIC`, `isPrivate=false`, and URL `https://github.com/thamam/a2x-workshop-resources`.
 - GitHub Pages is enabled by approval and built from `main` branch `/`: `https://thamam.github.io/a2x-workshop-resources/`.
-- GitHub Security Checks completed successfully for current HEAD `6e4ca178272f156aa9fa87cfcb72ad332a03073b` (`databaseId` 27226655836); the Pages build/deployment workflow also completed successfully (`databaseId` 27226651665).
+- GitHub Security Checks completed successfully for current HEAD `b3c6a58fd20cd9006fe3b7267968e8e5629c9a88` (`databaseId` 27233753372); the Pages build/deployment workflow also completed successfully (`databaseId` 27233750540).
 - Local safety checks passed for the current tree: static links for 19 HTML files, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Public smoke checks returned HTTP 200 for the workshop hub, the Skill Wizard page, and the approved A2X website backlinks using a browser-style User-Agent.
 - The latest public-launch state is recorded in `kanban-status.md`: Tomer approved switching `thamam/a2x-workshop-resources` from private to public, connecting it from the A2X website, and publishing the fixed Skill Wizard on 2026-06-08.
@@ -17,19 +17,19 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 Audit timestamp from local environment:
 
 ```text
-2026-06-09 23:24 IDT
+2026-06-10 01:47 IDT
 ```
 
 Current HEAD inspected in this refresh:
 
 ```text
-6e4ca178272f156aa9fa87cfcb72ad332a03073b
+b3c6a58fd20cd9006fe3b7267968e8e5629c9a88
 ```
 
 Latest commit subject at audit start:
 
 ```text
-6e4ca17 Refresh current public readiness evidence
+b3c6a58 Refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -98,13 +98,13 @@ Result:
 Command:
 
 ```bash
-gh run list --repo thamam/a2x-workshop-resources --commit 6e4ca178272f156aa9fa87cfcb72ad332a03073b --limit 10 --json databaseId,name,status,conclusion,headSha,workflowName,createdAt,updatedAt,url
+gh run list --repo thamam/a2x-workshop-resources --commit b3c6a58fd20cd9006fe3b7267968e8e5629c9a88 --limit 10 --json databaseId,name,status,conclusion,headSha,workflowName,createdAt,updatedAt,url
 ```
 
 Result:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-09T18:18:55Z","databaseId":27226655836,"headSha":"6e4ca178272f156aa9fa87cfcb72ad332a03073b","name":"Security checks","status":"completed","updatedAt":"2026-06-09T18:19:05Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27226655836","workflowName":"Security checks"},{"conclusion":"success","createdAt":"2026-06-09T18:18:50Z","databaseId":27226651665,"headSha":"6e4ca178272f156aa9fa87cfcb72ad332a03073b","name":"pages build and deployment","status":"completed","updatedAt":"2026-06-09T18:19:20Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27226651665","workflowName":"pages-build-deployment"}]
+[{"conclusion":"success","createdAt":"2026-06-09T20:28:03Z","databaseId":27233753372,"headSha":"b3c6a58fd20cd9006fe3b7267968e8e5629c9a88","name":"Security checks","status":"completed","updatedAt":"2026-06-09T20:28:15Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27233753372","workflowName":"Security checks"},{"conclusion":"success","createdAt":"2026-06-09T20:28:00Z","databaseId":27233750540,"headSha":"b3c6a58fd20cd9006fe3b7267968e8e5629c9a88","name":"pages build and deployment","status":"completed","updatedAt":"2026-06-09T20:28:31Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27233750540","workflowName":"pages-build-deployment"}]
 ```
 
 Interpretation: current pushed HEAD has green Security Checks and green Pages build/deployment checks.
@@ -121,7 +121,7 @@ scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standa
 # exit 0
 
 gitleaks detect --no-banner --redact --no-git --source .
-# 11:27PM INF no leaks found
+# 2:04AM INF no leaks found
 # exit 0
 
 git diff --check
@@ -137,7 +137,7 @@ git show --stat --oneline --name-only HEAD
 git show --unified=3 --no-ext-diff -- docs/public-release-audit-2026-06-07.md kanban-status.md
 ```
 
-Result summary: HEAD `6e4ca17` updates only `docs/public-release-audit-2026-06-07.md` and `kanban-status.md` to refresh public-readiness evidence for the approved public repository and Pages site. No private/internal source links, analytics, lead capture, pricing claims, repository visibility changes, or Pages configuration changes were added.
+Result summary: HEAD `b3c6a58` updates only `docs/public-release-audit-2026-06-07.md` and `kanban-status.md` to refresh public-readiness evidence for the approved public repository and Pages site. No private/internal source links, analytics, lead capture, pricing claims, repository visibility changes, or Pages configuration changes were added.
 
 ## Remaining gates
 

@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-09
+- **Last Updated:** 2026-06-10
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -108,6 +108,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Maintenance: Verify current public repo and approved Pages state for HEAD `b3c6a58`
+  - Evidence: current HEAD `b3c6a58fd20cd9006fe3b7267968e8e5629c9a88` (`Refresh current public readiness evidence`); `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD; `gh repo view` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API reports approved Pages site `https://thamam.github.io/a2x-workshop-resources/` built from `main` branch `/`; public smoke checks returned HTTP 200 for the hub, Skill Wizard page, `https://a2xautonomy.com/`, and `https://a2xautonomy.com/#resources`; GitHub Security Checks run `27233753372` and `pages-build-deployment` run `27233750540` both succeeded; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, and stale-audit-identifier search passed on 2026-06-10 01:39–02:04 IDT. No visibility changes, Pages configuration changes, analytics/lead capture, pricing/marketing claims, production A2X website deployment, or direct private/source-link exposure were performed.
 
 - [x] Maintenance: Verify current public repo and approved Pages state for HEAD `6e4ca17`
   - Evidence: current HEAD `6e4ca178272f156aa9fa87cfcb72ad332a03073b` (`Refresh current public readiness evidence`); `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD; `gh repo view` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API reports approved Pages site `https://thamam.github.io/a2x-workshop-resources/` built from `main` branch `/`; public smoke checks returned HTTP 200 for the hub, Skill Wizard page, `https://a2xautonomy.com/`, and `https://a2xautonomy.com/#resources`; GitHub Security Checks run `27226655836` and `pages-build-deployment` run `27226651665` both succeeded; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, and `git diff --check` passed on 2026-06-09 23:23–23:27 IDT. No visibility changes, Pages configuration changes, analytics/lead capture, pricing/marketing claims, production A2X website deployment, or direct private/source-link exposure were performed.
@@ -512,6 +515,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 02:04 IDT — Finished Maintenance: verified current HEAD `b3c6a58`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; approved GitHub Pages site is built from `main` branch `/`; GitHub Security Checks run `27233753372` and `pages-build-deployment` run `27233750540` succeeded; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, public smoke checks, and stale-audit-identifier search passed. No visibility changes, Pages configuration changes, analytics/lead capture, pricing/marketing claims, production A2X website deployment, or direct private/source-link exposure were performed.
+
+- 2026-06-10 01:39 IDT — Started Maintenance: verify current public repository and approved Pages state for HEAD `b3c6a58`; scope is local/GitHub verification and audit/tracker refresh only, with no repository visibility changes, Pages configuration changes, analytics/lead capture, pricing/marketing claims, production A2X website deployment, or direct private/source-link exposure.
 
 - 2026-06-09 23:24 IDT — Finished Maintenance: verified current HEAD `6e4ca17`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; approved GitHub Pages site is built from `main` branch `/`; GitHub Security Checks run `27226655836` and `pages-build-deployment` run `27226651665` succeeded; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, and public smoke checks passed. No visibility changes, Pages configuration changes, analytics/lead capture, pricing/marketing claims, production A2X website deployment, or direct private/source-link exposure were performed.
 
