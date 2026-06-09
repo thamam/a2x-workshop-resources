@@ -6,7 +6,7 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 
 - Repository visibility is public by approval: `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,isPrivate,visibility,url` returned `visibility=PUBLIC`, `isPrivate=false`, and URL `https://github.com/thamam/a2x-workshop-resources`.
 - GitHub Pages is enabled by approval and built from `main` branch `/`: `https://thamam.github.io/a2x-workshop-resources/`.
-- GitHub Security Checks completed successfully for current HEAD `2f0964a6b91e8089d447d5595117f77614f43518` (`databaseId` 27186065056); the Pages build/deployment workflow also completed successfully (`databaseId` 27186064548).
+- GitHub Security Checks completed successfully for current HEAD `93aea1dbfc69cd8d327ef80fd38328ba5c005861` (`databaseId` 27191566116); the Pages build/deployment workflow also completed successfully (`databaseId` 27191565203).
 - Local safety checks passed for the current tree: static links for 19 HTML files, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Public smoke checks returned HTTP 200 for the workshop hub, the Skill Wizard page, and the approved A2X website backlinks using a browser-style User-Agent.
 - The latest public-launch state is recorded in `kanban-status.md`: Tomer approved switching `thamam/a2x-workshop-resources` from private to public, connecting it from the A2X website, and publishing the fixed Skill Wizard on 2026-06-08.
@@ -17,19 +17,19 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 Audit timestamp from local environment:
 
 ```text
-2026-06-09 10:40 IDT
+2026-06-09 12:46 IDT
 ```
 
 Current HEAD inspected in this refresh:
 
 ```text
-2f0964a6b91e8089d447d5595117f77614f43518
+93aea1dbfc69cd8d327ef80fd38328ba5c005861
 ```
 
 Latest commit subject at audit start:
 
 ```text
-2f0964a Refresh current public readiness evidence
+93aea1d Refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -98,13 +98,13 @@ Result:
 Command:
 
 ```bash
-gh run list --repo thamam/a2x-workshop-resources --commit 2f0964a6b91e8089d447d5595117f77614f43518 --limit 10 --json databaseId,name,status,conclusion,headSha,createdAt,updatedAt,url
+gh run list --repo thamam/a2x-workshop-resources --commit 93aea1dbfc69cd8d327ef80fd38328ba5c005861 --limit 10 --json databaseId,name,status,conclusion,headSha,createdAt,updatedAt,url
 ```
 
 Result:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-09T05:33:24Z","databaseId":27186065056,"headSha":"2f0964a6b91e8089d447d5595117f77614f43518","name":"Security checks","status":"completed","updatedAt":"2026-06-09T05:33:36Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27186065056"},{"conclusion":"success","createdAt":"2026-06-09T05:33:23Z","databaseId":27186064548,"headSha":"2f0964a6b91e8089d447d5595117f77614f43518","name":"pages build and deployment","status":"completed","updatedAt":"2026-06-09T05:33:51Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27186064548"}]
+[{"conclusion":"success","createdAt":"2026-06-09T07:44:05Z","databaseId":27191566116,"headSha":"93aea1dbfc69cd8d327ef80fd38328ba5c005861","name":"Security checks","status":"completed","updatedAt":"2026-06-09T07:44:16Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27191566116"},{"conclusion":"success","createdAt":"2026-06-09T07:44:04Z","databaseId":27191565203,"headSha":"93aea1dbfc69cd8d327ef80fd38328ba5c005861","name":"pages build and deployment","status":"completed","updatedAt":"2026-06-09T07:44:31Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27191565203"}]
 ```
 
 Interpretation: current pushed HEAD has green Security Checks and green Pages build/deployment checks.
@@ -137,7 +137,7 @@ git show --stat --oneline --name-only HEAD
 git show --unified=3 --no-ext-diff -- docs/public-release-audit-2026-06-07.md kanban-status.md
 ```
 
-Result summary: HEAD `2f0964a` updates only `docs/public-release-audit-2026-06-07.md` and `kanban-status.md` to refresh public-readiness evidence for the approved public repository and Pages site. No private/internal source links, analytics, lead capture, pricing claims, repository visibility changes, or Pages configuration changes were added.
+Result summary: HEAD `93aea1d` updates only `docs/public-release-audit-2026-06-07.md` and `kanban-status.md` to refresh public-readiness evidence for the approved public repository and Pages site. No private/internal source links, analytics, lead capture, pricing claims, repository visibility changes, or Pages configuration changes were added.
 
 ## Remaining gates
 
