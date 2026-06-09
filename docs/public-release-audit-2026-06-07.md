@@ -6,7 +6,7 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 
 - Repository visibility is public by approval: `gh repo view thamam/a2x-workshop-resources --json nameWithOwner,isPrivate,visibility,url` returned `visibility=PUBLIC`, `isPrivate=false`, and URL `https://github.com/thamam/a2x-workshop-resources`.
 - GitHub Pages is enabled by approval and built from `main` branch `/`: `https://thamam.github.io/a2x-workshop-resources/`.
-- GitHub Security Checks completed successfully for current HEAD `1ac30c1ac4636a54cb99c23426f051bcfd7d5693` (`databaseId` 27172922692); the Pages build/deployment workflow also completed successfully (`databaseId` 27172922051).
+- GitHub Security Checks completed successfully for current HEAD `ed3041b18d31259c6a18cef6b4532bb2bdb4d624` (`databaseId` 27177669346); the Pages build/deployment workflow also completed successfully (`databaseId` 27177668946).
 - Local safety checks passed for the current tree: static links for 19 HTML files, private-file blocker, gitleaks `--no-git`, and `git diff --check`.
 - Public smoke checks returned HTTP 200 for the workshop hub, the Skill Wizard page, and the approved A2X website backlinks using a browser-style User-Agent.
 - The latest public-launch state is recorded in `kanban-status.md`: Tomer approved switching `thamam/a2x-workshop-resources` from private to public, connecting it from the A2X website, and publishing the fixed Skill Wizard on 2026-06-08.
@@ -17,19 +17,19 @@ Scope: safety/readiness refresh for the A2X Workshop Resources Hub after Tomer-a
 Audit timestamp from local environment:
 
 ```text
-2026-06-09 04:16 IDT
+2026-06-09 06:21 IDT
 ```
 
 Current HEAD inspected in this refresh:
 
 ```text
-1ac30c1ac4636a54cb99c23426f051bcfd7d5693
+ed3041b18d31259c6a18cef6b4532bb2bdb4d624
 ```
 
 Latest commit subject at audit start:
 
 ```text
-1ac30c1 Refresh current public readiness evidence
+ed3041b Refresh current public readiness evidence
 ```
 
 ### Repository visibility
@@ -53,13 +53,13 @@ Interpretation: the repository is public after the approval recorded in `kanban-
 Command:
 
 ```bash
-gh api repos/thamam/a2x-workshop-resources/pages --jq '{status:.status, html_url:.html_url, source:.source}'
+gh api repos/thamam/a2x-workshop-resources/pages --jq '{html_url,source,status,cname,protected_domain_state}'
 ```
 
 Result:
 
 ```json
-{"html_url":"https://thamam.github.io/a2x-workshop-resources/","source":{"branch":"main","path":"/"},"status":"built"}
+{"cname":null,"html_url":"https://thamam.github.io/a2x-workshop-resources/","protected_domain_state":null,"source":{"branch":"main","path":"/"},"status":"built"}
 ```
 
 Interpretation: GitHub Pages is configured and built from `main` branch `/` after Tomer's approval to publish the fixed Skill Wizard.
@@ -98,13 +98,13 @@ Result:
 Command:
 
 ```bash
-gh run list --repo thamam/a2x-workshop-resources --commit 1ac30c1ac4636a54cb99c23426f051bcfd7d5693 --limit 10 --json databaseId,name,status,conclusion,headSha,createdAt,updatedAt,url
+gh run list --repo thamam/a2x-workshop-resources --commit ed3041b18d31259c6a18cef6b4532bb2bdb4d624 --limit 10 --json databaseId,name,status,conclusion,headSha,createdAt,updatedAt,url
 ```
 
 Result:
 
 ```json
-[{"conclusion":"success","createdAt":"2026-06-08T23:13:05Z","databaseId":27172922692,"headSha":"1ac30c1ac4636a54cb99c23426f051bcfd7d5693","name":"Security checks","status":"completed","updatedAt":"2026-06-08T23:13:19Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27172922692"},{"conclusion":"success","createdAt":"2026-06-08T23:13:04Z","databaseId":27172922051,"headSha":"1ac30c1ac4636a54cb99c23426f051bcfd7d5693","name":"pages build and deployment","status":"completed","updatedAt":"2026-06-08T23:13:29Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27172922051"}]
+[{"conclusion":"success","createdAt":"2026-06-09T01:19:22Z","databaseId":27177669346,"headSha":"ed3041b18d31259c6a18cef6b4532bb2bdb4d624","name":"Security checks","status":"completed","updatedAt":"2026-06-09T01:19:31Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27177669346"},{"conclusion":"success","createdAt":"2026-06-09T01:19:21Z","databaseId":27177668946,"headSha":"ed3041b18d31259c6a18cef6b4532bb2bdb4d624","name":"pages build and deployment","status":"completed","updatedAt":"2026-06-09T01:19:45Z","url":"https://github.com/thamam/a2x-workshop-resources/actions/runs/27177668946"}]
 ```
 
 Interpretation: current pushed HEAD has green Security Checks and green Pages build/deployment checks.
@@ -137,7 +137,7 @@ git show --stat --oneline --name-only HEAD
 git show --unified=3 --no-ext-diff -- docs/public-release-audit-2026-06-07.md kanban-status.md
 ```
 
-Result summary: HEAD `1ac30c1` updates only `docs/public-release-audit-2026-06-07.md` and `kanban-status.md` to refresh public-readiness evidence for the approved public repository and Pages site. No private/internal source links, analytics, lead capture, pricing claims, repository visibility changes, or Pages configuration changes were added.
+Result summary: HEAD `ed3041b` updates only `docs/public-release-audit-2026-06-07.md` and `kanban-status.md` to refresh public-readiness evidence for the approved public repository and Pages site. No private/internal source links, analytics, lead capture, pricing claims, repository visibility changes, or Pages configuration changes were added.
 
 ## Remaining gates
 
