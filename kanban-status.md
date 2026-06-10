@@ -105,6 +105,9 @@
 ### 🚧 BLOCKED / APPROVAL REQUIRED
 
 - None for the repository visibility and website-link launch path; Tomer approved this scope on 2026-06-08.
+- [ ] Maintenance: GitHub Pages deploy for commit `9ef544d`
+  - Status: blocked
+  - Blocker: the repo commit and security checks succeeded, but `pages-build-deployment` run `27288102138` failed twice in the deploy step with `HttpError: Requires authentication` while creating the Pages deployment. The Pages API still reports the site as `building`, and live smoke currently returns HTTP 404 for `resources/pre-workshop-readiness-checklist.html`, so the new page is committed but not live on Pages yet. This likely needs GitHub Pages/auth settings or a later successful Pages rebuild; no repository visibility or Pages configuration changes were attempted.
 - [ ] Story 4.4: Expose or link A2X Marketplace source repo publicly
   - Status: blocked
   - Blocker: sanitized overview is available, but direct marketplace source linking still needs cleanup of local-path docs, credential setup framing, and secret-scanner noise.
@@ -548,6 +551,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 18:49 IDT — Blocked Maintenance: commit `9ef544d` pushed and GitHub Security Checks run `27288105108` succeeded, but `pages-build-deployment` run `27288102138` failed twice at deploy with `HttpError: Requires authentication`; live Pages smoke still returns HTTP 404 for the new readiness checklist. No Pages configuration or visibility changes were attempted.
 
 - 2026-06-10 18:46 IDT — Finished Story 9.1: created public-safe pre-workshop readiness checklist, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
 
@@ -1163,4 +1168,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated or source-release cleanup: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
+- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated/source-release cleanup or external Pages-deploy recovery: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup; the latest Pages deployment for commit `9ef544d` needs GitHub Pages/auth recovery before the new checklist is live. If the next autonomous tick has budget, first re-check Pages status for run `27288102138`; if still blocked, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
