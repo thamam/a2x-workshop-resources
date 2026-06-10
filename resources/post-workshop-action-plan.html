@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post-workshop action plan | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe follow-up handout for turning an A2X Claude Code workshop into a small next project." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width: 1040px; margin:0 auto; padding:48px 20px 36px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.7rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:850px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.05rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:760px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:190px; }
+    .card strong { color:var(--text); }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .worksheet { display:grid; gap:14px; }
+    .prompt { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · follow-up</div>
+    <h1>Turn the workshop into one small shipped workflow.</h1>
+    <p class="lead">Use this after the room: choose one real but low-risk workflow, give Claude Code a clear harness, and finish with evidence instead of a vague intention to “try agents later.”</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="product-brief-generator.html">Start with a product brief</a>
+      <a class="button" href="prd-openspec-starter.html">Draft PRD/OpenSpec handoff</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe scope</div>
+        <h2>Pick a starter workflow that can survive a messy first attempt.</h2>
+        <p>Good first workflows are useful, reversible, and easy to inspect. Avoid production credentials, payment flows, private client material, and irreversible automation until the harness is proven.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">24-hour plan</div>
+      <h2>Three steps before momentum evaporates</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">1 · Name the loop</div>
+          <h3>Choose one repeated annoyance.</h3>
+          <p>Examples: summarize customer notes, draft a spec from a brief, turn support themes into issues, or review a small code change against team rules.</p>
+        </div>
+        <div class="card">
+          <div class="tag">2 · Build the harness</div>
+          <h3>Add rules, examples, and stop conditions.</h3>
+          <p>Use a small <code>CLAUDE.md</code>, one safe sample input, expected output shape, and “ask before guessing” criteria before asking the agent to act.</p>
+        </div>
+        <div class="card">
+          <div class="tag">3 · Verify the output</div>
+          <h3>Demand evidence.</h3>
+          <p>Finish with a rendered page, passing test, diff, checklist, or exported review packet. If there is no artifact, the workflow is not learned yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Worksheet</div>
+      <h2>Copy this into Claude Code or your notes</h2>
+      <div class="worksheet">
+        <div class="prompt">
+          <h3>Starter workflow brief</h3>
+          <ul>
+            <li><strong>Workflow:</strong> The repeated task I want to improve is…</li>
+            <li><strong>Why it matters:</strong> It costs time or creates mistakes because…</li>
+            <li><strong>Safe sample input:</strong> Use fictional or sanitized material only…</li>
+            <li><strong>Expected output:</strong> The artifact should look like…</li>
+            <li><strong>Stop conditions:</strong> Ask me before touching production, secrets, money, legal/health data, or external messages.</li>
+            <li><strong>Verification:</strong> Prove the result with…</li>
+          </ul>
+        </div>
+        <div class="prompt">
+          <h3>Prompt to run</h3>
+          <p>“Help me turn this repeated workflow into a safe first Claude Code project. First, identify missing context and risky assumptions. Then propose a tiny reversible version, the files or notes it needs, and the exact verification we should run before calling it done. Do not implement until the scope is clear.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Escalation path</div>
+      <h2>When the first loop works</h2>
+      <div class="grid">
+        <div class="card"><h3>Make it reusable</h3><p>If you repeat the same prompt twice, turn the successful steps into a skill or project rule.</p></div>
+        <div class="card"><h3>Add review gates</h3><p>For code or specs, add an OpenSpec-style proposal before implementation and a review packet after changes.</p></div>
+        <div class="card"><h3>Bring it back to the team</h3><p>Share the small artifact, not a theory. A working example is easier to critique, improve, and adopt.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe handout for A2X Claude Code workshops. This page does not collect data, run model calls, use analytics, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

@@ -14,6 +14,16 @@ Attendee action: choose the right next resource by goal: harness mental model, C
 
 Status: ready navigation aid.
 
+### Closing: post-workshop action plan
+
+Resource: `resources/post-workshop-action-plan.html`.
+
+Use when: Tomer wraps the workshop and wants attendees to leave with one safe follow-up workflow instead of only browsing links.
+
+Attendee action: choose a repeated low-risk workflow, define a small harness with safe sample input and stop conditions, and name the evidence needed before calling the first Claude Code project done.
+
+Status: ready follow-up handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.

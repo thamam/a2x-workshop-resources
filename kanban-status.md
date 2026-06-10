@@ -77,6 +77,12 @@
   - [x] Story 7.3: Add blog-style OpenSpec tutorial
   - [x] Story 7.4: Wire tutorials into hub, inventory, usage map, and verification
 
+- [x] **Epic 8: Attendee navigation and follow-up tools** (100% Completed)
+  - [x] Story 8.1: Build Claude Wizard Skill Wizard static freebie
+  - [x] Story 8.2: Tune and publish Claude Wizard Skill Wizard
+  - [x] Story 8.3: Add attendee resource route chooser
+  - [x] Story 8.4: Add post-workshop action plan handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -108,6 +114,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 8.4: Add post-workshop action plan handout
+  - Evidence: created `resources/post-workshop-action-plan.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; added Epic 8 milestone coverage; `python3 scripts/check-static-links.py` passed for 21 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/post-workshop-action-plan.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-post-workshop-action-plan-mobile.png` (137903 bytes); Chrome DOM dump confirmed the page title, starter workflow brief, and public-safe footer markers on 2026-06-10 16:40 IDT. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
 
 - [x] Story 8.3: Add attendee resource route chooser
   - Evidence: created `resources/workshop-resource-chooser.html`; linked it from `index.html` hero actions and live workshop kit; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 20 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/` and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-route-chooser-mobile.png` (149632 bytes); Chrome DOM dump confirmed the route chooser title and core route links on 2026-06-10 14:33–14:34 IDT. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
@@ -533,6 +542,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 16:40 IDT — Finished Story 8.4: created public-safe post-workshop action plan handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
+
+- 2026-06-10 16:37 IDT — Started Story 8.4: add post-workshop action plan handout at HEAD `273af3c`; scope is a public-safe attendee follow-up page plus hub/usage-map/inventory wiring, with no private source exposure, tracking, lead capture, pricing claims, or production website changes.
 
 - 2026-06-10 14:34 IDT — Finished Story 8.3: created public-safe attendee resource route chooser, wired it into the hub, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
 

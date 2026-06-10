@@ -17,6 +17,14 @@ Source: public-safe static navigation aid drafted in this repo from the current 
 Safety notes: links only to existing public-safe hub resources and docs; no private source links, credentials, local paths, analytics, lead capture, or client material.
 Next action: tune route labels after observing which workshop moments cause attendee confusion.
 
+### Post-workshop action plan
+
+Status: publish-now
+Hub path: `resources/post-workshop-action-plan.html`
+Source: public-safe static follow-up handout drafted in this repo from the current workshop flow and resource set.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The worksheet explicitly recommends fictional/sanitized sample inputs and stop conditions before sensitive actions.
+Next action: tune the closing worksheet after observing which post-workshop commitments attendees actually make.
+
 ### CLAUDE.md cheat sheet
 
 Status: publish-now  
