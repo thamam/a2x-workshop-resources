@@ -105,6 +105,9 @@
 ### 🚧 BLOCKED / APPROVAL REQUIRED
 
 - None for the repository visibility and website-link launch path; Tomer approved this scope on 2026-06-08.
+- [ ] Maintenance: GitHub Pages deploy for commit `35edd99`
+  - Status: blocked
+  - Blocker: GitHub Security Checks passed for current HEAD `35edd99`, and the live site serves the new readiness checklist from prior successful deployment `b215916`, but the latest `pages-build-deployment` run `27288330961` failed at deploy with `HttpError: Requires authentication`; Pages API still reports `status: building`. No Pages configuration or visibility changes were attempted.
 - [ ] Story 4.4: Expose or link A2X Marketplace source repo publicly
   - Status: blocked
   - Blocker: sanitized overview is available, but direct marketplace source linking still needs cleanup of local-path docs, credential setup framing, and secret-scanner noise.
@@ -548,6 +551,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 18:52 IDT — Blocked Maintenance: current HEAD `35edd99` pushed and GitHub Security Checks run `27288334678` succeeded, but latest Pages deployment run `27288330961` failed at deploy with `HttpError: Requires authentication`. Public smoke still returns HTTP 200 for the live hub, readiness checklist, and route chooser from the prior successful deployment; no Pages configuration or visibility changes were attempted.
 
 - 2026-06-10 18:51 IDT — Cleared Maintenance blocker: follow-up commit `b215916` pushed; GitHub Security Checks run `27288255891` and Pages deployment run `27288253654` succeeded; public smoke returned HTTP 200 for the live hub, readiness checklist, and route chooser with readiness content visible. The earlier `9ef544d` Pages deploy failure was transient/recovered by the next push.
 
@@ -1167,4 +1172,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated or source-release cleanup: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
+- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated/source-release cleanup or external Pages-deploy recovery: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup; latest Pages deployment for current HEAD `35edd99` is blocked by `HttpError: Requires authentication` even though the live site currently serves the readiness checklist from prior deployment `b215916`. If the next autonomous tick has budget, first re-check Pages status/run `27288330961`; if still blocked, report/leave it for GitHub Pages auth recovery rather than changing Pages settings autonomously.
