@@ -14,6 +14,16 @@ Attendee action: confirm Claude Code access, choose a disposable practice repo, 
 
 Status: ready readiness handout.
 
+### Setup troubleshooting: Claude Code credential routing Q&A
+
+Resource: `resources/claude-code-credential-routing.html`.
+
+Use when: Claude Code login, account, API-key, environment override, organization policy, or network access confusion appears before or during the workshop.
+
+Attendee action: identify the intended credential route, collect only non-secret status evidence, avoid sharing tokens/account pages/billing screens, and switch to demo/planning mode if policy blocks local access.
+
+Status: ready optional troubleshooting handout.
+
 ### Navigation: resource route chooser
 
 Resource: `resources/workshop-resource-chooser.html`.
@@ -185,15 +195,3 @@ Use when: Tomer wants an advanced discussion about when a repeated workflow shou
 Attendee action: Compare text-based findings with structured tool calls and decide whether the extra schema, hook, permission, and UI surface area is worth the complexity.
 
 Status: ready decision aid; optional advanced discussion, not required for the core first workshop flow.
-
-## Priority 3 — defer if time is tight
-
-### Credential tracer / auth routing
-
-Resource source: existing A2X site resource.
-
-Use when: attendees ask about Claude Code account billing, tokens, or environment-variable precedence.
-
-Attendee action: Diagnose which credential route a session is using.
-
-Status: defer for first resource hub unless the talk includes authentication troubleshooting.

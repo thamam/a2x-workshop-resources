@@ -33,6 +33,14 @@ Source: public-safe static follow-up handout drafted in this repo from the curre
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The worksheet explicitly recommends fictional/sanitized sample inputs and stop conditions before sensitive actions.
 Next action: tune the closing worksheet after observing which post-workshop commitments attendees actually make.
 
+### Claude Code credential routing Q&A
+
+Status: publish-now
+Hub path: `resources/claude-code-credential-routing.html`
+Source: public-safe static optional troubleshooting handout drafted in this repo from the workshop need to distinguish browser login, API-key, environment override, and organization-policy issues.
+Safety notes: no credentials, token-shaped examples, account details, billing claims, private links, analytics, lead capture, production website changes, or client material. The page explicitly tells attendees not to paste tokens, account pages, billing screens, shell history, `.env` files, or secrets into prompts/shared docs.
+Next action: tune after observing which Claude Code access failures appear before or during the workshop.
+
 ### CLAUDE.md cheat sheet
 
 Status: publish-now  
@@ -162,11 +170,3 @@ Hub path: `resources/buildtool-decision.html`
 Source: public-safe static decision aid discovered as an untracked resource during the 2026-06-07 readiness refresh and reconciled into the hub.
 Safety notes: contains no private source links, credentials, local paths, customer data, analytics, lead capture, or install instructions. It discusses the native-tool decision conceptually and keeps implementation/source exposure out of the attendee-facing page.
 Next action: use only as an advanced optional discussion aid unless Tomer chooses to feature native tool/plugin internals live.
-
-### Credential tracer / authentication routing
-
-Status: defer  
-Hub path: none yet.  
-Source: existing public A2X site resource at `public/resources/credential-tracer.html`.  
-Safety notes: useful, but not part of the highest-priority first workshop path unless auth/billing comes up.  
-Next action: keep as optional Q&A resource.

@@ -118,6 +118,9 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Story 9.2: Add Claude Code credential routing Q&A handout
+  - Evidence: created `resources/claude-code-credential-routing.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 23 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/claude-code-credential-routing.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-credential-routing-mobile.png` (186364 bytes); Chrome DOM dump confirmed the title, token-safety callout, and public-safe footer markers on 2026-06-10 21:00 IDT. No private account details, credentials, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
+
 - [x] Story 9.1: Add pre-workshop readiness checklist
   - Evidence: created `resources/pre-workshop-readiness-checklist.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; committed implementation as `9ef544d` and tracker follow-ups through `aafc82b`; `python3 scripts/check-static-links.py` passed for 22 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/pre-workshop-readiness-checklist.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-pre-workshop-readiness-mobile.png` (138902 bytes); Chrome DOM dump confirmed the page title, safe practice target language, and public-safe footer markers on 2026-06-10 18:46 IDT; latest GitHub Security Checks run `27288411793` succeeded; latest Pages deployment run `27288408888` succeeded; public smoke returned HTTP 200 for the live hub, readiness checklist, and route chooser, with readiness content visible. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
 
@@ -548,6 +551,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 21:01 IDT — Finished Story 9.2: created public-safe Claude Code credential routing Q&A handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private account details, credentials, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
+
+- 2026-06-10 20:57 IDT — Started Story 9.2: add Claude Code credential routing Q&A handout at HEAD `1e65305`; scope is a public-safe optional troubleshooting page plus hub/chooser/inventory/usage-map wiring, with no private account details, credentials, tracking, lead capture, pricing claims, production website changes, or direct private/source links.
 
 - 2026-06-10 18:53 IDT — Cleared Maintenance blocker: follow-up commit `aafc82b` pushed; GitHub Security Checks run `27288411793` and Pages deployment run `27288408888` succeeded. The live hub, readiness checklist, and route chooser were already public-smoke verified with HTTP 200 and readiness content visible.
 
