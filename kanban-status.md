@@ -105,9 +105,6 @@
 ### 🚧 BLOCKED / APPROVAL REQUIRED
 
 - None for the repository visibility and website-link launch path; Tomer approved this scope on 2026-06-08.
-- [ ] Maintenance: GitHub Pages deploy for commit `35edd99`
-  - Status: blocked
-  - Blocker: GitHub Security Checks passed for current HEAD `35edd99`, and the live site serves the new readiness checklist from prior successful deployment `b215916`, but the latest `pages-build-deployment` run `27288330961` failed at deploy with `HttpError: Requires authentication`; Pages API still reports `status: building`. No Pages configuration or visibility changes were attempted.
 - [ ] Story 4.4: Expose or link A2X Marketplace source repo publicly
   - Status: blocked
   - Blocker: sanitized overview is available, but direct marketplace source linking still needs cleanup of local-path docs, credential setup framing, and secret-scanner noise.
@@ -122,7 +119,7 @@
 ### ✅ DONE (Completed Stories)
 
 - [x] Story 9.1: Add pre-workshop readiness checklist
-  - Evidence: created `resources/pre-workshop-readiness-checklist.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; committed implementation as `9ef544d` and tracker update as `b215916`; `python3 scripts/check-static-links.py` passed for 22 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/pre-workshop-readiness-checklist.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-pre-workshop-readiness-mobile.png` (138902 bytes); Chrome DOM dump confirmed the page title, safe practice target language, and public-safe footer markers on 2026-06-10 18:46 IDT; GitHub Security Checks run `27288255891` succeeded for current HEAD `b215916`; Pages deployment run `27288253654` succeeded after the follow-up tracker commit; public smoke returned HTTP 200 for the live hub, readiness checklist, and route chooser, with readiness content visible. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
+  - Evidence: created `resources/pre-workshop-readiness-checklist.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; committed implementation as `9ef544d` and tracker follow-ups through `aafc82b`; `python3 scripts/check-static-links.py` passed for 22 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/pre-workshop-readiness-checklist.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-pre-workshop-readiness-mobile.png` (138902 bytes); Chrome DOM dump confirmed the page title, safe practice target language, and public-safe footer markers on 2026-06-10 18:46 IDT; latest GitHub Security Checks run `27288411793` succeeded; latest Pages deployment run `27288408888` succeeded; public smoke returned HTTP 200 for the live hub, readiness checklist, and route chooser, with readiness content visible. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
 
 - [x] Story 8.4: Add post-workshop action plan handout
   - Evidence: created `resources/post-workshop-action-plan.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; added Epic 8 milestone coverage; `python3 scripts/check-static-links.py` passed for 21 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/post-workshop-action-plan.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-post-workshop-action-plan-mobile.png` (137903 bytes); Chrome DOM dump confirmed the page title, starter workflow brief, and public-safe footer markers on 2026-06-10 16:40 IDT. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
@@ -551,6 +548,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 18:53 IDT — Cleared Maintenance blocker: follow-up commit `aafc82b` pushed; GitHub Security Checks run `27288411793` and Pages deployment run `27288408888` succeeded. The live hub, readiness checklist, and route chooser were already public-smoke verified with HTTP 200 and readiness content visible.
 
 - 2026-06-10 18:52 IDT — Blocked Maintenance: current HEAD `35edd99` pushed and GitHub Security Checks run `27288334678` succeeded, but latest Pages deployment run `27288330961` failed at deploy with `HttpError: Requires authentication`. Public smoke still returns HTTP 200 for the live hub, readiness checklist, and route chooser from the prior successful deployment; no Pages configuration or visibility changes were attempted.
 
@@ -1172,4 +1171,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated/source-release cleanup or external Pages-deploy recovery: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup; latest Pages deployment for current HEAD `35edd99` is blocked by `HttpError: Requires authentication` even though the live site currently serves the readiness checklist from prior deployment `b215916`. If the next autonomous tick has budget, first re-check Pages status/run `27288330961`; if still blocked, report/leave it for GitHub Pages auth recovery rather than changing Pages settings autonomously.
+- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated or source-release cleanup: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
