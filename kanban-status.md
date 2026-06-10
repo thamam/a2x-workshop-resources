@@ -109,6 +109,9 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Story 8.3: Add attendee resource route chooser
+  - Evidence: created `resources/workshop-resource-chooser.html`; linked it from `index.html` hero actions and live workshop kit; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 20 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/` and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-route-chooser-mobile.png` (149632 bytes); Chrome DOM dump confirmed the route chooser title and core route links on 2026-06-10 14:33–14:34 IDT. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
+
 - [x] Maintenance: Verify current public repo and approved Pages state for HEAD `2c0af63`
   - Evidence: current HEAD `2c0af63ca5ea7b37b91549a31fbdf0dd4fb4c183` (`Refresh current public readiness evidence`); `docs/public-release-audit-2026-06-07.md` refreshed for current HEAD; `gh repo view` reports `visibility: PUBLIC` and `isPrivate: false`; GitHub Pages API reports approved Pages site `https://thamam.github.io/a2x-workshop-resources/` built from `main` branch `/`; public smoke checks returned HTTP 200 for the hub, Skill Wizard page, `https://a2xautonomy.com/`, and `https://a2xautonomy.com/#resources`; GitHub Security Checks run `27260255147` and `pages-build-deployment` run `27260254032` both succeeded; `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, `git diff --check`, and stale-audit-identifier search passed on 2026-06-10 12:26–12:27 IDT. No visibility changes, Pages configuration changes, analytics/lead capture, pricing/marketing claims, production A2X website deployment, or direct private/source-link exposure were performed.
 
@@ -530,6 +533,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 14:34 IDT — Finished Story 8.3: created public-safe attendee resource route chooser, wired it into the hub, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
+
+- 2026-06-10 14:31 IDT — Started Story 8.3: add attendee resource route chooser at HEAD `89487bb`; scope is a public-safe chooser page plus hub/usage-map wiring, with no private source exposure, tracking, lead capture, pricing claims, or production website changes.
 
 - 2026-06-10 12:27 IDT — Finished Maintenance: verified current HEAD `2c0af63`; refreshed `docs/public-release-audit-2026-06-07.md`; repository is public per approved scope; approved GitHub Pages site is built from `main` branch `/`; GitHub Security Checks run `27260255147` and `pages-build-deployment` run `27260254032` succeeded; static-link, private-file blocker, gitleaks `--no-git`, `git diff --check`, public smoke checks, and stale-audit-identifier search passed. No visibility changes, Pages configuration changes, analytics/lead capture, pricing/marketing claims, production A2X website deployment, or direct private/source-link exposure were performed.
 

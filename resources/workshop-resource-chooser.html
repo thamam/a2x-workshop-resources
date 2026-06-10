@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workshop Resource Route Chooser · A2X</title>
+  <meta name="description" content="A public-safe chooser for finding the right A2X Claude Code workshop resource by workshop moment." />
+  <style>
+    :root { color-scheme: dark; --bg:#17130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f4eddf; --muted:#baad9a; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #302317 0, var(--bg) 34rem); color:var(--text); line-height:1.55; }
+    a { color: inherit; }
+    main { max-width: 1080px; margin: 0 auto; padding: 42px 20px 44px; }
+    .back { display:inline-flex; gap:.45rem; align-items:center; color:var(--accent2); font-weight:800; text-decoration:none; margin-bottom:28px; }
+    .eyebrow { color: var(--accent2); font-size:.76rem; letter-spacing:.15em; text-transform:uppercase; font-weight:850; }
+    h1 { font-size: clamp(2.2rem, 6.5vw, 4.8rem); line-height:.98; letter-spacing:-.055em; margin:14px 0 16px; max-width:820px; }
+    h2 { font-size: clamp(1.35rem, 3vw, 2.15rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.08rem; }
+    p { color:var(--muted); margin:0; }
+    .lead { max-width:780px; font-size:1.12rem; }
+    .note { margin-top:20px; border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:18px; padding:16px; }
+    section { margin-top:40px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap:16px; }
+    .route { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:20px; min-height:260px; display:flex; flex-direction:column; justify-content:space-between; gap:18px; }
+    .route strong { color:var(--text); }
+    .tag { color:var(--ok); font-size:.74rem; font-weight:850; text-transform:uppercase; letter-spacing:.09em; margin-bottom:8px; }
+    .tag.optional { color:var(--warn); }
+    .links { display:grid; gap:8px; margin-top:16px; }
+    .links a { display:block; border:1px solid var(--line); border-radius:999px; padding:8px 10px; text-decoration:none; font-weight:760; background:rgba(255,255,255,.025); }
+    .links a:hover { border-color:var(--accent); }
+    .sequence { display:grid; gap:12px; counter-reset: step; }
+    .step { counter-increment: step; border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:18px; padding:16px; display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .step::before { content: counter(step); width:28px; height:28px; border-radius:50%; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    footer { margin-top:46px; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; font-size:.95rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../index.html">← Back to hub</a>
+    <div class="eyebrow">Workshop route chooser</div>
+    <h1>Pick the resource for the moment you are in.</h1>
+    <p class="lead">This page helps attendees decide what to open next during or after the Claude Code workshop. It uses only public-safe hub resources: no private source links, no tracking, no lead capture, and no client material.</p>
+
+    <div class="note">
+      <p><strong>Fast rule:</strong> if you are not sure where to start, open the harness map first, then move through the live workshop kit before touching optional demos.</p>
+    </div>
+
+    <section aria-labelledby="routes-title">
+      <div class="eyebrow">Decision cards</div>
+      <h2 id="routes-title">What are you trying to do?</h2>
+      <div class="grid">
+        <article class="route">
+          <div>
+            <div class="tag">Start here</div>
+            <h3>Understand why agents succeed or fail</h3>
+            <p>Use this when the discussion is still about mental models: rules, tools, environment, feedback loops, and review gates.</p>
+          </div>
+          <div class="links">
+            <a href="claude-code-harness-map.html">Open Claude Code harness map →</a>
+            <a href="../index.html#start">View live workshop kit →</a>
+          </div>
+        </article>
+
+        <article class="route">
+          <div>
+            <div class="tag">Use today</div>
+            <h3>Give Claude Code better project rules</h3>
+            <p>Use this before live coding or when a project feels too vague for an agent to edit safely.</p>
+          </div>
+          <div class="links">
+            <a href="claude-md-cheat-sheet.html">Open CLAUDE.md cheat sheet →</a>
+          </div>
+        </article>
+
+        <article class="route">
+          <div>
+            <div class="tag">Reusable workflow</div>
+            <h3>Turn a repeated process into a skill</h3>
+            <p>Use this after you notice the same setup, review, or delivery pattern happening more than once.</p>
+          </div>
+          <div class="links">
+            <a href="first-skill.html">Build your first skill →</a>
+            <a href="claude-wizard-skill-wizard.html">Check it with Skill Wizard →</a>
+          </div>
+        </article>
+
+        <article class="route">
+          <div>
+            <div class="tag">Idea to spec</div>
+            <h3>Shape a rough product idea</h3>
+            <p>Use this chain when you have an idea but need the agent to ask fewer random questions and produce a cleaner handoff.</p>
+          </div>
+          <div class="links">
+            <a href="product-brief-generator.html">Draft product brief →</a>
+            <a href="openspec-interviewer.html">Ask missing questions →</a>
+            <a href="prd-openspec-starter.html">Create PRD/OpenSpec starter →</a>
+          </div>
+        </article>
+
+        <article class="route">
+          <div>
+            <div class="tag">Feedback loop</div>
+            <h3>Improve a prompt or review a draft</h3>
+            <p>Use this when a prompt is getting inconsistent answers, or when a PRD needs comments that can feed the next assistant turn.</p>
+          </div>
+          <div class="links">
+            <a href="prompt-improver.html">Improve a prompt →</a>
+            <a href="prd-html-review-workbench.html">Open PRD review workbench →</a>
+            <a href="../docs/giveaway-scenario-test.md">See sanitized scenario chain →</a>
+          </div>
+        </article>
+
+        <article class="route">
+          <div>
+            <div class="tag optional">Advanced / optional</div>
+            <h3>Explore A2X tool patterns safely</h3>
+            <p>Use these only after the core workshop flow. They explain advanced demos without exposing private repositories or requiring real credentials.</p>
+          </div>
+          <div class="links">
+            <a href="a2x-marketplace-tutorial.html">Marketplace install guide →</a>
+            <a href="wiki-llm-tutorial.html">LLM Wiki tutorial →</a>
+            <a href="buildtool-decision.html">buildTool decision navigator →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="sequence-title">
+      <div class="eyebrow">Suggested path</div>
+      <h2 id="sequence-title">A simple attendee sequence</h2>
+      <div class="sequence">
+        <div class="step"><p><strong>Open the harness map.</strong> Anchor on why the surrounding workflow matters as much as the model.</p></div>
+        <div class="step"><p><strong>Add project rules.</strong> Use the CLAUDE.md cheat sheet to make the next agent run more deliberate.</p></div>
+        <div class="step"><p><strong>Package repetition.</strong> Build a first skill, then run Skill Wizard as a quick quality gate.</p></div>
+        <div class="step"><p><strong>Shape an idea.</strong> Generate a product brief, ask only high-impact missing questions, then draft a PRD/OpenSpec starter.</p></div>
+        <div class="step"><p><strong>Review before scaling.</strong> Improve prompts and review PRDs before moving to optional advanced demos.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe A2X workshop navigation aid. For the broader offer and contact flow, use <a href="https://a2xautonomy.com/">the A2X website</a>.
+    </footer>
+  </main>
+</body>
+</html>

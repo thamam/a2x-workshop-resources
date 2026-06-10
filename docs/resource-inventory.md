@@ -9,6 +9,14 @@ Status legend:
 
 ## Candidates
 
+### Workshop resource route chooser
+
+Status: publish-now
+Hub path: `resources/workshop-resource-chooser.html`
+Source: public-safe static navigation aid drafted in this repo from the current hub resource set and workshop usage map.
+Safety notes: links only to existing public-safe hub resources and docs; no private source links, credentials, local paths, analytics, lead capture, or client material.
+Next action: tune route labels after observing which workshop moments cause attendee confusion.
+
 ### CLAUDE.md cheat sheet
 
 Status: publish-now  

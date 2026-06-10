@@ -4,6 +4,16 @@ This map connects talk moments to resources in the hub. It is designed for the f
 
 ## Priority 1 — use live
 
+### Navigation: resource route chooser
+
+Resource: `resources/workshop-resource-chooser.html`.
+
+Use when: attendees ask “which link should I open now?” or when Tomer wants to move quickly from a workshop moment to the matching handout.
+
+Attendee action: choose the right next resource by goal: harness mental model, CLAUDE.md rules, first skill, idea-to-spec chain, prompt/PRD feedback loop, or optional advanced demo.
+
+Status: ready navigation aid.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.
