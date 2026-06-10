@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pre-workshop readiness checklist | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe checklist for preparing a laptop, sample project, and workshop mindset before an A2X Claude Code workshop." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width: 1040px; margin:0 auto; padding:48px 20px 36px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.7rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:850px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.05rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap:anywhere; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:760px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:200px; }
+    .card strong { color:var(--text); }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .checklist { display:grid; gap:14px; }
+    .check { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); }
+    .check h3::before { content:"□ "; color:var(--ok); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · readiness</div>
+    <h1>Arrive with one safe project, not a blank screen.</h1>
+    <p class="lead">Use this before the workshop to prepare a reversible Claude Code practice target, a clean local setup, and the safety boundaries that keep the session useful without exposing private material.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="claude-md-cheat-sheet.html">Open CLAUDE.md rules</a>
+      <a class="button" href="post-workshop-action-plan.html">Plan follow-up workflow</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe preparation</div>
+        <h2>Bring a tiny sandbox and sanitized examples.</h2>
+        <p>The best workshop target is real enough to matter and small enough to inspect. Do not bring production credentials, customer data, private notes, payment flows, or anything that would be painful if an agent misunderstood the task.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Before the room</div>
+      <h2>Five checks to do ahead of time</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">1 · Access</div>
+          <h3>Confirm Claude Code opens locally.</h3>
+          <p>Run the tool in a non-sensitive folder and make sure you can start a session, read files, and exit cleanly before the workshop starts.</p>
+        </div>
+        <div class="card">
+          <div class="tag">2 · Sandbox</div>
+          <h3>Create a disposable practice repo.</h3>
+          <p>Use a toy app, copied template, or fictional notes folder. Keep it separate from production systems and private client work.</p>
+        </div>
+        <div class="card">
+          <div class="tag">3 · Rules</div>
+          <h3>Add a small instruction file.</h3>
+          <p>Prepare a starter <code>CLAUDE.md</code> with rules like “ask before guessing,” “prefer small diffs,” and “verify before done.”</p>
+        </div>
+        <div class="card">
+          <div class="tag">4 · Sample</div>
+          <h3>Sanitize one input example.</h3>
+          <p>Replace names, credentials, customer facts, URLs, and internal identifiers with fictional equivalents before using them in prompts.</p>
+        </div>
+        <div class="card">
+          <div class="tag">5 · Evidence</div>
+          <h3>Know how “done” will be proven.</h3>
+          <p>Pick one visible result: a passing check, rendered page, clean diff, exported review packet, or checklist that another person can inspect.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>Use this as your readiness note</h2>
+      <div class="checklist">
+        <div class="check"><h3>My safe practice target</h3><p>The folder or repo I will use is: <strong>[toy repo / sanitized notes / small non-production feature]</strong>.</p></div>
+        <div class="check"><h3>My off-limits boundaries</h3><p>The agent must not touch: production systems, secrets, payments, legal/health data, external messages, private customer material, or unpublished internal resources.</p></div>
+        <div class="check"><h3>My first task</h3><p>The small reversible task I want to try is: <strong>[summarize notes / draft a PRD / add one UI card / review one file]</strong>.</p></div>
+        <div class="check"><h3>My verification signal</h3><p>I will call the task done only when I can show: <strong>[test output / screenshot / rendered page / diff / exported packet]</strong>.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow warn">If something is not ready</div>
+      <h2>Use the workshop anyway</h2>
+      <div class="grid">
+        <div class="card"><h3>No repo ready?</h3><p>Use the product brief generator and PRD starter. Planning workflows are valuable even without a codebase.</p></div>
+        <div class="card"><h3>No clean sample?</h3><p>Use the public sanitized scenario chain instead of improvising with private company material.</p></div>
+        <div class="card"><h3>No install access?</h3><p>Follow the live demo and focus on the harness map, project rules, and review habits you can bring back later.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe readiness handout for A2X Claude Code workshops. This page does not collect data, run model calls, use analytics, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

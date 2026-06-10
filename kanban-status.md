@@ -83,6 +83,9 @@
   - [x] Story 8.3: Add attendee resource route chooser
   - [x] Story 8.4: Add post-workshop action plan handout
 
+- [x] **Epic 9: Workshop readiness and adoption aids** (100% Completed)
+  - [x] Story 9.1: Add pre-workshop readiness checklist
+
 ---
 
 ## 🏃 Active State Tracking
@@ -114,6 +117,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 9.1: Add pre-workshop readiness checklist
+  - Evidence: created `resources/pre-workshop-readiness-checklist.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 22 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/pre-workshop-readiness-checklist.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-pre-workshop-readiness-mobile.png` (138902 bytes); Chrome DOM dump confirmed the page title, safe practice target language, and public-safe footer markers on 2026-06-10 18:46 IDT. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
 
 - [x] Story 8.4: Add post-workshop action plan handout
   - Evidence: created `resources/post-workshop-action-plan.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; added Epic 8 milestone coverage; `python3 scripts/check-static-links.py` passed for 21 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/post-workshop-action-plan.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-post-workshop-action-plan-mobile.png` (137903 bytes); Chrome DOM dump confirmed the page title, starter workflow brief, and public-safe footer markers on 2026-06-10 16:40 IDT. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
@@ -542,6 +548,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 18:46 IDT — Finished Story 9.1: created public-safe pre-workshop readiness checklist, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
+
+- 2026-06-10 18:44 IDT — Started Story 9.1: add pre-workshop readiness checklist at HEAD `04c1cbc`; scope is a public-safe readiness page plus hub/route/inventory/usage-map wiring, with no private source exposure, tracking, lead capture, pricing claims, or production website changes.
 
 - 2026-06-10 16:40 IDT — Finished Story 8.4: created public-safe post-workshop action plan handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, tracking, lead capture, pricing claims, or production website changes were added.
 
@@ -1153,4 +1163,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated or source-release cleanup: public publishing, direct A2X Marketplace source linking, and direct Wiki-LLM source/software release all require Tomer approval or upstream cleanup before exposure.
+- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated or source-release cleanup: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.

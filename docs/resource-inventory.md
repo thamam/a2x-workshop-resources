@@ -9,6 +9,14 @@ Status legend:
 
 ## Candidates
 
+### Pre-workshop readiness checklist
+
+Status: publish-now
+Hub path: `resources/pre-workshop-readiness-checklist.html`
+Source: public-safe static readiness handout drafted in this repo from the current workshop preparation and safety boundaries.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The checklist explicitly directs attendees toward toy repos, fictional/sanitized samples, stop conditions, and visible verification evidence.
+Next action: tune the checklist after observing which setup failures or safety questions appear before the workshop.
+
 ### Workshop resource route chooser
 
 Status: publish-now

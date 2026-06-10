@@ -4,6 +4,16 @@ This map connects talk moments to resources in the hub. It is designed for the f
 
 ## Priority 1 — use live
 
+### Before the room: pre-workshop readiness checklist
+
+Resource: `resources/pre-workshop-readiness-checklist.html`.
+
+Use when: attendees are preparing ahead of the workshop, or when the room needs a safe fallback target before live Claude Code work begins.
+
+Attendee action: confirm Claude Code access, choose a disposable practice repo, add starter project rules, sanitize one input example, and define the visible evidence that will prove the first task worked.
+
+Status: ready readiness handout.
+
 ### Navigation: resource route chooser
 
 Resource: `resources/workshop-resource-chooser.html`.
