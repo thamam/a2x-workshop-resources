@@ -85,6 +85,8 @@
 
 - [x] **Epic 9: Workshop readiness and adoption aids** (100% Completed)
   - [x] Story 9.1: Add pre-workshop readiness checklist
+  - [x] Story 9.2: Add Claude Code credential routing Q&A handout
+  - [x] Story 9.3: Add Claude Code handoff packet handout
 
 ---
 
@@ -117,6 +119,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 9.3: Add Claude Code handoff packet handout
+  - Evidence: created `resources/claude-code-handoff-packet.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 24 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/claude-code-handoff-packet.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-handoff-packet-mobile.png` (145055 bytes); Chrome DOM dump confirmed the page title, safe-scope callout, handoff packet template, and public-safe footer markers on 2026-06-10 23:10 IDT. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
 
 - [x] Story 9.2: Add Claude Code credential routing Q&A handout
   - Evidence: created `resources/claude-code-credential-routing.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; committed implementation as `b8ec519`; `python3 scripts/check-static-links.py` passed for 23 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/claude-code-credential-routing.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-credential-routing-mobile.png` (186364 bytes); Chrome DOM dump confirmed the title, token-safety callout, and public-safe footer markers on 2026-06-10 21:00 IDT; GitHub Security Checks run `27295854486` succeeded; Pages deployment run `27295852793` succeeded; public smoke returned HTTP 200 for the live hub, credential routing page, and route chooser, with credential-routing content visible. No private account details, credentials, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
@@ -551,6 +556,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-10 23:10 IDT — Finished Story 9.3: created public-safe Claude Code handoff packet handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
+
+- 2026-06-10 23:06 IDT — Started Story 9.3: add Claude Code handoff packet handout at HEAD `3871323`; scope is a public-safe attendee page plus hub/chooser/inventory/usage-map wiring, with no private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source exposure.
 
 - 2026-06-10 21:04 IDT — Cleared Story 9.2 post-commit verification: implementation commit `b8ec519` pushed; GitHub Security Checks run `27295854486` and Pages deployment run `27295852793` succeeded; public smoke returned HTTP 200 for the live hub, credential routing page, and route chooser with credential-routing content visible.
 

@@ -33,6 +33,14 @@ Source: public-safe static follow-up handout drafted in this repo from the curre
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The worksheet explicitly recommends fictional/sanitized sample inputs and stop conditions before sensitive actions.
 Next action: tune the closing worksheet after observing which post-workshop commitments attendees actually make.
 
+### Claude Code handoff packet
+
+Status: publish-now
+Hub path: `resources/claude-code-handoff-packet.html`
+Source: public-safe static handoff aid drafted in this repo from the current workshop flow and need to carry context, rules, next action, boundaries, and verification into the next Claude Code session.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees not to paste secrets, real customer material, production credentials, billing pages, private repository links, or account screenshots into shared packets.
+Next action: tune after observing what attendees forget to include when they restart Claude Code work after the workshop.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Claude Code handoff packet | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe handoff packet for turning workshop notes into the next Claude Code session." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width: 1040px; margin:0 auto; padding:48px 20px 36px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.7rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:870px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.05rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:780px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:190px; }
+    .card strong { color:var(--text); }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .packet { display:grid; gap:14px; }
+    .prompt { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); }
+    .prompt p + p { margin-top:10px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · handoff</div>
+    <h1>Package the next Claude Code session before you leave.</h1>
+    <p class="lead">Use this handout when a workshop exercise, follow-up idea, or half-finished spec needs to become a clean next agent run. The goal is to hand Claude Code context, boundaries, and proof criteria — not a pile of scattered notes.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="post-workshop-action-plan.html">Plan one follow-up workflow</a>
+      <a class="button" href="claude-md-cheat-sheet.html">Add project rules</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe scope</div>
+        <h2>A good handoff lets the agent start small and stop safely.</h2>
+        <p>Do not paste secrets, real customer material, production credentials, billing pages, private repository links, or account screenshots into a shared packet. Use fictional or sanitized examples until the workflow has a reviewed permission path.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Packet contents</div>
+      <h2>Five things to capture before the next run</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">1 · Goal</div>
+          <h3>Name the one outcome.</h3>
+          <p>Write the smallest useful artifact: a draft spec, a testable page, a cleaned prompt, a review packet, or a toy workflow.</p>
+        </div>
+        <div class="card">
+          <div class="tag">2 · Context</div>
+          <h3>Point to the safe inputs.</h3>
+          <p>List public docs, sanitized snippets, toy repo paths, or fictional examples. If the input is sensitive, replace it before the agent sees it.</p>
+        </div>
+        <div class="card">
+          <div class="tag">3 · Rules</div>
+          <h3>Set behavior and stop conditions.</h3>
+          <p>Use a tiny <code>CLAUDE.md</code> or prompt preamble: ask before guessing, prefer small diffs, avoid production, and verify before declaring done.</p>
+        </div>
+        <div class="card">
+          <div class="tag">4 · Next action</div>
+          <h3>Ask for the first reversible move.</h3>
+          <p>Do not begin with “build the whole thing.” Start with a plan, fixture, dry run, local page, failing test, or reviewable draft.</p>
+        </div>
+        <div class="card">
+          <div class="tag">5 · Evidence</div>
+          <h3>Define done before execution.</h3>
+          <p>Choose the proof: command output, link check, browser smoke, diff review, exported packet, checklist, or a copied result.</p>
+        </div>
+        <div class="card">
+          <div class="tag warn">Boundary</div>
+          <h3>Record what is not allowed yet.</h3>
+          <p>Examples: no external messages, no real credentials, no payment actions, no production deploys, no private-data processing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable template</div>
+      <h2>Paste this into your notes or next Claude Code session</h2>
+      <div class="packet">
+        <div class="prompt">
+          <h3>Handoff packet</h3>
+          <ul>
+            <li><strong>Outcome:</strong> The next useful artifact is…</li>
+            <li><strong>Current state:</strong> We already have…</li>
+            <li><strong>Safe inputs:</strong> Use only these fictional/sanitized/public materials…</li>
+            <li><strong>Project rules:</strong> Keep changes small, explain assumptions, and ask before touching anything outside the stated files or notes.</li>
+            <li><strong>Stop conditions:</strong> Stop before production, secrets, money, customer data, external messages, legal/health data, or irreversible actions.</li>
+            <li><strong>First reversible move:</strong> Start by…</li>
+            <li><strong>Verification:</strong> We will know it worked when…</li>
+            <li><strong>Handoff after completion:</strong> Return changed files, commands run, evidence, risks, and the next safest action.</li>
+          </ul>
+        </div>
+        <div class="prompt">
+          <h3>Prompt to run</h3>
+          <p>“Read this handoff packet. Before implementing, identify missing context, risky assumptions, and any approval boundaries. Then propose the smallest reversible first step and the exact verification command or inspection that will prove it worked. If the scope is safe, proceed; if not, stop and explain the blocker.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Use with the rest of the hub</div>
+      <h2>Where this fits</h2>
+      <div class="grid">
+        <div class="card"><h3>Before the session</h3><p>Use the readiness checklist to choose a safe sandbox and evidence target, then save the handoff packet beside that sandbox.</p></div>
+        <div class="card"><h3>During a workflow</h3><p>Use the product brief, interviewer, and PRD starter to create structured context before asking the agent to edit anything.</p></div>
+        <div class="card"><h3>After a win</h3><p>If the same handoff works twice, turn the repeated steps into a skill or project rule and review it with Skill Wizard.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe handout for A2X Claude Code workshops. This page does not collect data, run model calls, use analytics, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

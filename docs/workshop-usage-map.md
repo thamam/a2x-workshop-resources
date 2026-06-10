@@ -44,6 +44,16 @@ Attendee action: choose a repeated low-risk workflow, define a small harness wit
 
 Status: ready follow-up handout.
 
+### Session handoff: Claude Code handoff packet
+
+Resource: `resources/claude-code-handoff-packet.html`.
+
+Use when: attendees need to turn workshop notes, a half-finished exercise, or a follow-up idea into a clean next Claude Code session.
+
+Attendee action: capture the outcome, current state, safe inputs, project rules, stop conditions, first reversible move, verification evidence, and completion handoff before asking the agent to act.
+
+Status: ready handoff aid.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.
