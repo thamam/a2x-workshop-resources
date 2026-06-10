@@ -41,6 +41,14 @@ Source: public-safe static handoff aid drafted in this repo from the current wor
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees not to paste secrets, real customer material, production credentials, billing pages, private repository links, or account screenshots into shared packets.
 Next action: tune after observing what attendees forget to include when they restart Claude Code work after the workshop.
 
+### AI tool trial scorecard
+
+Status: publish-now
+Hub path: `resources/ai-tool-trial-scorecard.html`
+Source: public-safe static buyer-education worksheet drafted in this repo from the current workshop follow-up need to choose a small AI tool/workflow trial by evidence instead of hype.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly scopes trials to sanitized inputs, toy repos, copied non-sensitive docs, off-limits boundaries, and observable decision evidence.
+Next action: tune after observing which AI tool/workflow comparison questions attendees ask after the workshop.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now

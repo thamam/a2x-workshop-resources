@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI tool trial scorecard | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for deciding which AI tool trial deserves the next small experiment after an A2X workshop." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width: 1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:900px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap:anywhere; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:790px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .scorecard { display:grid; gap:14px; }
+    .row { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .scale { display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:8px; margin-top:8px; }
+    .scale span { border:1px solid var(--line); border-radius:12px; padding:8px 6px; text-align:center; color:var(--muted); font-size:.86rem; }
+    .formula { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+    @media (max-width: 560px) { .scale { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · buyer education</div>
+    <h1>Pick the next AI tool trial by evidence, not hype.</h1>
+    <p class="lead">Use this worksheet after the workshop when a team has several AI tools or workflows competing for attention. The goal is not to crown a universal winner; it is to choose one small, safe trial with a clear decision signal.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="post-workshop-action-plan.html">Plan the first workflow</a>
+      <a class="button" href="claude-code-handoff-packet.html">Package the next agent run</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe evaluation rule</div>
+        <h2>Score a trial only against a specific workflow.</h2>
+        <p>Do not compare vague tool brands. Compare one tool or agent setup against one repeatable job: draft a spec, review a PR, summarize notes, build a prototype, triage support themes, or prepare a handoff packet. Keep private data, credentials, customer files, billing screens, and internal links out of shared scoring notes.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Define the trial in one sentence</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">Workflow</div><h3>What repeated job are we testing?</h3><p>Example: “Turn a sanitized product idea into a reviewable PRD and OpenSpec proposal.”</p></div>
+        <div class="card"><div class="tag">User</div><h3>Who must benefit?</h3><p>Name the role: founder, product lead, engineer, operations owner, sales lead, or facilitator.</p></div>
+        <div class="card"><div class="tag">Evidence</div><h3>What output proves value?</h3><p>Choose a visible artifact: clean diff, review packet, accepted outline, saved time estimate, fewer missing questions, or better handoff.</p></div>
+        <div class="card"><div class="tag warn">Boundary</div><h3>What is off-limits?</h3><p>List anything the trial must not touch: production data, external messages, payments, secrets, private repos, customer material, or irreversible actions.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Score the candidate</h2>
+      <p class="lead">Use a 1–5 scale. A strong trial does not need perfect scores; it needs a clear reason to run now and a safe way to stop.</p>
+      <div class="scorecard">
+        <div class="row"><h3>1. Workflow fit</h3><p>Does the tool match a real repeated job, or is the team inventing a demo just because the tool is interesting?</p><div class="scale"><span>1 vague</span><span>2 weak</span><span>3 plausible</span><span>4 strong</span><span>5 repeated pain</span></div></div>
+        <div class="row"><h3>2. Safety and reversibility</h3><p>Can the trial run on sanitized inputs, toy repos, copied docs, or read-only material with clear stop conditions?</p><div class="scale"><span>1 risky</span><span>2 brittle</span><span>3 guarded</span><span>4 safe</span><span>5 reversible</span></div></div>
+        <div class="row"><h3>3. Setup friction</h3><p>Can the intended users start without new procurement, unclear credentials, private installs, or fragile environment assumptions?</p><div class="scale"><span>1 blocked</span><span>2 heavy</span><span>3 manageable</span><span>4 light</span><span>5 ready today</span></div></div>
+        <div class="row"><h3>4. Verification signal</h3><p>Will the team know whether the trial worked from observable evidence instead of vibes?</p><div class="scale"><span>1 vibes</span><span>2 anecdote</span><span>3 visible</span><span>4 measurable</span><span>5 decision-ready</span></div></div>
+        <div class="row"><h3>5. Adoption path</h3><p>If the trial works, is there a realistic next step: a rule file, reusable skill, checklist, workflow owner, or review habit?</p><div class="scale"><span>1 orphan</span><span>2 unclear</span><span>3 owner maybe</span><span>4 next step</span><span>5 repeatable system</span></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Make the decision</h2>
+      <div class="grid">
+        <div class="formula"><h3 class="ok">Run it now</h3><p>Total score is 18+ and safety/reversibility is 4 or 5. Define a tiny trial, use sanitized inputs, and package the next agent run with the handoff packet.</p></div>
+        <div class="formula"><h3 class="warn">Clarify first</h3><p>Total score is 13–17, or the verification signal is weak. Use the product brief generator, OpenSpec interviewer, or post-workshop action plan before running the tool.</p></div>
+        <div class="formula"><h3>Park it</h3><p>Total score is 12 or below, or the workflow needs private data, production access, pricing commitments, or approval before safe evaluation.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable trial note</div>
+      <h2>Paste this into your planning doc</h2>
+      <div class="callout">
+        <p><strong>Candidate:</strong> [tool or workflow name]</p>
+        <p><strong>Workflow:</strong> [one repeated job]</p>
+        <p><strong>Safe input:</strong> [toy repo / sanitized sample / copied non-sensitive docs]</p>
+        <p><strong>Off-limits:</strong> secrets, customer data, production systems, private links, external sends, payments, and irreversible actions.</p>
+        <p><strong>Success evidence:</strong> [artifact, check, review packet, or before/after comparison]</p>
+        <p><strong>Decision:</strong> run now / clarify first / park.</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI tool trial scorecard for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

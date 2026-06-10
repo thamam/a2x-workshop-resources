@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-10
+- **Last Updated:** 2026-06-11
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -88,6 +88,9 @@
   - [x] Story 9.2: Add Claude Code credential routing Q&A handout
   - [x] Story 9.3: Add Claude Code handoff packet handout
 
+- [x] **Epic 10: Buyer education and trial-planning aids** (100% Completed)
+  - [x] Story 10.1: Add AI tool trial scorecard handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -119,6 +122,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 10.1: Add AI tool trial scorecard handout
+  - Evidence: created `resources/ai-tool-trial-scorecard.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 25 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-tool-trial-scorecard.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-tool-trial-scorecard-mobile.png` (139801 bytes); Chrome DOM dump confirmed the page title, safe-evaluation callout, scorecard section, and public-safe footer markers on 2026-06-11 01:17 IDT. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
 
 - [x] Story 9.3: Add Claude Code handoff packet handout
   - Evidence: created `resources/claude-code-handoff-packet.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 24 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/claude-code-handoff-packet.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-handoff-packet-mobile.png` (145055 bytes); Chrome DOM dump confirmed the page title, safe-scope callout, handoff packet template, and public-safe footer markers on 2026-06-10 23:10 IDT. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
@@ -556,6 +562,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 01:17 IDT — Finished Story 10.1: created public-safe AI tool trial scorecard handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
+
+- 2026-06-11 01:14 IDT — Started Story 10.1: add a public-safe AI tool trial scorecard handout; scope is static resource hub work only, with no pricing claims, tracking, lead capture, private/source links, or production website changes.
 
 - 2026-06-10 23:10 IDT — Finished Story 9.3: created public-safe Claude Code handoff packet handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
 

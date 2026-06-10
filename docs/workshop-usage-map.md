@@ -54,6 +54,16 @@ Attendee action: capture the outcome, current state, safe inputs, project rules,
 
 Status: ready handoff aid.
 
+### Buyer education: AI tool trial scorecard
+
+Resource: `resources/ai-tool-trial-scorecard.html`.
+
+Use when: attendees have several AI tools or workflow ideas competing for attention and need to choose the next safe, small trial by evidence instead of hype.
+
+Attendee action: define one repeated workflow, score the candidate on workflow fit, safety/reversibility, setup friction, verification signal, and adoption path, then decide whether to run now, clarify first, or park it.
+
+Status: ready buyer-education handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.
