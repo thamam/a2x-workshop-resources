@@ -97,6 +97,9 @@
   - [x] Story 11.2: Add AI pilot stakeholder update handout
   - [x] Story 11.3: Add AI pilot retrospective handout
 
+- [x] **Epic 12: Pilot rollout readiness aids** (100% Completed)
+  - [x] Story 12.1: Add AI pilot rollout readiness checklist
+
 ---
 
 ## 🏃 Active State Tracking
@@ -128,6 +131,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 12.1: Add AI pilot rollout readiness checklist
+  - Evidence: created `resources/ai-pilot-rollout-readiness.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 30 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-rollout-readiness.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-rollout-readiness-mobile.png` (155900 bytes); Chrome DOM dump confirmed the page title, safe-rollout callout, copyable checklist section, and public-safe footer markers on 2026-06-11 11:53 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 11.3: Add AI pilot retrospective handout
   - Evidence: created `resources/ai-pilot-retrospective.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 29 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-retrospective.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-retrospective-mobile.png` (154731 bytes); Chrome DOM dump confirmed the page title, safe-retrospective callout, copyable retrospective section, and public-safe footer markers on 2026-06-11 09:46 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -580,6 +586,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 11:53 IDT — Finished Story 12.1: created public-safe AI pilot rollout readiness checklist, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-11 11:50 IDT — Started Story 12.1: add a public-safe AI pilot rollout readiness checklist to help attendees decide whether a completed pilot has enough evidence, ownership, guardrails, rollback plan, and communication path for controlled rollout, without exposing private data, credentials, pricing claims, tracking, lead capture, source links, or production website changes.
 
 - 2026-06-11 09:46 IDT — Finished Story 11.3: created public-safe AI pilot retrospective handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 

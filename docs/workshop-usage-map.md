@@ -104,6 +104,16 @@ Attendee action: capture the pilot hypothesis, sanitized evidence, repeatable wi
 
 Status: ready pilot-learning handout.
 
+### Pilot rollout readiness: AI pilot rollout readiness checklist
+
+Resource: `resources/ai-pilot-rollout-readiness.html`.
+
+Use when: attendees have completed a pilot retrospective and need to decide whether the workflow can expand to a controlled rollout, needs one more narrow experiment, or should stay paused.
+
+Attendee action: confirm evidence, workflow scope, allowed users, allowed inputs, review gate, rollback plan, stakeholder message, and next review date before expanding the pilot.
+
+Status: ready rollout-readiness handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.

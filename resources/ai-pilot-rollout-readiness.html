@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI pilot rollout readiness checklist | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe checklist for deciding whether an AI pilot is ready for a controlled rollout after the evidence, risks, owners, guardrails, and rollback path are clear." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#f19a8b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.7rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap:anywhere; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:840px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .steps { display:grid; gap:14px; }
+    .step { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .copy { border:1px solid var(--line); background:#1d1913; border-radius:18px; padding:18px; overflow-wrap:anywhere; }
+    .copy p + p { margin-top:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · controlled rollout</div>
+    <h1>Do not scale the AI pilot until the boring parts are real.</h1>
+    <p class="lead">Use this public-safe checklist after the scorecard, decision memo, risk register, stakeholder update, and retrospective. It helps a team decide whether a pilot is ready for a controlled rollout, needs one more narrow experiment, or should stay paused until evidence and ownership catch up.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-retrospective.html">Run pilot retrospective</a>
+      <a class="button" href="ai-pilot-risk-register.html">Register pilot risks</a>
+      <a class="button" href="ai-pilot-stakeholder-update.html">Send stakeholder update</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe rollout rule</div>
+        <h2>Rollout means controlled exposure, not “everyone try it.”</h2>
+        <p>Keep the next step narrow: one workflow, named users, approved inputs, visible review evidence, rollback path, and a review date. Do not paste customer data, employee details, credentials, private repositories, production screenshots, billing pages, vendor contracts, pricing assumptions, or internal strategy into a broadly shared rollout checklist.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Rollout gates</div>
+      <h2>Seven gates before the pilot expands</h2>
+      <div class="steps">
+        <div class="step"><h3>1. Evidence gate</h3><p>What proof says the pilot worked? Use sanitized examples, quality comparisons, review notes, failure rates, time observations, or adoption signals.</p></div>
+        <div class="step"><h3>2. Workflow gate</h3><p>Is the rollout limited to one repeatable workflow with clear inputs, outputs, non-goals, and handoff expectations?</p></div>
+        <div class="step"><h3>3. User gate</h3><p>Who is allowed to use it next, who is explicitly out of scope, and who can stop the rollout if the evidence changes?</p></div>
+        <div class="step"><h3>4. Data gate</h3><p>Which input classes are allowed, sanitized, fictional, or prohibited? Name the boundary before anyone reaches for real sensitive material.</p></div>
+        <div class="step"><h3>5. Review gate</h3><p>What human review, automated check, peer signoff, or audit trail proves the output is safe enough for the next step?</p></div>
+        <div class="step"><h3>6. Rollback gate</h3><p>What is the smallest safe rollback: disable the workflow, revert a rule, remove access, switch to demo mode, or return to manual process?</p></div>
+        <div class="step"><h3>7. Communication gate</h3><p>What will stakeholders receive: status, scope, evidence, boundary, risk owner, support path, and next review date?</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Decision outcomes</div>
+      <h2>Choose one rollout state</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Controlled rollout</div><h3>Evidence and ownership are strong enough</h3><p>Proceed with a narrow group, explicit allowed inputs, review gates, rollback plan, and a scheduled checkpoint.</p></div>
+        <div class="card"><div class="tag warn">One more experiment</div><h3>Promising, but one gate is weak</h3><p>Run a focused follow-up test to clarify evidence, data boundary, reviewer load, user fit, or operational support.</p></div>
+        <div class="card"><div class="tag bad">Hold or stop</div><h3>Scaling would hide a real risk</h3><p>Pause if ownership, data policy, evidence quality, review capacity, or rollback control is missing.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable checklist</div>
+      <h2>Paste this into a rollout review</h2>
+      <div class="copy">
+        <p><strong>Workflow to roll out:</strong> [one workflow + user role + non-goals]</p>
+        <p><strong>Evidence that supports rollout:</strong> [sanitized proof + review signal]</p>
+        <p><strong>Allowed users:</strong> [pilot group + owner + stop authority]</p>
+        <p><strong>Allowed inputs:</strong> [safe/sanitized classes + prohibited classes]</p>
+        <p><strong>Review gate:</strong> [human or automated check + evidence to keep]</p>
+        <p><strong>Rollback plan:</strong> [disable/revert/remove/switch-to-manual action]</p>
+        <p><strong>Stakeholder message:</strong> [scope + boundary + top risk + support path + next review date]</p>
+        <p><strong>Decision:</strong> [controlled rollout / one more experiment / hold] because [gate evidence]</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Facilitator cue</div>
+      <h2>When to use it in the workshop</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">After retrospective</div><h3>Turn learning into a gate</h3><p>Use the checklist after the team has named lessons and guardrail updates, before anyone calls the pilot a rollout.</p></div>
+        <div class="card"><div class="tag">Before manager ask</div><h3>Make the ask safer</h3><p>Convert “can we expand this?” into a narrow request with users, inputs, review, rollback, and next checkpoint.</p></div>
+        <div class="card"><div class="tag">If evidence is thin</div><h3>Protect the pilot from hype</h3><p>If a gate is weak, use the answer to design one more experiment instead of pretending the rollout is ready.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI pilot rollout readiness checklist for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

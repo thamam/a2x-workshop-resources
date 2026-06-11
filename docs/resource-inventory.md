@@ -81,6 +81,14 @@ Source: public-safe static pilot-learning template drafted in this repo from the
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to capture evidence categories, decisions, and guardrail updates without replaying sensitive work or exposing private artifacts.
 Next action: tune after observing what teams need to decide whether a completed pilot should continue, narrow, pause, stop, or graduate to a controlled rollout.
 
+### AI pilot rollout readiness
+
+Status: publish-now
+Hub path: `resources/ai-pilot-rollout-readiness.html`
+Source: public-safe static rollout-readiness checklist drafted in this repo from the current workshop follow-up need to decide whether a completed AI pilot has enough evidence, ownership, guardrails, rollback planning, and stakeholder communication for controlled rollout.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly keeps rollout evidence sanitized and frames rollout as a narrow, reversible expansion with allowed inputs, review gates, and a rollback plan.
+Next action: tune after observing what teams need before they ask managers or sponsors to expand a pilot beyond the first test group.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now
