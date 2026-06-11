@@ -49,6 +49,14 @@ Source: public-safe static buyer-education worksheet drafted in this repo from t
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly scopes trials to sanitized inputs, toy repos, copied non-sensitive docs, off-limits boundaries, and observable decision evidence.
 Next action: tune after observing which AI tool/workflow comparison questions attendees ask after the workshop.
 
+### AI pilot decision memo
+
+Status: publish-now
+Hub path: `resources/ai-pilot-decision-memo.html`
+Source: public-safe static buyer-education memo template drafted in this repo from the current workshop follow-up need to turn a scored AI workflow trial into a concise continue, clarify, or stop recommendation.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly keeps memo evidence sanitized and directs sensitive-access trials back to clarification before scaling.
+Next action: tune after observing which pilot decision questions attendees or buyers raise after scoring trial candidates.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now

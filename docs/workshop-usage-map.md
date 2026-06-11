@@ -64,6 +64,16 @@ Attendee action: define one repeated workflow, score the candidate on workflow f
 
 Status: ready buyer-education handout.
 
+### Pilot decision: AI pilot decision memo
+
+Resource: `resources/ai-pilot-decision-memo.html`.
+
+Use when: attendees have scored or run a small AI workflow trial and need to turn the evidence into a concise continue, clarify, or stop recommendation.
+
+Attendee action: write a one-page memo with the decision ask, workflow tested, evidence observed, risks and boundaries, adoption requirement, and one reversible next step.
+
+Status: ready buyer-education decision aid.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.

@@ -90,6 +90,7 @@
 
 - [x] **Epic 10: Buyer education and trial-planning aids** (100% Completed)
   - [x] Story 10.1: Add AI tool trial scorecard handout
+  - [x] Story 10.2: Add AI pilot decision memo handout
 
 ---
 
@@ -122,6 +123,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 10.2: Add AI pilot decision memo handout
+  - Evidence: created `resources/ai-pilot-decision-memo.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 26 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-decision-memo.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-decision-memo-mobile.png` (139681 bytes); Chrome DOM dump confirmed the page title, safe-memo callout, copyable memo section, and public-safe footer markers on 2026-06-11 03:24 IDT. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
 
 - [x] Story 10.1: Add AI tool trial scorecard handout
   - Evidence: created `resources/ai-tool-trial-scorecard.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 25 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-tool-trial-scorecard.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-tool-trial-scorecard-mobile.png` (139801 bytes); Chrome DOM dump confirmed the page title, safe-evaluation callout, scorecard section, and public-safe footer markers on 2026-06-11 01:17 IDT. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
@@ -562,6 +566,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 03:24 IDT — Finished Story 10.2: created public-safe AI pilot decision memo handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
+
+- 2026-06-11 03:20 IDT — Started Story 10.2: add a public-safe AI pilot decision memo handout to help attendees turn a scored trial into a concise go/clarify/stop recommendation without adding analytics, lead capture, pricing claims, production website changes, or private/source links.
 
 - 2026-06-11 01:17 IDT — Finished Story 10.1: created public-safe AI tool trial scorecard handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
 
@@ -1199,4 +1207,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining work is approval-gated or source-release cleanup: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
+- No further safe unblocked implementation story is currently listed. Remaining source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
