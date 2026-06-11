@@ -54,6 +54,16 @@ Attendee action: capture the outcome, current state, safe inputs, project rules,
 
 Status: ready handoff aid.
 
+### AI use-case intake: AI use-case intake brief
+
+Resource: `resources/ai-use-case-intake-brief.html`.
+
+Use when: attendees have a vague AI idea, candidate workflow, or stakeholder request and need to define one safe, reviewable use case before scoring tools or planning a pilot.
+
+Attendee action: write a one-sentence use case, choose sanitized sample input, name the human review gate, pick success evidence, and define the stop condition before moving to the trial scorecard or evidence log.
+
+Status: ready intake handout.
+
 ### Buyer education: AI tool trial scorecard
 
 Resource: `resources/ai-tool-trial-scorecard.html`.

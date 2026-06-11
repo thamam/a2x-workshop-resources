@@ -41,6 +41,14 @@ Source: public-safe static handoff aid drafted in this repo from the current wor
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees not to paste secrets, real customer material, production credentials, billing pages, private repository links, or account screenshots into shared packets.
 Next action: tune after observing what attendees forget to include when they restart Claude Code work after the workshop.
 
+### AI use-case intake brief
+
+Status: publish-now
+Hub path: `resources/ai-use-case-intake-brief.html`
+Source: public-safe static intake worksheet drafted in this repo from the current workshop follow-up need to turn vague AI ideas into scoped use cases before trial scoring or pilot planning.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to describe roles, workflow steps, inputs, outputs, review gates, evidence, and stop conditions generically instead of exposing customer data, employee records, production credentials, private repository links, account screenshots, vendor contracts, raw tickets, or internal strategy.
+Next action: tune after observing which use-case definition questions attendees ask before using the scorecard or pilot evidence log.
+
 ### AI tool trial scorecard
 
 Status: publish-now

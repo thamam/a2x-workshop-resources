@@ -112,6 +112,9 @@
 - [x] **Epic 16: Pilot evidence and proof aids** (100% Completed)
   - [x] Story 16.1: Add AI pilot evidence log handout
 
+- [x] **Epic 17: AI use-case intake and triage aids** (100% Completed)
+  - [x] Story 17.1: Add AI use-case intake brief handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -143,6 +146,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 17.1: Add AI use-case intake brief handout
+  - Evidence: created `resources/ai-use-case-intake-brief.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 35 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-use-case-intake-brief.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-tool-trial-scorecard.html`, and `/resources/ai-pilot-evidence-log.html`, with intake links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-use-case-intake-mobile.png` (137616 bytes); Chrome DOM dump confirmed the page title, safe-intake callout, copyable intake note, and public-safe footer markers on 2026-06-11 22:41 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 16.1: Add AI pilot evidence log handout
   - Evidence: created `resources/ai-pilot-evidence-log.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `cca5688` and pushed; `python3 scripts/check-static-links.py` passed for 34 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-evidence-log.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-tool-trial-scorecard.html`, and `/resources/ai-pilot-decision-memo.html`, with evidence-log links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-evidence-log-mobile.png` (156071 bytes); Chrome DOM dump confirmed the page title, safe-evidence callout, copyable evidence log, and public-safe footer markers on 2026-06-11 20:28 IDT; GitHub Security Checks run `27365327280` succeeded; Pages deployment run `27365320098` succeeded; public smoke returned HTTP 200 for the live hub, evidence log page, and route chooser, with evidence-log links/content visible on 2026-06-11 20:30 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -610,6 +616,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 22:41 IDT — Finished Story 17.1: created public-safe AI use-case intake brief, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-11 22:33 IDT — Started Story 17.1: add a public-safe AI use-case intake brief after verifying repo state at HEAD `838f394`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-11 20:30 IDT — Cleared Story 16.1 post-commit verification: implementation commit `cca5688` pushed; GitHub Security Checks run `27365327280` and Pages deployment run `27365320098` succeeded; public smoke returned HTTP 200 for the live hub, evidence log page, and route chooser with evidence-log links/content visible.
 
