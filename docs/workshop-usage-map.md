@@ -64,6 +64,16 @@ Attendee action: write a one-sentence use case, choose sanitized sample input, n
 
 Status: ready intake handout.
 
+### AI ownership: AI workflow owner card
+
+Resource: `resources/ai-workflow-owner-card.html`.
+
+Use when: attendees have a promising AI workflow or use case and need to name who owns decisions, review, support, escalation, and pause authority before pilot planning, rollout, or routine use.
+
+Attendee action: name the accountable owner, backup owner, human reviewer, support route, review cadence, escalation boundary, pause condition, and current ownership state without sharing sensitive examples.
+
+Status: ready ownership handout.
+
 ### Buyer education: AI tool trial scorecard
 
 Resource: `resources/ai-tool-trial-scorecard.html`.

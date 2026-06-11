@@ -49,6 +49,14 @@ Source: public-safe static intake worksheet drafted in this repo from the curren
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to describe roles, workflow steps, inputs, outputs, review gates, evidence, and stop conditions generically instead of exposing customer data, employee records, production credentials, private repository links, account screenshots, vendor contracts, raw tickets, or internal strategy.
 Next action: tune after observing which use-case definition questions attendees ask before using the scorecard or pilot evidence log.
 
+### AI workflow owner card
+
+Status: publish-now
+Hub path: `resources/ai-workflow-owner-card.html`
+Source: public-safe static ownership worksheet drafted in this repo from the current workshop follow-up need to prevent orphan AI workflows before pilot planning, rollout, or routine operations.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record roles, review cadence, escalation paths, and stop conditions generically instead of exposing customer records, employee data, production credentials, account screenshots, private repository links, raw tickets, internal strategy, vendor contracts, or unredacted incident transcripts.
+Next action: tune after observing where attendees get stuck assigning accountable owners, reviewers, support routes, escalation boundaries, or pause conditions.
+
 ### AI tool trial scorecard
 
 Status: publish-now
