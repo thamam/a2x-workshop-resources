@@ -106,6 +106,9 @@
 - [x] **Epic 14: AI pilot health and continuous improvement aids** (100% Completed)
   - [x] Story 14.1: Add AI pilot health review handout
 
+- [x] **Epic 15: AI pilot lifecycle closure aids** (100% Completed)
+  - [x] Story 15.1: Add AI pilot sunset and archival checklist
+
 ---
 
 ## 🏃 Active State Tracking
@@ -137,6 +140,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 15.1: Add AI pilot sunset and archival checklist
+  - Evidence: created `resources/ai-pilot-sunset-archive.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-pilot-health-review.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 33 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-sunset-archive.html`, `/resources/workshop-resource-chooser.html`, and `/resources/ai-pilot-health-review.html`, with sunset/archive links and page markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-sunset-archive-mobile.png` (153390 bytes); Chrome DOM dump confirmed the page title, safe-closure callout, copyable closure packet, and public-safe footer markers on 2026-06-11 18:16 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 14.1: Add AI pilot health review handout
   - Evidence: created `resources/ai-pilot-health-review.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `e0d5dc7` and pushed; `python3 scripts/check-static-links.py` passed for 32 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-health-review.html`, and `/resources/workshop-resource-chooser.html`, with hub/chooser links visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-health-review-mobile.png` (147448 bytes); Chrome DOM dump confirmed the page title, safe-review callout, copyable review note, and public-safe footer markers on 2026-06-11 16:06 IDT; GitHub Security Checks run `27349012337` succeeded; Pages deployment run `27349009347` succeeded; public smoke returned HTTP 200 for the live hub, health review page, and route chooser, with health-review links/content visible on 2026-06-11 16:08 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -598,6 +604,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 18:16 IDT — Finished Story 15.1: created public-safe AI pilot sunset and archival checklist, wired it into the hub, route chooser, health review page, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-11 18:13 IDT — Started Story 15.1: add a public-safe AI pilot sunset and archival checklist after verifying repo state at HEAD `635664e`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-11 16:08 IDT — Cleared Story 14.1 post-commit verification: implementation commit `e0d5dc7` pushed; GitHub Security Checks run `27349012337` and Pages deployment run `27349009347` succeeded; public smoke returned HTTP 200 for the live hub, health review page, and route chooser with health-review links/content visible.
 

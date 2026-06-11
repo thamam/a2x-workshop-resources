@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI pilot sunset and archive checklist | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe checklist for closing, archiving, or retiring an AI pilot without losing evidence, ownership, or safety lessons." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#f19a8b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.7rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap:anywhere; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:840px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .checks { display:grid; gap:14px; }
+    .check { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .copy { border:1px solid var(--line); background:#1d1913; border-radius:18px; padding:18px; overflow-wrap:anywhere; }
+    .copy p + p { margin-top:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · sunset and archive</div>
+    <h1>A good AI pilot can still deserve a clean stop.</h1>
+    <p class="lead">Use this public-safe checklist when health review evidence says an AI workflow should be retired, paused, replaced, or archived. The goal is to close the loop without losing lessons, confusing users, or leaving risky access and stale instructions behind.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-health-review.html">Run health review first</a>
+      <a class="button" href="ai-pilot-stakeholder-update.html">Send stakeholder update</a>
+      <a class="button" href="ai-pilot-retrospective.html">Run pilot retrospective</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe closure rule</div>
+        <h2>Archive decisions and patterns, not sensitive artifacts.</h2>
+        <p>Keep the closure packet shareable: record decision evidence, owners, generic workflow names, risk categories, access changes, and lessons. Do not paste customer data, employee records, account screenshots, production credentials, private repository links, vendor contracts, raw logs, or unredacted incident transcripts into a broad archive.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Closure triggers</div>
+      <h2>Use this when one of these signals appears</h2>
+      <div class="grid">
+        <div class="card"><div class="tag bad">Stop</div><h3>Risk outpaces value</h3><p>Incidents, unsafe input pressure, support burden, or unclear accountability now outweigh the workflow's observed benefit.</p></div>
+        <div class="card"><div class="tag warn">Pause</div><h3>Evidence is incomplete</h3><p>The workflow may still be useful, but ownership, review gates, allowed inputs, or adoption evidence need repair before routine use continues.</p></div>
+        <div class="card"><div class="tag ok">Replace</div><h3>A better pattern exists</h3><p>The pilot taught the team enough to move into a simpler workflow, narrower prompt, different tool, or human-owned process.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Checklist</div>
+      <h2>Eight steps for clean retirement</h2>
+      <div class="checks">
+        <div class="check"><h3>1. Name the closure decision</h3><p>Choose one state: retire, pause, replace, narrow, or archive as complete. Tie it to health review or retrospective evidence.</p></div>
+        <div class="check"><h3>2. Notify current users</h3><p>Say what changes, when it changes, who owns questions, and what safe alternative to use next.</p></div>
+        <div class="check"><h3>3. Remove or freeze access</h3><p>Disable optional automations, shortcuts, shared prompts, credentials, integrations, or bookmarked instructions that could keep stale use alive.</p></div>
+        <div class="check"><h3>4. Capture sanitized evidence</h3><p>Archive counts, categories, decisions, and examples that are fictionalized or redacted enough for broad internal learning.</p></div>
+        <div class="check"><h3>5. Preserve reusable lessons</h3><p>Keep the rule, prompt pattern, review gate, training note, or support lesson that should influence the next pilot.</p></div>
+        <div class="check"><h3>6. Assign archive ownership</h3><p>Name who owns the closure packet, where the safe summary lives, and when it can be deleted or revisited.</p></div>
+        <div class="check"><h3>7. Update downstream docs</h3><p>Remove the retired workflow from onboarding, status reports, routing docs, demos, and recurring review calendars.</p></div>
+        <div class="check"><h3>8. Decide the next small move</h3><p>Choose one reversible next action: replacement pilot, narrowed retry, policy update, training note, or no further action.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable closure packet</div>
+      <h2>Paste this into the final pilot note</h2>
+      <div class="copy">
+        <p><strong>Workflow being closed:</strong> [generic workflow name + current owner + current users]</p>
+        <p><strong>Closure decision:</strong> [retire / pause / replace / narrow / complete and archive]</p>
+        <p><strong>Evidence behind the decision:</strong> [health review signals, incidents, support load, adoption evidence, or value signal]</p>
+        <p><strong>User communication:</strong> [who is told, what changes, date, safe alternative, question owner]</p>
+        <p><strong>Access and automation cleanup:</strong> [shortcuts, credentials, integrations, shared prompts, docs, calendars]</p>
+        <p><strong>Sanitized archive contents:</strong> [counts, categories, decisions, redacted examples, lessons]</p>
+        <p><strong>Reusable lesson:</strong> [prompt/rule/review/support/policy insight to keep]</p>
+        <p><strong>Archive owner and retention:</strong> [owner, safe location, revisit/delete date]</p>
+        <p><strong>Next small move:</strong> [replacement pilot / narrowed retry / policy update / training note / no further action]</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Facilitator cue</div>
+      <h2>When to use it in the workshop</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">After health review</div><h3>Give stopping a workflow</h3><p>Use this after the health review page so teams learn that responsible AI adoption includes retirement, not only rollout.</p></div>
+        <div class="card"><div class="tag">Before a replacement pilot</div><h3>Avoid stale parallel workflows</h3><p>Have the team close or freeze the old path before presenting the next tool, prompt, or automation as the new default.</p></div>
+        <div class="card"><div class="tag">When sponsors ask “what happened?”</div><h3>Turn closure into credibility</h3><p>Use the closure packet to show evidence, safety, and learning without turning a stopped pilot into a failure narrative.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI pilot sunset and archive checklist for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

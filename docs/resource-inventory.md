@@ -105,6 +105,14 @@ Source: public-safe static recurring-review worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to review counts, categories, decisions, and sanitized examples instead of customer data, employee records, production credentials, account screenshots, private repository links, vendor contracts, or raw incident transcripts.
 Next action: tune after observing which usage, quality, support, incident, and guardrail-drift questions teams raise during recurring operational review.
 
+### AI pilot sunset and archive checklist
+
+Status: publish-now
+Hub path: `resources/ai-pilot-sunset-archive.html`
+Source: public-safe static closure checklist drafted in this repo from the current workshop follow-up need to close, pause, replace, or archive an AI pilot after health review evidence shows the workflow should not simply keep expanding.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to archive decisions, counts, categories, access changes, owners, and lessons instead of customer data, employee records, account screenshots, production credentials, private repository links, vendor contracts, raw logs, or unredacted incident transcripts.
+Next action: tune after observing which closure, replacement, access-cleanup, and archive-retention questions teams raise when a pilot is paused, retired, or replaced.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now

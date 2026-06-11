@@ -134,6 +134,16 @@ Attendee action: record usage, quality, safety drift, support friction, incident
 
 Status: ready health-review handout.
 
+### Pilot closure: AI pilot sunset and archive checklist
+
+Resource: `resources/ai-pilot-sunset-archive.html`.
+
+Use when: attendees have reviewed an operational AI workflow and need to stop, pause, replace, narrow, or archive it without leaving stale prompts, access, automations, docs, or user expectations behind.
+
+Attendee action: choose the closure decision, notify users, clean up access and automations, archive sanitized evidence, preserve reusable lessons, assign an archive owner, update downstream docs, and name the next small move.
+
+Status: ready closure handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.
