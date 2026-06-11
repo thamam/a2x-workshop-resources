@@ -84,6 +84,16 @@ Attendee action: fill one row per risk with where it appears, what the pilot wil
 
 Status: ready pilot-governance handout.
 
+### Pilot communication: AI pilot stakeholder update
+
+Resource: `resources/ai-pilot-stakeholder-update.html`.
+
+Use when: attendees need to report AI pilot progress to a manager, sponsor, reviewer, or team without sending sensitive examples or overclaiming the result.
+
+Attendee action: send a short update with status, workflow tested, evidence observed, current boundary, top risk, one ask, and the next review date.
+
+Status: ready pilot-communication handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.

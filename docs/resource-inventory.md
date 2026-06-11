@@ -65,6 +65,14 @@ Source: public-safe static pilot-governance worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to describe risk categories and controls without exposing sensitive examples.
 Next action: tune after observing which scaling, governance, and risk questions attendees or buyers raise after a pilot decision memo.
 
+### AI pilot stakeholder update
+
+Status: publish-now
+Hub path: `resources/ai-pilot-stakeholder-update.html`
+Source: public-safe static pilot-communication template drafted in this repo from the current workshop follow-up need to report pilot status, evidence, risks, asks, and next review dates without exposing sensitive examples.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to share decision evidence and generic workflow status instead of customer data, account pages, screenshots, or internal strategy.
+Next action: tune after observing what stakeholders ask for when attendees report pilot progress after a scorecard, decision memo, or risk register.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now
