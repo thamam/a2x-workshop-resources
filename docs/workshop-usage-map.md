@@ -94,6 +94,16 @@ Attendee action: send a short update with status, workflow tested, evidence obse
 
 Status: ready pilot-communication handout.
 
+### Pilot learning: AI pilot retrospective
+
+Resource: `resources/ai-pilot-retrospective.html`.
+
+Use when: attendees have run or reviewed an AI pilot and need to decide what lesson, guardrail update, stop/continue decision, or next safe experiment follows from the evidence.
+
+Attendee action: capture the pilot hypothesis, sanitized evidence, repeatable wins, fragile failure modes, guardrail changes, decision, and next reversible experiment.
+
+Status: ready pilot-learning handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI pilot retrospective | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe retrospective template for turning AI pilot evidence into lessons, policy updates, next experiments, and stop/continue decisions." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#f19a8b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:930px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap:anywhere; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .steps { display:grid; gap:14px; }
+    .step { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .copy { border:1px solid var(--line); background:#1d1913; border-radius:18px; padding:18px; overflow-wrap:anywhere; }
+    .copy p + p { margin-top:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · pilot learning</div>
+    <h1>Close the AI pilot with evidence, not vibes.</h1>
+    <p class="lead">Use this public-safe retrospective after a pilot update, decision memo, or risk review. It helps a team capture what worked, what failed, which guardrails changed, and what the next experiment should be without sharing private examples or turning one pilot into a vague transformation claim.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-stakeholder-update.html">Send stakeholder update</a>
+      <a class="button" href="ai-pilot-risk-register.html">Register pilot risks</a>
+      <a class="button" href="ai-pilot-decision-memo.html">Write pilot decision memo</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe retrospective rule</div>
+        <h2>Record lessons without replaying sensitive work.</h2>
+        <p>Describe the workflow, evidence type, decision signal, policy implication, and next safe action. Do not paste customer data, employee details, private repositories, credentials, production screenshots, account pages, pricing, vendor contracts, or internal strategy into a broadly shared retrospective.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Retrospective structure</div>
+      <h2>Answer seven short questions</h2>
+      <div class="steps">
+        <div class="step"><h3>1. What was the pilot trying to prove?</h3><p>Name the workflow, user role, starting hypothesis, and smallest success signal.</p></div>
+        <div class="step"><h3>2. What evidence actually appeared?</h3><p>Use sanitized artifacts, review notes, quality comparisons, time observations, adoption signals, or failure examples without exposing private content.</p></div>
+        <div class="step"><h3>3. What worked repeatably?</h3><p>List the prompt pattern, project rule, review gate, data boundary, or handoff habit that should become standard.</p></div>
+        <div class="step"><h3>4. What failed or stayed fragile?</h3><p>Name the failure mode: weak inputs, missing owner, unsafe access request, inconsistent output, poor verification, or unclear policy.</p></div>
+        <div class="step"><h3>5. Which guardrail changes now?</h3><p>Decide whether to update project rules, approval gates, review steps, risk owners, sample-data policy, or stop conditions.</p></div>
+        <div class="step"><h3>6. What is the decision?</h3><p>Choose continue, narrow, pause, stop, or graduate to a controlled rollout only if the evidence supports it.</p></div>
+        <div class="step"><h3>7. What is the next experiment?</h3><p>Define one reversible next step with owner, sanitized input, review date, and evidence threshold.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Decision outcomes</div>
+      <h2>Pick the honest next state</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Continue</div><h3>Same scope, better evidence</h3><p>The pilot was useful and safe, but the next step is still a controlled test with clearer fixtures, reviewers, or acceptance signals.</p></div>
+        <div class="card"><div class="tag warn">Narrow</div><h3>Promising, but too broad</h3><p>The value is real in one lane, while other workflows, data types, teams, or access patterns remain out of scope.</p></div>
+        <div class="card"><div class="tag bad">Pause or stop</div><h3>Risk or value mismatch</h3><p>The pilot exposed missing ownership, weak evidence, policy uncertainty, unsafe access needs, or insufficient workflow fit.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable retrospective</div>
+      <h2>Paste this into meeting notes</h2>
+      <div class="copy">
+        <p><strong>Pilot hypothesis:</strong> [workflow + role + smallest success signal]</p>
+        <p><strong>Evidence reviewed:</strong> [sanitized artifacts, comparison notes, review signal, or adoption signal]</p>
+        <p><strong>Worked repeatably:</strong> [prompt/rule/review/boundary/handoff habit to keep]</p>
+        <p><strong>Failed or fragile:</strong> [failure mode + why it matters]</p>
+        <p><strong>Guardrail update:</strong> [rule, approval gate, owner, review step, or stop condition]</p>
+        <p><strong>Decision:</strong> [continue / narrow / pause / stop / controlled rollout] because [evidence]</p>
+        <p><strong>Next experiment:</strong> [owner + reversible step + sanitized input + review date + evidence threshold]</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Facilitator cue</div>
+      <h2>When to use it in the workshop</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">After the update</div><h3>Close the loop</h3><p>Use the retrospective after stakeholders have seen status, risk, and asks so the team can decide what to keep, change, or stop.</p></div>
+        <div class="card"><div class="tag">Before rollout talk</div><h3>Prevent premature scaling</h3><p>Require lessons and guardrail updates before expanding to real customers, production actions, sensitive data, or more teams.</p></div>
+        <div class="card"><div class="tag">For the next pilot</div><h3>Reuse what was learned</h3><p>Convert strong lessons into project rules, risk-register defaults, or a better trial scorecard before the next experiment starts.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI pilot retrospective template for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

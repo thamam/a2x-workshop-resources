@@ -94,6 +94,8 @@
 
 - [x] **Epic 11: Pilot governance and rollout aids** (100% Completed)
   - [x] Story 11.1: Add AI pilot risk register handout
+  - [x] Story 11.2: Add AI pilot stakeholder update handout
+  - [x] Story 11.3: Add AI pilot retrospective handout
 
 ---
 
@@ -126,6 +128,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 11.3: Add AI pilot retrospective handout
+  - Evidence: created `resources/ai-pilot-retrospective.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 29 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-retrospective.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-retrospective-mobile.png` (154731 bytes); Chrome DOM dump confirmed the page title, safe-retrospective callout, copyable retrospective section, and public-safe footer markers on 2026-06-11 09:46 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 11.2: Add AI pilot stakeholder update handout
   - Evidence: created `resources/ai-pilot-stakeholder-update.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `603be02` and pushed; `python3 scripts/check-static-links.py` passed for 28 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-stakeholder-update.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-stakeholder-update-mobile.png` (181192 bytes); Chrome DOM dump confirmed the page title, safe-update callout, copyable update fields, and public-safe footer markers on 2026-06-11 07:37 IDT; GitHub Security Checks run `27324187013` succeeded; Pages deployment run `27324186545` succeeded; public smoke returned HTTP 200 for the live hub, stakeholder update page, and route chooser, with stakeholder-update links/content visible. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -575,6 +580,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 09:46 IDT — Finished Story 11.3: created public-safe AI pilot retrospective handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-11 09:42 IDT — Started Story 11.3: add a public-safe AI pilot retrospective handout to help attendees convert pilot evidence into lessons, policy updates, next experiments, and stop/continue decisions without exposing private data, credentials, pricing claims, tracking, lead capture, source links, or production website changes.
 
 - 2026-06-11 07:40 IDT — Cleared Story 11.2 post-commit verification: implementation commit `603be02` pushed; GitHub Security Checks run `27324187013` and Pages deployment run `27324186545` succeeded; public smoke returned HTTP 200 for the live hub, stakeholder update page, and route chooser with stakeholder-update links/content visible.
 

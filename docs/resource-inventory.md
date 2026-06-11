@@ -73,6 +73,14 @@ Source: public-safe static pilot-communication template drafted in this repo fro
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to share decision evidence and generic workflow status instead of customer data, account pages, screenshots, or internal strategy.
 Next action: tune after observing what stakeholders ask for when attendees report pilot progress after a scorecard, decision memo, or risk register.
 
+### AI pilot retrospective
+
+Status: publish-now
+Hub path: `resources/ai-pilot-retrospective.html`
+Source: public-safe static pilot-learning template drafted in this repo from the current workshop follow-up need to turn pilot evidence into lessons, guardrail updates, stop/continue decisions, and the next safe experiment.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to capture evidence categories, decisions, and guardrail updates without replaying sensitive work or exposing private artifacts.
+Next action: tune after observing what teams need to decide whether a completed pilot should continue, narrow, pause, stop, or graduate to a controlled rollout.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now
