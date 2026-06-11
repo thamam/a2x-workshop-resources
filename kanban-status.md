@@ -92,6 +92,9 @@
   - [x] Story 10.1: Add AI tool trial scorecard handout
   - [x] Story 10.2: Add AI pilot decision memo handout
 
+- [x] **Epic 11: Pilot governance and rollout aids** (100% Completed)
+  - [x] Story 11.1: Add AI pilot risk register handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -123,6 +126,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 11.1: Add AI pilot risk register handout
+  - Evidence: created `resources/ai-pilot-risk-register.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 27 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-risk-register.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-risk-register-mobile.png` (151943 bytes); Chrome DOM dump confirmed the page title, safe-register callout, copyable register row, and public-safe footer markers on 2026-06-11 05:30 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 10.2: Add AI pilot decision memo handout
   - Evidence: created `resources/ai-pilot-decision-memo.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 26 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-decision-memo.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-decision-memo-mobile.png` (139681 bytes); Chrome DOM dump confirmed the page title, safe-memo callout, copyable memo section, and public-safe footer markers on 2026-06-11 03:24 IDT. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
@@ -566,6 +572,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 05:30 IDT — Finished Story 11.1: created public-safe AI pilot risk register handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-11 05:27 IDT — Started Story 11.1: add a public-safe AI pilot risk register handout to help attendees identify pilot risks, boundaries, owners, and mitigations before scaling an AI workflow; scope is static resource hub work only, with no private/source links, credentials, local paths, tracking, lead capture, pricing claims, or production website changes.
 
 - 2026-06-11 03:24 IDT — Finished Story 10.2: created public-safe AI pilot decision memo handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private/source links were added.
 

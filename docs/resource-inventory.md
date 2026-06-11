@@ -57,6 +57,14 @@ Source: public-safe static buyer-education memo template drafted in this repo fr
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly keeps memo evidence sanitized and directs sensitive-access trials back to clarification before scaling.
 Next action: tune after observing which pilot decision questions attendees or buyers raise after scoring trial candidates.
 
+### AI pilot risk register
+
+Status: publish-now
+Hub path: `resources/ai-pilot-risk-register.html`
+Source: public-safe static pilot-governance worksheet drafted in this repo from the current workshop follow-up need to name AI pilot risks, boundaries, mitigations, owners, review signals, and stop conditions before scaling.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to describe risk categories and controls without exposing sensitive examples.
+Next action: tune after observing which scaling, governance, and risk questions attendees or buyers raise after a pilot decision memo.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now

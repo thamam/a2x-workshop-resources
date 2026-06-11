@@ -74,6 +74,16 @@ Attendee action: write a one-page memo with the decision ask, workflow tested, e
 
 Status: ready buyer-education decision aid.
 
+### Pilot governance: AI pilot risk register
+
+Resource: `resources/ai-pilot-risk-register.html`.
+
+Use when: attendees are about to expand an AI pilot beyond a tiny reversible test and need to name the obvious risk categories, boundaries, mitigations, owners, review signals, and stop conditions.
+
+Attendee action: fill one row per risk with where it appears, what the pilot will not touch yet, the smallest mitigation, the owner, the review signal, and the stop condition.
+
+Status: ready pilot-governance handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.
