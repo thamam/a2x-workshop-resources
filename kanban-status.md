@@ -103,6 +103,9 @@
 - [x] **Epic 13: AI adoption operations aids** (100% Completed)
   - [x] Story 13.1: Add AI pilot operations handoff checklist
 
+- [x] **Epic 14: AI pilot health and continuous improvement aids** (100% Completed)
+  - [x] Story 14.1: Add AI pilot health review handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -134,6 +137,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 14.1: Add AI pilot health review handout
+  - Evidence: created `resources/ai-pilot-health-review.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 32 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-health-review.html`, and `/resources/workshop-resource-chooser.html`, with hub/chooser links visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-health-review-mobile.png` (147448 bytes); Chrome DOM dump confirmed the page title, safe-review callout, copyable review note, and public-safe footer markers on 2026-06-11 16:06 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 13.1: Add AI pilot operations handoff checklist
   - Evidence: created `resources/ai-pilot-operations-handoff.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 31 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-operations-handoff.html`, and `/resources/workshop-resource-chooser.html`, with hub/chooser links visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-operations-handoff-mobile.png` (155004 bytes); Chrome DOM dump confirmed the page title, safe-handoff callout, copyable checklist section, and public-safe footer markers on 2026-06-11 14:00 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -592,6 +598,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 16:06 IDT — Finished Story 14.1: created public-safe AI pilot health review handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-11 16:04 IDT — Started Story 14.1: add a public-safe AI pilot health review handout after verifying repo state at HEAD `b689978`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-11 14:01 IDT — Finished Story 13.1: created public-safe AI pilot operations handoff checklist, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 

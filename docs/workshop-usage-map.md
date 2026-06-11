@@ -124,6 +124,16 @@ Attendee action: name the operational owner, allowed users, allowed inputs, moni
 
 Status: ready operations-handoff handout.
 
+### Pilot health review: AI pilot health review
+
+Resource: `resources/ai-pilot-health-review.html`.
+
+Use when: attendees have handed an AI workflow into operations and need a recurring review before widening scope, changing rules, or assuming the workflow is still healthy.
+
+Attendee action: record usage, quality, safety drift, support friction, incidents or near misses, value signal, current health state, and one next improvement without exposing sensitive examples.
+
+Status: ready health-review handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.

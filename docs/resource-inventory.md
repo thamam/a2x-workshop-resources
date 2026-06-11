@@ -97,6 +97,14 @@ Source: public-safe static operations-handoff checklist drafted in this repo fro
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly keeps handoff evidence sanitized and frames operations as narrow, supportable scope with named owner, support route, incident trigger, rollback owner, and review cadence.
 Next action: tune after observing which ownership, support, and incident-response questions teams raise when a pilot moves from controlled rollout into daily use.
 
+### AI pilot health review
+
+Status: publish-now
+Hub path: `resources/ai-pilot-health-review.html`
+Source: public-safe static recurring-review worksheet drafted in this repo from the current workshop follow-up need to keep an operational AI workflow useful, safe, supported, and improvement-ready after handoff.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to review counts, categories, decisions, and sanitized examples instead of customer data, employee records, production credentials, account screenshots, private repository links, vendor contracts, or raw incident transcripts.
+Next action: tune after observing which usage, quality, support, incident, and guardrail-drift questions teams raise during recurring operational review.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now
