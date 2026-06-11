@@ -89,6 +89,14 @@ Source: public-safe static rollout-readiness checklist drafted in this repo from
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly keeps rollout evidence sanitized and frames rollout as a narrow, reversible expansion with allowed inputs, review gates, and a rollback plan.
 Next action: tune after observing what teams need before they ask managers or sponsors to expand a pilot beyond the first test group.
 
+### AI pilot operations handoff
+
+Status: publish-now
+Hub path: `resources/ai-pilot-operations-handoff.html`
+Source: public-safe static operations-handoff checklist drafted in this repo from the current workshop follow-up need to transfer an approved AI pilot into routine ownership, monitoring, support, incident response, rollback, and improvement cadence.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly keeps handoff evidence sanitized and frames operations as narrow, supportable scope with named owner, support route, incident trigger, rollback owner, and review cadence.
+Next action: tune after observing which ownership, support, and incident-response questions teams raise when a pilot moves from controlled rollout into daily use.
+
 ### Claude Code credential routing Q&A
 
 Status: publish-now

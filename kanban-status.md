@@ -100,6 +100,9 @@
 - [x] **Epic 12: Pilot rollout readiness aids** (100% Completed)
   - [x] Story 12.1: Add AI pilot rollout readiness checklist
 
+- [x] **Epic 13: AI adoption operations aids** (100% Completed)
+  - [x] Story 13.1: Add AI pilot operations handoff checklist
+
 ---
 
 ## 🏃 Active State Tracking
@@ -131,6 +134,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 13.1: Add AI pilot operations handoff checklist
+  - Evidence: created `resources/ai-pilot-operations-handoff.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 31 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-operations-handoff.html`, and `/resources/workshop-resource-chooser.html`, with hub/chooser links visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-operations-handoff-mobile.png` (155004 bytes); Chrome DOM dump confirmed the page title, safe-handoff callout, copyable checklist section, and public-safe footer markers on 2026-06-11 14:00 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 12.1: Add AI pilot rollout readiness checklist
   - Evidence: created `resources/ai-pilot-rollout-readiness.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 30 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-rollout-readiness.html`, and `/resources/workshop-resource-chooser.html`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-rollout-readiness-mobile.png` (155900 bytes); Chrome DOM dump confirmed the page title, safe-rollout callout, copyable checklist section, and public-safe footer markers on 2026-06-11 11:53 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -586,6 +592,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 14:01 IDT — Finished Story 13.1: created public-safe AI pilot operations handoff checklist, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-11 13:57 IDT — Started Story 13.1: add a public-safe AI pilot operations handoff checklist to help attendees transfer an approved pilot into day-to-day ownership, monitoring, support, incident, rollback, and improvement routines without exposing private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-11 11:53 IDT — Finished Story 12.1: created public-safe AI pilot rollout readiness checklist, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
@@ -1245,4 +1255,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.

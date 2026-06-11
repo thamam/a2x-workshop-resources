@@ -114,6 +114,16 @@ Attendee action: confirm evidence, workflow scope, allowed users, allowed inputs
 
 Status: ready rollout-readiness handout.
 
+### Pilot operations handoff: AI pilot operations handoff checklist
+
+Resource: `resources/ai-pilot-operations-handoff.html`.
+
+Use when: attendees have an approved controlled rollout and need to hand the workflow into daily ownership, support, monitoring, incident response, rollback control, and improvement routines.
+
+Attendee action: name the operational owner, allowed users, allowed inputs, monitoring signal, support path, incident trigger, rollback action, and improvement cadence before treating the AI workflow as routine operations.
+
+Status: ready operations-handoff handout.
+
 ### Opening: "The harness, not just the model"
 
 Resource: `resources/claude-code-harness-map.html`, plus homepage section `How to use this hub live`.
