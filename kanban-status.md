@@ -109,6 +109,9 @@
 - [x] **Epic 15: AI pilot lifecycle closure aids** (100% Completed)
   - [x] Story 15.1: Add AI pilot sunset and archival checklist
 
+- [x] **Epic 16: Pilot evidence and proof aids** (100% Completed)
+  - [x] Story 16.1: Add AI pilot evidence log handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -140,6 +143,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 16.1: Add AI pilot evidence log handout
+  - Evidence: created `resources/ai-pilot-evidence-log.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 34 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-evidence-log.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-tool-trial-scorecard.html`, and `/resources/ai-pilot-decision-memo.html`, with evidence-log links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-evidence-log-mobile.png` (156071 bytes); Chrome DOM dump confirmed the page title, safe-evidence callout, copyable evidence log, and public-safe footer markers on 2026-06-11 20:28 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 15.1: Add AI pilot sunset and archival checklist
   - Evidence: created `resources/ai-pilot-sunset-archive.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-pilot-health-review.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `9fb830a` and pushed; `python3 scripts/check-static-links.py` passed for 33 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-sunset-archive.html`, `/resources/workshop-resource-chooser.html`, and `/resources/ai-pilot-health-review.html`, with sunset/archive links and page markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-sunset-archive-mobile.png` (153390 bytes); Chrome DOM dump confirmed the page title, safe-closure callout, copyable closure packet, and public-safe footer markers on 2026-06-11 18:16 IDT; GitHub Security Checks run `27357376294` succeeded; Pages deployment run `27357374986` succeeded; public smoke returned HTTP 200 for the live hub, sunset/archive page, route chooser, and health review page, with sunset/archive links/content visible on 2026-06-11 18:21 IDT. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -604,6 +610,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-11 20:28 IDT — Finished Story 16.1: created public-safe AI pilot evidence log handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-11 20:25 IDT — Started Story 16.1: add a public-safe AI pilot evidence log handout after verifying repo state at HEAD `e8fe1a5`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-11 18:21 IDT — Cleared Story 15.1 post-commit verification: implementation commit `9fb830a` pushed; GitHub Security Checks run `27357376294` and Pages deployment run `27357374986` succeeded; public smoke returned HTTP 200 for the live hub, sunset/archive page, route chooser, and health review page with sunset/archive links/content visible.
 

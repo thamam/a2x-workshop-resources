@@ -49,6 +49,14 @@ Source: public-safe static buyer-education worksheet drafted in this repo from t
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly scopes trials to sanitized inputs, toy repos, copied non-sensitive docs, off-limits boundaries, and observable decision evidence.
 Next action: tune after observing which AI tool/workflow comparison questions attendees ask after the workshop.
 
+### AI pilot evidence log
+
+Status: publish-now
+Hub path: `resources/ai-pilot-evidence-log.html`
+Source: public-safe static proof-point worksheet drafted in this repo from the current workshop follow-up need to collect value, friction, risk, reviewer decisions, and open questions before scaling or stopping an AI pilot.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record generic workflow names, dates, counts, pass/fail notes, reviewer decisions, and redacted examples instead of sensitive artifacts.
+Next action: tune after observing which evidence teams need before writing pilot decision memos, stakeholder updates, retrospectives, health reviews, or sunset packets.
+
 ### AI pilot decision memo
 
 Status: publish-now

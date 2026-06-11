@@ -64,6 +64,16 @@ Attendee action: define one repeated workflow, score the candidate on workflow f
 
 Status: ready buyer-education handout.
 
+### Pilot evidence: AI pilot evidence log
+
+Resource: `resources/ai-pilot-evidence-log.html`.
+
+Use when: attendees have chosen or started a small AI workflow trial and need a safe way to collect observed proof before recommending continue, clarify, expand, pause, or stop.
+
+Attendee action: log the workflow hypothesis, allowed inputs, observed runs, value signals, friction signals, risk signals, reviewer decisions, open questions, and the next artifact to create.
+
+Status: ready evidence handout.
+
 ### Pilot decision: AI pilot decision memo
 
 Resource: `resources/ai-pilot-decision-memo.html`.
