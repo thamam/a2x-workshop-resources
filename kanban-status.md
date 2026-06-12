@@ -121,6 +121,9 @@
 - [x] **Epic 19: AI buyer evaluation and demo-readiness aids** (100% Completed)
   - [x] Story 19.1: Add AI vendor demo brief handout
 
+- [x] **Epic 20: AI vendor diligence and selection aids** (100% Completed)
+  - [x] Story 20.1: Add AI vendor reference-check handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -152,6 +155,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 20.1: Add AI vendor reference-check handout
+  - Evidence: created `resources/ai-vendor-reference-check.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-vendor-demo-brief.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 38 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-vendor-reference-check.html`, `/resources/workshop-resource-chooser.html`, and `/resources/ai-vendor-demo-brief.html`, with reference-check links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-vendor-reference-check-mobile.png` (154620 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-vendor-reference-check-dom.html` (9113 bytes) and confirmed the page title, reference-safety rule, copyable reference note, and public-safe footer markers on 2026-06-12 05:09 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 19.1: Add AI vendor demo brief handout
   - Evidence: created `resources/ai-vendor-demo-brief.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `9777f48` and pushed; `python3 scripts/check-static-links.py` passed for 37 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-vendor-demo-brief.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-tool-trial-scorecard.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with vendor-demo links and page markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-vendor-demo-brief-mobile.png` (152299 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-vendor-demo-brief-dom.html` (8636 bytes) and confirmed the page title, safe-demo rule, copyable demo note, and public-safe footer markers on 2026-06-12 02:59 IDT; GitHub Security Checks run `27385259376` succeeded; Pages deployment run `27385258651` succeeded; public smoke returned HTTP 200 for the live hub, vendor demo brief page, and route chooser, with vendor-demo links/content visible on 2026-06-12 03:00 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -628,6 +634,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-12 05:09 IDT — Finished Story 20.1: created public-safe AI vendor reference-check handout, wired it into the hub, route chooser, vendor demo brief, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-12 05:04 IDT — Started Story 20.1: add a public-safe AI vendor reference-check handout after verifying repo state at HEAD `bb0f0d7`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-12 03:00 IDT — Cleared Story 19.1 post-commit verification: implementation commit `9777f48` pushed; GitHub Security Checks run `27385259376` and Pages deployment run `27385258651` succeeded; public smoke returned HTTP 200 for the live hub, vendor demo brief page, and route chooser with vendor-demo links/content visible.
 

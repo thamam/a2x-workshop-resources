@@ -73,6 +73,14 @@ Source: public-safe static buyer-education worksheet drafted in this repo from t
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to use toy, redacted, or fictional samples and to keep customer data, production systems, account screenshots, employee records, vendor contracts, and private repository links out of demos.
 Next action: tune after observing which vendor-demo questions attendees ask when moving from scorecard evaluation into a tiny trial.
 
+### AI vendor reference check
+
+Status: publish-now
+Hub path: `resources/ai-vendor-reference-check.html`
+Source: public-safe static vendor-diligence worksheet drafted in this repo from the current workshop follow-up need to validate promising AI vendor demos against reference patterns, adoption friction, support ownership, safety boundaries, and exit paths before a trial commitment.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to ask for generic patterns instead of customer names, private metrics, contract terms, screenshots, confidential workflows, regulated records, production prompts, private repository links, or incident specifics.
+Next action: tune after observing which vendor-reference questions attendees ask after a demo but before a trial or pilot decision.
+
 ### AI pilot evidence log
 
 Status: publish-now

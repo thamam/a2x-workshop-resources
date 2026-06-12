@@ -94,6 +94,16 @@ Attendee action: write the workflow, safe sample input, decision evidence, off-l
 
 Status: ready buyer-education demo-prep handout.
 
+### Vendor diligence: AI vendor reference check
+
+Resource: `resources/ai-vendor-reference-check.html`.
+
+Use when: attendees have a promising AI vendor or internal tool demo and need to check references for real workflow proof, adoption friction, support ownership, safety boundaries, and exit paths before committing to a trial.
+
+Attendee action: prepare one workflow to validate, ask references for generic patterns instead of private details, capture friction and ownership signals, and decide whether to run a tiny trial, clarify first, request another reference, or park the vendor.
+
+Status: ready vendor-diligence handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.

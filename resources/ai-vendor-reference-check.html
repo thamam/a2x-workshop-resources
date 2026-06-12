@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI vendor reference check | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for checking AI vendor references around workflow proof, adoption friction, support, safety boundaries, and stop/continue signals." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width: 1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:900px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap:anywhere; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .checklist { display:grid; gap:14px; }
+    .row { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .questions { display:grid; gap:12px; }
+    .question { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · vendor diligence</div>
+    <h1>Check AI vendor references for real workflow evidence, not applause.</h1>
+    <p class="lead">Use this worksheet after a promising demo and before a pilot commitment. It helps a buyer, champion, or workshop attendee ask references about day-to-day usefulness, adoption friction, support, safety boundaries, and exit paths without collecting private details.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-vendor-demo-brief.html">Brief the vendor demo first</a>
+      <a class="button" href="ai-tool-trial-scorecard.html">Score the tool trial</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Reference-safety rule</div>
+        <h2>Ask for patterns, not secrets.</h2>
+        <p>Do not request customer names, private metrics, contract terms, pricing details, screenshots, confidential workflows, regulated records, employee data, production prompts, private repository links, or incident specifics. Ask for generic before/after patterns, roles, review gates, support behavior, adoption friction, and what they would verify again.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Prepare the reference call</h2>
+      <div class="checklist">
+        <div class="row"><h3>1. Workflow to validate</h3><p>Name the one job the vendor claims to improve: intake triage, meeting prep, ticket summary, document review, code support, knowledge search, stakeholder updates, or another repeated workflow.</p></div>
+        <div class="row"><h3>2. Proof you need</h3><p>Decide what would make the reference meaningful: fewer handoffs, clearer review packets, faster first drafts, better retrieval, lower support friction, safer escalation, or easier rollback.</p></div>
+        <div class="row"><h3>3. Boundaries to test</h3><p>List what your first pilot would not touch yet: live customer data, production systems, payments, credentials, HR records, regulated data, external sends, or irreversible actions.</p></div>
+        <div class="row"><h3>4. Follow-up decision</h3><p>Choose the possible outcome before the call: run a tiny trial, clarify one risk, ask for another reference, or park the vendor for now.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Ask reference questions that reveal operating fit</h2>
+      <div class="questions">
+        <div class="question"><h3>Workflow reality</h3><p>“What repeated workflow did you actually use it for, and what artifact or decision improved? Please keep examples generic.”</p></div>
+        <div class="question"><h3>Adoption friction</h3><p>“What was harder than expected during setup, training, permissions, review habits, or getting people to use the workflow consistently?”</p></div>
+        <div class="question"><h3>Human review and safety</h3><p>“Where does a person review, approve, pause, or override the output? What inputs or actions did you keep off-limits at first?”</p></div>
+        <div class="question"><h3>Support and ownership</h3><p>“Who owns configuration, support questions, incident review, access changes, and rollback decisions now that the tool is in use?”</p></div>
+        <div class="question"><h3>Evidence quality</h3><p>“What evidence convinced you to continue, narrow, pause, or expand the workflow? What evidence would you collect earlier if starting again?”</p></div>
+        <div class="question"><h3>Exit path</h3><p>“If you had to stop using it, what would be easy or hard to export, archive, replace, explain to users, or clean up?”</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Translate the call into a decision</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Run a tiny trial</div><h3>Reference matched your workflow</h3><p>They described a similar job, realistic adoption friction, explicit review gates, named ownership, useful evidence, and a clean exit path.</p></div>
+        <div class="card"><div class="tag warn">Clarify first</div><h3>Reference was useful but incomplete</h3><p>Ask one more bounded question, request a second reference, or tighten the pilot boundaries before spending team time.</p></div>
+        <div class="card"><div class="tag">Park it</div><h3>Reference depended on risky assumptions</h3><p>Pause if the value required private data, broad permissions, unclear ownership, weak review gates, hidden support burden, or no credible rollback path.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable reference note</div>
+      <h2>Paste this into your planning doc</h2>
+      <div class="callout">
+        <p><strong>Vendor/tool:</strong> [name]</p>
+        <p><strong>Workflow we are validating:</strong> [one repeated job]</p>
+        <p><strong>Reference pattern heard:</strong> [generic workflow, artifact, or operating pattern]</p>
+        <p><strong>Adoption friction:</strong> [setup, review, training, permissions, support, or behavior change]</p>
+        <p><strong>Safety and ownership:</strong> [review gate, off-limits inputs/actions, owner, support route, rollback owner]</p>
+        <p><strong>Evidence to collect in our trial:</strong> [artifact, count, quality signal, review decision, support signal, or exit-path proof]</p>
+        <p><strong>Decision:</strong> tiny trial / clarify first / request another reference / park.</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI vendor reference-check worksheet for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>
