@@ -41,6 +41,14 @@ Source: public-safe static handoff aid drafted in this repo from the current wor
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees not to paste secrets, real customer material, production credentials, billing pages, private repository links, or account screenshots into shared packets.
 Next action: tune after observing what attendees forget to include when they restart Claude Code work after the workshop.
 
+### AI workflow prioritization matrix
+
+Status: publish-now
+Hub path: `resources/ai-workflow-prioritization-matrix.html`
+Source: public-safe static prioritization worksheet drafted in this repo from the current workshop follow-up need to choose which AI workflow candidate deserves the next tiny trial before use-case intake, tool scoring, or pilot planning.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to rank workflow patterns using generic roles, repeated work, safe samples, reviewable outputs, and decision evidence instead of exposing customer data, employee records, production logs, account screenshots, private repository links, credentials, vendor contracts, regulated records, or internal strategy.
+Next action: tune after observing which teams struggle to choose between multiple AI workflow ideas before use-case intake or trial scoring.
+
 ### AI use-case intake brief
 
 Status: publish-now

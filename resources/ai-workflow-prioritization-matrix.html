@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI workflow prioritization matrix | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe matrix for choosing which AI workflow candidate deserves the next small trial." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:920px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:800px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .matrix { display:grid; gap:14px; }
+    .row { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .score { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .score strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · prioritization matrix</div>
+    <h1>Choose the AI workflow that deserves the next tiny trial.</h1>
+    <p class="lead">Use this before the use-case intake brief or trial scorecard when too many AI ideas are competing for attention. The goal is not to crown the most exciting idea; it is to pick the safest useful workflow to test next.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-use-case-intake-brief.html">Define the chosen use case</a>
+      <a class="button" href="ai-tool-trial-scorecard.html">Score the trial</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe prioritization rule</div>
+        <h2>Rank patterns, not private examples.</h2>
+        <p>Describe each candidate generically: role, repeated workflow, safe sample input, reviewable output, and decision evidence. Do not paste customer data, employee records, production logs, account screenshots, private repository links, credentials, vendor contracts, regulated records, or internal strategy into a shared prioritization doc.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Collect three to five candidates</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">Repeated work</div><h3>Does it happen often enough?</h3><p>Look for weekly or daily work with a clear trigger, not one-off strategy questions or novelty demos.</p></div>
+        <div class="card"><div class="tag">Reviewable output</div><h3>Can a human judge it quickly?</h3><p>Prefer drafts, summaries, checklists, diffs, routing suggestions, or decision packets that a reviewer can accept, edit, or reject.</p></div>
+        <div class="card"><div class="tag">Safe sample</div><h3>Can it be tested without sensitive data?</h3><p>Use fictional customers, toy repos, sanitized notes, copied non-sensitive docs, or a tiny synthetic dataset.</p></div>
+        <div class="card"><div class="tag warn">Boundary</div><h3>What must stay out?</h3><p>Exclude external sending, production writes, payments, private data, regulated records, security-sensitive decisions, and irreversible actions unless explicitly approved.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Score each candidate 1–5</h2>
+      <p class="lead">Give each row a simple score. A boring 4 with safe data and a clear reviewer beats a flashy 5 that needs private access, vague ownership, or unreviewable output.</p>
+      <div class="matrix">
+        <div class="row"><h3>1. Workflow pull</h3><p><strong>1:</strong> occasional curiosity. <strong>3:</strong> recurring pain for one team. <strong>5:</strong> repeated workflow with clear demand, bottleneck, or review burden.</p></div>
+        <div class="row"><h3>2. Safe sample availability</h3><p><strong>1:</strong> needs sensitive data now. <strong>3:</strong> can be partially sanitized. <strong>5:</strong> can be tested with toy, fictional, or copied non-sensitive material.</p></div>
+        <div class="row"><h3>3. Reviewability</h3><p><strong>1:</strong> output is hard to verify. <strong>3:</strong> review is possible but fuzzy. <strong>5:</strong> reviewer can apply a checklist, diff, acceptance criteria, or visible pass/fail signal.</p></div>
+        <div class="row"><h3>4. Reversibility</h3><p><strong>1:</strong> touches production, customers, money, or policy. <strong>3:</strong> reversible with care. <strong>5:</strong> local, draft-only, approval-gated, and easy to abandon.</p></div>
+        <div class="row"><h3>5. Owner capacity</h3><p><strong>1:</strong> no accountable owner. <strong>3:</strong> owner exists but review time is uncertain. <strong>5:</strong> owner, backup, reviewer, and review cadence are named.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Choose the next state</h2>
+      <div class="grid">
+        <div class="score"><h3 class="ok">Total 20–25: define the use case</h3><p>Move to the AI use-case intake brief. Keep the scope tiny, use sanitized input, and name the review gate before tool scoring.</p></div>
+        <div class="score"><h3 class="warn">Total 14–19: clarify first</h3><p>Improve the candidate by shrinking scope, finding a safer sample, naming the reviewer, or choosing a more visible success signal.</p></div>
+        <div class="score"><h3 class="bad">Total under 14: park it</h3><p>Do not spend workshop energy here yet. Park the candidate until boundaries, ownership, reviewability, or sample safety improve.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable prioritization note</div>
+      <h2>Paste this into your planning doc</h2>
+      <div class="callout">
+        <p><strong>Candidate workflow:</strong> [role] repeatedly turns [safe input] into [reviewable output] for [decision/handoff].</p>
+        <p><strong>Workflow pull:</strong> [1–5] because [frequency, bottleneck, or review burden].</p>
+        <p><strong>Safe sample availability:</strong> [1–5] using [toy repo / sanitized notes / fictional customer / copied non-sensitive docs].</p>
+        <p><strong>Reviewability:</strong> [1–5] checked by [reviewer + checklist/diff/acceptance signal].</p>
+        <p><strong>Reversibility:</strong> [1–5] with [draft-only boundary, approval gate, rollback, or stop condition].</p>
+        <p><strong>Owner capacity:</strong> [1–5] owned by [owner], reviewed by [reviewer], next review on [date].</p>
+        <p><strong>Total and next state:</strong> [score] → define use case / clarify first / park it.</p>
+        <p><strong>Off-limits:</strong> secrets, customer data, employee records, production systems, private links, external sends, payments, pricing claims, and irreversible actions.</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI workflow prioritization matrix for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

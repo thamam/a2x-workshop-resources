@@ -54,6 +54,16 @@ Attendee action: capture the outcome, current state, safe inputs, project rules,
 
 Status: ready handoff aid.
 
+### AI workflow prioritization: AI workflow prioritization matrix
+
+Resource: `resources/ai-workflow-prioritization-matrix.html`.
+
+Use when: attendees have several AI workflow ideas competing for attention and need to choose the safest useful candidate before writing a use-case brief, scoring a tool trial, or planning a pilot.
+
+Attendee action: score each candidate on workflow pull, safe sample availability, reviewability, reversibility, and owner capacity; then choose define use case, clarify first, or park it.
+
+Status: ready prioritization handout.
+
 ### AI use-case intake: AI use-case intake brief
 
 Resource: `resources/ai-use-case-intake-brief.html`.

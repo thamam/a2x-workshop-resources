@@ -148,6 +148,9 @@
 - [x] **Epic 28: AI value measurement and renewal aids** (100% Completed)
   - [x] Story 28.1: Add AI pilot value scorecard handout
 
+- [x] **Epic 29: AI opportunity prioritization aids** (100% Completed)
+  - [x] Story 29.1: Add AI workflow prioritization matrix handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -179,6 +182,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 29.1: Add AI workflow prioritization matrix handout
+  - Evidence: created `resources/ai-workflow-prioritization-matrix.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 47 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-workflow-prioritization-matrix.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with prioritization links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workflow-prioritization-mobile.png` (143197 bytes) and DOM dump persisted `/tmp/a2x-ai-workflow-prioritization-dom.html` (9316 bytes), confirming the page title, safe prioritization rule, and public-safe footer markers on 2026-06-13 00:32 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 28.1: Add AI pilot value scorecard handout
   - Evidence: created `resources/ai-pilot-value-scorecard.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `527ed09` and pushed; `python3 scripts/check-static-links.py` passed for 46 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-value-scorecard.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with value-scorecard links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-value-scorecard-mobile.png` (155518 bytes, 390×844) on 2026-06-12 22:21 IDT; GitHub Security Checks run `27437913783` succeeded; Pages deployment run `27437912592` succeeded; public smoke returned HTTP 200 for the live hub, value scorecard page, and route chooser, with value-scorecard links/content visible on 2026-06-12 22:24 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -682,6 +688,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-13 00:32 IDT — Finished Story 29.1: created public-safe AI workflow prioritization matrix, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 47 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-13 00:28 IDT — Started Story 29.1: add a public-safe AI workflow prioritization matrix handout after verifying repo state at HEAD `8999906`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-12 22:24 IDT — Cleared Story 28.1 post-commit verification: implementation commit `527ed09` pushed; GitHub Security Checks run `27437913783` and Pages deployment run `27437912592` succeeded; public smoke returned HTTP 200 for the live hub, value scorecard page, and route chooser with value-scorecard links/content visible.
 
