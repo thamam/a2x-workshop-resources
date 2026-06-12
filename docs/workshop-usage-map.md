@@ -104,6 +104,16 @@ Attendee action: prepare one workflow to validate, ask references for generic pa
 
 Status: ready vendor-diligence handout.
 
+### Pilot data boundary: AI pilot data boundary checklist
+
+Resource: `resources/ai-pilot-data-boundary-checklist.html`.
+
+Use when: attendees have a candidate AI pilot or workflow trial and need to decide what data may enter the workflow before any real tickets, documents, logs, repositories, screenshots, or records are used.
+
+Attendee action: define allowed inputs, off-limits data, redaction rules, reviewer approval, retention/cleanup timing, and escalation triggers before collecting pilot evidence or expanding access.
+
+Status: ready pilot-safety handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.

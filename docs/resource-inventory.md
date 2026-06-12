@@ -81,6 +81,14 @@ Source: public-safe static vendor-diligence worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to ask for generic patterns instead of customer names, private metrics, contract terms, screenshots, confidential workflows, regulated records, production prompts, private repository links, or incident specifics.
 Next action: tune after observing which vendor-reference questions attendees ask after a demo but before a trial or pilot decision.
 
+### AI pilot data boundary checklist
+
+Status: publish-now
+Hub path: `resources/ai-pilot-data-boundary-checklist.html`
+Source: public-safe static pilot-safety checklist drafted in this repo from the current workshop follow-up need to define allowed inputs, redaction rules, reviewer access, retention, cleanup, and escalation before an AI pilot touches workflow data.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep unclear data out of scope and to avoid customer records, employee data, credentials, regulated records, production logs, private repository contents, vendor contracts, account screenshots, and confidential strategy until boundaries are approved.
+Next action: tune after observing which data-boundary questions attendees ask before using the evidence log, risk register, rollout checklist, or operational review aids.
+
 ### AI pilot evidence log
 
 Status: publish-now
