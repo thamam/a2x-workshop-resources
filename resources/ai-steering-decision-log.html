@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI steering decision log | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for recording AI steering decisions, owners, evidence, revisit dates, and reversal conditions after cadence reviews." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#f19a8b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .steps { display:grid; gap:14px; }
+    .step { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .copy { border:1px solid var(--line); background:#1d1913; border-radius:18px; padding:18px; overflow-wrap:anywhere; }
+    .copy p + p { margin-top:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · steering decision log</div>
+    <h1>Record AI steering decisions so they survive the meeting.</h1>
+    <p class="lead">Use this public-safe log after a steering cadence, sponsor review, health review, or decision meeting to preserve what changed, who owns it, what evidence mattered, and when the decision should be revisited.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-steering-cadence-brief.html">Set steering cadence</a>
+      <a class="button" href="ai-decision-meeting-agenda.html">Run decision meeting</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Decision-log rule</div>
+        <h2>One decision, one owner, one revisit trigger.</h2>
+        <p>A steering decision log is not a transcript. It is a compact record of the state change and the evidence boundary. Keep it sanitized: do not paste customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, private repository links, or unredacted incident details into shared decision notes.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">What to capture</div>
+      <h2>Fill seven fields before the meeting disperses</h2>
+      <div class="steps">
+        <div class="step"><h3>1. Decision date and forum</h3><p>Name the steering cadence, sponsor review, health review, retrospective, or decision meeting that produced the decision.</p></div>
+        <div class="step"><h3>2. Decision type</h3><p>Choose the state: continue, clarify, narrow, expand, pause, stop, archive, escalate, change guardrail, or request more evidence.</p></div>
+        <div class="step"><h3>3. Workflow boundary</h3><p>Record what users, inputs, outputs, tools, data categories, and review gates are allowed after the decision — and what remains off-limits.</p></div>
+        <div class="step"><h3>4. Evidence basis</h3><p>Summarize sanitized evidence categories: usage pattern, value signal, quality signal, reviewer decisions, support friction, incident pattern, or owner capacity.</p></div>
+        <div class="step"><h3>5. Owner and next action</h3><p>Assign one accountable owner, one next action, one due date, and the artifact that must be updated before the next review.</p></div>
+        <div class="step"><h3>6. Reversal or revisit condition</h3><p>Name the signal that would reverse, pause, narrow, or escalate the decision: incident, quality drop, support overload, weak evidence, boundary drift, or missing owner time.</p></div>
+        <div class="step"><h3>7. Communication note</h3><p>Write the short sanitized message that stakeholders, users, or reviewers need so the decision does not become rumor or accidental permission.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Decision states</div>
+      <h2>Use precise language instead of vibes</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Continue</div><h3>Keep the current boundary.</h3><p>Evidence is good enough for another cycle, with the same allowed users, inputs, review gate, and owner.</p></div>
+        <div class="card"><div class="tag warn">Clarify</div><h3>Hold expansion while one question is answered.</h3><p>Use when evidence is promising but a data boundary, owner, reviewer, support path, or success signal is still ambiguous.</p></div>
+        <div class="card"><div class="tag warn">Narrow</div><h3>Reduce scope before risk spreads.</h3><p>Use when the workflow is useful but too broad: fewer users, safer inputs, clearer review gate, or a smaller automation step.</p></div>
+        <div class="card"><div class="tag ok">Expand narrowly</div><h3>Let the next group in deliberately.</h3><p>Only expand with named users, allowed inputs, rollback owner, support route, and a date for the next evidence review.</p></div>
+        <div class="card"><div class="tag bad">Pause or stop</div><h3>Protect trust before momentum wins.</h3><p>Use when evidence, safety, ownership, support, or stakeholder confidence is not strong enough to continue responsibly.</p></div>
+        <div class="card"><div class="tag warn">Escalate</div><h3>Move a decision to the right authority.</h3><p>Escalate budget, policy, regulated data, security, legal, or production-impact questions instead of burying them in a pilot note.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable decision log</div>
+      <h2>Paste this into the decision record</h2>
+      <div class="copy">
+        <p><strong>Date and forum:</strong> [date, cadence/review/meeting name]</p>
+        <p><strong>Decision:</strong> [continue / clarify / narrow / expand narrowly / pause / stop / archive / escalate / change guardrail]</p>
+        <p><strong>Workflow boundary after decision:</strong> [allowed users, allowed inputs, outputs, review gate, off-limits data, rollback path]</p>
+        <p><strong>Evidence basis:</strong> [sanitized usage, value, quality, reviewer decisions, support friction, incidents, owner capacity]</p>
+        <p><strong>Owner and next action:</strong> [accountable owner, action, due date, artifact to update]</p>
+        <p><strong>Revisit or reversal trigger:</strong> [signal that changes the decision, plus review date]</p>
+        <p><strong>Stakeholder note:</strong> [one short sanitized message explaining what changed and what did not change]</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Facilitator cue</div>
+      <h2>When to use it in the workshop</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">After steering cadence</div><h3>Turn discussion into operating memory</h3><p>Use it when the cadence changes a boundary, artifact, owner, threshold, or review date.</p></div>
+        <div class="card"><div class="tag">After health review</div><h3>Make the next review testable</h3><p>Use it when a workflow stays active but needs a specific improvement, watch signal, or reversal condition.</p></div>
+        <div class="card"><div class="tag">Before expansion</div><h3>Prevent accidental permission</h3><p>Use it before more users, inputs, teams, or automations enter the AI workflow so the expansion stays narrow and reversible.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI steering decision log for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

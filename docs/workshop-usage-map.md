@@ -204,6 +204,16 @@ Attendee action: define the decision forum, attendees, evidence packet, review r
 
 Status: ready steering-cadence handout.
 
+### Steering decision record: AI steering decision log
+
+Resource: `resources/ai-steering-decision-log.html`.
+
+Use when: attendees finish a steering cadence, sponsor review, health review, or decision meeting and need to preserve the decision state, owner, evidence basis, operating boundary, revisit trigger, and stakeholder note.
+
+Attendee action: record one decision with sanitized evidence, one accountable owner, one next action, one reversal or revisit condition, and a short stakeholder-safe summary.
+
+Status: ready steering decision-record handout.
+
 ### Pilot learning: AI pilot retrospective
 
 Resource: `resources/ai-pilot-retrospective.html`.

@@ -161,6 +161,14 @@ Source: public-safe static steering-cadence worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep cadence notes sanitized and to avoid customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links.
 Next action: tune after observing which governance cadence, decision-forum, owner-capacity, evidence-packet, and stop-rule questions appear after sponsor alignment or controlled rollout conversations.
 
+### AI steering decision log
+
+Status: publish-now
+Hub path: `resources/ai-steering-decision-log.html`
+Source: public-safe static steering decision-record worksheet drafted in this repo from the current workshop follow-up need to preserve AI steering decisions, owners, evidence bases, boundaries, revisit triggers, and stakeholder notes after cadence reviews or decision meetings.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record decision categories and sanitized evidence instead of customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, private repository links, or unredacted incidents.
+Next action: tune after observing which steering decisions get lost, misunderstood, or need clearer owner/reversal language after cadence, sponsor, health-review, or rollout conversations.
+
 ### AI pilot retrospective
 
 Status: publish-now
