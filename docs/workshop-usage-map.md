@@ -64,6 +64,16 @@ Attendee action: score each candidate on workflow pull, safe sample availability
 
 Status: ready prioritization handout.
 
+### Prompt safety: AI prompt safety preflight
+
+Resource: `resources/ai-prompt-safety-preflight.html`.
+
+Use when: attendees are about to paste a prompt into Claude, Claude Code, ChatGPT, an internal assistant, or a vendor demo and need to check whether the prompt is safe to send.
+
+Attendee action: verify the prompt is narrow, sanitized, bounded, reviewable, and reversible; revise weak prompts; stop if sensitive material is required without an approved tool, policy, or boundary.
+
+Status: ready prompt-safety handout.
+
 ### AI use-case intake: AI use-case intake brief
 
 Resource: `resources/ai-use-case-intake-brief.html`.

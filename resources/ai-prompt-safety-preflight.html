@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI prompt safety preflight | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe preflight checklist for checking an AI prompt before sending it to a model or agent." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:920px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:800px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .checklist { display:grid; gap:14px; }
+    .check { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .decision { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .decision strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · prompt preflight</div>
+    <h1>Check the prompt before the AI sees it.</h1>
+    <p class="lead">Use this one-page preflight when an attendee is about to paste a prompt into Claude, Claude Code, ChatGPT, an internal assistant, or a vendor demo. It helps separate safe context from risky material before the model or agent gets a chance to act.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-workflow-prioritization-matrix.html">Prioritize workflow first</a>
+      <a class="button" href="ai-pilot-data-boundary-checklist.html">Set pilot data boundaries</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Safe prompt rule</div>
+        <h2>If you would not put it in a workshop handout, do not paste it into a shared AI prompt.</h2>
+        <p>Describe the task, role, decision, and acceptance criteria. Replace sensitive examples with fictional or sanitized samples. Keep secrets, customer data, employee records, production logs, contracts, account screenshots, private repository contents, credentials, regulated records, and internal strategy out unless the tool, policy, and approval boundary explicitly allow them.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Run the five-gate preflight</h2>
+      <div class="checklist">
+        <div class="check"><h3>1. Purpose is narrow</h3><p><strong>Safe:</strong> the prompt asks for one draft, explanation, checklist, diff, route, or decision aid. <strong>Unsafe:</strong> the prompt asks the model to decide policy, spend money, message customers, change production, or act without review.</p></div>
+        <div class="check"><h3>2. Context is sanitized</h3><p><strong>Safe:</strong> examples use fictional customers, toy repos, redacted snippets, or copied non-sensitive docs. <strong>Unsafe:</strong> raw tickets, contracts, logs, screenshots, private links, credentials, employee/customer records, or confidential strategy are present.</p></div>
+        <div class="check"><h3>3. Boundaries are explicit</h3><p><strong>Safe:</strong> the prompt names what the AI may use, what it must ignore, and what requires human approval. <strong>Unsafe:</strong> the prompt says “do whatever is needed” without stop conditions.</p></div>
+        <div class="check"><h3>4. Output is reviewable</h3><p><strong>Safe:</strong> a human can check the answer against visible criteria, source notes, tests, or a simple pass/fail list. <strong>Unsafe:</strong> the answer would be accepted because it sounds confident.</p></div>
+        <div class="check"><h3>5. Next action is reversible</h3><p><strong>Safe:</strong> the next step is draft-only, local, sandboxed, or approval-gated. <strong>Unsafe:</strong> the result could trigger external sends, production writes, public claims, pricing promises, or irreversible changes.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Choose the prompt state</h2>
+      <div class="grid">
+        <div class="decision"><h3 class="ok">Send: all five gates pass</h3><p>The prompt is narrow, sanitized, bounded, reviewable, and reversible. Send it, then review the output before acting.</p></div>
+        <div class="decision"><h3 class="warn">Revise: one gate is weak</h3><p>Rewrite the prompt before sending. Shrink scope, replace examples, add stop conditions, or define review evidence.</p></div>
+        <div class="decision"><h3 class="bad">Stop: sensitive material is required</h3><p>Do not paste the prompt into a general tool. Move to a policy-approved environment, use the pilot data boundary checklist, or ask for explicit approval.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable prompt preflight note</div>
+      <h2>Paste this above the prompt</h2>
+      <div class="callout">
+        <p><strong>Task:</strong> Help with [one narrow draft/checklist/diff/decision aid].</p>
+        <p><strong>Safe context:</strong> Use only [fictional sample / redacted note / toy repo / public doc excerpt].</p>
+        <p><strong>Do not use:</strong> secrets, customer data, employee records, production logs, account screenshots, private repository contents, contracts, regulated records, pricing claims, or internal strategy.</p>
+        <p><strong>Boundary:</strong> Produce a draft for human review only. Do not send messages, change systems, make public claims, or take irreversible actions.</p>
+        <p><strong>Review criteria:</strong> I will check [accuracy, source notes, tests, acceptance criteria, risk list, or pass/fail checklist] before acting.</p>
+        <p><strong>If the prompt needs sensitive information:</strong> stop and say what approval or safer environment is required.</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI prompt safety preflight for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

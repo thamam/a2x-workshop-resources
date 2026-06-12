@@ -49,6 +49,14 @@ Source: public-safe static prioritization worksheet drafted in this repo from th
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to rank workflow patterns using generic roles, repeated work, safe samples, reviewable outputs, and decision evidence instead of exposing customer data, employee records, production logs, account screenshots, private repository links, credentials, vendor contracts, regulated records, or internal strategy.
 Next action: tune after observing which teams struggle to choose between multiple AI workflow ideas before use-case intake or trial scoring.
 
+### AI prompt safety preflight
+
+Status: publish-now
+Hub path: `resources/ai-prompt-safety-preflight.html`
+Source: public-safe static prompt preflight worksheet drafted in this repo from the current workshop need to check prompts before attendees paste them into Claude, Claude Code, ChatGPT, internal assistants, or vendor demos.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep secrets, customer data, employee records, production logs, contracts, account screenshots, private repository contents, credentials, regulated records, and internal strategy out of prompts unless the tool, policy, and approval boundary explicitly allow them.
+Next action: tune after observing which prompt-safety mistakes recur during workshop exercises, vendor demos, or first follow-up workflow trials.
+
 ### AI use-case intake brief
 
 Status: publish-now
