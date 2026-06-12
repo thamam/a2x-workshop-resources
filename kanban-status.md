@@ -145,6 +145,9 @@
 - [x] **Epic 27: AI steering decision-record aids** (100% Completed)
   - [x] Story 27.1: Add AI steering decision log handout
 
+- [x] **Epic 28: AI value measurement and renewal aids** (100% Completed)
+  - [x] Story 28.1: Add AI pilot value scorecard handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -176,6 +179,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 28.1: Add AI pilot value scorecard handout
+  - Evidence: created `resources/ai-pilot-value-scorecard.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 46 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-value-scorecard.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with value-scorecard links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-value-scorecard-mobile.png` (155518 bytes, 390×844) on 2026-06-12 22:21 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 27.1: Add AI steering decision log handout
   - Evidence: created `resources/ai-steering-decision-log.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-steering-cadence-brief.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `1c51ab3` and pushed; `python3 scripts/check-static-links.py` passed for 45 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-steering-decision-log.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-steering-cadence-brief.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with decision-log links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-steering-decision-log-mobile.png` (142938 bytes) on 2026-06-12 20:11 IDT; GitHub Security Checks run `27431156679` succeeded; Pages deployment run `27431155188` succeeded; public smoke returned HTTP 200 for the live hub, steering decision log page, and route chooser, with decision-log links/content visible on 2026-06-12 20:14 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -676,6 +682,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-12 22:22 IDT — Finished Story 28.1: created public-safe AI pilot value scorecard, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 46 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-12 22:17 IDT — Started Story 28.1: add a public-safe AI pilot value scorecard handout after verifying repo state at HEAD `8ae70ef`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-12 20:14 IDT — Cleared Story 27.1 post-commit verification: implementation commit `1c51ab3` pushed; GitHub Security Checks run `27431156679` and Pages deployment run `27431155188` succeeded; public smoke returned HTTP 200 for the live hub, steering decision log page, and route chooser with decision-log links/content visible.
 
@@ -1421,4 +1431,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current sponsor-alignment, change-management, governance, steering decision-record, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

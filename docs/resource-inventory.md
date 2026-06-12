@@ -97,6 +97,14 @@ Source: public-safe static proof-point worksheet drafted in this repo from the c
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record generic workflow names, dates, counts, pass/fail notes, reviewer decisions, and redacted examples instead of sensitive artifacts.
 Next action: tune after observing which evidence teams need before writing pilot decision memos, stakeholder updates, retrospectives, health reviews, or sunset packets.
 
+### AI pilot value scorecard
+
+Status: publish-now
+Hub path: `resources/ai-pilot-value-scorecard.html`
+Source: public-safe static value-scoring worksheet drafted in this repo from the current workshop follow-up need to turn AI pilot evidence into value signals, next-cycle thresholds, and continue/clarify/narrow/expand/pause/stop decisions before sponsor or steering conversations.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly frames value as sanitized evidence categories rather than revenue promises and tells attendees to avoid customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, private repository links, or unredacted incident details.
+Next action: tune after observing which value, support-load, boundary-stability, and next-cycle threshold questions teams raise between evidence logs, health reviews, sponsor alignment, and steering decision records.
+
 ### AI pilot decision memo
 
 Status: publish-now

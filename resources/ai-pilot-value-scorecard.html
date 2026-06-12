@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI pilot value scorecard | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for turning AI pilot evidence into value signals, renewal thresholds, and pause/scale decisions without exposing private data." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#f19a8b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .steps { display:grid; gap:14px; }
+    .step { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .copy { border:1px solid var(--line); background:#1d1913; border-radius:18px; padding:18px; overflow-wrap:anywhere; }
+    .copy p + p { margin-top:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · pilot value scorecard</div>
+    <h1>Score AI pilot value before momentum becomes permission.</h1>
+    <p class="lead">Use this public-safe worksheet after a pilot has evidence from trials, decision memos, health reviews, or stakeholder updates. It helps teams decide whether the workflow is worth another cycle, a narrow expansion, a pause, or a clean stop.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-evidence-log.html">Log pilot evidence</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+      <a class="button" href="ai-steering-decision-log.html">Log steering decision</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Value-scorecard rule</div>
+        <h2>Score evidence categories, not excitement.</h2>
+        <p>A value scorecard is not a revenue model, pricing claim, or business case promise. Keep it grounded in sanitized observations: workflow frequency, user friction, review effort, quality signal, support burden, risk movement, and owner capacity. Do not paste customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, private repository links, or unredacted incident details into shared scorecards.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Score dimensions</div>
+      <h2>Use five signals before deciding what comes next</h2>
+      <div class="steps">
+        <div class="step"><h3>1. Workflow pull</h3><p>Is this a real repeated workflow with clear users, or only a shiny demo? Score observed demand, frequency, and whether users return without being pushed.</p></div>
+        <div class="step"><h3>2. Quality and review signal</h3><p>Compare sanitized outputs against the human review gate. Score whether the agent/tool improves first drafts, reduces rework, or creates review debt.</p></div>
+        <div class="step"><h3>3. Friction and support load</h3><p>Record setup issues, prompt confusion, account problems, reviewer time, support questions, and failure recovery. A useful pilot can still be too heavy to operate.</p></div>
+        <div class="step"><h3>4. Safety and boundary stability</h3><p>Check whether allowed inputs, review gates, retention, escalation, and off-limits categories held during real use. Boundary drift lowers the score even when outputs look good.</p></div>
+        <div class="step"><h3>5. Ownership and next-cycle capacity</h3><p>Name who will own the next cycle, what artifact they update, and what evidence they can realistically collect before the next steering or health review.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Decision thresholds</div>
+      <h2>Translate the score into a narrow next state</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Continue</div><h3>Evidence supports another cycle.</h3><p>Use when pull, quality, safety, and ownership are all adequate inside the current boundary. Keep the scope unchanged and set the next review date.</p></div>
+        <div class="card"><div class="tag warn">Clarify</div><h3>One signal is still ambiguous.</h3><p>Use when the workflow seems promising but a data boundary, reviewer rule, owner, support path, or measurement signal needs a tighter answer.</p></div>
+        <div class="card"><div class="tag warn">Narrow</div><h3>Value exists, but the scope is too wide.</h3><p>Use when the pilot works for one input type, user group, or step but should not spread until the weakest boundary is repaired.</p></div>
+        <div class="card"><div class="tag ok">Expand narrowly</div><h3>The next group can join deliberately.</h3><p>Only expand with named users, allowed inputs, a rollback path, support owner, and the exact evidence that would reverse the decision.</p></div>
+        <div class="card"><div class="tag bad">Pause or stop</div><h3>Trust beats sunk-cost momentum.</h3><p>Use when quality, safety, ownership, support, or user pull is not strong enough to justify another active cycle.</p></div>
+        <div class="card"><div class="tag warn">Escalate</div><h3>The next decision needs authority.</h3><p>Escalate policy, security, regulated data, budget attention, vendor commitment, or production-impact questions instead of hiding them in a score.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable scorecard</div>
+      <h2>Paste this into the pilot review packet</h2>
+      <div class="copy">
+        <p><strong>Pilot/workflow:</strong> [generic workflow name and current boundary]</p>
+        <p><strong>Evidence window:</strong> [dates, allowed users, allowed inputs, review gate]</p>
+        <p><strong>Workflow pull:</strong> [1–5 plus sanitized observation]</p>
+        <p><strong>Quality/review signal:</strong> [1–5 plus sanitized observation]</p>
+        <p><strong>Friction/support load:</strong> [1–5 plus setup, prompt, reviewer, or support pattern]</p>
+        <p><strong>Safety/boundary stability:</strong> [1–5 plus boundary drift or proof that boundary held]</p>
+        <p><strong>Ownership/capacity:</strong> [1–5 plus owner, next artifact, review date]</p>
+        <p><strong>Decision:</strong> [continue / clarify / narrow / expand narrowly / pause / stop / escalate]</p>
+        <p><strong>Next evidence required:</strong> [one signal that would change the decision]</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Facilitator cue</div>
+      <h2>When to use it in the workshop</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">After evidence log</div><h3>Turn observations into a decision</h3><p>Use it when the evidence log has enough entries to ask whether the pilot deserves another cycle.</p></div>
+        <div class="card"><div class="tag">Before sponsor ask</div><h3>Separate value from enthusiasm</h3><p>Use it before sponsor alignment so the ask is tied to observed workflow proof, not generic AI optimism.</p></div>
+        <div class="card"><div class="tag">During health review</div><h3>Check whether value is still real</h3><p>Use it when an operational AI workflow may need a narrower boundary, new owner capacity, or a deliberate sunset path.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI pilot value scorecard for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

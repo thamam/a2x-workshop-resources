@@ -124,6 +124,16 @@ Attendee action: log the workflow hypothesis, allowed inputs, observed runs, val
 
 Status: ready evidence handout.
 
+### Pilot value scoring: AI pilot value scorecard
+
+Resource: `resources/ai-pilot-value-scorecard.html`.
+
+Use when: attendees have enough pilot evidence to decide whether the workflow is worth another cycle, a narrower boundary, a small expansion, a pause, a stop, or escalation to a sponsor or steering forum.
+
+Attendee action: score workflow pull, quality/review signal, friction/support load, safety/boundary stability, and owner capacity using sanitized observations, then choose one next state and the evidence that would change the decision.
+
+Status: ready value-scoring handout.
+
 ### Pilot decision: AI pilot decision memo
 
 Resource: `resources/ai-pilot-decision-memo.html`.
