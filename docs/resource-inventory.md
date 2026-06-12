@@ -65,6 +65,14 @@ Source: public-safe static buyer-education worksheet drafted in this repo from t
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly scopes trials to sanitized inputs, toy repos, copied non-sensitive docs, off-limits boundaries, and observable decision evidence.
 Next action: tune after observing which AI tool/workflow comparison questions attendees ask after the workshop.
 
+### AI vendor demo brief
+
+Status: publish-now
+Hub path: `resources/ai-vendor-demo-brief.html`
+Source: public-safe static buyer-education worksheet drafted in this repo from the current workshop follow-up need to keep vendor or internal AI demos grounded in one workflow, sanitized sample input, review gates, and decision evidence.
+Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to use toy, redacted, or fictional samples and to keep customer data, production systems, account screenshots, employee records, vendor contracts, and private repository links out of demos.
+Next action: tune after observing which vendor-demo questions attendees ask when moving from scorecard evaluation into a tiny trial.
+
 ### AI pilot evidence log
 
 Status: publish-now

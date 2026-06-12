@@ -84,6 +84,16 @@ Attendee action: define one repeated workflow, score the candidate on workflow f
 
 Status: ready buyer-education handout.
 
+### Demo prep: AI vendor demo brief
+
+Resource: `resources/ai-vendor-demo-brief.html`.
+
+Use when: attendees are about to join a vendor call, product walkthrough, or internal AI tool demo and need the conversation to prove fit for one safe workflow instead of drifting into generic capability claims.
+
+Attendee action: write the workflow, safe sample input, decision evidence, off-limits boundaries, proof questions, ownership questions, and follow-up decision before or during the demo.
+
+Status: ready buyer-education demo-prep handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.

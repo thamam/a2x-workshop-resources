@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-11
+- **Last Updated:** 2026-06-12
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -118,6 +118,9 @@
 - [x] **Epic 18: AI ownership and operating rhythm aids** (100% Completed)
   - [x] Story 18.1: Add AI workflow owner card handout
 
+- [x] **Epic 19: AI buyer evaluation and demo-readiness aids** (100% Completed)
+  - [x] Story 19.1: Add AI vendor demo brief handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -149,6 +152,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 19.1: Add AI vendor demo brief handout
+  - Evidence: created `resources/ai-vendor-demo-brief.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 37 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-vendor-demo-brief.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-tool-trial-scorecard.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with vendor-demo links and page markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-vendor-demo-brief-mobile.png` (152299 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-vendor-demo-brief-dom.html` (8636 bytes) and confirmed the page title, safe-demo rule, copyable demo note, and public-safe footer markers on 2026-06-12 02:59 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 18.1: Add AI workflow owner card handout
   - Evidence: created `resources/ai-workflow-owner-card.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `523d404` and pushed; `python3 scripts/check-static-links.py` passed for 36 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-workflow-owner-card.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-use-case-intake-brief.html`, and `/resources/ai-pilot-operations-handoff.html`, with owner-card hub/chooser links and page markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workflow-owner-card-mobile.png` (148021 bytes); Chrome DOM dump confirmed the page title, safe-ownership callout, copyable owner card, and public-safe footer markers on 2026-06-12 00:49 IDT; GitHub Security Checks run `27379674290` succeeded; Pages deployment run `27379672411` succeeded; public smoke returned HTTP 200 for the live hub, owner-card page, and route chooser, with owner-card links/content visible on 2026-06-12 00:51 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -622,6 +628,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-12 02:59 IDT — Finished Story 19.1: created public-safe AI vendor demo brief, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-12 02:52 IDT — Started Story 19.1: add a public-safe AI vendor demo brief handout after verifying repo state at HEAD `3076f4c`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-12 00:51 IDT — Cleared Story 18.1 post-commit verification: implementation commit `523d404` pushed; GitHub Security Checks run `27379674290` and Pages deployment run `27379672411` succeeded; public smoke returned HTTP 200 for the live hub, owner-card page, and route chooser with owner-card links/content visible.
 
