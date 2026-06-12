@@ -136,6 +136,9 @@
 - [x] **Epic 24: AI change management aids** (100% Completed)
   - [x] Story 24.1: Add AI adoption change brief handout
 
+- [x] **Epic 25: AI sponsor alignment and funding aids** (100% Completed)
+  - [x] Story 25.1: Add AI sponsor alignment brief handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -167,6 +170,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 25.1: Add AI sponsor alignment brief handout
+  - Evidence: created `resources/ai-sponsor-alignment-brief.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 43 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-sponsor-alignment-brief.html`, and `/resources/workshop-resource-chooser.html`, with hub, new page, and chooser markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-sponsor-alignment-mobile.png` (144455 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-sponsor-alignment-dom.html` (9998 bytes) and confirmed the page title, sponsor rule, copyable sponsor note, and public-safe footer markers on 2026-06-12 15:54 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 24.1: Add AI adoption change brief handout
   - Evidence: created `resources/ai-adoption-change-brief.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `e2ffd52` and pushed; `python3 scripts/check-static-links.py` passed for 42 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-adoption-change-brief.html`, and `/resources/workshop-resource-chooser.html`, with hub, new page, and chooser markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-adoption-change-brief-mobile.png` (151833 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-adoption-change-brief-dom.html` (9864 bytes) and confirmed the page title, change brief rule, copyable adoption note, and public-safe footer markers on 2026-06-12 13:45 IDT; GitHub Security Checks run `27410922773` succeeded; Pages deployment run `27410921955` succeeded; public smoke returned HTTP 200 for the live hub, adoption change brief page, and route chooser, with adoption-change links/content visible on 2026-06-12 13:47 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -658,6 +664,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-12 15:54 IDT — Finished Story 25.1: created public-safe AI sponsor alignment brief, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 43 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP/marker smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-12 15:50 IDT — Started Story 25.1: add a public-safe AI sponsor alignment brief handout after verifying repo state at HEAD `79035b8`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-12 13:47 IDT — Cleared Story 24.1 post-commit verification: implementation commit `e2ffd52` pushed; GitHub Security Checks run `27410922773` and Pages deployment run `27410921955` succeeded; public smoke returned HTTP 200 for the live hub, adoption change brief page, and route chooser with adoption-change links/content visible.
 
@@ -1387,4 +1397,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current sponsor-alignment, change-management, governance, and pilot lifecycle handouts.

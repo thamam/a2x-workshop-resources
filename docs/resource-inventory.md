@@ -145,6 +145,14 @@ Source: public-safe static change-management worksheet drafted in this repo from
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to plan workflow change, affected users, human review gates, support routes, allowed inputs, pause triggers, and review dates without exposing customer data, employee records, vendor contracts, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links.
 Next action: tune after observing which adoption, support, training, and stakeholder-communication questions appear between decision meetings, rollout readiness, and operations handoff.
 
+### AI sponsor alignment brief
+
+Status: publish-now
+Hub path: `resources/ai-sponsor-alignment-brief.html`
+Source: public-safe static sponsor-alignment worksheet drafted in this repo from the current workshop follow-up need to turn pilot evidence into one sponsor decision, commitment boundary, owner, and reversible next step before asking for more attention or resources.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep sponsor asks sanitized and to avoid customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links.
+Next action: tune after observing which sponsor, buyer, funding, owner-capacity, and executive-attention questions appear after decision memos, stakeholder updates, or adoption-change conversations.
+
 ### AI pilot retrospective
 
 Status: publish-now

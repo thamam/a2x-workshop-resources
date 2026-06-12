@@ -184,6 +184,16 @@ Attendee action: write a concise adoption note with the workflow change, include
 
 Status: ready change-management handout.
 
+### Sponsor alignment: AI sponsor alignment brief
+
+Resource: `resources/ai-sponsor-alignment-brief.html`.
+
+Use when: a pilot has enough evidence to ask for sponsor time, owner capacity, budget attention, or a cross-team decision, but the next step still needs to stay narrow and reversible.
+
+Attendee action: write one sponsor ask with the workflow, sanitized evidence, safety boundary, commitment requested, accountable owner, sponsor, review date, and acceptable decision outcomes.
+
+Status: ready sponsor-alignment handout.
+
 ### Pilot learning: AI pilot retrospective
 
 Resource: `resources/ai-pilot-retrospective.html`.

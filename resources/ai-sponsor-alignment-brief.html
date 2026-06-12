@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI sponsor alignment brief | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for aligning an AI pilot sponsor on the decision, evidence, owner, funding boundary, and reversible next step before attention expands." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#f19a8b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap:anywhere; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .steps { display:grid; gap:14px; }
+    .step { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .copy { border:1px solid var(--line); background:#1d1913; border-radius:18px; padding:18px; overflow-wrap:anywhere; }
+    .copy p + p { margin-top:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · sponsor alignment</div>
+    <h1>Align the sponsor before an AI pilot asks for more attention.</h1>
+    <p class="lead">Use this public-safe brief when a pilot has enough evidence to need sponsor time, budget attention, or cross-team priority — but not enough certainty to justify a broad commitment.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-decision-memo.html">Write decision memo</a>
+      <a class="button" href="ai-decision-meeting-agenda.html">Run decision meeting</a>
+      <a class="button" href="ai-adoption-change-brief.html">Brief adoption change</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Sponsor rule</div>
+        <h2>Ask for one decision, not vague executive support.</h2>
+        <p>A sponsor brief should name the workflow, the proof so far, the next funding or attention gate, the owner, and the reversible boundary. Keep it sanitized: do not paste customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links into a shared sponsor packet.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Brief flow</div>
+      <h2>Answer seven sponsor questions</h2>
+      <div class="steps">
+        <div class="step"><h3>1. What decision do we need?</h3><p>Pick one ask: continue the pilot, fund a narrow rollout, assign owner time, approve a data boundary, unblock a vendor trial, or stop cleanly.</p></div>
+        <div class="step"><h3>2. What workflow is being sponsored?</h3><p>Name the repeated task, current pain, target users, and the narrow AI-assisted step. Avoid broad “AI initiative” language.</p></div>
+        <div class="step"><h3>3. What evidence exists?</h3><p>Summarize sanitized pilot evidence: observed runs, reviewer decisions, value signals, friction signals, risk signals, and what remains unknown.</p></div>
+        <div class="step"><h3>4. What boundary protects the organization?</h3><p>State allowed inputs, off-limits data, human review gate, rollback trigger, support route, and what the pilot is not allowed to decide.</p></div>
+        <div class="step"><h3>5. What commitment is requested?</h3><p>Describe the smallest time, budget attention, tool access, stakeholder meeting, or owner capacity needed for the next reversible step.</p></div>
+        <div class="step"><h3>6. Who owns the next state?</h3><p>Name the accountable owner, sponsor, reviewer, support partner, escalation path, and date for the next evidence review.</p></div>
+        <div class="step"><h3>7. What answer will we accept?</h3><p>Offer explicit outcomes: approve narrow next step, clarify evidence, reduce scope, pause, stop, or archive. Do not let the meeting end in “interesting.”</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Sponsor traps</div>
+      <h2>Prevent these before the ask</h2>
+      <div class="grid">
+        <div class="card"><div class="tag warn">Vague ask</div><h3>“We need support for AI.”</h3><p>Replace broad support with one decision and one reversible next step. Sponsors can approve decisions; they cannot approve fog.</p></div>
+        <div class="card"><div class="tag warn">Proof gap</div><h3>“It seems promising.”</h3><p>Use the evidence log and decision memo. If proof is thin, ask for a clarification run instead of a rollout commitment.</p></div>
+        <div class="card"><div class="tag warn">Ownership gap</div><h3>“Who will run it?”</h3><p>Use the workflow owner card. Sponsor attention without an operating owner turns into orphaned automation.</p></div>
+        <div class="card"><div class="tag warn">Safety gap</div><h3>“What could go wrong?”</h3><p>Bring the data boundary and risk register. Show the off-limits data, review gate, and stop trigger before asking for capacity.</p></div>
+        <div class="card"><div class="tag warn">Adoption gap</div><h3>“Who has to change?”</h3><p>Use the adoption change brief to explain affected users, support, training, feedback, and rollback before a sponsor expands the audience.</p></div>
+        <div class="card"><div class="tag warn">Decision drift</div><h3>“Let’s discuss more later.”</h3><p>End with a named state: approve, clarify, narrow, pause, stop, or archive — plus owner and review date.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable sponsor note</div>
+      <h2>Paste this into a sponsor update</h2>
+      <div class="copy">
+        <p><strong>Decision needed:</strong> [approve narrow next step / clarify evidence / reduce scope / pause / stop / archive]</p>
+        <p><strong>Workflow:</strong> [one repeated task and the narrow AI-assisted step]</p>
+        <p><strong>Evidence so far:</strong> [sanitized value, friction, risk, reviewer decisions, and unknowns]</p>
+        <p><strong>Boundary:</strong> [allowed inputs, off-limits data, review gate, rollback trigger, support route]</p>
+        <p><strong>Commitment requested:</strong> [owner time, sponsor attention, tool access, review meeting, or limited budget attention]</p>
+        <p><strong>Owner and sponsor:</strong> [accountable owner, sponsor, reviewer, support partner, escalation route]</p>
+        <p><strong>Next review:</strong> [date, evidence to bring, and state to choose next]</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Facilitator cue</div>
+      <h2>When to use it in the workshop</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">After decision memo</div><h3>Turn evidence into an ask</h3><p>Use this when the decision memo says continue or clarify and the next step needs sponsor time, owner capacity, or permission to convene people.</p></div>
+        <div class="card"><div class="tag">Before rollout readiness</div><h3>Check attention before scale</h3><p>If the pilot may expand, confirm the sponsor understands the evidence, safety boundary, support path, and reversible commitment.</p></div>
+        <div class="card"><div class="tag">When buyer conversations stall</div><h3>Move from interest to decision</h3><p>Use the brief to convert “we should look at AI” into a small funded experiment, a clarification request, or an honest stop.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI sponsor alignment brief for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>
