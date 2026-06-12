@@ -174,6 +174,16 @@ Attendee action: capture the concern category, current boundary, evidence needed
 
 Status: ready stakeholder-alignment handout.
 
+### Change management: AI adoption change brief
+
+Resource: `resources/ai-adoption-change-brief.html`.
+
+Use when: a promising AI pilot or workflow is about to affect more users and attendees need to explain the human change, support route, review gate, pause trigger, and next review date before rollout pressure builds.
+
+Attendee action: write a concise adoption note with the workflow change, included users, human-owned boundary, allowed inputs, support path, feedback evidence, pause trigger, and next review forum without exposing sensitive examples.
+
+Status: ready change-management handout.
+
 ### Pilot learning: AI pilot retrospective
 
 Resource: `resources/ai-pilot-retrospective.html`.

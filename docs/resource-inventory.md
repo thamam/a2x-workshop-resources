@@ -137,6 +137,14 @@ Source: public-safe static stakeholder-alignment worksheet drafted in this repo 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record concern categories and evidence needs generically instead of customer data, employee records, contracts, production logs, screenshots, internal strategy, or private repository links.
 Next action: tune after observing which stakeholder objections recur after pilot updates, risk reviews, or decision meetings.
 
+### AI adoption change brief
+
+Status: publish-now
+Hub path: `resources/ai-adoption-change-brief.html`
+Source: public-safe static change-management worksheet drafted in this repo from the current workshop follow-up need to explain the human side of a promising AI workflow before it expands beyond a small pilot group.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to plan workflow change, affected users, human review gates, support routes, allowed inputs, pause triggers, and review dates without exposing customer data, employee records, vendor contracts, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links.
+Next action: tune after observing which adoption, support, training, and stakeholder-communication questions appear between decision meetings, rollout readiness, and operations handoff.
+
 ### AI pilot retrospective
 
 Status: publish-now
