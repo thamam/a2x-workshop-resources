@@ -105,6 +105,14 @@ Source: public-safe static buyer-education memo template drafted in this repo fr
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly keeps memo evidence sanitized and directs sensitive-access trials back to clarification before scaling.
 Next action: tune after observing which pilot decision questions attendees or buyers raise after scoring trial candidates.
 
+### AI decision meeting agenda
+
+Status: publish-now
+Hub path: `resources/ai-decision-meeting-agenda.html`
+Source: public-safe static meeting agenda drafted in this repo from the current workshop follow-up need to turn demo, reference, trial, and pilot evidence into one clear next state without letting weak evidence become rollout pressure.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to bring sanitized counts, patterns, boundaries, owners, and reversible next steps instead of raw customer data, account screenshots, contracts, production logs, or private repository links.
+Next action: tune after observing which decision meetings stall between vendor demos, reference checks, pilot evidence, decision memos, and rollout-readiness conversations.
+
 ### AI pilot risk register
 
 Status: publish-now

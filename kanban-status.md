@@ -127,6 +127,9 @@
 - [x] **Epic 21: AI pilot data boundary aids** (100% Completed)
   - [x] Story 21.1: Add AI pilot data boundary checklist handout
 
+- [x] **Epic 22: AI decision meeting aids** (100% Completed)
+  - [x] Story 22.1: Add AI decision meeting agenda handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -158,6 +161,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 22.1: Add AI decision meeting agenda handout
+  - Evidence: created `resources/ai-decision-meeting-agenda.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-pilot-decision-memo.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 40 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-decision-meeting-agenda.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-pilot-decision-memo.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with decision-meeting links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-decision-meeting-agenda-mobile.png` (144698 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-decision-meeting-agenda-dom.html` (8774 bytes) and confirmed the page title, meeting rule, evidence-readiness copy, copyable meeting note, and public-safe footer markers on 2026-06-12 09:25 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 21.1: Add AI pilot data boundary checklist handout
   - Evidence: created `resources/ai-pilot-data-boundary-checklist.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `074d4e6` and pushed; `python3 scripts/check-static-links.py` passed for 39 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-pilot-data-boundary-checklist.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with hub, chooser, page, inventory, and usage-map markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-data-boundary-mobile.png` (183939 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-pilot-data-boundary-dom.html` (8532 bytes) and confirmed the page title, boundary rule, copyable boundary note, and public-safe footer markers; GitHub Security Checks run `27394219177` succeeded; Pages deployment run `27394218724` succeeded; public smoke returned HTTP 200 for the live hub, data boundary checklist page, and route chooser, with data-boundary links/content visible on 2026-06-12 07:19 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -640,6 +646,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-12 09:25 IDT — Finished Story 22.1: created public-safe AI decision meeting agenda, wired it into the hub, route chooser, decision memo, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-12 09:22 IDT — Started Story 22.1: add a public-safe AI decision meeting agenda handout after verifying repo state at HEAD `7aab4d8`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-12 07:19 IDT — Cleared Story 21.1 post-commit verification: implementation commit `074d4e6` pushed; GitHub Security Checks run `27394219177` and Pages deployment run `27394218724` succeeded; public smoke returned HTTP 200 for the live hub, data boundary checklist page, and route chooser with data-boundary links/content visible.
 
@@ -1351,4 +1361,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If the next autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.
+- Commit and push Story 22.1 if the diff review remains clean, then verify GitHub checks when practical. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value.

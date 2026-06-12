@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI decision meeting agenda | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe agenda for turning AI demo, reference, trial, and pilot evidence into one clear decision without exposing sensitive examples or overclaiming results." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width: 1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:900px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    code { color:#dfd2be; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap:anywhere; }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .agenda { display:grid; gap:14px; counter-reset:item; }
+    .row { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .row h3::before { content: counter(item) ". "; color:var(--accent2); }
+    .packet { display:grid; gap:12px; }
+    .item { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · decision meeting</div>
+    <h1>Turn AI evidence into one clear decision meeting.</h1>
+    <p class="lead">Use this agenda after a demo, reference check, small trial, or pilot review. It keeps the conversation anchored on workflow evidence, data boundaries, owners, and the next reversible step instead of hype, anxiety, or private examples.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-evidence-log.html">Review evidence log</a>
+      <a class="button" href="ai-pilot-decision-memo.html">Write decision memo</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Meeting rule</div>
+        <h2>If the evidence is not ready, decide what to learn next.</h2>
+        <p>Do not turn a weak demo, vague reference, or single impressive run into a broad rollout decision. If the team cannot name the workflow, allowed inputs, observed evidence, owner, risk boundary, and rollback path, the decision is <strong>clarify first</strong>, not expand.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Before the meeting</div>
+      <h2>Bring a sanitized decision packet</h2>
+      <div class="packet">
+        <div class="item"><h3>Decision ask</h3><p>Choose exactly one ask: run a tiny trial, continue the pilot, clarify one blocker, expand narrowly, pause, stop, or archive.</p></div>
+        <div class="item"><h3>Evidence summary</h3><p>Bring counts, pass/fail signals, reviewer decisions, friction notes, and representative patterns. Do not bring raw customer data, account screenshots, contracts, production logs, or private repository links.</p></div>
+        <div class="item"><h3>Boundary and owner</h3><p>Include allowed inputs, off-limits data, the accountable owner, the human reviewer, and who can pause the workflow if the boundary fails.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">30-minute agenda</div>
+      <h2>Keep the room moving</h2>
+      <div class="agenda">
+        <div class="row"><h3>Restate the workflow and decision ask</h3><p>What repeated job is under discussion, who benefits, and what decision must be made today?</p></div>
+        <div class="row"><h3>Review evidence, not anecdotes</h3><p>Summarize the proof: observed runs, quality signal, time saved or friction removed, reviewer confidence, setup effort, and unresolved gaps.</p></div>
+        <div class="row"><h3>Confirm the boundary</h3><p>Check allowed inputs, redaction, retention, access, escalation, and off-limits categories before any team assumes real data is approved.</p></div>
+        <div class="row"><h3>Name ownership and support</h3><p>Confirm accountable owner, backup, reviewer, support route, review cadence, and pause condition before the workflow gets wider attention.</p></div>
+        <div class="row"><h3>Choose one next state</h3><p>Pick continue, clarify, expand narrowly, pause, stop, or archive. Write the reason in one sentence and name the evidence that would change the decision later.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Decision states</div>
+      <h2>Use plain language</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Continue</div><h3>The pilot stays narrow.</h3><p>Evidence is useful enough to keep learning, but the allowed workflow, inputs, users, and review gate remain constrained.</p></div>
+        <div class="card"><div class="tag warn">Clarify</div><h3>One blocker must be resolved.</h3><p>The next step is not rollout; it is answering a named question about safety, quality, ownership, support, integration, or user adoption.</p></div>
+        <div class="card"><div class="tag ok">Expand narrowly</div><h3>The next audience is controlled.</h3><p>Only expand if the rollout checklist, owner card, rollback path, stakeholder message, and review date are ready.</p></div>
+        <div class="card"><div class="tag warn">Pause or stop</div><h3>The evidence says not now.</h3><p>Capture the reason, clean up access if needed, preserve sanitized lessons, and avoid letting a zombie pilot linger.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable meeting note</div>
+      <h2>Paste this into the decision doc</h2>
+      <div class="callout">
+        <p><strong>Workflow:</strong> [one repeated job]</p>
+        <p><strong>Decision ask:</strong> [trial / continue / clarify / expand narrowly / pause / stop / archive]</p>
+        <p><strong>Evidence reviewed:</strong> [sanitized counts, patterns, pass/fail signal, reviewer decisions]</p>
+        <p><strong>Current boundary:</strong> [allowed inputs, off-limits data, retention, escalation]</p>
+        <p><strong>Owner and reviewer:</strong> [roles/names]</p>
+        <p><strong>Decision:</strong> [chosen state + one-sentence reason]</p>
+        <p><strong>Next reversible step:</strong> [small action, owner, due date, verification signal]</p>
+        <p><strong>Revisit if:</strong> [evidence or risk signal that should reopen the decision]</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI decision meeting agenda for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

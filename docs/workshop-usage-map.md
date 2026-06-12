@@ -134,6 +134,16 @@ Attendee action: write a one-page memo with the decision ask, workflow tested, e
 
 Status: ready buyer-education decision aid.
 
+### Decision meeting: AI decision meeting agenda
+
+Resource: `resources/ai-decision-meeting-agenda.html`.
+
+Use when: attendees need to bring stakeholders together after a vendor demo, reference check, trial, evidence log, or decision memo and choose one next state without exposing sensitive examples or overclaiming results.
+
+Attendee action: bring a sanitized decision packet, review evidence and boundaries, confirm ownership and support, then choose continue, clarify, expand narrowly, pause, stop, or archive with one reversible next step.
+
+Status: ready meeting-decision aid.
+
 ### Pilot governance: AI pilot risk register
 
 Resource: `resources/ai-pilot-risk-register.html`.
