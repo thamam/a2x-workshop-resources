@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI steering cadence brief | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for setting a lightweight recurring AI steering cadence after sponsor alignment, rollout, or operations handoff." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#f19a8b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul, ol { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .steps { display:grid; gap:14px; }
+    .step { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .copy { border:1px solid var(--line); background:#1d1913; border-radius:18px; padding:18px; overflow-wrap:anywhere; }
+    .copy p + p { margin-top:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · steering cadence</div>
+    <h1>Set the AI steering cadence before pilot decisions scatter.</h1>
+    <p class="lead">Use this public-safe brief after sponsor alignment, rollout readiness, or operations handoff to decide who reviews AI work, how often, what evidence matters, and when to pause or escalate.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-sponsor-alignment-brief.html">Align sponsor decision</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+      <a class="button" href="ai-adoption-change-brief.html">Brief adoption change</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Cadence rule</div>
+        <h2>Govern by rhythm, evidence, and stop rules — not enthusiasm.</h2>
+        <p>A steering cadence is a lightweight recurring forum for the few people who can keep an AI workflow useful, safe, and reversible. Keep it sanitized: do not paste customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links into shared cadence notes.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Cadence setup</div>
+      <h2>Answer seven steering questions</h2>
+      <div class="steps">
+        <div class="step"><h3>1. What decisions belong here?</h3><p>Choose the recurring decisions: continue, clarify, narrow, expand, pause, stop, change guardrails, assign owner time, or escalate a risk.</p></div>
+        <div class="step"><h3>2. Who must attend?</h3><p>Name the accountable owner, human reviewer, sponsor or delegate, security/privacy partner when needed, support owner, and one decision recorder.</p></div>
+        <div class="step"><h3>3. What evidence must arrive?</h3><p>Bring sanitized usage counts, reviewer decisions, quality signals, incidents, support friction, value evidence, open risks, and owner capacity signals.</p></div>
+        <div class="step"><h3>4. How often should it meet?</h3><p>Set a short initial rhythm: weekly during trial, biweekly during controlled rollout, monthly during stable operations, and immediate review after incidents.</p></div>
+        <div class="step"><h3>5. What thresholds trigger action?</h3><p>Define pause triggers, escalation triggers, rollback conditions, scope-expansion requirements, and what evidence is not strong enough to continue.</p></div>
+        <div class="step"><h3>6. What artifacts get updated?</h3><p>Decide which notes, owner card, data boundary, risk register, stakeholder update, health review, and sunset/archive packet must change after each meeting.</p></div>
+        <div class="step"><h3>7. What happens after the meeting?</h3><p>End with one state, one owner, one due date, and one next evidence requirement. If nothing changes, explicitly say the current boundary stays in force.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Cadence traps</div>
+      <h2>Prevent these before the forum becomes theater</h2>
+      <div class="grid">
+        <div class="card"><div class="tag warn">Too many people</div><h3>A status meeting, not steering.</h3><p>Invite observers only when needed. The standing cadence needs decision owners, reviewers, and support partners — not an audience.</p></div>
+        <div class="card"><div class="tag warn">No evidence packet</div><h3>Opinions fill the gap.</h3><p>Require a short sanitized packet before the meeting: evidence log, health review, risk changes, and the decision needed.</p></div>
+        <div class="card"><div class="tag warn">No stop rule</div><h3>Momentum becomes default approval.</h3><p>Name pause, rollback, and archive conditions before a workflow spreads. A cadence without stop rules only ratifies drift.</p></div>
+        <div class="card"><div class="tag warn">Owner blur</div><h3>Everyone agrees; nobody owns.</h3><p>Each action needs one owner and date. Use the workflow owner card if ownership is unclear.</p></div>
+        <div class="card"><div class="tag warn">Private evidence leak</div><h3>Screenshots sneak into notes.</h3><p>Record categories, counts, decisions, and sanitized examples. Keep raw prompts, tickets, logs, customer records, and account screens out.</p></div>
+        <div class="card"><div class="tag warn">Cadence never changes</div><h3>The rhythm outlives the risk.</h3><p>Review the cadence itself. Tighten it after incidents, loosen it when stable, and archive it when the workflow closes.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable cadence note</div>
+      <h2>Paste this into a steering agenda</h2>
+      <div class="copy">
+        <p><strong>Decision needed:</strong> [continue / clarify / narrow / expand / pause / stop / change guardrail / escalate risk]</p>
+        <p><strong>Workflow boundary:</strong> [allowed users, allowed inputs, off-limits data, review gate, rollback trigger]</p>
+        <p><strong>Evidence since last review:</strong> [sanitized usage, value, quality, reviewer decisions, incidents, support friction, owner capacity]</p>
+        <p><strong>Open risks or concerns:</strong> [risk category, current mitigation, owner, threshold for action]</p>
+        <p><strong>Artifacts to update:</strong> [owner card, data boundary, risk register, stakeholder update, health review, sunset/archive notes]</p>
+        <p><strong>Decision and owner:</strong> [chosen state, accountable owner, due date, next evidence requirement]</p>
+        <p><strong>Next cadence:</strong> [date, attendees, evidence packet, and condition that would trigger an earlier review]</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Facilitator cue</div>
+      <h2>When to use it in the workshop</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">After sponsor alignment</div><h3>Turn attention into operating rhythm</h3><p>If the sponsor approves a narrow next step, use this to decide who watches the pilot and what evidence returns.</p></div>
+        <div class="card"><div class="tag">During controlled rollout</div><h3>Keep expansion reversible</h3><p>Use the cadence before more teams or data types enter the workflow so expansion has thresholds and rollback signals.</p></div>
+        <div class="card"><div class="tag">After operations handoff</div><h3>Prevent silent drift</h3><p>Use this when an AI workflow becomes routine and needs periodic review without turning every update into a major meeting.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI steering cadence brief for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

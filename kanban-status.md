@@ -139,6 +139,9 @@
 - [x] **Epic 25: AI sponsor alignment and funding aids** (100% Completed)
   - [x] Story 25.1: Add AI sponsor alignment brief handout
 
+- [x] **Epic 26: AI steering and cadence aids** (100% Completed)
+  - [x] Story 26.1: Add AI steering cadence brief handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -170,6 +173,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 26.1: Add AI steering cadence brief handout
+  - Evidence: created `resources/ai-steering-cadence-brief.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 44 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-steering-cadence-brief.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with steering-cadence links/content visible on 2026-06-12 18:02 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 25.1: Add AI sponsor alignment brief handout
   - Evidence: created `resources/ai-sponsor-alignment-brief.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `c73cc5a` and pushed; `python3 scripts/check-static-links.py` passed for 43 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-sponsor-alignment-brief.html`, and `/resources/workshop-resource-chooser.html`, with hub, new page, and chooser markers visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-sponsor-alignment-mobile.png` (144455 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-sponsor-alignment-dom.html` (9998 bytes) and confirmed the page title, sponsor rule, copyable sponsor note, and public-safe footer markers on 2026-06-12 15:54 IDT; GitHub Security Checks run `27417007926` succeeded; Pages deployment run `27417007185` succeeded; public smoke returned HTTP 200 for the live hub, sponsor alignment brief page, and route chooser, with sponsor-alignment links/content visible on 2026-06-12 15:57 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -664,6 +670,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-12 18:03 IDT — Finished Story 26.1: created public-safe AI steering cadence brief, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 44 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, and local HTTP marker smoke. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-12 18:00 IDT — Started Story 26.1: add a public-safe AI steering cadence brief handout after verifying repo state at HEAD `61e0c0e`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-12 15:57 IDT — Cleared Story 25.1 post-commit verification: implementation commit `c73cc5a` pushed; GitHub Security Checks run `27417007926` and Pages deployment run `27417007185` succeeded; public smoke returned HTTP 200 for the live hub, sponsor alignment brief page, and route chooser with sponsor-alignment links/content visible.
 

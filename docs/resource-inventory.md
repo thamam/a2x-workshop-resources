@@ -153,6 +153,14 @@ Source: public-safe static sponsor-alignment worksheet drafted in this repo from
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep sponsor asks sanitized and to avoid customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links.
 Next action: tune after observing which sponsor, buyer, funding, owner-capacity, and executive-attention questions appear after decision memos, stakeholder updates, or adoption-change conversations.
 
+### AI steering cadence brief
+
+Status: publish-now
+Hub path: `resources/ai-steering-cadence-brief.html`
+Source: public-safe static steering-cadence worksheet drafted in this repo from the current workshop follow-up need to keep AI pilot decisions, evidence reviews, stop rules, and owner updates on a lightweight recurring rhythm after sponsor alignment, rollout, or operations handoff.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep cadence notes sanitized and to avoid customer data, employee records, contracts, pricing promises, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links.
+Next action: tune after observing which governance cadence, decision-forum, owner-capacity, evidence-packet, and stop-rule questions appear after sponsor alignment or controlled rollout conversations.
+
 ### AI pilot retrospective
 
 Status: publish-now

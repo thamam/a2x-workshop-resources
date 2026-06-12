@@ -194,6 +194,16 @@ Attendee action: write one sponsor ask with the workflow, sanitized evidence, sa
 
 Status: ready sponsor-alignment handout.
 
+### Steering cadence: AI steering cadence brief
+
+Resource: `resources/ai-steering-cadence-brief.html`.
+
+Use when: attendees have sponsor attention, rollout pressure, or an operational AI workflow and need a lightweight recurring forum for decisions, evidence, stop rules, owner capacity, and artifact updates.
+
+Attendee action: define the decision forum, attendees, evidence packet, review rhythm, pause/escalation thresholds, artifacts to update, next owner, and next evidence requirement without sharing sensitive examples.
+
+Status: ready steering-cadence handout.
+
 ### Pilot learning: AI pilot retrospective
 
 Resource: `resources/ai-pilot-retrospective.html`.
