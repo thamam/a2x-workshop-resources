@@ -129,6 +129,14 @@ Source: public-safe static pilot-communication template drafted in this repo fro
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to share decision evidence and generic workflow status instead of customer data, account pages, screenshots, or internal strategy.
 Next action: tune after observing what stakeholders ask for when attendees report pilot progress after a scorecard, decision memo, or risk register.
 
+### AI stakeholder concern resolver
+
+Status: publish-now
+Hub path: `resources/ai-stakeholder-concern-resolver.html`
+Source: public-safe static stakeholder-alignment worksheet drafted in this repo from the current workshop follow-up need to convert AI objections into evidence requests, boundaries, owners, and reversible next steps before debate stalls adoption.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record concern categories and evidence needs generically instead of customer data, employee records, contracts, production logs, screenshots, internal strategy, or private repository links.
+Next action: tune after observing which stakeholder objections recur after pilot updates, risk reviews, or decision meetings.
+
 ### AI pilot retrospective
 
 Status: publish-now

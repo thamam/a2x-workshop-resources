@@ -130,6 +130,9 @@
 - [x] **Epic 22: AI decision meeting aids** (100% Completed)
   - [x] Story 22.1: Add AI decision meeting agenda handout
 
+- [x] **Epic 23: AI stakeholder alignment aids** (100% Completed)
+  - [x] Story 23.1: Add AI stakeholder concern resolver handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -161,6 +164,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 23.1: Add AI stakeholder concern resolver handout
+  - Evidence: created `resources/ai-stakeholder-concern-resolver.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-pilot-stakeholder-update.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 41 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for all 41 HTML files and targeted checks confirmed the hub, chooser, stakeholder update, inventory, usage map, and new page markers; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-stakeholder-concern-resolver-mobile.png` (153263 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-stakeholder-concern-resolver-dom.html` (9905 bytes) and confirmed the page title, concern resolver rule, copyable resolver note, and public-safe footer markers on 2026-06-12 11:36 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 22.1: Add AI decision meeting agenda handout
   - Evidence: created `resources/ai-decision-meeting-agenda.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-pilot-decision-memo.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `e6308b0` and pushed; `python3 scripts/check-static-links.py` passed for 40 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-decision-meeting-agenda.html`, `/resources/workshop-resource-chooser.html`, `/resources/ai-pilot-decision-memo.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with decision-meeting links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-decision-meeting-agenda-mobile.png` (144698 bytes); Chrome DOM dump persisted `/tmp/a2x-ai-decision-meeting-agenda-dom.html` (8774 bytes) and confirmed the page title, meeting rule, evidence-readiness copy, copyable meeting note, and public-safe footer markers on 2026-06-12 09:25 IDT; GitHub Security Checks run `27398755841` succeeded; Pages deployment run `27398754952` succeeded; public smoke returned HTTP 200 for the live hub, decision meeting agenda page, and route chooser, with decision-meeting links/content visible on 2026-06-12 09:27 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -646,6 +652,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-12 11:36 IDT — Finished Story 23.1: created public-safe AI stakeholder concern resolver, wired it into the hub, route chooser, stakeholder update, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP smoke for all 41 HTML files, targeted marker smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-12 11:30 IDT — Started Story 23.1: add a public-safe AI stakeholder concern resolver handout after verifying repo state at HEAD `98588ed`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-12 09:27 IDT — Cleared Story 22.1 post-commit verification: implementation commit `e6308b0` pushed; GitHub Security Checks run `27398755841` and Pages deployment run `27398754952` succeeded; public smoke returned HTTP 200 for the live hub, decision meeting agenda page, and route chooser with decision-meeting links/content visible.
 

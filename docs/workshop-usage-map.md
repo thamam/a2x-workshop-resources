@@ -164,6 +164,16 @@ Attendee action: send a short update with status, workflow tested, evidence obse
 
 Status: ready pilot-communication handout.
 
+### Stakeholder alignment: AI stakeholder concern resolver
+
+Resource: `resources/ai-stakeholder-concern-resolver.html`.
+
+Use when: a manager, reviewer, sponsor, security partner, or team member raises an AI concern that needs to become an evidence request, boundary, owner, or reversible next step instead of an open-ended argument.
+
+Attendee action: capture the concern category, current boundary, evidence needed, owner, smallest next step, and review date without sharing sensitive examples.
+
+Status: ready stakeholder-alignment handout.
+
 ### Pilot learning: AI pilot retrospective
 
 Resource: `resources/ai-pilot-retrospective.html`.
