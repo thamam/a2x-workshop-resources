@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI adoption proof snapshot | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe snapshot template for summarizing AI adoption proof, support signals, guardrail health, and next decisions without exposing private examples." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .snapshot { display:grid; gap:14px; }
+    .row { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .decision { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .decision strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · adoption proof</div>
+    <h1>Summarize adoption proof without oversharing.</h1>
+    <p class="lead">Use this snapshot after office hours, health reviews, steering cadence, or sponsor check-ins when the team needs a compact view of whether an AI workflow is actually being adopted safely. It keeps proof practical: generic counts, sanitized patterns, support signals, guardrail health, and one next decision.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-adoption-office-hours-plan.html">Plan office hours</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+      <a class="button" href="ai-steering-cadence-brief.html">Set steering cadence</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Proof-snapshot rule</div>
+        <h2>Report patterns and decisions, not private artifacts.</h2>
+        <p>Do not paste customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, raw prompts, or internal strategy. Summarize adoption with sanitized counts, generic workflow categories, reviewer decisions, support themes, and boundary status.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Collect the proof categories</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Use signal</div><h3>Who is using it?</h3><p>Count included users or teams, active users, repeat use, and abandoned use in broad categories rather than names or private work examples.</p></div>
+        <div class="card"><div class="tag ok">Quality signal</div><h3>Did review pass?</h3><p>Summarize reviewer outcomes: accepted, corrected, rejected, escalated, or unclear. Include only sanitized reasons.</p></div>
+        <div class="card"><div class="tag warn">Support signal</div><h3>Where do users get stuck?</h3><p>Group office-hours questions, prompt confusion, handoff gaps, data-boundary uncertainty, and ownership friction by theme.</p></div>
+        <div class="card"><div class="tag bad">Guardrail signal</div><h3>Did boundaries drift?</h3><p>Name incidents, near misses, unclear inputs, missing reviewers, support overload, or scope creep as categories, not raw examples.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Write a one-page adoption proof snapshot</h2>
+      <div class="snapshot">
+        <div class="row"><h3>Workflow and boundary</h3><p><strong>Snapshot for:</strong> [generic AI workflow]. <strong>Included users:</strong> [role/team category]. <strong>Allowed inputs:</strong> [sanitized input categories]. <strong>Human review gate:</strong> [reviewer/forum].</p></div>
+        <div class="row"><h3>Observed adoption</h3><p><strong>Use pattern:</strong> [new/repeat/declining use]. <strong>Volume:</strong> [rough count or range]. <strong>Most common moment:</strong> [workflow stage]. <strong>Abandoned or parked use:</strong> [theme].</p></div>
+        <div class="row"><h3>Quality and review evidence</h3><p><strong>Reviewer signal:</strong> [accepted/corrected/rejected/escalated]. <strong>Reusable win:</strong> [sanitized pattern]. <strong>Fragile failure:</strong> [sanitized pattern]. <strong>Evidence source:</strong> [log/office hours/health review/decision record].</p></div>
+        <div class="row"><h3>Support and guardrail health</h3><p><strong>Top support theme:</strong> [theme]. <strong>Boundary state:</strong> [stable/unclear/drifting]. <strong>Incidents or near misses:</strong> [none/category]. <strong>Owner action:</strong> [update/narrow/train/pause/escalate].</p></div>
+        <div class="row"><h3>Decision ask</h3><p><strong>Recommended next state:</strong> continue, update, narrow, retrain, pause, stop, or escalate. <strong>Decision owner:</strong> [role/forum]. <strong>Next evidence needed:</strong> [specific sanitized signal by date].</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Choose the next state</h2>
+      <div class="grid">
+        <div class="decision"><h3 class="ok">Continue</h3><p>Adoption is useful, review gates are working, support load is manageable, and boundaries remain stable.</p></div>
+        <div class="decision"><h3 class="warn">Update or retrain</h3><p>Users are engaged but repeated confusion, poor handoffs, or review corrections point to a missing aid, prompt rule, or enablement refresh.</p></div>
+        <div class="decision"><h3 class="warn">Narrow or escalate</h3><p>Value exists, but the workflow needs a smaller user group, tighter data boundary, stronger owner, or policy/sponsor decision before it grows.</p></div>
+        <div class="decision"><h3 class="bad">Pause or stop</h3><p>Boundary drift, weak review, incidents, support overload, or unclear ownership make continued routine use unsafe or not worth the attention.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable proof snapshot</div>
+      <h2>Paste this into a recap, steering packet, or sponsor note</h2>
+      <div class="callout">
+        <p><strong>Workflow:</strong> [generic workflow name] for [included role/team category] under [current data/review boundary].</p>
+        <p><strong>Adoption signal:</strong> [rough use count/range], [repeat-use pattern], [abandoned or parked use theme].</p>
+        <p><strong>Quality signal:</strong> [reviewer outcomes], [sanitized win pattern], [sanitized fragile pattern].</p>
+        <p><strong>Support signal:</strong> [top office-hours or help theme], [documentation/training gap], [owner action].</p>
+        <p><strong>Guardrail signal:</strong> [stable/unclear/drifting boundary], [incident or near-miss category], [pause/escalation trigger].</p>
+        <p><strong>Decision:</strong> Continue / update / retrain / narrow / escalate / pause / stop by [owner/forum] after [next evidence].</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI adoption proof snapshot for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

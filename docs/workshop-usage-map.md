@@ -294,6 +294,16 @@ Attendee action: run 30-minute office hours with generic workflow descriptions, 
 
 Status: ready adoption-support handout.
 
+### Adoption proof: AI adoption proof snapshot
+
+Resource: `resources/ai-adoption-proof-snapshot.html`.
+
+Use when: attendees need to turn office-hours notes, health-review observations, steering cadence, or sponsor check-ins into a compact public-safe view of whether the AI workflow is being adopted safely.
+
+Attendee action: summarize sanitized use counts, reviewer outcomes, support themes, guardrail health, owner action, and one continue/update/retrain/narrow/escalate/pause/stop decision without exposing sensitive examples.
+
+Status: ready adoption-proof handout.
+
 ### Pilot operations handoff: AI pilot operations handoff checklist
 
 Resource: `resources/ai-pilot-operations-handoff.html`.

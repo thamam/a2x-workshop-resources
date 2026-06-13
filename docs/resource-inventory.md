@@ -233,6 +233,14 @@ Source: public-safe static adoption-support plan drafted in this repo from the c
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to bring generic workflow descriptions, sanitized symptoms, toy inputs, or redacted screenshots instead of customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy.
 Next action: tune after observing which post-enablement support questions, repeated confusions, guardrail reminders, and escalation needs appear before routine operations handoff or health review.
 
+### AI adoption proof snapshot
+
+Status: publish-now
+Hub path: `resources/ai-adoption-proof-snapshot.html`
+Source: public-safe static adoption-proof snapshot drafted in this repo from the current workshop follow-up need to summarize whether an AI workflow is being adopted safely after office hours, health reviews, steering cadence, or sponsor check-ins.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to report sanitized counts, generic workflow categories, reviewer decisions, support themes, guardrail status, and next decisions instead of customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, raw prompts, or internal strategy.
+Next action: tune after observing which adoption-proof, sponsor-update, steering-packet, support-load, and guardrail-health signals teams need after office hours or recurring health reviews.
+
 ### AI pilot operations handoff
 
 Status: publish-now

@@ -166,6 +166,9 @@
 - [x] **Epic 34: AI adoption support and reinforcement aids** (100% Completed)
   - [x] Story 34.1: Add AI adoption office hours plan handout
 
+- [x] **Epic 35: AI adoption reporting and proof aids** (100% Completed)
+  - [x] Story 35.1: Add AI adoption proof snapshot handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -197,6 +200,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 35.1: Add AI adoption proof snapshot handout
+  - Evidence: created `resources/ai-adoption-proof-snapshot.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 53 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-adoption-proof-snapshot.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with proof-snapshot links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-adoption-proof-snapshot-mobile.png` (157129 bytes) and DOM dump persisted `/tmp/a2x-ai-adoption-proof-snapshot-dom.html` (9562 bytes), confirming the page title, proof-snapshot rule, copyable proof snapshot, and public-safe footer markers on 2026-06-13 13:22 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 34.1: Add AI adoption office hours plan handout
   - Evidence: created `resources/ai-adoption-office-hours-plan.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `f5f3d68` and pushed; `python3 scripts/check-static-links.py` passed for 52 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-adoption-office-hours-plan.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with office-hours links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-adoption-office-hours-plan-mobile.png` (161373 bytes) and DOM dump persisted `/tmp/a2x-ai-adoption-office-hours-plan-dom.html` (9261 bytes), confirming the page title, office-hours rule, copyable office-hours note, and public-safe footer markers on 2026-06-13 11:13 IDT; GitHub Security Checks run `27461364890` succeeded; Pages deployment run `27461364468` succeeded; public smoke returned HTTP 200 for the live hub, AI adoption office hours plan page, and route chooser with office-hours links/content visible on 2026-06-13 11:16 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -718,6 +724,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-13 13:24 IDT — Finished Story 35.1: created public-safe AI adoption proof snapshot, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 53 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-13 13:19 IDT — Started Story 35.1: add a public-safe AI adoption proof snapshot handout after verifying clean repo state at HEAD `1e4d154`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-13 11:16 IDT — Cleared Story 34.1 post-commit verification: implementation commit `f5f3d68` pushed; GitHub Security Checks run `27461364890` and Pages deployment run `27461364468` succeeded; public smoke returned HTTP 200 for the live hub, AI adoption office hours plan page, and route chooser with office-hours links/content visible.
 
@@ -1503,4 +1513,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, policy-escalation, prioritization, enablement, office-hours support, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, policy-escalation, prioritization, enablement, office-hours support, adoption-proof, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
