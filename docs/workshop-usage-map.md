@@ -294,6 +294,16 @@ Attendee action: record usage, quality, safety drift, support friction, incident
 
 Status: ready health-review handout.
 
+### Incident pause: AI incident pause card
+
+Resource: `resources/ai-incident-pause-card.html`.
+
+Use when: an AI workflow produces unexpected output, crosses an unclear boundary, lacks restart authority, creates support discomfort, or spreads before the guardrails are ready.
+
+Attendee action: pause new use, capture sanitized evidence, name containment steps, assign recovery owner and reviewer, and define the restart condition before resuming, narrowing, stopping, or escalating.
+
+Status: ready incident-pause handout.
+
 ### Pilot closure: AI pilot sunset and archive checklist
 
 Resource: `resources/ai-pilot-sunset-archive.html`.

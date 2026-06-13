@@ -233,6 +233,14 @@ Source: public-safe static recurring-review worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to review counts, categories, decisions, and sanitized examples instead of customer data, employee records, production credentials, account screenshots, private repository links, vendor contracts, or raw incident transcripts.
 Next action: tune after observing which usage, quality, support, incident, and guardrail-drift questions teams raise during recurring operational review.
 
+### AI incident pause card
+
+Status: publish-now
+Hub path: `resources/ai-incident-pause-card.html`
+Source: public-safe static pause/recovery worksheet drafted in this repo from the current workshop follow-up need to stop a risky, drifting, boundary-unclear, or fast-spreading AI workflow before it becomes normal operations.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record workflow patterns, triggers, sanitized evidence, containment, owners, and restart conditions instead of raw prompts, customer data, employee records, contracts, regulated records, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy.
+Next action: tune after observing which pause, containment, recovery-owner, and restart-condition questions teams raise during AI workflow incidents or near misses.
+
 ### AI pilot sunset and archive checklist
 
 Status: publish-now

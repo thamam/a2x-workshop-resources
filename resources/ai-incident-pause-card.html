@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI incident pause card | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe card for pausing an AI workflow when something looks wrong, preserving sanitized evidence, and routing the recovery decision." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:920px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:800px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .worksheet { display:grid; gap:14px; }
+    .field { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .decision { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .decision strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · incident pause</div>
+    <h1>Pause the AI workflow before the risk becomes the process.</h1>
+    <p class="lead">Use this card when an AI workflow produces unexpected output, touches an unclear boundary, creates review discomfort, or starts spreading faster than the guardrails. It helps the team stop cleanly, preserve sanitized evidence, assign owners, and choose a safe recovery path.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-risk-register.html">Register the risk</a>
+      <a class="button" href="ai-pilot-operations-handoff.html">Check operations handoff</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Pause rule</div>
+        <h2>A good pause is reversible, owned, and evidence-based.</h2>
+        <p>Do not paste raw prompts, customer records, employee data, contracts, regulated records, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy into the pause note. Record the workflow pattern, what changed, who paused it, what evidence is safe to share, and what decision is needed before restart.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Check the pause triggers</h2>
+      <div class="grid">
+        <div class="card"><div class="tag warn">Output drift</div><h3>Results changed shape</h3><p>The AI output is inconsistent, unreviewable, overconfident, or no longer matches the workflow definition.</p></div>
+        <div class="card"><div class="tag warn">Boundary doubt</div><h3>Input or access feels unclear</h3><p>The workflow may involve sensitive data, private repositories, production systems, customer material, employee data, or unapproved tools.</p></div>
+        <div class="card"><div class="tag warn">Ownership gap</div><h3>No one can approve restart</h3><p>The owner, reviewer, support route, rollback owner, or decision forum is missing or unavailable.</p></div>
+        <div class="card"><div class="tag warn">Adoption pressure</div><h3>The pilot is spreading too fast</h3><p>More users, inputs, or downstream decisions are relying on the workflow before evidence and guardrails are stable.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Fill the six pause fields</h2>
+      <div class="worksheet">
+        <div class="field"><h3>1. Workflow paused</h3><p>Name the workflow pattern, current stage, accountable owner, and reviewer using roles or generic team labels.</p></div>
+        <div class="field"><h3>2. Trigger observed</h3><p>Choose output drift, boundary doubt, ownership gap, adoption pressure, support issue, or another plain-language trigger.</p></div>
+        <div class="field"><h3>3. Safe evidence</h3><p>Record sanitized counts, pass/fail notes, toy examples, redacted excerpts, timestamps, or generic screenshots. If evidence is sensitive, name where it is stored without copying it into this note.</p></div>
+        <div class="field"><h3>4. Immediate containment</h3><p>Describe what stopped: new prompts, user access, automation, vendor sharing, publication, production action, or downstream decision use.</p></div>
+        <div class="field"><h3>5. Recovery owner and reviewer</h3><p>Name who investigates, who approves restart, who updates stakeholders, and who owns cleanup or rollback.</p></div>
+        <div class="field"><h3>6. Restart condition</h3><p>Define the evidence, guardrail, test, policy answer, or support change required before the workflow resumes.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Choose the recovery state</h2>
+      <div class="grid">
+        <div class="decision"><h3 class="ok">Resume narrowly</h3><p>The trigger is understood, evidence is safe, owner and reviewer are named, and the restart condition is met. Resume with a smaller scope and a review date.</p></div>
+        <div class="decision"><h3 class="warn">Investigate first</h3><p>The workflow still looks useful, but the evidence, boundary, owner, or guardrail is incomplete. Keep it paused while the owner runs a safe check.</p></div>
+        <div class="decision"><h3 class="bad">Stop or escalate</h3><p>The workflow needs sensitive inputs in an unapproved tool, has no rollback owner, affects production or public claims, or creates unclear accountability. Stop it or route to the policy exception path.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable pause note</div>
+      <h2>Paste this into the team thread</h2>
+      <div class="callout">
+        <p><strong>Workflow paused:</strong> [Generic workflow pattern] at [stage], owned by [role], reviewed by [role].</p>
+        <p><strong>Pause trigger:</strong> [Output drift / boundary doubt / ownership gap / adoption pressure / support issue].</p>
+        <p><strong>Safe evidence:</strong> [Sanitized counts, redacted note, toy example, pass/fail result, or evidence location without sensitive contents].</p>
+        <p><strong>Immediate containment:</strong> [What stopped; who was notified; what users should avoid until restart].</p>
+        <p><strong>Recovery owner:</strong> [Owner] investigates by [date]; [reviewer/forum] approves resume, narrow, stop, or escalate.</p>
+        <p><strong>Restart condition:</strong> Resume only after [test/guardrail/policy answer/support route] is in place and reviewed.</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI incident pause card for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-12
+- **Last Updated:** 2026-06-13
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -157,6 +157,9 @@
 - [x] **Epic 31: AI policy exception and escalation aids** (100% Completed)
   - [x] Story 31.1: Add AI policy exception request handout
 
+- [x] **Epic 32: AI incident pause and recovery aids** (100% Completed)
+  - [x] Story 32.1: Add AI incident pause card handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -188,6 +191,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 32.1: Add AI incident pause card handout
+  - Evidence: created `resources/ai-incident-pause-card.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 50 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-incident-pause-card.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with incident-pause links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-incident-pause-card-mobile.png` (156315 bytes) and DOM dump persisted `/tmp/a2x-ai-incident-pause-card-dom.html` (9016 bytes), confirming the page title, pause rule, copyable pause note, and public-safe footer markers on 2026-06-13 06:56 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 31.1: Add AI policy exception request handout
   - Evidence: created `resources/ai-policy-exception-request.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `2c406d9` and pushed; `python3 scripts/check-static-links.py` passed for 49 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-policy-exception-request.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with policy-exception links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-policy-exception-request-mobile.png` (151602 bytes) and DOM dump persisted `/tmp/a2x-ai-policy-exception-request-dom.html` (8531 bytes), confirming the page title, exception rule, copyable request, and public-safe footer markers on 2026-06-13 04:48 IDT; GitHub Security Checks run `27453014194` succeeded; Pages deployment run `27453013923` succeeded; public smoke returned HTTP 200 for the live hub, policy exception request page, and route chooser, with policy-exception links/content visible on 2026-06-13 04:50 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -700,6 +706,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-13 06:56 IDT — Finished Story 32.1: created public-safe AI incident pause card, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 50 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-13 06:53 IDT — Started Story 32.1: add a public-safe AI incident pause card after verifying clean repo state at HEAD `ba546a5`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-13 04:50 IDT — Cleared Story 31.1 post-commit verification: implementation commit `2c406d9` pushed; GitHub Security Checks run `27453014194` and Pages deployment run `27453013923` succeeded; public smoke returned HTTP 200 for the live hub, AI policy exception request page, and route chooser with policy-exception links/content visible.
 
