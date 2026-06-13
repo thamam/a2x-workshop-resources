@@ -57,6 +57,14 @@ Source: public-safe static prompt preflight worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep secrets, customer data, employee records, production logs, contracts, account screenshots, private repository contents, credentials, regulated records, and internal strategy out of prompts unless the tool, policy, and approval boundary explicitly allow them.
 Next action: tune after observing which prompt-safety mistakes recur during workshop exercises, vendor demos, or first follow-up workflow trials.
 
+### AI output review rubric
+
+Status: publish-now
+Hub path: `resources/ai-output-review-rubric.html`
+Source: public-safe static reviewer rubric drafted in this repo from the current workshop need to check AI-generated drafts, summaries, recommendations, code changes, and workflow artifacts before attendees rely on them.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to review task fit, source support, safety boundaries, operational clarity, tone/promise control, and reversibility without exposing secrets, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy.
+Next action: tune after observing which AI-output review misses recur during workshop exercises, vendor demos, pilot evidence review, or rollout decisions.
+
 ### AI policy exception request
 
 Status: publish-now

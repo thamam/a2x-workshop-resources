@@ -175,6 +175,9 @@
 - [x] **Epic 37: AI adoption communication aids** (100% Completed)
   - [x] Story 37.1: Add AI adoption FAQ handout
 
+- [x] **Epic 38: AI output review and quality aids** (100% Completed)
+  - [x] Story 38.1: Add AI output review rubric handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -206,6 +209,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 38.1: Add AI output review rubric handout
+  - Evidence: created `resources/ai-output-review-rubric.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 56 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-output-review-rubric.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with output-review links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-output-review-rubric-mobile.png` (162143 bytes) and DOM dump persisted `/tmp/a2x-ai-output-review-rubric-dom.html` (8619 bytes), confirming the page title, review rule, copyable review note, and public-safe footer markers on 2026-06-13 19:56 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 37.1: Add AI adoption FAQ handout
   - Evidence: created `resources/ai-adoption-faq.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `6ee1729` and pushed; `python3 scripts/check-static-links.py` passed for 55 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-adoption-faq.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with adoption FAQ links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-adoption-faq-mobile.png` (161745 bytes) and DOM dump persisted `/tmp/a2x-ai-adoption-faq-dom.html` (10577 bytes), confirming the page title, FAQ safety rule, copyable FAQ note, and public-safe footer markers on 2026-06-13 17:44 IDT; GitHub Security Checks run `27469904548` succeeded; Pages deployment run `27469904128` succeeded; public smoke returned HTTP 200 for the live hub, AI adoption FAQ page, and route chooser with adoption FAQ links/content visible on 2026-06-13 17:46 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -736,6 +742,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-13 19:56 IDT — Finished Story 38.1: created public-safe AI output review rubric, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 56 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-13 19:49 IDT — Started Story 38.1: add a public-safe AI output review rubric handout after verifying clean repo state at HEAD `6cbb659`; scope is a static attendee/reviewer page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-13 17:46 IDT — Cleared Story 37.1 post-commit verification: implementation commit `6ee1729` pushed; GitHub Security Checks run `27469904548` and Pages deployment run `27469904128` succeeded; public smoke returned HTTP 200 for the live hub, AI adoption FAQ page, and route chooser with adoption FAQ links/content visible.
 
@@ -1539,4 +1549,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, policy-escalation, prioritization, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, output-review, policy-escalation, prioritization, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI output review rubric | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe rubric for reviewing AI-generated output before using it in an AI workflow, pilot, or team rollout." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:920px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:800px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .rubric { display:grid; gap:14px; }
+    .check { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .decision { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .decision strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · output review</div>
+    <h1>Review the AI output before anyone relies on it.</h1>
+    <p class="lead">Use this one-page rubric when Claude, Claude Code, ChatGPT, an internal assistant, or a vendor tool produces a draft, summary, analysis, code change, recommendation, or workflow artifact. It helps reviewers catch confident-but-wrong output before it becomes operational reality.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-prompt-safety-preflight.html">Preflight the prompt</a>
+      <a class="button" href="ai-pilot-evidence-log.html">Log pilot evidence</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Review rule</div>
+        <h2>If the output changes a decision, workflow, customer message, system, or budget, it needs human review evidence first.</h2>
+        <p>Review against visible criteria, source material, tests, policy boundaries, and reversible next steps. Do not approve output because it sounds polished. Keep secrets, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, and internal strategy out of shared review notes unless the approved environment allows them.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Run the six-point output review</h2>
+      <div class="rubric">
+        <div class="check"><h3>1. Task fit</h3><p><strong>Pass:</strong> the output answers the exact workflow question, acceptance criteria, or draft request. <strong>Watch:</strong> it solves a broader, adjacent, or more ambitious problem than requested.</p></div>
+        <div class="check"><h3>2. Source support</h3><p><strong>Pass:</strong> claims can be traced to provided sources, visible evidence, tests, or sanitized notes. <strong>Watch:</strong> it invents facts, policies, timelines, product behavior, citations, numbers, or customer context.</p></div>
+        <div class="check"><h3>3. Safety boundary</h3><p><strong>Pass:</strong> it respects allowed inputs, off-limits data, policy boundaries, and stop conditions. <strong>Watch:</strong> it asks for sensitive data, recommends private exposure, or assumes approval that has not been granted.</p></div>
+        <div class="check"><h3>4. Operational clarity</h3><p><strong>Pass:</strong> the next step has an owner, review gate, timing, and success evidence. <strong>Watch:</strong> it leaves vague verbs like “coordinate,” “improve,” “monitor,” or “scale” without a concrete check.</p></div>
+        <div class="check"><h3>5. Tone and promise control</h3><p><strong>Pass:</strong> language is accurate, modest, and appropriate for the audience. <strong>Watch:</strong> it overpromises savings, speed, accuracy, autonomy, compliance, pricing, or production readiness.</p></div>
+        <div class="check"><h3>6. Reversibility</h3><p><strong>Pass:</strong> the proposed action is draft-only, local, sandboxed, staged, or approval-gated. <strong>Watch:</strong> it jumps to public publishing, external sending, production writes, broad rollout, or irreversible commitments.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Choose the review decision</h2>
+      <div class="grid">
+        <div class="decision"><h3 class="ok">Approve for next safe step</h3><p>All six review points pass. Record the evidence and proceed only to the bounded next action named in the output.</p></div>
+        <div class="decision"><h3 class="warn">Revise before use</h3><p>One or two points are weak. Send a correction prompt, add missing source notes, narrow the scope, or rewrite the output manually before relying on it.</p></div>
+        <div class="decision"><h3 class="bad">Stop and escalate</h3><p>The output conflicts with policy, lacks evidence for a consequential decision, asks for sensitive material, or proposes an irreversible action. Pause and route to the right owner or reviewer.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable review note</div>
+      <h2>Paste this under the AI output</h2>
+      <div class="callout">
+        <p><strong>Output reviewed:</strong> [draft / summary / recommendation / code change / workflow artifact].</p>
+        <p><strong>Evidence checked:</strong> [source notes, acceptance criteria, tests, sanitized sample, policy boundary, reviewer judgment].</p>
+        <p><strong>Pass / revise / stop:</strong> [decision] because [one-sentence reason].</p>
+        <p><strong>Required changes:</strong> [missing source, narrower claim, safer boundary, clearer owner, review gate, rollback path].</p>
+        <p><strong>Allowed next step:</strong> [draft-only / local test / reviewer approval / small pilot / do not proceed].</p>
+        <p><strong>Do not include:</strong> secrets, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy in this shared note.</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI output review rubric for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

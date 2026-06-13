@@ -74,6 +74,16 @@ Attendee action: verify the prompt is narrow, sanitized, bounded, reviewable, an
 
 Status: ready prompt-safety handout.
 
+### Output review: AI output review rubric
+
+Resource: `resources/ai-output-review-rubric.html`.
+
+Use when: attendees need to review AI-generated drafts, summaries, recommendations, code changes, or workflow artifacts before relying on them in a workflow, pilot, vendor evaluation, or rollout decision.
+
+Attendee action: check task fit, source support, safety boundaries, operational clarity, tone/promise control, and reversibility; approve only the next safe step, revise weak output, or stop and escalate risky output.
+
+Status: ready output-review handout.
+
 ### Policy escalation: AI policy exception request
 
 Resource: `resources/ai-policy-exception-request.html`.
