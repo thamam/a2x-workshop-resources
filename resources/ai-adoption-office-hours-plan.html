@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI adoption office hours plan | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe office-hours plan for supporting AI workflow adoption after enablement without collecting private examples or drifting past guardrails." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .agenda { display:grid; gap:14px; }
+    .slot { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .decision { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .decision strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · adoption support</div>
+    <h1>Run office hours that reinforce safe AI habits.</h1>
+    <p class="lead">Use this plan after pilot enablement when users need a lightweight support forum for questions, stuck workflows, guardrail reminders, and improvement signals. The goal is to keep adoption moving without collecting private examples, debugging sensitive material live, or letting support requests quietly expand the pilot boundary.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-enablement-session-plan.html">Plan pilot enablement</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Office-hours rule</div>
+        <h2>Support the pattern, not the private artifact.</h2>
+        <p>Do not troubleshoot with customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy. Ask people to bring a generic workflow description, sanitized symptom, toy input, or redacted screenshot that proves the question without exposing the underlying material.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Decide what office hours are allowed to handle</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Good fit</div><h3>Workflow questions</h3><p>Clarify when to use the AI workflow, how to prepare safe inputs, where human review happens, and what evidence to capture.</p></div>
+        <div class="card"><div class="tag ok">Good fit</div><h3>Support friction</h3><p>Collect repeated confusion about prompts, handoffs, ownership, review gates, pause triggers, or feedback routes.</p></div>
+        <div class="card"><div class="tag warn">Escalate</div><h3>Boundary uncertainty</h3><p>If a question needs sensitive data, new tool access, policy exception, procurement review, or a wider user group, route it to the named owner instead of solving it live.</p></div>
+        <div class="card"><div class="tag bad">Stop</div><h3>Incident signals</h3><p>If output drift, unsafe input, missing reviewer, support overload, or unclear restart authority appears, pause new use and switch to the incident pause card.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Run a 30-minute adoption office-hours agenda</h2>
+      <div class="agenda">
+        <div class="slot"><h3>0–3 min · Restate the boundary</h3><p>Remind attendees which workflow, user group, allowed inputs, review gate, and pause trigger are in scope today.</p></div>
+        <div class="slot"><h3>3–10 min · Triage questions safely</h3><p>Sort questions into workflow clarity, prompt/use friction, review/ownership friction, boundary escalation, or incident signal. Keep examples generic.</p></div>
+        <div class="slot"><h3>10–20 min · Work one sanitized example</h3><p>Use a toy input or redacted pattern to show the right prompt, review step, evidence note, and handoff without touching real sensitive material.</p></div>
+        <div class="slot"><h3>20–25 min · Capture improvement signals</h3><p>Name repeated confusion, missing documentation, risky assumptions, support load, or guardrail drift that the workflow owner should review.</p></div>
+        <div class="slot"><h3>25–30 min · Confirm next actions</h3><p>Assign owner actions, escalations, documentation updates, next office-hours date, and any pause/narrowing decision.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Close each session with one support decision</h2>
+      <div class="grid">
+        <div class="decision"><h3 class="ok">Continue support rhythm</h3><p>Questions are routine, boundaries are stable, reviewers are present, and users know the next review date.</p></div>
+        <div class="decision"><h3 class="warn">Update the workflow aid</h3><p>Users are confused in a repeated way. Update the prompt, checklist, route chooser, owner card, or enablement notes before the next session.</p></div>
+        <div class="decision"><h3 class="bad">Narrow or pause use</h3><p>Questions show unclear data boundaries, missing ownership, weak review gates, unsupported users, or incident signals. Narrow the workflow or pause until the owner reviews evidence.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable office-hours note</div>
+      <h2>Paste this into the calendar invite or recap</h2>
+      <div class="callout">
+        <p><strong>Scope:</strong> Office hours support [generic AI workflow] for [included user group] under [current data/review boundary].</p>
+        <p><strong>Bring:</strong> Questions, sanitized workflow symptoms, toy examples, redacted patterns, or generic prompt drafts.</p>
+        <p><strong>Do not bring:</strong> Customer data, employee records, credentials, contracts, production logs, account screenshots, private repositories, regulated data, vendor pricing, or incident transcripts.</p>
+        <p><strong>We will cover:</strong> Workflow clarity, safe input preparation, prompt/use friction, human review, support route, evidence capture, and pause triggers.</p>
+        <p><strong>Escalation path:</strong> Boundary, tool-access, policy, procurement, legal, security, or incident questions go to [owner/forum] instead of being solved live.</p>
+        <p><strong>After the session:</strong> [Owner] will update [artifact], review [evidence category], and decide continue, narrow, retrain, pause, or stop by [date/forum].</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI adoption office hours plan for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

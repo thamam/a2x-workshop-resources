@@ -225,6 +225,14 @@ Source: public-safe static enablement-session plan drafted in this repo from the
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to train with toy, fictional, synthetic, or redacted examples instead of customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy.
 Next action: tune after observing which user-training, support, data-boundary, pause-trigger, and reviewer-readiness questions appear between rollout readiness and operations handoff.
 
+### AI adoption office hours plan
+
+Status: publish-now
+Hub path: `resources/ai-adoption-office-hours-plan.html`
+Source: public-safe static adoption-support plan drafted in this repo from the current workshop follow-up need to reinforce AI workflow habits after enablement with lightweight office hours, sanitized examples, support triage, escalation routing, and improvement signals.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to bring generic workflow descriptions, sanitized symptoms, toy inputs, or redacted screenshots instead of customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy.
+Next action: tune after observing which post-enablement support questions, repeated confusions, guardrail reminders, and escalation needs appear before routine operations handoff or health review.
+
 ### AI pilot operations handoff
 
 Status: publish-now

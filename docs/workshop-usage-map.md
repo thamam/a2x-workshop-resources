@@ -284,6 +284,16 @@ Attendee action: plan a short enablement session with a safe example, workflow b
 
 Status: ready enablement handout.
 
+### Adoption support: AI adoption office hours plan
+
+Resource: `resources/ai-adoption-office-hours-plan.html`.
+
+Use when: attendees have enabled a small pilot group and need a lightweight support rhythm for questions, sanitized examples, guardrail reminders, improvement signals, and escalation routing before routine operations handoff.
+
+Attendee action: run 30-minute office hours with generic workflow descriptions, toy examples, support triage, boundary escalation, and one clear continue/update/pause decision without collecting sensitive examples.
+
+Status: ready adoption-support handout.
+
 ### Pilot operations handoff: AI pilot operations handoff checklist
 
 Resource: `resources/ai-pilot-operations-handoff.html`.
