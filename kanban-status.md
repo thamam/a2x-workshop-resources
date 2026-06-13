@@ -154,6 +154,9 @@
 - [x] **Epic 30: AI prompt-safety practice aids** (100% Completed)
   - [x] Story 30.1: Add AI prompt safety preflight handout
 
+- [x] **Epic 31: AI policy exception and escalation aids** (100% Completed)
+  - [x] Story 31.1: Add AI policy exception request handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -185,6 +188,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 31.1: Add AI policy exception request handout
+  - Evidence: created `resources/ai-policy-exception-request.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 49 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-policy-exception-request.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with policy-exception links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-policy-exception-request-mobile.png` (151602 bytes) and DOM dump persisted `/tmp/a2x-ai-policy-exception-request-dom.html` (8531 bytes), confirming the page title, exception rule, copyable request, and public-safe footer markers on 2026-06-13 04:48 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 30.1: Add AI prompt safety preflight handout
   - Evidence: created `resources/ai-prompt-safety-preflight.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `c6283ce` and pushed; `python3 scripts/check-static-links.py` passed for 48 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP smoke returned HTTP 200 for `/`, `/resources/ai-prompt-safety-preflight.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with prompt-preflight links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-prompt-safety-preflight-mobile.png` (151747 bytes) and DOM dump persisted `/tmp/a2x-ai-prompt-safety-preflight-dom.html` (8280 bytes), confirming the page title, safe prompt rule, copyable preflight note, and public-safe footer markers on 2026-06-13 02:40 IDT; GitHub Security Checks run `27449432335` succeeded; Pages deployment run `27449431778` succeeded; public smoke returned HTTP 200 for the live hub, prompt safety preflight page, and route chooser, with prompt-preflight links/content visible on 2026-06-13 02:43 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -694,6 +700,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-13 04:48 IDT — Finished Story 31.1: created public-safe AI policy exception request handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 49 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-13 04:45 IDT — Started Story 31.1: add a public-safe AI policy exception request handout after verifying clean repo state at HEAD `dd8e265`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-13 02:43 IDT — Cleared Story 30.1 post-commit verification: implementation commit `c6283ce` pushed; GitHub Security Checks run `27449432335` and Pages deployment run `27449431778` succeeded; public smoke returned HTTP 200 for the live hub, AI prompt safety preflight page, and route chooser with prompt-preflight links/content visible.
 
@@ -1457,4 +1467,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, prioritization, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, policy-escalation, prioritization, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

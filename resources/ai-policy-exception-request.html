@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI policy exception request | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for turning a blocked AI workflow into a clear policy exception or escalation request." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:920px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:800px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .worksheet { display:grid; gap:14px; }
+    .field { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .decision { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .decision strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · policy escalation</div>
+    <h1>Ask for the exception without smuggling in the risk.</h1>
+    <p class="lead">Use this worksheet when a useful AI workflow is blocked by data, tool, procurement, legal, security, or operating-policy boundaries. It turns “can we just try it?” into a small, reviewable request with sanitized evidence, a narrow scope, and a stop condition.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-prompt-safety-preflight.html">Preflight the prompt</a>
+      <a class="button" href="ai-pilot-data-boundary-checklist.html">Set data boundaries first</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Exception rule</div>
+        <h2>A good exception request narrows the risk before it asks for permission.</h2>
+        <p>Do not paste secrets, customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, or internal strategy into the request. Describe the workflow pattern, the blocked boundary, the sanitized evidence, the proposed guardrails, and the exact decision needed.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Fill the seven fields</h2>
+      <div class="worksheet">
+        <div class="field"><h3>1. Workflow and owner</h3><p>Name the repeated workflow, accountable owner, reviewer, and team affected using generic role names. Keep people, customers, tickets, and accounts anonymized.</p></div>
+        <div class="field"><h3>2. Current boundary</h3><p>State the rule that blocks action: data type, tool approval, vendor access, retention, procurement, legal review, security control, production system, or public communication boundary.</p></div>
+        <div class="field"><h3>3. Business reason</h3><p>Explain the operational pain or decision need without revenue promises, pricing claims, customer names, private metrics, or confidential strategy.</p></div>
+        <div class="field"><h3>4. Sanitized evidence</h3><p>Bring safe counts, patterns, toy examples, redacted snippets, or workshop exercises that show why the request matters. If proof requires sensitive material, say what safer review environment is needed.</p></div>
+        <div class="field"><h3>5. Requested exception</h3><p>Ask for the smallest permission that would answer the question: one tool, one workflow, one safe sample class, one reviewer group, one time box, and one output type.</p></div>
+        <div class="field"><h3>6. Guardrails and rollback</h3><p>Define allowed inputs, off-limits inputs, human review, retention/cleanup, logging expectations, incident route, rollback owner, and pause trigger.</p></div>
+        <div class="field"><h3>7. Decision deadline</h3><p>Name who can approve, clarify, reject, or redirect the request and when the decision will be revisited.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Choose the request state</h2>
+      <div class="grid">
+        <div class="decision"><h3 class="ok">Ready to route</h3><p>The request is narrow, sanitized, owner-backed, time-boxed, and has a rollback plan. Send it to the named policy, security, legal, procurement, or sponsor reviewer.</p></div>
+        <div class="decision"><h3 class="warn">Clarify first</h3><p>The workflow value is plausible, but the boundary, owner, evidence, or guardrail is vague. Shrink the scope before asking for approval.</p></div>
+        <div class="decision"><h3 class="bad">Stop or redirect</h3><p>The request requires sensitive material in an unapproved tool, production action without rollback, public claims, customer messaging, or unclear authority. Move to an approved environment or a non-AI workaround.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable exception request</div>
+      <h2>Paste this into the approval thread</h2>
+      <div class="callout">
+        <p><strong>Workflow:</strong> [Generic workflow pattern] owned by [role], reviewed by [role].</p>
+        <p><strong>Boundary blocking us:</strong> [Data/tool/vendor/procurement/legal/security/production/public-communication rule].</p>
+        <p><strong>Why this matters:</strong> [Operational pain or decision need, described without sensitive details or claims].</p>
+        <p><strong>Sanitized evidence:</strong> [Safe counts, patterns, toy example, redacted note, or workshop exercise].</p>
+        <p><strong>Requested exception:</strong> Allow [one tool/workflow/sample class/output] for [time box] with [reviewer].</p>
+        <p><strong>Guardrails:</strong> No secrets, customer data, employee records, production logs, account screenshots, private repository contents, contracts, regulated records, pricing claims, or internal strategy. Human review before action. Cleanup by [date]. Pause if [trigger].</p>
+        <p><strong>Decision needed:</strong> approve, clarify, reject, or redirect by [date/person/forum].</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI policy exception request worksheet for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

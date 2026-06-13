@@ -57,6 +57,14 @@ Source: public-safe static prompt preflight worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep secrets, customer data, employee records, production logs, contracts, account screenshots, private repository contents, credentials, regulated records, and internal strategy out of prompts unless the tool, policy, and approval boundary explicitly allow them.
 Next action: tune after observing which prompt-safety mistakes recur during workshop exercises, vendor demos, or first follow-up workflow trials.
 
+### AI policy exception request
+
+Status: publish-now
+Hub path: `resources/ai-policy-exception-request.html`
+Source: public-safe static exception-request worksheet drafted in this repo from the current workshop need to help attendees route blocked AI workflows to policy, security, legal, procurement, sponsor, or operating reviewers without exposing sensitive details.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to describe workflow patterns, boundaries, sanitized evidence, guardrails, review owners, and stop conditions instead of exposing secrets, customer data, employee records, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, pricing claims, or internal strategy.
+Next action: tune after observing which tool, data, procurement, legal, security, sponsor, or operating-policy approvals block otherwise useful AI workflow trials.
+
 ### AI use-case intake brief
 
 Status: publish-now

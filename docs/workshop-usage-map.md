@@ -74,6 +74,16 @@ Attendee action: verify the prompt is narrow, sanitized, bounded, reviewable, an
 
 Status: ready prompt-safety handout.
 
+### Policy escalation: AI policy exception request
+
+Resource: `resources/ai-policy-exception-request.html`.
+
+Use when: a useful AI workflow is blocked by data, tool, procurement, legal, security, sponsor, or operating-policy boundaries and needs a narrow exception or escalation request before proceeding.
+
+Attendee action: describe the workflow pattern, current boundary, sanitized evidence, requested exception, guardrails, reviewer, decision deadline, and stop condition without exposing sensitive details.
+
+Status: ready policy-escalation handout.
+
 ### AI use-case intake: AI use-case intake brief
 
 Resource: `resources/ai-use-case-intake-brief.html`.
