@@ -94,6 +94,16 @@ Attendee action: prepare sanitized examples, score independently, compare disagr
 
 Status: ready reviewer-calibration handout.
 
+### Meeting follow-up: AI meeting-to-actions handout
+
+Resource: `resources/ai-meeting-to-actions.html`.
+
+Use when: attendees need to turn sanitized notes from a workshop, pilot review, vendor demo, steering meeting, or adoption check-in into clear next actions without exposing sensitive details or accepting AI-inferred commitments.
+
+Attendee action: prepare a redacted note packet, prompt for decisions/open questions/actions/risks, review source support and ownership, and keep uncertain items as clarification needs rather than invented tasks.
+
+Status: ready meeting-follow-up handout.
+
 ### Policy escalation: AI policy exception request
 
 Resource: `resources/ai-policy-exception-request.html`.

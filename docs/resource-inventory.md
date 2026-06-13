@@ -73,6 +73,14 @@ Source: public-safe static reviewer-alignment handout drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to use toy, fictional, redacted, or approved examples and to avoid customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy.
 Next action: tune after observing where reviewers disagree about pass thresholds, stop conditions, source evidence, rollback requirements, or escalation ownership after using the output review rubric.
 
+### AI meeting-to-actions handout
+
+Status: publish-now
+Hub path: `resources/ai-meeting-to-actions.html`
+Source: public-safe static meeting follow-up worksheet drafted in this repo from the current workshop need to help attendees turn sanitized meeting notes into reviewed decisions, open questions, action items, risk items, and next-review signals.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees not to paste raw transcripts, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy into shared AI tools.
+Next action: tune after observing which post-workshop, pilot-review, vendor-demo, or steering-meeting follow-up actions become unclear, over-inferred, or missing owners.
+
 ### AI policy exception request
 
 Status: publish-now

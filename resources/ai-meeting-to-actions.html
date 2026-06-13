@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI meeting-to-actions handout | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for turning meeting notes into reviewed AI-assisted action lists without exposing sensitive details." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .sequence { display:grid; gap:14px; counter-reset:item; }
+    .item { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .item::before { content:counter(item); width:30px; height:30px; border-radius:999px; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · meeting follow-up</div>
+    <h1>Turn meeting notes into safe next actions.</h1>
+    <p class="lead">Use this handout after a workshop, pilot review, vendor demo, steering meeting, or adoption check-in. It helps teams use AI to organize notes without letting private details, weak evidence, or vague ownership become an action list.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-output-review-rubric.html">Review AI output</a>
+      <a class="button" href="ai-pilot-evidence-log.html">Log pilot evidence</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Action-capture rule</div>
+        <h2>Summarize patterns first, then assign only reviewed, reversible next actions.</h2>
+        <p>Do not paste raw transcripts, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy into a shared AI tool. Use sanitized bullets, fictional examples, redacted excerpts, or already-approved notes. If the action requires sensitive context, record the owner and approval path instead of the sensitive detail.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Prepare the safe note packet</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Keep</div><h3>Decision facts</h3><p>Include the meeting purpose, non-sensitive decisions, generic workflow names, dates, owners by role, and approved next review point.</p></div>
+        <div class="card"><div class="tag warn">Redact</div><h3>Useful patterns</h3><p>Convert real examples into categories: blocker type, support theme, evidence gap, action owner, or decision state.</p></div>
+        <div class="card"><div class="tag bad">Remove</div><h3>Sensitive specifics</h3><p>Remove names, customer details, raw records, screenshots, credentials, contract terms, private URLs, production identifiers, and unapproved claims.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Prompt AI for a draft action list</h2>
+      <div class="callout">
+        <p><strong>Reusable prompt:</strong> “You are helping convert sanitized meeting notes into a reviewed action list. Use only the notes below. Return: decisions made, open questions, action items with owner role and due signal, risks or approval needs, and suggested next review. If evidence is missing, say ‘needs clarification’ instead of guessing. Do not invent commitments, dates, metrics, pricing, or approvals.”</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Review before sending or tracking</h2>
+      <div class="sequence">
+        <div class="item"><div><h3>Check source support</h3><p>Every action should map to an actual meeting note, decision, or owner statement. Delete actions that appear only because the AI “helpfully” inferred them.</p></div></div>
+        <div class="item"><div><h3>Check ownership</h3><p>Replace person names with accountable roles when sharing outside the immediate team, then confirm the real owner in the approved internal system.</p></div></div>
+        <div class="item"><div><h3>Check reversibility</h3><p>Prefer the smallest next step: draft, review, clarify, score, schedule, or prepare. Escalate before any production, contract, customer, or policy-impacting action.</p></div></div>
+        <div class="item"><div><h3>Check evidence gaps</h3><p>Mark weak items as “needs clarification” rather than turning uncertainty into a task. Use the output review rubric if the draft will be circulated.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>Action capture note</h2>
+      <div class="worksheet">
+        <p><strong>Meeting type:</strong> [workshop follow-up / pilot review / vendor demo / steering / office hours].</p>
+        <p><strong>Sanitized notes used:</strong> [toy / redacted / approved bullets only].</p>
+        <p><strong>Decisions made:</strong> [decision, evidence, owner role, next review].</p>
+        <p><strong>Open questions:</strong> [question, owner role, evidence needed].</p>
+        <p><strong>Action items:</strong> [action, owner role, due signal, safe next step].</p>
+        <p><strong>Approval or risk items:</strong> [boundary, reviewer, stop condition].</p>
+        <p><strong>Do not include:</strong> secrets, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">When to use this</div>
+      <h2>Good moments for the handout</h2>
+      <div class="grid">
+        <div class="card"><h3>After the workshop</h3><p>Turn attendee ideas and commitments into one safe follow-up workflow and one reviewable next Claude Code session.</p></div>
+        <div class="card"><h3>After a pilot review</h3><p>Separate evidence-backed next actions from vague enthusiasm before updating the evidence log, risk register, or decision memo.</p></div>
+        <div class="card"><h3>After a vendor demo</h3><p>Capture proof questions, owner follow-ups, and clarification needs without treating demo claims as verified results.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI meeting-to-actions handout for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>
