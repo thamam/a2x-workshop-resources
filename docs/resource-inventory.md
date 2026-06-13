@@ -241,6 +241,14 @@ Source: public-safe static adoption-proof snapshot drafted in this repo from the
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to report sanitized counts, generic workflow categories, reviewer decisions, support themes, guardrail status, and next decisions instead of customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, raw prompts, or internal strategy.
 Next action: tune after observing which adoption-proof, sponsor-update, steering-packet, support-load, and guardrail-health signals teams need after office hours or recurring health reviews.
 
+### AI tool change impact check
+
+Status: publish-now
+Hub path: `resources/ai-tool-change-impact-check.html`
+Source: public-safe static change-readiness checklist drafted in this repo from the current workshop follow-up need to re-check running AI workflows when a model, vendor feature, policy, access setting, integration, or support signal changes.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record change categories, affected workflow roles, safe test samples, reviewer outcomes, support needs, and next decisions instead of customer data, employee records, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, raw prompts, incident transcripts, or internal strategy.
+Next action: tune after observing which model-change, vendor-change, access-policy, integration, support-load, and boundary-drift questions appear during health reviews, steering cadence, or incident pauses.
+
 ### AI pilot operations handoff
 
 Status: publish-now

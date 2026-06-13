@@ -304,6 +304,16 @@ Attendee action: summarize sanitized use counts, reviewer outcomes, support them
 
 Status: ready adoption-proof handout.
 
+### Tool-change readiness: AI tool change impact check
+
+Resource: `resources/ai-tool-change-impact-check.html`.
+
+Use when: a model, vendor feature, access rule, internal policy, integration, support signal, or incident changes after an AI workflow is already in use and the team needs to decide whether routine use can continue safely.
+
+Attendee action: name the change category, affected workflow, allowed inputs, safe sample to rerun, reviewer signal, user notice/support need, and one continue/update/retrain/narrow/escalate/pause/stop decision without exposing sensitive examples.
+
+Status: ready change-readiness handout.
+
 ### Pilot operations handoff: AI pilot operations handoff checklist
 
 Resource: `resources/ai-pilot-operations-handoff.html`.

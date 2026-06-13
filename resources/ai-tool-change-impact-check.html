@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI tool change impact check | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe checklist for checking how AI tool, model, policy, or vendor changes affect a running workflow before users quietly drift." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .worksheet { display:grid; gap:14px; }
+    .row { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .decision { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .decision strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · change readiness</div>
+    <h1>Check AI tool changes before workflows drift.</h1>
+    <p class="lead">Use this when a model, vendor feature, tool policy, account setting, integration, or internal rule changes after an AI workflow is already in use. The goal is not a heavy audit. It is a fast public-safe check: what changed, who is affected, what proof must be rerun, and whether the workflow should continue, narrow, retrain, pause, or escalate.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+      <a class="button" href="ai-incident-pause-card.html">Pause an incident</a>
+      <a class="button" href="ai-steering-decision-log.html">Log steering decision</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Change-impact rule</div>
+        <h2>Describe the change with sanitized categories, not private evidence.</h2>
+        <p>Do not paste customer data, employee records, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, raw prompts, incident transcripts, or internal strategy. Record the change type, affected workflow category, owner, safe test sample, review result, and decision boundary.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Name what changed</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Model or behavior</div><h3>Output changed</h3><p>The model version, tool behavior, retrieval pattern, formatting, latency, refusal behavior, or confidence level changed enough to rerun review samples.</p></div>
+        <div class="card"><div class="tag warn">Access or policy</div><h3>Boundary changed</h3><p>Allowed inputs, accounts, retention, sharing, vendor terms, internal policy, or reviewer requirements changed before routine use continued.</p></div>
+        <div class="card"><div class="tag warn">Integration</div><h3>Workflow changed</h3><p>A connector, automation step, prompt template, permissions group, or handoff path changed and may affect what users see or approve.</p></div>
+        <div class="card"><div class="tag bad">Incident or drift</div><h3>Trust changed</h3><p>A near miss, support spike, quality drop, user workaround, or unclear ownership signal suggests the workflow needs a pause-and-check moment.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Run the lightweight impact check</h2>
+      <div class="worksheet">
+        <div class="row"><h3>Change summary</h3><p><strong>Change type:</strong> [model/tool/policy/integration/access/support/incident]. <strong>Observed by:</strong> [role/forum]. <strong>Date noticed:</strong> [date]. <strong>Affected workflow:</strong> [generic workflow category].</p></div>
+        <div class="row"><h3>Users and boundary</h3><p><strong>Included users:</strong> [role/team category]. <strong>Allowed inputs:</strong> [sanitized input categories]. <strong>Human review gate:</strong> [reviewer/forum]. <strong>Boundary question:</strong> [what might need approval].</p></div>
+        <div class="row"><h3>Proof to rerun</h3><p><strong>Safe sample:</strong> [toy/redacted/fictional sample]. <strong>Expected output:</strong> [reviewable artifact]. <strong>Reviewer checks:</strong> [quality/safety/compliance/support]. <strong>Pass signal:</strong> [specific visible evidence].</p></div>
+        <div class="row"><h3>Support and communication</h3><p><strong>User notice needed:</strong> [none/update/retrain/pause note]. <strong>Owner:</strong> [role]. <strong>Support route:</strong> [office hours/channel/forum]. <strong>Documentation update:</strong> [prompt/rule/checklist/handoff].</p></div>
+        <div class="row"><h3>Decision</h3><p><strong>Recommended next state:</strong> continue, update, retrain, narrow, pause, stop, or escalate. <strong>Decision owner:</strong> [role/forum]. <strong>Revisit trigger:</strong> [new change, failed review, incident, support load, policy response].</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Choose the safest next state</h2>
+      <div class="grid">
+        <div class="decision"><h3 class="ok">Continue</h3><p>The safe sample still passes review, the data boundary is unchanged, users do not need new training, and the owner can monitor the next cycle.</p></div>
+        <div class="decision"><h3 class="warn">Update or retrain</h3><p>The workflow still works, but prompts, checklist copy, enablement notes, reviewer instructions, or support guidance need a refresh before routine use.</p></div>
+        <div class="decision"><h3 class="warn">Narrow or escalate</h3><p>The change creates an unclear policy, access, vendor, support, or data-boundary question. Keep the workflow smaller while a named reviewer decides.</p></div>
+        <div class="decision"><h3 class="bad">Pause or stop</h3><p>The safe sample fails, boundary drift appears, ownership is unclear, users are confused, or a near miss suggests routine use should halt until reviewed.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable change check</div>
+      <h2>Paste this into a health review, steering note, or owner update</h2>
+      <div class="callout">
+        <p><strong>Change:</strong> [tool/model/policy/integration/access/support/incident category] affecting [generic workflow] for [role/team category].</p>
+        <p><strong>Boundary:</strong> Allowed inputs remain [same/changed/unclear]; human review is [same/changed/unclear]; approval needed from [role/forum/none].</p>
+        <p><strong>Proof rerun:</strong> Safe sample [passed/failed/not run] with reviewer signal [accepted/corrected/rejected/escalated] and visible evidence [artifact/check/date].</p>
+        <p><strong>User impact:</strong> [none/update/retrain/narrow/pause] needed because [sanitized reason]. Owner is [role]; support route is [channel/forum].</p>
+        <p><strong>Decision:</strong> Continue / update / retrain / narrow / escalate / pause / stop until [revisit trigger or next evidence].</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI tool change impact check for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

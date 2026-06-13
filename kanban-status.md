@@ -169,6 +169,9 @@
 - [x] **Epic 35: AI adoption reporting and proof aids** (100% Completed)
   - [x] Story 35.1: Add AI adoption proof snapshot handout
 
+- [x] **Epic 36: AI tool-change readiness aids** (100% Completed)
+  - [x] Story 36.1: Add AI tool change impact check handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -200,6 +203,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 36.1: Add AI tool change impact check handout
+  - Evidence: created `resources/ai-tool-change-impact-check.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 54 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-tool-change-impact-check.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with tool-change links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-tool-change-impact-check-mobile.png` (160572 bytes) and DOM dump persisted `/tmp/a2x-ai-tool-change-impact-check-dom.html` (9728 bytes), confirming the page title, change-impact rule, copyable change check, and public-safe footer markers on 2026-06-13 15:35 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 35.1: Add AI adoption proof snapshot handout
   - Evidence: created `resources/ai-adoption-proof-snapshot.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `f3c29db` and pushed; `python3 scripts/check-static-links.py` passed for 53 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-adoption-proof-snapshot.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with proof-snapshot links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-adoption-proof-snapshot-mobile.png` (157129 bytes) and DOM dump persisted `/tmp/a2x-ai-adoption-proof-snapshot-dom.html` (9562 bytes), confirming the page title, proof-snapshot rule, copyable proof snapshot, and public-safe footer markers on 2026-06-13 13:22 IDT; GitHub Security Checks run `27464114114` succeeded; Pages deployment run `27464113832` succeeded; public smoke returned HTTP 200 for the live hub, AI adoption proof snapshot page, and route chooser with proof-snapshot links/content visible on 2026-06-13 13:26 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -724,6 +730,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-13 15:35 IDT — Finished Story 36.1: created public-safe AI tool change impact check, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 54 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-13 15:29 IDT — Started Story 36.1: add a public-safe AI tool change impact check handout after verifying clean repo state at HEAD `e230b11`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-13 13:26 IDT — Cleared Story 35.1 post-commit verification: implementation commit `f3c29db` pushed; GitHub Security Checks run `27464114114` and Pages deployment run `27464113832` succeeded; public smoke returned HTTP 200 for the live hub, AI adoption proof snapshot page, and route chooser with proof-snapshot links/content visible.
 
@@ -1515,4 +1525,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, policy-escalation, prioritization, enablement, office-hours support, adoption-proof, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, policy-escalation, prioritization, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
