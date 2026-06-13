@@ -177,6 +177,14 @@ Source: public-safe static change-management worksheet drafted in this repo from
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to plan workflow change, affected users, human review gates, support routes, allowed inputs, pause triggers, and review dates without exposing customer data, employee records, vendor contracts, production credentials, account screenshots, internal strategy, raw tickets, regulated records, or private repository links.
 Next action: tune after observing which adoption, support, training, and stakeholder-communication questions appear between decision meetings, rollout readiness, and operations handoff.
 
+### AI adoption FAQ
+
+Status: publish-now
+Hub path: `resources/ai-adoption-faq.html`
+Source: public-safe static adoption-communication FAQ drafted in this repo from the current workshop follow-up need to answer team, manager, reviewer, and sponsor questions about AI workflow purpose, data boundaries, review ownership, support, evidence, expansion, and pause conditions.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to answer with generic workflow names, roles, sanitized evidence categories, named review paths, and stop conditions instead of customer data, employee records, contracts, regulated records, production logs, account screenshots, private repository contents, credentials, vendor pricing, raw prompts, confidential strategy, or incident transcripts.
+Next action: tune after observing which adoption FAQ questions recur after change briefs, stakeholder updates, office hours, or controlled rollout planning.
+
 ### AI sponsor alignment brief
 
 Status: publish-now

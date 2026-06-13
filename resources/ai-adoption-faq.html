@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI adoption FAQ | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe FAQ handout for answering common AI adoption questions with boundaries, evidence, ownership, and reversible next steps." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .faq { display:grid; gap:14px; }
+    .qa { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .qa h3 { color:var(--text); }
+    .script { display:grid; gap:12px; }
+    .line { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · adoption communication</div>
+    <h1>Answer AI adoption questions without overpromising.</h1>
+    <p class="lead">Use this FAQ when a team, manager, reviewer, or sponsor asks practical questions after the workshop: what the AI workflow will do, what it will not touch, who checks it, how people get help, and when the team pauses. The goal is calm adoption communication grounded in evidence, boundaries, and reversible next steps.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-adoption-change-brief.html">Brief adoption change</a>
+      <a class="button" href="ai-adoption-office-hours-plan.html">Plan office hours</a>
+      <a class="button" href="ai-stakeholder-concern-resolver.html">Resolve concerns</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">FAQ safety rule</div>
+        <h2>Answer with roles, boundaries, and evidence — not sensitive examples.</h2>
+        <p>Do not paste customer data, employee records, contracts, regulated records, production logs, account screenshots, private repository contents, credentials, vendor pricing, raw prompts, confidential strategy, or incident transcripts into the FAQ. Use generic workflow names, sanitized evidence categories, named review roles, and explicit stop conditions.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Start with the four adoption anchors</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Purpose</div><h3>What is this for?</h3><p>Name the repeated workflow, the user group, the output being drafted or checked, and the decision it supports. Keep it narrower than the team’s entire job.</p></div>
+        <div class="card"><div class="tag warn">Boundary</div><h3>What is off limits?</h3><p>State which inputs, systems, records, accounts, decisions, and user groups are not in scope yet. If unclear, route to the data boundary or policy exception handout.</p></div>
+        <div class="card"><div class="tag ok">Review</div><h3>Who checks it?</h3><p>Name the human reviewer, owner, support path, evidence signal, and acceptance rule before the workflow influences a real decision.</p></div>
+        <div class="card"><div class="tag bad">Pause</div><h3>When do we stop?</h3><p>Define the pause trigger: failed safe sample, boundary drift, unclear ownership, support spike, policy change, near miss, or stakeholder concern that needs review.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Reusable FAQ answers</h2>
+      <div class="faq">
+        <div class="qa"><h3>Is this replacing people?</h3><p><strong>Safe answer:</strong> This workflow drafts, checks, routes, or summarizes a narrow piece of work. A named person still owns the decision, review, exception handling, and communication. If that ownership is unclear, the workflow is not ready to expand.</p></div>
+        <div class="qa"><h3>What data can go into it?</h3><p><strong>Safe answer:</strong> Only the approved input categories listed in the data boundary. Start with toy, fictional, copied non-sensitive, or redacted examples. Customer records, employee data, regulated records, production logs, credentials, contracts, and private repository contents stay out unless the tool, policy, and reviewer explicitly allow them.</p></div>
+        <div class="qa"><h3>How do we know it works?</h3><p><strong>Safe answer:</strong> We use visible evidence: safe sample runs, reviewer decisions, correction notes, support questions, and whether the output survives the agreed review gate. We do not call it successful because the demo looked impressive.</p></div>
+        <div class="qa"><h3>What if the AI is wrong?</h3><p><strong>Safe answer:</strong> The workflow should make mistakes catchable: narrow scope, human review, reversible output, logged corrections, and a pause trigger. If mistakes can silently affect customers, money, legal obligations, security, or production systems, the workflow needs a stronger gate or should stop.</p></div>
+        <div class="qa"><h3>Who supports users after rollout?</h3><p><strong>Safe answer:</strong> The owner card names the accountable owner, backup, reviewer, support route, cadence, escalation boundary, and pause authority. If users do not know where to ask questions, schedule office hours or keep the rollout smaller.</p></div>
+        <div class="qa"><h3>Can we expand this to more teams?</h3><p><strong>Safe answer:</strong> Expansion needs evidence, stable boundaries, trained users, support capacity, rollback path, and stakeholder messaging. Use rollout readiness before adding teams, data types, integrations, or decision authority.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Copyable adoption FAQ note</h2>
+      <div class="callout script">
+        <div class="line"><p><strong>Workflow:</strong> [generic workflow name] helps [role/team] draft, check, route, or summarize [reviewable output] for [decision/support moment].</p></div>
+        <div class="line"><p><strong>Boundary:</strong> Allowed inputs are [sanitized categories]. Off-limits inputs include [customer data/employee records/production logs/contracts/credentials/private repository contents/regulated records/other].</p></div>
+        <div class="line"><p><strong>Human ownership:</strong> Owner is [role]. Reviewer is [role/forum]. Support route is [office hours/channel/forum]. Pause authority is [role/forum].</p></div>
+        <div class="line"><p><strong>Evidence:</strong> Current proof is [safe sample/reviewer decision/support theme/value signal]. Next evidence needed before expansion is [specific reviewable signal].</p></div>
+        <div class="line"><p><strong>Stop condition:</strong> Pause if [boundary drift/failed review/support spike/policy change/near miss/unclear owner/stakeholder concern] appears before the next review.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">If the FAQ reveals a gap</div>
+      <h2>Route the next artifact</h2>
+      <div class="grid">
+        <div class="card"><div class="tag warn">Unclear inputs</div><h3>Use the data boundary checklist</h3><p>Define allowed inputs, redaction, reviewer access, retention, cleanup, and escalation before real workflow data enters the tool.</p></div>
+        <div class="card"><div class="tag warn">Unclear approval</div><h3>Use the policy exception request</h3><p>Ask for a narrow exception with sanitized evidence, guardrails, reviewer, decision deadline, and stop condition.</p></div>
+        <div class="card"><div class="tag ok">Unclear owner</div><h3>Use the owner card</h3><p>Name the accountable owner, backup, reviewer, support route, review cadence, escalation boundary, and pause condition.</p></div>
+        <div class="card"><div class="tag ok">Unclear support</div><h3>Use office hours</h3><p>Create a lightweight forum for sanitized questions, guardrail reminders, improvement signals, and escalation routing after enablement.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI adoption FAQ for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

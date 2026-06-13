@@ -224,6 +224,16 @@ Attendee action: write a concise adoption note with the workflow change, include
 
 Status: ready change-management handout.
 
+### Adoption communication: AI adoption FAQ
+
+Resource: `resources/ai-adoption-faq.html`.
+
+Use when: attendees need to answer common team, manager, reviewer, or sponsor questions about what an AI workflow does, what data stays out, who reviews it, how users get help, how evidence is checked, and when the team pauses.
+
+Attendee action: prepare public-safe FAQ answers with generic workflow names, allowed input categories, off-limits data, human ownership, support route, evidence signal, and stop condition without sharing sensitive examples.
+
+Status: ready adoption-communication handout.
+
 ### Sponsor alignment: AI sponsor alignment brief
 
 Resource: `resources/ai-sponsor-alignment-brief.html`.
