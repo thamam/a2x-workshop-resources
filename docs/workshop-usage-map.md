@@ -274,6 +274,16 @@ Attendee action: confirm evidence, workflow scope, allowed users, allowed inputs
 
 Status: ready rollout-readiness handout.
 
+### Pilot enablement: AI pilot enablement session plan
+
+Resource: `resources/ai-pilot-enablement-session-plan.html`.
+
+Use when: attendees have a rollout-ready pilot and need to teach users and reviewers how to run the workflow, handle allowed inputs, ask for support, pause safely, and send feedback before routine use starts.
+
+Attendee action: plan a short enablement session with a safe example, workflow boundary, human review gate, support route, pause trigger, and next review date without exposing sensitive examples.
+
+Status: ready enablement handout.
+
 ### Pilot operations handoff: AI pilot operations handoff checklist
 
 Resource: `resources/ai-pilot-operations-handoff.html`.

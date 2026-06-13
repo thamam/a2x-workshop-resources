@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI pilot enablement session plan | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe session plan for teaching AI pilot users and reviewers the workflow, guardrails, support path, pause rule, and feedback loop before rollout." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:205px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .agenda { display:grid; gap:14px; }
+    .slot { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    .decision { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    .decision strong { display:block; margin-bottom:6px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · enablement session</div>
+    <h1>Teach the AI pilot before the workflow teaches itself.</h1>
+    <p class="lead">Use this plan when a pilot is ready for a small user group but people still need a shared picture of the workflow, allowed inputs, human review gate, support path, pause rule, and feedback loop. It keeps enablement practical without exposing private examples or turning rollout into a hype session.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-rollout-readiness.html">Check rollout readiness</a>
+      <a class="button" href="ai-adoption-change-brief.html">Brief adoption change</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Enablement rule</div>
+        <h2>A good session teaches the workflow, the guardrail, and the stop button.</h2>
+        <p>Do not train users with customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy. Use a toy task, redacted pattern, or fictional scenario that proves the workflow shape without importing sensitive material.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Decide whether this session is ready to run</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Workflow</div><h3>One repeatable task</h3><p>The pilot has a named workflow, intended users, allowed inputs, expected output, and a human review gate.</p></div>
+        <div class="card"><div class="tag ok">Evidence</div><h3>Enough proof to teach</h3><p>There is sanitized evidence from a small trial, demo, or dry run that shows what works, what fails, and what remains off-limits.</p></div>
+        <div class="card"><div class="tag ok">Support</div><h3>Owners are named</h3><p>The session can name the workflow owner, reviewer, support route, escalation path, pause authority, and next review date.</p></div>
+        <div class="card"><div class="tag warn">Boundary</div><h3>No hidden sensitive examples</h3><p>The teaching sample can be fictional, redacted, or synthetic. If real sensitive material is required, stop and route to policy or security review first.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Run a 45-minute enablement agenda</h2>
+      <div class="agenda">
+        <div class="slot"><h3>0–5 min · Why this workflow exists</h3><p>Name the repeated pain, the pilot goal, the included users, and the decision boundary. Avoid broad AI capability claims.</p></div>
+        <div class="slot"><h3>5–12 min · Show the safe example</h3><p>Walk through a fictional or sanitized input, expected output, and review step. Say clearly what data is not allowed.</p></div>
+        <div class="slot"><h3>12–22 min · Practice one run</h3><p>Let users try the toy task or watch a facilitator-run demo. Emphasize the prompt boundary, review gate, and evidence to capture.</p></div>
+        <div class="slot"><h3>22–30 min · Explain human ownership</h3><p>Name who approves output, who handles support, who updates rules, and who can pause or narrow the pilot.</p></div>
+        <div class="slot"><h3>30–38 min · Handle questions and failure modes</h3><p>Collect confusion, support friction, risky inputs, and likely misuse as categories rather than private examples.</p></div>
+        <div class="slot"><h3>38–45 min · Confirm next behavior</h3><p>State the allowed next action, feedback channel, evidence format, next review date, and pause trigger before people leave.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Choose the session outcome</h2>
+      <div class="grid">
+        <div class="decision"><h3 class="ok">Launch to tiny group</h3><p>Users understood the workflow, data boundary, review gate, support path, and pause rule. Start only with the named group and next review date.</p></div>
+        <div class="decision"><h3 class="warn">Run one more practice</h3><p>The workflow is promising, but users need a clearer example, better prompt, stronger support path, or narrower allowed-input rule.</p></div>
+        <div class="decision"><h3 class="bad">Pause rollout</h3><p>The session revealed unclear ownership, risky data needs, weak review gates, or unsupported users. Pause and return to readiness, policy exception, or incident-pause material.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable session plan</div>
+      <h2>Paste this into the invite or facilitator notes</h2>
+      <div class="callout">
+        <p><strong>Workflow:</strong> [Generic workflow pattern] for [included user group], owned by [role], reviewed by [role].</p>
+        <p><strong>Safe practice input:</strong> [Fictional, redacted, synthetic, or toy example only].</p>
+        <p><strong>Allowed use:</strong> [What users may try after the session] with [review gate] before any downstream decision.</p>
+        <p><strong>Off-limits:</strong> [Customer data / employee data / contracts / production logs / private repos / credentials / other sensitive categories].</p>
+        <p><strong>Support path:</strong> [Where questions go], [who triages], [when owner reviews evidence].</p>
+        <p><strong>Pause trigger:</strong> Stop new use if [boundary doubt / output drift / missing reviewer / support overload / incident signal] appears.</p>
+        <p><strong>Next review:</strong> [Date/forum] will decide continue, narrow, retrain, pause, or stop based on sanitized evidence.</p>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI pilot enablement session plan for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

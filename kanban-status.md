@@ -160,6 +160,9 @@
 - [x] **Epic 32: AI incident pause and recovery aids** (100% Completed)
   - [x] Story 32.1: Add AI incident pause card handout
 
+- [x] **Epic 33: AI enablement and adoption training aids** (100% Completed)
+  - [x] Story 33.1: Add AI pilot enablement session plan handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -191,6 +194,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 33.1: Add AI pilot enablement session plan handout
+  - Evidence: created `resources/ai-pilot-enablement-session-plan.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 51 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-pilot-enablement-session-plan.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with enablement-session links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-enablement-session-plan-mobile.png` (158710 bytes) and DOM dump persisted `/tmp/a2x-ai-pilot-enablement-session-plan-dom.html` (9212 bytes), confirming the page title, enablement rule, copyable session plan, and public-safe footer markers on 2026-06-13 09:06 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 32.1: Add AI incident pause card handout
   - Evidence: created `resources/ai-incident-pause-card.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `ca5d7ca` and pushed; `python3 scripts/check-static-links.py` passed for 50 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-incident-pause-card.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with incident-pause links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-incident-pause-card-mobile.png` (156315 bytes) and DOM dump persisted `/tmp/a2x-ai-incident-pause-card-dom.html` (9016 bytes), confirming the page title, pause rule, copyable pause note, and public-safe footer markers on 2026-06-13 06:56 IDT; GitHub Security Checks run `27455856810` succeeded; Pages deployment run `27455856544` succeeded; public smoke returned HTTP 200 for the live hub, incident pause card page, and route chooser, with incident-pause links/content visible on 2026-06-13 06:58 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -706,6 +712,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-13 09:06 IDT — Finished Story 33.1: created public-safe AI pilot enablement session plan, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 51 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-13 09:00 IDT — Started Story 33.1: add a public-safe AI pilot enablement session plan handout after verifying clean repo state at HEAD `68e25cc`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-13 06:58 IDT — Cleared Story 32.1 post-commit verification: implementation commit `ca5d7ca` pushed; GitHub Security Checks run `27455856810` and Pages deployment run `27455856544` succeeded; public smoke returned HTTP 200 for the live hub, AI incident pause card page, and route chooser with incident-pause links/content visible.
 
@@ -1481,4 +1491,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, policy-escalation, prioritization, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, policy-escalation, prioritization, enablement, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

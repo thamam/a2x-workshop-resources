@@ -217,6 +217,14 @@ Source: public-safe static rollout-readiness checklist drafted in this repo from
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly keeps rollout evidence sanitized and frames rollout as a narrow, reversible expansion with allowed inputs, review gates, and a rollback plan.
 Next action: tune after observing what teams need before they ask managers or sponsors to expand a pilot beyond the first test group.
 
+### AI pilot enablement session plan
+
+Status: publish-now
+Hub path: `resources/ai-pilot-enablement-session-plan.html`
+Source: public-safe static enablement-session plan drafted in this repo from the current workshop follow-up need to teach pilot users and reviewers the workflow, allowed inputs, review gate, support path, pause rule, and feedback loop before controlled rollout becomes routine use.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to train with toy, fictional, synthetic, or redacted examples instead of customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy.
+Next action: tune after observing which user-training, support, data-boundary, pause-trigger, and reviewer-readiness questions appear between rollout readiness and operations handoff.
+
 ### AI pilot operations handoff
 
 Status: publish-now
