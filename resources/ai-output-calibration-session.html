@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI output calibration session | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe facilitation guide for calibrating AI-output reviewers around sanitized examples, scoring thresholds, and next-step decisions." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .timeline { display:grid; gap:14px; counter-reset: round; }
+    .round { counter-increment: round; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .round::before { content: counter(round); width:30px; height:30px; border-radius:999px; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .note { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · reviewer calibration</div>
+    <h1>Calibrate reviewers before AI quality becomes a debate.</h1>
+    <p class="lead">Use this short session when several people will review AI-generated drafts, summaries, recommendations, code changes, or workflow artifacts. The goal is not to grade the model in the abstract; it is to align humans on what “good enough for the next safe step” means.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-output-review-rubric.html">Review rubric</a>
+      <a class="button" href="ai-pilot-evidence-log.html">Log pilot evidence</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Calibration rule</div>
+        <h2>Use sanitized examples, score independently first, then align on evidence and thresholds.</h2>
+        <p>Do not paste customer data, employee records, production logs, account screenshots, private repositories, credentials, regulated records, vendor contracts, pricing claims, or internal strategy into calibration packets. Use toy, fictional, redacted, or already-approved examples. If the team cannot safely share an example, calibrate on the pattern instead.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Prepare three sanitized examples</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Clear pass</div><h3>A strong output</h3><p>Pick an AI output that answers the task, cites or reflects the given source material, names a bounded next step, and stays inside the approved data and action boundary.</p></div>
+        <div class="card"><div class="tag warn">Borderline</div><h3>A useful but risky output</h3><p>Pick an output that is mostly helpful but has one weakness: vague owner, missing source, overconfident claim, weak rollback path, or unclear review threshold.</p></div>
+        <div class="card"><div class="tag bad">Stop</div><h3>A polished failure</h3><p>Pick an output that sounds convincing but invents facts, exceeds approval, asks for sensitive data, creates an irreversible action, or makes a claim the team cannot support.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Run the 35-minute calibration</h2>
+      <div class="timeline">
+        <div class="round"><div><h3>Frame the decision</h3><p>Agree on the workflow, audience, risk level, and the only allowed decisions: approve for next safe step, revise before use, or stop and escalate.</p></div></div>
+        <div class="round"><div><h3>Score independently</h3><p>Each reviewer scores the same example against task fit, source support, safety boundary, operational clarity, tone/promise control, and reversibility before discussion.</p></div></div>
+        <div class="round"><div><h3>Compare disagreements</h3><p>Discuss only the review points where scores diverge. Ask: what evidence would make this pass, what boundary makes it stop, and what revision would make it usable?</p></div></div>
+        <div class="round"><div><h3>Write one shared threshold</h3><p>Convert the discussion into a short rule the team can reuse, such as “no external customer message without source trace and owner approval” or “draft-only until rollback owner is named.”</p></div></div>
+        <div class="round"><div><h3>Repeat once</h3><p>Run the same process on a second example. If disagreement persists, narrow the workflow or route the review rule to the accountable owner before scaling use.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Capture the reusable calibration note</h2>
+      <div class="callout">
+        <p><strong>Workflow being calibrated:</strong> [generic workflow name].</p>
+        <p><strong>Examples used:</strong> [toy / fictional / redacted / approved sample only].</p>
+        <p><strong>Review decision labels:</strong> [approve next safe step / revise before use / stop and escalate].</p>
+        <p><strong>Shared pass threshold:</strong> [evidence, owner, review gate, rollback path, or source requirement].</p>
+        <p><strong>Known disagreement:</strong> [where reviewers still differ and who decides].</p>
+        <p><strong>Next evidence to log:</strong> [pilot run count, reviewer decisions, support questions, quality misses, or policy escalations].</p>
+        <p><strong>Do not include:</strong> secrets, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">When to use this</div>
+      <h2>Good triggers for calibration</h2>
+      <div class="grid">
+        <div class="note"><h3>Before rollout</h3><p>Use it before more people rely on AI output, especially when one reviewer has been quietly making judgment calls alone.</p></div>
+        <div class="note"><h3>After a quality miss</h3><p>Use it when a polished output slipped through review, but keep the example sanitized and focus on the decision rule that failed.</p></div>
+        <div class="note"><h3>Before a vendor or internal demo becomes a pilot</h3><p>Use it to decide what evidence the team needs before a demo output is treated as real workflow proof.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI output calibration session guide for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

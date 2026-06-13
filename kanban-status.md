@@ -178,6 +178,9 @@
 - [x] **Epic 38: AI output review and quality aids** (100% Completed)
   - [x] Story 38.1: Add AI output review rubric handout
 
+- [x] **Epic 39: AI output calibration and reviewer alignment aids** (100% Completed)
+  - [x] Story 39.1: Add AI output calibration session handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -209,6 +212,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 39.1: Add AI output calibration session handout
+  - Evidence: created `resources/ai-output-calibration-session.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 57 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-output-calibration-session.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with calibration links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-output-calibration-mobile.png` (155736 bytes) and DOM dump persisted `/tmp/a2x-ai-output-calibration-dom.html` (9122 bytes), confirming the page title, calibration rule, shared pass threshold, and public-safe footer markers on 2026-06-13 22:08 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 38.1: Add AI output review rubric handout
   - Evidence: created `resources/ai-output-review-rubric.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; implementation committed as `3b0f2bb` and pushed; `python3 scripts/check-static-links.py` passed for 56 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-output-review-rubric.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with output-review links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-output-review-rubric-mobile.png` (162143 bytes) and DOM dump persisted `/tmp/a2x-ai-output-review-rubric-dom.html` (8619 bytes), confirming the page title, review rule, copyable review note, and public-safe footer markers on 2026-06-13 19:56 IDT; GitHub Security Checks run `27473122764` succeeded; Pages deployment run `27473122391` succeeded; public smoke returned HTTP 200 for the live hub, AI output review rubric page, and route chooser with output-review links/content visible on 2026-06-13 19:58 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -742,6 +748,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-13 22:08 IDT — Finished Story 39.1: created public-safe AI output calibration session handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 57 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-13 22:01 IDT — Started Story 39.1: add a public-safe AI output calibration session handout after verifying clean repo state at HEAD `284f85e`; scope is a static reviewer-alignment page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-13 19:58 IDT — Cleared Story 38.1 post-commit verification: implementation commit `3b0f2bb` pushed; GitHub Security Checks run `27473122764` and Pages deployment run `27473122391` succeeded; public smoke returned HTTP 200 for the live hub, AI output review rubric page, and route chooser with output-review links/content visible.
 
@@ -1551,4 +1561,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, output-review, policy-escalation, prioritization, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, output-review, reviewer-calibration, policy-escalation, prioritization, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

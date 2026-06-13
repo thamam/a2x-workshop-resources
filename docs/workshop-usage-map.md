@@ -84,6 +84,16 @@ Attendee action: check task fit, source support, safety boundaries, operational 
 
 Status: ready output-review handout.
 
+### Reviewer calibration: AI output calibration session
+
+Resource: `resources/ai-output-calibration-session.html`.
+
+Use when: several reviewers need to align on what counts as pass, revise, or stop for AI-generated drafts, recommendations, summaries, code changes, vendor-demo outputs, or pilot artifacts before use spreads.
+
+Attendee action: prepare sanitized examples, score independently, compare disagreements, write one shared pass threshold, record unresolved ownership questions, and log follow-up evidence without exposing sensitive material.
+
+Status: ready reviewer-calibration handout.
+
 ### Policy escalation: AI policy exception request
 
 Resource: `resources/ai-policy-exception-request.html`.

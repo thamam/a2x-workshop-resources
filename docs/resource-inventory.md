@@ -65,6 +65,14 @@ Source: public-safe static reviewer rubric drafted in this repo from the current
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to review task fit, source support, safety boundaries, operational clarity, tone/promise control, and reversibility without exposing secrets, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy.
 Next action: tune after observing which AI-output review misses recur during workshop exercises, vendor demos, pilot evidence review, or rollout decisions.
 
+### AI output calibration session
+
+Status: publish-now
+Hub path: `resources/ai-output-calibration-session.html`
+Source: public-safe static reviewer-alignment handout drafted in this repo from the current workshop need to help teams calibrate human review thresholds before AI-generated output is used across a pilot, demo, rollout, or operating workflow.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to use toy, fictional, redacted, or approved examples and to avoid customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy.
+Next action: tune after observing where reviewers disagree about pass thresholds, stop conditions, source evidence, rollback requirements, or escalation ownership after using the output review rubric.
+
 ### AI policy exception request
 
 Status: publish-now
