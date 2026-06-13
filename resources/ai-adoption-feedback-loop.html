@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI adoption feedback loop handout | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for turning sanitized AI adoption feedback into reviewed improvement decisions without collecting sensitive details." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .sequence { display:grid; gap:14px; counter-reset:item; }
+    .item { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .item::before { content:counter(item); width:30px; height:30px; border-radius:999px; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · adoption improvement</div>
+    <h1>Turn adoption feedback into safe improvement decisions.</h1>
+    <p class="lead">Use this handout after enablement, office hours, health reviews, support check-ins, or steering updates. It helps teams collect sanitized feedback patterns, separate fixable friction from policy boundaries, and choose one reviewed improvement without exposing private examples.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-adoption-office-hours-plan.html">Plan office hours</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Feedback-loop rule</div>
+        <h2>Collect patterns, not private stories; improve one reversible thing at a time.</h2>
+        <p>Do not collect raw chats, customer records, employee details, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy. Capture friction categories, support themes, review signals, guardrail questions, and improvement candidates. If a fix needs sensitive evidence or policy approval, route it to the approved owner instead of pasting details into the worksheet.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Gather safe feedback signals</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Use</div><h3>Sanitized patterns</h3><p>Record themes such as confusing step, missing reviewer, slow handoff, unclear allowed input, weak output, support repeat, or training gap.</p></div>
+        <div class="card"><div class="tag warn">Summarize</div><h3>Operational friction</h3><p>Group repeated issues by workflow stage, role, guardrail, support path, or evidence gap instead of preserving private examples.</p></div>
+        <div class="card"><div class="tag bad">Exclude</div><h3>Sensitive artifacts</h3><p>Leave out raw prompts, transcripts, tickets, contracts, screenshots, customer names, employee records, private URLs, credentials, and regulated data.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Classify the feedback before acting</h2>
+      <div class="sequence">
+        <div class="item"><div><h3>Training or explanation issue</h3><p>Users understand the boundary but need a clearer example, shorter instruction, reminder, FAQ answer, or office-hours walkthrough.</p></div></div>
+        <div class="item"><div><h3>Workflow design issue</h3><p>The handoff, reviewer role, allowed input, output format, or evidence gate is causing friction and can be changed without expanding scope.</p></div></div>
+        <div class="item"><div><h3>Tool or model behavior issue</h3><p>The output is inconsistent, a vendor/model changed, or a workflow needs rerun with a safe sample before continuing.</p></div></div>
+        <div class="item"><div><h3>Boundary or approval issue</h3><p>The request needs different data, policy, procurement, legal, security, or sponsor approval. Do not solve it with copy edits.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Choose one reviewed improvement</h2>
+      <div class="callout">
+        <p><strong>Decision prompt:</strong> “Using only the sanitized feedback patterns below, propose one small improvement to the AI workflow. Return: feedback theme, likely cause, proposed change, owner role, review evidence, rollback or pause condition, and what remains unresolved. Do not invent private examples, metrics, commitments, pricing, approvals, or user claims.”</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>Feedback loop note</h2>
+      <div class="worksheet">
+        <p><strong>Workflow:</strong> [generic workflow name and current adoption state].</p>
+        <p><strong>Feedback source:</strong> [office hours / support check-in / health review / steering / enablement].</p>
+        <p><strong>Sanitized themes:</strong> [friction category, count or frequency if safe, affected role].</p>
+        <p><strong>Classification:</strong> [training / workflow design / tool behavior / boundary approval].</p>
+        <p><strong>One proposed improvement:</strong> [small reversible change, owner role, review evidence].</p>
+        <p><strong>Stop or escalation trigger:</strong> [sensitive data needed / repeated failure / unclear owner / policy boundary].</p>
+        <p><strong>Do not include:</strong> raw chats, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, raw prompts, or internal strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">When to use this</div>
+      <h2>Good moments for the handout</h2>
+      <div class="grid">
+        <div class="card"><h3>After office hours</h3><p>Turn repeated support questions into one training, FAQ, or workflow tweak without storing private attendee examples.</p></div>
+        <div class="card"><h3>After a health review</h3><p>Convert usage, quality, support, and guardrail themes into a small improvement or a decision to pause and investigate.</p></div>
+        <div class="card"><h3>Before steering updates</h3><p>Show that adoption feedback is being reviewed and acted on without overclaiming impact or exposing sensitive detail.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI adoption feedback loop handout for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

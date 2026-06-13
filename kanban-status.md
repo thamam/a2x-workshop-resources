@@ -184,6 +184,9 @@
 - [x] **Epic 40: AI meeting follow-up and action-capture aids** (100% Completed)
   - [x] Story 40.1: Add AI meeting-to-actions handout
 
+- [x] **Epic 41: AI adoption feedback and improvement aids** (100% Completed)
+  - [x] Story 41.1: Add AI adoption feedback loop handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -215,6 +218,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 41.1: Add AI adoption feedback loop handout
+  - Evidence: created `resources/ai-adoption-feedback-loop.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 59 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-adoption-feedback-loop.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with feedback-loop links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-adoption-feedback-loop-mobile.png` (164124 bytes) and DOM dump persisted `/tmp/a2x-ai-adoption-feedback-loop-dom.html` (9345 bytes), confirming the page title, feedback-loop rule, copyable worksheet, and public-safe footer markers on 2026-06-14 02:21 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 40.1: Add AI meeting-to-actions handout
   - Evidence: created `resources/ai-meeting-to-actions.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 58 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-meeting-to-actions.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with meeting-to-actions links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-meeting-to-actions-mobile.png` (152018 bytes) and DOM dump persisted `/tmp/a2x-ai-meeting-to-actions-dom.html` (9206 bytes), confirming the page title, action-capture rule, copyable worksheet, and public-safe footer markers on 2026-06-14 00:15 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -754,6 +760,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-14 02:21 IDT — Finished Story 41.1: created public-safe AI adoption feedback loop handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 59 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-14 02:18 IDT — Started Story 41.1: add a public-safe AI adoption feedback loop handout after verifying clean repo state at HEAD `44bc83a`; scope is a static feedback/improvement worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-14 00:15 IDT — Finished Story 40.1: created public-safe AI meeting-to-actions handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 58 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 

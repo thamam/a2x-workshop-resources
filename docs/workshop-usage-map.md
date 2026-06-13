@@ -334,6 +334,16 @@ Attendee action: run 30-minute office hours with generic workflow descriptions, 
 
 Status: ready adoption-support handout.
 
+### Adoption improvement: AI adoption feedback loop
+
+Resource: `resources/ai-adoption-feedback-loop.html`.
+
+Use when: attendees have gathered feedback from office hours, support check-ins, health reviews, enablement, or steering updates and need to decide what to improve without collecting private examples or treating every comment as a roadmap item.
+
+Attendee action: collect sanitized feedback themes, classify them as training, workflow design, tool behavior, or boundary/approval issues, then choose one small reviewed improvement with owner, evidence, rollback, and escalation triggers.
+
+Status: ready adoption-improvement handout.
+
 ### Adoption proof: AI adoption proof snapshot
 
 Resource: `resources/ai-adoption-proof-snapshot.html`.

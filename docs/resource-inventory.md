@@ -265,6 +265,14 @@ Source: public-safe static adoption-support plan drafted in this repo from the c
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to bring generic workflow descriptions, sanitized symptoms, toy inputs, or redacted screenshots instead of customer records, employee data, contracts, regulated data, production logs, account screenshots, private repository contents, credentials, vendor pricing, incident transcripts, or internal strategy.
 Next action: tune after observing which post-enablement support questions, repeated confusions, guardrail reminders, and escalation needs appear before routine operations handoff or health review.
 
+### AI adoption feedback loop
+
+Status: publish-now
+Hub path: `resources/ai-adoption-feedback-loop.html`
+Source: public-safe static adoption-improvement worksheet drafted in this repo from the current workshop follow-up need to convert office-hours, support, health-review, enablement, and steering feedback into one reviewed improvement decision.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to capture sanitized themes and categories instead of raw chats, customer records, employee details, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, raw prompts, or internal strategy.
+Next action: tune after observing which adoption feedback themes recur and which improvement decisions need clearer training, workflow design, tool-behavior, or approval-boundary routing.
+
 ### AI adoption proof snapshot
 
 Status: publish-now
