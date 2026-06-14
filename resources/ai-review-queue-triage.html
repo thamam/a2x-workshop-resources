@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI review queue triage | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for triaging AI-generated work so reviewer queues stay bounded, safe, and decision-oriented." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .sequence { display:grid; gap:14px; counter-reset:item; }
+    .item { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .item::before { content:counter(item); width:30px; height:30px; border-radius:999px; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · review throughput</div>
+    <h1>Triage the AI review queue before reviewers become the bottleneck.</h1>
+    <p class="lead">Use this worksheet when AI-assisted drafts, summaries, code changes, or workflow outputs start arriving faster than humans can review them. It keeps review queues bounded by sorting work into approve, revise, escalate, park, or pause lanes with explicit owners and stop rules.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-output-review-rubric.html">Review AI output</a>
+      <a class="button" href="ai-output-calibration-session.html">Calibrate reviewers</a>
+      <a class="button" href="ai-workflow-acceptance-criteria.html">Set acceptance criteria</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Queue rule</div>
+        <h2>If review capacity is not explicit, AI throughput turns into hidden human overload.</h2>
+        <p>Keep this page public-safe. Use toy, fictional, synthetic, redacted, or approved examples only. Do not paste customer data, employee records, production logs, credentials, account screenshots, regulated data, vendor contracts, pricing, raw prompts, incident transcripts, private repository links, or confidential strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Name what is waiting for human judgment</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Type</div><h3>What kind of output is it?</h3><p>Separate drafts, summaries, code changes, policy requests, vendor notes, evidence logs, and operational alerts. Different output types need different reviewers.</p></div>
+        <div class="card"><div class="tag warn">Risk</div><h3>What happens if it is wrong?</h3><p>Sort by impact: internal note, reversible draft, user-facing message, workflow decision, production-adjacent action, or policy/security boundary.</p></div>
+        <div class="card"><div class="tag bad">Clock</div><h3>When does it expire?</h3><p>Name the review deadline, stale date, escalation date, and pause threshold before the queue quietly becomes obsolete work.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Route every item to one decision lane</h2>
+      <div class="sequence">
+        <div class="item"><div><h3>Approve now</h3><p>The output matches acceptance criteria, uses safe inputs, has evidence, and needs only the next reversible action.</p></div></div>
+        <div class="item"><div><h3>Revise with feedback</h3><p>The output is useful but missing facts, tone, boundary language, source support, or reviewer-specific changes.</p></div></div>
+        <div class="item"><div><h3>Escalate before use</h3><p>The output touches policy, security, legal, procurement, data boundaries, pricing promises, production workflows, or unclear authority.</p></div></div>
+        <div class="item"><div><h3>Park or pause</h3><p>The item is stale, duplicate, unsupported, missing owner capacity, or waiting on a dependency that should not block higher-value review work.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Use AI to draft a safe triage pass</h2>
+      <div class="callout">
+        <p><strong>Review-queue prompt:</strong> “Using only the public-safe queue summary below, triage these AI-generated work items. For each item, assign one lane: approve, revise, escalate, park, or pause. Include reviewer role, reason, missing evidence, next reversible action, deadline, and pause trigger. Use generic roles and sanitized examples only. Do not invent customer names, employee data, production logs, credentials, private repository links, vendor contracts, pricing, incident details, or internal strategy.”</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI review queue triage sheet</h2>
+      <div class="worksheet">
+        <p><strong>Queue owner:</strong> [role accountable for the review queue, backup, review rhythm].</p>
+        <p><strong>Queue boundary:</strong> [output types included, output types out of scope, sensitive material excluded].</p>
+        <p><strong>Item:</strong> [generic output name, source workflow, safe sample or evidence link].</p>
+        <p><strong>Risk tier:</strong> [internal note / reversible draft / user-facing / workflow decision / production-adjacent / approval boundary].</p>
+        <p><strong>Decision lane:</strong> [approve now / revise with feedback / escalate before use / park / pause].</p>
+        <p><strong>Reviewer role:</strong> [subject reviewer, safety reviewer, owner, backup, escalation path].</p>
+        <p><strong>Missing evidence:</strong> [facts, source support, acceptance criterion, boundary check, owner decision].</p>
+        <p><strong>Next reversible action:</strong> [what happens before this item moves, ships, escalates, or expires].</p>
+        <p><strong>Deadline and pause trigger:</strong> [review due date, stale date, queue-size limit, pause/escalation condition].</p>
+        <p><strong>Do not include:</strong> customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">When to use this</div>
+      <h2>Good moments for review triage</h2>
+      <div class="grid">
+        <div class="card"><h3>After reviewer calibration</h3><p>Use it once reviewers agree on pass thresholds but still need a queue discipline for real work.</p></div>
+        <div class="card"><h3>During a pilot health review</h3><p>Use it when reviewer backlog, stale output, or support friction shows the workflow is producing more than humans can safely absorb.</p></div>
+        <div class="card"><h3>Before expanding a workflow</h3><p>Use it before rollout so throughput, owner capacity, escalation, and pause rules are visible instead of assumed.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI review queue triage worksheet for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, authorize production rollout, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

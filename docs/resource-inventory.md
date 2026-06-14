@@ -73,6 +73,14 @@ Source: public-safe static reviewer-alignment handout drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to use toy, fictional, redacted, or approved examples and to avoid customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy.
 Next action: tune after observing where reviewers disagree about pass thresholds, stop conditions, source evidence, rollback requirements, or escalation ownership after using the output review rubric.
 
+### AI review queue triage
+
+Status: publish-now
+Hub path: `resources/ai-review-queue-triage.html`
+Source: public-safe static review-throughput worksheet drafted in this repo from the current workshop need to keep AI-generated work reviewable when drafts, summaries, code changes, or workflow outputs arrive faster than humans can judge them.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to triage output types, risk tiers, reviewer roles, missing evidence, deadlines, and pause triggers without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
+Next action: tune after observing where review queues back up between output review, reviewer calibration, acceptance criteria, pilot health reviews, and rollout readiness.
+
 ### AI meeting-to-actions handout
 
 Status: publish-now

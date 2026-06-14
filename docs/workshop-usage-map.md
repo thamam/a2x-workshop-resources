@@ -94,6 +94,16 @@ Attendee action: prepare sanitized examples, score independently, compare disagr
 
 Status: ready reviewer-calibration handout.
 
+### Review throughput: AI review queue triage
+
+Resource: `resources/ai-review-queue-triage.html`.
+
+Use when: AI-generated drafts, summaries, code changes, or workflow outputs are waiting for human judgment and the team needs to prevent reviewer overload, stale work, or unowned escalations.
+
+Attendee action: sort each item by output type, risk tier, reviewer role, missing evidence, deadline, and decision lane: approve, revise, escalate, park, or pause, using only generic or public-safe details.
+
+Status: ready review-throughput handout.
+
 ### Meeting follow-up: AI meeting-to-actions handout
 
 Resource: `resources/ai-meeting-to-actions.html`.
