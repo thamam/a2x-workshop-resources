@@ -190,6 +190,9 @@
 - [x] **Epic 42: AI pilot scoping and charter aids** (100% Completed)
   - [x] Story 42.1: Add AI pilot experiment charter handout
 
+- [x] **Epic 43: AI pilot assumption and dependency aids** (100% Completed)
+  - [x] Story 43.1: Add AI pilot assumption log handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -221,6 +224,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 43.1: Add AI pilot assumption log handout
+  - Evidence: created `resources/ai-pilot-assumption-log.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-pilot-experiment-charter.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 61 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-pilot-assumption-log.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with assumption-log links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-assumption-log-mobile.png` (155934 bytes) and DOM dump persisted `/tmp/a2x-ai-pilot-assumption-log-dom.html` (9693 bytes), confirming the page title, assumption-log rule, copyable worksheet, and public-safe footer markers on 2026-06-14 06:37 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
 
 - [x] Story 42.1: Add AI pilot experiment charter handout
   - Evidence: created `resources/ai-pilot-experiment-charter.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 60 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-pilot-experiment-charter.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with experiment-charter links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-experiment-charter-mobile.png` (157528 bytes) and DOM dump persisted `/tmp/a2x-ai-pilot-experiment-charter-dom.html` (9789 bytes), confirming the page title, experiment-charter rule, copyable worksheet, and public-safe footer markers on 2026-06-14 04:29 IDT; implementation commit `33950aa` was pushed; GitHub Security Checks run `27484767069` succeeded; Pages deployment run `27484766744` succeeded; public smoke returned HTTP 200 for the live hub, AI pilot experiment charter page, and route chooser with experiment-charter links/content visible on 2026-06-14 04:31 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
@@ -766,6 +772,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-14 06:37 IDT — Finished Story 43.1: created public-safe AI pilot assumption log handout, wired it into the hub, route chooser, experiment-charter page, resource inventory, and workshop usage map, and verified static links for 61 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
+
+- 2026-06-14 06:34 IDT — Started Story 43.1: add a public-safe AI pilot assumption log handout after verifying clean repo state at HEAD `754ee95`; scope is a static assumption/dependency worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure.
 
 - 2026-06-14 04:31 IDT — Cleared Story 42.1 post-commit verification: implementation commit `33950aa` pushed; GitHub Security Checks run `27484767069` and Pages deployment run `27484766744` succeeded; public smoke returned HTTP 200 for the live hub, AI pilot experiment charter page, and route chooser with experiment-charter links/content visible.
 
@@ -1597,4 +1607,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, output-review, reviewer-calibration, meeting-follow-up, policy-escalation, prioritization, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, output-review, reviewer-calibration, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

@@ -184,6 +184,16 @@ Attendee action: write the workflow slice, hypothesis, allowed input, human revi
 
 Status: ready experiment-charter handout.
 
+### Pilot assumption clarity: AI pilot assumption log
+
+Resource: `resources/ai-pilot-assumption-log.html`.
+
+Use when: attendees have chartered or started a small AI pilot and need to name the assumptions, dependencies, evidence checks, owner roles, revisit triggers, and fail responses before hidden beliefs become operating rules.
+
+Attendee action: write each assumption with its dependency, observable evidence check, owner role, revisit trigger/date, and if-false decision response using only generic or public-safe pilot details.
+
+Status: ready assumption-clarity handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.

@@ -145,6 +145,14 @@ Source: public-safe static experiment-charter worksheet drafted in this repo fro
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to test only with toy, fictional, redacted, or approved inputs; to define human review gates, success evidence, and stop conditions; and to keep customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contracts, pricing claims, private repository links, and internal strategy out of the charter.
 Next action: tune after observing which teams struggle to narrow a pilot into one testable workflow slice before collecting evidence or requesting sponsor attention.
 
+### AI pilot assumption log
+
+Status: publish-now
+Hub path: `resources/ai-pilot-assumption-log.html`
+Source: public-safe static assumption/dependency worksheet drafted in this repo from the current workshop follow-up need to make hidden pilot assumptions explicit before evidence review, ownership assignment, health checks, or rollout-readiness conversations.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to log assumptions, dependencies, evidence checks, owner roles, revisit triggers, and fail responses without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
+Next action: tune after observing which workflow-fit, support, ownership, policy, or tool-access assumptions surprise teams between pilot chartering and health review.
+
 ### AI pilot evidence log
 
 Status: publish-now
