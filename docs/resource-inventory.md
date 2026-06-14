@@ -153,6 +153,14 @@ Source: public-safe static assumption/dependency worksheet drafted in this repo 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to log assumptions, dependencies, evidence checks, owner roles, revisit triggers, and fail responses without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
 Next action: tune after observing which workflow-fit, support, ownership, policy, or tool-access assumptions surprise teams between pilot chartering and health review.
 
+### AI workflow acceptance criteria
+
+Status: publish-now
+Hub path: `resources/ai-workflow-acceptance-criteria.html`
+Source: public-safe static acceptance/evidence worksheet drafted in this repo from the current workshop follow-up need to define pass, revise, escalate, and pause/stop criteria before judging AI-assisted workflow outputs or scoring pilot evidence.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to define observable criteria, reviewer evidence, and stop rules without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
+Next action: tune after observing which acceptance thresholds reviewers struggle to apply between pilot chartering, output review, evidence logging, and rollout readiness.
+
 ### AI pilot evidence log
 
 Status: publish-now

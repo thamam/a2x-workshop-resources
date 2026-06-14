@@ -193,6 +193,9 @@
 - [x] **Epic 43: AI pilot assumption and dependency aids** (100% Completed)
   - [x] Story 43.1: Add AI pilot assumption log handout
 
+- [x] **Epic 44: AI workflow acceptance and evidence aids** (100% Completed)
+  - [x] Story 44.1: Add AI workflow acceptance criteria handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -224,6 +227,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 44.1: Add AI workflow acceptance criteria handout
+  - Evidence: created `resources/ai-workflow-acceptance-criteria.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 62 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-workflow-acceptance-criteria.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with acceptance-criteria links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workflow-acceptance-criteria-mobile.png` (154830 bytes) and DOM dump persisted `/tmp/a2x-ai-workflow-acceptance-criteria-dom.html` (9632 bytes), confirming the page title, acceptance rule, copyable worksheet, and public-safe footer markers on 2026-06-14 08:44 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
 
 - [x] Story 43.1: Add AI pilot assumption log handout
   - Evidence: created `resources/ai-pilot-assumption-log.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-pilot-experiment-charter.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 61 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-pilot-assumption-log.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with assumption-log links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-pilot-assumption-log-mobile.png` (155934 bytes) and DOM dump persisted `/tmp/a2x-ai-pilot-assumption-log-dom.html` (9693 bytes), confirming the page title, assumption-log rule, copyable worksheet, and public-safe footer markers on 2026-06-14 06:37 IDT; implementation commit `5077fdd` was pushed; GitHub Security Checks run `27487305284` succeeded; Pages deployment run `27487305046` succeeded; public smoke returned HTTP 200 for the live hub, AI pilot assumption log page, and route chooser with assumption-log links/content visible on 2026-06-14 06:38 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
@@ -772,6 +778,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-14 08:44 IDT — Finished Story 44.1: created public-safe AI workflow acceptance criteria handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 62 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
+
+- 2026-06-14 08:41 IDT — Started Story 44.1: add a public-safe AI workflow acceptance criteria handout after verifying clean repo state at HEAD `c131822`; scope is a static acceptance/evidence worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure.
 
 - 2026-06-14 06:38 IDT — Cleared Story 43.1 post-commit verification: implementation commit `5077fdd` pushed; GitHub Security Checks run `27487305284` and Pages deployment run `27487305046` succeeded; public smoke returned HTTP 200 for the live hub, AI pilot assumption log page, and route chooser with assumption-log links/content visible.
 

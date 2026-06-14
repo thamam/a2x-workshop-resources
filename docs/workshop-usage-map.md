@@ -194,6 +194,16 @@ Attendee action: write each assumption with its dependency, observable evidence 
 
 Status: ready assumption-clarity handout.
 
+### Workflow acceptance: AI workflow acceptance criteria
+
+Resource: `resources/ai-workflow-acceptance-criteria.html`.
+
+Use when: attendees have a defined AI workflow slice and need to decide what pass, revise, escalate, and pause/stop mean before reviewer evidence is collected or pilot value is scored.
+
+Attendee action: write the AI output, human next step, acceptance thresholds, escalation boundaries, pause/stop criteria, and evidence fields using only generic or public-safe workflow details.
+
+Status: ready workflow-acceptance handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.
