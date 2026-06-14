@@ -214,6 +214,9 @@
 - [x] **Epic 50: AI prompt reuse and team memory aids** (100% Completed)
   - [x] Story 50.1: Add AI prompt library starter handout
 
+- [x] **Epic 51: AI vendor exit and continuity aids** (100% Completed)
+  - [x] Story 51.1: Add AI vendor exit plan handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -245,6 +248,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 51.1: Add AI vendor exit plan handout
+  - Evidence: created `resources/ai-vendor-exit-plan.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 69 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-vendor-exit-plan.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with vendor-exit links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-vendor-exit-plan-mobile.png` (152366 bytes) and DOM dump persisted `/tmp/a2x-ai-vendor-exit-plan-dom.html` (10432 bytes), confirming the page title, Exit rule, AI vendor exit plan card, and public-safe footer markers on 2026-06-14 23:43 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, contract terms, or direct private-resource exposure were added.
 
 - [x] Story 50.1: Add AI prompt library starter handout
   - Evidence: created `resources/ai-prompt-library-starter.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 68 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-prompt-library-starter.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with prompt-library links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-prompt-library-mobile.png` (148325 bytes) and DOM dump persisted `/tmp/a2x-ai-prompt-library-dom.html` (9590 bytes), confirming the page title, Library rule, Prompt library card, and public-safe footer markers on 2026-06-14 21:35 IDT; implementation commit `8ceb12b` was pushed; GitHub Security Checks run `27508280547` succeeded; Pages deployment run `27508280013` succeeded; public smoke returned HTTP 200 for the live hub, AI prompt library starter page, and route chooser with prompt-library links/content visible on 2026-06-14 21:38 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
@@ -814,6 +820,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-14 23:43 IDT — Finished Story 51.1: created public-safe AI vendor exit plan handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 69 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, contract terms, or direct private-resource exposure were added.
+
+- 2026-06-14 23:41 IDT — Started Story 51.1: add a public-safe AI vendor exit plan handout after verifying clean repo state at HEAD `f3a1e03` and finding no unblocked TODO/BACKLOG items; scope is a static buyer-education worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure.
 
 - 2026-06-14 21:38 IDT — Cleared Story 50.1 post-commit verification: implementation commit `8ceb12b` pushed; GitHub Security Checks run `27508280547` and Pages deployment run `27508280013` succeeded; public smoke returned HTTP 200 for the live hub, AI prompt library starter page, and route chooser with prompt-library links/content visible.
 
@@ -1693,4 +1703,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI vendor exit plan | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for planning AI vendor/tool exit paths before trials, pilots, or renewals." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .sequence { display:grid; gap:14px; counter-reset:item; }
+    .item { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .item::before { content:counter(item); width:30px; height:30px; border-radius:999px; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · vendor continuity</div>
+    <h1>Know how you would leave before an AI vendor trial starts.</h1>
+    <p class="lead">Use this public-safe worksheet before a vendor pilot, internal tool trial, renewal conversation, or workflow expansion. It helps teams define data return, fallback work, ownership, and decision triggers without collecting contract details or exposing private systems.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-vendor-demo-brief.html">Brief the demo</a>
+      <a class="button" href="ai-vendor-reference-check.html">Check references</a>
+      <a class="button" href="ai-decision-meeting-agenda.html">Run decision meeting</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Exit rule</div>
+        <h2>An exit plan is not pessimism; it is trial hygiene.</h2>
+        <p>Before a team depends on an AI tool, write the plain-language exit path: what data must be exported or deleted, how users keep working, who decides to stop, and what evidence proves the transition is safe. Keep this worksheet generic: no contract terms, account screenshots, vendor secrets, customer records, internal architecture diagrams, pricing, or regulated data.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Exit-path ingredients</div>
+      <h2>Six questions to answer before commitment</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Workflow dependency</div><h3>What would break if the tool vanished?</h3><ul><li>Name the workflow, user role, and human fallback.</li><li>List downstream decisions that rely on its output.</li><li>Mark what can pause safely versus what needs continuity.</li></ul></div>
+        <div class="card"><div class="tag ok">Data return</div><h3>What needs to come back?</h3><ul><li>List export categories, not sensitive records.</li><li>Define owner, format, and timing expectations.</li><li>Separate audit evidence from operational content.</li></ul></div>
+        <div class="card"><div class="tag warn">Data cleanup</div><h3>What must be removed or retained?</h3><ul><li>Name retention and deletion questions for review.</li><li>Flag logs, prompts, files, users, and integrations.</li><li>Route policy/legal/security details to approved owners.</li></ul></div>
+        <div class="card"><div class="tag warn">Replacement path</div><h3>How will work continue?</h3><ul><li>Pick manual, existing-tool, or narrowed-scope fallback.</li><li>Define which users need a transition note.</li><li>Write the first safe workarounds before the trial scales.</li></ul></div>
+        <div class="card"><div class="tag ok">Decision owner</div><h3>Who can call exit?</h3><ul><li>Name roles for stop, export, cleanup, and communication.</li><li>Set the evidence threshold for stop versus renew.</li><li>Include a backup owner so silence is not approval.</li></ul></div>
+        <div class="card"><div class="tag bad">Trigger signals</div><h3>When do we leave or renegotiate?</h3><ul><li>Mark safety, quality, support, access, reliability, or policy triggers.</li><li>Include renewal-review timing before urgency arrives.</li><li>Keep pricing claims and private contract details out of the public worksheet.</li></ul></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">How to use it</div>
+      <h2>Run a thirty-minute exit-path review</h2>
+      <div class="sequence">
+        <div class="item"><div><h3>Start from one workflow</h3><p>Do not plan a generic vendor divorce. Pick the workflow being tested, the user group, the allowed sample boundary, and the decision this tool is supposed to support.</p></div></div>
+        <div class="item"><div><h3>Map the minimum continuity path</h3><p>Write how the work would continue for one week without the tool: manual fallback, existing system, pause-and-communicate, or narrowed scope.</p></div></div>
+        <div class="item"><div><h3>Write export and cleanup questions</h3><p>Use categories such as prompts, outputs, files, users, configuration, audit logs, and integration state. Do not paste real records, screenshots, contract terms, credentials, or private system paths.</p></div></div>
+        <div class="item"><div><h3>Attach exit to a decision meeting</h3><p>Bring the plan into the demo brief, reference check, decision meeting, or renewal review so exit readiness is discussed before enthusiasm, deadlines, or sunk cost take the wheel.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI vendor exit plan card</h2>
+      <div class="worksheet">
+        <p><strong>Tool or vendor under review:</strong> [generic name or evaluation label].</p>
+        <p><strong>Workflow dependency:</strong> [what job this tool supports and who uses the output].</p>
+        <p><strong>Human or existing-tool fallback:</strong> [manual path, old tool, temporary pause, or narrowed scope].</p>
+        <p><strong>Export categories:</strong> [prompts, generated artifacts, configuration, users, audit evidence, workflow notes, approved data categories].</p>
+        <p><strong>Cleanup questions:</strong> [deletion, retention, access removal, integration disconnect, logs, prompts, files, account state].</p>
+        <p><strong>Stop or renegotiate triggers:</strong> [quality, safety, support, reliability, policy, access, ownership, renewal timing].</p>
+        <p><strong>Decision roles:</strong> [business owner, security/legal/procurement reviewer, workflow owner, communications owner, backup].</p>
+        <p><strong>Transition message:</strong> [what users need to know if the tool is paused, replaced, narrowed, or renewed].</p>
+        <p><strong>Next review date:</strong> [date or milestone before renewal, rollout, or expanded dependency].</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Good next moves</div>
+      <h2>Where exit planning fits</h2>
+      <div class="grid">
+        <div class="card"><h3>Before the demo</h3><p>Use the demo brief to ask how the vendor supports export, cleanup, fallback, audit evidence, and user transition without discussing confidential contract details.</p></div>
+        <div class="card"><h3>Before the decision</h3><p>Bring unresolved exit questions into the decision meeting agenda, pilot risk register, or policy exception request instead of burying them in procurement folklore.</p></div>
+        <div class="card"><h3>Before renewal</h3><p>Compare exit readiness with evidence logs, value scorecards, support load, and tool-change impact before deciding to renew, narrow, replace, or stop.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI vendor exit plan worksheet for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, authorize production rollout, expose contract terms, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

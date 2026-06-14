@@ -153,6 +153,14 @@ Source: public-safe static vendor-diligence worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to ask for generic patterns instead of customer names, private metrics, contract terms, screenshots, confidential workflows, regulated records, production prompts, private repository links, or incident specifics.
 Next action: tune after observing which vendor-reference questions attendees ask after a demo but before a trial or pilot decision.
 
+### AI vendor exit plan
+
+Status: publish-now
+Hub path: `resources/ai-vendor-exit-plan.html`
+Source: public-safe static vendor-continuity worksheet drafted in this repo from the current workshop follow-up need to plan export, cleanup, fallback work, decision ownership, and stop or renegotiate triggers before an AI vendor/tool trial becomes difficult to unwind.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, contract terms, or client material. The page explicitly tells attendees to use generic export categories, cleanup questions, fallback paths, owner roles, and trigger signals instead of exposing customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contract details, private repository links, internal architecture, or confidential strategy.
+Next action: tune after observing which exit-path questions buyers ask between vendor demos, reference checks, decision meetings, renewals, tool-change reviews, and pilot stop/continue decisions.
+
 ### AI pilot data boundary checklist
 
 Status: publish-now

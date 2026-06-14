@@ -194,6 +194,16 @@ Attendee action: prepare one workflow to validate, ask references for generic pa
 
 Status: ready vendor-diligence handout.
 
+### Vendor continuity: AI vendor exit plan
+
+Resource: `resources/ai-vendor-exit-plan.html`.
+
+Use when: attendees are considering an AI vendor/tool trial, pilot, renewal, or workflow expansion and need to know how export, cleanup, fallback work, decision ownership, and user communication would work if the tool is paused, replaced, narrowed, or stopped.
+
+Attendee action: write generic export categories, cleanup questions, fallback paths, exit or renegotiation triggers, decision roles, transition message, and next review date without collecting contract terms, credentials, private architecture, sensitive records, or pricing claims.
+
+Status: ready vendor-continuity handout.
+
 ### Pilot data boundary: AI pilot data boundary checklist
 
 Resource: `resources/ai-pilot-data-boundary-checklist.html`.
