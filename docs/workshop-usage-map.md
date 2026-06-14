@@ -84,6 +84,16 @@ Attendee action: verify the prompt is narrow, sanitized, bounded, reviewable, an
 
 Status: ready prompt-safety handout.
 
+### Prompt reuse: AI prompt library starter
+
+Resource: `resources/ai-prompt-library-starter.html`.
+
+Use when: attendees have a prompt that worked once with safe input and need to capture it as a reusable team prompt card before it becomes copy-pasted folklore.
+
+Attendee action: record the prompt purpose, allowed inputs, do-not-paste list, stable prompt text, expected output, human review rule, owner role, update cadence, and retire trigger using only public-safe or approved details.
+
+Status: ready prompt-reuse handout.
+
 ### Output review: AI output review rubric
 
 Resource: `resources/ai-output-review-rubric.html`.

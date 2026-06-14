@@ -65,6 +65,14 @@ Source: public-safe static prompt preflight worksheet drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep secrets, customer data, employee records, production logs, contracts, account screenshots, private repository contents, credentials, regulated records, and internal strategy out of prompts unless the tool, policy, and approval boundary explicitly allow them.
 Next action: tune after observing which prompt-safety mistakes recur during workshop exercises, vendor demos, or first follow-up workflow trials.
 
+### AI prompt library starter
+
+Status: publish-now
+Hub path: `resources/ai-prompt-library-starter.html`
+Source: public-safe static prompt-reuse worksheet drafted in this repo from the current workshop need to help attendees turn one useful prompt into a reusable team prompt card with safe inputs, review criteria, ownership, and update triggers.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to store only prompt structure, fictional or toy examples, review rules, owner roles, and retire triggers while excluding customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing, private repository links, raw incident transcripts, and confidential strategy.
+Next action: tune after observing which prompts attendees want to reuse after prompt-safety preflight, output review, first-skill exercises, or post-workshop workflow trials.
+
 ### AI output review rubric
 
 Status: publish-now

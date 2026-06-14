@@ -211,6 +211,9 @@
 - [x] **Epic 49: AI workflow measurement and baseline aids** (100% Completed)
   - [x] Story 49.1: Add AI workflow baseline worksheet handout
 
+- [x] **Epic 50: AI prompt reuse and team memory aids** (100% Completed)
+  - [x] Story 50.1: Add AI prompt library starter handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -242,6 +245,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 50.1: Add AI prompt library starter handout
+  - Evidence: created `resources/ai-prompt-library-starter.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 68 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-prompt-library-starter.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with prompt-library links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-prompt-library-mobile.png` (148325 bytes) and DOM dump persisted `/tmp/a2x-ai-prompt-library-dom.html` (9590 bytes), confirming the page title, Library rule, Prompt library card, and public-safe footer markers on 2026-06-14 21:35 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
 
 - [x] Story 49.1: Add AI workflow baseline worksheet handout
   - Evidence: created `resources/ai-workflow-baseline-worksheet.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 67 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-workflow-baseline-worksheet.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with baseline links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workflow-baseline-mobile.png` (156914 bytes) and DOM dump persisted `/tmp/a2x-ai-workflow-baseline-dom.html` (9928 bytes), confirming the page title, baseline rule, copyable worksheet, and public-safe footer markers on 2026-06-14 19:26 IDT; implementation commit `5d5b323` was pushed; GitHub Security Checks run `27505036745` succeeded; Pages deployment run `27505036348` succeeded; public smoke returned HTTP 200 for the live hub, AI workflow baseline worksheet page, and route chooser with baseline links/content visible on 2026-06-14 19:28 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
@@ -808,6 +814,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-14 21:35 IDT — Finished Story 50.1: created public-safe AI prompt library starter handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 68 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
+
+- 2026-06-14 21:32 IDT — Started Story 50.1: add a public-safe AI prompt library starter handout after verifying repo state at HEAD `cc09162` and finding no safe unblocked story listed; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-14 19:28 IDT — Cleared Story 49.1 post-commit verification: implementation commit `5d5b323` pushed; GitHub Security Checks run `27505036745` and Pages deployment run `27505036348` succeeded; public smoke returned HTTP 200 for the live hub, AI workflow baseline worksheet page, and route chooser with baseline links/content visible.
 
@@ -1681,4 +1691,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
