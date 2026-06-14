@@ -217,6 +217,9 @@
 - [x] **Epic 51: AI vendor exit and continuity aids** (100% Completed)
   - [x] Story 51.1: Add AI vendor exit plan handout
 
+- [x] **Epic 52: AI tool access and account-governance aids** (100% Completed)
+  - [x] Story 52.1: Add AI tool access request checklist handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -248,6 +251,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 52.1: Add AI tool access request checklist handout
+  - Evidence: created `resources/ai-tool-access-request-checklist.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 70 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-tool-access-request-checklist.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with access-checklist links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-tool-access-mobile.png` (159347 bytes) and DOM dump persisted `/tmp/a2x-ai-tool-access-dom.html` (10626 bytes), confirming the page title, Access rule, AI tool access request card, and public-safe footer markers on 2026-06-15 01:51 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, account screenshots, billing details, or direct private-resource exposure were added.
 
 - [x] Story 51.1: Add AI vendor exit plan handout
   - Evidence: created `resources/ai-vendor-exit-plan.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 69 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-vendor-exit-plan.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with vendor-exit links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-vendor-exit-plan-mobile.png` (152366 bytes) and DOM dump persisted `/tmp/a2x-ai-vendor-exit-plan-dom.html` (10432 bytes), confirming the page title, Exit rule, AI vendor exit plan card, and public-safe footer markers on 2026-06-14 23:43 IDT; implementation commit `22d722e` was pushed; GitHub Security Checks run `27511516277` succeeded; Pages deployment run `27511515872` succeeded; public smoke returned HTTP 200 for the live hub, AI vendor exit plan page, and route chooser with vendor-exit links/content visible on 2026-06-14 23:46 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, contract terms, or direct private-resource exposure were added.
@@ -821,6 +827,9 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-15 01:51 IDT — Finished Story 52.1: created public-safe AI tool access request checklist, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 70 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, account screenshots, billing details, or direct private-resource exposure were added.
+
+- 2026-06-15 01:49 IDT — Started Story 52.1: add a public-safe AI tool access request checklist after verifying clean repo state at HEAD `64b8359` and finding no unblocked TODO/BACKLOG items; scope is a static account-governance worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure.
 - 2026-06-14 23:46 IDT — Cleared Story 51.1 post-commit verification: implementation commit `22d722e` pushed; GitHub Security Checks run `27511516277` and Pages deployment run `27511515872` succeeded; public smoke returned HTTP 200 for the live hub, AI vendor exit plan page, and route chooser with vendor-exit links/content visible.
 
 - 2026-06-14 23:43 IDT — Finished Story 51.1: created public-safe AI vendor exit plan handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 69 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, contract terms, or direct private-resource exposure were added.
@@ -1705,4 +1714,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, access-governance, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

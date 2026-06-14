@@ -161,6 +161,14 @@ Source: public-safe static vendor-continuity worksheet drafted in this repo from
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, contract terms, or client material. The page explicitly tells attendees to use generic export categories, cleanup questions, fallback paths, owner roles, and trigger signals instead of exposing customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contract details, private repository links, internal architecture, or confidential strategy.
 Next action: tune after observing which exit-path questions buyers ask between vendor demos, reference checks, decision meetings, renewals, tool-change reviews, and pilot stop/continue decisions.
 
+### AI tool access request checklist
+
+Status: publish-now
+Hub path: `resources/ai-tool-access-request-checklist.html`
+Source: public-safe static account-governance worksheet drafted in this repo from the current workshop need to turn AI tool/account access requests into scoped use cases with allowed inputs, review gates, support routes, and offboarding triggers.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, account screenshots, billing details, or client material. The page explicitly tells attendees to request access with generic roles, approved input categories, reviewer roles, support paths, pause triggers, and cleanup owners instead of exposing tokens, customer records, employee data, production logs, private repository contents, contracts, regulated records, confidential strategy, or internal architecture.
+Next action: tune after observing which access, account-route, support, review, offboarding, or policy questions appear before workshop exercises, Claude Code setup, pilot trials, vendor accounts, and routine AI tool use.
+
 ### AI pilot data boundary checklist
 
 Status: publish-now

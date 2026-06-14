@@ -204,6 +204,16 @@ Attendee action: write generic export categories, cleanup questions, fallback pa
 
 Status: ready vendor-continuity handout.
 
+### Access governance: AI tool access request checklist
+
+Resource: `resources/ai-tool-access-request-checklist.html`.
+
+Use when: attendees, buyers, or pilot teams need access to Claude, Claude Code, ChatGPT, an internal assistant, a sandbox, or an AI vendor account and must clarify the approved use, allowed inputs, account route, reviewer, support owner, and offboarding trigger before the first login.
+
+Attendee action: write one scoped use case, allowed input categories, do-not-paste list, account path, review gate, support route, access review date, and pause/offboarding trigger without sharing credentials, screenshots, billing pages, customer records, employee data, private repositories, contracts, regulated records, or confidential strategy.
+
+Status: ready access-governance handout.
+
 ### Pilot data boundary: AI pilot data boundary checklist
 
 Resource: `resources/ai-pilot-data-boundary-checklist.html`.
