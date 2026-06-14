@@ -199,6 +199,9 @@
 - [x] **Epic 45: AI handoff quality and continuity aids** (100% Completed)
   - [x] Story 45.1: Add AI workflow handoff gap checklist handout
 
+- [x] **Epic 46: AI rollback and recovery rehearsal aids** (100% Completed)
+  - [x] Story 46.1: Add AI workflow rollback drill card handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -230,6 +233,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 46.1: Add AI workflow rollback drill card handout
+  - Evidence: created `resources/ai-workflow-rollback-drill-card.html`; linked it from `index.html`, `resources/workshop-resource-chooser.html`, and `resources/ai-workflow-handoff-gap-checklist.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 64 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-workflow-rollback-drill-card.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with rollback-drill links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workflow-rollback-drill-card-mobile.png` (153045 bytes) and DOM dump persisted `/tmp/a2x-ai-workflow-rollback-drill-card-dom.html` (9765 bytes), confirming the page title, rollback rule, copyable worksheet, and public-safe footer markers on 2026-06-14 13:01 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
 
 - [x] Story 45.1: Add AI workflow handoff gap checklist handout
   - Evidence: created `resources/ai-workflow-handoff-gap-checklist.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 63 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-workflow-handoff-gap-checklist.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with handoff-gap links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workflow-handoff-gap-checklist-mobile.png` (152046 bytes) and DOM dump persisted `/tmp/a2x-ai-workflow-handoff-gap-checklist-dom.html` (9953 bytes), confirming the page title, handoff rule, copyable worksheet, and public-safe footer markers on 2026-06-14 10:51 IDT; implementation commit `5c55984` was pushed; GitHub Security Checks run `27492458897` succeeded; Pages deployment run `27492458495` succeeded; public smoke returned HTTP 200 for the live hub, AI workflow handoff gap checklist page, and route chooser with handoff-gap links/content visible on 2026-06-14 10:53 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
@@ -784,6 +790,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-14 13:01 IDT — Finished Story 46.1: created public-safe AI workflow rollback drill card, wired it into the hub, route chooser, handoff gap checklist, resource inventory, and workshop usage map, and verified static links for 64 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
+
+- 2026-06-14 12:56 IDT — Started Story 46.1: add a public-safe AI workflow rollback drill card after verifying clean repo state at HEAD `46402ae`; scope is a static rollback/recovery rehearsal worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure.
 
 - 2026-06-14 10:53 IDT — Cleared Story 45.1 post-commit verification: implementation commit `5c55984` pushed; GitHub Security Checks run `27492458897` and Pages deployment run `27492458495` succeeded; public smoke returned HTTP 200 for the live hub, AI workflow handoff gap checklist page, and route chooser with handoff-gap links/content visible.
 
@@ -1633,4 +1643,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, output-review, reviewer-calibration, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current prompt-safety, output-review, reviewer-calibration, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

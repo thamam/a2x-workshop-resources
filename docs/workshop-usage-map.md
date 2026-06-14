@@ -214,6 +214,16 @@ Attendee action: identify ownership, reviewer-process, support-route, monitoring
 
 Status: ready workflow-continuity handout.
 
+### Rollback rehearsal: AI workflow rollback drill card
+
+Resource: `resources/ai-workflow-rollback-drill-card.html`.
+
+Use when: attendees have a workflow nearing rollout or routine use and need to rehearse pause authority, fallback path, user message, recovery evidence, cleanup, and restart conditions before something breaks.
+
+Attendee action: run a 20-minute tabletop drill with a toy scenario; name the pause owner, fallback path, recovery evidence, restart condition, and next state using only generic or public-safe workflow details.
+
+Status: ready rollback-rehearsal handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.

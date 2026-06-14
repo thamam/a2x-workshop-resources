@@ -169,6 +169,14 @@ Source: public-safe static handoff/readiness gap worksheet drafted in this repo 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to classify handoff gaps as close-before-handoff, monitor-next-cycle, or pause-and-clarify without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
 Next action: tune after observing which continuity gaps appear between acceptance criteria, ownership assignment, rollout readiness, operations handoff, and pilot health review.
 
+### AI workflow rollback drill card
+
+Status: publish-now
+Hub path: `resources/ai-workflow-rollback-drill-card.html`
+Source: public-safe static rollback/recovery rehearsal worksheet drafted in this repo from the current workshop follow-up need to make AI workflow pause, fallback, recovery, and restart paths concrete before routine use expands.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to rehearse pause triggers, fallback paths, recovery evidence, cleanup steps, restart conditions, and next-state decisions without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
+Next action: tune after observing which rollback, fallback, user-message, recovery-evidence, and restart-authority gaps appear between rollout readiness, operations handoff, tool-change checks, incident pauses, and health reviews.
+
 ### AI pilot evidence log
 
 Status: publish-now
