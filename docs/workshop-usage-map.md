@@ -254,6 +254,16 @@ Attendee action: log the workflow hypothesis, allowed inputs, observed runs, val
 
 Status: ready evidence handout.
 
+### Workflow baseline: AI workflow baseline worksheet
+
+Resource: `resources/ai-workflow-baseline-worksheet.html`.
+
+Use when: attendees are about to compare an AI pilot, vendor demo, workflow trial, or rollout against today’s process and need a safe baseline before observed evidence arrives.
+
+Attendee action: record today’s workflow path, friction, review evidence, support signals, review cadence, and stop triggers using only generic categories or approved samples; then compare against the evidence log, value scorecard, health review, or steering decision record.
+
+Status: ready baseline/measurement handout.
+
 ### Pilot value scoring: AI pilot value scorecard
 
 Resource: `resources/ai-pilot-value-scorecard.html`.

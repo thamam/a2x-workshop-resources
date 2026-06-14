@@ -201,6 +201,14 @@ Source: public-safe static proof-point worksheet drafted in this repo from the c
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to record generic workflow names, dates, counts, pass/fail notes, reviewer decisions, and redacted examples instead of sensitive artifacts.
 Next action: tune after observing which evidence teams need before writing pilot decision memos, stakeholder updates, retrospectives, health reviews, or sunset packets.
 
+### AI workflow baseline worksheet
+
+Status: publish-now
+Hub path: `resources/ai-workflow-baseline-worksheet.html`
+Source: public-safe static measurement worksheet drafted in this repo from the current workshop follow-up need to define today’s workflow path, friction, review evidence, support signals, and stop triggers before comparing pilot results.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to record workflow patterns, roles, evidence categories, review cadence, and stop triggers without collecting customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
+Next action: tune after observing which baseline questions teams need before evidence logging, value scorecards, health reviews, or steering decisions.
+
 ### AI pilot value scorecard
 
 Status: publish-now

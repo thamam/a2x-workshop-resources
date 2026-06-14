@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI workflow baseline worksheet | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for defining an AI workflow baseline before a pilot, trial, rollout, or vendor evaluation." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .sequence { display:grid; gap:14px; counter-reset:item; }
+    .item { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .item::before { content:counter(item); width:30px; height:30px; border-radius:999px; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · measurement</div>
+    <h1>Set the baseline before the AI workflow changes the work.</h1>
+    <p class="lead">Use this public-safe worksheet before a pilot, vendor demo, workflow trial, or rollout. It helps teams describe today’s workflow, choose evidence categories, and set a review cadence without collecting sensitive records or making value promises.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-evidence-log.html">Log pilot evidence</a>
+      <a class="button" href="ai-pilot-value-scorecard.html">Score pilot value</a>
+      <a class="button" href="ai-pilot-health-review.html">Review pilot health</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Baseline rule</div>
+        <h2>A useful baseline is a comparison point, not a business case.</h2>
+        <p>Record the current workflow pattern, friction, review path, and observable signals using only generic or approved examples. Do not include customer data, employee records, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing, private repository links, raw prompts, incident transcripts, or confidential strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Baseline lenses</div>
+      <h2>Five safe things to measure before the pilot</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Workflow shape</div><h3>What happens today?</h3><ul><li>What repeated task, handoff, or review does the workflow include?</li><li>How often does it happen in generic terms: daily, weekly, monthly, or ad hoc?</li><li>Where does work wait, bounce, or get rechecked?</li></ul></div>
+        <div class="card"><div class="tag ok">Human effort</div><h3>Where is attention spent?</h3><ul><li>Which roles draft, review, approve, route, or fix the work?</li><li>What steps require expert judgment instead of simple formatting?</li><li>What support questions repeat often enough to notice?</li></ul></div>
+        <div class="card"><div class="tag warn">Quality signal</div><h3>What counts as better?</h3><ul><li>What makes an output usable, incomplete, risky, or wrong?</li><li>Which reviewer can judge a small sample safely?</li><li>What decision evidence should appear in the evidence log?</li></ul></div>
+        <div class="card"><div class="tag warn">Boundary health</div><h3>What must stay stable?</h3><ul><li>Which data, systems, roles, and actions are out of scope?</li><li>What stop condition protects the workflow if quality drops?</li><li>What rollback or manual fallback exists today?</li></ul></div>
+        <div class="card"><div class="tag bad">Adoption friction</div><h3>What might slow usage?</h3><ul><li>Which users need training, reminders, or office-hours support?</li><li>What tool, access, policy, or ownership gap could block the first cycle?</li><li>What question should be escalated before broader use?</li></ul></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">How to use it</div>
+      <h2>Run a fifteen-minute baseline pass</h2>
+      <div class="sequence">
+        <div class="item"><div><h3>Name the workflow slice</h3><p>Pick one repeated workflow slice from the intake brief or prioritization matrix. Keep it small enough to compare before and after one pilot cycle.</p></div></div>
+        <div class="item"><div><h3>Capture today’s state safely</h3><p>Use generic ranges, categories, roles, and redacted examples. If useful measurement requires sensitive records, make boundary approval the next step instead of collecting the data here.</p></div></div>
+        <div class="item"><div><h3>Choose review evidence</h3><p>Select a few observable signals: reviewer decision, cycle status, rework category, support theme, incident count, or completion state. Avoid revenue promises or unverified productivity claims.</p></div></div>
+        <div class="item"><div><h3>Set the comparison date</h3><p>Decide when to compare the baseline against pilot evidence, value scorecard, health review, or steering decision log.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI workflow baseline note</h2>
+      <div class="worksheet">
+        <p><strong>Workflow slice:</strong> [generic repeated task, role, and trigger].</p>
+        <p><strong>Today’s path:</strong> [draft / review / approve / handoff / support steps and where work waits].</p>
+        <p><strong>Current friction:</strong> [rework, delays, unclear owner, review overload, support questions, or quality concerns].</p>
+        <p><strong>Safe sample:</strong> [toy, fictional, redacted, synthetic, or approved example; sensitive material excluded].</p>
+        <p><strong>Baseline evidence categories:</strong> [review decision, cycle status, rework category, support theme, incident count, completion state].</p>
+        <p><strong>Review owner and cadence:</strong> [owner role, reviewer role, comparison date, next artifact].</p>
+        <p><strong>Stop or escalation trigger:</strong> [quality drop, boundary issue, unowned support, policy question, or incident signal].</p>
+        <p><strong>Do not include:</strong> customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Good next moves</div>
+      <h2>Where this baseline fits</h2>
+      <div class="grid">
+        <div class="card"><h3>Before the evidence log</h3><p>Use it to decide what evidence is worth logging before the pilot starts producing outputs.</p></div>
+        <div class="card"><h3>Before the value scorecard</h3><p>Use it to compare observed pilot changes against today’s friction without inventing hard savings or pricing claims.</p></div>
+        <div class="card"><h3>Before health review</h3><p>Use it to spot whether support, quality, boundary, and ownership signals are improving, drifting, or unclear.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI workflow baseline worksheet for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, authorize production rollout, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

@@ -208,6 +208,9 @@
 - [x] **Epic 48: AI workshop discussion and discovery aids** (100% Completed)
   - [x] Story 48.1: Add AI workshop discovery question bank handout
 
+- [x] **Epic 49: AI workflow measurement and baseline aids** (100% Completed)
+  - [x] Story 49.1: Add AI workflow baseline worksheet handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -239,6 +242,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 49.1: Add AI workflow baseline worksheet handout
+  - Evidence: created `resources/ai-workflow-baseline-worksheet.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 67 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-workflow-baseline-worksheet.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with baseline links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workflow-baseline-mobile.png` (156914 bytes) and DOM dump persisted `/tmp/a2x-ai-workflow-baseline-dom.html` (9928 bytes), confirming the page title, baseline rule, copyable worksheet, and public-safe footer markers on 2026-06-14 19:26 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
 
 - [x] Story 48.1: Add AI workshop discovery question bank handout
   - Evidence: created `resources/ai-workshop-discovery-question-bank.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 66 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-workshop-discovery-question-bank.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with discovery links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workshop-discovery-question-bank-mobile.png` (155606 bytes) and DOM dump persisted `/tmp/a2x-ai-workshop-discovery-question-bank-dom.html` (9883 bytes), confirming the page title, discovery rule, copyable worksheet, and public-safe footer markers on 2026-06-14 17:19 IDT; implementation commit `ad17278` was pushed; GitHub Security Checks run `27501660003` succeeded; Pages deployment run `27501659419` succeeded; public smoke returned HTTP 200 for the live hub, AI workshop discovery question bank page, and route chooser with discovery links/content visible on 2026-06-14 17:21 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
@@ -802,6 +808,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-14 19:26 IDT — Finished Story 49.1: created public-safe AI workflow baseline worksheet, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile/DOM render. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
+
+- 2026-06-14 19:23 IDT — Started Story 49.1: add a public-safe AI workflow baseline worksheet after verifying repo state at HEAD `d8afca5`; scope is a static attendee page plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure.
 
 - 2026-06-14 17:21 IDT — Cleared Story 48.1 post-commit verification: implementation commit `ad17278` pushed; GitHub Security Checks run `27501660003` and Pages deployment run `27501659419` succeeded; public smoke returned HTTP 200 for the live hub, AI workshop discovery question bank page, and route chooser with discovery links/content visible.
 
