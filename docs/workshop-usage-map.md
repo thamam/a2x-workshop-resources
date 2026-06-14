@@ -204,6 +204,16 @@ Attendee action: write the AI output, human next step, acceptance thresholds, es
 
 Status: ready workflow-acceptance handout.
 
+### Workflow continuity: AI workflow handoff gap checklist
+
+Resource: `resources/ai-workflow-handoff-gap-checklist.html`.
+
+Use when: attendees have acceptance criteria, evidence, ownership, or rollout-readiness notes and need to find missing handoff details before the AI-assisted workflow becomes routine.
+
+Attendee action: identify ownership, reviewer-process, support-route, monitoring-signal, pause/rollback, and next-review gaps; classify each as close-before-handoff, monitor-next-cycle, or pause-and-clarify using only generic or public-safe workflow details.
+
+Status: ready workflow-continuity handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.

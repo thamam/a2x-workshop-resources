@@ -161,6 +161,14 @@ Source: public-safe static acceptance/evidence worksheet drafted in this repo fr
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to define observable criteria, reviewer evidence, and stop rules without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
 Next action: tune after observing which acceptance thresholds reviewers struggle to apply between pilot chartering, output review, evidence logging, and rollout readiness.
 
+### AI workflow handoff gap checklist
+
+Status: publish-now
+Hub path: `resources/ai-workflow-handoff-gap-checklist.html`
+Source: public-safe static handoff/readiness gap worksheet drafted in this repo from the current workshop follow-up need to find missing ownership, review, support, monitoring, and pause/rollback details before an AI-assisted workflow becomes routine.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to classify handoff gaps as close-before-handoff, monitor-next-cycle, or pause-and-clarify without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
+Next action: tune after observing which continuity gaps appear between acceptance criteria, ownership assignment, rollout readiness, operations handoff, and pilot health review.
+
 ### AI pilot evidence log
 
 Status: publish-now
