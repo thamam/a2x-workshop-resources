@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI workshop discovery question bank | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe question bank for discovering useful, safe AI workflow candidates during an A2X workshop conversation." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .sequence { display:grid; gap:14px; counter-reset:item; }
+    .item { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .item::before { content:counter(item); width:30px; height:30px; border-radius:999px; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · discovery</div>
+    <h1>Ask better workshop questions before choosing the AI workflow.</h1>
+    <p class="lead">Use this public-safe question bank when a room has enthusiasm but not yet a crisp workflow. It helps Tomer or attendees discover a repeated pain, safe sample, human review point, owner, and next tiny experiment without collecting sensitive details.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-workflow-prioritization-matrix.html">Prioritize workflows</a>
+      <a class="button" href="ai-use-case-intake-brief.html">Define the use case</a>
+      <a class="button" href="post-workshop-action-plan.html">Plan follow-up</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Discovery rule</div>
+        <h2>A good AI use case starts as a repeated workflow, not a tool wish.</h2>
+        <p>Keep this page public-safe. Ask for roles, workflow patterns, toy examples, fictional samples, or redacted categories only. Do not collect customer data, employee records, production logs, credentials, account screenshots, regulated data, vendor contracts, pricing, private repository links, raw prompts, incident transcripts, or confidential strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Question bank</div>
+      <h2>Five safe discovery lenses</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Workflow pull</div><h3>Where does work repeat?</h3><ul><li>What do people rewrite, summarize, check, route, or hand off every week?</li><li>Which step is annoying enough that someone already made a workaround?</li><li>What would be useful even if AI only drafted the first pass?</li></ul></div>
+        <div class="card"><div class="tag ok">Safe sample</div><h3>Can we practice without sensitive data?</h3><ul><li>What toy, fictional, synthetic, or redacted example looks like the work?</li><li>What must stay out of the prompt, repository, transcript, or demo?</li><li>Who decides when real data is allowed later?</li></ul></div>
+        <div class="card"><div class="tag warn">Review gate</div><h3>Who can judge the output?</h3><ul><li>What does a good answer, draft, summary, or code change need to include?</li><li>Who can approve, revise, escalate, or pause the output?</li><li>What evidence would make the reviewer comfortable with the next step?</li></ul></div>
+        <div class="card"><div class="tag warn">Reversibility</div><h3>How do we keep the first move small?</h3><ul><li>What is the smallest workflow slice we can test in one session?</li><li>What action is reversible if the output is wrong?</li><li>What stop condition prevents a demo from becoming accidental rollout?</li></ul></div>
+        <div class="card"><div class="tag bad">Ownership</div><h3>Who owns the next decision?</h3><ul><li>Who is the workflow owner, reviewer, support route, and escalation path?</li><li>What decision is needed before the next experiment?</li><li>What question must remain unanswered until an approved boundary exists?</li></ul></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Facilitator sequence</div>
+      <h2>Run a ten-minute discovery pass</h2>
+      <div class="sequence">
+        <div class="item"><div><h3>Start with the repeated moment</h3><p>Ask for a generic workflow pattern: “What work keeps coming back?” Avoid names, live records, private repositories, customer examples, or screenshots.</p></div></div>
+        <div class="item"><div><h3>Translate it into a safe sample</h3><p>Ask what toy or fictional example would be close enough to test the behavior. If the answer requires sensitive data, stop and make boundary approval the next task.</p></div></div>
+        <div class="item"><div><h3>Name the human judgment</h3><p>Ask who can tell whether the AI output is usable, what evidence they need, and what “revise” or “pause” would look like.</p></div></div>
+        <div class="item"><div><h3>Choose the next handout</h3><p>If there are many candidates, open the prioritization matrix. If one candidate is clear, open the use-case intake brief or post-workshop action plan.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI workshop discovery note</h2>
+      <div class="worksheet">
+        <p><strong>Repeated workflow:</strong> [generic repeated task, role, cadence, and pain point].</p>
+        <p><strong>Safe sample:</strong> [toy, fictional, redacted, synthetic, or approved example; sensitive material excluded].</p>
+        <p><strong>AI-assisted step:</strong> [draft / summarize / compare / classify / check / route / generate first pass].</p>
+        <p><strong>Human review gate:</strong> [reviewer role, pass criteria, revise criteria, escalation condition].</p>
+        <p><strong>Smallest reversible experiment:</strong> [one session, one sample, one output, one decision].</p>
+        <p><strong>Owner and next artifact:</strong> [owner role, next handout to open, decision date, stop condition].</p>
+        <p><strong>Do not include:</strong> customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Good next moves</div>
+      <h2>Where this question bank fits</h2>
+      <div class="grid">
+        <div class="card"><h3>Before workflow prioritization</h3><p>Use it to turn scattered AI ideas into comparable workflow candidates with a safe sample and owner.</p></div>
+        <div class="card"><h3>Before use-case intake</h3><p>Use it to gather just enough public-safe context for a crisp use-case brief without asking for private examples.</p></div>
+        <div class="card"><h3>Before a follow-up commitment</h3><p>Use it near the end of a workshop when attendees need one concrete, reversible next experiment rather than a vague “try AI” promise.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI workshop discovery question bank for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, authorize production rollout, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

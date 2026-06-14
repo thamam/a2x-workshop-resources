@@ -25,6 +25,14 @@ Source: public-safe static navigation aid drafted in this repo from the current 
 Safety notes: links only to existing public-safe hub resources and docs; no private source links, credentials, local paths, analytics, lead capture, or client material.
 Next action: tune route labels after observing which workshop moments cause attendee confusion.
 
+### AI workshop discovery question bank
+
+Status: publish-now
+Hub path: `resources/ai-workshop-discovery-question-bank.html`
+Source: public-safe static discovery worksheet drafted in this repo from the current workshop need to turn broad AI interest into a repeated workflow, safe sample, human review gate, owner, and next tiny experiment.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to ask for workflow patterns, toy examples, fictional samples, redacted categories, reviewer roles, and stop conditions instead of collecting customer data, employee records, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing, private repository links, raw prompts, incident transcripts, or internal strategy.
+Next action: tune after observing which discovery questions help workshop attendees move from vague AI ideas into prioritization, use-case intake, or post-workshop action planning.
+
 ### Post-workshop action plan
 
 Status: publish-now

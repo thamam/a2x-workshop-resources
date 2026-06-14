@@ -205,6 +205,9 @@
 - [x] **Epic 47: AI review queue and throughput aids** (100% Completed)
   - [x] Story 47.1: Add AI review queue triage handout
 
+- [x] **Epic 48: AI workshop discussion and discovery aids** (100% Completed)
+  - [x] Story 48.1: Add AI workshop discovery question bank handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -236,6 +239,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 48.1: Add AI workshop discovery question bank handout
+  - Evidence: created `resources/ai-workshop-discovery-question-bank.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 66 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-workshop-discovery-question-bank.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with discovery links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workshop-discovery-question-bank-mobile.png` (155606 bytes) and DOM dump persisted `/tmp/a2x-ai-workshop-discovery-question-bank-dom.html` (9883 bytes), confirming the page title, discovery rule, copyable worksheet, and public-safe footer markers on 2026-06-14 17:19 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
 
 - [x] Story 47.1: Add AI review queue triage handout
   - Evidence: created `resources/ai-review-queue-triage.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 65 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-review-queue-triage.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with review-queue links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-review-queue-triage-mobile.png` (156193 bytes) and DOM dump persisted `/tmp/a2x-ai-review-queue-triage-dom.html` (9984 bytes), confirming the page title, queue rule, copyable worksheet, and public-safe footer markers on 2026-06-14 15:10 IDT; implementation commit `5f80089` was pushed; GitHub Security Checks run `27498442069` succeeded; Pages deployment run `27498441674` succeeded; public smoke returned HTTP 200 for the live hub, AI review queue triage page, and route chooser with review-queue links/content visible on 2026-06-14 15:12 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
@@ -796,6 +802,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-14 17:19 IDT — Finished Story 48.1: created public-safe AI workshop discovery question bank handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 66 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure were added.
+
+- 2026-06-14 17:15 IDT — Started Story 48.1: add a public-safe AI workshop discovery question bank handout after verifying clean repo state at HEAD `4173796`; scope is a static workshop conversation worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or direct private-resource exposure.
 
 - 2026-06-14 15:12 IDT — Cleared Story 47.1 post-commit verification: implementation commit `5f80089` pushed; GitHub Security Checks run `27498442069` and Pages deployment run `27498441674` succeeded; public smoke returned HTTP 200 for the live hub, AI review queue triage page, and route chooser with review-queue links/content visible.
 

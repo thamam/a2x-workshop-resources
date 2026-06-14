@@ -34,6 +34,16 @@ Attendee action: choose the right next resource by goal: harness mental model, C
 
 Status: ready navigation aid.
 
+### Workshop discovery: AI workshop discovery question bank
+
+Resource: `resources/ai-workshop-discovery-question-bank.html`.
+
+Use when: attendees have many AI ideas, sponsor questions, or workshop examples but need a safe way to identify one repeated workflow, safe sample, reviewer, owner, and reversible next experiment before prioritizing or drafting a use-case brief.
+
+Attendee action: answer public-safe discovery questions about workflow pull, safe samples, review gates, reversibility, and ownership; then open the prioritization matrix, use-case intake brief, or post-workshop action plan.
+
+Status: ready discovery handout.
+
 ### Closing: post-workshop action plan
 
 Resource: `resources/post-workshop-action-plan.html`.
