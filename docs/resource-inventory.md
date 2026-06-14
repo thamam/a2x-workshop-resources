@@ -137,6 +137,14 @@ Source: public-safe static pilot-safety checklist drafted in this repo from the 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to keep unclear data out of scope and to avoid customer records, employee data, credentials, regulated records, production logs, private repository contents, vendor contracts, account screenshots, and confidential strategy until boundaries are approved.
 Next action: tune after observing which data-boundary questions attendees ask before using the evidence log, risk register, rollout checklist, or operational review aids.
 
+### AI pilot experiment charter
+
+Status: publish-now
+Hub path: `resources/ai-pilot-experiment-charter.html`
+Source: public-safe static experiment-charter worksheet drafted in this repo from the current workshop follow-up need to turn a promising AI pilot idea into the smallest reversible experiment before evidence logging, ownership assignment, or stakeholder updates.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to test only with toy, fictional, redacted, or approved inputs; to define human review gates, success evidence, and stop conditions; and to keep customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contracts, pricing claims, private repository links, and internal strategy out of the charter.
+Next action: tune after observing which teams struggle to narrow a pilot into one testable workflow slice before collecting evidence or requesting sponsor attention.
+
 ### AI pilot evidence log
 
 Status: publish-now

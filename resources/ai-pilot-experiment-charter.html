@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI pilot experiment charter handout | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for turning an AI pilot idea into a tiny, reversible experiment charter with clear boundaries and review evidence." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .sequence { display:grid; gap:14px; counter-reset:item; }
+    .item { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .item::before { content:counter(item); width:30px; height:30px; border-radius:999px; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · pilot scoping</div>
+    <h1>Turn an AI pilot idea into one tiny experiment charter.</h1>
+    <p class="lead">Use this handout after prioritization, use-case intake, data-boundary work, or tool scoring. It helps a team define the smallest reversible AI pilot experiment: one workflow, one safe sample, one review gate, one evidence question, and one stop condition.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-workflow-prioritization-matrix.html">Prioritize workflows</a>
+      <a class="button" href="ai-use-case-intake-brief.html">Define the use case</a>
+      <a class="button" href="ai-pilot-data-boundary-checklist.html">Set data boundaries</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Experiment-charter rule</div>
+        <h2>If the pilot cannot be tested with sanitized input, scoped review, and a reversible next step, it is not ready for an experiment.</h2>
+        <p>Do not use this charter to authorize broad rollout, production automation, customer-facing decisions, sensitive-data access, procurement commitments, pricing claims, or policy exceptions. If the pilot needs those, route the decision to the proper owner before testing. Keep the first experiment narrow enough to stop, rerun, or discard without organizational drama. Very noble. Also: very necessary.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 1</div>
+      <h2>Pick the smallest testable workflow slice</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Good slice</div><h3>One repeated task</h3><p>Choose a workflow moment with a clear before/after artifact: draft, summarize, classify, prepare, review, route, or compare.</p></div>
+        <div class="card"><div class="tag warn">Needs narrowing</div><h3>Too broad</h3><p>“Improve sales,” “automate support,” or “make operations faster” is not a pilot. Pick one user, one input type, one output, and one review gate.</p></div>
+        <div class="card"><div class="tag bad">Stop</div><h3>Unsafe first test</h3><p>If the only useful test requires private customer records, credentials, regulated data, production logs, contracts, or irreversible action, pause and approve boundaries first.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 2</div>
+      <h2>Write the five experiment boundaries</h2>
+      <div class="sequence">
+        <div class="item"><div><h3>Hypothesis</h3><p>State the exact improvement being tested: faster first draft, fewer missed fields, clearer handoff, better review packet, lower support friction, or safer triage.</p></div></div>
+        <div class="item"><div><h3>Allowed input</h3><p>Name the sanitized, fictional, redacted, or approved sample input. If real data is needed later, make that a separate approval question.</p></div></div>
+        <div class="item"><div><h3>Human review gate</h3><p>Choose who reviews the output, what evidence they check, and what must be corrected before anyone uses the result.</p></div></div>
+        <div class="item"><div><h3>Success evidence</h3><p>Pick observable signals such as completion time, missing-field count, reviewer pass/revise/stop notes, support questions, or quality rubric result.</p></div></div>
+        <div class="item"><div><h3>Stop condition</h3><p>Define the trigger that pauses the experiment: boundary confusion, repeated bad output, unclear ownership, sensitive data need, or reviewer disagreement.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Step 3</div>
+      <h2>Use AI to pressure-test the charter</h2>
+      <div class="callout">
+        <p><strong>Decision prompt:</strong> “Using only the public-safe pilot charter below, identify what is too broad, unsafe, unreviewable, or unmeasurable. Return: narrowed workflow slice, missing boundary, review gate, success evidence, stop condition, and one first experiment. Do not invent private examples, user claims, pricing, approvals, metrics, or production commitments.”</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI pilot experiment charter</h2>
+      <div class="worksheet">
+        <p><strong>Workflow slice:</strong> [one repeated task, one role, one input type, one output].</p>
+        <p><strong>Hypothesis:</strong> [what the AI-assisted step should improve and why it matters].</p>
+        <p><strong>Allowed input:</strong> [toy / fictional / redacted / approved sample; what stays out].</p>
+        <p><strong>Human review gate:</strong> [reviewer role, pass/revise/stop criteria, evidence checked].</p>
+        <p><strong>Success evidence:</strong> [observable signal; no inflated claims or unsupported ROI].</p>
+        <p><strong>Stop condition:</strong> [sensitive data needed / repeated bad output / unclear owner / policy boundary / reviewer disagreement].</p>
+        <p><strong>First run:</strong> [single reversible test, date, owner role, next decision].</p>
+        <p><strong>Do not include:</strong> raw customer data, employee records, production logs, account screenshots, credentials, regulated records, vendor contracts, pricing claims, private repository links, or internal strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">When to use this</div>
+      <h2>Good moments for the handout</h2>
+      <div class="grid">
+        <div class="card"><h3>After use-case intake</h3><p>Convert a promising idea into the smallest experiment before anyone asks for tooling, access, or rollout.</p></div>
+        <div class="card"><h3>Before evidence logging</h3><p>Make sure the evidence log will record a real test, not a vague enthusiasm packet.</p></div>
+        <div class="card"><h3>Before sponsor updates</h3><p>Show that the team can test safely with boundaries, review, and stop conditions before asking for bigger commitment.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI pilot experiment charter handout for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, authorize production rollout, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

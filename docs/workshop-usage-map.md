@@ -174,6 +174,16 @@ Attendee action: define allowed inputs, off-limits data, redaction rules, review
 
 Status: ready pilot-safety handout.
 
+### Pilot experiment scoping: AI pilot experiment charter
+
+Resource: `resources/ai-pilot-experiment-charter.html`.
+
+Use when: attendees have selected a promising AI use case or workflow trial and need to turn it into the smallest reversible experiment before logging evidence, assigning ownership, or asking for sponsor attention.
+
+Attendee action: write the workflow slice, hypothesis, allowed input, human review gate, success evidence, stop condition, and first run using only public-safe or approved sample details.
+
+Status: ready experiment-charter handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.
