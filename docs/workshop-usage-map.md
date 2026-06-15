@@ -234,6 +234,16 @@ Attendee action: record the workflow boundary, tool/model class, approved input 
 
 Status: ready audit-trail handout.
 
+### Shadow-mode validation: AI shadow-mode trial card
+
+Resource: `resources/ai-shadow-mode-trial-card.html`.
+
+Use when: attendees want to test an AI workflow, assistant, agent, or vendor tool beside the existing process before it affects customers, employees, production systems, live decisions, or final outputs.
+
+Attendee action: define one workflow slice, safe sample category, baseline result, reviewer comparison rubric, stop trigger, evidence pointer, and exit rule before increasing the AI workflow permission level.
+
+Status: ready shadow-mode validation handout.
+
 ### Access governance: AI tool access request checklist
 
 Resource: `resources/ai-tool-access-request-checklist.html`.

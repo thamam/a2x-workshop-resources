@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI shadow-mode trial card | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for validating an AI workflow in shadow mode before it touches customers, decisions, or production work." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    .lane { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · shadow-mode trial</div>
+    <h1>Prove the AI workflow beside the real process before it is allowed to affect the work.</h1>
+    <p class="lead">Use this public-safe worksheet when a team wants to test an AI assistant, agent, or vendor tool without letting it touch customers, employees, production systems, live decisions, or final outputs. Shadow mode compares AI suggestions against the existing workflow while humans keep control.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-workflow-baseline-worksheet.html">Set workflow baseline</a>
+      <a class="button" href="ai-output-review-rubric.html">Review AI output</a>
+      <a class="button" href="ai-pilot-evidence-log.html">Log pilot evidence</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Shadow-mode rule</div>
+        <h2>AI can suggest, score, or draft — but the existing workflow remains the source of truth.</h2>
+        <p>A shadow-mode trial is not a launch. Run the AI workflow on fictional, toy, redacted, or approved samples first; then compare its suggested output with the human or existing-process result. Do not let the AI tool send messages, update records, commit code, approve spend, change customer state, route employee decisions, or replace a required reviewer until the exit criteria, owner, and approval path are explicit.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Trial lanes</div>
+      <h2>Define the test before anyone calls it working</h2>
+      <div class="grid">
+        <div class="lane"><div class="tag ok">Workflow slice</div><strong>What tiny repeated task is being shadowed?</strong><p>Pick one narrow step, one owner role, and one expected output. Avoid testing the whole department at once.</p></div>
+        <div class="lane"><div class="tag ok">Safe sample</div><strong>What data may the AI see?</strong><p>Use toy examples, fictional cases, public docs, or approved redacted samples. Treat missing safe samples as a blocker.</p></div>
+        <div class="lane"><div class="tag warn">Comparison</div><strong>What is the baseline result?</strong><p>Compare AI output to the current human or system result using the same input category and a named review rubric.</p></div>
+        <div class="lane"><div class="tag warn">Decision lane</div><strong>What can the AI output influence today?</strong><p>Usually: nothing beyond reviewer learning, notes, and evidence collection. Humans keep final action authority.</p></div>
+        <div class="lane"><div class="tag bad">Stop trigger</div><strong>What ends the trial immediately?</strong><p>Unsafe input, hallucinated evidence, policy uncertainty, reviewer overload, stakeholder concern, or quality below threshold.</p></div>
+        <div class="lane"><div class="tag bad">Exit rule</div><strong>What proof is needed before the next permission rung?</strong><p>Name the pass rate, review sample size, owner sign-off, failure examples, rollback path, and approval forum.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Trial pattern</div>
+      <h2>Run the smallest useful comparison loop</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">1 · Freeze the baseline</div><h3>Know what “better” means</h3><ul><li>Current cycle time or effort.</li><li>Current quality/rework signal.</li><li>Current reviewer or owner role.</li></ul></div>
+        <div class="card"><div class="tag ok">2 · Shadow with safe input</div><h3>Keep AI behind glass</h3><ul><li>Use only approved sample categories.</li><li>Label every AI output as not final.</li><li>Do not send, merge, approve, or update records.</li></ul></div>
+        <div class="card"><div class="tag warn">3 · Compare with a rubric</div><h3>Review misses, not vibes</h3><ul><li>Task fit and evidence support.</li><li>Boundary and tone safety.</li><li>Operational clarity and reversibility.</li></ul></div>
+        <div class="card"><div class="tag bad">4 · Decide the next rung</div><h3>Promote slowly or stop cleanly</h3><ul><li>Continue shadow mode.</li><li>Narrow the workflow or sample.</li><li>Escalate, pause, or request approval.</li></ul></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI shadow-mode trial card</h2>
+      <div class="worksheet">
+        <p><strong>Workflow slice:</strong> [one repeated step, owner role, and current process].</p>
+        <p><strong>Safe sample category:</strong> [toy / fictional / public / redacted / approved internal sample].</p>
+        <p><strong>Do-not-use list:</strong> [customer records, employee records, production logs, credentials, account screenshots, contracts, pricing, regulated records, private repositories, incident transcripts, confidential strategy].</p>
+        <p><strong>Baseline result:</strong> [current human/system output, cycle-time signal, quality signal, or review standard].</p>
+        <p><strong>AI shadow output:</strong> [summary of output type only; store raw output only in an approved place].</p>
+        <p><strong>Reviewer comparison:</strong> Reviewer role: [role]. Rubric used: [rubric/checklist]. Outcome: [match / useful but revise / unsafe / unclear / stop].</p>
+        <p><strong>Trial evidence:</strong> [sample count, pass examples, failure examples, evidence-log pointer, open questions].</p>
+        <p><strong>Stop trigger:</strong> [unsafe input, weak evidence, hallucination, reviewer overload, stakeholder concern, or policy uncertainty].</p>
+        <p><strong>Exit rule:</strong> [continue shadow mode / narrow scope / request approval for next rung / pause / stop].</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Good next moves</div>
+      <h2>Connect the trial to the rest of the field kit</h2>
+      <div class="grid">
+        <div class="card"><h3>Before the trial</h3><p>Use the baseline worksheet and data boundary checklist so the room agrees on allowed input, current-state evidence, and stop triggers.</p></div>
+        <div class="card"><h3>During the trial</h3><p>Use the output review rubric, acceptance criteria, and pilot evidence log to compare AI suggestions against the existing workflow.</p></div>
+        <div class="card"><h3>After the trial</h3><p>Use the decision memo, value scorecard, permissions ladder, and audit trail starter before increasing autonomy or expanding scope.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI shadow-mode trial card for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, provide legal or compliance advice, authorize production use, store prompts/logs/transcripts, expose confidential records, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

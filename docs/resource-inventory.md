@@ -185,6 +185,14 @@ Source: public-safe static audit-trail worksheet drafted in this repo from the c
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, confidential logs/prompts/transcripts, compliance/legal advice, or client material. The page explicitly tells attendees to record workflow boundaries, approved input categories, reviewer roles, outcome lanes, evidence pointers, cleanup owners, and revisit triggers instead of exposing customer records, employee data, production logs, raw prompts, raw outputs, account screenshots, credentials, regulated records, vendor contracts, pricing, private repository links, incident details, or confidential strategy.
 Next action: tune after observing which audit, traceability, retention, reviewer-evidence, and defensibility questions appear between evidence logs, output review, permissions ladders, tool-change checks, health reviews, and steering decision records.
 
+### AI shadow-mode trial card
+
+Status: publish-now
+Hub path: `resources/ai-shadow-mode-trial-card.html`
+Source: public-safe static validation worksheet drafted in this repo from the current workshop need to help teams test an AI workflow beside the real process before it affects customers, employees, production systems, live decisions, or final outputs.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, production decisions, compliance/legal advice, confidential logs/prompts/transcripts, account screenshots, private repository contents, contracts, regulated data, incident details, or direct private-resource exposure. The page explicitly frames shadow mode as suggestions/comparison only, with the existing workflow remaining the source of truth until exit criteria and approval are explicit.
+Next action: tune after observing which teams need help validating AI suggestions with safe samples, baseline comparison, review rubrics, stop triggers, and permission-rung exit rules before pilots affect live work.
+
 ### AI tool access request checklist
 
 Status: publish-now

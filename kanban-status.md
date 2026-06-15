@@ -232,6 +232,9 @@
 - [x] **Epic 56: AI audit-trail and defensibility aids** (100% Completed)
   - [x] Story 56.1: Add AI workflow audit trail starter handout
 
+- [x] **Epic 57: AI shadow-mode validation aids** (100% Completed)
+  - [x] Story 57.1: Add AI shadow-mode trial card handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -263,6 +266,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 57.1: Add AI shadow-mode trial card handout
+  - Evidence: created `resources/ai-shadow-mode-trial-card.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 75 HTML files; `git diff --check` passed; private-file blocker passed; gitleaks `--no-git` found no leaks; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-shadow-mode-trial-card.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with shadow-mode links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-shadow-mode-mobile.png` (161367 bytes) and DOM dump persisted `/tmp/a2x-ai-shadow-mode-dom.html` (10022 bytes), confirming the page title, Shadow-mode rule, and public-safe footer markers on 2026-06-15 12:41 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, production decisions, compliance/legal advice, confidential records, or direct private-resource exposure were added.
 
 - [x] Story 56.1: Add AI workflow audit trail starter handout
   - Evidence: created `resources/ai-workflow-audit-trail-starter.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 74 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-workflow-audit-trail-starter.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with audit-trail links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-workflow-audit-trail-mobile.png` (164760 bytes) and DOM dump persisted `/tmp/a2x-ai-workflow-audit-trail-dom.html` (10422 bytes), confirming the page title, Audit trail rule, AI workflow audit trail card, and public-safe footer markers on 2026-06-15 10:29 IDT; implementation commit `f56db5f` was pushed; GitHub Security Checks run `27530976553` succeeded; Pages deployment run `27530975783` succeeded; public smoke returned HTTP 200 for the live hub, AI workflow audit trail starter page, and route chooser with audit-trail links/content visible on 2026-06-15 10:32 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, confidential logs/prompts/transcripts, compliance/legal advice, or direct private-resource exposure were added.
@@ -850,6 +856,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-15 12:41 IDT — Finished Story 57.1: created public-safe AI shadow-mode trial card handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 75 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, production decisions, compliance/legal advice, confidential records, or direct private-resource exposure were added.
+
+- 2026-06-15 12:37 IDT — Started Story 57.1: add a public-safe AI shadow-mode trial card handout after verifying clean repo state at HEAD `3c0250f` and finding no unblocked TODO/BACKLOG items; scope is a static shadow-mode validation worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, production decisions, compliance/legal advice, or direct private-resource exposure.
 
 - 2026-06-15 10:32 IDT — Cleared Story 56.1 post-commit verification: implementation commit `f56db5f` pushed; GitHub Security Checks run `27530976553` and Pages deployment run `27530975783` succeeded; public smoke returned HTTP 200 for the live hub, AI workflow audit trail starter page, and route chooser with audit-trail links/content visible.
 
@@ -1764,4 +1774,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
