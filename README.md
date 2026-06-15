@@ -47,12 +47,14 @@ All changes to `main` must go through a pull request. Do not push directly to `m
 Default workflow:
 
 ```bash
+git checkout main
+git pull --ff-only origin main
 git checkout -b <short-change-branch>
 # make changes
 git add <files>
 git commit -m "<message>"
 git push -u origin <short-change-branch>
-gh pr create --base main --head <short-change-branch>
+gh pr create --base main
 ```
 
 Before merge, the PR must pass the repository security/static checks.
