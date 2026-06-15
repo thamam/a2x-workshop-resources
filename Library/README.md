@@ -20,6 +20,7 @@ Use these before browsing the rest:
 - [`Post-workshop follow-up email template`](../resources/post-workshop-follow-up-email.html)
 - [`Claude Code handoff packet`](../resources/claude-code-handoff-packet.html)
 - [`Claude Code credential routing`](../resources/claude-code-credential-routing.html)
+- [`AI question triage card`](../resources/ai-question-triage-card.html)
 
 ## 2. OpenSpec, PRD, and product workflow
 

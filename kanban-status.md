@@ -247,6 +247,9 @@
 - [x] **Epic 61: AI trial cleanup and retention aids** (100% Completed)
   - [x] Story 61.1: Add AI trial cleanup checklist handout
 
+- [x] **Epic 62: Live workshop question triage aids** (100% Completed)
+  - [x] Story 62.1: Add public-safe AI question triage card handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -278,6 +281,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 62.1: Add public-safe AI question triage card handout
+  - Evidence: created `resources/ai-question-triage-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`; `git diff --check` passed; `python3 scripts/check-static-links.py` passed for 77 HTML files; custom Markdown link check passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-question-triage-card.html`, `/resources/workshop-resource-chooser.html`, `/Library/README.md`, `/docs/resource-inventory.md`, and `/docs/workshop-usage-map.md`; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-question-triage-mobile.png` (142844 bytes) and DOM dump persisted `/tmp/a2x-ai-question-triage-dom.html` (8423 bytes), confirming the page title, Triage rule, Live AI question triage card, and public-safe footer markers on 2026-06-15 21:27 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
 
 - [x] Story 61.1: Add AI trial cleanup checklist handout
   - Evidence: created `resources/ai-trial-cleanup-checklist.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`; `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 36 Markdown files; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-trial-cleanup-checklist.html`, `/resources/workshop-resource-chooser.html`, `/Library/README.md`, `/docs/resource-inventory.md`, and `/docs/workshop-usage-map.md`, with trial-cleanup links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-trial-cleanup-mobile.png` (153873 bytes) and DOM dump persisted `/tmp/a2x-ai-trial-cleanup-dom.html` (9031 bytes), confirming the page title, Cleanup rule, and public-safe footer markers on 2026-06-15 19:12 IDT; implementation PR #4 was squashed/merged to `main` as `b88b412`; GitHub Security Checks run `27560000911` succeeded; Pages deployment run `27559994408` succeeded; public smoke returned HTTP 200 for the live hub, AI trial cleanup checklist page, route chooser, and library with trial-cleanup links/content visible on 2026-06-15 19:17 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, confidential logs/prompts/transcripts, legal/compliance advice, deletion automation, or direct private-resource exposure were added.
@@ -880,6 +886,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-15 21:27 IDT — Finished Story 62.1: created public-safe AI question triage card handout, wired it into the route chooser, library, resource inventory, and workshop usage map, and verified static links for 77 HTML files, Markdown links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
+
+- 2026-06-15 21:24 IDT — Started Story 62.1: add a public-safe AI question triage card handout after verifying clean repo state at HEAD `614abc6` and finding no unblocked TODO/BACKLOG items; scope is a static in-room question-to-next-action worksheet plus route chooser/library/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or direct private-resource exposure.
 
 - 2026-06-15 21:13 IDT — Finished maintenance: consolidated LLM-Wiki materials under `llm-wiki/`, moved the Karpathy copy and legacy Wiki-LLM HTML/audit files there, added `llm-wiki/raw-sources/` with memory/dreaming/agent-memory Markdown source material, updated navigation links, and verified `git diff --check`, static links, private-file blocker, and gitleaks locally.
 
@@ -1820,4 +1830,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

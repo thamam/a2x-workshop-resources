@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Question Triage Card | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe in-room triage card for turning AI workshop questions into safe next actions and the right A2X resource." />
+  <style>
+    :root { color-scheme: dark; --bg:#15120f; --card:#241f18; --card2:#1d1813; --line:#3b3328; --text:#f5ede2; --muted:#b7ac99; --accent:#df7c56; --accent2:#f2bf81; --ok:#97d8a6; --warn:#ffd28c; --bad:#ffa1a1; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2d2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.65rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:214px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,31,24,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:12px; }
+    .line { border:1px dashed #5a4d3c; border-radius:16px; padding:16px; background:rgba(29,24,19,.72); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · live question triage</div>
+    <h1>Turn “Can AI help with this?” into one safe next action.</h1>
+    <p class="lead">Use this card during workshop Q&A, hallway conversations, or team follow-ups when a broad AI question needs to become a safe resource route, not a vague promise or an unsafe data request.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-workshop-discovery-question-bank.html">Open discovery questions</a>
+      <a class="button" href="ai-use-case-intake-brief.html">Define use case</a>
+      <a class="button" href="ai-policy-exception-request.html">Escalate safely</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag warn">Triage rule</div>
+        <h2>Answer the route, not the fantasy.</h2>
+        <p>Do not collect customer data, employee records, production logs, account screenshots, contracts, pricing, private repository links, raw prompts, confidential strategy, credentials, or regulated records while triaging a question. Capture the workflow pattern, risk boundary, safe sample idea, owner role, and next public-safe resource only.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Question lanes</div>
+      <h2>Sort the question before recommending a tool</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">1 · Teach</div><h3>“How does this agent stuff work?”</h3><p>Route to the harness map, CLAUDE.md rules, or first-skill pages. Keep the answer conceptual until the attendee has a safe toy target.</p></div>
+        <div class="card"><div class="tag ok">2 · Discover</div><h3>“Where could we use AI?”</h3><p>Route to discovery questions, prioritization, or use-case intake. Ask for repeated work, safe sample categories, review gates, and owner roles.</p></div>
+        <div class="card"><div class="tag warn">3 · Try</div><h3>“Can we test this next week?”</h3><p>Route to the action plan, experiment charter, data boundary checklist, or prompt-safety preflight. Keep the first trial tiny and reversible.</p></div>
+        <div class="card"><div class="tag warn">4 · Buy or demo</div><h3>“Which tool/vendor should we pick?”</h3><p>Route to the tool scorecard, vendor demo brief, reference check, data-use questions, or procurement prep. Avoid claims and pricing details.</p></div>
+        <div class="card"><div class="tag bad">5 · Govern</div><h3>“Who approves or owns this?”</h3><p>Route to owner card, permissions ladder, policy exception request, sponsor alignment, steering cadence, or decision log before expanding scope.</p></div>
+        <div class="card"><div class="tag bad">6 · Stop</div><h3>“This might be risky.”</h3><p>Route to prompt-safety, incident pause, near-miss debrief, rollback drill, or cleanup checklist. Stop collection of sensitive details immediately.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>Live AI question triage card</h2>
+      <div class="worksheet">
+        <div class="line"><strong>Question in plain language:</strong><br />[What is the attendee asking, with no names, customer details, screenshots, secrets, or private links?]</div>
+        <div class="line"><strong>Question lane:</strong><br />☐ Teach · ☐ Discover · ☐ Try · ☐ Buy/demo · ☐ Govern · ☐ Stop</div>
+        <div class="line"><strong>Workflow pattern:</strong><br />[Repeated task or decision pattern, described generically]</div>
+        <div class="line"><strong>Safe sample idea:</strong><br />[Toy, fictional, redacted, or approved public-safe sample category]</div>
+        <div class="line"><strong>Human gate:</strong><br />[Reviewer role, owner role, approval route, or pause trigger needed before action]</div>
+        <div class="line"><strong>Recommended next resource:</strong><br />[Hub resource link or section] because [one-sentence reason]</div>
+        <div class="line"><strong>Next safe action:</strong><br />☐ Open resource now · ☐ Define use case · ☐ Run toy exercise · ☐ Ask owner/reviewer · ☐ Escalate boundary · ☐ Park until approved</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Fast routing examples</div>
+      <h2>Use the smallest useful answer</h2>
+      <div class="grid">
+        <div class="card"><h3>If the question is vague</h3><ul><li>Ask for the repeated workflow.</li><li>Name the safe sample category.</li><li>Open discovery or use-case intake.</li></ul></div>
+        <div class="card"><h3>If the question is excited</h3><ul><li>Keep the promise narrow.</li><li>Pick one reversible experiment.</li><li>Route to action plan or experiment charter.</li></ul></div>
+        <div class="card"><h3>If the question is risky</h3><ul><li>Stop sensitive detail collection.</li><li>Name the boundary.</li><li>Route to policy exception, pause, or cleanup.</li></ul></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI question triage card for A2X workshops. This page does not collect data, run analytics, add tracking, create lead capture, provide legal/compliance advice, expose confidential records, link private/internal resources, make pricing claims, or authorize production changes.
+    </footer>
+  </main>
+</body>
+</html>
