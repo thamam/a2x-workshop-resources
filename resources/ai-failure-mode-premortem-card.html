@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Failure-Mode Pre-Mortem Card | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for rehearsing likely AI workflow failure modes before a pilot, workshop exercise, or rollout decision." />
+  <style>
+    :root { color-scheme: dark; --bg:#14120f; --card:#241f18; --card2:#1c1813; --line:#3b3328; --text:#f5ede2; --muted:#b7ac99; --accent:#df7c56; --accent2:#f2bf81; --ok:#97d8a6; --warn:#ffd28c; --bad:#ffa1a1; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2d2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.6rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:930px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:830px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:214px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,31,24,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:12px; }
+    .line { border:1px dashed #5a4d3c; border-radius:16px; padding:16px; background:rgba(29,24,19,.72); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · failure rehearsal</div>
+    <h1>Ask “how could this fail?” before the AI workflow gets momentum.</h1>
+    <p class="lead">Use this card before a pilot, shadow-mode trial, workshop exercise, or rollout conversation when the team needs to name likely failure modes, early warning signs, and safe responses without collecting sensitive examples.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-pilot-risk-register.html">Open risk register</a>
+      <a class="button" href="ai-workflow-rollback-drill-card.html">Drill rollback</a>
+      <a class="button" href="ai-incident-pause-card.html">Pause an incident</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag warn">Pre-mortem rule</div>
+        <h2>Invent the failure pattern, not the confidential example.</h2>
+        <p>Do not paste customer data, employee records, production logs, account screenshots, contracts, pricing, private repository links, raw prompts, confidential strategy, credentials, or regulated records into this exercise. Describe generic workflow patterns, safe sample categories, likely human mistakes, review gaps, and response owners only.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Failure lanes</div>
+      <h2>Rehearse the obvious ways the workflow can drift</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">1 · Input</div><h3>Unsafe or unclear inputs arrive</h3><p>The user pastes sensitive details, vague context, stale files, or examples the reviewer cannot verify.</p></div>
+        <div class="card"><div class="tag ok">2 · Output</div><h3>The answer sounds right but is wrong</h3><p>The draft is plausible, incomplete, overconfident, outdated, or missing evidence that a human reviewer needs.</p></div>
+        <div class="card"><div class="tag warn">3 · Review</div><h3>The human gate gets skipped</h3><p>People treat an AI draft as a decision, forward it too soon, or cannot tell who owns the final check.</p></div>
+        <div class="card"><div class="tag warn">4 · Scope</div><h3>The pilot expands quietly</h3><p>A toy or shadow-mode test starts touching new data, users, tools, or decisions before approval catches up.</p></div>
+        <div class="card"><div class="tag bad">5 · Operations</div><h3>Support and rollback are missing</h3><p>Users do not know who to ask, how to pause, what fallback process to use, or what evidence proves recovery.</p></div>
+        <div class="card"><div class="tag bad">6 · Memory</div><h3>Lessons vanish after the demo</h3><p>Evidence, assumptions, decisions, and cleanup duties are not captured, so the same risk returns later.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI failure-mode pre-mortem card</h2>
+      <div class="worksheet">
+        <div class="line"><strong>Workflow or pilot:</strong><br />[Generic workflow name and intended user group, with no private names or source links]</div>
+        <div class="line"><strong>Failure lane:</strong><br />☐ Input · ☐ Output · ☐ Review · ☐ Scope · ☐ Operations · ☐ Memory</div>
+        <div class="line"><strong>Likely failure pattern:</strong><br />[What goes wrong in plain language, described generically]</div>
+        <div class="line"><strong>Early warning sign:</strong><br />[Observable cue, support signal, review miss, quality drift, or boundary question]</div>
+        <div class="line"><strong>Preventive guardrail:</strong><br />[Allowed input, reviewer gate, owner role, evidence check, permissions limit, or training reminder]</div>
+        <div class="line"><strong>Response if it happens:</strong><br />☐ Pause · ☐ Narrow scope · ☐ Escalate owner · ☐ Re-run safe sample · ☐ Roll back · ☐ Clean up trial leftovers</div>
+        <div class="line"><strong>Owner and next review:</strong><br />[Role responsible] will review [evidence signal] by [date/event]</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Run it in ten minutes</div>
+      <h2>Keep the rehearsal lightweight</h2>
+      <div class="grid">
+        <div class="card"><h3>Start with three failures</h3><ul><li>Pick one input risk.</li><li>Pick one review or scope risk.</li><li>Pick one operations or memory risk.</li></ul></div>
+        <div class="card"><h3>Name the first tripwire</h3><ul><li>Choose the earliest visible warning.</li><li>Define who sees it.</li><li>Write the pause or escalation route.</li></ul></div>
+        <div class="card"><h3>Connect the next resource</h3><ul><li>Use risk register for tracking.</li><li>Use rollback drill for recovery practice.</li><li>Use audit trail for approved evidence.</li></ul></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI failure-mode pre-mortem card for A2X workshops. This page does not collect data, run analytics, add tracking, create lead capture, provide legal/compliance advice, expose confidential records, link private/internal resources, make pricing claims, or authorize production changes.
+    </footer>
+  </main>
+</body>
+</html>

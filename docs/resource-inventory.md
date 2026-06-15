@@ -289,6 +289,14 @@ Source: public-safe static rollback/recovery rehearsal worksheet drafted in this
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, or client material. The page explicitly tells attendees to rehearse pause triggers, fallback paths, recovery evidence, cleanup steps, restart conditions, and next-state decisions without recording customer records, employee data, production logs, account screenshots, credentials, regulated data, vendor contracts, pricing claims, private repository links, raw prompts, incident transcripts, or internal strategy.
 Next action: tune after observing which rollback, fallback, user-message, recovery-evidence, and restart-authority gaps appear between rollout readiness, operations handoff, tool-change checks, incident pauses, and health reviews.
 
+### AI failure-mode pre-mortem card
+
+Status: publish-now
+Hub path: `resources/ai-failure-mode-premortem-card.html`
+Source: public-safe static failure-rehearsal worksheet drafted in this repo from the current workshop need to help teams name likely AI workflow failure patterns before a pilot, shadow-mode test, or rollout conversation gathers momentum.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, incident-specific confidential records, production logs, or client material. The page explicitly tells attendees to describe generic workflow patterns, safe sample categories, warning signs, guardrails, and response owners instead of pasting sensitive examples, private links, raw prompts, logs, account screenshots, contracts, regulated records, or confidential strategy.
+Next action: tune after observing which failure lanes — input, output, review, scope, operations, or memory — attendees need most help rehearsing before risk registers, rollback drills, incident pauses, or audit-trail setup.
+
 ### AI pilot evidence log
 
 Status: publish-now
