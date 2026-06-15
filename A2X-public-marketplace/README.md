@@ -1,19 +1,18 @@
-# A2X Public Marketplace Placeholder
+# A2X Public Marketplace
 
-This section is intentionally a placeholder.
+This section points to Tomer's public A2X Marketplace material while the full workshop-facing marketplace package is still being organized.
 
-Tomer is still organizing the A2X public marketplace material. Do not treat this folder as ready workshop content yet.
+## Direct links
 
-## Intended future contents
+- [Marketplace links page](marketplace-links.md)
+- [A2X Marketplace source repo](https://github.com/thamam/A2X-marketplace)
+- [layout-designer.html in the marketplace repo](https://github.com/thamam/A2X-marketplace/blob/main/layout-designer.html)
 
-- curated public marketplace overview,
-- selected skills/plugins/workflow examples,
-- setup notes that are safe for attendees,
-- review gates and data-safety boundaries,
-- links only after source material is cleaned and approved.
+## Existing workshop-safe material
 
-## For tomorrow
+- [A2X Marketplace overview](../resources/a2x-marketplace-overview.html)
+- [A2X Marketplace tutorial](../resources/a2x-marketplace-tutorial.html)
 
-Use this folder only to signal that marketplace material is coming. Do not present it as complete.
+## Current status
 
-Related existing public-safe overview, if needed: [`../resources/a2x-marketplace-overview.html`](../resources/a2x-marketplace-overview.html)
+The source repo is now linked here by Tomer's request. Treat it as a direct source link, not a fully curated attendee install path. Review the target repo before asking attendees to install or run anything from it.

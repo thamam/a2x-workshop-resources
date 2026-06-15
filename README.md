@@ -19,7 +19,7 @@ If you arrived here from a workshop, start with [`START-HERE.md`](START-HERE.md)
 - [`llm-wiki/raw-sources/`](llm-wiki/raw-sources/) — memory, dreaming, consolidation, and AI-agent memory source Markdown.
 - [`llm-wiki/local-copies/karpathy-llm-wiki.md`](llm-wiki/local-copies/karpathy-llm-wiki.md) — local copy of Karpathy's LLM Wiki Markdown.
 - [`Examples/OpenSpec/`](Examples/OpenSpec/) — empty OpenSpec tree for Tomer to fill later.
-- [`A2X-public-marketplace/`](A2X-public-marketplace/) — placeholder while marketplace material is organized.
+- [`A2X-public-marketplace/`](A2X-public-marketplace/) — marketplace links and workshop-safe material while the full marketplace package is organized.
 - [`Library/`](Library/) — curated index of existing artifacts.
 
 ## What belongs here
