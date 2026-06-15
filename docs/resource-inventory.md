@@ -169,6 +169,14 @@ Source: public-safe static account-governance worksheet drafted in this repo fro
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, account screenshots, billing details, or client material. The page explicitly tells attendees to request access with generic roles, approved input categories, reviewer roles, support paths, pause triggers, and cleanup owners instead of exposing tokens, customer records, employee data, production logs, private repository contents, contracts, regulated records, confidential strategy, or internal architecture.
 Next action: tune after observing which access, account-route, support, review, offboarding, or policy questions appear before workshop exercises, Claude Code setup, pilot trials, vendor accounts, and routine AI tool use.
 
+### AI permissions ladder
+
+Status: publish-now
+Hub path: `resources/ai-permissions-ladder.html`
+Source: public-safe static autonomy-boundary worksheet drafted in this repo from the current workshop need to define how far Claude Code, assistants, agents, or AI workflows may act before approval.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, broad rollout authorization, account screenshots, or client material. The page explicitly tells attendees to use generic roles, approved input categories, reviewer roles, escalation routes, rollback paths, and stop triggers instead of exposing customer records, employee data, production logs, credentials, private repository contents, contracts, regulated records, incident transcripts, confidential strategy, or internal architecture.
+Next action: tune after observing which autonomy, approval, escalation, rollback, and stop-trigger questions appear when attendees move from prompt drafting into agentic workflow execution.
+
 ### AI pilot data boundary checklist
 
 Status: publish-now

@@ -214,6 +214,16 @@ Attendee action: write one scoped use case, allowed input categories, do-not-pas
 
 Status: ready access-governance handout.
 
+### Autonomy boundaries: AI permissions ladder
+
+Resource: `resources/ai-permissions-ladder.html`.
+
+Use when: attendees want Claude Code, an assistant, an agent, or an AI workflow to move beyond observe/draft mode and need to decide what level of autonomy is safe before any sandbox edit, external proposal, or approved execution.
+
+Attendee action: choose the current permission rung, allowed inputs, do-not-use list, human approval gate, exact allowed action, escalation route, rollback/fallback path, stop trigger, and evidence required before raising autonomy.
+
+Status: ready autonomy-boundary handout.
+
 ### Pilot data boundary: AI pilot data boundary checklist
 
 Resource: `resources/ai-pilot-data-boundary-checklist.html`.
