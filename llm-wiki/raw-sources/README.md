@@ -7,6 +7,12 @@ This folder contains prepared source material for LLM-Wiki workshop demos.
 - [`memory/`](memory/) — memory, dreaming, memory consolidation, and AI-agent memory source bundle for the synthesis demo.
 - [`kids-books/`](kids-books/) — children’s story sources for simple ingestion demos.
 
+## Quick chooser
+
+- **Use `memory/`** when the goal is to show Claude Code building a linked conceptual wiki from multiple technical/research sources.
+- **Use `kids-books/`** when the goal is to show the mechanics of ingestion, page splitting, and link creation without making attendees parse research material.
+- **Do not mix both in the first pass.** Pick one path, build a small wiki, then add the second corpus only if there is time.
+
 ## Memory demo recommended ingest order
 
 1. [`memory/conscious-and-unconscious-memory-systems.md`](memory/conscious-and-unconscious-memory-systems.md) — human memory systems; metadata/abstract only because the full PMC article is not redistributable through the NCBI Open Access subset.
