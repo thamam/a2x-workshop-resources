@@ -34,6 +34,16 @@ Attendee action: choose the right next resource by goal: harness mental model, C
 
 Status: ready navigation aid.
 
+### Live Q&A: AI question triage card
+
+Resource: `resources/ai-question-triage-card.html`.
+
+Use when: attendees ask broad “can AI help with this?” questions and Tomer needs to route the moment into teach, discover, try, buy/demo, govern, or stop without collecting sensitive details or making vague promises.
+
+Attendee action: capture the question generically, name the workflow pattern, safe sample idea, human gate, recommended hub resource, and one next safe action.
+
+Status: ready live-triage handout.
+
 ### Workshop discovery: AI workshop discovery question bank
 
 Resource: `resources/ai-workshop-discovery-question-bank.html`.

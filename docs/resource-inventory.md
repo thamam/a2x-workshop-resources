@@ -25,6 +25,14 @@ Source: public-safe static navigation aid drafted in this repo from the current 
 Safety notes: links only to existing public-safe hub resources and docs; no private source links, credentials, local paths, analytics, lead capture, or client material.
 Next action: tune route labels after observing which workshop moments cause attendee confusion.
 
+### AI question triage card
+
+Status: publish-now
+Hub path: `resources/ai-question-triage-card.html`
+Source: public-safe static live-question triage handout drafted in this repo from the current workshop need to turn broad attendee AI questions into safe next actions and existing hub resource routes.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to capture workflow patterns, safe sample ideas, owner/reviewer roles, and next public-safe resources instead of collecting sensitive details, private links, pricing, screenshots, secrets, raw prompts, logs, contracts, or confidential strategy.
+Next action: tune after observing which live workshop questions need clearer teach/discover/try/buy/govern/stop routing.
+
 ### AI workshop discovery question bank
 
 Status: publish-now
