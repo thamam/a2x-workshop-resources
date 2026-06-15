@@ -224,6 +224,16 @@ Attendee action: ask documented data-use questions using generic workflow and in
 
 Status: ready data-use diligence handout.
 
+### Audit traceability: AI workflow audit trail starter
+
+Resource: `resources/ai-workflow-audit-trail-starter.html`.
+
+Use when: attendees need a lightweight record of why AI-assisted work was allowed, reviewed, approved, revised, escalated, paused, or stopped without storing raw prompts, raw outputs, transcripts, logs, private documents, or sensitive examples.
+
+Attendee action: record the workflow boundary, tool/model class, approved input category, human review outcome, approved evidence pointer, retention/cleanup rule, and revisit trigger using only generic or approved evidence locations.
+
+Status: ready audit-trail handout.
+
 ### Access governance: AI tool access request checklist
 
 Resource: `resources/ai-tool-access-request-checklist.html`.

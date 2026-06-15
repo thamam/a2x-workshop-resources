@@ -177,6 +177,14 @@ Source: public-safe static vendor/internal-tool diligence worksheet drafted in t
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, contract terms, confidential vendor/customer material, or client material. The page explicitly tells attendees to ask with workflow categories, proposed input categories, controls, documented evidence, and confidence levels instead of exposing customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contract terms, pricing, private repository links, private architecture, incident transcripts, or confidential strategy.
 Next action: tune after observing which training, retention, support-access, logging, export, deletion, or evidence-confidence questions appear between vendor demos, procurement questionnaires, data-boundary reviews, access approvals, and pilot continuation decisions.
 
+### AI workflow audit trail starter
+
+Status: publish-now
+Hub path: `resources/ai-workflow-audit-trail-starter.html`
+Source: public-safe static audit-trail worksheet drafted in this repo from the current workshop follow-up need to preserve AI workflow decision evidence, reviewer outcomes, retention rules, and revisit triggers without storing sensitive prompts, logs, transcripts, or private artifacts.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, confidential logs/prompts/transcripts, compliance/legal advice, or client material. The page explicitly tells attendees to record workflow boundaries, approved input categories, reviewer roles, outcome lanes, evidence pointers, cleanup owners, and revisit triggers instead of exposing customer records, employee data, production logs, raw prompts, raw outputs, account screenshots, credentials, regulated records, vendor contracts, pricing, private repository links, incident details, or confidential strategy.
+Next action: tune after observing which audit, traceability, retention, reviewer-evidence, and defensibility questions appear between evidence logs, output review, permissions ladders, tool-change checks, health reviews, and steering decision records.
+
 ### AI tool access request checklist
 
 Status: publish-now
