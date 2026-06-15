@@ -226,6 +226,9 @@
 - [x] **Epic 54: AI procurement readiness aids** (100% Completed)
   - [x] Story 54.1: Add AI procurement questionnaire prep handout
 
+- [x] **Epic 55: AI vendor data-use diligence aids** (100% Completed)
+  - [x] Story 55.1: Add AI vendor data-use questions handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -257,6 +260,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 55.1: Add AI vendor data-use questions handout
+  - Evidence: created `resources/ai-vendor-data-use-questions.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 73 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-vendor-data-use-questions.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with vendor data-use links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-vendor-data-use-mobile.png` (160196 bytes) and DOM dump persisted `/tmp/a2x-ai-vendor-data-use-dom.html` (10544 bytes), confirming the page title, Data-use rule, Training question, and public-safe footer markers on 2026-06-15 08:18 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, confidential vendor/customer material, legal advice, procurement submission, contract terms, or direct private-resource exposure were added.
 
 - [x] Story 54.1: Add AI procurement questionnaire prep handout
   - Evidence: created `resources/ai-procurement-questionnaire-prep.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 72 HTML files; private-file blocker passed; gitleaks `--no-git` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-procurement-questionnaire-prep.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with procurement-prep links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-procurement-questionnaire-prep-mobile.png` (160113 bytes) and DOM dump persisted `/tmp/a2x-ai-procurement-questionnaire-prep-dom.html` (10255 bytes), confirming the page title, Procurement rule, and public-safe footer markers on 2026-06-15 06:10 IDT; implementation commit `b828f3e` was pushed; GitHub Security Checks run `27521720353` succeeded; Pages deployment run `27521719709` succeeded; public smoke returned HTTP 200 for the live hub, AI procurement questionnaire prep page, and route chooser with procurement-prep links/content visible on 2026-06-15 06:12 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, contract terms, customer/vendor confidential material, legal advice, procurement submission, or direct private-resource exposure were added.
@@ -838,6 +844,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-15 08:18 IDT — Finished Story 55.1: created public-safe AI vendor data-use questions handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 73 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, confidential vendor/customer material, legal advice, procurement submission, contract terms, or direct private-resource exposure were added.
+
+- 2026-06-15 08:15 IDT — Started Story 55.1: add a public-safe AI vendor data-use questions handout after verifying clean repo state at HEAD `dcdc62e` and finding no unblocked TODO/BACKLOG items; scope is a static vendor/internal-tool diligence worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, confidential vendor/customer material, legal advice, procurement submission, contract terms, or direct private-resource exposure.
 
 - 2026-06-15 06:12 IDT — Cleared Story 54.1 post-commit verification: implementation commit `b828f3e` pushed; GitHub Security Checks run `27521720353` and Pages deployment run `27521719709` succeeded; public smoke returned HTTP 200 for the live hub, AI procurement questionnaire prep page, and route chooser with procurement-prep links/content visible.
 
@@ -1740,4 +1750,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

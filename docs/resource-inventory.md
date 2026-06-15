@@ -169,6 +169,14 @@ Source: public-safe static procurement-readiness worksheet drafted in this repo 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, contract terms, customer/vendor confidential material, or client material. The page explicitly tells attendees to answer with workflow categories, allowed input categories, controls, owner roles, evidence, and approval gaps instead of exposing customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contract terms, pricing, private repository links, private architecture, incident transcripts, or confidential strategy.
 Next action: tune after observing which procurement, security, legal, risk, access, retention, exit, or evidence questions appear between vendor demos, trial access requests, policy exceptions, and pilot decisions.
 
+### AI vendor data-use questions
+
+Status: publish-now
+Hub path: `resources/ai-vendor-data-use-questions.html`
+Source: public-safe static vendor/internal-tool diligence worksheet drafted in this repo from the current workshop follow-up need to ask concrete questions about AI data use, training, retention, logging, access, export, deletion, and evidence gaps before access, procurement, pilot renewal, or tool expansion.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, contract terms, confidential vendor/customer material, or client material. The page explicitly tells attendees to ask with workflow categories, proposed input categories, controls, documented evidence, and confidence levels instead of exposing customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contract terms, pricing, private repository links, private architecture, incident transcripts, or confidential strategy.
+Next action: tune after observing which training, retention, support-access, logging, export, deletion, or evidence-confidence questions appear between vendor demos, procurement questionnaires, data-boundary reviews, access approvals, and pilot continuation decisions.
+
 ### AI tool access request checklist
 
 Status: publish-now

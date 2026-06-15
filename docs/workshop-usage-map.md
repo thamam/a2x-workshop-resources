@@ -214,6 +214,16 @@ Attendee action: sort questions into use case, data boundary, access/admin, revi
 
 Status: ready procurement-readiness handout.
 
+### Data-use diligence: AI vendor data-use questions
+
+Resource: `resources/ai-vendor-data-use-questions.html`.
+
+Use when: attendees need to ask an AI vendor or internal tool owner how prompts, files, outputs, logs, metadata, training, retention, support access, export, and deletion work before access expands, procurement answers are finalized, or a pilot continues.
+
+Attendee action: ask documented data-use questions using generic workflow and input categories; separate documented answers from vendor claims and unknowns; decide whether the current safe boundary is test with approved categories, clarify first, or do not proceed.
+
+Status: ready data-use diligence handout.
+
 ### Access governance: AI tool access request checklist
 
 Resource: `resources/ai-tool-access-request-checklist.html`.
