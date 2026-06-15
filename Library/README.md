@@ -82,6 +82,7 @@ Use these before browsing the rest:
 - [`AI incident pause card`](../resources/ai-incident-pause-card.html)
 - [`AI near-miss debrief card`](../resources/ai-near-miss-debrief-card.html)
 - [`AI workflow audit trail starter`](../resources/ai-workflow-audit-trail-starter.html)
+- [`AI trial cleanup checklist`](../resources/ai-trial-cleanup-checklist.html)
 - [`AI policy exception request`](../resources/ai-policy-exception-request.html)
 
 ## 9. Vendor, procurement, and marketplace
