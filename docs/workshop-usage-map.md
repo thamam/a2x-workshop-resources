@@ -54,6 +54,16 @@ Attendee action: choose a repeated low-risk workflow, define a small harness wit
 
 Status: ready follow-up handout.
 
+### Follow-up communication: post-workshop follow-up email template
+
+Resource: `resources/post-workshop-follow-up-email.html`.
+
+Use when: Tomer or an attendee wants to send a workshop recap that points to one safe next action without turning the message into lead capture, tracking, private-data collection, pricing claims, or a broad automation promise.
+
+Attendee action: copy the email structure, replace placeholders with public-safe hub links, repeat the do-not-paste boundary, and ask for one reversible workflow, safe sample, owner, reviewer, and evidence signal.
+
+Status: ready follow-up communication handout.
+
 ### Session handoff: Claude Code handoff packet
 
 Resource: `resources/claude-code-handoff-packet.html`.
@@ -253,6 +263,16 @@ Use when: an AI assistant, agent, prompt, vendor tool, or workflow almost causes
 Attendee action: capture the generic near-miss pattern, boundary nearly crossed, catch point, prevention change, owner, and restart condition without recording sensitive raw incident details in the workshop material.
 
 Status: ready near-miss learning handout.
+
+### Trial cleanup: AI trial cleanup checklist
+
+Resource: `resources/ai-trial-cleanup-checklist.html`.
+
+Use when: attendees have finished a shadow-mode run, vendor demo, tiny workflow trial, or workshop experiment and need to decide what approved evidence stays, what sensitive leftovers should be removed through approved channels, and who owns follow-through before another run.
+
+Attendee action: list artifact categories, retain only approved evidence, route raw prompts/outputs/logs/transcripts/exports/account artifacts to the approved cleanup process, close temporary access, and choose stop, rerun, shadow-mode, escalation, or decision-memo as the next lane.
+
+Status: ready trial-cleanup handout.
 
 ### Access governance: AI tool access request checklist
 
