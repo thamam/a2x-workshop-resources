@@ -7,6 +7,7 @@ This is the workshop-safe version of Andrej Karpathy's LLM Wiki idea: keep raw m
 - Karpathy gist: <https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f>
 - Local raw Markdown copy: [`local-copies/karpathy-llm-wiki.md`](local-copies/karpathy-llm-wiki.md)
 - For an MVP leaner version with decisions already made, use [`local-copies/llm-wiki-mvp.md`](local-copies/llm-wiki-mvp.md).
+- Example already prepared LLM-Wiki MVP repo: <https://github.com/thamam/llm-wiki-mvp>
 
 ## Goal
 
