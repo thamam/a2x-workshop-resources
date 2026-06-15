@@ -161,6 +161,14 @@ Source: public-safe static vendor-continuity worksheet drafted in this repo from
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, contract terms, or client material. The page explicitly tells attendees to use generic export categories, cleanup questions, fallback paths, owner roles, and trigger signals instead of exposing customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contract details, private repository links, internal architecture, or confidential strategy.
 Next action: tune after observing which exit-path questions buyers ask between vendor demos, reference checks, decision meetings, renewals, tool-change reviews, and pilot stop/continue decisions.
 
+### AI procurement questionnaire prep
+
+Status: publish-now
+Hub path: `resources/ai-procurement-questionnaire-prep.html`
+Source: public-safe static procurement-readiness worksheet drafted in this repo from the current workshop follow-up need to prepare security, legal, procurement, and risk questionnaire answers for AI tool, pilot, or vendor evaluations.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, contract terms, customer/vendor confidential material, or client material. The page explicitly tells attendees to answer with workflow categories, allowed input categories, controls, owner roles, evidence, and approval gaps instead of exposing customer records, employee data, production logs, account screenshots, credentials, regulated records, vendor contract terms, pricing, private repository links, private architecture, incident transcripts, or confidential strategy.
+Next action: tune after observing which procurement, security, legal, risk, access, retention, exit, or evidence questions appear between vendor demos, trial access requests, policy exceptions, and pilot decisions.
+
 ### AI tool access request checklist
 
 Status: publish-now

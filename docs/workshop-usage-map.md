@@ -204,6 +204,16 @@ Attendee action: write generic export categories, cleanup questions, fallback pa
 
 Status: ready vendor-continuity handout.
 
+### Procurement readiness: AI procurement questionnaire prep
+
+Resource: `resources/ai-procurement-questionnaire-prep.html`.
+
+Use when: attendees are evaluating an AI tool, pilot, or vendor and security, legal, procurement, or risk questionnaires need answers before trial approval, access, renewal, or a stop/continue decision.
+
+Attendee action: sort questions into use case, data boundary, access/admin, review/evidence, retention/exit, and open-gap lanes; answer with safe categories, controls, owner roles, and approved evidence rather than confidential details.
+
+Status: ready procurement-readiness handout.
+
 ### Access governance: AI tool access request checklist
 
 Resource: `resources/ai-tool-access-request-checklist.html`.

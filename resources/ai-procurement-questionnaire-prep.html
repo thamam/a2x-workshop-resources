@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI procurement questionnaire prep | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for preparing AI procurement, security, legal, and risk questionnaire answers without exposing confidential details." />
+  <style>
+    :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9f9f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.2rem, 6vw, 4.8rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:10px; }
+    .lane { border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; gap:8px; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · procurement readiness</div>
+    <h1>Prep procurement answers before the questionnaire becomes the project.</h1>
+    <p class="lead">Use this public-safe worksheet when an AI tool, pilot, or vendor evaluation triggers security, legal, procurement, or risk questions. It helps teams collect answer categories, owners, evidence, and gaps without pasting confidential details into a shared workspace.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-vendor-demo-brief.html">Brief a vendor demo</a>
+      <a class="button" href="ai-policy-exception-request.html">Request a policy exception</a>
+      <a class="button" href="ai-pilot-data-boundary-checklist.html">Set data boundaries</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag ok">Procurement rule</div>
+        <h2>Answer with categories, controls, owners, and evidence — not secrets.</h2>
+        <p>Prepare what the reviewer needs to decide: workflow purpose, allowed input categories, review gates, retention expectations, admin ownership, support route, and open gaps. Keep this worksheet generic: no customer records, employee data, production logs, credentials, account screenshots, private repository links, vendor contract terms, pricing, regulated records, incident transcripts, private architecture, or confidential strategy.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Questionnaire lanes</div>
+      <h2>Sort questions before answering them</h2>
+      <div class="grid">
+        <div class="lane"><div class="tag ok">Use case</div><strong>What business workflow is being evaluated?</strong><p>Name the repeated workflow, user role, expected output, human review point, and decision this evaluation supports.</p></div>
+        <div class="lane"><div class="tag ok">Data boundary</div><strong>What input categories are allowed?</strong><p>List approved categories, do-not-use categories, redaction rules, and where unclear data gets escalated.</p></div>
+        <div class="lane"><div class="tag warn">Access and admins</div><strong>Who can use or administer the tool?</strong><p>Identify generic roles, access request path, account owner, reviewer, offboarding trigger, and support route.</p></div>
+        <div class="lane"><div class="tag warn">Review and evidence</div><strong>How will output be checked?</strong><p>Define pass/revise/stop criteria, reviewer role, required logs or screenshots, and evidence that stays safe to share.</p></div>
+        <div class="lane"><div class="tag bad">Retention and exit</div><strong>What happens if the tool is paused or rejected?</strong><p>Name export categories, cleanup owner, fallback workflow, communication path, and stop or renegotiate triggers.</p></div>
+        <div class="lane"><div class="tag bad">Open gaps</div><strong>Which answers need approval?</strong><p>Route unknown legal, security, data, procurement, or policy questions to named reviewers instead of guessing.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Safe answer pattern</div>
+      <h2>Use this structure for each questionnaire item</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">1 · Translate</div><h3>Restate the question in plain language</h3><ul><li>What decision is the reviewer trying to make?</li><li>Which workflow, data, user, or control is in scope?</li><li>Which details are unsafe to paste into the shared draft?</li></ul></div>
+        <div class="card"><div class="tag ok">2 · Answer by category</div><h3>Use approved patterns, not raw details</h3><ul><li>Allowed inputs: generic categories.</li><li>Controls: review gates and owner roles.</li><li>Evidence: safe artifacts or links to approved internal records.</li></ul></div>
+        <div class="card"><div class="tag warn">3 · Mark confidence</div><h3>Separate known, assumed, and blocked</h3><ul><li>Known: verified by policy, owner, or artifact.</li><li>Assumed: needs confirmation before submission.</li><li>Blocked: requires reviewer input or vendor answer.</li></ul></div>
+        <div class="card"><div class="tag bad">4 · Escalate gaps</div><h3>Do not invent a control</h3><ul><li>Send open questions to security, legal, procurement, sponsor, or tool owner.</li><li>Keep confidential evidence in approved channels.</li><li>Pause the evaluation if the gap changes the risk boundary.</li></ul></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI procurement questionnaire prep card</h2>
+      <div class="worksheet">
+        <p><strong>Tool, pilot, or vendor under review:</strong> [generic tool category or vendor evaluation name].</p>
+        <p><strong>Workflow being evaluated:</strong> [one repeated workflow and user role].</p>
+        <p><strong>Decision this questionnaire supports:</strong> [demo, trial, access approval, pilot continuation, renewal, or stop decision].</p>
+        <p><strong>Allowed input categories:</strong> [toy repo, fictional sample, redacted notes, approved public docs, sanitized examples].</p>
+        <p><strong>Do-not-use list:</strong> [customer records, employee data, production logs, credentials, account screenshots, private repositories, contracts, regulated records, internal strategy].</p>
+        <p><strong>Human review gate:</strong> [reviewer role, evidence required, stop condition].</p>
+        <p><strong>Access/admin owner:</strong> [role responsible for access, support, offboarding, and policy questions].</p>
+        <p><strong>Evidence safe to reference:</strong> [public docs, approved policy link, sanitized diagram, test result, review rubric, decision memo].</p>
+        <p><strong>Open questions:</strong> [security/legal/procurement/data/vendor answers needed before submission].</p>
+        <p><strong>Submission rule:</strong> [who reviews the final answer set before it leaves the team].</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Good next moves</div>
+      <h2>Pair this with the rest of the field kit</h2>
+      <div class="grid">
+        <div class="card"><h3>Before a vendor demo</h3><p>Use the vendor demo brief so the questionnaire stays tied to one workflow, safe sample, review gate, and decision evidence.</p></div>
+        <div class="card"><h3>Before access approval</h3><p>Use the access request checklist and permissions ladder to define account path, allowed inputs, reviewer, and autonomy level.</p></div>
+        <div class="card"><h3>Before a policy exception</h3><p>Use the policy exception request when procurement questions reveal a boundary that needs explicit approval before the trial proceeds.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI procurement questionnaire prep for A2X workshops. This page does not collect data, run model calls, use analytics, make pricing claims, provide legal advice, submit procurement answers, expose confidential records, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>
