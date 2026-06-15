@@ -4,635 +4,87 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>A2X Workshop Resources</title>
-  <meta name="description" content="Public resources for A2X Claude Code workshops." />
+  <meta name="description" content="Start-here page for A2X Claude Code workshop resources." />
   <style>
     :root { color-scheme: dark; --bg:#16130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f3ece1; --muted:#b5ab98; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2b2118 0, var(--bg) 36rem); color:var(--text); line-height:1.55; }
-    a { color: inherit; }
-    main { max-width: 1080px; margin: 0 auto; padding: 52px 20px 36px; }
-    .eyebrow { color: var(--accent2); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 800; }
-    h1 { font-size: clamp(2.35rem, 7vw, 5.4rem); line-height: .96; margin: 18px 0; letter-spacing: -.055em; max-width: 880px; }
-    h2 { font-size: clamp(1.45rem, 3vw, 2.2rem); margin: 0 0 10px; letter-spacing:-.025em; }
-    h3 { font-size:1.15rem; margin:12px 0 8px; }
-    p { margin:0; color:var(--muted); }
-    .lead { color: var(--muted); font-size: 1.18rem; max-width: 760px; }
-    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:radial-gradient(circle at top left,#2b2118 0,var(--bg) 34rem); color:var(--text); line-height:1.55; }
+    main { max-width:980px; margin:0 auto; padding:52px 20px 40px; }
+    a { color:inherit; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.35rem,7vw,5rem); line-height:.96; margin:16px 0; letter-spacing:-.055em; max-width:850px; }
+    h2 { font-size:clamp(1.35rem,3vw,2rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; }
+    p, li { color:var(--muted); }
+    .lead { font-size:1.16rem; max-width:760px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
     .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
     .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
-    section { margin-top:46px; }
-    .section-head { display:flex; justify-content:space-between; gap:16px; align-items:end; margin-bottom:16px; }
-    .section-head p { max-width:620px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
-    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:210px; text-decoration:none; display:flex; flex-direction:column; justify-content:space-between; }
-    .card[href]:hover { border-color:var(--accent); transform: translateY(-1px); transition:.16s ease; }
-    .tag { color: var(--accent2); font-size:.76rem; font-weight:800; text-transform: uppercase; letter-spacing:.08em; }
-    .ready { color: var(--ok); }
-    .soon { color: var(--accent2); }
-    .muted { color:var(--muted); }
-    .go { display:inline-block; margin-top:18px; color:var(--text); font-weight:750; }
-    .path { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color:#dfd2be; font-size:.88rem; margin-top:14px; }
-    .strip { border:1px solid var(--line); background:rgba(36,32,25,.72); border-radius:22px; padding:22px; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:18px; }
-    .step strong { color:var(--text); display:block; margin-bottom:4px; }
-    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+    section { margin-top:34px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg,var(--card),var(--card2)); border-radius:20px; padding:20px; text-decoration:none; }
+    .card[href]:hover { border-color:var(--accent); transform:translateY(-1px); transition:.16s ease; }
+    .tag { color:var(--ok); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+    code { background:#120f0b; border:1px solid var(--line); border-radius:8px; padding:.12rem .35rem; color:#efe5d6; }
+    footer { margin-top:42px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:.94rem; }
   </style>
 </head>
 <body>
   <main>
     <div class="eyebrow">A2X field kit</div>
-    <h1>Claude Code workshop resources.</h1>
-    <p class="lead">A practical hub for the resources used in the room: agent setup, reusable workflows, working rules, and public-safe demos you can revisit after the workshop. For the workshop offer, context, and contact flow, start at the A2X website.</p>
-    <div class="hero-actions">
-      <a class="button primary" href="https://a2xautonomy.com/">Visit the A2X website</a>
-      <a class="button" href="https://a2xautonomy.com/#resources">Website resources section</a>
-      <a class="button" href="#start">Start with the live workshop kit</a>
-      <a class="button" href="resources/workshop-resource-chooser.html">Resource route chooser</a>
-      <a class="button" href="resources/pre-workshop-readiness-checklist.html">Pre-workshop checklist</a>
-      <a class="button" href="docs/workshop-usage-map.md">View workshop usage map</a>
-      <a class="button" href="docs/resource-inventory.md">Resource inventory</a>
-      <a class="button" href="kanban-status.html">Live Kanban</a>
+    <h1>Start here. Not in the resource pile.</h1>
+    <p class="lead">This page is the narrowed workshop front door for tomorrow. The full artifact library still exists, but it is organized behind a curated index instead of being thrown at attendees all at once.</p>
+
+    <div class="actions">
+      <a class="button primary" href="START-HERE.md">Open START-HERE.md</a>
+      <a class="button" href="HowTo-OpenSpec.md">HowTo OpenSpec</a>
+      <a class="button" href="HowTo-LLM-Wiki.md">HowTo LLM Wiki</a>
+      <a class="button" href="Library/README.md">Curated Library</a>
+      <a class="button" href="https://github.com/thamam/a2x-workshop-resources">Source repo</a>
     </div>
 
     <section id="start">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Use first</div>
-          <h2>Live workshop kit</h2>
-        </div>
-        <p>These are the safest high-value resources to show during the first workshop. They are written as standalone attendee material.</p>
-      </div>
+      <h2>Tomorrow's essentials</h2>
       <div class="grid">
-        <a class="card" href="resources/pre-workshop-readiness-checklist.html">
-          <div>
-            <div class="tag ready">Readiness aid</div>
-            <h3>Pre-workshop readiness checklist</h3>
-            <p>Prepare a tiny safe sandbox, sanitized sample input, project rules, and verification signal before the room starts.</p>
-          </div>
-          <span class="go">Prepare for the workshop →</span>
+        <a class="card" href="HowTo-OpenSpec.md">
+          <div class="tag">Setup</div>
+          <h3>HowTo-OpenSpec</h3>
+          <p>Basic instructions for setting up an OpenSpec-style proposal/spec workflow.</p>
         </a>
-        <a class="card" href="resources/workshop-resource-chooser.html">
-          <div>
-            <div class="tag ready">Navigation aid</div>
-            <h3>Workshop resource route chooser</h3>
-            <p>Pick the right resource for the moment: mental model, project rules, first skill, idea-to-spec chain, feedback loop, or optional advanced demo.</p>
-          </div>
-          <span class="go">Choose next resource →</span>
+        <a class="card" href="HowTo-LLM-Wiki.md">
+          <div class="tag">Guide</div>
+          <h3>HowTo-LLM-Wiki</h3>
+          <p>Build a basic Markdown LLM Wiki with Claude Code, linked to Karpathy's gist.</p>
         </a>
-        <a class="card" href="resources/ai-workshop-discovery-question-bank.html">
-          <div>
-            <div class="tag ready">Discovery aid</div>
-            <h3>AI workshop discovery question bank</h3>
-            <p>Ask safe questions that turn workshop enthusiasm into repeated workflows, safe samples, review gates, owners, and next tiny experiments.</p>
-          </div>
-          <span class="go">Discover the workflow →</span>
+        <a class="card" href="LocalCopies/karpathy-llm-wiki.md">
+          <div class="tag">Local copy</div>
+          <h3>Karpathy LLM Wiki Markdown</h3>
+          <p>Local copy of the raw Markdown from Andrej Karpathy's published gist.</p>
         </a>
-        <a class="card" href="resources/post-workshop-action-plan.html">
-          <div>
-            <div class="tag ready">Follow-up handout</div>
-            <h3>Post-workshop action plan</h3>
-            <p>Convert workshop momentum into one small, reversible Claude Code workflow with clear rules, safe sample input, and verification evidence.</p>
-          </div>
-          <span class="go">Plan the first workflow →</span>
+        <a class="card" href="Examples/OpenSpec/">
+          <div class="tag">Examples</div>
+          <h3>OpenSpec empty tree</h3>
+          <p>Placeholder tree that Tomer can fill later.</p>
         </a>
-        <a class="card" href="resources/claude-code-handoff-packet.html">
-          <div>
-            <div class="tag ready">Handoff aid</div>
-            <h3>Claude Code handoff packet</h3>
-            <p>Package the next agent session with outcome, safe inputs, rules, stop conditions, first move, and verification evidence.</p>
-          </div>
-          <span class="go">Prepare the next run →</span>
+        <a class="card" href="A2X-public-marketplace/README.md">
+          <div class="tag">Placeholder</div>
+          <h3>A2X public marketplace</h3>
+          <p>Marked as intentionally incomplete while marketplace material is organized.</p>
         </a>
-        <a class="card" href="resources/ai-workflow-prioritization-matrix.html">
-          <div>
-            <div class="tag ready">Prioritization aid</div>
-            <h3>AI workflow prioritization matrix</h3>
-            <p>Choose which AI workflow candidate deserves the next tiny trial by scoring pull, safe sample, reviewability, reversibility, and owner capacity.</p>
-          </div>
-          <span class="go">Prioritize workflows →</span>
-        </a>
-        <a class="card" href="resources/ai-prompt-safety-preflight.html">
-          <div>
-            <div class="tag ready">Prompt safety aid</div>
-            <h3>AI prompt safety preflight</h3>
-            <p>Check whether a prompt is narrow, sanitized, bounded, reviewable, and reversible before sending it to an AI tool or agent.</p>
-          </div>
-          <span class="go">Preflight the prompt →</span>
-        </a>
-        <a class="card" href="resources/ai-prompt-library-starter.html">
-          <div>
-            <div class="tag ready">Prompt reuse aid</div>
-            <h3>AI prompt library starter</h3>
-            <p>Turn a useful prompt into a reusable team prompt card with safe inputs, review rules, an owner, and a retire trigger.</p>
-          </div>
-          <span class="go">Start the prompt library →</span>
-        </a>
-        <a class="card" href="resources/ai-output-review-rubric.html">
-          <div>
-            <div class="tag ready">Review aid</div>
-            <h3>AI output review rubric</h3>
-            <p>Check AI-generated drafts, recommendations, summaries, and workflow artifacts for evidence, boundaries, tone, and reversibility before use.</p>
-          </div>
-          <span class="go">Review the output →</span>
-        </a>
-        <a class="card" href="resources/ai-output-calibration-session.html">
-          <div>
-            <div class="tag ready">Calibration aid</div>
-            <h3>AI output calibration session</h3>
-            <p>Align reviewers on sanitized AI-output examples, pass thresholds, stop conditions, and evidence before quality becomes a debate.</p>
-          </div>
-          <span class="go">Calibrate reviewers →</span>
-        </a>
-        <a class="card" href="resources/ai-review-queue-triage.html">
-          <div>
-            <div class="tag ready">Review throughput aid</div>
-            <h3>AI review queue triage</h3>
-            <p>Sort AI-generated work into approve, revise, escalate, park, or pause lanes before reviewer capacity becomes the bottleneck.</p>
-          </div>
-          <span class="go">Triage the queue →</span>
-        </a>
-        <a class="card" href="resources/ai-meeting-to-actions.html">
-          <div>
-            <div class="tag ready">Follow-up aid</div>
-            <h3>AI meeting-to-actions handout</h3>
-            <p>Turn sanitized meeting notes into reviewed decisions, open questions, action items, risk items, and the next safe review.</p>
-          </div>
-          <span class="go">Capture actions →</span>
-        </a>
-        <a class="card" href="resources/ai-policy-exception-request.html">
-          <div>
-            <div class="tag ready">Escalation aid</div>
-            <h3>AI policy exception request</h3>
-            <p>Turn a blocked AI workflow into a small policy exception request with sanitized evidence, guardrails, reviewer, and stop condition.</p>
-          </div>
-          <span class="go">Request an exception →</span>
-        </a>
-        <a class="card" href="resources/ai-use-case-intake-brief.html">
-          <div>
-            <div class="tag ready">Intake aid</div>
-            <h3>AI use-case intake brief</h3>
-            <p>Turn a fuzzy AI idea into one scoped workflow with safe input, review gate, success evidence, and a clear stop condition.</p>
-          </div>
-          <span class="go">Define the use case →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-data-boundary-checklist.html">
-          <div>
-            <div class="tag ready">Data boundary aid</div>
-            <h3>AI pilot data boundary checklist</h3>
-            <p>Decide allowed inputs, redaction rules, reviewer access, retention, cleanup, and escalation before a pilot touches workflow data.</p>
-          </div>
-          <span class="go">Set data boundaries →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-experiment-charter.html">
-          <div>
-            <div class="tag ready">Experiment aid</div>
-            <h3>AI pilot experiment charter</h3>
-            <p>Turn a promising AI pilot idea into one tiny, reversible experiment with safe input, review evidence, and a stop condition.</p>
-          </div>
-          <span class="go">Charter the experiment →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-assumption-log.html">
-          <div>
-            <div class="tag ready">Clarity aid</div>
-            <h3>AI pilot assumption log</h3>
-            <p>Name the assumptions, dependencies, evidence checks, owners, and revisit triggers before a pilot quietly scales.</p>
-          </div>
-          <span class="go">Log assumptions →</span>
-        </a>
-        <a class="card" href="resources/ai-workflow-acceptance-criteria.html">
-          <div>
-            <div class="tag ready">Acceptance aid</div>
-            <h3>AI workflow acceptance criteria</h3>
-            <p>Define pass, revise, escalate, and stop criteria before an AI-assisted workflow is judged by vibes.</p>
-          </div>
-          <span class="go">Set acceptance criteria →</span>
-        </a>
-        <a class="card" href="resources/ai-workflow-handoff-gap-checklist.html">
-          <div>
-            <div class="tag ready">Handoff aid</div>
-            <h3>AI workflow handoff gap checklist</h3>
-            <p>Find missing ownership, review, support, monitoring, and rollback details before an AI workflow becomes routine.</p>
-          </div>
-          <span class="go">Check handoff gaps →</span>
-        </a>
-        <a class="card" href="resources/ai-workflow-rollback-drill-card.html">
-          <div>
-            <div class="tag ready">Rollback aid</div>
-            <h3>AI workflow rollback drill card</h3>
-            <p>Rehearse how an AI workflow pauses, falls back, communicates, recovers, and restarts before routine use expands.</p>
-          </div>
-          <span class="go">Drill the rollback →</span>
-        </a>
-        <a class="card" href="resources/ai-workflow-owner-card.html">
-          <div>
-            <div class="tag ready">Ownership aid</div>
-            <h3>AI workflow owner card</h3>
-            <p>Name the accountable owner, backup, human reviewer, support route, review cadence, escalation boundary, and pause condition.</p>
-          </div>
-          <span class="go">Assign ownership →</span>
-        </a>
-        <a class="card" href="resources/ai-tool-trial-scorecard.html">
-          <div>
-            <div class="tag ready">Buyer education</div>
-            <h3>AI tool trial scorecard</h3>
-            <p>Compare candidate AI tool trials by workflow fit, safety, setup friction, verification signal, and adoption path before committing attention.</p>
-          </div>
-          <span class="go">Score a trial →</span>
-        </a>
-        <a class="card" href="resources/ai-vendor-demo-brief.html">
-          <div>
-            <div class="tag ready">Demo prep</div>
-            <h3>AI vendor demo brief</h3>
-            <p>Turn a vendor or internal AI demo into workflow-specific proof, safe sample boundaries, review questions, and a clear follow-up decision.</p>
-          </div>
-          <span class="go">Brief the demo →</span>
-        </a>
-        <a class="card" href="resources/ai-vendor-reference-check.html">
-          <div>
-            <div class="tag ready">Vendor diligence</div>
-            <h3>AI vendor reference check</h3>
-            <p>Ask references about real workflow evidence, adoption friction, support ownership, safety boundaries, and exit paths without collecting private details.</p>
-          </div>
-          <span class="go">Check references →</span>
-        </a>
-        <a class="card" href="resources/ai-vendor-exit-plan.html">
-          <div>
-            <div class="tag ready">Vendor continuity</div>
-            <h3>AI vendor exit plan</h3>
-            <p>Define export, cleanup, fallback, decision ownership, and stop triggers before an AI tool trial becomes hard to unwind.</p>
-          </div>
-          <span class="go">Plan the exit path →</span>
-        </a>
-        <a class="card" href="resources/ai-procurement-questionnaire-prep.html">
-          <div>
-            <div class="tag ready">Procurement readiness</div>
-            <h3>AI procurement questionnaire prep</h3>
-            <p>Prepare security, legal, procurement, and risk questionnaire answers with safe categories, owners, evidence, and open gaps.</p>
-          </div>
-          <span class="go">Prep questionnaire answers →</span>
-        </a>
-        <a class="card" href="resources/ai-vendor-data-use-questions.html">
-          <div>
-            <div class="tag ready">Data-use diligence</div>
-            <h3>AI vendor data-use questions</h3>
-            <p>Ask vendors or internal tool owners about training, retention, logging, access, deletion, and evidence gaps without sharing private details.</p>
-          </div>
-          <span class="go">Ask data-use questions →</span>
-        </a>
-        <a class="card" href="resources/ai-workflow-audit-trail-starter.html">
-          <div>
-            <div class="tag ready">Audit-trail aid</div>
-            <h3>AI workflow audit trail starter</h3>
-            <p>Capture safe evidence pointers, review decisions, retention rules, and revisit triggers without storing sensitive logs or prompts.</p>
-          </div>
-          <span class="go">Start the audit trail →</span>
-        </a>
-        <a class="card" href="resources/ai-shadow-mode-trial-card.html">
-          <div>
-            <div class="tag ready">Shadow-mode aid</div>
-            <h3>AI shadow-mode trial card</h3>
-            <p>Validate an AI workflow beside the existing process before it touches customers, decisions, production systems, or final outputs.</p>
-          </div>
-          <span class="go">Plan shadow mode →</span>
-        </a>
-        <a class="card" href="resources/ai-near-miss-debrief-card.html">
-          <div>
-            <div class="tag ready">Near-miss learning aid</div>
-            <h3>AI near-miss debrief card</h3>
-            <p>Capture the safe learning pattern, prevention change, owner, and restart condition after an AI almost-problem.</p>
-          </div>
-          <span class="go">Debrief the near miss →</span>
-        </a>
-        <a class="card" href="resources/ai-tool-access-request-checklist.html">
-          <div>
-            <div class="tag ready">Access governance</div>
-            <h3>AI tool access request checklist</h3>
-            <p>Request AI tool or account access with a use case, allowed inputs, review gate, support path, offboarding trigger, and safe account route.</p>
-          </div>
-          <span class="go">Request access safely →</span>
-        </a>
-        <a class="card" href="resources/ai-permissions-ladder.html">
-          <div>
-            <div class="tag ready">Autonomy boundary aid</div>
-            <h3>AI permissions ladder</h3>
-            <p>Define how far an AI workflow or agent may act: observe, draft, edit in sandbox, propose action, or execute with explicit approval.</p>
-          </div>
-          <span class="go">Set AI permissions →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-evidence-log.html">
-          <div>
-            <div class="tag ready">Evidence aid</div>
-            <h3>AI pilot evidence log</h3>
-            <p>Track value, friction, risk, reviewer decisions, and open questions so pilot choices are based on proof instead of vibes.</p>
-          </div>
-          <span class="go">Log pilot evidence →</span>
-        </a>
-        <a class="card" href="resources/ai-workflow-baseline-worksheet.html">
-          <div>
-            <div class="tag ready">Baseline aid</div>
-            <h3>AI workflow baseline worksheet</h3>
-            <p>Record today’s workflow path, friction, review evidence, support signals, and stop triggers before an AI pilot changes the work.</p>
-          </div>
-          <span class="go">Set the baseline →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-value-scorecard.html">
-          <div>
-            <div class="tag ready">Value aid</div>
-            <h3>AI pilot value scorecard</h3>
-            <p>Turn pilot evidence into value signals, decision thresholds, and a clear continue, narrow, expand, pause, or stop call.</p>
-          </div>
-          <span class="go">Score pilot value →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-decision-memo.html">
-          <div>
-            <div class="tag ready">Decision aid</div>
-            <h3>AI pilot decision memo</h3>
-            <p>Turn a small AI workflow trial into a concise continue, clarify, or stop recommendation with evidence and safe next steps.</p>
-          </div>
-          <span class="go">Write the memo →</span>
-        </a>
-        <a class="card" href="resources/ai-decision-meeting-agenda.html">
-          <div>
-            <div class="tag ready">Meeting aid</div>
-            <h3>AI decision meeting agenda</h3>
-            <p>Run a short decision meeting that turns demo, reference, trial, and pilot evidence into one clear next state.</p>
-          </div>
-          <span class="go">Run the decision meeting →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-risk-register.html">
-          <div>
-            <div class="tag ready">Governance aid</div>
-            <h3>AI pilot risk register</h3>
-            <p>Name pilot risks, boundaries, owners, mitigations, stop conditions, and review signals before a small AI workflow quietly scales.</p>
-          </div>
-          <span class="go">Register risks →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-stakeholder-update.html">
-          <div>
-            <div class="tag ready">Communication aid</div>
-            <h3>AI pilot stakeholder update</h3>
-            <p>Share pilot status, evidence, risks, asks, and the next review date without exposing sensitive examples or overselling the result.</p>
-          </div>
-          <span class="go">Send the update →</span>
-        </a>
-        <a class="card" href="resources/ai-stakeholder-concern-resolver.html">
-          <div>
-            <div class="tag ready">Alignment aid</div>
-            <h3>AI stakeholder concern resolver</h3>
-            <p>Turn AI objections into evidence requests, boundaries, owners, and the smallest reversible next step.</p>
-          </div>
-          <span class="go">Resolve concerns →</span>
-        </a>
-        <a class="card" href="resources/ai-adoption-change-brief.html">
-          <div>
-            <div class="tag ready">Change aid</div>
-            <h3>AI adoption change brief</h3>
-            <p>Plan stakeholder-facing communication, support, human ownership, and reversible rollout boundaries before an AI workflow spreads.</p>
-          </div>
-          <span class="go">Brief the change →</span>
-        </a>
-        <a class="card" href="resources/ai-adoption-faq.html">
-          <div>
-            <div class="tag ready">FAQ aid</div>
-            <h3>AI adoption FAQ</h3>
-            <p>Answer common adoption questions with purpose, data boundaries, review ownership, support path, evidence, and pause conditions.</p>
-          </div>
-          <span class="go">Answer adoption questions →</span>
-        </a>
-        <a class="card" href="resources/ai-sponsor-alignment-brief.html">
-          <div>
-            <div class="tag ready">Sponsor aid</div>
-            <h3>AI sponsor alignment brief</h3>
-            <p>Turn pilot evidence into one sponsor decision, commitment boundary, owner, and reversible next step before asking for more attention.</p>
-          </div>
-          <span class="go">Align the sponsor →</span>
-        </a>
-        <a class="card" href="resources/ai-steering-cadence-brief.html">
-          <div>
-            <div class="tag ready">Steering aid</div>
-            <h3>AI steering cadence brief</h3>
-            <p>Set the recurring forum, evidence packet, stop rules, owners, and update artifacts that keep AI workflow decisions from drifting.</p>
-          </div>
-          <span class="go">Set the cadence →</span>
-        </a>
-        <a class="card" href="resources/ai-steering-decision-log.html">
-          <div>
-            <div class="tag ready">Decision-record aid</div>
-            <h3>AI steering decision log</h3>
-            <p>Record AI steering decisions with the owner, evidence basis, boundary, revisit trigger, and stakeholder note before the meeting disperses.</p>
-          </div>
-          <span class="go">Log the decision →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-retrospective.html">
-          <div>
-            <div class="tag ready">Learning aid</div>
-            <h3>AI pilot retrospective</h3>
-            <p>Turn pilot evidence into lessons, guardrail updates, honest stop/continue decisions, and the next safe experiment.</p>
-          </div>
-          <span class="go">Run the retrospective →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-rollout-readiness.html">
-          <div>
-            <div class="tag ready">Rollout aid</div>
-            <h3>AI pilot rollout readiness</h3>
-            <p>Check evidence, owners, allowed inputs, review gates, rollback path, and stakeholder messaging before a pilot expands.</p>
-          </div>
-          <span class="go">Check rollout readiness →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-enablement-session-plan.html">
-          <div>
-            <div class="tag ready">Enablement aid</div>
-            <h3>AI pilot enablement session plan</h3>
-            <p>Teach pilot users and reviewers the workflow, safe example, guardrails, support path, pause trigger, and next review date before rollout.</p>
-          </div>
-          <span class="go">Plan enablement →</span>
-        </a>
-        <a class="card" href="resources/ai-adoption-office-hours-plan.html">
-          <div>
-            <div class="tag ready">Support aid</div>
-            <h3>AI adoption office hours plan</h3>
-            <p>Run a lightweight support forum for questions, sanitized examples, guardrail reminders, improvement signals, and escalation routing after enablement.</p>
-          </div>
-          <span class="go">Plan office hours →</span>
-        </a>
-        <a class="card" href="resources/ai-adoption-feedback-loop.html">
-          <div>
-            <div class="tag ready">Improvement aid</div>
-            <h3>AI adoption feedback loop</h3>
-            <p>Turn sanitized adoption feedback into one reviewed improvement decision without collecting private examples or overreacting to noise.</p>
-          </div>
-          <span class="go">Close the feedback loop →</span>
-        </a>
-        <a class="card" href="resources/ai-adoption-proof-snapshot.html">
-          <div>
-            <div class="tag ready">Proof aid</div>
-            <h3>AI adoption proof snapshot</h3>
-            <p>Summarize adoption with sanitized counts, review outcomes, support themes, guardrail health, and one next decision.</p>
-          </div>
-          <span class="go">Summarize proof →</span>
-        </a>
-        <a class="card" href="resources/ai-tool-change-impact-check.html">
-          <div>
-            <div class="tag ready">Change-readiness aid</div>
-            <h3>AI tool change impact check</h3>
-            <p>Check how a model, vendor, policy, access, or integration change affects a running AI workflow before users quietly drift.</p>
-          </div>
-          <span class="go">Check the change →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-operations-handoff.html">
-          <div>
-            <div class="tag ready">Operations aid</div>
-            <h3>AI pilot operations handoff</h3>
-            <p>Transfer an approved pilot into daily ownership, monitoring, support, incident, rollback, and improvement routines.</p>
-          </div>
-          <span class="go">Prepare the handoff →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-health-review.html">
-          <div>
-            <div class="tag ready">Health review</div>
-            <h3>AI pilot health review</h3>
-            <p>Run a recurring pulse check on usage, quality, incidents, support friction, guardrail drift, value, and next improvement.</p>
-          </div>
-          <span class="go">Review workflow health →</span>
-        </a>
-        <a class="card" href="resources/ai-incident-pause-card.html">
-          <div>
-            <div class="tag ready">Incident aid</div>
-            <h3>AI incident pause card</h3>
-            <p>Pause a risky or drifting AI workflow cleanly, preserve sanitized evidence, assign recovery owners, and define restart conditions.</p>
-          </div>
-          <span class="go">Pause and recover →</span>
-        </a>
-        <a class="card" href="resources/ai-pilot-sunset-archive.html">
-          <div>
-            <div class="tag ready">Closure aid</div>
-            <h3>AI pilot sunset and archive</h3>
-            <p>Close, pause, replace, or archive an AI pilot without losing lessons, confusing users, or leaving stale access behind.</p>
-          </div>
-          <span class="go">Close the loop →</span>
-        </a>
-        <a class="card" href="resources/claude-code-credential-routing.html">
-          <div>
-            <div class="tag ready">Troubleshooting</div>
-            <h3>Claude Code credential routing Q&A</h3>
-            <p>Diagnose login, account, API-key, environment, and policy confusion without exposing tokens or account details.</p>
-          </div>
-          <span class="go">Route setup questions →</span>
-        </a>
-        <a class="card" href="resources/claude-md-cheat-sheet.html">
-          <div>
-            <div class="tag ready">Ready draft</div>
-            <h3>CLAUDE.md & coding rules cheat sheet</h3>
-            <p>Four rules attendees can paste into a project to make Claude Code more deliberate, simple, surgical, and goal-driven.</p>
-          </div>
-          <span class="go">Open cheat sheet →</span>
-        </a>
-        <a class="card" href="resources/first-skill.html">
-          <div>
-            <div class="tag ready">Ready draft</div>
-            <h3>Build your first skill</h3>
-            <p>A short hands-on path from repeated workflow to reusable agent skill.</p>
-          </div>
-          <span class="go">Start building →</span>
-        </a>
-        <a class="card" href="resources/claude-wizard-skill-wizard.html">
-          <div>
-            <div class="tag ready">Wizard v1</div>
-            <h3>Claude Wizard: Skill Wizard</h3>
-            <p>Inspect a drafted skill for discoverability, concise structure, progressive disclosure, runtime assumptions, and freshness against Anthropic guidance.</p>
-          </div>
-          <span class="go">Inspect a skill →</span>
-        </a>
-        <a class="card" href="resources/claude-code-harness-map.html">
-          <div>
-            <div class="tag ready">Ready draft</div>
-            <h3>Claude Code harness map</h3>
-            <p>The practical framing: the leverage is not only the model, it is the harness around the model.</p>
-          </div>
-          <span class="go">Open harness map →</span>
+        <a class="card" href="Library/README.md">
+          <div class="tag">Curated</div>
+          <h3>Library</h3>
+          <p>Sorted map of the older artifacts so they can be used deliberately.</p>
         </a>
       </div>
     </section>
 
-    <section>
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Giveaway tools</div>
-          <h2>Small prompts attendees can use immediately</h2>
-        </div>
-        <p>These public-safe handouts work as a chain: start with a rough idea, ask only the missing implementation questions, improve the prompt, then shape a PRD/OpenSpec handoff. They have been checked against a synthetic consultant meeting-prep example so attendees do not need private client material.</p>
-      </div>
-      <div class="grid">
-        <a class="card" href="resources/product-brief-generator.html"><div><div class="tag ready">Ready draft</div><h3>Product brief generator</h3><p>Move from a rough product idea to a concise brief that can seed a spec or implementation plan.</p></div><span class="go">Open prompt →</span></a>
-        <a class="card" href="resources/openspec-interviewer.html"><div><div class="tag ready">Ready draft</div><h3>OpenSpec-aware interviewer</h3><p>Ask only the high-impact missing questions before a build agent starts guessing.</p></div><span class="go">Open interviewer →</span></a>
-        <a class="card" href="resources/prompt-improver.html"><div><div class="tag ready">Ready draft</div><h3>Prompt improver</h3><p>Convert rough instructions and negative corrections into clearer model-ready prompts.</p></div><span class="go">Improve a prompt →</span></a>
-        <a class="card" href="resources/prd-openspec-starter.html"><div><div class="tag ready">Ready draft</div><h3>PRD & OpenSpec starter</h3><p>Turn a product brief into a concise PRD outline and a starter OpenSpec proposal.</p></div><span class="go">Draft the PRD →</span></a>
-        <a class="card" href="resources/openspec-tutorial.html"><div><div class="tag ready">Tutorial</div><h3>How to use OpenSpec with agents</h3><p>A blog-style guide for using proposal gates before implementation so agent changes stay reviewable.</p></div><span class="go">Read tutorial →</span></a>
-        <a class="card" href="resources/prd-html-review-workbench.html"><div><div class="tag ready">Prototype</div><h3>PRD to HTML review workbench</h3><p>Render a PRD into a local review surface, add in-memory comments, and export a feedback packet without storage or network calls.</p></div><span class="go">Open workbench →</span></a>
-        <a class="card" href="docs/giveaway-scenario-test.md"><div><div class="tag ready">Safe example</div><h3>Sanitized scenario chain</h3><p>See how the giveaway tools handle a fictional meeting-prep assistant without private notes, client data, or internal links.</p></div><span class="go">Review example →</span></a>
-      </div>
+    <section class="card">
+      <h2>Where did the many artifacts go?</h2>
+      <p>The generated handouts remain in <code>resources/</code> for link stability. Use <code>Library/README.md</code> to find them by category. Do not start from the raw folder during the workshop.</p>
     </section>
 
-    <section>
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Advanced demos</div>
-          <h2>Tools to expose after safety review</h2>
-        </div>
-        <p>These stay as public-safe placeholders until source locations and exposure boundaries are confirmed.</p>
-      </div>
-      <div class="grid">
-        <a class="card" href="resources/a2x-marketplace-overview.html"><div><div class="tag ready">Safe overview</div><h3>A2X Marketplace</h3><p>Reusable Claude Code workflow catalog concept: skills, plugins, presets, safety checks, and curated installation framing.</p></div><span class="go">Open overview →</span></a>
-        <a class="card" href="resources/a2x-marketplace-tutorial.html"><div><div class="tag ready">Tutorial</div><h3>Marketplace install guide</h3><p>Attendee-friendly explanation of marketplace item types, plugin loading, safe install flow, and when each item helps.</p></div><span class="go">Read tutorial →</span></a>
-        <a class="card" href="resources/prompt-magician-setup.html"><div><div class="tag ready">Safe overview</div><h3>Prompt Magician</h3><p>Optional prompt-enhancement extension workflow with privacy, permission, API-key, and shortcut framing for workshops.</p></div><span class="go">Open setup overview →</span></a>
-        <a class="card" href="resources/presentation-editor-overview.html"><div><div class="tag ready">Safe overview</div><h3>Presentation editor</h3><p>Agentic slide-generation workflow using a fictional mini-brief, review loop, and safe API-key/source-link boundaries.</p></div><span class="go">Open overview →</span></a>
-        <a class="card" href="resources/wiki-llm-overview.html"><div><div class="tag ready">Safe overview</div><h3>Wiki-LLM</h3><p>Build a navigable, model-assisted knowledge base from a fictional Markdown mini-vault while keeping real vaults private.</p></div><span class="go">Open overview →</span></a>
-        <a class="card" href="resources/wiki-llm-tutorial.html"><div><div class="tag ready">Tutorial</div><h3>How to work with an LLM Wiki</h3><p>Blog-style walkthrough of raw notes, synthesized wiki pages, operating contracts, prompts, and review habits.</p></div><span class="go">Read tutorial →</span></a>
-        <a class="card" href="resources/buildtool-decision.html"><div><div class="tag ready">Decision aid</div><h3>buildTool decision navigator</h3><p>Interactive public-safe walkthrough for deciding when a workflow deserves a first-class native tool surface.</p></div><span class="go">Open navigator →</span></a>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-head"><div><div class="eyebrow">Workshop flow</div><h2>How to use this hub live</h2></div></div>
-      <div class="strip">
-        <div class="step"><strong>1. Prepare a safe sandbox.</strong><p>Use the pre-workshop checklist to bring a toy repo, sanitized sample, starter rules, and verification signal.</p></div>
-        <div class="step"><strong>2. Choose the right next resource.</strong><p>Open the route chooser if attendees need a fast map from workshop moment to handout.</p></div>
-        <div class="step"><strong>3. Route setup confusion safely.</strong><p>If Claude Code login, token, environment, or policy questions appear, use the credential-routing Q&A before debugging prompts.</p></div>
-        <div class="step"><strong>4. Open with the harness idea.</strong><p>Show that better agent results come from environment, rules, tools, feedback loops, and review gates.</p></div>
-        <div class="step"><strong>5. Give attendees rules they can use today.</strong><p>Send them to the CLAUDE.md cheat sheet before live coding.</p></div>
-        <div class="step"><strong>6. Turn repetition into infrastructure.</strong><p>Use the first-skill guide when moving from tips to reusable workflows, then run Skill Wizard to inspect whether Claude can actually discover and use the drafted skill.</p></div>
-        <div class="step"><strong>7. Hand out practical prompt tools.</strong><p>Use the product brief generator, interviewer, prompt improver, and PRD starter when attendees start shaping their own ideas; fall back to the synthetic meeting-prep scenario if they need a safe demo input.</p></div>
-        <div class="step"><strong>8. Close with one next workflow.</strong><p>Send attendees to the post-workshop action plan so they leave with a small reversible Claude Code project, not just a pile of links.</p></div>
-        <div class="step"><strong>9. Package the next agent run.</strong><p>Use the handoff packet to capture safe inputs, stop conditions, and evidence before the next Claude Code session starts.</p></div>
-        <div class="step"><strong>10. Prioritize candidate workflows.</strong><p>Use the prioritization matrix when attendees have several AI ideas and need to choose the safest useful next trial.</p></div>
-        <div class="step"><strong>11. Set the pilot data boundary.</strong><p>Use the data boundary checklist to define allowed inputs, redaction, reviewer access, retention, cleanup, and escalation before touching workflow data.</p></div>
-        <div class="step"><strong>12. Charter the experiment.</strong><p>Use the experiment charter to turn the selected use case into one tiny reversible test with safe input, review evidence, and a stop condition.</p></div>
-        <div class="step"><strong>13. Score the next trial.</strong><p>Use the AI tool trial scorecard when attendees need to choose which workflow deserves the next small experiment.</p></div>
-        <div class="step"><strong>14. Brief vendor demos around proof.</strong><p>Use the demo brief before a vendor or internal tool walkthrough so the conversation stays tied to a safe sample, review gates, and evidence.</p></div>
-        <div class="step"><strong>15. Check references safely.</strong><p>Ask references about workflow reality, adoption friction, support ownership, review gates, and exit paths without collecting private details.</p></div>
-        <div class="step"><strong>16. Log pilot evidence.</strong><p>Collect value, friction, risk, reviewer decisions, and open questions before asking a team to continue, expand, or stop.</p></div>
-        <div class="step"><strong>17. Score pilot value.</strong><p>Use the value scorecard to turn observed evidence into a continue, clarify, narrow, expand, pause, stop, or escalate call.</p></div>
-        <div class="step"><strong>18. Write the pilot decision memo.</strong><p>Turn the scored trial into a continue, clarify, or stop recommendation with evidence, boundaries, and one reversible next step.</p></div>
-        <div class="step"><strong>19. Run the decision meeting.</strong><p>Use the agenda to choose continue, clarify, expand narrowly, pause, stop, or archive based on evidence, boundaries, ownership, and one reversible next step.</p></div>
-        <div class="step"><strong>20. Register pilot risks.</strong><p>Name the boundary, mitigation, owner, review signal, and stop condition before any pilot expands beyond a reversible test.</p></div>
-        <div class="step"><strong>21. Send a stakeholder update.</strong><p>Share the pilot status, evidence, top risk, ask, and next review date without forwarding sensitive examples.</p></div>
-        <div class="step"><strong>22. Answer adoption questions.</strong><p>Use the adoption FAQ when teams ask what the workflow does, what stays out, who reviews it, how users get help, and when it pauses.</p></div>
-        <div class="step"><strong>23. Align the sponsor.</strong><p>Turn pilot evidence into one sponsor decision, commitment boundary, owner, and reversible next step before asking for more attention.</p></div>
-        <div class="step"><strong>24. Set the steering cadence.</strong><p>Name the recurring decision forum, evidence packet, stop rules, owners, and artifacts that keep AI workflow decisions from drifting.</p></div>
-        <div class="step"><strong>25. Run the pilot retrospective.</strong><p>Turn pilot evidence into lessons, guardrail updates, honest stop/continue decisions, and one next safe experiment.</p></div>
-        <div class="step"><strong>26. Check rollout readiness.</strong><p>Confirm evidence, users, allowed inputs, review gates, rollback path, and stakeholder messaging before the pilot expands.</p></div>
-        <div class="step"><strong>27. Plan pilot enablement.</strong><p>Teach users and reviewers the safe example, guardrails, support path, pause trigger, and next review date before treating rollout as adoption.</p></div>
-        <div class="step"><strong>28. Reinforce adoption with office hours.</strong><p>Run a lightweight support rhythm for sanitized questions, guardrail reminders, improvement signals, and escalation routing after enablement.</p></div>
-        <div class="step"><strong>29. Close the feedback loop.</strong><p>Use sanitized adoption feedback to choose one reviewed improvement before proof snapshots, health reviews, or steering updates.</p></div>
-        <div class="step"><strong>30. Prepare operations handoff.</strong><p>Name the owner, support route, monitoring signal, incident trigger, rollback owner, and improvement cadence before routine use.</p></div>
-        <div class="step"><strong>31. Triage the review queue.</strong><p>Use the review queue triage sheet when AI outputs are arriving faster than humans can safely judge them.</p></div>
-        <div class="step"><strong>32. Pause incidents cleanly.</strong><p>Use the incident pause card when an AI workflow drifts, crosses an unclear boundary, lacks an owner, or spreads before guardrails are ready.</p></div>
-        <div class="step"><strong>33. Park advanced demos safely.</strong><p>Use placeholders for tools until public review is complete.</p></div>
-      </div>
-    </section>
-
-    <footer>
-      Built by <a href="https://a2xautonomy.com/">A2X</a>. This repository is the public workshop resource bundle linked from <a href="https://a2xautonomy.com/#resources">the A2X website resources section</a>. It is public-facing by design; do not commit secrets, credentials, private notes, or client material.
-    </footer>
+    <footer>Public-safe static repo. No tracking, no forms, no secrets, no lead capture.</footer>
   </main>
 </body>
 </html>

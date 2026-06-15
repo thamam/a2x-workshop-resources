@@ -4,20 +4,28 @@ Public-facing resources for A2X Claude Code workshops.
 
 ## Start here
 
+- **START-HERE:** [`START-HERE.md`](START-HERE.md)
+- **Live resource hub:** https://thamam.github.io/a2x-workshop-resources/
 - **A2X website:** https://a2xautonomy.com/
 - **Website resources section:** https://a2xautonomy.com/#resources
-- **Live resource hub:** https://thamam.github.io/a2x-workshop-resources/
 
-If you arrived here from a workshop, use the live hub first. The A2X website explains the workshop format and points back here for the full public resource bundle. This repository points back to the website so attendees can move between the workshop offer, the curated resource hub, and the underlying source files without guessing where to go next.
+If you arrived here from a workshop, start with [`START-HERE.md`](START-HERE.md). The older resource set is intentionally curated through [`Library/`](Library/) so the repo does not feel like a wall of handouts.
 
-This repository is public. Treat every commit as publishable.
+## Tomorrow's required material
+
+- [`HowTo-OpenSpec.md`](HowTo-OpenSpec.md) — basic OpenSpec setup.
+- [`HowTo-LLM-Wiki.md`](HowTo-LLM-Wiki.md) — build a basic LLM Wiki with Claude Code.
+- [`LocalCopies/karpathy-llm-wiki.md`](LocalCopies/karpathy-llm-wiki.md) — local copy of Karpathy's LLM Wiki Markdown.
+- [`Examples/OpenSpec/`](Examples/OpenSpec/) — empty OpenSpec tree for Tomer to fill later.
+- [`A2X-public-marketplace/`](A2X-public-marketplace/) — placeholder while marketplace material is organized.
+- [`Library/`](Library/) — curated index of existing artifacts.
 
 ## What belongs here
 
-- Workshop resource hub content.
-- Public setup guides.
-- Public demos and examples.
-- Links to public tools and references.
+- Public workshop setup guides.
+- Public-safe examples and demos.
+- Curated links to public tools and references.
+- Public-safe copies of referenced source material.
 
 ## What does not belong here
 
@@ -26,6 +34,10 @@ This repository is public. Treat every commit as publishable.
 - Internal A2X website source code.
 - Personal notes not intended for attendees.
 - Local environment files such as `.env`.
+
+## Root directory note
+
+The root is intentionally small. The visible files are navigation, security/config, the static Pages entrypoint, and the project tracker. The large generated artifact set remains under `resources/` and is curated from `Library/`.
 
 ## Security rule
 
@@ -48,4 +60,4 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 Then open `http://127.0.0.1:8765/index.html`.
 
-GitHub Pages publishes from `main` branch `/` at `https://thamam.github.io/a2x-workshop-resources/` after Tomer approval. Readiness notes live in `docs/github-pages-readiness.md`.
+GitHub Pages publishes from `main` branch `/` at `https://thamam.github.io/a2x-workshop-resources/`.

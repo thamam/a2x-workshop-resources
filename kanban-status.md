@@ -238,6 +238,9 @@
 - [x] **Epic 58: AI near-miss learning and prevention aids** (100% Completed)
   - [x] Story 58.1: Add AI near-miss debrief card handout
 
+- [x] **Epic 59: Tomorrow workshop repo curation** (100% Completed)
+  - [x] Story 59.1: Add start-here path, required how-to files, local Karpathy copy, marketplace placeholder, and curated library
+
 ---
 
 ## 🏃 Active State Tracking
@@ -269,6 +272,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 59.1: Add start-here path and curate tomorrow resources
+  - Evidence: created `START-HERE.md`, `HowTo-OpenSpec.md`, `HowTo-LLM-Wiki.md`, `LocalCopies/karpathy-llm-wiki.md`, `LocalCopies/README.md`, `Examples/OpenSpec/.gitkeep`, `A2X-public-marketplace/README.md`, and `Library/README.md`; replaced the overwhelming `index.html` with a narrowed start-here page that keeps `#start` for existing links; updated `README.md` with the required tomorrow materials and root-directory note; `python3 scripts/check-static-links.py` passed for 76 HTML files; custom Markdown link check passed for 29 Markdown files; `scripts/block-private-files.sh` passed on tracked plus new files; `gitleaks detect --no-git --redact --source .` found no leaks; `git diff --check` passed; local HTTP marker smoke returned HTTP 200 for `index.html`, `START-HERE.md`, `HowTo-OpenSpec.md`, `HowTo-LLM-Wiki.md`, `LocalCopies/karpathy-llm-wiki.md`, `Library/README.md`, and `A2X-public-marketplace/README.md`. The previous large `resources/` folder remains available for link stability but is no longer the recommended starting point.
 
 - [x] Story 58.1: Add AI near-miss debrief card handout
   - Evidence: created `resources/ai-near-miss-debrief-card.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 76 HTML files; `git diff --check` passed; private-file blocker passed; gitleaks `--no-git` found no leaks; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-near-miss-debrief-card.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with near-miss links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-near-miss-mobile.png` (152230 bytes) and DOM dump persisted `/tmp/a2x-ai-near-miss-dom.html` (10046 bytes), confirming the page title, Near-miss rule, and public-safe footer markers on 2026-06-15 14:49 IDT; implementation commit `a99b9f5` was pushed; GitHub Security Checks run `27544248681` succeeded; Pages deployment run `27544247230` succeeded; public smoke returned HTTP 200 for the live hub, AI near-miss debrief card page, and route chooser with near-miss links/content visible on 2026-06-15 14:52 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, incident-specific confidential records, raw prompts, transcripts, production logs, account screenshots, vendor-confidential data, regulated records, or direct private-resource exposure were added.
