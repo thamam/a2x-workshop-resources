@@ -595,9 +595,9 @@ Next action: if Tomer wants a live slide-generation demo, prepare a facilitator-
 
 Status: publish-now overview/tutorial; direct source release remains polish-first
 
-Hub paths: `resources/wiki-llm-overview.html`, `resources/wiki-llm-tutorial.html`
+Hub paths: `llm-wiki/resources/wiki-llm-overview.html`, `llm-wiki/resources/wiki-llm-tutorial.html`
 
-Source: local/private candidate projects identified outside this repo; audit notes in `docs/wiki-llm-public-safety-audit.md`. Exact private repository names and absolute paths are intentionally withheld from the public-ready inventory.
+Source: local/private candidate projects identified outside this repo; audit notes in `llm-wiki/docs/wiki-llm-public-safety-audit.md`. Exact private repository names and absolute paths are intentionally withheld from the public-ready inventory.
 Safety notes: sanitized overview and tutorial are public-safe and do not expose private source names, private repository links, local paths, raw notes, or vault contents. They teach the `raw/`, `wiki/`, and operating-contract pattern with a fictional mini-vault and generic prompts. Direct software/plugin repo linking still needs a cleaned, Tomer-approved release path.
 Next action: if Wiki-LLM becomes a live advanced demo, prepare a cleaned software-only repo or facilitator-owned package; keep private vault content out of the public hub.
 

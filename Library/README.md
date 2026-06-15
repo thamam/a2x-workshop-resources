@@ -7,8 +7,8 @@ This library sorts the older generated artifacts into a usable map. It is **not*
 Use these before browsing the rest:
 
 - [`../HowTo-OpenSpec.md`](../HowTo-OpenSpec.md) — OpenSpec setup.
-- [`../HowTo-LLM-Wiki.md`](../HowTo-LLM-Wiki.md) — build a basic LLM Wiki with Claude Code.
-- [`../LocalCopies/karpathy-llm-wiki.md`](../LocalCopies/karpathy-llm-wiki.md) — local copy of Karpathy's LLM Wiki Markdown.
+- [`../llm-wiki/HowTo-LLM-Wiki.md`](../llm-wiki/HowTo-LLM-Wiki.md) — build a basic LLM Wiki with Claude Code.
+- [`../llm-wiki/local-copies/karpathy-llm-wiki.md`](../llm-wiki/local-copies/karpathy-llm-wiki.md) — local copy of Karpathy's LLM Wiki Markdown.
 - [`../Examples/OpenSpec/`](../Examples/OpenSpec/) — empty OpenSpec example tree.
 - [`../A2X-public-marketplace/`](../A2X-public-marketplace/) — marketplace placeholder.
 
@@ -31,9 +31,9 @@ Use these before browsing the rest:
 
 ## 3. LLM Wiki and knowledge workflows
 
-- [`How to work with an LLM Wiki`](../resources/wiki-llm-tutorial.html)
-- [`Wiki-LLM overview`](../resources/wiki-llm-overview.html)
-- [`Karpathy LLM Wiki local Markdown copy`](../LocalCopies/karpathy-llm-wiki.md)
+- [`How to work with an LLM Wiki`](../llm-wiki/resources/wiki-llm-tutorial.html)
+- [`Wiki-LLM overview`](../llm-wiki/resources/wiki-llm-overview.html)
+- [`Karpathy LLM Wiki local Markdown copy`](../llm-wiki/local-copies/karpathy-llm-wiki.md)
 
 ## 4. Claude Code skills and agent harnesses
 
