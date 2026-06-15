@@ -193,6 +193,14 @@ Source: public-safe static validation worksheet drafted in this repo from the cu
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, production decisions, compliance/legal advice, confidential logs/prompts/transcripts, account screenshots, private repository contents, contracts, regulated data, incident details, or direct private-resource exposure. The page explicitly frames shadow mode as suggestions/comparison only, with the existing workflow remaining the source of truth until exit criteria and approval are explicit.
 Next action: tune after observing which teams need help validating AI suggestions with safe samples, baseline comparison, review rubrics, stop triggers, and permission-rung exit rules before pilots affect live work.
 
+### AI near-miss debrief card
+
+Status: publish-now
+Hub path: `resources/ai-near-miss-debrief-card.html`
+Source: public-safe static near-miss learning worksheet drafted in this repo from the current workshop need to help teams learn from AI almost-problems without publishing sensitive incident details.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, incident-specific confidential records, raw prompts, transcripts, production logs, account screenshots, vendor-confidential data, regulated records, or direct private-resource exposure. The page explicitly tells attendees to capture generic patterns, boundaries, catch points, prevention changes, owners, and restart conditions while storing any real incident evidence only in approved internal systems.
+Next action: tune after observing which teams need help debriefing AI near misses across input, output, permission, review, routing, retention, vendor, and communication boundaries before the next run.
+
 ### AI tool access request checklist
 
 Status: publish-now

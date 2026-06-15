@@ -244,6 +244,16 @@ Attendee action: define one workflow slice, safe sample category, baseline resul
 
 Status: ready shadow-mode validation handout.
 
+### Near-miss learning: AI near-miss debrief card
+
+Resource: `resources/ai-near-miss-debrief-card.html`.
+
+Use when: an AI assistant, agent, prompt, vendor tool, or workflow almost causes confusion, unsafe data use, skipped review, surprising action, policy uncertainty, or weak evidence, and the team needs to learn safely before the next run.
+
+Attendee action: capture the generic near-miss pattern, boundary nearly crossed, catch point, prevention change, owner, and restart condition without recording sensitive raw incident details in the workshop material.
+
+Status: ready near-miss learning handout.
+
 ### Access governance: AI tool access request checklist
 
 Resource: `resources/ai-tool-access-request-checklist.html`.

@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-14
+- **Last Updated:** 2026-06-15
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -235,6 +235,9 @@
 - [x] **Epic 57: AI shadow-mode validation aids** (100% Completed)
   - [x] Story 57.1: Add AI shadow-mode trial card handout
 
+- [x] **Epic 58: AI near-miss learning and prevention aids** (100% Completed)
+  - [x] Story 58.1: Add AI near-miss debrief card handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -266,6 +269,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 58.1: Add AI near-miss debrief card handout
+  - Evidence: created `resources/ai-near-miss-debrief-card.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 76 HTML files; `git diff --check` passed; private-file blocker passed; gitleaks `--no-git` found no leaks; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-near-miss-debrief-card.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with near-miss links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-near-miss-mobile.png` (152230 bytes) and DOM dump persisted `/tmp/a2x-ai-near-miss-dom.html` (10046 bytes), confirming the page title, Near-miss rule, and public-safe footer markers on 2026-06-15 14:49 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, incident-specific confidential records, raw prompts, transcripts, production logs, account screenshots, vendor-confidential data, regulated records, or direct private-resource exposure were added.
 
 - [x] Story 57.1: Add AI shadow-mode trial card handout
   - Evidence: created `resources/ai-shadow-mode-trial-card.html`; linked it from `index.html` and `resources/workshop-resource-chooser.html`; updated `docs/workshop-usage-map.md` and `docs/resource-inventory.md`; `python3 scripts/check-static-links.py` passed for 75 HTML files; `git diff --check` passed; private-file blocker passed; gitleaks `--no-git` found no leaks; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-shadow-mode-trial-card.html`, `/resources/workshop-resource-chooser.html`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`, with shadow-mode links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-shadow-mode-mobile.png` (161367 bytes) and DOM dump persisted `/tmp/a2x-ai-shadow-mode-dom.html` (10022 bytes), confirming the page title, Shadow-mode rule, and public-safe footer markers on 2026-06-15 12:41 IDT; implementation commit `b842691` was pushed; GitHub Security Checks run `27537656162` succeeded; Pages deployment run `27537652972` succeeded; public smoke returned HTTP 200 for the live hub, AI shadow-mode trial card page, and route chooser with shadow-mode links/content visible on 2026-06-15 12:43 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, production decisions, compliance/legal advice, confidential records, or direct private-resource exposure were added.
@@ -856,6 +862,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-15 14:49 IDT — Finished Story 58.1: created public-safe AI near-miss debrief card handout, wired it into the hub, route chooser, resource inventory, and workshop usage map, and verified static links for 76 HTML files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, incident-specific confidential records, raw prompts, transcripts, production logs, account screenshots, vendor-confidential data, regulated records, or direct private-resource exposure were added.
+
+- 2026-06-15 14:46 IDT — Started Story 58.1: add a public-safe AI near-miss debrief card handout after verifying clean repo state at HEAD `6e171b3` and finding no unblocked TODO/BACKLOG items; scope is a static near-miss learning worksheet plus hub/route/inventory/usage-map wiring, with no private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, incident-specific confidential records, or direct private-resource exposure.
 
 - 2026-06-15 12:43 IDT — Cleared Story 57.1 post-commit verification: implementation commit `b842691` pushed; GitHub Security Checks run `27537656162` and Pages deployment run `27537652972` succeeded; public smoke returned HTTP 200 for the live hub, AI shadow-mode trial card page, and route chooser with shadow-mode links/content visible.
 
@@ -1776,4 +1786,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
