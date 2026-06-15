@@ -718,13 +718,13 @@ Status: ready prototype; second-wave giveaway, not required for the core first w
 
 ### A2X Marketplace
 
-Resources: `resources/a2x-marketplace-overview.html`, `resources/a2x-marketplace-tutorial.html`; source audit notes are in `docs/a2x-marketplace-public-safety-audit.md`.
+Resources: `resources/a2x-marketplace-overview.html`, `resources/a2x-marketplace-tutorial.html`, `A2X-public-marketplace/marketplace-links.md`; source audit notes are in `docs/a2x-marketplace-public-safety-audit.md`.
 
 Use when: Tomer wants to signal that A2X builds tools and extensions, not only workshops, or wants an attendee-friendly explanation of installing curated workflow items.
 
 Attendee action: Understand the marketplace pattern: package repeatable Claude Code workflows as curated skills, plugins, presets, verification steps, and safety notes; learn the safe install and plugin-loading mental model before trying real items.
 
-Status: ready overview/tutorial; direct source-repo linking still needs cleanup and a curated release path.
+Status: ready overview/tutorial plus Tomer-approved direct source links; still needs a curated release path before attendee installs.
 
 ### Prompt Magician
 

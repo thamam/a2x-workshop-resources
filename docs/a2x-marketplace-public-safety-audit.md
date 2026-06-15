@@ -10,15 +10,18 @@ Date: 2026-06-06
 
 ## Current recommendation
 
-Keep the workshop hub card as a **placeholder** for now. The repo is public and can be named internally, but the workshop hub should not add an active public link until the marketplace docs are cleaned up or a short sanitized landing page is written.
+2026-06-15 update: Tomer explicitly approved adding direct links from the placeholder folder to:
+
+- `https://github.com/thamam/A2X-marketplace`
+- `https://github.com/thamam/A2X-marketplace/blob/main/layout-designer.html`
+
+Keep the sanitized overview/tutorial as the workshop-safe explanation. Treat the new links as direct source references, not as a fully curated install path.
 
 Safe path for first workshop:
 
-1. Keep hub card unlinked.
-2. If Tomer wants to mention it live, describe it verbally as a plugin marketplace for Claude Code workflows.
-3. Before linking publicly from this hub, either:
-   - clean the marketplace repo docs, then link `https://github.com/thamam/A2X-marketplace`, or
-   - add a short public-safe overview page in this repo that avoids setup details, local paths, and plugin internals.
+1. Point attendees to `A2X-public-marketplace/marketplace-links.md` only when Tomer wants to show the live marketplace source.
+2. Use the sanitized overview/tutorial for the general concept and install mental model.
+3. Before asking attendees to install or run real marketplace items, prepare a curated release path or facilitator-owned demo.
 
 ## Audit commands and findings
 
@@ -76,7 +79,4 @@ Do not copy installation instructions wholesale yet because they include:
 
 ## Next action
 
-Create a sanitized marketplace overview card/page only after Tomer chooses one of these directions:
-
-- link the existing public repo after cleanup, or
-- keep the repo unlinked and publish only a short attendee-safe explanation of what a Claude Code marketplace is.
+If attendees will install or run real marketplace items, prepare a curated release path or facilitator-owned demo. The direct source links now exist in `A2X-public-marketplace/marketplace-links.md` by Tomer's request.

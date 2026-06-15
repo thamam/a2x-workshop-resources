@@ -10,7 +10,7 @@ Use these before browsing the rest:
 - [`../llm-wiki/HowTo-LLM-Wiki.md`](../llm-wiki/HowTo-LLM-Wiki.md) — build a basic LLM Wiki with Claude Code.
 - [`../llm-wiki/local-copies/karpathy-llm-wiki.md`](../llm-wiki/local-copies/karpathy-llm-wiki.md) — local copy of Karpathy's LLM Wiki Markdown.
 - [`../Examples/OpenSpec/`](../Examples/OpenSpec/) — empty OpenSpec example tree.
-- [`../A2X-public-marketplace/`](../A2X-public-marketplace/) — marketplace placeholder.
+- [`../A2X-public-marketplace/`](../A2X-public-marketplace/) — marketplace links and workshop-safe material.
 
 ## 1. Setup and navigation
 
@@ -89,7 +89,8 @@ Use these before browsing the rest:
 
 ## 9. Vendor, procurement, and marketplace
 
-- [`A2X Marketplace placeholder`](../A2X-public-marketplace/)
+- [`A2X Marketplace links`](../A2X-public-marketplace/marketplace-links.md)
+- [`A2X Marketplace folder`](../A2X-public-marketplace/)
 - [`A2X Marketplace overview`](../resources/a2x-marketplace-overview.html)
 - [`A2X Marketplace tutorial`](../resources/a2x-marketplace-tutorial.html)
 - [`AI tool trial scorecard`](../resources/ai-tool-trial-scorecard.html)

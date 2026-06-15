@@ -579,13 +579,13 @@ Next action: use only as a second-wave giveaway unless Tomer chooses to feature 
 
 ### A2X Marketplace
 
-Status: publish-now overview/tutorial; direct source link remains polish-first
+Status: publish-now overview/tutorial plus Tomer-approved direct source links
 
-Hub paths: `resources/a2x-marketplace-overview.html`, `resources/a2x-marketplace-tutorial.html`
+Hub paths: `resources/a2x-marketplace-overview.html`, `resources/a2x-marketplace-tutorial.html`, `A2X-public-marketplace/marketplace-links.md`
 
-Source: public GitHub repo `https://github.com/thamam/A2X-marketplace`; audit notes in `docs/a2x-marketplace-public-safety-audit.md`.
-Safety notes: sanitized overview and tutorial are public-safe and do not directly link the marketplace source repo. They explain the marketplace concept, install mental model, plugin-loading checklist, item types, benefits, and safe exercise with generic placeholders, no local paths, no personal contact details, no plugin internals, and no real credentials. Direct source-repo linking should still wait for cleanup of local-path docs, credential setup framing, and secret-scanner noise.
-Next action: if Tomer wants attendees to install real marketplace items, prepare a curated release path or facilitator-owned demo; otherwise use the tutorial as the safe attendee explanation.
+Source: public GitHub repo `https://github.com/thamam/A2X-marketplace`; direct layout designer link `https://github.com/thamam/A2X-marketplace/blob/main/layout-designer.html`; audit notes in `docs/a2x-marketplace-public-safety-audit.md`.
+Safety notes: sanitized overview and tutorial remain the workshop-safe explanation. The placeholder folder now includes Tomer-approved direct links to the public source repo and `layout-designer.html`; treat those as source links, not a fully curated attendee install path.
+Next action: if Tomer wants attendees to install real marketplace items, prepare a curated release path or facilitator-owned demo; otherwise use the tutorial plus direct links as reference material.
 
 ### Prompt Magician
 
