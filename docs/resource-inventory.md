@@ -193,6 +193,14 @@ Source: public-safe static audit-trail worksheet drafted in this repo from the c
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, confidential logs/prompts/transcripts, compliance/legal advice, or client material. The page explicitly tells attendees to record workflow boundaries, approved input categories, reviewer roles, outcome lanes, evidence pointers, cleanup owners, and revisit triggers instead of exposing customer records, employee data, production logs, raw prompts, raw outputs, account screenshots, credentials, regulated records, vendor contracts, pricing, private repository links, incident details, or confidential strategy.
 Next action: tune after observing which audit, traceability, retention, reviewer-evidence, and defensibility questions appear between evidence logs, output review, permissions ladders, tool-change checks, health reviews, and steering decision records.
 
+### AI trial cleanup checklist
+
+Status: publish-now
+Hub path: `resources/ai-trial-cleanup-checklist.html`
+Source: public-safe static cleanup/retention worksheet drafted in this repo from the current workshop need to close AI workflow trials, shadow-mode runs, vendor demos, and tiny experiments without leaving sensitive artifacts or vague next decisions behind.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, confidential logs/prompts/transcripts, legal/compliance advice, deletion automation, or client material. The page explicitly tells attendees to record only artifact categories, approved evidence, owner roles, cleanup decisions, and escalation routes while excluding secrets, customer records, employee data, raw prompts, raw outputs, transcripts, logs, account screenshots, regulated records, vendor contracts, pricing, private repository links, and confidential strategy.
+Next action: tune after observing which teams need help deciding what to keep, delete through approved channels, close, or escalate after shadow-mode trials, vendor demos, evidence reviews, tool-change checks, and pilot health reviews.
+
 ### AI shadow-mode trial card
 
 Status: publish-now

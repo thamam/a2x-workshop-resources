@@ -264,6 +264,16 @@ Attendee action: capture the generic near-miss pattern, boundary nearly crossed,
 
 Status: ready near-miss learning handout.
 
+### Trial cleanup: AI trial cleanup checklist
+
+Resource: `resources/ai-trial-cleanup-checklist.html`.
+
+Use when: attendees have finished a shadow-mode run, vendor demo, tiny workflow trial, or workshop experiment and need to decide what approved evidence stays, what sensitive leftovers should be removed through approved channels, and who owns follow-through before another run.
+
+Attendee action: list artifact categories, retain only approved evidence, route raw prompts/outputs/logs/transcripts/exports/account artifacts to the approved cleanup process, close temporary access, and choose stop, rerun, shadow-mode, escalation, or decision-memo as the next lane.
+
+Status: ready trial-cleanup handout.
+
 ### Access governance: AI tool access request checklist
 
 Resource: `resources/ai-tool-access-request-checklist.html`.
