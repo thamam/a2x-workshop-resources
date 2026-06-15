@@ -41,6 +41,14 @@ Source: public-safe static follow-up handout drafted in this repo from the curre
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The worksheet explicitly recommends fictional/sanitized sample inputs and stop conditions before sensitive actions.
 Next action: tune the closing worksheet after observing which post-workshop commitments attendees actually make.
 
+### Post-workshop follow-up email template
+
+Status: publish-now
+Hub path: `resources/post-workshop-follow-up-email.html`
+Source: public-safe static communication worksheet drafted in this repo from the current workshop need to help Tomer or attendees send a useful recap without creating a lead-capture, tracking, or private-data collection flow.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, confidential attendee lists, direct sales automation, or client material. The page explicitly tells senders to use public-safe hub links, avoid private attendee data and strong claims, and ask only for a small reversible next workflow with safe sample input.
+Next action: tune after observing which follow-up messages attendees or team leads need after the workshop.
+
 ### Claude Code handoff packet
 
 Status: publish-now

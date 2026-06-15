@@ -17,6 +17,7 @@ Use these before browsing the rest:
 - [`Pre-workshop readiness checklist`](../resources/pre-workshop-readiness-checklist.html)
 - [`Workshop resource chooser`](../resources/workshop-resource-chooser.html)
 - [`Post-workshop action plan`](../resources/post-workshop-action-plan.html)
+- [`Post-workshop follow-up email template`](../resources/post-workshop-follow-up-email.html)
 - [`Claude Code handoff packet`](../resources/claude-code-handoff-packet.html)
 - [`Claude Code credential routing`](../resources/claude-code-credential-routing.html)
 
