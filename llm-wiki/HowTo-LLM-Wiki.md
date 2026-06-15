@@ -5,7 +5,7 @@ This is the workshop-safe version of Andrej Karpathy's LLM Wiki idea: keep raw m
 ## Source inspiration
 
 - Karpathy gist: <https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f>
-- Local raw Markdown copy: [`LocalCopies/karpathy-llm-wiki.md`](LocalCopies/karpathy-llm-wiki.md)
+- Local raw Markdown copy: [`local-copies/karpathy-llm-wiki.md`](local-copies/karpathy-llm-wiki.md)
 
 ## Goal
 
@@ -108,4 +108,5 @@ Add more pages only when the notes justify them.
 ## Related local material
 
 - HTML tutorial: [`resources/wiki-llm-tutorial.html`](resources/wiki-llm-tutorial.html)
-- Local Karpathy Markdown copy: [`LocalCopies/karpathy-llm-wiki.md`](LocalCopies/karpathy-llm-wiki.md)
+- Local Karpathy Markdown copy: [`local-copies/karpathy-llm-wiki.md`](local-copies/karpathy-llm-wiki.md)
+- Memory/dreaming/agent-memory source bundle: [`raw-sources/`](raw-sources/)

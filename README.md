@@ -14,8 +14,10 @@ If you arrived here from a workshop, start with [`START-HERE.md`](START-HERE.md)
 ## Tomorrow's required material
 
 - [`HowTo-OpenSpec.md`](HowTo-OpenSpec.md) — basic OpenSpec setup.
-- [`HowTo-LLM-Wiki.md`](HowTo-LLM-Wiki.md) — build a basic LLM Wiki with Claude Code.
-- [`LocalCopies/karpathy-llm-wiki.md`](LocalCopies/karpathy-llm-wiki.md) — local copy of Karpathy's LLM Wiki Markdown.
+- [`llm-wiki/`](llm-wiki/) — LLM-Wiki guide, local copies, and raw source bundle.
+- [`llm-wiki/HowTo-LLM-Wiki.md`](llm-wiki/HowTo-LLM-Wiki.md) — build a basic LLM Wiki with Claude Code.
+- [`llm-wiki/raw-sources/`](llm-wiki/raw-sources/) — memory, dreaming, consolidation, and AI-agent memory source Markdown.
+- [`llm-wiki/local-copies/karpathy-llm-wiki.md`](llm-wiki/local-copies/karpathy-llm-wiki.md) — local copy of Karpathy's LLM Wiki Markdown.
 - [`Examples/OpenSpec/`](Examples/OpenSpec/) — empty OpenSpec tree for Tomer to fill later.
 - [`A2X-public-marketplace/`](A2X-public-marketplace/) — placeholder while marketplace material is organized.
 - [`Library/`](Library/) — curated index of existing artifacts.

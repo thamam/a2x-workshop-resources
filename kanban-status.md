@@ -881,6 +881,8 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-15 21:13 IDT — Finished maintenance: consolidated LLM-Wiki materials under `llm-wiki/`, moved the Karpathy copy and legacy Wiki-LLM HTML/audit files there, added `llm-wiki/raw-sources/` with memory/dreaming/agent-memory Markdown source material, updated navigation links, and verified `git diff --check`, static links, private-file blocker, and gitleaks locally.
+
 - 2026-06-15 19:17 IDT — Cleared Story 61.1 post-commit verification: implementation PR #4 was squashed/merged to `main` as `b88b412`; GitHub Security Checks run `27560000911` and Pages deployment run `27559994408` succeeded; public smoke returned HTTP 200 for the live hub, AI trial cleanup checklist page, route chooser, and library with trial-cleanup links/content visible.
 
 - 2026-06-15 19:12 IDT — Finished Story 61.1: created public-safe AI trial cleanup checklist handout, wired it into the route chooser, library, resource inventory, and workshop usage map, and verified static links for 78 HTML files, Markdown links for 36 files, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, confidential logs/prompts/transcripts, legal/compliance advice, deletion automation, or direct private-resource exposure were added.

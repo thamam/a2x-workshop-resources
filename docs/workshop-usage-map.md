@@ -728,7 +728,7 @@ Status: ready overview; direct source-repo linking still needs curated setup cop
 
 ### Wiki-LLM
 
-Resources: `resources/wiki-llm-overview.html`, `resources/wiki-llm-tutorial.html`; source path located with audit notes in `docs/wiki-llm-public-safety-audit.md`.
+Resources: `llm-wiki/resources/wiki-llm-overview.html`, `llm-wiki/resources/wiki-llm-tutorial.html`; source path located with audit notes in `llm-wiki/docs/wiki-llm-public-safety-audit.md`.
 
 Use when: Tomer discusses knowledge-base workflows and advanced agent context.
 
