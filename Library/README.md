@@ -80,6 +80,7 @@ Use these before browsing the rest:
 
 - [`AI permissions ladder`](../resources/ai-permissions-ladder.html)
 - [`AI workflow rollback drill card`](../resources/ai-workflow-rollback-drill-card.html)
+- [`AI failure-mode pre-mortem card`](../resources/ai-failure-mode-premortem-card.html)
 - [`AI incident pause card`](../resources/ai-incident-pause-card.html)
 - [`AI near-miss debrief card`](../resources/ai-near-miss-debrief-card.html)
 - [`AI workflow audit trail starter`](../resources/ai-workflow-audit-trail-starter.html)

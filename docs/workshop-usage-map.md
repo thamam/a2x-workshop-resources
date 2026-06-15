@@ -364,6 +364,16 @@ Attendee action: run a 20-minute tabletop drill with a toy scenario; name the pa
 
 Status: ready rollback-rehearsal handout.
 
+### Failure rehearsal: AI failure-mode pre-mortem card
+
+Resource: `resources/ai-failure-mode-premortem-card.html`.
+
+Use when: attendees are about to pilot, shadow-test, demo, or discuss rollout for an AI workflow and need to ask “how could this fail?” before enthusiasm turns into unclear scope, skipped review, unsafe inputs, or missing support paths.
+
+Attendee action: choose likely input, output, review, scope, operations, or memory failure lanes; record generic warning signs, preventive guardrails, response owners, and next review evidence without collecting sensitive examples.
+
+Status: ready failure-rehearsal handout.
+
 ### Pilot evidence: AI pilot evidence log
 
 Resource: `resources/ai-pilot-evidence-log.html`.
