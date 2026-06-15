@@ -54,7 +54,7 @@ Reasons:
 
 Best first workshop deliverable: create a sanitized overview page, not a direct repo link.
 
-Suggested page: `resources/wiki-llm-overview.html`.
+Suggested page: `llm-wiki/resources/wiki-llm-overview.html`.
 
 Recommended framing:
 
