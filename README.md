@@ -39,6 +39,24 @@ If you arrived here from a workshop, start with [`START-HERE.md`](START-HERE.md)
 
 The root is intentionally small. The visible files are navigation, security/config, the static Pages entrypoint, and the project tracker. The large generated artifact set remains under `resources/` and is curated from `Library/`.
 
+
+## Change workflow
+
+All changes to `main` must go through a pull request. Do not push directly to `main`.
+
+Default workflow:
+
+```bash
+git checkout -b <short-change-branch>
+# make changes
+git add <files>
+git commit -m "<message>"
+git push -u origin <short-change-branch>
+gh pr create --base main --head <short-change-branch>
+```
+
+Before merge, the PR must pass the repository security/static checks.
+
 ## Security rule
 
 Every commit must pass secret scanning, private-file checks, and static local-link checks.
