@@ -905,6 +905,8 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-16 04:05 IDT — Cleared Story 64.1 post-merge verification: PR #16 was squashed/merged to `main` as `6d1d0af`; GitHub Security Checks run `27586941193` succeeded; Pages deployment run `27586940665` succeeded; live smoke returned HTTP 200 for `/`, `/llm-wiki/README.md`, `/llm-wiki/raw-sources/README.md`, and `/START-HERE.md` with LLM-Wiki/source-copy markers visible. GitHub Actions reported Node.js 20 deprecation warnings only; no check failed.
+
 - 2026-06-16 04:03 IDT — Finished Maintenance: resolved PR #16 second review wording nit by making the `kids-books/` demo branch mirror the `memory/` copy-to-`raw/` instruction; verified static links, Markdown links, `git diff --check`, private-file blocker, and gitleaks locally before commit/push.
 
 - 2026-06-16 04:02 IDT — Started Maintenance: resolve PR #16 second review wording nit after CodeRabbit’s fresh pass succeeded but flagged that the `kids-books/` branch in `llm-wiki/README.md` should explicitly say to copy files into the clean demo folder’s `raw/` directory.
