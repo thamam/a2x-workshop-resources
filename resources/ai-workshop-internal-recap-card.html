@@ -137,8 +137,10 @@ Evidence needed before continuing:
 Suggested links to include:
 [ ] Route chooser · [ ] Next-step commitment card · [ ] Follow-up email · [ ] First-week adoption check-in · [ ] Prompt safety preflight · [ ] Output review rubric`;
 
+    let copyTimeout;
+    const originalText = worksheetButton?.textContent || 'Copy recap template';
+
     worksheetButton?.addEventListener('click', async () => {
-      const originalText = worksheetButton.textContent;
       try {
         if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
         await navigator.clipboard.writeText(worksheetTemplate);
@@ -146,7 +148,8 @@ Suggested links to include:
       } catch (error) {
         worksheetButton.textContent = 'Copy unavailable';
       }
-      setTimeout(() => { worksheetButton.textContent = originalText; }, 1800);
+      clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(() => { worksheetButton.textContent = originalText; }, 1800);
     });
   </script>
 </body>

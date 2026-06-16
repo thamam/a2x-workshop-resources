@@ -297,7 +297,7 @@
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
 - [ ] Story 68.1: Add public-safe AI workshop internal recap card
-  - Evidence: created `resources/ai-workshop-internal-recap-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; local `git diff --check`, `python3 scripts/check-static-links.py` for 82 HTML files, custom Markdown link check for 47 Markdown files / 133 relative links, private-file blocker, gitleaks `--no-git`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM marker smoke passed on 2026-06-17 00:48 IDT. Pending protected-branch PR checks/review/merge before DONE.
+  - Evidence: created `resources/ai-workshop-internal-recap-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; local `git diff --check`, `python3 scripts/check-static-links.py` for 82 HTML files, custom Markdown link check for 47 Markdown files / 133 relative links, private-file blocker, gitleaks `--no-git`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM marker smoke passed on 2026-06-17 00:48 IDT. Gemini copy-button review feedback was addressed and reverified with `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, and Chrome DOM markers on 2026-06-17 00:57 IDT. Pending protected-branch PR checks/review/merge before DONE.
 
 ### ✅ DONE (Completed Stories)
 
@@ -926,6 +926,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-17 00:57 IDT — Addressed Gemini review feedback on PR #25 by making the internal recap copy button keep a stable original label and clear overlapping copy-reset timers across rapid clicks; reran `git diff --check`, static links, Markdown links, private-file blocker, gitleaks `--no-git`, and Chrome DOM marker checks before pushing a follow-up commit.
 
 - 2026-06-17 00:48 IDT — Moved Story 68.1 to REVIEW after creating the public-safe AI workshop internal recap card, wiring it into the route chooser, library, resource inventory, and workshop usage map, and verifying `git diff --check`, static links for 82 HTML files, Markdown links, private-file blocker, gitleaks `--no-git`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM markers. Pending commit/push PR branch and protected-branch review/merge checks before DONE.
 
