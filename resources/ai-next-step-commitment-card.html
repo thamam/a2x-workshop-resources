@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Next-Step Commitment Card | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for turning an AI workshop discussion into one small reversible next commitment, owner, evidence check, and follow-up moment." />
+  <style>
+    :root { color-scheme: dark; --bg:#15120f; --card:#241f18; --card2:#1d1813; --line:#3b3328; --text:#f5ede2; --muted:#b7ac99; --accent:#df7c56; --accent2:#f2bf81; --ok:#97d8a6; --warn:#ffd28c; --bad:#ffa1a1; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2d2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.65rem); line-height:1.04; margin:14px 0 18px; letter-spacing:-.045em; max-width:960px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; transition:border-color .16s ease, background .16s ease, transform .16s ease; }
+    button.button { cursor:pointer; font-family:inherit; }
+    .button:hover, .button:focus-visible { border-color:var(--accent2); background:rgba(255,255,255,.055); transform:translateY(-1px); outline:none; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    .button.primary:hover, .button.primary:focus-visible { background:var(--accent2); border-color:var(--accent2); }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:214px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,31,24,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:12px; }
+    .line { border:1px dashed #5a4d3c; border-radius:16px; padding:16px; background:rgba(29,24,19,.72); }
+    .section-head { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+    .section-head h2 { margin:0; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · next-step commitment</div>
+    <h1>Turn workshop momentum into one safe commitment.</h1>
+    <p class="lead">Use this card at the end of a workshop, demo, objection conversation, or discovery discussion when everyone agrees AI is interesting but the next move is still fuzzy.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="post-workshop-action-plan.html">Open action plan</a>
+      <a class="button" href="ai-adoption-objection-response-card.html">Handle objections</a>
+      <a class="button" href="ai-use-case-intake-brief.html">Define the use case</a>
+    </div>
+
+    <section aria-labelledby="rule-title">
+      <div class="callout">
+        <div class="tag warn">Commitment rule</div>
+        <h2 id="rule-title">Commit to the next evidence check, not to rollout.</h2>
+        <p>Do not collect names, customer records, employee data, production logs, account screenshots, contracts, vendor pricing, private repository links, raw prompts, confidential strategy, credentials, or regulated records. Capture the workflow pattern, safe sample, owner role, reviewer role, evidence signal, decision date, and stop condition for one small reversible move.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="lanes-title">
+      <div class="eyebrow">Commitment lanes</div>
+      <h2 id="lanes-title">Pick the smallest honest next step</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">1 · Clarify</div><h3>Still too vague</h3><p>Use discovery or intake before anyone tests a tool. The commitment is to answer one missing workflow, boundary, owner, or reviewer question.</p></div>
+        <div class="card"><div class="tag ok">2 · Try</div><h3>Safe sample exists</h3><p>Use a toy repo, fictional document, or sanitized sample. The commitment is to run one reversible exercise and inspect the output together.</p></div>
+        <div class="card"><div class="tag warn">3 · Review</div><h3>Output quality is uncertain</h3><p>Use a rubric, calibration session, or acceptance criteria. The commitment is to define pass, revise, and stop thresholds before reuse.</p></div>
+        <div class="card"><div class="tag warn">4 · Govern</div><h3>Policy or data boundary is unclear</h3><p>Use data-boundary, prompt-safety, or policy-exception resources. The commitment is to name the approval path without exposing sensitive details.</p></div>
+        <div class="card"><div class="tag bad">5 · Decide</div><h3>A sponsor decision is needed</h3><p>Use sponsor alignment, steering cadence, or decision log. The commitment is to prepare one safe decision packet, not to promise adoption.</p></div>
+        <div class="card"><div class="tag bad">6 · Pause</div><h3>The safe next step is no</h3><p>Use incident, rollback, cleanup, or sunset aids. The commitment is to stop, narrow, or park the workflow until the missing boundary exists.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="worksheet-title">
+      <div class="eyebrow">Copyable worksheet</div>
+      <div class="section-head">
+        <h2 id="worksheet-title">AI next-step commitment card</h2>
+        <button class="button" type="button" data-copy-worksheet>Copy worksheet template</button>
+      </div>
+      <div class="worksheet">
+        <div class="line"><strong>Workshop moment:</strong><br />☐ Closing discussion · ☐ Demo follow-up · ☐ Objection response · ☐ Discovery question · ☐ Sponsor/steering decision · ☐ Other public-safe moment</div>
+        <div class="line"><strong>Workflow pattern in public-safe words:</strong><br />[Repeated work or decision the team wants to improve, written without private examples, names, customer details, screenshots, tickets, contracts, or secrets]</div>
+        <div class="line"><strong>Chosen next-step lane:</strong><br />☐ Clarify · ☐ Try · ☐ Review · ☐ Govern · ☐ Decide · ☐ Pause</div>
+        <div class="line"><strong>Safe sample or evidence source:</strong><br />[Toy repo, fictional document, redacted category summary, public-safe template, approved internal source, or “none yet”]</div>
+        <div class="line"><strong>Owner role and reviewer role:</strong><br />[Role accountable for the next move] + [role that can approve, revise, pause, or escalate]</div>
+        <div class="line"><strong>Definition of done for the next step:</strong><br />[Observable evidence that this tiny move happened: reviewed output, answered question, decision packet, approval route, or pause record]</div>
+        <div class="line"><strong>Stop condition:</strong><br />[What would make the team pause instead of continuing: sensitive data required, no owner, no reviewer, unsafe tool status, unclear policy, unsupported claim, or failed sample]</div>
+        <div class="line"><strong>Follow-up moment:</strong><br />[Date/window and forum for deciding whether to continue, revise, escalate, or stop]</div>
+      </div>
+    </section>
+
+    <section aria-labelledby="facilitator-title">
+      <div class="eyebrow">Facilitator cues</div>
+      <h2 id="facilitator-title">Keep the commitment small enough to be real</h2>
+      <div class="grid">
+        <div class="card"><h3>If people are excited</h3><ul><li>Ask for one workflow, not a transformation program.</li><li>Make the safe sample explicit.</li><li>Choose the reviewer before the tool.</li></ul></div>
+        <div class="card"><h3>If people are nervous</h3><ul><li>Respect the risk as a boundary signal.</li><li>Commit to evidence or approval first.</li><li>Make pause a valid outcome.</li></ul></div>
+        <div class="card"><h3>If people want buying advice</h3><ul><li>Separate workflow evidence from vendor preference.</li><li>Avoid pricing or guarantee claims.</li><li>Route to demo brief, scorecard, or procurement prep.</li></ul></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI next-step commitment card for A2X workshops. This page does not collect data, run analytics, add tracking, create lead capture, provide legal/compliance advice, expose confidential records, link private/internal resources, make pricing claims, or authorize production changes.
+    </footer>
+  </main>
+  <script>
+    const worksheetButton = document.querySelector('[data-copy-worksheet]');
+
+    const worksheetTemplate = `AI next-step commitment card
+
+Workshop moment:
+[ ] Closing discussion · [ ] Demo follow-up · [ ] Objection response · [ ] Discovery question · [ ] Sponsor/steering decision · [ ] Other public-safe moment
+
+Workflow pattern in public-safe words:
+[Repeated work or decision the team wants to improve, written without private examples, names, customer details, screenshots, tickets, contracts, or secrets]
+
+Chosen next-step lane:
+[ ] Clarify · [ ] Try · [ ] Review · [ ] Govern · [ ] Decide · [ ] Pause
+
+Safe sample or evidence source:
+[Toy repo, fictional document, redacted category summary, public-safe template, approved internal source, or “none yet”]
+
+Owner role and reviewer role:
+[Role accountable for the next move] + [role that can approve, revise, pause, or escalate]
+
+Definition of done for the next step:
+[Observable evidence that this tiny move happened: reviewed output, answered question, decision packet, approval route, or pause record]
+
+Stop condition:
+[What would make the team pause instead of continuing: sensitive data required, no owner, no reviewer, unsafe tool status, unclear policy, unsupported claim, or failed sample]
+
+Follow-up moment:
+[Date/window and forum for deciding whether to continue, revise, escalate, or stop]`;
+
+    worksheetButton?.addEventListener('click', async () => {
+      const originalText = worksheetButton.textContent;
+      try {
+        await navigator.clipboard.writeText(worksheetTemplate);
+        worksheetButton.textContent = 'Copied';
+      } catch (error) {
+        worksheetButton.textContent = 'Copy unavailable';
+      }
+      setTimeout(() => { worksheetButton.textContent = originalText; }, 1800);
+    });
+  </script>
+</body>
+</html>

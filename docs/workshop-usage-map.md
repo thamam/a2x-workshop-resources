@@ -64,6 +64,16 @@ Attendee action: choose a repeated low-risk workflow, define a small harness wit
 
 Status: ready follow-up handout.
 
+### Closing commitment: AI next-step commitment card
+
+Resource: `resources/ai-next-step-commitment-card.html`.
+
+Use when: a workshop, demo, objection conversation, or discovery discussion has useful momentum but still needs one concrete reversible commitment before attendees leave.
+
+Attendee action: choose clarify, try, review, govern, decide, or pause; name the safe sample or evidence source, owner role, reviewer role, done signal, stop condition, and follow-up moment without exposing sensitive details.
+
+Status: ready next-step commitment handout.
+
 ### Follow-up communication: post-workshop follow-up email template
 
 Resource: `resources/post-workshop-follow-up-email.html`.

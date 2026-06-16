@@ -259,6 +259,9 @@
 - [x] **Epic 65: AI adoption objection-handling aids** (100% Completed)
   - [x] Story 65.1: Add public-safe AI adoption objection response card handout
 
+- [ ] **Epic 66: AI next-step commitment aids** (95% Completed)
+  - [ ] Story 66.1: Add public-safe AI next-step commitment card handout — in review/pending protected merge
+
 ---
 
 ## 🏃 Active State Tracking
@@ -287,7 +290,9 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- None right now.
+- [ ] Story 66.1: Add public-safe AI next-step commitment card handout
+  - Status: PR #20 open; review feedback resolved locally and pushed, pending post-push checks/review-policy clearance before merge retry. Do not use admin bypass without Tomer approval.
+  - Evidence so far: added semantic `aria-labelledby` labels for the card sections, a copy worksheet button, and client-side clipboard template handling; `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP marker checks, and Chrome DevTools copy/ARIA/mobile smoke passed on 2026-06-16 19:43 IDT.
 
 ### ✅ DONE (Completed Stories)
 
@@ -910,6 +915,16 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 19:43 IDT — Moved Story 66.1 back to REVIEW after resolving PR #20 review feedback locally: added semantic `aria-labelledby` sections, copy worksheet button, and clipboard-template handling; verified `git diff --check`, static links, private-file blocker, gitleaks, local HTTP markers, and Chrome DevTools copy/ARIA/mobile smoke. Pending commit/push and post-push checks before merge retry.
+
+- 2026-06-16 19:40 IDT — Reopened Story 66.1 from REVIEW to IN PROGRESS on PR #20 after fresh GitHub inspection showed CodeRabbit completed but Gemini review comments for semantic `aria-labelledby` sections and copy-template usability still needed a scoped follow-up before merge retry.
+
+- 2026-06-16 12:52 IDT — Finished Story 66.1: created public-safe AI next-step commitment card handout, wired it into the route chooser, library, resource inventory, and workshop usage map, and verified static links for 80 HTML files, Markdown links for 47 Markdown files / 253 relative links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
+
+- 2026-06-16 12:59 IDT — Moved Story 66.1 to REVIEW instead of DONE because PR #20 is open and protected-branch policy blocks merge; GitHub Secret scan passed, CodeRabbit review completed, implementation commit `3d08f43` is pushed, and `gh pr merge` reports base branch policy prohibits merge while `--auto` reports auto-merge is not allowed. Admin bypass was not used.
+
+- 2026-06-16 12:48 IDT — Started Story 66.1: add a public-safe AI next-step commitment card after verifying clean repo state at HEAD `c36e1be` and finding no unblocked TODO/BACKLOG items; scope is a static commitment-to-next-action worksheet plus route chooser/library/inventory/usage-map wiring, with no private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure.
 
 - 2026-06-16 08:27 IDT — Cleared Story 65.1 post-merge verification: resolved both outdated Gemini review threads, PR #18 was squashed/merged to `main` as `681cc2a`, GitHub Security checks run `27596219999` and Pages deployment run `27596219269` succeeded, and public smoke returned HTTP 200 for the live hub, objection response card page, route chooser, and library with objection-card markers visible.
 
