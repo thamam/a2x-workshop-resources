@@ -262,6 +262,9 @@
 - [x] **Epic 66: AI next-step commitment aids** (100% Completed)
   - [x] Story 66.1: Add public-safe AI next-step commitment card handout
 
+- [ ] **Epic 67: AI adoption check-in aids** (0% Completed)
+  - [ ] Story 67.1: Add public-safe first-week AI adoption check-in card
+
 ---
 
 ## 🏃 Active State Tracking
@@ -290,7 +293,10 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- None right now.
+- [ ] Story 67.1: Add public-safe first-week AI adoption check-in card
+  - Status: review
+  - Evidence: created `resources/ai-first-week-adoption-check-in.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; `git diff --check`, `python3 scripts/check-static-links.py`, custom Markdown link check, private-file blocker, `gitleaks detect --no-banner --redact --no-git --source .`, and local HTTP marker smoke passed on 2026-06-16 22:12 IDT.
+  - Pending: commit/push PR branch and clear protected-branch review/merge checks before moving to DONE.
 
 ### ✅ DONE (Completed Stories)
 
@@ -916,6 +922,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 22:12 IDT — Moved Story 67.1 to REVIEW after creating the public-safe first-week AI adoption check-in card, wiring it into the route chooser, library, resource inventory, and workshop usage map, and verifying `git diff --check`, static links for 81 HTML files, Markdown links, private-file blocker, gitleaks `--no-git`, and local HTTP marker smoke. Pending commit/push PR branch and protected-branch review/merge checks before DONE.
+
+- 2026-06-16 21:58 IDT — Started Story 67.1: add a public-safe first-week AI adoption check-in card after verifying clean repo state at HEAD `d60cb3c` and finding no unblocked TODO/BACKLOG items; scope is a static first-week review worksheet plus route chooser/library/inventory/usage-map wiring, with no private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure.
 
 - 2026-06-16 19:52 IDT — Moved Story 66.1 to DONE after resolving all three Gemini review threads, successfully squashing/merging PR #20 to `main` as `bd8e6b7`, fast-forwarding local `main`, and re-running local `git diff --check`, static links, private-file blocker, and gitleaks on merged `main`. GitHub main-branch Security checks and Pages deployment started for merge commit `bd8e6b7` and are being monitored.
 

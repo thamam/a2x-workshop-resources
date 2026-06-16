@@ -74,6 +74,16 @@ Attendee action: choose clarify, try, review, govern, decide, or pause; name the
 
 Status: ready next-step commitment handout.
 
+### First-week adoption check-in: AI first-week adoption check-in
+
+Resource: `resources/ai-first-week-adoption-check-in.html`.
+
+Use when: one week after a workshop, tiny trial, or first team experiment, the team needs to decide whether to continue, narrow, support, escalate, pause, or close using safe evidence instead of enthusiasm or disappointment.
+
+Attendee action: compare the original commitment with what actually happened, capture safe evidence categories and friction themes, name owner/reviewer support, choose a decision lane, and set the next reversible action.
+
+Status: ready first-week adoption check-in handout.
+
 ### Follow-up communication: post-workshop follow-up email template
 
 Resource: `resources/post-workshop-follow-up-email.html`.
