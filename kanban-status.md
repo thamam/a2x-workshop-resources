@@ -289,7 +289,7 @@
 
 - [ ] Story 65.1: Add public-safe AI adoption objection response card handout
   - Status: built and locally/GitHub-verified on PR branch; PR #18 is open and waiting on CodeRabbit/branch-policy clearance before merge to `main`.
-  - Evidence: created `resources/ai-adoption-objection-response-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM checks passed; GitHub Security checks run `27591588867` succeeded for commit `ae33106`.
+  - Evidence: created `resources/ai-adoption-objection-response-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini’s readability/interactive-state review note by increasing mobile heading line-height and adding button hover/focus states; local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM checks passed; GitHub Security checks run `27591746311` succeeded for commit `2260645` before the CSS review follow-up.
 
 ### ✅ DONE (Completed Stories)
 
@@ -909,6 +909,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 06:22 IDT — Resolved PR #18 review feedback by increasing the new card’s mobile heading line-height and adding button hover/focus states; rerunning local checks and GitHub Security checks on the updated PR branch.
 
 - 2026-06-16 06:12 IDT — Finished Story 65.1: created public-safe AI adoption objection response card handout, wired it into the route chooser, library, resource inventory, and workshop usage map, and verified static links for 79 HTML files, Markdown links for 47 Markdown files / 129 relative links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
 
