@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI First-Week Adoption Check-In | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for reviewing the first week after an AI workshop or pilot: evidence, friction, safety boundaries, owner support, and the next reversible action." />
+  <style>
+    :root { color-scheme: dark; --bg:#15120f; --card:#241f18; --card2:#1d1813; --line:#3b3328; --text:#f5ede2; --muted:#b7ac99; --accent:#df7c56; --accent2:#f2bf81; --ok:#97d8a6; --warn:#ffd28c; --bad:#ffa1a1; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2d2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.65rem); line-height:1.04; margin:14px 0 18px; letter-spacing:-.045em; max-width:960px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; transition:border-color .16s ease, background .16s ease, transform .16s ease; }
+    button.button { cursor:pointer; font-family:inherit; }
+    .button:hover, .button:focus-visible { border-color:var(--accent2); background:rgba(255,255,255,.055); transform:translateY(-1px); outline:none; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    .button.primary:hover, .button.primary:focus-visible { background:var(--accent2); border-color:var(--accent2); }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:214px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,31,24,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:12px; }
+    .line { border:1px dashed #5a4d3c; border-radius:16px; padding:16px; background:rgba(29,24,19,.72); }
+    .section-head { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+    .section-head h2 { margin:0; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · first-week check-in</div>
+    <h1>Review the first week before momentum turns into drift.</h1>
+    <p class="lead">Use this card after a workshop, tiny trial, or first team experiment to decide whether the next safe move is continue, narrow, support, escalate, pause, or close.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-next-step-commitment-card.html">Review commitment</a>
+      <a class="button" href="ai-adoption-feedback-loop.html">Open feedback loop</a>
+      <a class="button" href="ai-adoption-office-hours-plan.html">Plan office hours</a>
+    </div>
+
+    <section aria-labelledby="rule-title">
+      <div class="callout">
+        <div class="tag warn">Check-in rule</div>
+        <h2 id="rule-title">Use evidence from the first week, not optimism from the workshop.</h2>
+        <p>Do not collect customer records, employee data, raw prompts, raw outputs, transcripts, production logs, account screenshots, pricing, contracts, private repository links, credentials, regulated records, or confidential strategy. Capture patterns, safe evidence categories, owner support needs, reviewer confidence, blockers, and one reversible next action.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="signals-title">
+      <div class="eyebrow">Decision signals</div>
+      <h2 id="signals-title">Pick the lane that matches the evidence</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">Continue</div><h3>Safe value appeared</h3><p>The team has reviewed output, a visible benefit, a clear owner, and no new boundary concerns. Continue with a slightly clearer next evidence check.</p></div>
+        <div class="card"><div class="tag ok">Narrow</div><h3>The idea is useful but too broad</h3><p>Reduce scope to one workflow step, one safe sample type, one reviewer, and one stop condition before more people try it.</p></div>
+        <div class="card"><div class="tag warn">Support</div><h3>People are stuck</h3><p>Route the issue to office hours, a handoff packet, setup help, owner clarification, or prompt-safety review instead of calling the workflow failed.</p></div>
+        <div class="card"><div class="tag warn">Escalate</div><h3>A boundary question appeared</h3><p>Use policy exception, data boundary, procurement, security, legal, or sponsor review before running more examples.</p></div>
+        <div class="card"><div class="tag bad">Pause</div><h3>The next step needs unsafe data</h3><p>Stop expansion until the team has an approved tool, approved inputs, accountable reviewer, and cleanup route.</p></div>
+        <div class="card"><div class="tag bad">Close</div><h3>No owner or evidence exists</h3><p>Record what was learned, keep reusable safe artifacts, and close the experiment without implying the tool or team failed.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="worksheet-title">
+      <div class="eyebrow">Copyable worksheet</div>
+      <div class="section-head">
+        <h2 id="worksheet-title">AI first-week adoption check-in</h2>
+        <button class="button" type="button" data-copy-worksheet>Copy worksheet template</button>
+      </div>
+      <div class="worksheet">
+        <div class="line"><strong>Original commitment:</strong><br />[One workflow, owner role, reviewer role, safe sample, evidence check, and stop condition from the workshop or pilot kickoff]</div>
+        <div class="line"><strong>What actually happened this week:</strong><br />☐ Tried once · ☐ Tried more than once · ☐ Blocked before trying · ☐ Reviewer checked output · ☐ Owner missing · ☐ Boundary question appeared</div>
+        <div class="line"><strong>Evidence we can safely discuss:</strong><br />[Generic pattern, toy/sanitized sample category, reviewed output type, friction theme, or decision signal without private details]</div>
+        <div class="line"><strong>Friction or risk signal:</strong><br />[Setup problem, unclear prompt, weak output, missing reviewer, data boundary, policy question, adoption confusion, or no visible value yet]</div>
+        <div class="line"><strong>Owner/reviewer support needed:</strong><br />[Office hours, handoff packet, prompt rewrite, rubric, permissions review, sponsor decision, or cleanup path]</div>
+        <div class="line"><strong>Decision lane:</strong><br />☐ Continue · ☐ Narrow · ☐ Support · ☐ Escalate · ☐ Pause · ☐ Close</div>
+        <div class="line"><strong>Next reversible action:</strong><br />[Smallest safe step before the next check-in, with one evidence signal and one stop condition]</div>
+        <div class="line"><strong>Next check-in moment:</strong><br />[Date/window and forum for deciding whether to continue, revise, escalate, pause, or close]</div>
+      </div>
+    </section>
+
+    <section aria-labelledby="facilitator-title">
+      <div class="eyebrow">Facilitator cues</div>
+      <h2 id="facilitator-title">Make the check-in psychologically safe and operationally sharp</h2>
+      <div class="grid">
+        <div class="card"><h3>If adoption looks slow</h3><ul><li>Ask whether setup, owner clarity, or reviewer time blocked action.</li><li>Do not shame non-use; find the missing support route.</li><li>Choose support or narrow before declaring failure.</li></ul></div>
+        <div class="card"><h3>If adoption looks fast</h3><ul><li>Check whether boundaries kept pace with usage.</li><li>Confirm reviewers are seeing outputs before reuse spreads.</li><li>Keep the next action reversible.</li></ul></div>
+        <div class="card"><h3>If leadership asks for proof</h3><ul><li>Report evidence categories, not sensitive examples.</li><li>Separate value signal from rollout recommendation.</li><li>Use a proof snapshot or decision memo for the next artifact.</li></ul></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI first-week adoption check-in for A2X workshops. This page does not collect data, run analytics, add tracking, create lead capture, provide legal/compliance advice, expose confidential records, link private/internal resources, make pricing claims, or authorize production changes.
+    </footer>
+  </main>
+  <script>
+    const worksheetButton = document.querySelector('[data-copy-worksheet]');
+
+    const worksheetTemplate = `AI first-week adoption check-in
+
+Original commitment:
+[One workflow, owner role, reviewer role, safe sample, evidence check, and stop condition from the workshop or pilot kickoff]
+
+What actually happened this week:
+[ ] Tried once · [ ] Tried more than once · [ ] Blocked before trying · [ ] Reviewer checked output · [ ] Owner missing · [ ] Boundary question appeared
+
+Evidence we can safely discuss:
+[Generic pattern, toy/sanitized sample category, reviewed output type, friction theme, or decision signal without private details]
+
+Friction or risk signal:
+[Setup problem, unclear prompt, weak output, missing reviewer, data boundary, policy question, adoption confusion, or no visible value yet]
+
+Owner/reviewer support needed:
+[Office hours, handoff packet, prompt rewrite, rubric, permissions review, sponsor decision, or cleanup path]
+
+Decision lane:
+[ ] Continue · [ ] Narrow · [ ] Support · [ ] Escalate · [ ] Pause · [ ] Close
+
+Next reversible action:
+[Smallest safe step before the next check-in, with one evidence signal and one stop condition]
+
+Next check-in moment:
+[Date/window and forum for deciding whether to continue, revise, escalate, pause, or close]`;
+
+    const originalWorksheetButtonText = worksheetButton?.textContent || 'Copy worksheet template';
+
+    worksheetButton?.addEventListener('click', async () => {
+      try {
+        if (!navigator.clipboard) {
+          throw new Error('Clipboard API not supported');
+        }
+        await navigator.clipboard.writeText(worksheetTemplate);
+        worksheetButton.textContent = 'Copied';
+      } catch (error) {
+        worksheetButton.textContent = 'Copy unavailable';
+      }
+      setTimeout(() => { worksheetButton.textContent = originalWorksheetButtonText; }, 1800);
+    });
+  </script>
+</body>
+</html>

@@ -57,6 +57,14 @@ Source: public-safe static next-step worksheet drafted in this repo from the cur
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to capture workflow patterns, safe samples, owner/reviewer roles, evidence checks, stop conditions, and follow-up moments instead of collecting names, customer records, employee data, production logs, screenshots, contracts, vendor pricing, private repositories, raw prompts, confidential strategy, credentials, or regulated records.
 Next action: tune after observing where workshop attendees agree on interest but fail to name a concrete owner, reviewer, evidence signal, stop condition, or follow-up moment.
 
+### AI first-week adoption check-in
+
+Status: publish-now
+Hub path: `resources/ai-first-week-adoption-check-in.html`
+Source: public-safe static first-week review worksheet drafted in this repo from the current workshop need to help attendees turn initial post-workshop attempts into safe adoption decisions, owner support, and reversible next steps.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to discuss evidence categories, friction themes, owner/reviewer support, blockers, and decision lanes instead of collecting customer records, employee data, raw prompts, raw outputs, transcripts, production logs, account screenshots, pricing, contracts, private repository links, credentials, regulated records, or confidential strategy.
+Next action: tune after observing which first-week adoption signals need clearer continue, narrow, support, escalate, pause, or close guidance.
+
 ### Post-workshop follow-up email template
 
 Status: publish-now
