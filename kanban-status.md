@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-16
+- **Last Updated:** 2026-06-17
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -265,6 +265,9 @@
 - [x] **Epic 67: AI adoption check-in aids** (100% Completed)
   - [x] Story 67.1: Add public-safe first-week AI adoption check-in card
 
+- [ ] **Epic 68: AI internal recap and forwarding aids** (95% In Review)
+  - [ ] Story 68.1: Add public-safe AI workshop internal recap card
+
 ---
 
 ## 🏃 Active State Tracking
@@ -293,7 +296,8 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- None right now.
+- [ ] Story 68.1: Add public-safe AI workshop internal recap card
+  - Evidence: created `resources/ai-workshop-internal-recap-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; local `git diff --check`, `python3 scripts/check-static-links.py` for 82 HTML files, custom Markdown link check for 47 Markdown files / 133 relative links, private-file blocker, gitleaks `--no-git`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM marker smoke passed on 2026-06-17 00:48 IDT. Pending protected-branch PR checks/review/merge before DONE.
 
 ### ✅ DONE (Completed Stories)
 
@@ -922,6 +926,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-17 00:48 IDT — Moved Story 68.1 to REVIEW after creating the public-safe AI workshop internal recap card, wiring it into the route chooser, library, resource inventory, and workshop usage map, and verifying `git diff --check`, static links for 82 HTML files, Markdown links, private-file blocker, gitleaks `--no-git`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM markers. Pending commit/push PR branch and protected-branch review/merge checks before DONE.
+
+- 2026-06-17 00:46 IDT — Started Story 68.1 after verifying clean repo state at HEAD `0ba3ccd` and finding no unblocked TODO/BACKLOG items; scope is a public-safe AI workshop internal recap card plus route chooser/library/inventory/usage-map wiring, with no private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure.
 
 - 2026-06-16 22:36 IDT — Moved Story 67.1 to DONE after resolving the Gemini review thread, squashing/merging PR #23 to `main` as `cf06fcb`, verifying GitHub Security checks run `27643036424` and Pages deployment run `27643035563` succeeded, and live-smoking the published hub, first-week adoption check-in page, route chooser, and library with HTTP 200 responses and check-in markers visible.
 

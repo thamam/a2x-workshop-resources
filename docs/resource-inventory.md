@@ -73,6 +73,14 @@ Source: public-safe static communication worksheet drafted in this repo from the
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, confidential attendee lists, direct sales automation, or client material. The page explicitly tells senders to use public-safe hub links, avoid private attendee data and strong claims, and ask only for a small reversible next workflow with safe sample input.
 Next action: tune after observing which follow-up messages attendees or team leads need after the workshop.
 
+### AI workshop internal recap card
+
+Status: publish-now
+Hub path: `resources/ai-workshop-internal-recap-card.html`
+Source: public-safe static internal recap worksheet drafted in this repo from the current workshop need to help attendees brief a manager, team lead, sponsor, reviewer, or working group after the session without exposing private examples or creating rollout promises.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, confidential attendee notes, raw prompts, raw outputs, account screenshots, vendor contracts, regulated records, or client material. The page explicitly tells attendees to share only the workflow pattern, workshop takeaway, off-limits boundary, owner/reviewer roles, proposed reversible action, and evidence needed before continuing.
+Next action: tune after observing which internal recap messages help attendees turn workshop learning into manager alignment, safe sample preparation, review-owner assignment, or a clear pause decision.
+
 ### Claude Code handoff packet
 
 Status: publish-now

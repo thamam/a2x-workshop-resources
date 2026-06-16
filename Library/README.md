@@ -20,6 +20,7 @@ Use these before browsing the rest:
 - [`AI next-step commitment card`](../resources/ai-next-step-commitment-card.html)
 - [`AI first-week adoption check-in`](../resources/ai-first-week-adoption-check-in.html)
 - [`Post-workshop follow-up email template`](../resources/post-workshop-follow-up-email.html)
+- [`AI workshop internal recap card`](../resources/ai-workshop-internal-recap-card.html)
 - [`Claude Code handoff packet`](../resources/claude-code-handoff-packet.html)
 - [`Claude Code credential routing`](../resources/claude-code-credential-routing.html)
 - [`AI question triage card`](../resources/ai-question-triage-card.html)

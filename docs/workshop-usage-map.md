@@ -94,6 +94,16 @@ Attendee action: copy the email structure, replace placeholders with public-safe
 
 Status: ready follow-up communication handout.
 
+### Internal recap: AI workshop internal recap card
+
+Resource: `resources/ai-workshop-internal-recap-card.html`.
+
+Use when: an attendee needs to brief a manager, team lead, sponsor, reviewer, or working group after the workshop and keep the message focused on public-safe takeaways, boundaries, ownership, and the next evidence check instead of private examples or broad rollout promises.
+
+Attendee action: choose the recap audience, write one safe workshop takeaway, name the workflow pattern, state what is off-limits, propose one reversible action, assign owner/reviewer roles, and identify the evidence needed before continuing.
+
+Status: ready internal-recap handout.
+
 ### Session handoff: Claude Code handoff packet
 
 Resource: `resources/claude-code-handoff-packet.html`.
