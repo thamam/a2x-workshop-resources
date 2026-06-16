@@ -256,8 +256,8 @@
 - [x] **Epic 64: LLM-Wiki source navigation curation** (100% Completed)
   - [x] Story 64.1: Clarify LLM-Wiki raw source paths for workshop demos
 
-- [ ] **Epic 65: AI adoption objection-handling aids** (95% In Review)
-  - [ ] Story 65.1: Add public-safe AI adoption objection response card handout
+- [x] **Epic 65: AI adoption objection-handling aids** (100% Completed)
+  - [x] Story 65.1: Add public-safe AI adoption objection response card handout
 
 ---
 
@@ -287,11 +287,12 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- [ ] Story 65.1: Add public-safe AI adoption objection response card handout
-  - Status: built and locally/GitHub-verified on PR branch; PR #18 is open and waiting on CodeRabbit/branch-policy clearance before merge to `main`.
-  - Evidence: created `resources/ai-adoption-objection-response-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini’s readability/interactive-state review note by increasing mobile heading line-height and adding button hover/focus states; local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM checks passed; GitHub Security checks run `27591746311` succeeded for commit `2260645` before the CSS review follow-up.
+- None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 65.1: Add public-safe AI adoption objection response card handout
+  - Evidence: created `resources/ai-adoption-objection-response-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini’s readability/interactive-state review note by increasing mobile heading line-height and adding button hover/focus states; resolved both outdated Gemini review threads; PR #18 was squashed/merged to `main` as `681cc2a`; GitHub Security checks run `27596219999` and Pages deployment run `27596219269` succeeded for merge commit `681cc2a`; public smoke returned HTTP 200 for the live hub, objection response card page, route chooser, and library with objection-card links/content visible on 2026-06-16 08:27 IDT. Local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM checks passed on the PR branch. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
 
 - [x] Maintenance: Resolve PR #16 second review wording nit
   - Evidence: updated `llm-wiki/README.md` so both `memory/` and `kids-books/` demo branches explicitly say to copy Markdown files into the clean demo folder’s `raw/` directory; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 128 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 04:02 IDT. No new public publishing, private/source exposure, analytics, tracking, lead capture, pricing claims, or production website changes were added.
@@ -909,6 +910,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 08:27 IDT — Cleared Story 65.1 post-merge verification: resolved both outdated Gemini review threads, PR #18 was squashed/merged to `main` as `681cc2a`, GitHub Security checks run `27596219999` and Pages deployment run `27596219269` succeeded, and public smoke returned HTTP 200 for the live hub, objection response card page, route chooser, and library with objection-card markers visible.
 
 - 2026-06-16 06:22 IDT — Resolved PR #18 review feedback by increasing the new card’s mobile heading line-height and adding button hover/focus states; rerunning local checks and GitHub Security checks on the updated PR branch.
 
