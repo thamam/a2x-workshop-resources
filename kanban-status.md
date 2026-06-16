@@ -259,8 +259,8 @@
 - [x] **Epic 65: AI adoption objection-handling aids** (100% Completed)
   - [x] Story 65.1: Add public-safe AI adoption objection response card handout
 
-- [ ] **Epic 66: AI next-step commitment aids** (95% Completed)
-  - [ ] Story 66.1: Add public-safe AI next-step commitment card handout — in review/pending protected merge
+- [x] **Epic 66: AI next-step commitment aids** (100% Completed)
+  - [x] Story 66.1: Add public-safe AI next-step commitment card handout
 
 ---
 
@@ -290,11 +290,12 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- [ ] Story 66.1: Add public-safe AI next-step commitment card handout
-  - Status: PR #20 open; review feedback resolved locally and pushed, pending post-push checks/review-policy clearance before merge retry. Do not use admin bypass without Tomer approval.
-  - Evidence so far: added semantic `aria-labelledby` labels for the card sections, a copy worksheet button, and client-side clipboard template handling; `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP marker checks, and Chrome DevTools copy/ARIA/mobile smoke passed on 2026-06-16 19:43 IDT.
+- None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 66.1: Add public-safe AI next-step commitment card handout
+  - Evidence: created `resources/ai-next-step-commitment-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini review feedback by adding semantic `aria-labelledby` labels for card sections, a copy worksheet button, and client-side clipboard-template handling; resolved the related Gemini review threads; PR #20 was squashed/merged to `main` as `bd8e6b7`; local `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP marker checks, and Chrome DevTools copy/ARIA/mobile smoke passed. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
 
 - [x] Story 65.1: Add public-safe AI adoption objection response card handout
   - Evidence: created `resources/ai-adoption-objection-response-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini’s readability/interactive-state review note by increasing mobile heading line-height and adding button hover/focus states; resolved both outdated Gemini review threads; PR #18 was squashed/merged to `main` as `681cc2a`; GitHub Security checks run `27596219999` and Pages deployment run `27596219269` succeeded for merge commit `681cc2a`; public smoke returned HTTP 200 for the live hub, objection response card page, route chooser, and library with objection-card links/content visible on 2026-06-16 08:27 IDT. Local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM checks passed on the PR branch. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
@@ -915,6 +916,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 19:52 IDT — Moved Story 66.1 to DONE after resolving all three Gemini review threads, successfully squashing/merging PR #20 to `main` as `bd8e6b7`, fast-forwarding local `main`, and re-running local `git diff --check`, static links, private-file blocker, and gitleaks on merged `main`. GitHub main-branch Security checks and Pages deployment started for merge commit `bd8e6b7` and are being monitored.
 
 - 2026-06-16 19:43 IDT — Moved Story 66.1 back to REVIEW after resolving PR #20 review feedback locally: added semantic `aria-labelledby` sections, copy worksheet button, and clipboard-template handling; verified `git diff --check`, static links, private-file blocker, gitleaks, local HTTP markers, and Chrome DevTools copy/ARIA/mobile smoke. Pending commit/push and post-push checks before merge retry.
 
