@@ -259,6 +259,9 @@
 - [x] **Epic 65: AI adoption objection-handling aids** (100% Completed)
   - [x] Story 65.1: Add public-safe AI adoption objection response card handout
 
+- [x] **Epic 66: AI next-step commitment aids** (100% Completed)
+  - [x] Story 66.1: Add public-safe AI next-step commitment card handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -290,6 +293,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 66.1: Add public-safe AI next-step commitment card handout
+  - Evidence: created `resources/ai-next-step-commitment-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; `python3 scripts/check-static-links.py` passed for 80 HTML files; custom Markdown link check passed for 47 Markdown files / 253 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-next-step-commitment-card.html`, `/resources/workshop-resource-chooser.html`, `/Library/README.md`, `/docs/resource-inventory.md`, and `/docs/workshop-usage-map.md`, with next-step commitment links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-next-step-commitment-mobile.png` (138722 bytes) and DOM dump persisted `/tmp/a2x-next-step-commitment-dom.html` (9357 bytes), confirming the page title, Commitment rule, and public-safe footer markers on 2026-06-16 12:52 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
 
 - [x] Story 65.1: Add public-safe AI adoption objection response card handout
   - Evidence: created `resources/ai-adoption-objection-response-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini’s readability/interactive-state review note by increasing mobile heading line-height and adding button hover/focus states; resolved both outdated Gemini review threads; PR #18 was squashed/merged to `main` as `681cc2a`; GitHub Security checks run `27596219999` and Pages deployment run `27596219269` succeeded for merge commit `681cc2a`; public smoke returned HTTP 200 for the live hub, objection response card page, route chooser, and library with objection-card links/content visible on 2026-06-16 08:27 IDT. Local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM checks passed on the PR branch. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
@@ -910,6 +916,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 12:52 IDT — Finished Story 66.1: created public-safe AI next-step commitment card handout, wired it into the route chooser, library, resource inventory, and workshop usage map, and verified static links for 80 HTML files, Markdown links for 47 Markdown files / 253 relative links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
+
+- 2026-06-16 12:48 IDT — Started Story 66.1: add a public-safe AI next-step commitment card after verifying clean repo state at HEAD `c36e1be` and finding no unblocked TODO/BACKLOG items; scope is a static commitment-to-next-action worksheet plus route chooser/library/inventory/usage-map wiring, with no private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure.
 
 - 2026-06-16 08:27 IDT — Cleared Story 65.1 post-merge verification: resolved both outdated Gemini review threads, PR #18 was squashed/merged to `main` as `681cc2a`, GitHub Security checks run `27596219999` and Pages deployment run `27596219269` succeeded, and public smoke returned HTTP 200 for the live hub, objection response card page, route chooser, and library with objection-card markers visible.
 

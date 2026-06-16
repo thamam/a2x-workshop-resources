@@ -49,6 +49,14 @@ Source: public-safe static follow-up handout drafted in this repo from the curre
 Safety notes: no private source links, credentials, local paths, analytics, lead capture, pricing claims, production website changes, or client material. The worksheet explicitly recommends fictional/sanitized sample inputs and stop conditions before sensitive actions.
 Next action: tune the closing worksheet after observing which post-workshop commitments attendees actually make.
 
+### AI next-step commitment card
+
+Status: publish-now
+Hub path: `resources/ai-next-step-commitment-card.html`
+Source: public-safe static next-step worksheet drafted in this repo from the current workshop need to turn closing momentum, objections, discovery, or demo energy into one small reversible commitment.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to capture workflow patterns, safe samples, owner/reviewer roles, evidence checks, stop conditions, and follow-up moments instead of collecting names, customer records, employee data, production logs, screenshots, contracts, vendor pricing, private repositories, raw prompts, confidential strategy, credentials, or regulated records.
+Next action: tune after observing where workshop attendees agree on interest but fail to name a concrete owner, reviewer, evidence signal, stop condition, or follow-up moment.
+
 ### Post-workshop follow-up email template
 
 Status: publish-now
