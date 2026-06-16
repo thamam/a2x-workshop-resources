@@ -291,8 +291,8 @@
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
 - [ ] Story 66.1: Add public-safe AI next-step commitment card handout
-  - Status: PR #20 open and locally/GitHub-verified; merge is blocked by base-branch policy (`gh pr merge` reports base branch policy prohibits merge; `--auto` reports auto-merge is not allowed). Do not use admin bypass without Tomer approval.
-  - Evidence so far: implementation commit `3d08f43` on branch `ai-next-step-commitment-card`; GitHub Secret scan passed and CodeRabbit review completed for PR #20; local static links, Markdown links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile/DOM checks passed.
+  - Status: PR #20 open; review feedback resolved locally and pushed, pending post-push checks/review-policy clearance before merge retry. Do not use admin bypass without Tomer approval.
+  - Evidence so far: added semantic `aria-labelledby` labels for the card sections, a copy worksheet button, and client-side clipboard template handling; `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP marker checks, and Chrome DevTools copy/ARIA/mobile smoke passed on 2026-06-16 19:43 IDT.
 
 ### ✅ DONE (Completed Stories)
 
@@ -915,6 +915,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 19:43 IDT — Moved Story 66.1 back to REVIEW after resolving PR #20 review feedback locally: added semantic `aria-labelledby` sections, copy worksheet button, and clipboard-template handling; verified `git diff --check`, static links, private-file blocker, gitleaks, local HTTP markers, and Chrome DevTools copy/ARIA/mobile smoke. Pending commit/push and post-push checks before merge retry.
+
+- 2026-06-16 19:40 IDT — Reopened Story 66.1 from REVIEW to IN PROGRESS on PR #20 after fresh GitHub inspection showed CodeRabbit completed but Gemini review comments for semantic `aria-labelledby` sections and copy-template usability still needed a scoped follow-up before merge retry.
 
 - 2026-06-16 12:52 IDT — Finished Story 66.1: created public-safe AI next-step commitment card handout, wired it into the route chooser, library, resource inventory, and workshop usage map, and verified static links for 80 HTML files, Markdown links for 47 Markdown files / 253 relative links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
 
