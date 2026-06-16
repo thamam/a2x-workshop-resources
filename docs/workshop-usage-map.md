@@ -124,6 +124,16 @@ Attendee action: check task fit, source support, safety boundaries, operational 
 
 Status: ready output-review handout.
 
+### Source support: AI answer citation check card
+
+Resource: `resources/ai-answer-citation-check-card.html`.
+
+Use when: an AI-generated summary, recommendation, answer, meeting follow-up, vendor response, or policy draft sounds plausible but needs source-backed evidence before anyone relies on it.
+
+Attendee action: split the answer into claims, attach the shortest public-safe source excerpt or reviewed pointer, label each claim as supported/assumed/unsupported/sensitive, and choose approve, revise, ask source question, remove, or escalate.
+
+Status: ready source-support handout.
+
 ### Reviewer calibration: AI output calibration session
 
 Resource: `resources/ai-output-calibration-session.html`.

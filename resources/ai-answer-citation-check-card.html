@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI answer citation check card | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for checking whether an AI-generated answer is supported by quoted sources, visible assumptions, and reviewer-approved next steps." />
+  <style>
+    :root { color-scheme: dark; --bg:#17130f; --card:#242019; --card2:#1d1913; --line:#3a342a; --text:#f4eddf; --muted:#baad9a; --accent:#d97757; --accent2:#f2b279; --ok:#98d7a5; --warn:#ffd18a; --bad:#ff9c8d; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:radial-gradient(circle at top left,#302317 0,var(--bg) 34rem); color:var(--text); line-height:1.55; }
+    main { max-width:1040px; margin:0 auto; padding:42px 20px 44px; }
+    a { color:inherit; }
+    .back { display:inline-flex; gap:.45rem; align-items:center; color:var(--accent2); font-weight:800; text-decoration:none; margin-bottom:28px; }
+    .eyebrow { color:var(--accent2); font-size:.76rem; letter-spacing:.15em; text-transform:uppercase; font-weight:850; }
+    h1 { font-size:clamp(2.25rem,6.4vw,4.8rem); line-height:.98; letter-spacing:-.055em; margin:14px 0 16px; max-width:860px; }
+    h2 { font-size:clamp(1.35rem,3vw,2.1rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.08rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    .lead { max-width:800px; font-size:1.12rem; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:780; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:38px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg,var(--card),var(--card2)); border-radius:20px; padding:20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
+    .tag { color:var(--ok); font-size:.74rem; font-weight:850; text-transform:uppercase; letter-spacing:.09em; margin-bottom:8px; }
+    .tag.warn { color:var(--warn); }
+    .tag.bad { color:var(--bad); }
+    .rule { border:1px solid var(--line); border-left:5px solid var(--accent); border-radius:18px; padding:18px; background:rgba(217,119,87,.08); }
+    .checklist { display:grid; gap:14px; counter-reset:item; }
+    .item { counter-increment:item; border:1px dashed #594d3d; border-radius:16px; padding:16px; background:rgba(29,25,19,.72); display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; }
+    .item::before { content:counter(item); width:30px; height:30px; border-radius:50%; background:var(--accent); color:#1d120d; display:grid; place-items:center; font-weight:900; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:12px; }
+    .line { border-bottom:1px solid rgba(255,255,255,.08); padding-bottom:10px; }
+    .line:last-child { border-bottom:0; padding-bottom:0; }
+    footer { margin-top:46px; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; font-size:.95rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="workshop-resource-chooser.html">← Back to route chooser</a>
+    <div class="eyebrow">A2X field kit · source support</div>
+    <h1>Check whether the AI answer is actually supported.</h1>
+    <p class="lead">Use this card when an AI-generated summary, recommendation, answer, or meeting follow-up sounds plausible but still needs source-backed proof before anyone relies on it.</p>
+    <div class="actions">
+      <a class="button primary" href="#card">Use the citation check</a>
+      <a class="button" href="ai-output-review-rubric.html">Review output quality</a>
+      <a class="button" href="ai-meeting-to-actions.html">Check meeting actions</a>
+      <a class="button" href="ai-workflow-audit-trail-starter.html">Start audit trail</a>
+    </div>
+
+    <section class="rule">
+      <div class="tag warn">Citation rule</div>
+      <h2>No quote, no confidence.</h2>
+      <p>If an AI answer cannot point to a short source excerpt, named assumption, or visible uncertainty note, treat it as a draft hypothesis. Do not turn it into a decision, external message, customer claim, procurement answer, legal/compliance statement, or production action.</p>
+    </section>
+
+    <section aria-labelledby="lanes-title">
+      <div class="eyebrow">Three support lanes</div>
+      <h2 id="lanes-title">Sort each claim before trusting it.</h2>
+      <div class="grid">
+        <div class="card"><div class="tag">Supported</div><h3>The answer quotes or points to a safe source.</h3><p>The claim is tied to a copied excerpt, public doc, sanitized note, accepted decision record, or reviewed artifact. The reviewer can inspect the source without needing private credentials or confidential material.</p></div>
+        <div class="card"><div class="tag warn">Assumed</div><h3>The answer fills a gap.</h3><p>The model inferred missing context, generalized from examples, or used a pattern that may be useful but is not proven. Mark the assumption and ask what evidence would confirm it.</p></div>
+        <div class="card"><div class="tag bad">Unsupported</div><h3>The answer sounds precise but has no source.</h3><p>Numbers, policies, customer facts, commitments, contract details, risk ratings, names, or deadlines without source support should be removed, revised, or escalated before use.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="steps-title">
+      <div class="eyebrow">Five-minute check</div>
+      <h2 id="steps-title">Run this before sharing the answer.</h2>
+      <div class="checklist">
+        <div class="item"><div><h3>1. Split the answer into claims.</h3><p>Highlight each factual statement, recommendation, decision, number, owner, deadline, risk, or promise. Do not check the whole answer as one blob.</p></div></div>
+        <div class="item"><div><h3>2. Attach the shortest safe source.</h3><p>Use a public doc, toy example, redacted excerpt, reviewed note, or accepted decision record. Do not paste customer data, employee records, secrets, private repository links, contracts, account screenshots, regulated records, or confidential strategy into the check.</p></div></div>
+        <div class="item"><div><h3>3. Mark assumptions honestly.</h3><p>If the source does not say it, label the claim as an assumption or question. Ask the model to separate supported facts from guesses instead of polishing the gap away.</p></div></div>
+        <div class="item"><div><h3>4. Choose the allowed next step.</h3><p>Supported claims may move to review. Assumptions need confirmation. Unsupported or sensitive claims must be removed, rewritten as questions, or escalated to the right owner.</p></div></div>
+        <div class="item"><div><h3>5. Save only public-safe evidence.</h3><p>Keep generic claim categories, safe excerpts, reviewer decisions, and open questions. Leave raw transcripts, private tickets, customer records, employee data, vendor contracts, pricing, and legal/compliance conclusions out of shared workshop artifacts.</p></div></div>
+      </div>
+    </section>
+
+    <section id="card" aria-labelledby="card-title">
+      <div class="eyebrow">Copyable card</div>
+      <h2 id="card-title">AI answer citation check card</h2>
+      <div class="worksheet">
+        <div class="line"><strong>Answer being checked:</strong><br />[summary / recommendation / meeting follow-up / vendor answer / workflow decision]</div>
+        <div class="line"><strong>Claim:</strong><br />[one factual statement, recommendation, owner, deadline, number, risk, or decision]</div>
+        <div class="line"><strong>Source excerpt or pointer:</strong><br />[short public-safe quote, sanitized note, reviewed artifact, or accepted decision record]</div>
+        <div class="line"><strong>Support lane:</strong><br />[supported / assumption / unsupported / sensitive-escalate]</div>
+        <div class="line"><strong>Reviewer decision:</strong><br />[approve for next safe step / revise / ask source question / remove / escalate]</div>
+        <div class="line"><strong>Open question:</strong><br />[what evidence, owner, or approval is still missing]</div>
+      </div>
+    </section>
+
+    <section aria-labelledby="moments-title">
+      <div class="eyebrow">Where this fits</div>
+      <h2 id="moments-title">Use it at the moments where plausibility is dangerous.</h2>
+      <div class="grid">
+        <div class="card"><h3>After meeting summaries</h3><p>Check that decisions, owners, and action items came from the notes instead of model inference.</p></div>
+        <div class="card"><h3>Before stakeholder updates</h3><p>Separate observed evidence from optimistic phrasing before sharing progress, risk, or adoption signals.</p></div>
+        <div class="card"><h3>During vendor or policy answers</h3><p>Keep procurement, security, legal, pricing, and data-use claims as questions unless source material and owner approval exist.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI answer citation check card for A2X workshops. This page does not collect data, run analytics, add tracking, provide legal/compliance advice, make pricing claims, expose confidential source material, or link private/internal resources.
+    </footer>
+  </main>
+</body>
+</html>

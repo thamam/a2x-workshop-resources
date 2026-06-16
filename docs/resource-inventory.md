@@ -97,6 +97,14 @@ Source: public-safe static reviewer rubric drafted in this repo from the current
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to review task fit, source support, safety boundaries, operational clarity, tone/promise control, and reversibility without exposing secrets, customer data, employee records, production logs, account screenshots, private repository contents, credentials, regulated records, vendor contracts, pricing claims, or internal strategy.
 Next action: tune after observing which AI-output review misses recur during workshop exercises, vendor demos, pilot evidence review, or rollout decisions.
 
+### AI answer citation check card
+
+Status: publish-now
+Hub path: `resources/ai-answer-citation-check-card.html`
+Source: public-safe static source-support worksheet drafted in this repo from the current workshop need to help attendees verify AI-generated summaries, recommendations, meeting follow-ups, and buyer-evaluation answers against visible quoted evidence before relying on them.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential source exposure, or client material. The page explicitly tells attendees to use public docs, toy examples, redacted excerpts, reviewed artifacts, or accepted decision records while excluding customer data, employee records, secrets, private repository links, contracts, account screenshots, regulated records, raw transcripts, vendor pricing, and confidential strategy.
+Next action: tune after observing where attendees over-trust plausible AI answers, meeting summaries, vendor/policy responses, or action lists without source-backed evidence.
+
 ### AI output calibration session
 
 Status: publish-now
