@@ -103,6 +103,7 @@ Use these before browsing the rest:
 ## 10. Adoption and steering
 
 - [`AI adoption change brief`](../resources/ai-adoption-change-brief.html)
+- [`AI adoption objection response card`](../resources/ai-adoption-objection-response-card.html)
 - [`AI adoption FAQ`](../resources/ai-adoption-faq.html)
 - [`AI adoption feedback loop`](../resources/ai-adoption-feedback-loop.html)
 - [`AI adoption office hours plan`](../resources/ai-adoption-office-hours-plan.html)

@@ -256,6 +256,9 @@
 - [x] **Epic 64: LLM-Wiki source navigation curation** (100% Completed)
   - [x] Story 64.1: Clarify LLM-Wiki raw source paths for workshop demos
 
+- [x] **Epic 65: AI adoption objection-handling aids** (100% Completed)
+  - [x] Story 65.1: Add public-safe AI adoption objection response card handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -287,6 +290,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 65.1: Add public-safe AI adoption objection response card handout
+  - Evidence: created `resources/ai-adoption-objection-response-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`; `git diff --check` passed; `python3 scripts/check-static-links.py` passed for 79 HTML files; custom Markdown link check passed for 47 Markdown files / 129 relative links; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-adoption-objection-response-card.html`, `/resources/workshop-resource-chooser.html`, `/Library/README.md`, `/docs/resource-inventory.md`, and `/docs/workshop-usage-map.md`, with objection-card links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-adoption-objection-mobile.png` (146570 bytes) and DOM dump persisted `/tmp/a2x-ai-adoption-objection-dom.html` (8971 bytes), confirming the page title, Objection rule, and public-safe footer markers on 2026-06-16 06:12 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, confidential records, or direct private-resource exposure were added.
 
 - [x] Maintenance: Resolve PR #16 second review wording nit
   - Evidence: updated `llm-wiki/README.md` so both `memory/` and `kids-books/` demo branches explicitly say to copy Markdown files into the clean demo folder’s `raw/` directory; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 128 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 04:02 IDT. No new public publishing, private/source exposure, analytics, tracking, lead capture, pricing claims, or production website changes were added.
@@ -904,6 +910,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 06:12 IDT — Finished Story 65.1: created public-safe AI adoption objection response card handout, wired it into the route chooser, library, resource inventory, and workshop usage map, and verified static links for 79 HTML files, Markdown links for 47 Markdown files / 129 relative links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
+
+- 2026-06-16 06:08 IDT — Started Story 65.1: add a public-safe AI adoption objection response card after verifying clean repo state at HEAD `221535c` and finding no unblocked TODO/BACKLOG items; scope is a static objection-to-evidence worksheet plus route chooser/library/inventory/usage-map wiring, with no private/source links, analytics, tracking, lead capture, pricing claims, production website changes, or strong marketing claims.
 
 - 2026-06-16 04:05 IDT — Cleared Story 64.1 post-merge verification: PR #16 was squashed/merged to `main` as `6d1d0af`; GitHub Security Checks run `27586941193` succeeded; Pages deployment run `27586940665` succeeded; live smoke returned HTTP 200 for `/`, `/llm-wiki/README.md`, `/llm-wiki/raw-sources/README.md`, and `/START-HERE.md` with LLM-Wiki/source-copy markers visible. GitHub Actions reported Node.js 20 deprecation warnings only; no check failed.
 
@@ -1871,4 +1881,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, adoption-objection response, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

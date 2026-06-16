@@ -377,6 +377,14 @@ Source: public-safe static adoption-communication FAQ drafted in this repo from 
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, or client material. The page explicitly tells attendees to answer with generic workflow names, roles, sanitized evidence categories, named review paths, and stop conditions instead of customer data, employee records, contracts, regulated records, production logs, account screenshots, private repository contents, credentials, vendor pricing, raw prompts, confidential strategy, or incident transcripts.
 Next action: tune after observing which adoption FAQ questions recur after change briefs, stakeholder updates, office hours, or controlled rollout planning.
 
+### AI adoption objection response card
+
+Status: publish-now
+Hub path: `resources/ai-adoption-objection-response-card.html`
+Source: public-safe static adoption-objection worksheet drafted in this repo from the current workshop follow-up need to turn AI adoption resistance into respectful acknowledgement, evidence requests, safety boundaries, owners, and reversible next steps.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, or client material. The page explicitly tells attendees to avoid customer data, employee records, production logs, account screenshots, contracts, vendor pricing, private repository links, raw prompts, confidential strategy, credentials, or regulated records while discussing objections.
+Next action: tune after observing which value, work-design, trust, safety, ownership, or rollback objections recur after stakeholder concern resolution, adoption-change briefings, sponsor alignment, or office hours.
+
 ### AI sponsor alignment brief
 
 Status: publish-now
