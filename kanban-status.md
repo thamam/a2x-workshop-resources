@@ -262,8 +262,8 @@
 - [x] **Epic 66: AI next-step commitment aids** (100% Completed)
   - [x] Story 66.1: Add public-safe AI next-step commitment card handout
 
-- [ ] **Epic 67: AI adoption check-in aids** (0% Completed)
-  - [ ] Story 67.1: Add public-safe first-week AI adoption check-in card
+- [x] **Epic 67: AI adoption check-in aids** (100% Completed)
+  - [x] Story 67.1: Add public-safe first-week AI adoption check-in card
 
 ---
 
@@ -293,12 +293,12 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- [ ] Story 67.1: Add public-safe first-week AI adoption check-in card
-  - Status: review
-  - Evidence: created `resources/ai-first-week-adoption-check-in.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; `git diff --check`, `python3 scripts/check-static-links.py`, custom Markdown link check, private-file blocker, `gitleaks detect --no-banner --redact --no-git --source .`, and local HTTP marker smoke passed on 2026-06-16 22:12 IDT.
-  - Pending: commit/push PR branch and clear protected-branch review/merge checks before moving to DONE.
+- None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 67.1: Add public-safe first-week AI adoption check-in card
+  - Evidence: created `resources/ai-first-week-adoption-check-in.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini review feedback by making the copy button keep a stable original label and guard missing Clipboard API before `writeText`; resolved the Gemini review thread; PR #23 was squashed/merged to `main` as `cf06fcb`; GitHub Security checks run `27643036424` and Pages deployment run `27643035563` succeeded; public smoke returned HTTP 200 for the live hub, first-week adoption check-in page, route chooser, and library with check-in links/content visible on 2026-06-16 22:36 IDT. Local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, and local HTTP marker smoke passed. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
 
 - [x] Story 66.1: Add public-safe AI next-step commitment card handout
   - Evidence: created `resources/ai-next-step-commitment-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini review feedback by adding semantic `aria-labelledby` labels for card sections, a copy worksheet button, and client-side clipboard-template handling; resolved the related Gemini review threads; PR #20 was squashed/merged to `main` as `bd8e6b7`; local `git diff --check`, `python3 scripts/check-static-links.py`, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, local HTTP marker checks, and Chrome DevTools copy/ARIA/mobile smoke passed. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
@@ -922,6 +922,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 22:36 IDT — Moved Story 67.1 to DONE after resolving the Gemini review thread, squashing/merging PR #23 to `main` as `cf06fcb`, verifying GitHub Security checks run `27643036424` and Pages deployment run `27643035563` succeeded, and live-smoking the published hub, first-week adoption check-in page, route chooser, and library with HTTP 200 responses and check-in markers visible.
 
 - 2026-06-16 22:27 IDT — Addressed Gemini review feedback on PR #23 by making the first-week check-in copy button keep a stable original label across repeated clicks and guard missing Clipboard API before calling `writeText`; rerunning local checks before push.
 
