@@ -6,7 +6,7 @@ This repo is the public, attendee-safe resource bundle for tomorrow's A2X Claude
 
 1. **OpenSpec setup:** [`HowTo-OpenSpec.md`](HowTo-OpenSpec.md)
 2. **LLM Wiki with Claude Code:** [`llm-wiki/HowTo-LLM-Wiki.md`](llm-wiki/HowTo-LLM-Wiki.md)
-3. **LLM-Wiki memory source bundle:** [`llm-wiki/raw-sources/`](llm-wiki/raw-sources/)
+3. **LLM-Wiki raw source chooser:** [`llm-wiki/raw-sources/`](llm-wiki/raw-sources/) — use `memory/` for the agent-memory synthesis demo and `kids-books/` for simple ingestion practice.
 4. **Karpathy original LLM Wiki Markdown copy:** [`llm-wiki/local-copies/karpathy-llm-wiki.md`](llm-wiki/local-copies/karpathy-llm-wiki.md)
 5. **OpenSpec example workspace:** [`Examples/OpenSpec/`](Examples/OpenSpec/)
 6. **A2X public marketplace links:** [`A2X-public-marketplace/`](A2X-public-marketplace/)
@@ -15,7 +15,7 @@ This repo is the public, attendee-safe resource bundle for tomorrow's A2X Claude
 ## What is in here
 
 - `HowTo-OpenSpec.md` — basic setup instructions for OpenSpec-style proposal/spec workflows.
-- `llm-wiki/` — LLM-Wiki guide, Karpathy local copy, legacy HTML pages, and the memory/dreaming/agent-memory raw source bundle.
+- `llm-wiki/` — LLM-Wiki guide, Karpathy local copy, legacy HTML pages, and the raw source chooser for memory synthesis or children’s story ingestion demos.
 - `Examples/OpenSpec/` — intentionally empty tree for Tomer to fill during or after the workshop.
 - `A2X-public-marketplace/` — marketplace links and workshop-safe material while the full marketplace package is organized.
 - `Library/` — curated index of the older generated handouts and demos, sorted into useful buckets.

@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-15
+- **Last Updated:** 2026-06-16
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -253,6 +253,9 @@
 - [x] **Epic 63: AI failure-mode rehearsal aids** (100% Completed)
   - [x] Story 63.1: Add public-safe AI failure-mode pre-mortem card handout
 
+- [x] **Epic 64: LLM-Wiki source navigation curation** (100% Completed)
+  - [x] Story 64.1: Clarify LLM-Wiki raw source paths for workshop demos
+
 ---
 
 ## 🏃 Active State Tracking
@@ -284,6 +287,15 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Maintenance: Resolve PR #16 second review wording nit
+  - Evidence: updated `llm-wiki/README.md` so both `memory/` and `kids-books/` demo branches explicitly say to copy Markdown files into the clean demo folder’s `raw/` directory; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 128 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 04:02 IDT. No new public publishing, private/source exposure, analytics, tracking, lead capture, pricing claims, or production website changes were added.
+
+- [x] Maintenance: Resolve PR #16 review follow-up before merge
+  - Evidence: updated `kanban-status.md` Last Updated metadata to `2026-06-16`; clarified `llm-wiki/README.md` source-path bullets and demo workflow so attendees copy the chosen raw-source files from the cloned repo into the clean demo folder’s `raw/` directory; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 128 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 03:57 IDT. No new public publishing, private/source exposure, analytics, tracking, lead capture, pricing claims, or production website changes were added.
+
+- [x] Story 64.1: Clarify LLM-Wiki raw source paths for workshop demos
+  - Evidence: updated `START-HERE.md`, `README.md`, `llm-wiki/README.md`, and `llm-wiki/raw-sources/README.md` to distinguish `llm-wiki/raw-sources/memory/` for the agent-memory synthesis demo from `llm-wiki/raw-sources/kids-books/` for simpler ingestion practice; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 249 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 01:48 IDT. No new private/source links, credentials, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
 - [x] Story 63.1: Add public-safe AI failure-mode pre-mortem card handout
   - Evidence: created `resources/ai-failure-mode-premortem-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, and `docs/workshop-usage-map.md`; `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 41 Markdown files / 111 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks; local HTTP marker smoke returned HTTP 200 for `/`, `/resources/ai-failure-mode-premortem-card.html`, `/resources/workshop-resource-chooser.html`, `/Library/README.md`, `/docs/resource-inventory.md`, and `/docs/workshop-usage-map.md`, with pre-mortem links/content visible; Chrome headless mobile screenshot wrote `/tmp/a2x-ai-failure-premortem-mobile.png` (152339 bytes) and DOM dump persisted `/tmp/a2x-ai-failure-premortem-dom.html` (8279 bytes), confirming the page title, Pre-mortem rule, AI failure-mode pre-mortem card, and public-safe footer markers on 2026-06-15 23:39 IDT; implementation PR #9 was squashed/merged to `main` as `6f3b68d`; GitHub Security Checks run `27575058586` succeeded; Pages deployment run `27575056330` succeeded; public smoke returned HTTP 200 for the live hub, AI failure-mode pre-mortem card, route chooser, and library with pre-mortem links/content visible on 2026-06-15 23:43 IDT. No private/source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, incident-specific confidential records, production logs, or direct private-resource exposure were added.
@@ -892,6 +904,18 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 04:03 IDT — Finished Maintenance: resolved PR #16 second review wording nit by making the `kids-books/` demo branch mirror the `memory/` copy-to-`raw/` instruction; verified static links, Markdown links, `git diff --check`, private-file blocker, and gitleaks locally before commit/push.
+
+- 2026-06-16 04:02 IDT — Started Maintenance: resolve PR #16 second review wording nit after CodeRabbit’s fresh pass succeeded but flagged that the `kids-books/` branch in `llm-wiki/README.md` should explicitly say to copy files into the clean demo folder’s `raw/` directory.
+
+- 2026-06-16 03:58 IDT — Finished Maintenance: resolved PR #16 review follow-up by aligning `kanban-status.md` Last Updated metadata and clarifying `llm-wiki/README.md` copy-path/demo wording; verified static links, Markdown links, `git diff --check`, private-file blocker, and gitleaks locally before commit/push.
+
+- 2026-06-16 03:56 IDT — Started Maintenance: resolve PR #16 review follow-up after verifying branch `llm-wiki-source-navigation-curation` is clean/synced at `f5306cd`, PR checks pass, and review bots flagged only small documentation/metadata fixes (`kanban-status.md` Last Updated date and `llm-wiki/README.md` demo-copy phrasing).
+
+- 2026-06-16 01:49 IDT — Finished Story 64.1: clarified LLM-Wiki raw source path choices in `START-HERE.md`, root `README.md`, `llm-wiki/README.md`, and `llm-wiki/raw-sources/README.md`; verified static links for 78 HTML files, Markdown links for 47 Markdown files / 249 relative links, `git diff --check`, private-file blocker, and gitleaks `--no-git` locally. No new private/source links, credentials, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
+
+- 2026-06-16 01:46 IDT — Started Story 64.1 after verifying clean repo state at HEAD `c5ecd8e` and finding no unblocked TODO/BACKLOG items; scope is a public-safe curation pass over existing LLM-Wiki/start-here docs so the reorganized raw-source paths are easier to choose during the workshop, with no new private/source links, analytics, tracking, lead capture, pricing claims, or production website changes.
 
 - 2026-06-15 23:56 IDT — Finished maintenance: added Tomer-approved direct marketplace links in `A2X-public-marketplace/marketplace-links.md` and `A2X-public-marketplace/README.md`, including the public `thamam/A2X-marketplace` repo and `layout-designer.html`; updated navigation/inventory/audit notes; verified both GitHub URLs return HTTP 200, plus `git diff --check`, static links for 78 HTML files, Markdown links, private-file blocker, and gitleaks locally.
 - 2026-06-15 23:43 IDT — Cleared Story 63.1 post-commit verification: implementation PR #9 was squashed/merged to `main` as `6f3b68d`; GitHub Security Checks run `27575058586` and Pages deployment run `27575056330` succeeded; public smoke returned HTTP 200 for the live hub, AI failure-mode pre-mortem card page, route chooser, and library with pre-mortem links/content visible.
