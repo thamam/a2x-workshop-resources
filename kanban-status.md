@@ -923,6 +923,8 @@
 
 ## 🔁 Recent Transitions
 
+- 2026-06-16 22:27 IDT — Addressed Gemini review feedback on PR #23 by making the first-week check-in copy button keep a stable original label across repeated clicks and guard missing Clipboard API before calling `writeText`; rerunning local checks before push.
+
 - 2026-06-16 22:12 IDT — Moved Story 67.1 to REVIEW after creating the public-safe first-week AI adoption check-in card, wiring it into the route chooser, library, resource inventory, and workshop usage map, and verifying `git diff --check`, static links for 81 HTML files, Markdown links, private-file blocker, gitleaks `--no-git`, and local HTTP marker smoke. Pending commit/push PR branch and protected-branch review/merge checks before DONE.
 
 - 2026-06-16 21:58 IDT — Started Story 67.1: add a public-safe first-week AI adoption check-in card after verifying clean repo state at HEAD `d60cb3c` and finding no unblocked TODO/BACKLOG items; scope is a static first-week review worksheet plus route chooser/library/inventory/usage-map wiring, with no private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure.

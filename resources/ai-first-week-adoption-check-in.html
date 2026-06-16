@@ -137,15 +137,19 @@ Next reversible action:
 Next check-in moment:
 [Date/window and forum for deciding whether to continue, revise, escalate, pause, or close]`;
 
+    const originalWorksheetButtonText = worksheetButton?.textContent || 'Copy worksheet template';
+
     worksheetButton?.addEventListener('click', async () => {
-      const originalText = worksheetButton.textContent;
       try {
+        if (!navigator.clipboard) {
+          throw new Error('Clipboard API not supported');
+        }
         await navigator.clipboard.writeText(worksheetTemplate);
         worksheetButton.textContent = 'Copied';
       } catch (error) {
         worksheetButton.textContent = 'Copy unavailable';
       }
-      setTimeout(() => { worksheetButton.textContent = originalText; }, 1800);
+      setTimeout(() => { worksheetButton.textContent = originalWorksheetButtonText; }, 1800);
     });
   </script>
 </body>
