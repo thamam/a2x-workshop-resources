@@ -287,6 +287,9 @@
 ### 🚧 BLOCKED / APPROVAL REQUIRED
 
 - None for the repository visibility and website-link launch path; Tomer approved this scope on 2026-06-08.
+- [ ] Story 68.1: Add public-safe AI workshop internal recap card
+  - Status: blocked on protected-branch merge policy
+  - Evidence: PR #25 follow-up commit `b8b11c7` addressed Gemini copy-button feedback; `git diff --check`, `python3 scripts/check-static-links.py`, custom Markdown link check, private-file blocker, gitleaks `--no-git`, and pre-commit gitleaks passed; GitHub Secret scan and CodeRabbit passed on latest commit; review threads were replied to. Merge attempt was blocked by base branch policy, and repository auto-merge is disabled, so this needs required review/merge permission before DONE.
 - [ ] Story 4.4: Expose or link A2X Marketplace source repo publicly
   - Status: blocked
   - Blocker: sanitized overview is available, but direct marketplace source linking still needs cleanup of local-path docs, credential setup framing, and secret-scanner noise.
@@ -296,8 +299,7 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- [ ] Story 68.1: Add public-safe AI workshop internal recap card
-  - Evidence: created `resources/ai-workshop-internal-recap-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; local `git diff --check`, `python3 scripts/check-static-links.py` for 82 HTML files, custom Markdown link check for 47 Markdown files / 133 relative links, private-file blocker, gitleaks `--no-git`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM marker smoke passed on 2026-06-17 00:48 IDT. Gemini copy-button review feedback was addressed and reverified with `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, and Chrome DOM markers on 2026-06-17 00:57 IDT. Pending protected-branch PR checks/review/merge before DONE.
+- None right now.
 
 ### ✅ DONE (Completed Stories)
 
@@ -926,6 +928,8 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-17 01:00 IDT — Moved Story 68.1 from REVIEW to BLOCKED/APPROVAL after pushing follow-up commit `b8b11c7`, verifying GitHub Secret scan and CodeRabbit passed on PR #25, replying to Gemini and CodeRabbit review threads, and confirming squash merge is blocked by base branch policy while repository auto-merge is disabled.
 
 - 2026-06-17 00:57 IDT — Addressed Gemini review feedback on PR #25 by making the internal recap copy button keep a stable original label and clear overlapping copy-reset timers across rapid clicks; reran `git diff --check`, static links, Markdown links, private-file blocker, gitleaks `--no-git`, and Chrome DOM marker checks before pushing a follow-up commit.
 
