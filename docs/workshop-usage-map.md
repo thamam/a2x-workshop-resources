@@ -474,6 +474,16 @@ Attendee action: prepare public-safe FAQ answers with generic workflow names, al
 
 Status: ready adoption-communication handout.
 
+### Adoption objections: AI adoption objection response card
+
+Resource: `resources/ai-adoption-objection-response-card.html`.
+
+Use when: a stakeholder, reviewer, manager, sponsor, or user says they are not sure about using AI and the team needs to turn that objection into an evidence request, safety boundary, owner, or reversible next step instead of dismissing it or overselling the workflow.
+
+Attendee action: classify the objection as value, work design, trust, safety, ownership, or rollback; write a respectful acknowledgement; define the missing evidence, boundary, owner/reviewer, and smallest reversible next step without sharing sensitive examples.
+
+Status: ready adoption-objection handout.
+
 ### Sponsor alignment: AI sponsor alignment brief
 
 Resource: `resources/ai-sponsor-alignment-brief.html`.

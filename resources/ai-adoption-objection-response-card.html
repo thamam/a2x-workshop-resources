@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Adoption Objection Response Card | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for turning AI adoption objections into evidence requests, safe boundaries, owners, and reversible next steps." />
+  <style>
+    :root { color-scheme: dark; --bg:#15120f; --card:#241f18; --card2:#1d1813; --line:#3b3328; --text:#f5ede2; --muted:#b7ac99; --accent:#df7c56; --accent2:#f2bf81; --ok:#97d8a6; --warn:#ffd28c; --bad:#ffa1a1; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2d2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.65rem); line-height:1.04; margin:14px 0 18px; letter-spacing:-.045em; max-width:960px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; transition:border-color .16s ease, background .16s ease, transform .16s ease; }
+    .button:hover, .button:focus-visible { border-color:var(--accent2); background:rgba(255,255,255,.055); transform:translateY(-1px); outline:none; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    .button.primary:hover, .button.primary:focus-visible { background:var(--accent2); border-color:var(--accent2); }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:214px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,31,24,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:12px; }
+    .line { border:1px dashed #5a4d3c; border-radius:16px; padding:16px; background:rgba(29,24,19,.72); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · adoption objections</div>
+    <h1>Turn “I’m not sure about AI here” into a safe evidence request.</h1>
+    <p class="lead">Use this card when a stakeholder, reviewer, manager, or user raises an objection that deserves respect but needs a practical next step instead of debate, pressure, or vague reassurance.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-stakeholder-concern-resolver.html">Resolve stakeholder concern</a>
+      <a class="button" href="ai-adoption-faq.html">Open adoption FAQ</a>
+      <a class="button" href="ai-sponsor-alignment-brief.html">Align sponsor decision</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag warn">Objection rule</div>
+        <h2>Do not “handle” the person. Handle the evidence gap.</h2>
+        <p>Do not record names, customer data, employee records, production logs, account screenshots, contracts, vendor pricing, private repository links, raw prompts, confidential strategy, credentials, or regulated records while discussing an objection. Capture the objection category, the evidence needed, the boundary that would make progress safe, the owner, and the smallest reversible next step.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Objection lanes</div>
+      <h2>Classify the concern before answering it</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">1 · Value</div><h3>“Is this worth the time?”</h3><p>Ask what evidence would prove the workflow saves time, improves quality, reduces rework, or clarifies a decision. Route to baseline, value scorecard, or proof snapshot.</p></div>
+        <div class="card"><div class="tag ok">2 · Work design</div><h3>“Will this make the job worse?”</h3><p>Ask what human role, review gate, support path, or workflow boundary would make the change clearer. Route to change brief, FAQ, or office-hours plan.</p></div>
+        <div class="card"><div class="tag warn">3 · Trust</div><h3>“How do we know it is right?”</h3><p>Ask what source support, reviewer threshold, calibration step, or audit trail is missing. Route to output review, calibration, acceptance criteria, or audit trail.</p></div>
+        <div class="card"><div class="tag warn">4 · Safety</div><h3>“What if sensitive data leaks?”</h3><p>Name the data boundary, do-not-paste list, approved tool status, retention rule, and pause trigger. Route to data boundary, prompt safety, policy exception, or cleanup.</p></div>
+        <div class="card"><div class="tag bad">5 · Ownership</div><h3>“Who is accountable?”</h3><p>Ask which owner, reviewer, sponsor, support path, and steering forum must exist before expansion. Route to owner card, sponsor alignment, steering cadence, or decision log.</p></div>
+        <div class="card"><div class="tag bad">6 · Rollback</div><h3>“What if it goes wrong?”</h3><p>Ask for the stop signal, rollback path, restart condition, and recovery owner before routine use. Route to rollback drill, incident pause, near-miss debrief, or sunset archive.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI adoption objection response card</h2>
+      <div class="worksheet">
+        <div class="line"><strong>Objection in public-safe words:</strong><br />[What concern was raised, rewritten without names, private examples, screenshots, contracts, or sensitive operational details?]</div>
+        <div class="line"><strong>Objection lane:</strong><br />☐ Value · ☐ Work design · ☐ Trust · ☐ Safety · ☐ Ownership · ☐ Rollback</div>
+        <div class="line"><strong>Respectful acknowledgement:</strong><br />[One sentence that shows the concern is legitimate without promising a result or dismissing the risk]</div>
+        <div class="line"><strong>Evidence request:</strong><br />[What safe observation, review result, sample output, baseline comparison, support signal, or decision record would reduce uncertainty?]</div>
+        <div class="line"><strong>Boundary before action:</strong><br />[Allowed inputs, off-limits data, human review gate, approval path, stop trigger, or rollback condition]</div>
+        <div class="line"><strong>Owner and reviewer:</strong><br />[Role accountable for collecting evidence] + [role allowed to approve, revise, pause, or escalate]</div>
+        <div class="line"><strong>Smallest reversible next step:</strong><br />☐ Clarify concern · ☐ Run safe sample · ☐ Add review gate · ☐ Update FAQ/change brief · ☐ Escalate approval · ☐ Pause until evidence exists</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Response patterns</div>
+      <h2>Use a calm, evidence-first reply</h2>
+      <div class="grid">
+        <div class="card"><h3>When the objection is right</h3><ul><li>Name the boundary clearly.</li><li>Pause or narrow the workflow.</li><li>Assign evidence before any expansion.</li></ul></div>
+        <div class="card"><h3>When the objection is vague</h3><ul><li>Ask which lane it belongs to.</li><li>Turn fear into a testable question.</li><li>Pick one safe sample or review signal.</li></ul></div>
+        <div class="card"><h3>When the objection is political</h3><ul><li>Do not argue the person into support.</li><li>Route to owner, sponsor, or steering decision.</li><li>Keep the next step reversible.</li></ul></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI adoption objection response card for A2X workshops. This page does not collect data, run analytics, add tracking, create lead capture, provide legal/compliance advice, expose confidential records, link private/internal resources, make pricing claims, or authorize production changes.
+    </footer>
+  </main>
+</body>
+</html>

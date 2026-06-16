@@ -256,6 +256,9 @@
 - [x] **Epic 64: LLM-Wiki source navigation curation** (100% Completed)
   - [x] Story 64.1: Clarify LLM-Wiki raw source paths for workshop demos
 
+- [ ] **Epic 65: AI adoption objection-handling aids** (95% In Review)
+  - [ ] Story 65.1: Add public-safe AI adoption objection response card handout
+
 ---
 
 ## 🏃 Active State Tracking
@@ -284,7 +287,9 @@
 
 ### 🔎 REVIEW (Built/Researched; Needs Review or Tuning)
 
-- None right now.
+- [ ] Story 65.1: Add public-safe AI adoption objection response card handout
+  - Status: built and locally/GitHub-verified on PR branch; PR #18 is open and waiting on CodeRabbit/branch-policy clearance before merge to `main`.
+  - Evidence: created `resources/ai-adoption-objection-response-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini’s readability/interactive-state review note by increasing mobile heading line-height and adding button hover/focus states; local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM checks passed; GitHub Security checks run `27591746311` succeeded for commit `2260645` before the CSS review follow-up.
 
 ### ✅ DONE (Completed Stories)
 
@@ -904,6 +909,14 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 06:22 IDT — Resolved PR #18 review feedback by increasing the new card’s mobile heading line-height and adding button hover/focus states; rerunning local checks and GitHub Security checks on the updated PR branch.
+
+- 2026-06-16 06:12 IDT — Finished Story 65.1: created public-safe AI adoption objection response card handout, wired it into the route chooser, library, resource inventory, and workshop usage map, and verified static links for 79 HTML files, Markdown links for 47 Markdown files / 129 relative links, private-file blocker, gitleaks `--no-git`, `git diff --check`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM evidence. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
+
+- 2026-06-16 06:17 IDT — Moved Story 65.1 to REVIEW instead of DONE because PR #18 is open and GitHub branch policy blocks merge while CodeRabbit remains pending; GitHub Security checks run `27591588867` succeeded for commit `ae33106`, and the implementation is ready pending review/merge clearance.
+
+- 2026-06-16 06:08 IDT — Started Story 65.1: add a public-safe AI adoption objection response card after verifying clean repo state at HEAD `221535c` and finding no unblocked TODO/BACKLOG items; scope is a static objection-to-evidence worksheet plus route chooser/library/inventory/usage-map wiring, with no private/source links, analytics, tracking, lead capture, pricing claims, production website changes, or strong marketing claims.
 
 - 2026-06-16 04:05 IDT — Cleared Story 64.1 post-merge verification: PR #16 was squashed/merged to `main` as `6d1d0af`; GitHub Security Checks run `27586941193` succeeded; Pages deployment run `27586940665` succeeded; live smoke returned HTTP 200 for `/`, `/llm-wiki/README.md`, `/llm-wiki/raw-sources/README.md`, and `/START-HERE.md` with LLM-Wiki/source-copy markers visible. GitHub Actions reported Node.js 20 deprecation warnings only; no check failed.
 
@@ -1871,4 +1884,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, adoption-objection response, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
