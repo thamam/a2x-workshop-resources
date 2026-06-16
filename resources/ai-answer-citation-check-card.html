@@ -22,6 +22,8 @@
     .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
     .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:780; }
     .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    .button:hover, .button:focus-visible { border-color:var(--accent2); background:rgba(242,178,121,.12); outline:none; }
+    .button.primary:hover, .button.primary:focus-visible { background:var(--accent2); border-color:var(--accent2); }
     section { margin-top:38px; }
     .card { border:1px solid var(--line); background:linear-gradient(180deg,var(--card),var(--card2)); border-radius:20px; padding:20px; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
@@ -71,11 +73,11 @@
       <div class="eyebrow">Five-minute check</div>
       <h2 id="steps-title">Run this before sharing the answer.</h2>
       <div class="checklist">
-        <div class="item"><div><h3>1. Split the answer into claims.</h3><p>Highlight each factual statement, recommendation, decision, number, owner, deadline, risk, or promise. Do not check the whole answer as one blob.</p></div></div>
-        <div class="item"><div><h3>2. Attach the shortest safe source.</h3><p>Use a public doc, toy example, redacted excerpt, reviewed note, or accepted decision record. Do not paste customer data, employee records, secrets, private repository links, contracts, account screenshots, regulated records, or confidential strategy into the check.</p></div></div>
-        <div class="item"><div><h3>3. Mark assumptions honestly.</h3><p>If the source does not say it, label the claim as an assumption or question. Ask the model to separate supported facts from guesses instead of polishing the gap away.</p></div></div>
-        <div class="item"><div><h3>4. Choose the allowed next step.</h3><p>Supported claims may move to review. Assumptions need confirmation. Unsupported or sensitive claims must be removed, rewritten as questions, or escalated to the right owner.</p></div></div>
-        <div class="item"><div><h3>5. Save only public-safe evidence.</h3><p>Keep generic claim categories, safe excerpts, reviewer decisions, and open questions. Leave raw transcripts, private tickets, customer records, employee data, vendor contracts, pricing, and legal/compliance conclusions out of shared workshop artifacts.</p></div></div>
+        <div class="item"><div><h3>Split the answer into claims.</h3><p>Highlight each factual statement, recommendation, decision, number, owner, deadline, risk, or promise. Do not check the whole answer as one blob.</p></div></div>
+        <div class="item"><div><h3>Attach the shortest safe source.</h3><p>Use a public doc, toy example, redacted excerpt, reviewed note, or accepted decision record. Do not paste customer data, employee records, secrets, private repository links, contracts, account screenshots, regulated records, or confidential strategy into the check.</p></div></div>
+        <div class="item"><div><h3>Mark assumptions honestly.</h3><p>If the source does not say it, label the claim as an assumption or question. Ask the model to separate supported facts from guesses instead of polishing the gap away.</p></div></div>
+        <div class="item"><div><h3>Choose the allowed next step.</h3><p>Supported claims may move to review. Assumptions need confirmation. Unsupported or sensitive claims must be removed, rewritten as questions, or escalated to the right owner.</p></div></div>
+        <div class="item"><div><h3>Save only public-safe evidence.</h3><p>Keep generic claim categories, safe excerpts, reviewer decisions, and open questions. Leave raw transcripts, private tickets, customer records, employee data, vendor contracts, pricing, and legal/compliance conclusions out of shared workshop artifacts.</p></div></div>
       </div>
     </section>
 
