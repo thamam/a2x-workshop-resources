@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-15
+- **Last Updated:** 2026-06-16
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -287,6 +287,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Maintenance: Resolve PR #16 review follow-up before merge
+  - Evidence: updated `kanban-status.md` Last Updated metadata to `2026-06-16`; clarified `llm-wiki/README.md` source-path bullets and demo workflow so attendees copy the chosen raw-source files from the cloned repo into the clean demo folder’s `raw/` directory; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 128 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 03:57 IDT. No new public publishing, private/source exposure, analytics, tracking, lead capture, pricing claims, or production website changes were added.
 
 - [x] Story 64.1: Clarify LLM-Wiki raw source paths for workshop demos
   - Evidence: updated `START-HERE.md`, `README.md`, `llm-wiki/README.md`, and `llm-wiki/raw-sources/README.md` to distinguish `llm-wiki/raw-sources/memory/` for the agent-memory synthesis demo from `llm-wiki/raw-sources/kids-books/` for simpler ingestion practice; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 249 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 01:48 IDT. No new private/source links, credentials, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
@@ -898,6 +901,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 03:58 IDT — Finished Maintenance: resolved PR #16 review follow-up by aligning `kanban-status.md` Last Updated metadata and clarifying `llm-wiki/README.md` copy-path/demo wording; verified static links, Markdown links, `git diff --check`, private-file blocker, and gitleaks locally before commit/push.
+
+- 2026-06-16 03:56 IDT — Started Maintenance: resolve PR #16 review follow-up after verifying branch `llm-wiki-source-navigation-curation` is clean/synced at `f5306cd`, PR checks pass, and review bots flagged only small documentation/metadata fixes (`kanban-status.md` Last Updated date and `llm-wiki/README.md` demo-copy phrasing).
 
 - 2026-06-16 01:49 IDT — Finished Story 64.1: clarified LLM-Wiki raw source path choices in `START-HERE.md`, root `README.md`, `llm-wiki/README.md`, and `llm-wiki/raw-sources/README.md`; verified static links for 78 HTML files, Markdown links for 47 Markdown files / 249 relative links, `git diff --check`, private-file blocker, and gitleaks `--no-git` locally. No new private/source links, credentials, analytics, tracking, lead capture, pricing claims, production website changes, or direct private-resource exposure were added.
 
