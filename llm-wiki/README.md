@@ -25,7 +25,7 @@ Suggested workflow:
 1. Read [`raw-sources/README.md`](raw-sources/README.md).
 2. Open Claude Code in a clean demo folder.
 3. Create `raw/`, `wiki/`, and `OPERATING_CONTRACT.md` using the how-to.
-4. Copy the Markdown files from the cloned repo’s [`llm-wiki/raw-sources/memory/`](raw-sources/memory/) folder into your clean demo folder’s `raw/` directory for the synthesis demo, or copy [`llm-wiki/raw-sources/kids-books/`](raw-sources/kids-books/) for a simpler ingestion walkthrough.
+4. Copy the Markdown files from the cloned repo’s [`llm-wiki/raw-sources/memory/`](raw-sources/memory/) folder into your clean demo folder’s `raw/` directory for the synthesis demo, or copy the Markdown files from [`llm-wiki/raw-sources/kids-books/`](raw-sources/kids-books/) into that same `raw/` directory for a simpler ingestion walkthrough.
 5. Ask Claude Code to build a small linked wiki from the sources.
 
 ## Boundaries

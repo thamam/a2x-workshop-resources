@@ -288,6 +288,9 @@
 
 ### ✅ DONE (Completed Stories)
 
+- [x] Maintenance: Resolve PR #16 second review wording nit
+  - Evidence: updated `llm-wiki/README.md` so both `memory/` and `kids-books/` demo branches explicitly say to copy Markdown files into the clean demo folder’s `raw/` directory; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 128 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 04:02 IDT. No new public publishing, private/source exposure, analytics, tracking, lead capture, pricing claims, or production website changes were added.
+
 - [x] Maintenance: Resolve PR #16 review follow-up before merge
   - Evidence: updated `kanban-status.md` Last Updated metadata to `2026-06-16`; clarified `llm-wiki/README.md` source-path bullets and demo workflow so attendees copy the chosen raw-source files from the cloned repo into the clean demo folder’s `raw/` directory; verified `python3 scripts/check-static-links.py` passed for 78 HTML files; custom Markdown link check passed for 47 Markdown files / 128 relative links; `git diff --check` passed; `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed; `gitleaks detect --no-banner --redact --no-git --source .` found no leaks on 2026-06-16 03:57 IDT. No new public publishing, private/source exposure, analytics, tracking, lead capture, pricing claims, or production website changes were added.
 
@@ -901,6 +904,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-16 04:03 IDT — Finished Maintenance: resolved PR #16 second review wording nit by making the `kids-books/` demo branch mirror the `memory/` copy-to-`raw/` instruction; verified static links, Markdown links, `git diff --check`, private-file blocker, and gitleaks locally before commit/push.
+
+- 2026-06-16 04:02 IDT — Started Maintenance: resolve PR #16 second review wording nit after CodeRabbit’s fresh pass succeeded but flagged that the `kids-books/` branch in `llm-wiki/README.md` should explicitly say to copy files into the clean demo folder’s `raw/` directory.
 
 - 2026-06-16 03:58 IDT — Finished Maintenance: resolved PR #16 review follow-up by aligning `kanban-status.md` Last Updated metadata and clarifying `llm-wiki/README.md` copy-path/demo wording; verified static links, Markdown links, `git diff --check`, private-file blocker, and gitleaks locally before commit/push.
 
