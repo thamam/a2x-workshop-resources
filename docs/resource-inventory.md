@@ -49,6 +49,14 @@ Source: public-safe static unresolved-question follow-up handout drafted in this
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to capture only a generic question pattern, parking reason, owner role, safe evidence needed, next resource, and follow-up promise instead of recording customer names, employee records, production logs, account screenshots, contracts, pricing, private repository links, raw prompts, confidential strategy, regulated data, or attendee-specific notes.
 Next action: tune after observing which parked workshop questions need clearer owner assignment, safe sample preparation, boundary review, evidence collection, or closure without action.
 
+### AI data-sharing decision card
+
+Status: publish-now
+Hub path: `resources/ai-data-sharing-decision-card.html`
+Source: public-safe static workshop worksheet drafted in this repo to help attendees sort proposed AI inputs into share, sanitize, ask, or stop lanes before prompting, uploading, demoing, or requesting access.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, or client material. The page explicitly keeps discussion at the information-category level and tells attendees not to paste customer records, employee data, production logs, credentials, account screenshots, contracts, private repository links, raw incident details, regulated records, confidential strategy, pricing, or proprietary source material.
+Next action: tune after observing which live workshop moments need clearer distinctions between prompt safety preflight, pilot data boundaries, policy exceptions, and vendor data-use questions.
+
 ### AI workshop discovery question bank
 
 Status: publish-now

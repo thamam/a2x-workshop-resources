@@ -275,6 +275,9 @@
 - [x] **Epic 70: Workshop facilitation clarity aids** (100% Completed)
   - [x] Story 70.1: Add public-safe AI workshop facilitator cue card
 
+- [x] **Epic 71: AI data-sharing judgment aids** (100% Completed)
+  - [x] Story 71.1: Add public-safe AI data-sharing decision card
+
 ---
 
 ## 🏃 Active State Tracking
@@ -309,6 +312,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 71.1: Add public-safe AI data-sharing decision card
+  - Evidence: created `resources/ai-data-sharing-decision-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; verified `python3 scripts/check-static-links.py` passed for 85 HTML files, `git diff --check` passed, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed, `gitleaks detect --no-banner --redact --no-git --source .` found no leaks, local HTTP marker smoke returned HTTP 200 for the hub, new data-sharing decision card, route chooser, Library, inventory, and usage map with data-sharing links/content visible, and Chrome headless mobile screenshot/DOM persisted `/tmp/a2x-ai-data-sharing-decision-card-mobile.png` (183853 bytes) plus `/tmp/a2x-ai-data-sharing-decision-card-dom.html` (9514 bytes) confirming the page title, Data-sharing rule, Four-lane sort, share/sanitize/ask/stop copy, and public-safe footer markers. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, proprietary source material, or public publishing were added.
 
 - [x] Story 70.1: Add public-safe AI workshop facilitator cue card
   - Evidence: implementation commit `21fd309` created `resources/ai-workshop-facilitator-cue-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; verified `python3 scripts/check-static-links.py` passed for 84 HTML files, `git diff --check` passed, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed, `gitleaks detect --no-banner --redact --no-git --source .` found no leaks, local HTTP marker smoke returned HTTP 200 for the hub, facilitator cue card, route chooser, library, inventory, and usage map with facilitator links/content visible, and Chrome headless mobile screenshot/DOM persisted `/tmp/a2x-ai-workshop-facilitator-cue-card-mobile.png` (147981 bytes) plus `/tmp/a2x-ai-workshop-facilitator-cue-card-dom.html` (8298 bytes) confirming the page title, Facilitation rule, route-live-room heading, and public-safe footer markers. GitHub Security checks run `27665866911` passed on `21fd309`; CodeRabbit was still pending after a bounded poll. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, or public publishing were added.
@@ -944,6 +950,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-17 09:42 IDT — Moved Story 71.1 to DONE after creating the public-safe AI data-sharing decision card, wiring it into the route chooser, Library, inventory, and usage map, and verifying static links, diff hygiene, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM markers.
+
+- 2026-06-17 09:36 IDT — Started Story 71.1: add a public-safe AI data-sharing decision card after confirming the tracker had no unblocked TODO/BACKLOG items; scope is static workshop clarity only, with no public publishing, analytics, lead capture, private/source links, pricing claims, legal/compliance advice, confidential records, strong marketing claims, or production website changes.
 
 - 2026-06-17 07:31 IDT — Moved Story 70.1 to DONE after creating the public-safe AI workshop facilitator cue card, wiring it into the route chooser, Library, inventory, and usage map, and verifying static links, diff hygiene, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM markers. Story 68.1 remains blocked on protected-branch merge policy.
 
@@ -1963,4 +1973,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, question parking-lot, facilitation cue-card, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, adoption-objection response, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, data-sharing judgment, live-question triage, question parking-lot, facilitation cue-card, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, adoption-objection response, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

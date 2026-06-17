@@ -64,6 +64,16 @@ Attendee action: restate the question as a generic pattern, choose why it is par
 
 Status: ready unresolved-question parking-lot handout.
 
+### Data judgment: AI data-sharing decision card
+
+Resource: `resources/ai-data-sharing-decision-card.html`.
+
+Use when: an attendee or pilot team has a useful AI prompt, upload, demo, or access request in mind but needs to decide what information can be shared, sanitized, escalated, or stopped before real workflow data enters a tool.
+
+Attendee action: classify the information category, choose share/sanitize/ask/stop, write the needed sanitization or boundary question, and name the owner plus next safe step.
+
+Status: ready data-sharing judgment handout.
+
 ### Workshop discovery: AI workshop discovery question bank
 
 Resource: `resources/ai-workshop-discovery-question-bank.html`.

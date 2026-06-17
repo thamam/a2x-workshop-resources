@@ -52,6 +52,7 @@ Use these before browsing the rest:
 
 - [`Prompt improver`](../resources/prompt-improver.html)
 - [`AI prompt safety preflight`](../resources/ai-prompt-safety-preflight.html)
+- [`AI data-sharing decision card`](../resources/ai-data-sharing-decision-card.html)
 - [`AI prompt library starter`](../resources/ai-prompt-library-starter.html)
 - [`AI output review rubric`](../resources/ai-output-review-rubric.html)
 - [`AI output calibration session`](../resources/ai-output-calibration-session.html)
