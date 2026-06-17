@@ -34,6 +34,16 @@ Attendee action: choose the right next resource by goal: harness mental model, C
 
 Status: ready navigation aid.
 
+### Facilitation: AI workshop facilitator cue card
+
+Resource: `resources/ai-workshop-facilitator-cue-card.html`.
+
+Use when: Tomer or another facilitator needs to route a live room moment into teach, demo, discover, park, escalate, or stop without collecting private examples or letting one question derail the workshop.
+
+Attendee action: hear the safe facilitator phrase, keep details generic, open the recommended hub resource, and leave the moment with an owner role, evidence need, follow-up path, or explicit stop condition.
+
+Status: ready facilitator cue-card handout.
+
 ### Live Q&A: AI question triage card
 
 Resource: `resources/ai-question-triage-card.html`.
@@ -43,6 +53,36 @@ Use when: attendees ask broad “can AI help with this?” questions and Tomer n
 Attendee action: capture the question generically, name the workflow pattern, safe sample idea, human gate, recommended hub resource, and one next safe action.
 
 Status: ready live-triage handout.
+
+### Unresolved Q&A follow-up: AI question parking lot
+
+Resource: `resources/ai-question-parking-lot.html`.
+
+Use when: a useful workshop question cannot be answered live because it needs a workflow owner, safe sample, policy or data boundary check, evidence signal, narrowing, or closure without action.
+
+Attendee action: restate the question as a generic pattern, choose why it is parked, name the owner role, identify the safe evidence needed, pick the best next hub resource, and define the follow-up promise without storing private details.
+
+Status: ready unresolved-question parking-lot handout.
+
+### Data judgment: AI data-sharing decision card
+
+Resource: `resources/ai-data-sharing-decision-card.html`.
+
+Use when: an attendee or pilot team has a useful AI prompt, upload, demo, or access request in mind but needs to decide what information can be shared, sanitized, escalated, or stopped before real workflow data enters a tool.
+
+Attendee action: classify the information category, choose share/sanitize/ask/stop, write the needed sanitization or boundary question, and name the owner plus next safe step.
+
+Status: ready data-sharing judgment handout.
+
+### Meeting-note redaction: AI meeting-notes redaction checklist
+
+Resource: `resources/ai-meeting-notes-redaction-checklist.html`.
+
+Use when: a workshop, pilot review, vendor demo, steering meeting, or adoption check-in produced useful notes but the team needs to remove sensitive details before asking AI for summaries, actions, risks, or follow-up drafts.
+
+Attendee action: remove identifiers, secrets, private links, exact sensitive facts, raw transcripts, and confidential material; preserve only the meeting purpose, generic constraints, owner roles, decisions, review gates, open questions, and next safe step.
+
+Status: ready meeting-note redaction handout.
 
 ### Workshop discovery: AI workshop discovery question bank
 
@@ -93,6 +133,16 @@ Use when: Tomer or an attendee wants to send a workshop recap that points to one
 Attendee action: copy the email structure, replace placeholders with public-safe hub links, repeat the do-not-paste boundary, and ask for one reversible workflow, safe sample, owner, reviewer, and evidence signal.
 
 Status: ready follow-up communication handout.
+
+### Internal recap: AI workshop internal recap card
+
+Resource: `resources/ai-workshop-internal-recap-card.html`.
+
+Use when: an attendee needs to brief a manager, team lead, sponsor, reviewer, or working group after the workshop and keep the message focused on public-safe takeaways, boundaries, ownership, and the next evidence check instead of private examples or broad rollout promises.
+
+Attendee action: choose the recap audience, write one safe workshop takeaway, name the workflow pattern, state what is off-limits, propose one reversible action, assign owner/reviewer roles, and identify the evidence needed before continuing.
+
+Status: ready internal-recap handout.
 
 ### Session handoff: Claude Code handoff packet
 

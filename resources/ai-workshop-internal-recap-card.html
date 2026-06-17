@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Workshop Internal Recap Card | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe worksheet for briefing a manager or team after an AI workshop without exposing private details, lead capture, tracking, pricing claims, or production commitments." />
+  <style>
+    :root { color-scheme: dark; --bg:#15120f; --card:#241f18; --card2:#1d1813; --line:#3b3328; --text:#f5ede2; --muted:#b7ac99; --accent:#df7c56; --accent2:#f2bf81; --ok:#97d8a6; --warn:#ffd28c; --bad:#ffa1a1; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2d2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.65rem); line-height:1.04; margin:14px 0 18px; letter-spacing:-.045em; max-width:960px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; transition:border-color .16s ease, background .16s ease, transform .16s ease; }
+    button.button { cursor:pointer; font-family:inherit; }
+    .button:hover, .button:focus-visible { border-color:var(--accent2); background:rgba(255,255,255,.055); transform:translateY(-1px); outline:none; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    .button.primary:hover, .button.primary:focus-visible { background:var(--accent2); border-color:var(--accent2); }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:214px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,31,24,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:12px; }
+    .line { border:1px dashed #5a4d3c; border-radius:16px; padding:16px; background:rgba(29,24,19,.72); }
+    .section-head { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+    .section-head h2 { margin:0; }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+    @media print {
+      :root { color-scheme: light; --bg:#ffffff; --card:#ffffff; --card2:#ffffff; --line:#d7d0c6; --text:#181512; --muted:#3f3830; --accent:#181512; --accent2:#5c4432; --ok:#1f5f33; --warn:#7a4c00; --bad:#7a1f1f; }
+      body { background:#ffffff; color:#181512; font-size:10.5pt; line-height:1.38; }
+      main { max-width:none; padding:0; }
+      h1 { font-size:24pt; letter-spacing:-.02em; margin:8pt 0 10pt; }
+      h2 { font-size:15pt; }
+      h3 { font-size:11pt; }
+      p, li { color:#3f3830; }
+      section { margin-top:18pt; break-inside:avoid; }
+      .actions, button.button { display:none !important; }
+      .grid { display:block; }
+      .card, .callout, .worksheet, .line { background:#ffffff; border-color:#d7d0c6; box-shadow:none; break-inside:avoid; }
+      .card { min-height:0; margin:0 0 8pt; padding:10pt; }
+      .worksheet { gap:8pt; padding:10pt; }
+      .line { padding:9pt; }
+      footer { margin-top:18pt; padding-top:10pt; font-size:8.5pt; }
+      a { text-decoration:none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · internal recap</div>
+    <h1>Brief your team on what to do next after the AI workshop.</h1>
+    <p class="lead">Use this card when an attendee needs to share the workshop outcome with a manager, team lead, sponsor, or working group without exposing sensitive details or turning a learning session into a broad rollout promise.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="post-workshop-follow-up-email.html">Open follow-up email</a>
+      <a class="button" href="ai-next-step-commitment-card.html">Make next-step commitment</a>
+      <a class="button" href="ai-first-week-adoption-check-in.html">Plan first-week check-in</a>
+    </div>
+
+    <section aria-labelledby="rule-title">
+      <div class="callout">
+        <div class="tag warn">Recap rule</div>
+        <h2 id="rule-title">Share direction and boundaries, not private examples.</h2>
+        <p>Do not include customer records, employee data, production logs, screenshots, account pages, private repository links, contracts, vendor pricing, raw prompts, raw AI outputs, confidential strategy, credentials, regulated records, or personal attendee notes. Summarize only the public-safe workflow pattern, why it matters, what was learned, what is explicitly off-limits, and the next reversible action.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="lanes-title">
+      <div class="eyebrow">Recap lanes</div>
+      <h2 id="lanes-title">Choose the message your team actually needs</h2>
+      <div class="grid">
+        <div class="card"><div class="tag ok">1 · Inform</div><h3>People need a clean summary</h3><p>Explain the workshop theme, the safest useful workflow pattern, and the boundaries that keep the next discussion productive.</p></div>
+        <div class="card"><div class="tag ok">2 · Align</div><h3>People need one owner</h3><p>Name the owner role, reviewer role, and next forum so the idea does not become an orphaned AI experiment.</p></div>
+        <div class="card"><div class="tag warn">3 · Request</div><h3>A tiny next step needs support</h3><p>Ask for a safe sample, review time, access route, or policy answer without asking for broad adoption approval.</p></div>
+        <div class="card"><div class="tag warn">4 · Boundary</div><h3>The important message is restraint</h3><p>State what will not be pasted, automated, purchased, connected, published, or used in production yet.</p></div>
+        <div class="card"><div class="tag bad">5 · Decision</div><h3>A sponsor needs options</h3><p>Frame continue, clarify, govern, pause, or close as choices with evidence gaps instead of a recommendation by vibes.</p></div>
+        <div class="card"><div class="tag bad">6 · Pause</div><h3>The safest recap is stop for now</h3><p>Explain the blocker, the missing approval, and the safer alternative resource or learning path.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="worksheet-title">
+      <div class="eyebrow">Copyable worksheet</div>
+      <div class="section-head">
+        <h2 id="worksheet-title">AI workshop internal recap card</h2>
+        <button class="button" type="button" data-copy-worksheet>Copy recap template</button>
+      </div>
+      <div class="worksheet">
+        <div class="line"><strong>Audience:</strong><br />☐ Manager · ☐ Team lead · ☐ Sponsor · ☐ Working group · ☐ Reviewer · ☐ Other public-safe audience</div>
+        <div class="line"><strong>Workshop takeaway in one sentence:</strong><br />[What the team learned about using AI or Claude Code safely, written without private examples or attendee notes]</div>
+        <div class="line"><strong>Workflow pattern worth exploring:</strong><br />[Repeated task, decision, review, or handoff pattern; no customer data, employee records, tickets, logs, screenshots, contracts, secrets, or private repository links]</div>
+        <div class="line"><strong>What is off-limits right now:</strong><br />[Sensitive inputs, production systems, account changes, broad automation, purchases, public publishing, private-source exposure, legal/compliance decisions, or unsupported claims]</div>
+        <div class="line"><strong>Proposed next reversible action:</strong><br />[Clarify one question, prepare a fictional sample, run a toy exercise, schedule a review, route an access request, or pause until a boundary is clear]</div>
+        <div class="line"><strong>Owner role and reviewer role:</strong><br />[Role accountable for the next action] + [role that can approve, revise, pause, or escalate]</div>
+        <div class="line"><strong>Evidence needed before continuing:</strong><br />[Reviewed output, safe sample result, answered policy question, owner support, approval route, or first-week check-in signal]</div>
+        <div class="line"><strong>Suggested links to include:</strong><br />☐ Route chooser · ☐ Next-step commitment card · ☐ Follow-up email · ☐ First-week adoption check-in · ☐ Prompt safety preflight · ☐ Output review rubric</div>
+      </div>
+    </section>
+
+    <section aria-labelledby="facilitator-title">
+      <div class="eyebrow">Facilitator cues</div>
+      <h2 id="facilitator-title">Use the recap to keep momentum honest</h2>
+      <div class="grid">
+        <div class="card"><h3>If the team wants to share wins</h3><ul><li>Describe the capability in workflow terms.</li><li>Attach the review and safety boundary.</li><li>Avoid outcome guarantees or broad marketing language.</li></ul></div>
+        <div class="card"><h3>If the team wants approval</h3><ul><li>Ask for the smallest reversible action.</li><li>Name the evidence that will decide the next move.</li><li>Route data, access, or procurement questions to the right owner.</li></ul></div>
+        <div class="card"><h3>If the team is unsure</h3><ul><li>Send the boundary recap anyway.</li><li>Pick clarify or pause instead of forcing a trial.</li><li>Use first-week check-in only after a real tiny action exists.</li></ul></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI workshop internal recap card for A2X workshops. This page does not collect data, run analytics, add tracking, create lead capture, provide legal/compliance advice, expose confidential records, link private/internal resources, make pricing claims, or authorize production changes.
+    </footer>
+  </main>
+  <script>
+    const worksheetButton = document.querySelector('[data-copy-worksheet]');
+
+    const worksheetTemplate = `AI workshop internal recap card
+
+Audience:
+[ ] Manager · [ ] Team lead · [ ] Sponsor · [ ] Working group · [ ] Reviewer · [ ] Other public-safe audience
+
+Workshop takeaway in one sentence:
+[What the team learned about using AI or Claude Code safely, written without private examples or attendee notes]
+
+Workflow pattern worth exploring:
+[Repeated task, decision, review, or handoff pattern; no customer data, employee records, tickets, logs, screenshots, contracts, secrets, or private repository links]
+
+What is off-limits right now:
+[Sensitive inputs, production systems, account changes, broad automation, purchases, public publishing, private-source exposure, legal/compliance decisions, or unsupported claims]
+
+Proposed next reversible action:
+[Clarify one question, prepare a fictional sample, run a toy exercise, schedule a review, route an access request, or pause until a boundary is clear]
+
+Owner role and reviewer role:
+[Role accountable for the next action] + [role that can approve, revise, pause, or escalate]
+
+Evidence needed before continuing:
+[Reviewed output, safe sample result, answered policy question, owner support, approval route, or first-week check-in signal]
+
+Suggested links to include:
+[ ] Route chooser · [ ] Next-step commitment card · [ ] Follow-up email · [ ] First-week adoption check-in · [ ] Prompt safety preflight · [ ] Output review rubric`;
+
+    let copyTimeout;
+    const originalText = worksheetButton?.textContent || 'Copy recap template';
+
+    worksheetButton?.addEventListener('click', async () => {
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
+        await navigator.clipboard.writeText(worksheetTemplate);
+        worksheetButton.textContent = 'Copied';
+      } catch (error) {
+        worksheetButton.textContent = 'Copy unavailable';
+      }
+      clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(() => { worksheetButton.textContent = originalText; }, 1800);
+    });
+  </script>
+</body>
+</html>

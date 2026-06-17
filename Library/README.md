@@ -16,13 +16,16 @@ Use these before browsing the rest:
 
 - [`Pre-workshop readiness checklist`](../resources/pre-workshop-readiness-checklist.html)
 - [`Workshop resource chooser`](../resources/workshop-resource-chooser.html)
+- [`AI workshop facilitator cue card`](../resources/ai-workshop-facilitator-cue-card.html)
 - [`Post-workshop action plan`](../resources/post-workshop-action-plan.html)
 - [`AI next-step commitment card`](../resources/ai-next-step-commitment-card.html)
 - [`AI first-week adoption check-in`](../resources/ai-first-week-adoption-check-in.html)
 - [`Post-workshop follow-up email template`](../resources/post-workshop-follow-up-email.html)
+- [`AI workshop internal recap card`](../resources/ai-workshop-internal-recap-card.html)
 - [`Claude Code handoff packet`](../resources/claude-code-handoff-packet.html)
 - [`Claude Code credential routing`](../resources/claude-code-credential-routing.html)
 - [`AI question triage card`](../resources/ai-question-triage-card.html)
+- [`AI question parking lot`](../resources/ai-question-parking-lot.html)
 
 ## 2. OpenSpec, PRD, and product workflow
 
@@ -49,6 +52,8 @@ Use these before browsing the rest:
 
 - [`Prompt improver`](../resources/prompt-improver.html)
 - [`AI prompt safety preflight`](../resources/ai-prompt-safety-preflight.html)
+- [`AI data-sharing decision card`](../resources/ai-data-sharing-decision-card.html)
+- [`AI meeting-notes redaction checklist`](../resources/ai-meeting-notes-redaction-checklist.html)
 - [`AI prompt library starter`](../resources/ai-prompt-library-starter.html)
 - [`AI output review rubric`](../resources/ai-output-review-rubric.html)
 - [`AI output calibration session`](../resources/ai-output-calibration-session.html)

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Meeting-Notes Redaction Checklist | A2X Workshop Resources</title>
+  <meta name="description" content="A public-safe checklist for redacting meeting notes before using AI to summarize, classify, draft follow-ups, or prepare next actions." />
+  <style>
+    :root { color-scheme: dark; --bg:#15120f; --card:#241f18; --card2:#1d1813; --line:#3b3328; --text:#f5ede2; --muted:#b7ac99; --accent:#df7c56; --accent2:#f2bf81; --ok:#97d8a6; --warn:#ffd28c; --bad:#ffa1a1; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left, #2d2118 0, var(--bg) 36rem); color:var(--text); line-height:1.56; }
+    a { color: inherit; }
+    main { max-width:1080px; margin:0 auto; padding:48px 20px 38px; }
+    .eyebrow { color:var(--accent2); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(2.15rem, 6vw, 4.65rem); line-height:.98; margin:14px 0 18px; letter-spacing:-.05em; max-width:940px; }
+    h2 { font-size:clamp(1.35rem, 3vw, 2.05rem); margin:0 0 10px; letter-spacing:-.025em; }
+    h3 { margin:0 0 8px; font-size:1.06rem; }
+    p, li { color:var(--muted); }
+    p { margin:0; }
+    ul { margin:10px 0 0; padding-left:1.2rem; }
+    li + li { margin-top:6px; }
+    strong { color:var(--text); }
+    .lead { color:var(--muted); font-size:1.16rem; max-width:820px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:750; font-size:.95rem; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#1d120d; }
+    section { margin-top:42px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:16px; }
+    .card { border:1px solid var(--line); background:linear-gradient(180deg, var(--card), var(--card2)); border-radius:20px; padding:22px; min-height:214px; }
+    .tag { color:var(--accent2); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .ok { color:var(--ok); }
+    .warn { color:var(--warn); }
+    .bad { color:var(--bad); }
+    .callout { border:1px solid var(--line); background:rgba(36,31,24,.72); border-radius:22px; padding:22px; }
+    .worksheet { border:1px solid var(--line); border-radius:18px; padding:18px; background:rgba(255,255,255,.025); display:grid; gap:12px; }
+    .line { border:1px dashed #5a4d3c; border-radius:16px; padding:16px; background:rgba(29,24,19,.72); }
+    footer { margin-top:52px; color:var(--muted); font-size:.95rem; border-top:1px solid var(--line); padding-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">A2X field kit · meeting-note safety</div>
+    <h1>Redact meeting notes before asking AI to help.</h1>
+    <p class="lead">Use this checklist when a workshop, pilot review, vendor demo, steering meeting, or adoption check-in produced useful notes, but the team needs to remove sensitive details before asking AI for summaries, actions, risks, or follow-up drafts.</p>
+    <div class="actions">
+      <a class="button primary" href="../index.html">Back to resource hub</a>
+      <a class="button" href="workshop-resource-chooser.html">Choose another resource</a>
+      <a class="button" href="ai-data-sharing-decision-card.html">Decide what data can be shared</a>
+      <a class="button" href="ai-meeting-to-actions.html">Turn notes into actions</a>
+    </div>
+
+    <section>
+      <div class="callout">
+        <div class="tag warn">Redaction rule</div>
+        <h2>Keep the useful pattern; remove the real-world identifiers.</h2>
+        <p>AI can help turn notes into decisions and next actions, but workshop tools should not receive raw transcripts, attendee names, customer names, employee records, production incidents, account screenshots, private links, contracts, credentials, pricing details, regulated records, confidential strategy, or proprietary source material. Work from a redacted packet that preserves the workflow pattern and decision context.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Five-pass redaction</div>
+      <h2>Clean the notes before prompting</h2>
+      <div class="grid">
+        <div class="card"><div class="tag bad">1 · Remove identifiers</div><h3>Names, accounts, and exact records</h3><p>Replace people, customers, vendors, tickets, IDs, URLs, screenshots, and account labels with generic roles or fictional labels.</p></div>
+        <div class="card"><div class="tag bad">2 · Remove secrets</div><h3>Anything that grants access</h3><p>Delete credentials, tokens, private repository links, billing pages, support portals, internal dashboards, and configuration snippets.</p></div>
+        <div class="card"><div class="tag warn">3 · Blur sensitive facts</div><h3>Numbers, incidents, contracts, and strategy</h3><p>Convert exact metrics, contract terms, incident details, regulated records, and confidential plans into broad categories or safe ranges.</p></div>
+        <div class="card"><div class="tag ok">4 · Preserve decisions</div><h3>Keep what AI needs to reason</h3><p>Retain the meeting purpose, decision options, generic constraints, owner roles, review gates, open questions, and intended next step.</p></div>
+        <div class="card"><div class="tag ok">5 · Add a review gate</div><h3>Make output provisional</h3><p>Name who must review the AI summary, which source notes they should compare against, and what should stay as “needs clarification.”</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Copyable worksheet</div>
+      <h2>AI meeting-notes redaction checklist</h2>
+      <div class="worksheet">
+        <div class="line"><strong>Meeting type:</strong><br />☐ Workshop · ☐ Pilot review · ☐ Vendor demo · ☐ Steering meeting · ☐ Adoption check-in · ☐ Other: [generic label]</div>
+        <div class="line"><strong>AI task:</strong><br />☐ Summarize decisions · ☐ Draft follow-up · ☐ Extract action items · ☐ Identify risks · ☐ List open questions · ☐ Prepare stakeholder update</div>
+        <div class="line"><strong>Remove before prompting:</strong><br />☐ Names · ☐ customer/vendor identifiers · ☐ employee data · ☐ ticket IDs · ☐ private links · ☐ screenshots · ☐ credentials · ☐ exact metrics · ☐ contracts/pricing · ☐ regulated records · ☐ confidential strategy · ☐ proprietary source details</div>
+        <div class="line"><strong>Safe replacements:</strong><br />Use role labels, generic workflow names, approximate ranges, fictional examples, public docs, approved samples, or “details withheld pending owner review.”</div>
+        <div class="line"><strong>Prompt boundary:</strong><br />Ask AI to work only from the redacted packet, avoid inventing commitments, flag uncertainty, and label every action item with an owner role plus review need.</div>
+        <div class="line"><strong>Human review:</strong><br />Reviewer role: [role]. Compare against original notes in the approved private system. Approve only the next safe follow-up, not broad rollout or production change.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Resource handoffs</div>
+      <h2>After the notes are redacted</h2>
+      <div class="grid">
+        <div class="card"><h3>Need an AI-ready prompt?</h3><p>Use the prompt safety preflight to keep the request narrow, reviewable, and reversible before sending the redacted packet.</p></div>
+        <div class="card"><h3>Need action items?</h3><p>Use the meeting-to-actions handout to convert redacted notes into reviewed decisions, open questions, actions, and risks.</p></div>
+        <div class="card"><h3>Boundary still unclear?</h3><p>Use the data-sharing decision card or policy exception request before expanding the packet or using real workflow data.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      Public-safe AI meeting-notes redaction checklist for A2X workshops. This page does not collect data, run analytics, add tracking, create lead capture, provide legal/compliance advice, expose confidential records, link private/internal resources, make pricing claims, or authorize production changes.
+    </footer>
+  </main>
+</body>
+</html>

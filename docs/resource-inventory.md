@@ -25,6 +25,14 @@ Source: public-safe static navigation aid drafted in this repo from the current 
 Safety notes: links only to existing public-safe hub resources and docs; no private source links, credentials, local paths, analytics, lead capture, or client material.
 Next action: tune route labels after observing which workshop moments cause attendee confusion.
 
+### AI workshop facilitator cue card
+
+Status: publish-now
+Hub path: `resources/ai-workshop-facilitator-cue-card.html`
+Source: public-safe static facilitation aid drafted in this repo from the current workshop need to route live room moments into teach, demo, discover, park, escalate, or stop decisions without exposing sensitive examples.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, or client material. The page explicitly tells facilitators to collect only workflow patterns, safe sample categories, owner/reviewer roles, resource routes, evidence needs, and stop conditions instead of customer names, employee records, production logs, account screenshots, contracts, private repository links, raw prompts, confidential strategy, credentials, regulated data, or pricing details.
+Next action: tune after observing which live workshop moments need faster facilitator routing, clearer safe phrases, or better handoff to question triage, parking lot, use-case intake, policy exception, or follow-up resources.
+
 ### AI question triage card
 
 Status: publish-now
@@ -32,6 +40,30 @@ Hub path: `resources/ai-question-triage-card.html`
 Source: public-safe static live-question triage handout drafted in this repo from the current workshop need to turn broad attendee AI questions into safe next actions and existing hub resource routes.
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to capture workflow patterns, safe sample ideas, owner/reviewer roles, and next public-safe resources instead of collecting sensitive details, private links, pricing, screenshots, secrets, raw prompts, logs, contracts, or confidential strategy.
 Next action: tune after observing which live workshop questions need clearer teach/discover/try/buy/govern/stop routing.
+
+### AI question parking lot
+
+Status: publish-now
+Hub path: `resources/ai-question-parking-lot.html`
+Source: public-safe static unresolved-question follow-up handout drafted in this repo from the current workshop need to park useful AI questions until an owner, safe sample, boundary check, evidence signal, or follow-up resource is available.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to capture only a generic question pattern, parking reason, owner role, safe evidence needed, next resource, and follow-up promise instead of recording customer names, employee records, production logs, account screenshots, contracts, pricing, private repository links, raw prompts, confidential strategy, regulated data, or attendee-specific notes.
+Next action: tune after observing which parked workshop questions need clearer owner assignment, safe sample preparation, boundary review, evidence collection, or closure without action.
+
+### AI data-sharing decision card
+
+Status: publish-now
+Hub path: `resources/ai-data-sharing-decision-card.html`
+Source: public-safe static workshop worksheet drafted in this repo to help attendees sort proposed AI inputs into share, sanitize, ask, or stop lanes before prompting, uploading, demoing, or requesting access.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, or client material. The page explicitly keeps discussion at the information-category level and tells attendees not to paste customer records, employee data, production logs, credentials, account screenshots, contracts, private repository links, raw incident details, regulated records, confidential strategy, pricing, or proprietary source material.
+Next action: tune after observing which live workshop moments need clearer distinctions between prompt safety preflight, pilot data boundaries, policy exceptions, and vendor data-use questions.
+
+### AI meeting-notes redaction checklist
+
+Status: publish-now
+Hub path: `resources/ai-meeting-notes-redaction-checklist.html`
+Source: public-safe static workshop checklist drafted in this repo to help attendees redact meeting notes before using AI to summarize, extract actions, draft follow-up, or identify risks.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, raw transcripts, customer/employee data, or client material. The page explicitly tells attendees to remove identifiers, secrets, private links, account screenshots, exact sensitive facts, contracts, regulated records, confidential strategy, and proprietary source material before using AI.
+Next action: tune after observing which workshop, pilot-review, vendor-demo, steering, or adoption notes need clearer redaction boundaries before AI-assisted summaries or action extraction.
 
 ### AI workshop discovery question bank
 
@@ -72,6 +104,14 @@ Hub path: `resources/post-workshop-follow-up-email.html`
 Source: public-safe static communication worksheet drafted in this repo from the current workshop need to help Tomer or attendees send a useful recap without creating a lead-capture, tracking, or private-data collection flow.
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, confidential attendee lists, direct sales automation, or client material. The page explicitly tells senders to use public-safe hub links, avoid private attendee data and strong claims, and ask only for a small reversible next workflow with safe sample input.
 Next action: tune after observing which follow-up messages attendees or team leads need after the workshop.
+
+### AI workshop internal recap card
+
+Status: publish-now
+Hub path: `resources/ai-workshop-internal-recap-card.html`
+Source: public-safe static internal recap worksheet drafted in this repo from the current workshop need to help attendees brief a manager, team lead, sponsor, reviewer, or working group after the session without exposing private examples or creating rollout promises.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, confidential attendee notes, raw prompts, raw outputs, account screenshots, vendor contracts, regulated records, or client material. The page explicitly tells attendees to share only the workflow pattern, workshop takeaway, off-limits boundary, owner/reviewer roles, proposed reversible action, and evidence needed before continuing.
+Next action: tune after observing which internal recap messages help attendees turn workshop learning into manager alignment, safe sample preparation, review-owner assignment, or a clear pause decision.
 
 ### Claude Code handoff packet
 

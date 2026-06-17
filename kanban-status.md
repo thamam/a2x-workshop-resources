@@ -4,7 +4,7 @@
 
 - **Project Name:** A2X Workshop Resources Hub
 - **Active Phase:** Phase 2: Implementation & Public-Readiness Prep
-- **Last Updated:** 2026-06-16
+- **Last Updated:** 2026-06-17
 - **Source of Truth:** This root file is the canonical project workflow tracker.
 - **Previous Board:** `docs/live-kanban.md` is historical context only. Keep active status here.
 - **Update Owner:** Yunes
@@ -265,6 +265,22 @@
 - [x] **Epic 67: AI adoption check-in aids** (100% Completed)
   - [x] Story 67.1: Add public-safe first-week AI adoption check-in card
 
+- [ ] **Epic 68: AI internal recap and forwarding aids** (95% Blocked on merge approval)
+  - [ ] Story 68.1: Add public-safe AI workshop internal recap card
+  - [x] Story 68.2: Add print-friendly styles to the AI workshop internal recap card
+
+- [x] **Epic 69: Live workshop question follow-up aids** (100% Completed)
+  - [x] Story 69.1: Add public-safe AI question parking-lot card
+
+- [x] **Epic 70: Workshop facilitation clarity aids** (100% Completed)
+  - [x] Story 70.1: Add public-safe AI workshop facilitator cue card
+
+- [x] **Epic 71: AI data-sharing judgment aids** (100% Completed)
+  - [x] Story 71.1: Add public-safe AI data-sharing decision card
+
+- [x] **Epic 72: AI meeting-note safety aids** (100% Completed)
+  - [x] Story 72.1: Add public-safe AI meeting-notes redaction checklist
+
 ---
 
 ## 🏃 Active State Tracking
@@ -284,6 +300,9 @@
 ### 🚧 BLOCKED / APPROVAL REQUIRED
 
 - None for the repository visibility and website-link launch path; Tomer approved this scope on 2026-06-08.
+- [ ] Story 68.1: Add public-safe AI workshop internal recap card
+  - Status: blocked on protected-branch merge policy
+  - Evidence: PR #25 implementation commit `34de893` added print-friendly CSS after prior follow-up commit `b8b11c7` addressed Gemini copy-button feedback; `git diff --check`, `python3 scripts/check-static-links.py`, private-file blocker, gitleaks `--no-git`, Chrome PDF/print-media smoke, pre-commit gitleaks, GitHub Secret scan run `27656545387`, and CodeRabbit passed for that implementation commit before the tracker-only evidence refresh. Merge attempt is still blocked by base branch policy, and repository auto-merge is disabled, so this needs required review/merge permission before DONE.
 - [ ] Story 4.4: Expose or link A2X Marketplace source repo publicly
   - Status: blocked
   - Blocker: sanitized overview is available, but direct marketplace source linking still needs cleanup of local-path docs, credential setup framing, and secret-scanner noise.
@@ -296,6 +315,21 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 72.1: Add public-safe AI meeting-notes redaction checklist
+  - Evidence: implementation commit `fbd4e27` created `resources/ai-meeting-notes-redaction-checklist.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; verified `python3 scripts/check-static-links.py` passed for 86 HTML files, `git diff --check` passed, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed, `gitleaks detect --no-banner --redact --no-git --source .` found no leaks, local HTTP marker smoke returned HTTP 200 for the hub, new redaction checklist, route chooser, Library, inventory, and usage map with redaction links/content visible, and Chrome headless mobile screenshot/DOM persisted `/tmp/a2x-ai-meeting-notes-redaction-mobile.png` (149553 bytes) plus `/tmp/a2x-ai-meeting-notes-redaction-dom.html` (8607 bytes) confirming the page title, Redaction rule, Five-pass redaction, and public-safe footer markers. GitHub Security checks run `27677438300` passed on `fbd4e27`; CodeRabbit status did not appear after a bounded poll, and PR #25 remains blocked by protected-branch merge policy. No private/source links, analytics, tracking, lead capture, pricing claims, legal/compliance advice, confidential records, raw transcripts, customer/employee data, production website changes, strong marketing claims, or public publishing were added.
+
+- [x] Story 71.1: Add public-safe AI data-sharing decision card
+  - Evidence: implementation commit `ed59305` created `resources/ai-data-sharing-decision-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; verified `python3 scripts/check-static-links.py` passed for 85 HTML files, `git diff --check` passed, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed, `gitleaks detect --no-banner --redact --no-git --source .` found no leaks, local HTTP marker smoke returned HTTP 200 for the hub, new data-sharing decision card, route chooser, Library, inventory, and usage map with data-sharing links/content visible, and Chrome headless mobile screenshot/DOM persisted `/tmp/a2x-ai-data-sharing-decision-card-mobile.png` (183853 bytes) plus `/tmp/a2x-ai-data-sharing-decision-card-dom.html` (9514 bytes) confirming the page title, Data-sharing rule, Four-lane sort, share/sanitize/ask/stop copy, and public-safe footer markers. GitHub Secret scan run `27670883842` passed on `ed59305`; CodeRabbit was still pending after a bounded poll. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, proprietary source material, or public publishing were added.
+
+- [x] Story 70.1: Add public-safe AI workshop facilitator cue card
+  - Evidence: implementation commit `21fd309` created `resources/ai-workshop-facilitator-cue-card.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; verified `python3 scripts/check-static-links.py` passed for 84 HTML files, `git diff --check` passed, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed, `gitleaks detect --no-banner --redact --no-git --source .` found no leaks, local HTTP marker smoke returned HTTP 200 for the hub, facilitator cue card, route chooser, library, inventory, and usage map with facilitator links/content visible, and Chrome headless mobile screenshot/DOM persisted `/tmp/a2x-ai-workshop-facilitator-cue-card-mobile.png` (147981 bytes) plus `/tmp/a2x-ai-workshop-facilitator-cue-card-dom.html` (8298 bytes) confirming the page title, Facilitation rule, route-live-room heading, and public-safe footer markers. GitHub Security checks run `27665866911` passed on `21fd309`; CodeRabbit was still pending after a bounded poll. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, or public publishing were added.
+
+- [x] Story 69.1: Add public-safe AI question parking-lot card
+  - Evidence: created `resources/ai-question-parking-lot.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; verified `python3 scripts/check-static-links.py` passed for 83 HTML files, `git diff --check` passed, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed, `gitleaks detect --no-banner --redact --no-git --source .` found no leaks, local HTTP marker smoke returned HTTP 200 for the hub, new parking-lot page, route chooser, library, inventory, and usage map with parking-lot links/content visible, and Chrome headless mobile screenshot/DOM persisted `/tmp/a2x-ai-question-parking-lot-mobile.png` (152241 bytes) plus `/tmp/a2x-ai-question-parking-lot-dom.html` (8502 bytes) confirming the page title, Parking-lot rule, AI question parking-lot card, and public-safe footer markers. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, or public publishing were added.
+
+- [x] Story 68.2: Add print-friendly styles to the AI workshop internal recap card
+  - Evidence: implementation commit `34de893` added `@media print` rules to `resources/ai-workshop-internal-recap-card.html` so print/PDF output uses a white background, print-sized typography, single-column cards, hidden interactive copy actions, no card shadows, and break-avoid sections; verified `git diff --check`, `python3 scripts/check-static-links.py` for 82 HTML files, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, Chrome headless PDF output at `/tmp/a2x-internal-recap-print.pdf` (501902 bytes), and a Chrome DevTools print-media smoke confirming buttons/actions hidden, white body background, no card shadow, break-inside avoid, and heading/footer markers present. PR #25 GitHub Secret scan run `27656545387` and CodeRabbit passed on commit `34de893`; squash merge remains blocked by base branch policy and repository auto-merge is disabled. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, or public publishing were added.
 
 - [x] Story 67.1: Add public-safe first-week AI adoption check-in card
   - Evidence: created `resources/ai-first-week-adoption-check-in.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini review feedback by making the copy button keep a stable original label and guard missing Clipboard API before `writeText`; resolved the Gemini review thread; PR #23 was squashed/merged to `main` as `cf06fcb`; GitHub Security checks run `27643036424` and Pages deployment run `27643035563` succeeded; public smoke returned HTTP 200 for the live hub, first-week adoption check-in page, route chooser, and library with check-in links/content visible on 2026-06-16 22:36 IDT. Local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, and local HTTP marker smoke passed. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
@@ -922,6 +956,36 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-17 11:52 IDT — Moved Story 72.1 to DONE after creating the public-safe AI meeting-notes redaction checklist, wiring it into the route chooser, Library, inventory, and usage map, and verifying static links, diff hygiene, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM markers.
+
+- 2026-06-17 11:48 IDT — Started Story 72.1: add a public-safe AI meeting-notes redaction checklist after confirming no unblocked TODO/BACKLOG items and PR #25 remains blocked on protected-branch merge policy; scope is static workshop safety/clarity only, with no public publishing, analytics, lead capture, private/source links, pricing claims, legal/compliance advice, confidential records, raw transcripts, customer/employee data, strong marketing claims, or production website changes.
+
+- 2026-06-17 09:42 IDT — Moved Story 71.1 to DONE after creating the public-safe AI data-sharing decision card, wiring it into the route chooser, Library, inventory, and usage map, and verifying static links, diff hygiene, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM markers.
+
+- 2026-06-17 09:36 IDT — Started Story 71.1: add a public-safe AI data-sharing decision card after confirming the tracker had no unblocked TODO/BACKLOG items; scope is static workshop clarity only, with no public publishing, analytics, lead capture, private/source links, pricing claims, legal/compliance advice, confidential records, strong marketing claims, or production website changes.
+
+- 2026-06-17 07:31 IDT — Moved Story 70.1 to DONE after creating the public-safe AI workshop facilitator cue card, wiring it into the route chooser, Library, inventory, and usage map, and verifying static links, diff hygiene, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM markers. Story 68.1 remains blocked on protected-branch merge policy.
+
+- 2026-06-17 07:26 IDT — Started Story 70.1: add a public-safe AI workshop facilitator cue card after confirming the tracker had no unblocked TODO/BACKLOG items and PR #25 remains blocked on protected-branch merge policy; scope is static workshop facilitation clarity only, with no public publishing, analytics, lead capture, private/source links, pricing claims, strong marketing claims, or production website changes.
+
+- 2026-06-17 05:22 IDT — Finished Story 69.1: created `resources/ai-question-parking-lot.html`, wired it into the route chooser, Library, inventory, usage map, and tracker, and verified static links, diff hygiene, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM markers. Story 68.1 remains blocked on protected-branch merge policy.
+
+- 2026-06-17 05:15 IDT — Started Story 69.1: add a public-safe AI question parking-lot card after confirming PR #25 remains open, checks pass, and protected-branch merge policy still blocks Story 68.1; scope is static workshop follow-up content only, with no public publishing, analytics, lead capture, private/source links, or production website changes.
+
+- 2026-06-17 03:11 IDT — Pushed Story 68.2 implementation commit `34de893` and tracker-only evidence refresh commit `8b77294` to PR #25; GitHub Secret scan run `27656713572` and CodeRabbit passed on `8b77294`, but both regular squash merge and auto-merge remain blocked by repository policy, so Story 68.1 stays BLOCKED/APPROVAL.
+
+- 2026-06-17 03:06 IDT — Moved Story 68.2 to DONE after adding print-friendly CSS to the AI workshop internal recap card and verifying diff whitespace, static links, private-file safety, gitleaks, Chrome headless PDF output, and Chrome DevTools print-media behavior. Story 68.1 remains blocked on protected-branch merge policy.
+
+- 2026-06-17 01:02 IDT — Started Story 68.2 to add print-friendly styles to the AI workshop internal recap card after Story 68.1 became blocked on protected-branch merge policy; scope remains public-safe static CSS only.
+
+- 2026-06-17 01:00 IDT — Moved Story 68.1 from REVIEW to BLOCKED/APPROVAL after pushing follow-up commit `b8b11c7`, verifying GitHub Secret scan and CodeRabbit passed on PR #25, replying to Gemini and CodeRabbit review threads, and confirming squash merge is blocked by base branch policy while repository auto-merge is disabled.
+
+- 2026-06-17 00:57 IDT — Addressed Gemini review feedback on PR #25 by making the internal recap copy button keep a stable original label and clear overlapping copy-reset timers across rapid clicks; reran `git diff --check`, static links, Markdown links, private-file blocker, gitleaks `--no-git`, and Chrome DOM marker checks before pushing a follow-up commit.
+
+- 2026-06-17 00:48 IDT — Moved Story 68.1 to REVIEW after creating the public-safe AI workshop internal recap card, wiring it into the route chooser, library, resource inventory, and workshop usage map, and verifying `git diff --check`, static links for 82 HTML files, Markdown links, private-file blocker, gitleaks `--no-git`, local HTTP marker smoke, and Chrome headless mobile screenshot/DOM markers. Pending commit/push PR branch and protected-branch review/merge checks before DONE.
+
+- 2026-06-17 00:46 IDT — Started Story 68.1 after verifying clean repo state at HEAD `0ba3ccd` and finding no unblocked TODO/BACKLOG items; scope is a public-safe AI workshop internal recap card plus route chooser/library/inventory/usage-map wiring, with no private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure.
 
 - 2026-06-16 22:36 IDT — Moved Story 67.1 to DONE after resolving the Gemini review thread, squashing/merging PR #23 to `main` as `cf06fcb`, verifying GitHub Security checks run `27643036424` and Pages deployment run `27643035563` succeeded, and live-smoking the published hub, first-week adoption check-in page, route chooser, and library with HTTP 200 responses and check-in markers visible.
 
@@ -1919,4 +1983,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, adoption-objection response, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, data-sharing judgment, meeting-note redaction, live-question triage, question parking-lot, facilitation cue-card, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, adoption-objection response, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
