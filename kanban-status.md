@@ -265,8 +265,9 @@
 - [x] **Epic 67: AI adoption check-in aids** (100% Completed)
   - [x] Story 67.1: Add public-safe first-week AI adoption check-in card
 
-- [ ] **Epic 68: AI internal recap and forwarding aids** (95% In Review)
+- [ ] **Epic 68: AI internal recap and forwarding aids** (95% Blocked on merge approval)
   - [ ] Story 68.1: Add public-safe AI workshop internal recap card
+  - [x] Story 68.2: Add print-friendly styles to the AI workshop internal recap card
 
 ---
 
@@ -302,6 +303,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 68.2: Add print-friendly styles to the AI workshop internal recap card
+  - Evidence: added `@media print` rules to `resources/ai-workshop-internal-recap-card.html` so print/PDF output uses a white background, print-sized typography, single-column cards, hidden interactive copy actions, no card shadows, and break-avoid sections; verified `git diff --check`, `python3 scripts/check-static-links.py` for 82 HTML files, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, Chrome headless PDF output at `/tmp/a2x-internal-recap-print.pdf` (501902 bytes), and a Chrome DevTools print-media smoke confirming buttons/actions hidden, white body background, no card shadow, break-inside avoid, and heading/footer markers present. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, or public publishing were added.
 
 - [x] Story 67.1: Add public-safe first-week AI adoption check-in card
   - Evidence: created `resources/ai-first-week-adoption-check-in.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; addressed Gemini review feedback by making the copy button keep a stable original label and guard missing Clipboard API before `writeText`; resolved the Gemini review thread; PR #23 was squashed/merged to `main` as `cf06fcb`; GitHub Security checks run `27643036424` and Pages deployment run `27643035563` succeeded; public smoke returned HTTP 200 for the live hub, first-week adoption check-in page, route chooser, and library with check-in links/content visible on 2026-06-16 22:36 IDT. Local `git diff --check`, static links, Markdown links, private-file blocker, gitleaks, and local HTTP marker smoke passed. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, strong marketing claims, customer/employee data, legal/compliance advice, or direct private-resource exposure were added.
@@ -928,6 +932,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-17 03:06 IDT — Moved Story 68.2 to DONE after adding print-friendly CSS to the AI workshop internal recap card and verifying diff whitespace, static links, private-file safety, gitleaks, Chrome headless PDF output, and Chrome DevTools print-media behavior. Story 68.1 remains blocked on protected-branch merge policy.
+
+- 2026-06-17 01:02 IDT — Started Story 68.2 to add print-friendly styles to the AI workshop internal recap card after Story 68.1 became blocked on protected-branch merge policy; scope remains public-safe static CSS only.
 
 - 2026-06-17 01:00 IDT — Moved Story 68.1 from REVIEW to BLOCKED/APPROVAL after pushing follow-up commit `b8b11c7`, verifying GitHub Secret scan and CodeRabbit passed on PR #25, replying to Gemini and CodeRabbit review threads, and confirming squash merge is blocked by base branch policy while repository auto-merge is disabled.
 
