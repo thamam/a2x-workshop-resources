@@ -57,6 +57,14 @@ Source: public-safe static workshop worksheet drafted in this repo to help atten
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, or client material. The page explicitly keeps discussion at the information-category level and tells attendees not to paste customer records, employee data, production logs, credentials, account screenshots, contracts, private repository links, raw incident details, regulated records, confidential strategy, pricing, or proprietary source material.
 Next action: tune after observing which live workshop moments need clearer distinctions between prompt safety preflight, pilot data boundaries, policy exceptions, and vendor data-use questions.
 
+### AI meeting-notes redaction checklist
+
+Status: publish-now
+Hub path: `resources/ai-meeting-notes-redaction-checklist.html`
+Source: public-safe static workshop checklist drafted in this repo to help attendees redact meeting notes before using AI to summarize, extract actions, draft follow-up, or identify risks.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, raw transcripts, customer/employee data, or client material. The page explicitly tells attendees to remove identifiers, secrets, private links, account screenshots, exact sensitive facts, contracts, regulated records, confidential strategy, and proprietary source material before using AI.
+Next action: tune after observing which workshop, pilot-review, vendor-demo, steering, or adoption notes need clearer redaction boundaries before AI-assisted summaries or action extraction.
+
 ### AI workshop discovery question bank
 
 Status: publish-now

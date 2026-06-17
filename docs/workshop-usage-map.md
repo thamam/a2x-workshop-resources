@@ -74,6 +74,16 @@ Attendee action: classify the information category, choose share/sanitize/ask/st
 
 Status: ready data-sharing judgment handout.
 
+### Meeting-note redaction: AI meeting-notes redaction checklist
+
+Resource: `resources/ai-meeting-notes-redaction-checklist.html`.
+
+Use when: a workshop, pilot review, vendor demo, steering meeting, or adoption check-in produced useful notes but the team needs to remove sensitive details before asking AI for summaries, actions, risks, or follow-up drafts.
+
+Attendee action: remove identifiers, secrets, private links, exact sensitive facts, raw transcripts, and confidential material; preserve only the meeting purpose, generic constraints, owner roles, decisions, review gates, open questions, and next safe step.
+
+Status: ready meeting-note redaction handout.
+
 ### Workshop discovery: AI workshop discovery question bank
 
 Resource: `resources/ai-workshop-discovery-question-bank.html`.
