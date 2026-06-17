@@ -16,6 +16,7 @@ Use these before browsing the rest:
 
 - [`Pre-workshop readiness checklist`](../resources/pre-workshop-readiness-checklist.html)
 - [`Workshop resource chooser`](../resources/workshop-resource-chooser.html)
+- [`AI workshop facilitator cue card`](../resources/ai-workshop-facilitator-cue-card.html)
 - [`Post-workshop action plan`](../resources/post-workshop-action-plan.html)
 - [`AI next-step commitment card`](../resources/ai-next-step-commitment-card.html)
 - [`AI first-week adoption check-in`](../resources/ai-first-week-adoption-check-in.html)

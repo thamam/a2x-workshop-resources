@@ -25,6 +25,14 @@ Source: public-safe static navigation aid drafted in this repo from the current 
 Safety notes: links only to existing public-safe hub resources and docs; no private source links, credentials, local paths, analytics, lead capture, or client material.
 Next action: tune route labels after observing which workshop moments cause attendee confusion.
 
+### AI workshop facilitator cue card
+
+Status: publish-now
+Hub path: `resources/ai-workshop-facilitator-cue-card.html`
+Source: public-safe static facilitation aid drafted in this repo from the current workshop need to route live room moments into teach, demo, discover, park, escalate, or stop decisions without exposing sensitive examples.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, or client material. The page explicitly tells facilitators to collect only workflow patterns, safe sample categories, owner/reviewer roles, resource routes, evidence needs, and stop conditions instead of customer names, employee records, production logs, account screenshots, contracts, private repository links, raw prompts, confidential strategy, credentials, regulated data, or pricing details.
+Next action: tune after observing which live workshop moments need faster facilitator routing, clearer safe phrases, or better handoff to question triage, parking lot, use-case intake, policy exception, or follow-up resources.
+
 ### AI question triage card
 
 Status: publish-now

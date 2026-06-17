@@ -34,6 +34,16 @@ Attendee action: choose the right next resource by goal: harness mental model, C
 
 Status: ready navigation aid.
 
+### Facilitation: AI workshop facilitator cue card
+
+Resource: `resources/ai-workshop-facilitator-cue-card.html`.
+
+Use when: Tomer or another facilitator needs to route a live room moment into teach, demo, discover, park, escalate, or stop without collecting private examples or letting one question derail the workshop.
+
+Attendee action: hear the safe facilitator phrase, keep details generic, open the recommended hub resource, and leave the moment with an owner role, evidence need, follow-up path, or explicit stop condition.
+
+Status: ready facilitator cue-card handout.
+
 ### Live Q&A: AI question triage card
 
 Resource: `resources/ai-question-triage-card.html`.
