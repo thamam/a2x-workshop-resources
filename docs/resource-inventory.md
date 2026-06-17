@@ -33,6 +33,14 @@ Source: public-safe static live-question triage handout drafted in this repo fro
 Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to capture workflow patterns, safe sample ideas, owner/reviewer roles, and next public-safe resources instead of collecting sensitive details, private links, pricing, screenshots, secrets, raw prompts, logs, contracts, or confidential strategy.
 Next action: tune after observing which live workshop questions need clearer teach/discover/try/buy/govern/stop routing.
 
+### AI question parking lot
+
+Status: publish-now
+Hub path: `resources/ai-question-parking-lot.html`
+Source: public-safe static unresolved-question follow-up handout drafted in this repo from the current workshop need to park useful AI questions until an owner, safe sample, boundary check, evidence signal, or follow-up resource is available.
+Safety notes: no private source links, credentials, local paths, analytics, tracking, lead capture, pricing claims, production website changes, customer/employee data, legal/compliance advice, or client material. The page explicitly tells attendees to capture only a generic question pattern, parking reason, owner role, safe evidence needed, next resource, and follow-up promise instead of recording customer names, employee records, production logs, account screenshots, contracts, pricing, private repository links, raw prompts, confidential strategy, regulated data, or attendee-specific notes.
+Next action: tune after observing which parked workshop questions need clearer owner assignment, safe sample preparation, boundary review, evidence collection, or closure without action.
+
 ### AI workshop discovery question bank
 
 Status: publish-now

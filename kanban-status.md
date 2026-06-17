@@ -269,6 +269,9 @@
   - [ ] Story 68.1: Add public-safe AI workshop internal recap card
   - [x] Story 68.2: Add print-friendly styles to the AI workshop internal recap card
 
+- [x] **Epic 69: Live workshop question follow-up aids** (100% Completed)
+  - [x] Story 69.1: Add public-safe AI question parking-lot card
+
 ---
 
 ## 🏃 Active State Tracking
@@ -303,6 +306,9 @@
 - None right now.
 
 ### ✅ DONE (Completed Stories)
+
+- [x] Story 69.1: Add public-safe AI question parking-lot card
+  - Evidence: created `resources/ai-question-parking-lot.html`; linked it from `resources/workshop-resource-chooser.html`; updated `Library/README.md`, `docs/resource-inventory.md`, `docs/workshop-usage-map.md`, and this tracker; verified `python3 scripts/check-static-links.py` passed for 83 HTML files, `git diff --check` passed, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)` passed, `gitleaks detect --no-banner --redact --no-git --source .` found no leaks, local HTTP marker smoke returned HTTP 200 for the hub, new parking-lot page, route chooser, library, inventory, and usage map with parking-lot links/content visible, and Chrome headless mobile screenshot/DOM persisted `/tmp/a2x-ai-question-parking-lot-mobile.png` (152241 bytes) plus `/tmp/a2x-ai-question-parking-lot-dom.html` (8502 bytes) confirming the page title, Parking-lot rule, AI question parking-lot card, and public-safe footer markers. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, legal/compliance advice, confidential records, or public publishing were added.
 
 - [x] Story 68.2: Add print-friendly styles to the AI workshop internal recap card
   - Evidence: implementation commit `34de893` added `@media print` rules to `resources/ai-workshop-internal-recap-card.html` so print/PDF output uses a white background, print-sized typography, single-column cards, hidden interactive copy actions, no card shadows, and break-avoid sections; verified `git diff --check`, `python3 scripts/check-static-links.py` for 82 HTML files, `scripts/block-private-files.sh $(git ls-files --cached --others --exclude-standard)`, `gitleaks detect --no-banner --redact --no-git --source .`, Chrome headless PDF output at `/tmp/a2x-internal-recap-print.pdf` (501902 bytes), and a Chrome DevTools print-media smoke confirming buttons/actions hidden, white body background, no card shadow, break-inside avoid, and heading/footer markers present. PR #25 GitHub Secret scan run `27656545387` and CodeRabbit passed on commit `34de893`; squash merge remains blocked by base branch policy and repository auto-merge is disabled. No private/source links, analytics, tracking, lead capture, pricing claims, production website changes, or public publishing were added.
@@ -932,6 +938,10 @@
 ---
 
 ## 🔁 Recent Transitions
+
+- 2026-06-17 05:22 IDT — Finished Story 69.1: created `resources/ai-question-parking-lot.html`, wired it into the route chooser, Library, inventory, usage map, and tracker, and verified static links, diff hygiene, private-file blocker, gitleaks, local HTTP marker smoke, and Chrome headless mobile/DOM markers. Story 68.1 remains blocked on protected-branch merge policy.
+
+- 2026-06-17 05:15 IDT — Started Story 69.1: add a public-safe AI question parking-lot card after confirming PR #25 remains open, checks pass, and protected-branch merge policy still blocks Story 68.1; scope is static workshop follow-up content only, with no public publishing, analytics, lead capture, private/source links, or production website changes.
 
 - 2026-06-17 03:11 IDT — Pushed Story 68.2 implementation commit `34de893` and tracker-only evidence refresh commit `8b77294` to PR #25; GitHub Secret scan run `27656713572` and CodeRabbit passed on `8b77294`, but both regular squash merge and auto-merge remain blocked by repository policy, so Story 68.1 stays BLOCKED/APPROVAL.
 
@@ -1943,4 +1953,4 @@
 
 ## 📌 Next Safe Action
 
-- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, adoption-objection response, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.
+- No further safe unblocked implementation story is currently listed. Remaining direct source-release work is approval-gated: direct A2X Marketplace source linking and direct Wiki-LLM source/software release require Tomer approval or upstream cleanup before exposure. If another autonomous tick has budget, create another small public-safe workshop clarity/adoption aid only if it adds distinct attendee value beyond the current discovery, live-question triage, question parking-lot, prompt-safety, prompt-library, output-review, reviewer-calibration, review-queue triage, meeting-follow-up, follow-up communication, policy-escalation, prioritization, experiment-charter, assumption-log, acceptance-criteria, handoff-gap, rollback-drill, failure-mode pre-mortem/rehearsal, cleanup/retention, enablement, office-hours support, adoption-proof, tool-change, vendor-exit, procurement-readiness, vendor data-use diligence, audit-trail/traceability, shadow-mode validation, near-miss learning/prevention, access-governance, permissions/autonomy-boundary, sponsor-alignment, change-management, adoption-objection response, governance, steering decision-record, value-scoring, and pilot lifecycle handouts.

@@ -44,6 +44,16 @@ Attendee action: capture the question generically, name the workflow pattern, sa
 
 Status: ready live-triage handout.
 
+### Unresolved Q&A follow-up: AI question parking lot
+
+Resource: `resources/ai-question-parking-lot.html`.
+
+Use when: a useful workshop question cannot be answered live because it needs a workflow owner, safe sample, policy or data boundary check, evidence signal, narrowing, or closure without action.
+
+Attendee action: restate the question as a generic pattern, choose why it is parked, name the owner role, identify the safe evidence needed, pick the best next hub resource, and define the follow-up promise without storing private details.
+
+Status: ready unresolved-question parking-lot handout.
+
 ### Workshop discovery: AI workshop discovery question bank
 
 Resource: `resources/ai-workshop-discovery-question-bank.html`.

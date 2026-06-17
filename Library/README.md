@@ -24,6 +24,7 @@ Use these before browsing the rest:
 - [`Claude Code handoff packet`](../resources/claude-code-handoff-packet.html)
 - [`Claude Code credential routing`](../resources/claude-code-credential-routing.html)
 - [`AI question triage card`](../resources/ai-question-triage-card.html)
+- [`AI question parking lot`](../resources/ai-question-parking-lot.html)
 
 ## 2. OpenSpec, PRD, and product workflow
 
